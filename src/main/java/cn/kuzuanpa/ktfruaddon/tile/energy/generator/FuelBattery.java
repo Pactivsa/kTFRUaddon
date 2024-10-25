@@ -123,7 +123,6 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
         aList.add(Chat.CYAN     + LH.get(LH.RECIPES) + ": " + Chat.WHITE + LH.get(mRecipes.mNameInternal));
         aList.add(Chat.GREEN    + LH.get(LH.FLUID_INPUT)+ ": " + Chat.WHITE + LH.get(kTooltips.SIDE_FRONT)+", "+LH.get(kTooltips.SIDE_BACK)+" "+LH.get(kTooltips.AUTO));
         aList.add(Chat.RED      + LH.get(LH.FLUID_OUTPUT)+ ": " + Chat.WHITE + LH.get(kTooltips.SIDE_RIGHT)+", "+LH.get(kTooltips.SIDE_LEFT)+" "+LH.get(kTooltips.AUTO));
-        aList.add(LH.getToolTipEfficiency(mEfficiency));
         LH.addEnergyToolTips(this, aList, null, mEnergyTypeEmitted, null, LH.get(LH.FACE_FRONT));
         aList.add(Chat.ORANGE   + LH.get(LH.NO_GUI_FUNNEL_TAP_TO_TANK));
         aList.add(Chat.DGRAY    + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));

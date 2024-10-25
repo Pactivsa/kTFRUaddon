@@ -138,7 +138,7 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     }
 
     @Override
-    public void onStructureComputeCompleted() {
+    public void onAsyncCheckStructureCompleted() {
         try {
             mStructureOkay = AsyncStructureManager.isStructureCompleted(asyncTaskID);
         }catch (AsyncStructureManager.NotCompletedException e){}

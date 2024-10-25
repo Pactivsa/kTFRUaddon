@@ -33,7 +33,7 @@ public class TESRLiquidBattery extends TileEntitySpecialRenderer {
     public void renderTileEntityAt(TileEntity t, double x, double y, double z, float f) {
         if(! (t instanceof LiquidBattery))return;
         LiquidBattery tile = (LiquidBattery)t;
-        if(!tile.mStructureOkay)return;
+        if(!tile.mStructureOkay|| tile.disableTESR)return;
         IIcon icon = null;
 
         if(tile.mTank!=null && tile.mTank.getFluid()!=null && tile.mTank.getFluid().getFluid()!=null) try {
@@ -47,6 +47,7 @@ public class TESRLiquidBattery extends TileEntitySpecialRenderer {
             GL11.glNewList(id, GL11.GL_COMPILE);
             Tessellator tessellator = Tessellator.instance;
             tessellator.startDrawingQuads();
+            tessellator.setNormal(0,1,0);
             tessellator.addVertexWithUV(0, 1.01, 0, icon.getMinU(), icon.getMaxV());
             tessellator.addVertexWithUV(0, 1.01, 1, icon.getMaxU(), icon.getMaxV());
             tessellator.addVertexWithUV(1, 1.01, 1, icon.getMaxU(), icon.getMinV());

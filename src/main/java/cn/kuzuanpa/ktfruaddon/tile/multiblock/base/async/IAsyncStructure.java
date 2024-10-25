@@ -8,7 +8,7 @@ import net.minecraft.util.ChunkCoordinates;
 
 public interface IAsyncStructure {
 
-    default void onStructureComputeCompleted() {};
+    default void onAsyncCheckStructureCompleted() {};
 
     boolean asyncCheckStructure(AsyncStructureManager.WorldContainer worldContainer);
 

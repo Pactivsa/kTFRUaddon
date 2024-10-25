@@ -13,9 +13,13 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.storage;
 import cn.kuzuanpa.ktfruaddon.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.code.codeUtil;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.IMappedStructure;
+import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.AsyncStructureManager;
+import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.IAsyncMappedStructure;
+import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.IAsyncStructure;
 import cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT;
 import cn.kuzuanpa.ktfruaddon.tile.util.utils;
 import codechicken.lib.vec.BlockCoord;
+import cpw.mods.fml.common.FMLLog;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.FL;
@@ -35,6 +39,7 @@ import gregapi.util.ST;
 import gregapi.util.UT;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -45,13 +50,14 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidTank;
+import org.apache.logging.log4j.Level;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 import static gregapi.data.CS.*;
 
-public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiBlockFluidHandler, IMultiTileEntity.IMTE_SyncDataByteArray, IMappedStructure {
+public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiBlockFluidHandler, IMultiTileEntity.IMTE_SyncDataByteArray, IAsyncMappedStructure, IAsyncStructure {
     public short maxLayer = 8, maxRange=8, liquidYLevelRender=0, wallID=0, oldYLevel=0;
     public FluidTankGT mTank = new FluidTankGT();
     final short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
@@ -99,7 +105,6 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     public void writeToNBT2(NBTTagCompound aNBT) {
         super.writeToNBT2(aNBT);
         mTank.writeToNBT(aNBT,NBT_TANK);
-
     }
 
     @Override
@@ -194,10 +199,9 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
             }
             return tankCapacity>0;
         }
-
+        if(disableTESR)return false;
         //Calculate everything for Client Render
         spaceListForTESR.clear();
-        topLayerForTESR.clear();
         for (short layer = 0; layer < maxLayer; layer++) {
             layerCapacity = 0;
             if (checkSink2(spaceListForTESR, utils.getRealX(mFacing, xCoord, 0, 2), utils.getRealZ(mFacing, zCoord, 0, 2), layer, checkRange))layerLiquidCapacity.put(layer, layerCapacity * liquidAmountPerBlock);
@@ -224,6 +228,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
             boundForSink[5] = Math.max(boundForSink[5], blockCoord.z);
         }
         List<BlockCoord> coveredSpaces = spaceListForTESR.stream().filter(coord -> spaceListForTESR.stream().anyMatch(coord1 -> coord1.equals(new BlockCoord(coord.x, coord.y + 1, coord.z)))).collect(Collectors.toList());
+        topLayerForTESR.clear();
         topLayerForTESR.addAll(spaceListForTESR);
         topLayerForTESR.removeAll(coveredSpaces);
 
@@ -234,31 +239,29 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
 
     @Override
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
-        if(!isServerSide() && aTool.equals(TOOL_hammer)){
-            disableTESR=!disableTESR;
-            if(!disableTESR)checkStructure2();
-            aChatReturn.add("Enable Special Render: "+!disableTESR);
-        }
+        if(!isServerSide())return 0;
         return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
     }
 
+    final byte[] forX = {1, -1, 0, 0};
+    final byte[] forZ = {0, 0, 1, -1};
+
     private long layerCapacity;
     public boolean checkSink2(List<BlockCoord> checkedAirList,int x,int z, int layer, BoundingBox checkRange){
-        //don't allow shapes like hopper, and check floor when layer=0
-        if(!checkRange.isCoordInBox(new BlockCoord(x,yCoord+layer,z)) || ((layer==0 || !checkedAirList.contains(new BlockCoord(x, yCoord+layer-1, z))) && Arrays.stream(getAvailableTiles()).noneMatch(availTile -> utils.checkAndSetTarget(this, x, yCoord+layer-1, z, availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage)))) return false;
+        if(!checkRange.isCoordInBox(new BlockCoord(x,yCoord+layer,z)))return false;//Out Bound
+        //check the block below is in sink || the below block is a valid wall
+        if(((layer!=0 && !checkedAirList.contains(new BlockCoord(x, yCoord+layer-1, z))) && Arrays.stream(getAvailableTiles()).noneMatch(availTile -> utils.checkAndSetTarget(this, x, yCoord+layer-1, z, availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage)))) return false;
         //check this block
         if (Arrays.stream(getAvailableTiles()).anyMatch(availTile -> utils.checkAndSetTarget(this, x , yCoord + layer, z, availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage))){return true;}
         //If this block isn't valid, add to checked Air list
         layerCapacity += 1;
         checkedAirList.add(new BlockCoord(x,yCoord+layer,z));
         //check blocks around
-        final byte[] forX = {1, -1, 0, 0};
-        final byte[] forZ = {0, 0, 1, -1};
         boolean result = true;
         for (int i = 0; i < 4; i++) {
             BlockCoord coord = new BlockCoord(x + forX[i], yCoord + layer, z + forZ[i]);
             if(checkedAirList.contains(coord))continue;
-            result = result&&checkSink2(checkedAirList,coord.x,coord.z,layer, checkRange);
+            result = result && checkSink2(checkedAirList,coord.x,coord.z,layer, checkRange);
         }
         return result;
     }
@@ -346,11 +349,11 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
             fluid = FluidRegistry.getFluid(UT.Code.combine(aData[3],aData[4],aData[5],aData[6]));
             if(fluid == null)fluid = FL.Water.fluid();
             mTank.fill(new FluidStack(fluid,1));
-            if(aData[7]==1) checkStructure2();
+            if(aData[7]==1) isStructureChanged=true;
             return super.receiveDataByte(aData[0],aNetworkHandler);
         }else if (aData.length == 5) {
             super.receiveDataByteArray(aData, aNetworkHandler);
-            checkStructure2();
+            isStructureChanged=true;
             return true;
         }else return super.receiveDataByte(aData[0],aNetworkHandler);
     }
@@ -378,15 +381,35 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     @Override
     public List<ChunkCoordinates> getComputeNodesCoordList() {return null;}
     ChunkCoordinates lastFailedPos=null;
+    UUID asyncTaskID = UUID.randomUUID();
     @Override
     public boolean checkStructure2() {
-        if(!isServerSide() && disableTESR)return false;
-        boolean isStructureComplete = false;
+        isStructureChanged=false;
         int tX = xCoord, tY = yCoord, tZ = zCoord;
         if (!worldObj.blockExists(tX, tY, tZ)) return mStructureOkay;
-        lastFailedPos = checkMappedStructure(null, sizeX, sizeY, sizeZ,xMapOffset,0,0);
+        if(!isServerSide()&& Blocks.dirt.equals(worldObj.getBlock(tX,tY-2,tZ)))disableTESR=true;
+        if(!isServerSide() && disableTESR)return false;
+        if(!isServerSide())mStructureOkay=false;//disable Client TESR to avoid Concurrent access to TESR data lists.
+        AsyncStructureManager.addStructureComputeTask(new AsyncStructureManager.StructureComputeData(asyncTaskID,worldObj,this).setDesc(this.toString()+"/x:"+xCoord+"/y:"+yCoord+"/z:"+zCoord));
+        return false;
+    }
+
+    @Override
+    public boolean asyncCheckStructure(AsyncStructureManager.WorldContainer worldContainer) {
+        boolean isStructureComplete = false;
+        int tX = xCoord, tY = yCoord, tZ = zCoord;
+        if (worldContainer.getBlock(tX,tY,tZ) == null) return mStructureOkay;
+        lastFailedPos = checkMappedStructure(worldContainer, lastFailedPos, sizeX, sizeY, sizeZ,xMapOffset,0,0,false);
         if(lastFailedPos==null && checkSinkAndUpdateCapacity()) isStructureComplete = true;
         if(mStructureOkay != isStructureComplete) updateClientData();
         return isStructureComplete;
+    }
+    @Override
+    public void onAsyncCheckStructureCompleted() {
+        try {
+            mStructureOkay = AsyncStructureManager.isStructureCompleted(asyncTaskID);
+            FMLLog.log(Level.FATAL,"Successfully received Async Check: "+mStructureOkay+this.toString()+"/x:"+xCoord+"/y:"+yCoord+"/z:"+zCoord);
+            AsyncStructureManager.removeCompletedTask(asyncTaskID);
+        }catch (AsyncStructureManager.NotCompletedException e){}
     }
 }
