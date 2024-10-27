@@ -12,11 +12,11 @@ import java.util.concurrent.Executors;
 public class AsyncStructureManager {
     protected final static ConcurrentHashMap<UUID,StructureComputeData> taskList =new ConcurrentHashMap<>();
     protected final static HashMap<UUID,StructureComputeData> CompletedTaskList =new HashMap<>();
-    protected final static Queue<UUID> purgeTaskIDs =new ArrayDeque<>();
     final static ExecutorService executorService = Executors.newFixedThreadPool(1);
     final static int MaxCompletedTaskSaved = 32;
+    public static UUID runningTask=null;
     static boolean isExecutorRunning=false;
-    public final static byte STATE_NOT_COMPLETE=1, STATE_COMPLETED=2, STATE_NOT_FOUND=3;
+    public final static byte STATE_NOT_COMPLETE=1, STATE_COMPLETED=2, STATE_NOT_FOUND=3, STATE_RUNNING=4;
     public static boolean isStructureCompleted(UUID taskID) throws AsyncStructureManager.NotCompletedException {
         if(getCheckState(taskID) != STATE_COMPLETED)throw new AsyncStructureManager.NotCompletedException();
         return CompletedTaskList.get(taskID).isStructureValid;
@@ -25,11 +25,12 @@ public class AsyncStructureManager {
     public static byte getCheckState(UUID taskID){
         if (CompletedTaskList.get(taskID) != null) return STATE_COMPLETED;
         if (taskList.get(taskID) != null) return STATE_NOT_COMPLETE;
+        if(Objects.equals(runningTask,taskID))return STATE_RUNNING;
         return STATE_NOT_FOUND;
     }
 
     public static void removeCompletedTask(UUID taskID){
-        purgeTaskIDs.add(taskID);
+        CompletedTaskList.remove(taskID);
     }
 
     public static void addStructureComputeTask(UUID taskID, World world, IAsyncStructure structure){
@@ -38,27 +39,30 @@ public class AsyncStructureManager {
     public static void addStructureComputeTask(StructureComputeData data){
         taskList.put(data.uuid,data);
         if(!isExecutorRunning) {
-            executorService.execute(() -> {
+            for (int i=0; i< taskList.size();i++) executorService.execute(() -> {
                 if (taskList.isEmpty())return;
                 long time= System.nanoTime();
+                isExecutorRunning=true;
+                UUID k = taskList.keys().nextElement();
+                runningTask=k;
                 try {
-                    isExecutorRunning=true;
-                    UUID k = taskList.keys().nextElement();
                     StructureComputeData v = taskList.get(k);
                     v.isStructureValid = v.structure.asyncCheckStructure(new WorldContainer(v.world));
                     System.out.println("Completed Structure Compute for: "+v.uuid+" "+v.desc+", takes"+(System.nanoTime()-time));
                     CompletedTaskList.put(k,v);
                     taskList.remove(k);
+                    runningTask=null;
                     v.structure.onAsyncCheckStructureCompleted();
-                } catch (Exception e){
+                }catch (Exception e){
                     System.out.println("ERROR occured when Structure Compute");
                     e.printStackTrace();
                 } finally {
+                    taskList.remove(k);
+                    runningTask=null;
                     isExecutorRunning=false;
                 }
             });
         }
-        if(CompletedTaskList.size() > MaxCompletedTaskSaved)CompletedTaskList.remove(purgeTaskIDs.poll());
     }
     public static class StructureComputeData{
         boolean isStructureValid;
