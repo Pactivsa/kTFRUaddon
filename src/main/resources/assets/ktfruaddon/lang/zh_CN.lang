@@ -526,7 +526,7 @@ ktfru.item.it.20050=未完成电路板 (基础)
 ktfru.item.it.20050.tooltip=下一步: §b安装 4 电阻
 ktfru.item.it.20051=未完成电路板 (低级, 阶段1)
 ktfru.item.it.20051.tooltip=下一步: §b安装 8 电容
-ktfru.item.it.20052=未完成电路板 (低级, 阶段12)
+ktfru.item.it.20052=未完成电路板 (低级, 阶段2)
 ktfru.item.it.20052.tooltip=下一步: §b安装 8 电阻
 ktfru.item.it.20100=电路板元件光刻掩模版 (200um)
 ktfru.item.it.20100.tooltip=一块印有复杂图案的掩模版
@@ -1170,6 +1170,7 @@ ktfru.tooltip.multiblock.storage.liquid.4=最大水槽高度:
 ktfru.tooltip.multiblock.storage.liquid.5=从主方块正面输出RU
 ktfru.tooltip.multiblock.storage.liquid.6=从第二层任意壁板接受RU
 ktfru.tooltip.multiblock.storage.liquid.7=从主方块下方自动输出流体
+ktfru.tooltip.multiblock.storage.liquid.8=在主方块下方2格放置原版石砖以关闭流体渲染
 ktfru.tooltip.machine.compressedgasinputer=与压缩气体储罐配合工作,速率:(输入KU)*10L/t
 
 oredict.billetIntellite=Intellite Billet

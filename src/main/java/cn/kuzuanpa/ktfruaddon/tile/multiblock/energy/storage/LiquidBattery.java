@@ -22,6 +22,7 @@ import codechicken.lib.vec.BlockCoord;
 import cpw.mods.fml.common.FMLLog;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
+import gregapi.code.TagData;
 import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.TD;
@@ -79,6 +80,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
         aList.add(LH.Chat.WHITE + LH.get("ktfru.tooltip.multiblock.storage.liquid.5"));
         aList.add(LH.Chat.WHITE + LH.get("ktfru.tooltip.multiblock.storage.liquid.6"));
         aList.add(LH.Chat.WHITE + LH.get("ktfru.tooltip.multiblock.storage.liquid.7"));
+        aList.add(LH.Chat.WHITE + LH.get("ktfru.tooltip.multiblock.storage.liquid.8"));
         super.addToolTips(aList, aStack, aF3_H);
     }
     static {
@@ -89,6 +91,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
         LH.add("ktfru.tooltip.multiblock.storage.liquid.5", "Emit RU from front of main block");
         LH.add("ktfru.tooltip.multiblock.storage.liquid.6", "Accept energies from wall layer 2");
         LH.add("ktfru.tooltip.multiblock.storage.liquid.7", "Auto Output Liquid from bottom of main block");
+        LH.add("ktfru.tooltip.multiblock.storage.liquid.8", "Place a Vanilla Stone Brick 2m away from main block bottom to Disable TESR");
     }
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
@@ -283,7 +286,10 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     public boolean isInsideStructure(int aX, int aY, int aZ) {
         return true;
     }
-
+    @Override
+    public boolean isInput(byte aSide) {
+        return true;
+    }
     protected IFluidTank getFluidTankFillable2(byte aSide, FluidStack aFluidToFill) {isTankChanged =true; return mTank;}
     protected IFluidTank getFluidTankDrainable2(byte aSide, FluidStack aFluidToDrain) {isTankChanged =true; return mTank;}
     protected IFluidTank[] getFluidTanks2(byte aSide) {isTankChanged =true;return mTank.AS_ARRAY;}
@@ -332,7 +338,6 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
         return packet;
     }
 
-    public boolean loggedNullFluidErr = false;
     public boolean receiveDataByteArray(byte[] aData, INetworkHandler aNetworkHandler){
         Fluid fluid;
         if(aData.length == 11){
@@ -386,7 +391,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
         isStructureChanged=false;
         int tX = xCoord, tY = yCoord, tZ = zCoord;
         if (!worldObj.blockExists(tX, tY, tZ)) return mStructureOkay;
-        if(!isServerSide()&& Blocks.dirt.equals(worldObj.getBlock(tX,tY-2,tZ)))disableTESR=true;
+        if(!isServerSide()&& Blocks.stonebrick.equals(worldObj.getBlock(tX,tY-2,tZ)))disableTESR=true;
         if(!isServerSide() && disableTESR)return false;
         if(!isServerSide())mStructureOkay=false;//disable Client TESR to avoid Concurrent access to TESR data lists.
         if(AsyncStructureManager.getCheckState(asyncTaskID) == AsyncStructureManager.STATE_NOT_FOUND)AsyncStructureManager.addStructureComputeTask(new AsyncStructureManager.StructureComputeData(asyncTaskID,worldObj,this).setDesc(this.toString()+"/x:"+xCoord+"/y:"+yCoord+"/z:"+zCoord));
