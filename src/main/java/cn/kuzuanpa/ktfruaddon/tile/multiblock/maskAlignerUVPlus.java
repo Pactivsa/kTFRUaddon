@@ -89,18 +89,14 @@ public class maskAlignerUVPlus extends TileEntityBaseControlledMachine implement
     public short getRegistryID(int x,int y,int z){
         return registryIDMap[y][z][x];
     }
-    @Override
-    public boolean isController(int mapX,int mapY,int mapZ, int registryID, int blockID){
-        return blockID == 31501;
-    }
 
     @Override
     public int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID) {
         return 1;
     }
     @Override
-    public List<ChunkCoordinates> getControllerPosList() {
-        return ControllerPos;
+    public List<ChunkCoordinates> getConditionPartsPosList() {
+        return ConditionPartsPos;
     }
     @Override
     public List<ChunkCoordinates> getComputeNodesCoordList() {return null;}

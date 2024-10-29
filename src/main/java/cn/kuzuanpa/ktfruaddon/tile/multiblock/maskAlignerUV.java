@@ -70,10 +70,6 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
     public boolean isIgnored(int checkX, int checkY, int checkZ){
             return false;
         }
-    @Override
-    public boolean isController(int mapX,int mapY,int mapZ, int registryID, int blockID){
-        return blockID == 31500;
-    }
 
     public short getRegistryID(int x,int y,int z){return k;}
 
@@ -89,8 +85,8 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
         return lastFailedPos==null;
     }
     @Override
-    public List<ChunkCoordinates> getControllerPosList() {
-        return ControllerPos;
+    public List<ChunkCoordinates> getConditionPartsPosList() {
+        return ConditionPartsPos;
     }
 
     public void resetParts() {

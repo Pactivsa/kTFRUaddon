@@ -10,7 +10,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.base;
 
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IMachineRunController;
+import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IConditionParts;
 import gregapi.tileentity.multiblocks.TileEntityBase10MultiBlockMachine;
 import gregapi.util.WD;
 import net.minecraft.util.ChunkCoordinates;
@@ -18,14 +18,14 @@ import net.minecraft.util.ChunkCoordinates;
 import java.util.ArrayList;
 
 public abstract class TileEntityBaseControlledMachine extends TileEntityBase10MultiBlockMachine {
-    public ArrayList<ChunkCoordinates> ControllerPos = new ArrayList<>();
+    public ArrayList<ChunkCoordinates> ConditionPartsPos = new ArrayList<>();
 
     public void addInputSubSource(ChunkCoordinates p){
-        this.ControllerPos.add(p);
+        this.ConditionPartsPos.add(p);
     }
 
     public boolean isControllerAllValid(){
-        return ControllerPos.isEmpty()|| ControllerPos.stream().allMatch(pos-> WD.te(getWorld(),pos,true) instanceof IMachineRunController && ((IMachineRunController) WD.te(getWorld(),pos,true)).canMachineRun());
+        return ConditionPartsPos.isEmpty()|| ConditionPartsPos.stream().allMatch(pos-> WD.te(getWorld(),pos,true) instanceof IConditionParts && ((IConditionParts) WD.te(getWorld(),pos,true)).canMachineRun());
     }
 
     @Override

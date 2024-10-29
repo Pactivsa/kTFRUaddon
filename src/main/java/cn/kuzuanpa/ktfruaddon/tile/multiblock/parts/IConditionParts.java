@@ -10,6 +10,6 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
-public interface IMachineRunController {
+public interface IConditionParts {
     boolean canMachineRun();
 }

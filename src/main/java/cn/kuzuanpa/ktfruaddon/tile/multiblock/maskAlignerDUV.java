@@ -69,9 +69,7 @@ public class maskAlignerDUV extends TileEntityBaseControlledMachine implements I
     public  boolean isIgnored(int checkX, int checkY, int checkZ){
         return false;
     }
-    public boolean isController(int mapX, int mapY, int mapZ, int blockID, int registryID){
-        return blockID == 31200;
-    }
+
     public short getRegistryID(int x,int y,int z){return k;}
     @Override
     public int getDesign(int mapX, int mapY, int mapZ, int blockID, int registryID) {
@@ -79,8 +77,8 @@ public class maskAlignerDUV extends TileEntityBaseControlledMachine implements I
     }
 
     @Override
-    public List<ChunkCoordinates> getControllerPosList() {
-        return ControllerPos;
+    public List<ChunkCoordinates> getConditionPartsPosList() {
+        return ConditionPartsPos;
     }
 
     @Override

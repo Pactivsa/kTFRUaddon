@@ -35,7 +35,7 @@ import java.util.List;
 
 import static gregapi.data.CS.*;
 
-public class PartControllerEnergy extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IMachineRunController, IMultiBlockPart{
+public class ConditionPartEnergy extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IConditionParts, IMultiBlockPart{
     boolean isEnergyEnough;
     long mInputMin=-1,mInputMax=-1,mEnergy=0;
     TagData mEnergyTypeAccepted;
@@ -120,12 +120,12 @@ public class PartControllerEnergy extends TileEntityBase09FacingSingle implement
                         new Textures.BlockIcons.CustomIcon("machines/multiblockparts/"+tTextureName+"/overlay_active_glowing/back")};
             } else {
                 TileEntity tCanonicalTileEntity = MultiTileEntityRegistry.getCanonicalTileEntity(getMultiTileEntityRegistryID(), getMultiTileEntityID());
-                if (tCanonicalTileEntity instanceof PartControllerEnergy) {
-                    mTexturesMaterial = ((PartControllerEnergy) tCanonicalTileEntity).mTexturesMaterial;
-                    mTexturesInactive = ((PartControllerEnergy) tCanonicalTileEntity).mTexturesInactive;
-                    mTexturesActive = ((PartControllerEnergy) tCanonicalTileEntity).mTexturesActive;
+                if (tCanonicalTileEntity instanceof ConditionPartEnergy) {
+                    mTexturesMaterial = ((ConditionPartEnergy) tCanonicalTileEntity).mTexturesMaterial;
+                    mTexturesInactive = ((ConditionPartEnergy) tCanonicalTileEntity).mTexturesInactive;
+                    mTexturesActive = ((ConditionPartEnergy) tCanonicalTileEntity).mTexturesActive;
 
-                    mTexturesActiveGlow = ((PartControllerEnergy) tCanonicalTileEntity).mTexturesActiveGlow;
+                    mTexturesActiveGlow = ((ConditionPartEnergy) tCanonicalTileEntity).mTexturesActiveGlow;
 
                 } else {
                     mTexturesMaterial = mTexturesInactive = mTexturesActive = mTexturesActiveGlow = L6_IICONCONTAINER;
@@ -138,6 +138,7 @@ public class PartControllerEnergy extends TileEntityBase09FacingSingle implement
     public void writeToNBT2(NBTTagCompound aNBT) {
         super.writeToNBT2(aNBT);
         IMultiBlockPart.writeToNBT(aNBT,mTargetPos,mDesign);
+        UT.NBT.setNumber(aNBT,NBT_ENERGY,mEnergy);
     }
 
     @Override

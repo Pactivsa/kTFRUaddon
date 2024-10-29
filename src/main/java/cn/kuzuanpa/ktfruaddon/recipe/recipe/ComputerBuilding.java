@@ -37,23 +37,23 @@ public class ComputerBuilding {
 
 
         //EDA 设计电路 EU
-        recipeMaps.EDA.addRecipeX(T,16,36000, ST.array(IL.Circuit_Good.get(0), gRegistry.getItem(10102,0),gRegistry.getItem(10112,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),ZL_FS,ItemList.CPUPhotomask200um.get(1));
-        recipeMaps.EDA.addRecipeX(T,16,18000, ST.array(IL.Circuit_Good.get(0),IL.Circuit_Part_Good.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT3.get(1));
-        recipeMaps.EDA.addRecipeX(T,16,27000, ST.array(IL.Circuit_Good.get(0),gRegistry.getItem(1,0),gRegistry.getItem(6007,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.RAMPhotomask200um.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,36000, ST.array(IL.Circuit_Good.get(0), gRegistry.getItem(10102,0),gRegistry.getItem(10112,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),ZL_FS,ItemList.CPUPhotomask200um.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,18000, ST.array(IL.Circuit_Good.get(0),IL.Circuit_Part_Good.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT3.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,27000, ST.array(IL.Circuit_Good.get(0),gRegistry.getItem(1,0),gRegistry.getItem(6007,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.RAMPhotomask200um.get(1));
 
-        recipeMaps.EDA.addRecipeX(T,16,72000, ST.array(IL.Circuit_Advanced.get(0), gRegistry.getItem(10103,0),gRegistry.getItem(10113,0),gRegistry.getItem(10042,0),ItemList.CPUTF3386S.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),ZL_FS,ItemList.CPUPhotomask72um.get(1));
-        recipeMaps.EDA.addRecipeX(T,16,36000, ST.array(IL.Circuit_Advanced.get(0),IL.Circuit_Part_Advanced.get(0),ItemList.ResistanceT2.get(1),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT4.get(1));
-        recipeMaps.EDA.addRecipeX(T,16,54000, ST.array(IL.Circuit_Advanced.get(0),gRegistry.getItem(11,0),gRegistry.getItem(6019,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.RAMPhotomask72um.get(1));
-
-
-        recipeMaps.EDA.addRecipeX(T,16,144000, ST.array(IL.Circuit_Elite.get(0), gRegistry.getItem(10104,0),gRegistry.getItem(10114,0),gRegistry.getItem(10043,0),ItemList.CPUGT1090.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),ZL_FS,ItemList.CPUPhotomask28um.get(1));
-        recipeMaps.EDA.addRecipeX(T,16, 72000, ST.array(IL.Circuit_Elite.get(0),IL.Circuit_Part_Elite.get(0),ItemList.ResistanceT2.get(1),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT5.get(1));
-        recipeMaps.EDA.addRecipeX(T,16,108000, ST.array(IL.Circuit_Elite.get(0),ST.make(MD.AE,"item.ItemMultiMaterial",0,10),gRegistry.getItem(6019,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.RAMPhotomask28um.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,72000, ST.array(IL.Circuit_Advanced.get(0), gRegistry.getItem(10103,0),gRegistry.getItem(10113,0),gRegistry.getItem(10042,0),ItemList.CPUTF3386S.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),ZL_FS,ItemList.CPUPhotomask72um.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,36000, ST.array(IL.Circuit_Advanced.get(0),IL.Circuit_Part_Advanced.get(0),ItemList.ResistanceT2.get(1),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT4.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,54000, ST.array(IL.Circuit_Advanced.get(0),gRegistry.getItem(11,0),gRegistry.getItem(6019,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.RAMPhotomask72um.get(1));
 
 
-        recipeMaps.EDA.addRecipeX(T,16,288000, ST.array(IL.Circuit_Master.get(0), gRegistry.getItem(10105,0),gRegistry.getItem(10115,0),gRegistry.getItem(10044,0),ItemList.CPUGT2090.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),ZL_FS,ItemList.CPUPhotomask8um.get(1));
-        recipeMaps.EDA.addRecipeX(T,16,144000, ST.array(IL.Circuit_Master.get(0),IL.Circuit_Part_Master.get(0),ItemList.ResistanceT2.get(1),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT6.get(1));
-        recipeMaps.EDA.addRecipeX(T,16,216000, ST.array(IL.Circuit_Master.get(0),ST.make(MD.AE,"item.ItemMultiMaterial",0,23),ST.make(MD.AE,"item.ItemMultiMaterial",0,24),ST.make(MD.AE,"item.ItemMultiMaterial",0,22),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(400,F)),FL.array(ZL_FS),ItemList.RAMPhotomask8um.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,144000, ST.array(IL.Circuit_Elite.get(0), gRegistry.getItem(10104,0),gRegistry.getItem(10114,0),gRegistry.getItem(10043,0),ItemList.CPUGT1090.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),ZL_FS,ItemList.CPUPhotomask28um.get(1));
+        recipeMaps.EDA.addRecipeX(T,16, 72000, ST.array(IL.Circuit_Elite.get(0),IL.Circuit_Part_Elite.get(0),ItemList.ResistanceT2.get(1),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT5.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,108000, ST.array(IL.Circuit_Elite.get(0),ST.make(MD.AE,"item.ItemMultiMaterial",0,10),gRegistry.getItem(6019,0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.RAMPhotomask28um.get(1));
+
+
+        recipeMaps.EDA.addRecipeX(T,16,288000, ST.array(IL.Circuit_Master.get(0), gRegistry.getItem(10105,0),gRegistry.getItem(10115,0),gRegistry.getItem(10044,0),ItemList.CPUGT2090.get(0),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),ZL_FS,ItemList.CPUPhotomask8um.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,144000, ST.array(IL.Circuit_Master.get(0),IL.Circuit_Part_Master.get(0),ItemList.ResistanceT2.get(1),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.CircuitPartPhotomaskT6.get(1));
+        recipeMaps.EDA.addRecipeX(T,16,216000, ST.array(IL.Circuit_Master.get(0),ST.make(MD.AE,"item.ItemMultiMaterial",0,23),ST.make(MD.AE,"item.ItemMultiMaterial",0,24),ST.make(MD.AE,"item.ItemMultiMaterial",0,22),OP.paneGlass.mat(MT.Black,1)), FL.array(MT.HF.gas(U100,F)),FL.array(ZL_FS),ItemList.RAMPhotomask8um.get(1));
 
 //Purify Silicon
     //Method1

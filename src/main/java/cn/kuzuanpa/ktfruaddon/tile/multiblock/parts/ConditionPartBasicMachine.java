@@ -16,7 +16,7 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-public class PartControllerMachine extends CommonMachinePart implements IMachineRunController{
+public class ConditionPartBasicMachine extends CommonMachinePart implements IConditionParts {
 
     @Override
     public String getTileEntityName() {

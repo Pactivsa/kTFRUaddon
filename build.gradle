@@ -42,6 +42,7 @@ repositories {
         url = "http://jenkins.usrv.eu:8081/nexus/content/groups/public/"
         allowInsecureProtocol = true
     }
+    maven { url 'https://raw.github.com/kuzuanpa/gregtech6-TFRU/master' }
 }
 version = project.version
 group = project.group
@@ -85,6 +86,7 @@ dependencies {
     implementation "openblocks:OpenBlocks:1.7.10-1.6-1.7.10:deobf"
     implementation "openmods:OpenModsLib:1.7.10-0.10:deobf"
     implementation "com.azanor.baubles:Baubles:1.7.10-1.0.1.10:deobf"
+    implementation ""
 }
 
 processResources {
