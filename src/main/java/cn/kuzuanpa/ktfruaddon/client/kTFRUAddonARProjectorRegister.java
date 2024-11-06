@@ -21,11 +21,11 @@ import zmaster587.libVulpes.tile.multiblock.DummyTileMultiBlock;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ARProjectorRegister implements IDummyMultiBlockRegisterer {
+public class kTFRUAddonARProjectorRegister implements IDummyMultiBlockRegisterer {
     static MultiTileEntityRegistry g;
     static MultiTileEntityRegistry k;
     public List<DummyTileMultiBlock> dummyStructures = new ArrayList<>();
-    public ARProjectorRegister(){
+    public kTFRUAddonARProjectorRegister(){
         g = MultiTileEntityRegistry.getRegistry("gt.multitileentity");
         k = MultiTileEntityRegistry.getRegistry("ktfru.multitileentity");
     }

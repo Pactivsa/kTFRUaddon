@@ -50,7 +50,7 @@ public enum flList {
     ,NegativeColloid,PositiveColloid
     ,/**磷酸三丁酯**/TributylPhosphate,/**丁醇**/Butanol,/**碳酸铀酰络合离子溶液**/UranylCarbonateSolution,/**甲基叔胺**/MethylTertiaryAmine,/**油酸乙酯**/EthylOleate,/**铀萃取剂**/UraniumExtractant,/**用过的铀萃取剂**/UsedUraniumExtractant,/**萃取的铀**/ExtractedUranium,/**萃取的铀**/ExtractedUranium2,/**硅烷**/Silane,/**四氟化硅**/SiliconTetrafluoride
     ,/**氢氧化钾溶液**/SolutionPotassiumHydroxide,/**双酚钠盐溶液**/ SolutionBPASodium    ,/**氧化钇锆电解质**/ YttriumZirconiumOxide
-    ,HotDistW
+
     ,CrackedNaphthaLow,CrackedNaphthaMedium,CrackedNaphthaHigh,CrackedDieselLow,CrackedDieselMedium,CrackedDieselHigh
     ,MoltenTeflon,MoltenBakelite,MoltenNaK,HotMoltenNaK, MoltenPolycarbonate
     ;

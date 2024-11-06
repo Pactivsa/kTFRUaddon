@@ -8,7 +8,7 @@
  */
 package cn.kuzuanpa.ktfruaddon;
 
-import cn.kuzuanpa.ktfruaddon.client.ARProjectorRegister;
+import cn.kuzuanpa.ktfruaddon.client.kTFRUAddonARProjectorRegister;
 import cn.kuzuanpa.ktfruaddon.fluid.fluidPreInit;
 import cn.kuzuanpa.ktfruaddon.i18n.i18nPostInit;
 import cn.kuzuanpa.ktfruaddon.item.itemPreInit;
@@ -17,10 +17,11 @@ import cn.kuzuanpa.ktfruaddon.material.materialPreInit;
 import cn.kuzuanpa.ktfruaddon.recipe.recipeInit;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityInit0;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityPreInit;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.*;
 import gregapi.api.Abstract_Proxy;
 
+import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.isAdvancedRocketryTFRU;
+import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.updateTFRUEnvironment;
 import static cn.kuzuanpa.ktfruaddon.ktfruaddon.PROXY;
 
 public class commonProxy extends Abstract_Proxy {
@@ -29,6 +30,7 @@ public class commonProxy extends Abstract_Proxy {
     public void registerRenderers() {
     }
     public void preInit(FMLPreInitializationEvent aEvent) {
+        updateTFRUEnvironment();
       //  new prefixPreInit(aEvent);
         materialPreInit.init(aEvent);
         tileEntityPreInit.init(aEvent);
@@ -41,8 +43,8 @@ public class commonProxy extends Abstract_Proxy {
     public void init(FMLInitializationEvent aEvent) {
         tileEntityInit0.init(aEvent);
         PROXY.registerRenderers();
-        if(Loader.isModLoaded("libVulpes"))try{
-            zmaster587.libVulpes.LibVulpes.addDummyMultiBlockRegisterer(new ARProjectorRegister());
+        if(isAdvancedRocketryTFRU)try{
+            zmaster587.libVulpes.LibVulpes.addDummyMultiBlockRegisterer(new kTFRUAddonARProjectorRegister());
         }catch (Exception ignored){}
     }
 
