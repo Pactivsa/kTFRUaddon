@@ -1,21 +1,18 @@
-/**
- * Copyright (c) 2021 GregTech-6 Team
+/*
+ * This class was created by <kuzuanpa>. It is distributed as
+ * part of the kTFRUAddon Mod. Get the Source Code in github:
+ * https://github.com/kuzuanpa/kTFRUAddon
  *
- * This file is part of GregTech.
- *
- * GregTech is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * GregTech is distributed in the hope that it will be useful,
+ * kTFRUAddon is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
+ * GNU Affero General Public License for more details.
+
+ * kTFRUAddon is Open Source and distributed under the
+ * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  *
- * You should have received a copy of the GNU Lesser General Public License
- * along with GregTech. If not, see <http://www.gnu.org/licenses/>.
  */
+
 
 package cn.kuzuanpa.ktfruaddon.client.gui;
 

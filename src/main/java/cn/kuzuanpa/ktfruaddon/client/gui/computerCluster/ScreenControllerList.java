@@ -1,3 +1,17 @@
+/*
+ * This class was created by <kuzuanpa>. It is distributed as
+ * part of the kTFRUAddon Mod. Get the Source Code in github:
+ * https://github.com/kuzuanpa/kTFRUAddon
+ *
+ * kTFRUAddon is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * kTFRUAddon is Open Source and distributed under the
+ * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
+ *
+ */
 package cn.kuzuanpa.ktfruaddon.client.gui.computerCluster;
 
 import cn.kuzuanpa.kGuiLib.client.anime.animeMoveLinear;
@@ -40,7 +54,7 @@ public class ScreenControllerList extends kGuiScreenContainerLayerBase {
 
     @Override
     public void addButtons() {
-        buttons.add(new CommonTexturedButton(-1,ContainerX,ContainerY,0,0,226,146, "textures/gui/computerCluster/controllerBar.png").setAnimatedInFBO(true).addAnime(new animeMoveLinear(-1,0,50,0)).addAnime(new animeMoveSlowIn(0, 300,-50,0,2)).addAnime(new animeFadeIn(300)));
+        buttons.add(new CommonTexturedButton(-1,ContainerX,ContainerY,0,0,226,146, MOD_ID, "textures/gui/computerCluster/controllerBar.png").setAnimatedInFBO(true).addAnime(new animeMoveLinear(-1,0,50,0)).addAnime(new animeMoveSlowIn(0, 300,-50,0,2)).addAnime(new animeFadeIn(300)));
 
         buttons.add(new Text(1,"State",ContainerX+4,ContainerY+3)                                .setAnimatedInFBO(true).addAnime(new animeMoveLinear(-1,0, 50,0)).addAnime(new animeMoveSlowIn(0, 600,-50,0,2)).addAnime(new animeRGBA(0,400,255,255,255,55,-150,-150,-150,200)));
 

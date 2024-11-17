@@ -5,9 +5,13 @@
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAFg.name=Tier - 降临
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAFg.desc=你驾驶着逃生梭降落到了群峦星的一片平原——"新西伯利亚". 在做一切之前, 先活下去吧
 
-# Quest: tfru.q187n
-betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.name=狼牙棒
-betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.desc=用原木和石头做的大棒,可用于前期防身
+# Quest: tfr.quest223.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.name=钻木取火
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.desc=如果已经晚上了的话, 再来看这个任务吧. %n%n收集树枝的主要方法是打破树叶. 叶子大约有三分之一的几率会掉落木棍. 使用镰刀可以以破坏的块为中心破坏一个3x3x3区域的叶子方块, 使其更有效率, 但掉落率将会降低到十分之一. 用锤子砸一根木头会掉1 - 3根棍子. %n%n要创建一个篝火, 往一个方块上抛出(默认按键:Q)3个木棍, 然后用一个起火器或打火石持续右键点燃这个方块的顶部. %n%n起火器可以用来点燃TFC中几种类型的火焰, 包括篝火、木炭坑和坑窑. 当点火时, 起火器可能需要多次使用才能成功地点燃火焰, 而且根据随机的机会, 可能需要更多的起火器. %n%n此外, 起火器可以激活一个锻铁炉或高炉. 
+
+# Quest: tfr.quest224.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.name=淘金(筛铜)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.desc=找个临水的沙滩, 手持淘金盘右键沙子, 然后对准流动的水持续右键, 你有几率获得一些好东西, 包括铜. %n%n注意 沙子用多了是会消失的. %n%n§c此方法推荐不想跑图的人使用
 
 # Quest: tfr.quest0.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.name=石器时代
@@ -23,7 +27,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAg.desc=使用类似于打制石器的�
 
 # Quest: tfr.quest3.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAw.name="新西伯利亚"种土豆
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAw.desc=§l谨以此整合包致敬所有在航天事业中做出贡献的人们, 你们的功绩永垂不朽. %n%n§r亚历山大·史蒂夫·二世的日记：%n%n1859年%n%n我叫亚历山大·史蒂夫·二世, 我是我父亲亚历山大·史蒂夫的儿子(女儿), 我父亲是格雷公司的高层之一. 可我不想活在我父亲的光环下, 我参加了一项伟大的任务：殖民宇宙计划. %n%n二十年前, 公司的天文学家们在距离地球68光年的DSB-1行星系观测到了一个处于宜居带边缘外的系外行星——一个气态巨行星——人们称之为鸭蛋星, 但是一些人认为该行星的卫星很可能接收到来自该行星的红外辐射, 从而获得足够的能量而产生一个适宜生命居住的环境. 而其中最大的那颗卫星, 被称为"群峦星". %n%n公司很重视这一发现：大量的资源被投入到一艘恒星际宇宙飞船的建造中——GTSS "格雷无疆" 号, 而它的目标则是带领一队最顶尖的格雷员工对该卫星进行殖民. 董事长称该计划为“格雷公司泛银河化的第一步”. 我以优异的身体素质和技术能力被选拔为殖民队的成员之一. %n%n格莱格里斯历, 1859年, 泛银河格雷科技有限公司发起星际殖民计划. 我随飞船冬眠200年, 抵达了DSB-1行星系. %n%n2127年%n%n经过了无数的时光, 我们到达了群峦星. 可让我苏醒的不是队友的呼唤. 而是一阵刺耳的警报声. 我往旁边一看, 队友的胸口上插着一片玻璃, 我听见他用如蚊子般的声音说道："你快走吧, 这艘船要坠毁了. 我身上有逃生仓的钥匙和帝国的科技指南. 希望你能好好的活下去". %n%n随后他就永远闭上了双眼, 我把他尸体平整放在地上拿走了他的钥匙和指南. 坐上逃生舱来到了这一片未知的世界. %n%n我把降落地点命名为"新西伯利亚", 拿起我的土豆种子, 穿上防冻服, 打开舱门. 望着头顶悬挂的巨月和蓝色的太阳, 我默默定下一个目标：返回地球！%n%n一场自我救援之旅正式拉开帷幕！%n%n点击右侧红色“X”完成任务%n%n§c重要：红色字为重要提示！%n%n重要：点击任务所需要的物品可以查看物品合成！%n%n重要：王冠形状的任务是解锁下一个阶段的主线任务, 圆形的是支线任务！%n%n重要：Tier开头的任务线为"主科技线", 是你通关此整合包所必须完成的. 但是, 其他任务线同样包含整合包的大量内容！%n%n(请认真查看每一个任务的介绍, 他们花费了我大量的心血)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAw.desc=§l谨以此整合包致敬所有在航天事业中做出贡献的人们, 你们的功绩永垂不朽. %n%n§r亚历山大·史蒂夫·二世的日记：%n%n1859年%n%n我叫亚历山大·史蒂夫·二世, 我是我父亲亚历山大·史蒂夫的儿子(女儿), 我父亲是格雷公司的高层之一. 可我不想活在我父亲的光环下, 我参加了一项伟大的任务：殖民宇宙计划. %n%n二十年前, 公司的天文学家们在距离地球68光年的DSB-1行星系观测到了一个处于宜居带边缘外的系外行星——一个气态巨行星——人们称之为鸭蛋星, 但是一些人认为该行星的卫星很可能接收到来自该行星的红外辐射, 从而获得足够的能量而产生一个适宜生命居住的环境. 而其中最大的那颗卫星, 被称为"群峦星". %n%n公司很重视这一发现：大量的资源被投入到一艘恒星际宇宙飞船的建造中——GTSS "格雷无疆" 号, 而它的目标则是带领一队最顶尖的格雷员工对该卫星进行殖民. 董事长称该计划为“格雷公司泛银河化的第一步”. 我以优异的身体素质和技术能力被选拔为殖民队的成员之一. %n%n格莱格里斯历, 1859年, 泛银河格雷科技有限公司发起星际殖民计划. 我随飞船冬眠200年, 抵达了DSB-1行星系. %n%n2127年%n%n经过了无数的时光, 我们到达了群峦星. 可让我苏醒的不是队友的呼唤. 而是一阵刺耳的警报声. 我往旁边一看, 队友的胸口上插着一片玻璃, 我听见他用如蚊子般的声音说道："你快走吧, 这艘船要坠毁了. 我身上有逃生仓的钥匙和帝国的科技指南. 希望你能好好的活下去". %n%n随后他就永远闭上了双眼, 我把他尸体平整放在地上拿走了他的钥匙和指南. 坐上逃生舱来到了这一片未知的世界. %n%n我把降落地点命名为"新西伯利亚", 拿起我的土豆种子, 穿上防冻服, 打开舱门. 望着头顶悬挂的巨月和蓝色的太阳, 我默默定下一个目标：返回地球！%n%n一场自我救援之旅正式拉开帷幕！%n%n点击右侧红色“X”完成任务%n%n§c重要：红色字为重要提示！%n%n重要：点击任务所需要的物品可以查看物品合成！%n%n重要：任务区分主线和支线, 由边框区分, 根据你的主题不同边框会变化, 与此任务相同的边框均为主线任务.%n%n重要：Tier开头的任务线为"主科技线", 是你通关此整合包所必须完成的. 但是, 其他任务线同样包含整合包的大量内容！%n%n(请认真查看每一个任务的介绍, 绝大部分常见问题都已在任务中讲解!)
 
 # Quest: tfr.quest4.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABA.name=砍树
@@ -47,7 +51,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAADw.desc=你注意到了你现在有水�
 
 # Quest: tfr.quest37.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.name=金属烧烤
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.desc=在地面上连续右键8次放置8个木炭或直接放置一个煤炭块, 除顶面外都与石质方块(包括但不限于圆石、石头、石砖、光滑石头)接触, 再在顶面使用起火器或群峦打火石点燃即可生成一个锻造炉方块. %n%n锻造炉中显示煤炭图标的地方可以放煤炭或木炭, 上面放可加热的金属. %n%n将金属材料放进锻造炉中即可加热金属, 随着温度的升高, 金属的颜色会发生变化(你看不出来, 但是物品下面有显示), 同时物品会先变成"可加工"状态, 然后变成"可焊接"状态, 再然后变成"危险"状态. %n%n§c当金属变为"危险"状态的时候要小心, 因为继续加热可能使你的金属熔化. %n%n金属熔化时, 若右侧的五个栏中有锭模具, 熔化的金属将进入模具中, 若没有模具, 金属直接消失. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJQ.desc=在地面上连续右键8次放置8个木炭或直接放置一个煤炭块, 除顶面外都与石质方块(包括但不限于圆石、石头、石砖、光滑石头)接触, 再在顶面使用起火器点燃即可生成一个锻造炉方块. %n%n锻造炉中显示煤炭图标的地方可以放煤炭或木炭, 上面放可加热的金属. %n%n将金属材料放进锻造炉中即可加热金属, 随着温度的升高, 金属的颜色会发生变化(你看不出来, 但是物品下面有显示), 同时物品会先变成"可加工"状态, 然后变成"可焊接"状态, 再然后变成"危险"状态. %n%n§c当金属变为"危险"状态的时候要小心, 继续加热你的金属就会熔化. %n%n金属熔化时, 若右侧的五个栏中有锭模具, 熔化的金属将进入模具中, 若没有模具, 金属直接消失.
 
 # Quest: tfr.quest78.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAATg.name=金属焊接
@@ -67,7 +71,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhA.desc=打开物品栏按 O (默认)�
 
 # Quest: tfr.quest137.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiQ.name=多人游戏
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiQ.desc=如果你在进行多人游戏, 你可以打开物品栏左上角有一个地图的图标, 打开它可以认领区块. %n%n地图图标上面的绿色小人可以加好友给权限.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAiQ.desc=如果你希望进行多人游戏, 请尽量使用服务器开服, 局域网联机有许多bug %n%n请参考./docs/tfru/server.txt搭建服务器.
 
 # Quest: tfr.quest157.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnQ.name=你终于能做木板. . . 
@@ -76,14 +80,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnQ.desc=用木材合成木板, 制作�
 # Quest: tfr.quest163.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAow.name=地质探测-目前可以透露的情报
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAow.desc=§o不同于你熟悉的原版世界, 群峦星的地下世界变得更加复杂且真实. %n%n§r岩层是由大量同种类岩石形成的. 这里的地壳很厚, 厚达130-150米. %n%n岩石在三个不同的垂直岩层产生. 沉积岩只能在顶层找到. 变质岩存在于顶层和中层. 所有三层都有侵入岩和火成岩. 每一层都独立于其他层, 因此, 表面上的石头变化并不一定意味着另外两层的石头变化. %n%n§3侵入岩：闪长岩、辉长岩、花岗岩%n%n§4火成岩：安山岩, 玄武岩、英安岩、流纹岩%n%n§6沉积岩：白垩岩、黑硅岩、粘土岩、砾岩、白云岩、石灰石、岩盐、页岩%n%n§e§7§d变质岩：片麻岩、大理石、千枚岩、硅岩、片岩、板岩%n%n§r§o能制作助焊剂的岩石(碳酸钙为主要成分的)：§a白云岩、石灰石、白垩岩、大理石%n%n§r能制作盐的岩石(氯化钠为主要成分的)：岩盐%n%n§r矿物在岩层中以矿脉形式生成：%n%n石子和它们下面顶层的石头有着相同的纹理. 如果附近有矿脉, 松散的岩石就有可能产生一小块矿石而不是岩石. 这些矿物石子代表以其为y轴的附近地下有对应矿脉生成. %n%n石墨在变质岩和沉积岩生成；高岭石在变质岩和沉积岩生成；钻石在玄武岩、辉长岩和闪长岩中生成；锡和铀在所有火成岩和侵入岩中生成. %n%n其他矿物的位置需要你自己探索. %n%n金红石, 钨酸盐, 锆石等矿物并没有在贫瘠的群峦星被发现, 你需要制作火箭前往其卫星获得. 
-
-# Quest: tfr.quest223.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.name=钻木取火
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.desc=如果已经晚上了的话, 再来看这个任务吧. %n%n收集树枝的主要方法是打破树叶. 叶子大约有三分之一的几率会掉落木棍. 使用镰刀可以以破坏的块为中心破坏一个3x3x3区域的叶子方块, 使其更有效率, 但掉落率将会降低到十分之一. 用锤子砸一根木头会掉1 - 3根棍子. %n%n要创建一个篝火, 往一个方块上抛出(默认按键:Q)3个木棍, 然后用一个起火器或打火石持续右键点燃这个方块的顶部. %n%n起火器可以用来点燃TFC中几种类型的火焰, 包括篝火、木炭坑和坑窑. 当点火时, 起火器可能需要多次使用才能成功地点燃火焰, 而且根据随机的机会, 可能需要更多的起火器. %n%n此外, 起火器可以激活一个锻铁炉或高炉. 
-
-# Quest: tfr.quest224.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.name=淘金(筛铜)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.desc=找个临水的沙滩, 手持淘金盘右键沙子, 然后对准流动的水持续右键, 你有几率获得一些好东西, 包括铜. %n%n注意 沙子用多了是会消失的. %n%n§c此方法推荐不想跑图的人使用
 
 # Quest: tfr.quest271.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABDw.name=干草
@@ -101,17 +97,13 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABFA.desc=注意区分原版木炭与TFC�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABGQ.name=查看材料含量
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABGQ.desc=在不打开任何GUI的情况下按 f3+h 打开材料显示 查看材料含量%n%n这个很重要对往后的格雷发展有极大的帮助
 
-# Quest: tfr.quest288.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABIA.name=关于参考内容
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABIA.desc=感谢mcmod.cn提供的格雷科技6教程%n感谢网络人士整理的群峦传说wiki
-
 # Quest: tfr.quest293.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABJQ.name=关于任务线的解锁
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABJQ.desc=这本任务书并不是像一般的任务书一样将每条任务线严格地放在前一条任务线全部完成后解锁, 而更像网状的任务结构. %n%n任务线的最重要目的是指引你了解这个整合包中很多方面的玩法. %n%n比如, 当你解锁锄头, 你就会解锁农业任务线. 当你解锁钢, 你就会解锁蒸汽时代的任务线. 有许多任务会要求提交储罐, 请认真确认任务需求储罐内所含的流体, 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABJQ.desc=这本任务书并不是像一般的任务书一样将每条任务线严格地放在前一条任务线全部完成后解锁, 而更像网状的任务结构. %n%n任务线的最重要目的是指引你了解这个整合包中很多方面的玩法. %n%n比如, 当你解锁锄头, 你就会解锁农业任务线. 当你解锁钢, 你就会解锁蒸汽时代的任务线. 有许多任务会要求提交储罐, 请认真确认任务需求储罐内所含的流体,
 
 # Quest: tfr.quest307.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABMw.name=关于无法锻造问题(没配方)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABMw.desc=所有锻造标准对齐但是没有成型, %n是因为多世界插件(跨纬度)引起, 只要重新进存档就好.%n多人联机小退就行.%n%n锻造配方不显示是多世界或砧的等级不够.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABMw.desc=所有锻造标准对齐但是没有成型, %n是因为多世界插件(跨纬度)引起, 只要重新进存档就好.%n多人联机小退就行.%n%n锻造配方不显示是砧的等级不够.
 
 # Quest: tfr.quest348.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABXA.name=简单的上下交通
@@ -125,10 +117,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABcQ.desc=地面上有些石头比较特�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABcg.name=§b§l你所记得的一切在这里都不适用
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABcg.desc=这是一个完全修改了原版世界的整合包！你所记忆的关于MC生存模式的一切在这里都不适用. %n%n§c§n请记住, 任务书永远是你最好的帮手, 当你遇到什么问题, 请找找任务书内有没有答案. %n%n§r想致富, 先捡一些地上的石头和木棍吧！ 任意石头都可以提交任务. %n%n诶, 逃生舱里还有些面包诶. 
 
-# Quest: tfr.quest417.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABoQ.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABoQ.desc=
-
 # Quest: tfr.quest460.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzA.name=我该挖什么？
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzA.desc=在获取第一把铜镐之后你就可以挖掘石头中的矿而不用继续采集地表的矿粒了. %n%n找到地上的矿物石子之后你可以用我送给你的勘矿镐右键附近的泥土, 会有文字信息反馈给你这里的矿物量. %n(一般是以你敲击的方块为中心的25x25x25立方体)%n 升级勘矿技能等级会获得更详细和明显的信息提示, 升级到学徒等级后还可以通过破坏方块探测深处的矿物. %n%n §*§*§c*个人推荐十字定位法(经纬度定位)：%n §r      首先找到一个巨量的位置, 大概是中心(如果没有巨量请在地表矿粒处找到大概中心位置下挖)%n       然后选一个方向, 比如x轴方向, 在这条直线上探矿, 直到探到大量%n       打个比方, 你探到结果是这样的%n           大量 大量 大量 大量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 大量 大量%n       那么就在“巨量”的两端的中点定位, 即加粗的两个中选一个%n       然后站在你找到的这个中点, 在与之前的方向垂直的方向(之前是x轴, 现在就是z轴)探一条线%n       打个比方, 你探到的结果是这样的%n           大量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 巨量 大量%n       那么这次“巨量”的两端的中点, 即加粗位置, 就是矿脉的中心了. %n%n前期建议你挖掘铜矿, 煤矿, 锡矿, 铋矿等, 进入Tier1后可以挖掘铁矿等.
@@ -137,17 +125,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABzA.desc=在获取第一把铜镐之后�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzQ.name=支撑柱
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzQ.desc=你可能注意到了这里的岩石可能会坍塌, 为了防止这点你必须做一些东西. %n%n有了锯子你就能制作支撑柱了(NEI搜索支撑柱)任何原木都可以制作支撑柱, 他们共同的作用都是防止矿洞坍塌. %n%n在矿洞中你需要把他们摆成如下的形状(侧视图)：%n支撑柱：V%n石头：S%n%nS S S%nV V V%nV   V%nV   V%nS S S%n%n他们可以支撑起上方7x7x3的方块
 
-# Quest: tfr.quest520.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCA.name=原版食物无法食用
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCA.desc=你出生时拿着的苹果不能吃, 我给你换成能吃的(%n%n这个整合包里只有TFC和GT的食物能吃. 
-
 # Quest: tfr.quest561.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACMQ.name=转换
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACMQ.desc=大多原版物品都能无序合成转换为相同的TFC物品, %n一些容易混淆的TFC物品被标记了. %n如果遇到某些物品无法使用的时候, 尝试进行转换. 
-
-# Quest: tfr.quest598.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVg.name=难度模式
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVg.desc=本整合包分为两种难度：普通模式/专家模式. 默认开启普通模式. %n%n普通模式 - 通关时间降低约百分之20, 失去一些专家模式专属的游戏玩法%n- 降少了部分材料的合成成本%n- 允许您使用格雷科技的砧%n- 允许您采用原有的铂系金属处理线%n%n使用/ftb_mode set normal 切换为普通模式%n使用/ftb_mode set expert 切换为专家模式%n%n如果您在服务器游玩, 只有管理员才能切换难度模式. 
 
 # Quest: tfr.quest619.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACaw.name=任务组队
@@ -155,7 +135,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACaw.desc=组队系统可以在任务书�
 
 # Quest: tfr.quest637.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACfQ.name=加入社区
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACfQ.desc=我们非常欢迎玩家加入我们的QQ交流群或者Discord群聊:%nQQ1群： 1046723658%nQQ2群： 1154748118%nDiscord： https://discord.gg/BWn6E94%n%n或者您也可以通过官网/论坛/Wiki访问我们:%n官网： www.teammoeg.com%n论坛： forum.teammoeg.com%nWiki： wiki.teammoeg.com%n%n或者给我们发送邮件:%n邮箱： support@teammoeg.com
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACfQ.desc=我们非常欢迎玩家加入我们的QQ交流群:%nQQ1群： 836643851
 
 # Quest: tfr.quest638.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACfg.name=专属材质包
@@ -163,12 +143,28 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACfg.desc=我们的团队制作了一个T
 
 # Quest: tfr.quest648.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACiA.name=找不到粘土？
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACiA.desc=群峦星的原住民希望你能给他们建造一座茅草屋的材料, 为了报答他们可以给你一些粘土. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACiA.desc=群峦星的原住民希望你能给他们建造一座茅草屋的材料, 为了报答他们可以给你一些粘土.
+
+# Quest: tfru.q187n
+betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.name=狼牙棒
+betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.desc=用原木和石头做的大棒,可用于前期防身
 
 
 ## Quest Line: tfr.line13.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAADQ.name=Tier 0 - 青铜时代
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAADQ.desc=骤风穿行于知识之槲, 迷茫者在树下彷徨驻足. %n将要攀登之际, 果实落下.
+
+# Quest: tfr.quest217.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.name=发酵/浸泡/降温于一体
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.desc=木桶是个重要的工具：它不消耗能量只需要密封后等待配方完成. 
+
+# Quest: tfr.quest218.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.name=皮革
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.desc=兽皮由猪、牛、鹿和剪去羊毛的绵羊所掉落, 并有三种大小:小的、中等的和大的. 每只动物只掉一张皮, 但更大的动物会掉落更大的兽. %n%n把兽皮变成浸泡皮革, 需要一桶石灰水. 一旦装满你想要的量, 把兽皮放在桶里, 然后密封它. 在整个过程完成之前, 你将无法打开桶. 一旦完成, 桶里就会出现浸泡皮革. %n%n刮制浸泡皮革需要一个皮革架. 首先, 需要放置一个原木. 然后, 通过右击可以将浸泡皮革放在原木上(放在原木的顶部, 而不是侧面或者底面！). 用刀把每一部分刮干净. 最后, 可以从原木上取下皮革. %n%n把刮制皮革变成预制皮革, 需要一桶水. 一旦填满你想要的量, 把兽皮放到桶里, 然后密封. 在整个过程完成之前, 你将无法打开桶. 一旦完成, 桶里就会出现预制皮革. %n%n预制皮革用于制造皮革. 这需要一桶鞣酸. 填入所需的量, 将预制皮革放入桶内并密封. 在整个过程完成之前, 你将无法打开桶. 一旦完成, 桶里就会有皮革. 更大的皮革需要更多的鞣酸, 但会产生更多的皮革. %n%n注意并非所有原木都能制作鞣酸
+
+# Quest: tfr.quest219.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.name=§b§l§r§l§c§l氧气助燃
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.desc=使用风箱的黑色孔对准锻造炉顶部空气, 坩锅, 或者高炉可以加快升温速度, 在炼钢时有奇效. 
 
 # Quest: tfr.quest19.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEw.name=搅拌盆
@@ -196,23 +192,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmw.desc=将铜矿和锡矿以近似9单
 
 # Quest: tfr.quest164.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAApA.name=气候-目前可以透露的情报
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApA.desc=群峦星的气候十分有趣. z轴坐标为零的一条线是它的赤道, 常年干旱, 温度奇高, 食物迅速腐烂. %n%n环境温度指的是周围的温度, 用摄氏度来测量. 在调试屏幕上可以查看当前的环境温度. (默认键:F3)%n%n%n%n%n环境温度在早上6点增加, 晚上6点减少. %n%n%n%n促成因素: 高度, 纬度(z坐标), 月份, 影响%n%n%n环境温度和其他气候计算是基于一个区域的给定纬度(Z坐标). Z = 0的线被认为相当于赤道, 而Z = - 30, 000的线被认为大致相当于北极圈. %n%n%n环境温度影响多种特性, 包括:%n%n%n%n动物生成, 高炉效率, 作物生长, 坩埚效率, 树叶的颜色, 果树生长, 天气, 食物腐烂
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApA.desc=群峦星的气候十分有趣. z轴坐标为零的一条线是它的赤道, 常年干旱, 温度奇高, 食物迅速腐烂. %n%n环境温度指的是周围的温度, 用摄氏度来测量. 在调试屏幕上可以查看当前的环境温度. (默认键:F3)%n%n%n%n%n环境温度在早上6点增加, 晚上6点减少. %n%n%n%n促成因素: 高度, 纬度(z坐标), 月份, 影响%n%n%n环境温度和其他气候计算是基于一个区域的给定纬度(Z坐标). Z = 0的线被认为相当于赤道, 而Z = - 30, 000的线被认为大致相当于北极圈. %n%n%n环境温度影响多种特性, 包括:%n%n%n%n动物生成, 高炉效率, 作物生长, 坩埚效率, 树叶的颜色, 果树生长, 天气, 食物腐烂等. %n%n完成该任务后即可前往"探索的时光"任务线查看快速行进的方式(左半边)和旅程中可能遇到的有价值的物品(右半边).
 
 # Quest: tfr.quest168.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqA.name=坩埚, 不太好用, 但是至少比花瓶好
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqA.desc=如果你找到石墨和高岭土, 把它们膜成粉就能做出陶土, 陶土再捏吧捏吧就变成坩埚了. %n把坩埚放在锻炉上面, 点燃锻炉, 就能加热坩埚. %n坩埚可以高效地熔炼铁矿以外的矿石, 还可以用来制作合金. %n%n§c注意合金配比, 别变成未知锭了. 
-
-# Quest: tfr.quest217.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.name=发酵/浸泡/降温于一体
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.desc=木桶是个重要的工具：它不消耗能量只需要密封后等待配方完成. 
-
-# Quest: tfr.quest218.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.name=皮革
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.desc=兽皮由猪、牛、鹿和剪去羊毛的绵羊所掉落, 并有三种大小:小的、中等的和大的. 每只动物只掉一张皮, 但更大的动物会掉落更大的兽. %n%n把兽皮变成浸泡皮革, 需要一桶石灰水. 一旦装满你想要的量, 把兽皮放在桶里, 然后密封它. 在整个过程完成之前, 你将无法打开桶. 一旦完成, 桶里就会出现浸泡皮革. %n%n刮制浸泡皮革需要一个皮革架. 首先, 需要放置一个原木. 然后, 通过右击可以将浸泡皮革放在原木上(放在原木的顶部, 而不是侧面或者底面！). 用刀把每一部分刮干净. 最后, 可以从原木上取下皮革. %n%n把刮制皮革变成预制皮革, 需要一桶水. 一旦填满你想要的量, 把兽皮放到桶里, 然后密封. 在整个过程完成之前, 你将无法打开桶. 一旦完成, 桶里就会出现预制皮革. %n%n预制皮革用于制造皮革. 这需要一桶鞣酸. 填入所需的量, 将预制皮革放入桶内并密封. 在整个过程完成之前, 你将无法打开桶. 一旦完成, 桶里就会有皮革. 更大的皮革需要更多的鞣酸, 但会产生更多的皮革. %n%n注意并非所有原木都能制作鞣酸
-
-# Quest: tfr.quest219.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.name=§b§l§r§l§c§l氧气助燃
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.desc=使用风箱的黑色孔对准锻造炉顶部空气, 坩锅, 或者高炉可以加快升温速度, 在炼钢时有奇效. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqA.desc=如果你找到石墨和高岭土, 把它们磨成粉就能做出陶土, 陶土再捏吧捏吧就变成坩埚了. %n把坩埚放在锻炉上面, 点燃锻炉, 就能加热坩埚. %n坩埚可以高效地熔炼铁矿以外的矿石, 还可以用来制作合金. %n%n§c注意合金配比, 别变成未知锭了.
 
 # Quest: tfr.quest261.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBQ.name=真正的石灰~
@@ -228,7 +212,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABDg.desc=用木炭, 硫磺, 和硝石制
 
 # Quest: tfr.quest277.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABFQ.name=科学的玻璃工艺
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABFQ.desc=要想制作出玻璃, 你可以选择挖掘硼砂或者制造粗制烧碱. 查看NEI了解具体的制造方法%n%n原版沙子可以通过无序合成获得. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABFQ.desc=要想制作出玻璃, 你可以选择挖掘硼砂矿或天然碱矿, 将他们放在石磨里研磨成粉后放入搅拌盆搅拌. 查看NEI了解具体的制造方法%n%n原版沙子可以通过无序合成获得.
 
 # Quest: tfr.quest289.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABIQ.name=各种工具的使用说明
@@ -268,7 +252,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABtw.desc=哇, 这玩意真方便不是�
 
 # Quest: tfr.quest440.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABuA.name=金属锻造
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABuA.desc=看看砧里中间的部分吧, 这些就是锻造相关的部分. §r%n%n*以下内容建议截图后配合砧的gui一起食用*%n%n先看最中间, 最中间的两个格子是你放锻造的原料的. 金属加热到"可加工"即可放入砧中锻造. 砧只能锻造和自己等级相同或更低等级的材料(如青铜砧可以加工青铜和铜). %n中间两格右面的按钮是"设计图"按钮, 在此选择你要锻造的成品. %n选择好成品之后看最上方的三个橙红色的框, 从左到右分别是你要进行的倒数第一、倒数第二、倒数第三个操作, 记住它们. %n接下来往下看, 中下方有8个按钮, 4红4绿, 它们分别是%n§4轻击 击打 §2§a冲压 弯曲%n§4重击 牵拉 §a敦锻 收缩%n§r这八个按钮就是你可以进行的操作. %n再往下看, 中间的最下方有一个条, 上面有一个红色箭头, 下面有一个绿色箭头, 其中你可以通过操作移动绿色箭头. 你要做的就是使红色和绿色对齐, 并且保证后三个操作与需求的一致. %n八种操作让绿色箭头的移动方向和距离都不一样：%n§c§4轻击：向左3单位   %n击打：向左6单位%n重击：向左9单位%n牵拉：向左15单位%n§a冲压：向右2单位%n弯曲：向右7单位%n敦锻：向右13单位%n收缩：向右16单位§r%n注意不要让绿色箭头移动到最右端, 否则金属会消失. %n建议先将红绿色箭头对齐, 再算出后三个操作的总位移量, 通过操作使两个箭头差的距离与总位移量相反, 再进行后三个操作即可打出成品. %n如果金属冷掉, 请放进锻造炉继续加热, 锻造进度会保留. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABuA.desc=看看砧里中间的部分吧, 这些就是锻造相关的部分. §r%n%n*以下内容建议截图后配合砧的gui一起食用*%n%n先看最中间, 最中间的两个格子是你放锻造的原料的. 金属加热到"可加工"即可放入砧中锻造. 砧只能锻造和自己等级相同或更低等级的材料(如青铜砧可以加工青铜和铜). %n中间两格右面的按钮是"设计图"按钮, 在此选择你要锻造的成品. %n选择好成品之后看最上方的三个橙红色的框, 从左到右分别是你要进行的倒数第一、倒数第二、倒数第三个操作, 记住它们. %n接下来往下看, 中下方有8个按钮, 4红4绿, 它们分别是%n§4轻击 击打 §2§a冲压 弯曲%n§4重击 牵拉 §a敦锻 收缩%n§r这八个按钮就是你可以进行的操作. %n再往下看, 中间的最下方有一个条, 上面有一个红色箭头, 下面有一个绿色箭头, 其中你可以通过操作移动绿色箭头. 你要做的就是使红色和绿色对齐, 并且保证后三个操作与需求的一致. %n八种操作让绿色箭头的移动方向和距离都不一样：%n§c§4轻击：向左3单位   %n击打：向左6单位%n重击：向左9单位%n牵拉：向左15单位%n§a冲压：向右2单位%n弯曲：向右7单位%n敦锻：向右13单位%n收缩：向右16单位§r%n注意不要让绿色箭头移动到最右端, 否则金属会消失. %n建议先将红绿色箭头对齐, 再算出后三个操作的总位移量, 通过操作使两个箭头差的距离与总位移量相反, 再进行后三个操作即可打出成品. %n如果金属冷掉, 请放进锻造炉继续加热, 锻造进度会保留.  %n%n§a进阶提示!§r使用尽量少的步骤锻造工具和盔甲时会获得额外加成, 可以节省部分材料, 步骤最少时会有完美锻造的提示, 向完美铁匠进发吧!
 
 # Quest: tfr.quest441.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABuQ.name=彩虹～
@@ -283,9 +267,29 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAChA.desc=高岭石和石墨是制作耐�
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAQ.name=Tier 1 - 钢铁时代
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAQ.desc=进入了灰铁时代的你提升了一部分产能, 但依旧不多.
 
+# Quest: tfr.quest210.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.name=自动化木炭生产
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.desc=当你拥有一个林业的多方块农场(详见农业任务线)源源不断产出原木的时候, 你就可以制作大量焦炉来烧制木炭了. %n%n焦炉底部可以接格雷科技的管道自动输出杂酚油, 也可以接料斗自动输出木炭, 顶部可以用料斗或者物品管道输入原木. %n%n总而言之, 他是个完全支持自动化的设备. %n%n再制作三个焦炉以及相应的自动化设备足以支撑一个蒸汽时代的工厂. %n%n§c注意这个任务有3页
+
+# Quest: tfr.quest214.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.name=耐热合金-殷钢
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.desc=用于制作接受热能机器的一种材料
+
+# Quest: tfr.quest222.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.name=3锭2板的增产
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.desc=需要RF能量工作, 可以比手动略低损耗地制作弯曲板, 小型外壳, 箔, 长杆, 和板, 但是不能加工比钢硬的金属. 
+
+# Quest: tfr.quest232.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.name=打磨石
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.desc=可以刮制皮革, 而不需要你用小刀. 需要放置一个沙石(不是沙子)才可以用. 
+
+# Quest: tfru.q140n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.name=坩埚模具
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.desc=用它来制作坩埚, 它将成为下一个时代的敲门砖, 也会极大地提升你的生产力. %n%n放置模具方块后, 放入7个黏土, 再放入内层模具, 之后在有风箱加热的锻造炉上烘烤至黏土变为陶瓷即可拆除模具取出坩埚. %n%n%n两组任务只需要完成其一即可
+
 # Quest: tfr.quest11.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.name=§b§l金属熔炼
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.desc=想暂时告别在砧上打板, 加工部分零件吗？这台格雷科技的坩埚是你最好的帮手. %n%n§l注意：这台坩锅不能加工你挖到的原矿！你必须将原矿处理为粉碎的矿石/洗净的矿石/矿石粉, 或者变成金属单质, 之后才能熔炼他们. 现在对你来说, 这台坩锅最大的用途在于制作合金. 有了这台坩锅, 制作黑钢、蓝钢、红钢等复杂合金变得更加简单. %n%n§r用法：首先, 把燃烧室放坩锅正下方, 把模具放在坩埚一个y平面上, 贴着坩锅摆放. 将要熔炼的物品丢进坩埚, 然后右键燃烧室放入任何燃料, 如煤炭, 木头等. 接下来, 用起火器(GT)右键燃烧室, 有几率点起火. 接着, 你可以等待坩埚中金属熔化, 或者合金变色. 用手/钳子右键模具, 即可导出金属. 等待金属凝固后, 再次右键就可以取出金属了. 如果不用钳子, 你会受到烫伤. %n%n坩锅的介绍里有一个熔毁温度, 一旦持续加温超过该温度, 坩锅就会熔毁(周围的方块不会被破坏, 但是你的坩锅会消失), 我建议你做完这个任务后, 在使用之前, 先看看旁边的温度任务. %n%n模具可以用凿子做成各种形状, 如板, 锭, 杆, 齿轮. 具体可以看教程. 导出金属就是你做成的形状. 比如板就是全部凿空. 这将大大节省你的时间.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.desc=想暂时告别在砧上打板, 加工部分零件吗？这台格雷科技的坩埚是你最好的帮手. %n%n§l注意：这台坩锅不能加工你挖到的原矿！你必须将原矿处理为粉碎的矿石/洗净的矿石/矿石粉, 或者变成金属单质, 之后才能熔炼他们. 现在对你来说, 这台坩锅最大的用途在于制作合金. 有了这台坩锅, 制作黑钢、蓝钢、红钢等复杂合金变得更加简单. %n%n§r用法：首先, 把燃烧室放坩锅正下方, 把模具放在坩埚一个y平面上, 贴着坩锅摆放. 将要熔炼的物品丢进坩埚, 然后右键燃烧室放入任何燃料, 如煤炭, 木头等. 接下来, 用起火器(GT)右键燃烧室, 有几率点起火. 接着, 你可以等待坩埚中金属熔化, 或者合金变色. 用手/钳子右键模具, 即可导出金属. 等待金属凝固后, 再次右键就可以取出金属了. 如果不用钳子, 你会受到烫伤. %n%n坩锅的介绍里有一个熔毁温度, 一旦持续加温超过该温度, 坩锅就会熔毁(周围的方块不会被破坏, 但是你的坩锅会消失), 我建议你做完这个任务后, 在使用之前, 先看看旁边的温度任务. %n%n模具可以用凿子做成各种形状, 如板, 锭, 杆, 齿轮. 具体可以看可选任务部分粘土模具的形状. 导出金属就是你做成的形状. 比如板就是全部凿空. 这将大大节省你的时间.
 
 # Quest: tfr.quest13.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAADQ.name=§b§l锻铁砧
@@ -313,7 +317,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAARA.desc=你可以将这个温度传感�
 
 # Quest: tfr.quest90.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWg.name=焦炉+
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWg.desc=你或许已经发现原版熔炉不再能够烧制木炭, 取而代之的是多方块GT焦炉. 焦炉是3x3x3的空心立方体, 正面中心是焦炉主方块, 其他为耐火砖. 每个焦炉需要25耐火砖和1焦炉主方块. 我现在要你去收集大量的粘土去制作它. %n%n焦炉在放进原木或者褐煤/煤炭后需要用原版或者格雷科技的打火, 而不是群峦传说的打火机, 机点击主方块点燃%n 焦炉内置16线程, 效率很高. 一组煤炭或者纯净的破碎煤矿可以焦化成一组焦煤, 热值翻倍, 并且可以得到32000L的木榴油. 褐煤焦化可以得到更多的木榴油但是焦化褐煤的热值较低. 木头可以焦化成木炭, 也能获得可观的木榴油. %n%n木榴油是蒸馏塔完成之前最优秀的液体燃料, 热值和原油媲美, 容易制取并且不具备再加工的可能, 烧起来不心疼. %n%n§c注意这个任务有两页
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWg.desc=你或许已经发现原版熔炉不再能够烧制木炭, 取而代之的是多方块GT焦炉. 焦炉是3x3x3的空心立方体, 正面中心是焦炉主方块, 其他为耐火砖. 每个焦炉需要25耐火砖和1焦炉主方块. 你需要收集大量的粘土去制作它. %n%n焦炉在放进原木或者褐煤/煤炭后需要用原版或者格雷科技的打火, 而不是群峦传说的打火机, 机点击主方块点燃%n 焦炉内置16线程, 效率很高. 一组煤炭或者纯净的破碎煤矿可以焦化成一组焦煤, 热值翻倍, 并且可以得到32000L的木榴油. 褐煤焦化可以得到更多的木榴油但是焦化褐煤的热值较低. 木头可以焦化成木炭, 也能获得可观的木榴油. %n%n木榴油是蒸馏塔完成之前最优秀的液体燃料, 热值和原油媲美, 容易制取并且不具备再加工的可能, 烧起来不心疼. %n%n§c注意这个任务有两页
 
 # Quest: tfr.quest91.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.name=流体燃烧室
@@ -322,10 +326,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.desc=流体燃烧室能在堵上的�
 # Quest: tfr.quest101.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.name=温度
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.desc=不同的熔炼坩埚有不同的熔毁温度, 你可以在tootip看到. 这决定了他们能够冶炼的金属的最高熔点. 比如, 用陶瓷坩锅无法冶炼铱, 但是铬坩埚可以. 制作更高熔点的坩埚十分重要, 他让你冶炼更强大的金属. 一般来说, 坩埚制作路线是：陶瓷-铬-铱 或者 陶瓷-铬-铌钛-钼. %n%n为了避免坩锅超过温度融毁, 你需要制作一个温度计来实时地查看坩锅的温度情况. %n%n首先准备一个玻璃瓶, 然后你需要三个朱砂粉, 丢进坩埚, 装一瓶需要144L液态汞. 丢两个木板进燃烧室点火(不能丢太多燃料, 汞很容易就蒸发了), 刚好可以让朱砂转化成汞, 而汞在常温下是液态的, 所以不用担心会凝固. 用玻璃瓶直接对着坩埚内的液体右键就可以获得汞瓶啦. 获得温度计之后我们就可以随时监控坩埚的温度再也不怕炸锅啦.
-
-# Quest: tfr.quest106.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.name=燃烧吧!~~
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.desc=燃烧室！你获取热能(HU)最直接的方法-也是蒸汽锅炉的热源, 但不仅仅是. 格雷科技的有不少机器使用热能. 直到你制作出电热器之前, 你都需要他们. 从顶部输出热量(HU)%n%n燃烧室分为固体, 液体, 气体三种. 这里分析一下三种燃烧室的优劣. %n%n§4§l固体燃烧室, 使用固体燃料, 所有可以用在熔炉中的燃料(除了岩浆)都可以塞进固体燃烧室中充当燃料. 当你想要停止加热时, 你需要将燃烧室正面堵住, 并且等待当前正在燃烧的燃料燃烧完毕. 使用固体燃烧室冶炼矿物时, 请一定要等待熄火后再进行浇筑. 因为坩埚内容物越少升温越快, 如果没有熄火就让坩埚空了或者临近空的状态, 温度将飞速上升, 极容易爆炸(实际上是熔毁). 适合用于需要长期加热并且容错率高的设备, 但因为需要手动添加燃料, 并且需要定时清理燃烧后的灰烬, 在建造出蒸馏塔之后不建议使用固体燃烧室. %n%n§2§l液体燃烧室, 最安全稳定的燃烧室, 使用可燃液体:你现在能获取的最好的就是杂酚油了(各种酒、木榴油、以及各种石油蒸馏产油适合用于燃烧, 其他油热值太低). 因为可燃液体燃烧效率为1L/1ticks, 所以当你想要停止加热, 你只需要堵住正面, 就可以立刻停止加热. 使用液体燃烧室冶炼矿物时, 可以在标准温度更高一点的温度时停止加热, 以防止浇筑过程中液体凝固. %n%n§9§l气体燃烧室, 长效的燃烧室. 丙烷丁烷的热值要比汽油等石油蒸馏产油的热值稍高一些, 并且每次燃烧使用5~7L燃烧30~42ticks, 所以关闭时会延迟一秒左右的时间. 适合用于蒸馏塔, 蒸汽锅炉等长期加热的热源. %n%n§6§o§n§r§o注：根据找到的油的不同, 也可以决定使用液体还是气体燃烧室. 越重的油产气越少产油和固体产物越多, 反之亦然. 
 
 # Quest: tfr.quest107.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=红蓝力量
@@ -355,33 +355,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAog.desc=焊接双层钢, 锻造钢锭�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAApw.name=虽然也很原始, 但是至少不用风箱
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAApw.desc=%n用碎石机将任何铁矿石变为小型后, 和助焊剂制作成冶钢预制铁矿%n%n你可以把他们丢进高炉, 放入木炭或煤炭, 将其烧为锻铁粒. %n%n锻铁粒可以再次在高炉中烧为钢粒. 他们可以通过工作台合成为锭. 
 
-# Quest: tfr.quest210.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.name=自动化木炭生产
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.desc=当你拥有一个林业的多方块农场(详见农业任务线)源源不断产出原木的时候, 你就可以制作大量焦炉来烧制木炭了. %n%n焦炉底部可以接格雷科技的管道自动输出杂酚油, 也可以接料斗自动输出木炭, 顶部可以用料斗或者物品管道输入原木. %n%n总而言之, 他是个完全支持自动化的设备. %n%n再制作三个焦炉以及相应的自动化设备足以支撑一个蒸汽时代的工厂. %n%n§c注意这个任务有3页
-
-# Quest: tfr.quest214.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.name=耐热合金-殷钢
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.desc=用于制作接受热能机器的一种材料
-
-# Quest: tfr.quest221.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.name=§b§lRF
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.desc=可以发16RF/t的能量, 用来供辊压机和碎石机还是凑合的. %n%n记得用红石信号开机！！！
-
-# Quest: tfr.quest222.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.name=3锭2板的增产
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.desc=需要RF能量工作, 可以比手动略低损耗地制作弯曲板, 小型外壳, 箔, 长杆, 和板, 但是不能加工比钢硬的金属. 
-
-# Quest: tfr.quest232.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.name=打磨石
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.desc=可以刮制皮革, 而不需要你用小刀. 需要放置一个沙石(不是沙子)才可以用. 
-
-# Quest: tfru.q140n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.name=坩埚模具
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.desc=用它来制作坩埚, 它将成为下一个时代的敲门砖, 也会极大地提升你的生产力. %n%n放置模具方块后, 放入7个黏土, 再放入内层模具, 之后在有风箱加热的锻造炉上烘烤至黏土变为陶瓷即可拆除模具取出坩埚. %n%n%n两组任务只需要完成其一即可
-
 # Quest: tfr.quest260.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBA.name=伏特加发电
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABBA.desc=众所周知, 伏特加里的乙醇比水多(大雾). %n%n前期你可以直接用木桶和土豆酿造伏特加. %n%n§b使用40oz的土豆可以酿造10000mB的伏特加(别信NEI)%%n%n你可以用液体漏斗将其装进格雷科技储罐, 以将其输出至燃烧室等消耗流体燃料的机器. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABBA.desc=众所周知, 伏特加里的乙醇比水多(大雾). %n%n前期你可以直接用木桶和土豆酿造伏特加. %n%n§b使用160oz的土豆可以酿造10000mB的伏特加%%n%n你可以用液体漏斗将其装进格雷科技储罐, 以将其输出至燃油引擎等消耗流体燃料的机器.
 
 # Quest: tfr.quest269.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABDQ.name=更高效的软金属加工
@@ -465,32 +441,32 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACow.desc=格雷科技的砧能免去加�
 
 # Quest: tfr.quest677.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACpQ.name=时光倒流
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpQ.desc=前往地狱寻找远古残骸AncientDebris矿石和石子, 并在坩埚里用4份远古残骸和4份金冶炼1份下界合金. 下界合金是优秀的工具材料和锅炉材料. 由于含有金, 下界合金流体管道和储罐能耐酸性腐蚀. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACpQ.desc=前往地狱寻找远古残骸远古残骸矿石和石子, 并在坩埚里用4份远古残骸和4份金冶炼1份下界合金. 下界合金是优秀的工具材料和锅炉材料. 由于含有金, 下界合金流体管道和储罐能耐酸性腐蚀.
+
+# Quest: tfru.q229n
+betterquesting.quest.Tk94v6vvShWprSGhzvjBRA.name=电感坩埚
+betterquesting.quest.Tk94v6vvShWprSGhzvjBRA.desc=群峦原始人终于掌握了初步的能源应用, 并制作出了极为方便的电感坩埚. 它只消耗RF, 升温更快, 还可以精确控温. %n%n但是, 这种技术终将改变一切, 下一个时代将迎来极大的生产力提升. 是稳步迈进还是跨步向前, 由你自行抉择.
+
+# Quest: tfru.q228n
+betterquesting.quest.jBPHEKqYSyalUnqrFzYbJg.name=齿轮制造
+betterquesting.quest.jBPHEKqYSyalUnqrFzYbJg.desc=当前阶段齿轮即有两种方法制作, 使用tfctech物品制作的合金齿轮和使用砧敲的纯金属齿轮, 在当前阶段前者更节省材料, 但获得gt坩埚后便应使用gt坩埚浇筑, 效率最高.
 
 
 ## Quest Line: tfr.line2.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=Tier 2 - 蒸汽时代
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.desc=一天, 你在锻造的时候不小心把水壶放在了锻造炉旁边. 不一会, 水壶的盖扑通扑通地被一种白雾顶了起来. 你根据帝国指南制作了一台蒸汽机.
 
-# Quest: jinxi
-betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.name=
-betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.desc=
-
 # Quest: tfru.q188n
 betterquesting.quest.0MYmYGfXS1ipsqYASxBB7w.name=区块加载
 betterquesting.quest.0MYmYGfXS1ipsqYASxBB7w.desc=拥有机器后你很可能需要保持区块加载,这个节点加载器可以常加载它所在的区块.
 
-# Quest: tfr.quest12.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=§b烧开水！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.desc=你这趟旅途中的第一台蒸汽生产设备.该是提高生产力的时候了！%n%n§5虽然你完成钢砧之后就能进入蒸汽时代, 但我还是建议你完成红钢砧或者蓝钢砧的任务线, 这样你才能获得GT坩锅, 一个极强的增产工具, 否则你在蒸汽时代会极度缺乏材料. %n%n§6说明：你会发现任务此时上下分为了对称的两侧, 分别是青铜机器和钢机器. 你完全可以根据你的需求随意选择, 无论选择哪一边, 只要完成王冠形状的任务就可以推进你的科技线. %n
+# Quest: tfr.quest209.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=砂轮
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=解放你的双手！可以自动刮制皮革, 而不需要你用小刀. 是手动打磨石的替代品. 
 
 # Quest: tfr.quest16.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEA.name=水从哪来？
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEA.desc=蒸汽锅炉干烧是会爆炸的, 所以你要往里加水…%n加水有两种方法, 手动加水和自动加水. 手动加水你需要一个原版的铁桶, 他很好造. %n但是非常麻烦, 你需要一个装置自动向锅炉中加水. %n%n首先你可以用蓄水器, 一个可能不够, 多做几个吧. %n%n普通水会导致锅炉钙化, 建议用干燥器生产蒸馏水. 
-
-# Quest: tfr.quest17.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.name=§b§l蒸汽引擎
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.desc=对于现在的你来说蒸汽引擎是一台重要的机器, 把它的输出口对准坩埚后启动它可以把空气泵入坩埚内.
 
 # Quest: tfr.quest18.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEg.name=量产钢铁！
@@ -500,10 +476,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEg.desc=钢是重要的原料, 燃烧�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFA.name=健康好水
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFA.desc=锅炉可娇贵了, 普通的水会让锅炉钙化, 钙化会让锅炉的效率降低. 用凿子可以清除钙化, 但是必须在锅炉没有压力时清理否则会爆炸. %n非常麻烦不是吗？%n所以你需要蒸馏水, 蒸馏水不会使锅炉钙化. 用干燥器处理淡水、海水、污水等等含水的液体和固体, 甚至三氧化钨都能得到蒸馏水, 不过最快捷、效率最高的还是处理淡水. 群峦的水抽出来可以直接灌进干燥器, 不用再去抽原版水了. 
 
-# Quest: tfru.q106n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.name=简便KU源
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.desc=使用这个, 可以用RU方便地产生KU.
-
 # Quest: tfr.quest24.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.name=§b§l硫酸
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.desc=硫酸非常重要, 他可以制作盐酸, 氢氟酸, 处理矿物等. 为了制作他你需要制作至少两台青铜搅拌机. %n%n第一台需要一个通风口输入空气, 输入你在焙烧炉获得的二氧化硫, 以及一个铂粉或者五氧化二钒(不消耗)制作三氧化硫%n%n第二个搅拌机输入三氧化硫和水, 制作硫酸. 越多越好！§4%n%n§r提交任务你需要制作一个蓄水槽, 蓄水槽贴在机器的输出口就可以得到液体. 蓄水槽也可以放在机器的自动输入口输入流体, 所以不用担心浪费. 这里你需要提交16000mb的液体. 
@@ -511,10 +483,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.desc=硫酸非常重要, 他可以�
 # Quest: tfr.quest26.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGg.name=计算！
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGg.desc=你应该已经注意到了, 格雷的机器都有输入和输出的功率范围. %n为了带动某一个机器, 你需要计算用什么样的机器产生能量来带动这个机器. %n(如果给一个机器的能量超过额定功率, 多出来的能量不会浪费, 机器会无损超频)%n%n注意 铬燃烧室是112HU.
-
-# Quest: tfr.quest27.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.name=§b§l涡轮机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.desc=消耗SU(蒸汽)产生RU%n从侧面输出蒸馏水, 若没有可用的流体容器或管道, 蒸馏水会自动被销毁. %n如果正面朝上, 生物站在上面会自己转%n%n注意了, 只有王冠形状的任务是主线任务, 换句话说其他的机器是选做的. 
 
 # Quest: tfr.quest28.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHA.name=破碎机
@@ -535,10 +503,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.desc=§9筛滤盐类, 煤炭类, 宝
 # Quest: tfr.quest32.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIA.name=§b§l不锈钢
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIA.desc=要制作不锈钢你需要铬, 锰, 镍, 和铁. %n%n前期通过铬铁矿洗矿可以获得铬和锰, 镍通过硅镁镍矿获得. %n%n在你进入电力时代后可以通过铝热反应大量获得铬. %n%n挺有用的, 多产点吧. %n用于制作机器.
-
-# Quest: tfr.quest33.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.name=正经的RF发电
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.desc=输入RU就能产生RF的涡轮机, 是不是很科学？用法和普通发电机类似. 即使输入16RU/t, 也相当于近3个民科蒸汽引擎
 
 # Quest: tfr.quest35.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIw.name=焙烧炉
@@ -636,17 +600,13 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjQ.desc=没有什么卵用的机器, �
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyQ.name=阿姨压一压
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyQ.desc=可以制作AR电路板, 进入电力时代必须要做的机器. 
 
-# Quest: tfr.quest209.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=砂轮
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=解放你的双手！可以自动刮制皮革, 而不需要你用小刀. 是手动打磨石的替代品. 
-
 # Quest: tfru.q109n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBw.name=纯净矿
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBw.desc=使用洗矿机可以洗净粉碎矿, 部分矿物会产生许多有用的副产矿物.
 
 # Quest: tfr.quest280.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABGA.name=各种能量
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABGA.desc=GU(格雷通用能量表示单位, 仅用于计量, 多用于nei表示处理配方所消耗的理论能量)%n§cHU热能§r(燃烧室产生)、%n§2KU动能§r(引擎产生)、%n§aRU旋转能§r(涡轮机或者电动机产生)、%n§7SU蒸汽能§r(锅炉产生)、%n§9EU电能§r(发电机产生)、%n§eLU激光能§r(CO2激光器产生)、%n§5QU量子能§r(复制东西用的, 由量子充能器产生)、%n§bCU冷能§r(由半导体制冷器产生)%n§8MU磁能§r(电磁铁产生)%n§1TU时间能§r(浸洗器, 凝结器等不消耗能量的机器所消耗的名义能量)%n§4RF红石通量§r(红石能量的流动, 常用于低端机器)%n%n能量之间的转换(无损情况, 在格雷中除了ZPM放电器以外其他不可能无损)：%n1GU=1§cHU§r=1§2KU§r=1§aRU§r=2§7SU§r=1§9EU§r=1§eLU§r=1§5QU§r=1§bCU§r=1§8MU§r=1§1TU§r=4§4RF
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABGA.desc=GU(格雷通用能量表示单位, 仅用于计量, 多用于nei表示处理配方所消耗的理论能量)%n§cHU热能§r(燃烧室产生)、%n§2KU动能§r(引擎产生)、%n§aRU旋转能§r(涡轮机或者电动机产生)、%n§7SU蒸汽能§r(锅炉产生)、%n§9EU电能§r(发电机产生)、%n§eLU激光能§r(CO2激光器产生)、%n§5QU量子能§r(复制东西用的, 由量子充能器产生)、%n§bCU冷能§r(由半导体制冷器产生)%n§8MU磁能§r(电磁铁产生)%n§1TU时间能§r(浸洗器, 凝结器等不消耗能量的机器所消耗的名义能量)%n§4RF红石通量§r(红石能量的流动, 常用于低端机器)%n%n能量之间的转换(无损情况)：%n1GU=1§cHU§r=1§2KU§r=1§aRU§r=2§7SU§r=1§9EU§r=1§eLU§r=1§5QU§r=1§bCU§r=1§8MU§r=1§1TU§r=4§4RF
 
 # Quest: tfr.quest287.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABHw.name=机器损坏与爆炸
@@ -661,7 +621,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABeA.name=无限水源抽取
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABeA.desc=在基岩层的位置, 时常分布着一些泉眼, 正汩汩涌出着多种有用的流体…%n当你找到它们后, 你可以用排液口抽取水源. %n%n你至少需要一个1000L容量以上的管道才能将排液口放在上面. 将它对准无限水方块顶部即可. 
 
 # Quest: tfr.quest391.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABhw.name=线缆轧制机+
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABhw.name=线缆轧制机
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABhw.desc=一台重要的增产机器. %n比钢软的金属可以直接用钢压模器做成线缆, 但是比钢硬的就不行了. 
 
 # Quest: tfru.q110n
@@ -680,10 +640,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABig.desc=
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABiw.name=机械纪元
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABiw.desc=拥有了RU和KU的产生源, 便可以使用各种机器增加矿物产率和工作效率了%n%n下方是一些必做的产线, 右侧是其他可以将资源进一步处理的机器, 使用的方法差不多. %n%n你也可以选择暂时不做, 但你迟早会需要它们的qxq
 
-# Quest: tfru.q74n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.name=简便RU源
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.desc=不只有蒸汽涡轮可以产生RU, 燃油引擎/燃气涡轮分别可以消耗燃油和可燃气体生产RU, 虽然功率较低, 但它是一个安全而便捷的RU来源%n%n将来你会见到更大的燃气涡轮的ww
-
 # Quest: tfr.quest400.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABkA.name=圆锯+
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABkA.desc=功能很多, 包括切宝石, 单晶硅, 也可以增产木材. 
@@ -700,17 +656,13 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABnA.desc=使用粉碎机来粉碎矿石,
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABnQ.name=黏糊糊的底板
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABnQ.desc=建议去地狱挖掘地狱石英%n二重纸板在浸洗盆就能制作
 
-# Quest: tfru.q112n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.name=手动RU源
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.desc=使用生物化学能转化为RU的机器, 百RU消耗两oz面包!
-
 # Quest: tfr.quest559.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACLw.name=准备制造电路
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACLw.desc=开始制作一些基础的电路板
 
 # Quest: tfr.quest622.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACbg.name=信息的载体
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACbg.desc=你应该先把红色合金和银加热到1500K, 然后再放一些铜. 否则, 你可能获得标准银. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACbg.desc=直接放入铜, 银和红石即可, 出现的标准银会进一步转换为信素.
 
 # Quest: tfr.quest639.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACfw.name=统一矿物词典
@@ -730,7 +682,27 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADMw.desc=你可能在地底找到了油�
 
 # Quest: tfr.quest710.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADNQ.name=机器自动超频
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADNQ.desc=部分机器在处理一些东西时会自动超频, 这可能导致你无法正确制造物品.%n%n具体说明如下: %n首先你应了解‘能量等级’%n规定16-64GU/t为1级, 65-256GU/t为2级, 257-1024GU/t为3级, 1025-4096GU/t为4级, 以此类推.%n%n机器和配方均有能量等级, 当机器的能量等级高于配方等级时, 机器将会自动超频%n该配方的所需功率提升至4倍, 所需时间降低一半 (即配方所需总能量提升至2倍), 机器等级高几级, 该操作便会执行几次%n%n§e如果超频后功率不足, 实际工作速度还不如不超频的低级机器%n§r比如20GU/t的配方, 二级机器需要80GU/t才会工作, 此时速度与40GU/t的一级机器相同 §6如果你无法给予足够的超频后功率, 机器将会罢工.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADNQ.desc=部分机器在处理一些东西时会自动超频, 这可能导致你无法正确制造物品.%n%n具体说明如下: %n首先你应了解‘能量等级’%n规定16-64GU/t为1级, 64-256GU/t为2级, 256-1024GU/t为3级,  以此类推.%n%n机器和配方均有能量等级, 当机器的能量等级高于配方等级时, 机器将会自动超频, 该配方的所需功率提升至4倍, 所需时间降低一半 (即配方所需总能量提升至2倍), 机器等级高几级, 该操作便会执行几次%n%n配方功率处于两个等级交界处时, 高低两级的机器都可以正常处理, 高级机器也不会启用超频%n§e如果超频后功率不足, 实际工作速度还不如不超频的低级机器%n§r比如20GU/t的配方, 二级机器需要80GU/t才会工作, 此时速度与40GU/t的一级机器相同 §6如果你无法给予足够的超频后功率, 机器将会罢工.
+
+# Quest: tfru.q233n
+betterquesting.quest.BUw-V13KRDml_NDs2fWYbA.name=大型坩埚
+betterquesting.quest.BUw-V13KRDml_NDs2fWYbA.desc=这个巨大的钢块块可以一次为你熔炼400余单位的物质, 极大方便你进行大量加工. %n%n大型坩埚本身的质量非常大, 导致它升温很慢. 建议配合温度计控温和流化床燃烧室使用.
+
+# Quest: tfru.q203n
+betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.name=铬从哪来?
+betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.desc=你很快就会需要很多铬…不管是MV和HV的不锈钢塔, 还是EV的机械外壳. %n%n直接挖掘铬铁矿后洗矿可以获得少量铬, 前期的浸洗盆等足够了 %n处理铬铁矿粉需要MV电压, 但会剩余一些产物, 到HV才可以完全处理.%n你也可以离心洗矿获得的废水获取一些铬
+
+# Quest: tfru.q286n
+betterquesting.quest._uhgx_QUTbCDSw32pU5tAA.name=传感器
+betterquesting.quest._uhgx_QUTbCDSw32pU5tAA.desc=使用传感器可以检测许多参数并§6输出红石信号§r, 具体请看各个传感器的详情. 使用§a螺丝刀§r右键左侧的图标处可以切换红石输出模式, §b空手§r右键按钮可以调整"<"">"等几个模式的边界值, 使用§a螺丝刀§r右键屏幕可以切换10/16进制, 使用§a螺丝刀§r右键按钮可以平滑数字变化.
+
+# Quest: tfru.q237n
+betterquesting.quest.dUhtgFPPTtum9Bx-e1kk4g.name=橡胶树
+betterquesting.quest.dUhtgFPPTtum9Bx-e1kk4g.desc=使用gt的橡胶树可以更快速获取橡胶, 种下树苗后找到树干上的洞, 放置收集袋, 橡胶就会开始产出了.
+
+# Quest: jinxi
+betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.name=
+betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.desc=
 
 
 ## Quest Line: tfr.line5.name
@@ -787,8 +759,36 @@ betterquesting.quest.c1WJ1lbSTEOnXIFVoosJdw.desc=这些附件可以连接到管�
 
 
 ## Quest Line: tfr.line3.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.name=Tier 4.1 - 电力时代
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.name=Tier 4 - 电力时代
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.desc=一种高效的二级能源, 能够便捷的转换为其他能源, 还有更多独特的特性…它将陪伴你走向星辰大海.
+
+# Quest: tfru.q240n
+betterquesting.quest.1YS3AQyfTsq2xODMXTVhhA.name=网状任务线的真正起点
+betterquesting.quest.1YS3AQyfTsq2xODMXTVhhA.desc=从这里开始, 复杂的任务线被分到了数个子板块中, 这里将仅会留下最主要的时代节点, 请依次到石化革命, 计算学, AE, 航天子板块继续你的旅程.
+
+# Quest: tfru.q231n
+betterquesting.quest.3tBtgGcKSHWxbAOCaG5ifw.name=电路基板
+betterquesting.quest.3tBtgGcKSHWxbAOCaG5ifw.desc=使用精细线缆制作蚀刻电路, 电路底板可以用之前的电路板合成得到. 将他们组装为电路主板
+
+# Quest: tfru.q239n
+betterquesting.quest.4EjbsU9lTbaZbAwfH_T8Ug.name=光刻
+betterquesting.quest.4EjbsU9lTbaZbAwfH_T8Ug.desc=获得光刻胶后你便可以制作高算力, 高集成度的计算机了, 它们将会改变你生活的方方面面.
+
+# Quest: tfru.q230n
+betterquesting.quest.90w0BotNQFSAHI8QhMcUwg.name=智能控制
+betterquesting.quest.90w0BotNQFSAHI8QhMcUwg.desc=这些飞轮组集成了控制单元, 可以在你用放大镜右键时显示当前功率和存储能量等, 同时, 飞轮到达最大转速时会自动切断输入, 输入电流过大时会仅接受可接受的电流, 不会因此损毁%n但是, 当输入电压超过外壳允许电压时仍会损坏外壳, 请注意. %n%n由于加入了润滑油, 智能版本的自然能量衰减更低, 还可以升级真空版本以尽可能降低衰减.
+
+# Quest: tfru.q254n
+betterquesting.quest.9hHfX_wWQLiEO6oAUGe-PA.name=MV电路组装
+betterquesting.quest.9hHfX_wWQLiEO6oAUGe-PA.desc=你需要一台MV电路组装机才能制作HV发电机, 为了驱动它, 你可能还需要制作一个MV激光器.
+
+# Quest: tfru.q217n
+betterquesting.quest.A6l748W9RZivMyKbrXJEUA.name=万用表
+betterquesting.quest.A6l748W9RZivMyKbrXJEUA.desc=集成了多种能量检测单元, 可以为你规划大型电网提供帮助
+
+# Quest: tfr.quest240.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.name=电路组装机T1
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.desc=制作低级以上的电路板%n%n其中的氦气可通过离心沥青铀获得
 
 # Quest: tfr.quest34.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.name=§l电解器(LV)
@@ -796,19 +796,15 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.desc=§9你的第一台用电器, �
 
 # Quest: tfr.quest38.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJg.name=基础电子电路(焊接完成)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJg.desc=和制作镀锌钢的方式类似, 在不锈钢浸洗盆内导入熔融焊料, 再浸洗电路板就能得到电子电路. 要注意的是, 焊料一共有三种：铅, 锡, 钎焊合金(锡和锑9:1制成). 若分别使用铅或者锡作为焊料, 得到的电子电路会比电路板的等级低2级和1级, 只有用钎焊合金才能保证得到的电子电路等级不下降. 焊接时请使用熔融钎焊合金焊接以避免不必要的损失. %n%n%n基础电子电路用于制作一部分LV用电器, 也用于制作蒸馏塔. 蒸馏塔能够产出塑料, 以便快速生产电路基板. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAJg.desc=和制作镀锌钢的方式类似, 在不锈钢浸洗盆内导入熔融焊料, 再浸洗电路板就能得到电子电路. %n%n 要注意的是, 焊料一共有三种：铅, 锡, 钎焊合金(锡和锑9:1制成). 若分别使用铅或者锡作为焊料, 得到的电子电路会比电路板的等级§c低2/1级§r. §6焊接时请使用熔融钎焊合金焊接以避免不必要的损失.
 
 # Quest: tfr.quest42.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.name=高温搅拌机(LV)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.name=高温搅拌机
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.desc=处理一些需要很高活化能的化学反应
 
 # Quest: tfr.quest43.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.name=激光焊接T1
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.desc=焊接一些你原先不能在砧上锻造的金属, 比如铬和钨钢. 而且, 也能制作砧的配方. 你至此终于彻底摆脱砧了. 
-
-# Quest: tfr.quest44.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.name=激光能LV
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.desc=电流通过二氧化碳镭射管时会释放集中的光能, 借此技术可以产生LU, 一种重要的能量. 很多机器需要LU运行. 
 
 # Quest: tfr.quest45.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAALQ.name=发电机(HV)
@@ -836,19 +832,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPg.desc=格雷6的进阶材料之一. %
 
 # Quest: tfr.quest64.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.name=元件组装
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.desc=恭喜你, 可以制作人生中第一个电路板了！%n低等级的电路板分为基板, 蚀刻电路, 和电子元件三部分组成. %n在热电子工作台中, 你可以制作他们. 
-
-# Quest: tfr.quest69.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.name=结晶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.desc=
-
-# Quest: tfr.quest72.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASA.name=基础电路板(等待焊接)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASA.desc=
-
-# Quest: tfr.quest74.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.name=全反射(TIR)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.desc=光可以在折射率不同的两种介质中发生全反射. 光纤就是此发现的运用之一, 他可以传输激光能(LU). 用法和电线类似
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.desc=恭喜你, 可以制作人生中第一个电路板了！%n低等级的电路板分为基板, 电子元件和外围电阻电容等三部分组成. %n在热电子工作台中, 你可以制作电子元件.
 
 # Quest: tfr.quest79.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAATw.name=激光蚀刻T1
@@ -880,7 +864,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYA.desc=过滤器有着只让特定种�
 
 # Quest: tfr.quest98.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYg.name=发电机(MV)-我想要更多的电
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYg.desc=你欧气无力, 肝度不精, 材料松散, 发电迟钝, 没一个机器像样, 就你还想直接从LV跳到HV发电？做你的美梦！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYg.desc=你欧气无力, 肝度不精, 材料松散, 发电迟钝, 没一个机器像样, 就你还想直接从LV跳到HV发电？做你的美梦！%n%n§c注意: 你已进入危险地带. §rMV等级的电压连接LV电器会使其立刻爆炸! 请在接线时三思而后行
 
 # Quest: tfr.quest103.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZw.name=第六号元素
@@ -890,21 +874,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZw.desc=你可以把木炭粉电解成�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.name=分解空气
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=需要一个 2xMV / 8xLV 级别半导体冷却机输入CU运行. 产生氖气, 氦气等稀有气体, 制作电路元件%n%n第一层：3x3热传导器%n第二层：3x3防冻机械方块 任意一侧中心为低温蒸馏塔主方块%n第三层-第九层：3x3防冻机械方块 
 
-# Quest: tfr.quest240.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.name=电路组装机T1
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.desc=制作低级以上的电路板%n%n其中的氦气可通过离心沥青铀获得
-
 # Quest: tfr.quest267.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABCw.name=低级电子电路
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABCw.desc=低级电子电路
-
-# Quest: tfr.quest565.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.name=吸吸吸！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.desc=电磁铁产生MU磁场能, 用来磁化金属等功能, 必做机器
-
-# Quest: tfr.quest567.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.name=电驴
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.desc=和蒸汽引擎的功能一样, 不过使用的是EU作为能源
 
 # Quest: tfr.quest568.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACOA.name=微型电机(LV)
@@ -917,18 +889,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACOQ.desc=
 # Quest: tfr.quest570.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACOg.name=蹦！
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACOg.desc=
-
-# Quest: tfr.quest571.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.name=打电动
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.desc=和蒸汽涡轮机功能一样, 不过使用EU作为能源
-
-# Quest: tfr.quest572.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.name=又到了白色相簿的季节
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.desc=通过电力和半导体进行冷却, 同时产生CU和HU, 在正面和背面输出. 他可以用来快速冷却模具里的熔融金属. 
-
-# Quest: tfr.quest573.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.name=电暖器～
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.desc=和燃烧室功能一样, 不过使用EU作为能源
 
 # Quest: tfr.quest574.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACPg.name=电力活塞(LV)
@@ -994,10 +954,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACTw.desc=产生电弧处理一些配方
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUA.name=自动点火！
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUA.desc=非常实用的设备, 对准燃烧室, 燃烧反应室之类的机器, 就可以自动打火, 自动化必备！
 
-# Quest: tfr.quest593.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.name=存储电力
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.desc=电池盒里可以放四个电池, 每个电池可输出1A的电流, 但是不能高于电池盒的电压. 放进电池盒里的电池可以被充电, 也可以被放电. 一些需要电力的工具和装备也可以在这里充电, 比如电动扳手, 电钻, 喷气背包等. 但是充电之前, 注意电压等级哦. 
-
 # Quest: tfr.quest594.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUg.name=更大, 存的更多
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUg.desc=可以放16个电池, 输出16A的电流, 其余功能和小型电池盒相同. 
@@ -1016,7 +972,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADNg.desc=这种开关可以贴在机器�
 
 # Quest: tfru.q207n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADNw.name=红石开关
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADNw.desc=这种开关可以启停机器/能源, 一般与活动传感器配合, 在机器可以工作时才启动能源, 可以大幅节省燃料.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADNw.desc=这种开关可以启停机器/能源, 一般与活动传感器配合, 在机器可以工作时才启动能源, 可以大幅节省燃料.%n%n红石开关只需要LV电路板, 但活动传感器需要MV的电路板, 但它节省的能源或许可以帮你许多. %n%n此外: 自动红石开关仅是额外允许完成当前生产进程, 却需要MV电路板. 可以后期再做.
 
 # Quest: New Quest
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADOA.name=
@@ -1030,127 +986,70 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADjA.desc=铌钛合金拥有更高的耐�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADjQ.name=钼坩埚
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADjQ.desc=利用从地狱挖掘到的辉钼矿可以制作钼坩埚, 更高的溶化温度意味着更多能制作的合金和更高的容错度. %n%n下一次升级在上天之后.
 
-# Quest: tfru.q217n
-betterquesting.quest.A6l748W9RZivMyKbrXJEUA.name=万用表
-betterquesting.quest.A6l748W9RZivMyKbrXJEUA.desc=集成了多种能量检测单元，可以为你规划大型电网提供帮助
+# Quest: tfru.q223n
+betterquesting.quest.H5JZmUBiTHShvne-FAc2zw.name=数控车床
+betterquesting.quest.H5JZmUBiTHShvne-FAc2zw.desc=拥有数控车床后可以制作许多需要高精度的物品, 比如效率更高的增压内燃机和大型涡轮转子.
+
+# Quest: New Quest
+betterquesting.quest.KPUC9K--RJ6m4XXAY_8oTw.name=
+betterquesting.quest.KPUC9K--RJ6m4XXAY_8oTw.desc=
 
 # Quest: tfru.q190n
 betterquesting.quest.OYIaLDRCTG2x7y6hbaDMfA.name=大范围区块加载
-betterquesting.quest.OYIaLDRCTG2x7y6hbaDMfA.desc=使用了大量珍贵的魔力材料制作的珍贵物品,使用这个可以一次性加载至多361个区块(19*19),适合加载自己的主要工厂..
+betterquesting.quest.OYIaLDRCTG2x7y6hbaDMfA.desc=使用了大量珍贵的魔力材料制作的珍贵物品,使用这个可以一次性加载至多361个区块(19*19),适合加载自己的主要工厂.
+
+# Quest: tfru.q245n
+betterquesting.quest.SY6acegSQmKM7QRDrUFx8w.name=ae自动化
+betterquesting.quest.SY6acegSQmKM7QRDrUFx8w.desc=上天后你将会找到智金, 它可以帮助你控制me网络中物质数据流的规则流动, 使得更高级而智能的自动化成为可能. %n%n你应该尽量自动化你的大部分机器, 这样可以减少很多繁杂的工作.
 
 # Quest: tfr.quest40.name
 betterquesting.quest.WhUkruM8Sn-3k9Rgk70ZaA.name=不想洗矿了就学化学吧
 betterquesting.quest.WhUkruM8Sn-3k9Rgk70ZaA.desc=请查看nei了解具体配方,当前阶段铬处理会剩下一种较难处理的含铬产物, 当你进入HV后可以将铬铁矿彻底处理为铬. 注意铬铁矿处理中的副产物并不是完全自循环的,你需要额外补充少量硫酸和许多氧气.
 
+# Quest: tfru.q236n
+betterquesting.quest.ebL6rnt9Tdie--ANgC0sAw.name=发电,变压,输电,耗电
+betterquesting.quest.ebL6rnt9Tdie--ANgC0sAw.desc=GT6的电路规则众说纷纭, 这里是根据gt代码确定的规则, 可以确保正确, 当你建设电网遇到困难时, 记得使用万用表(MV电路板后的任务有)详细检测§b电流§a电压§r, 根据该任务确定修改方法. %n%n大部分发电机会输出§anEU/A§r的1§bA电流§r, 通过变压器可以降低§a电压§r到原来的1/4, 并将§b电流§r提高到4A, 一个变压器仅能降压1A高电压到原来的1/4, 但可以升压最多16A电流至尽量接近输出上限(仅接受整数电流).机器§6仅§r在§a电压§r大于输入下限时接受电流%n%n供能充足时, 机器会接受刚好使缓存大于输入上限的(整数)§b电流§r, 从缓存中消耗(输入上限)的能量, 剩余的能量会保存在缓存中, 使得下一刻接受的§b电流§r可能更少. §7(大部分机器频繁闪烁的情况均是此条规则作祟)§r%n%n供能不足时, 机器会使用掉全部§b电流§r, 计算出提供功率=§a电压§r*§b电流§r, 若提供功率小于需求功率§7(即配方功率或超频后的配方功率, 超频规则见蒸汽时代任务线"机器自动超频")§r, 机器会罢工, 否则会加速(提供功率/需求功率)倍, 但右下角进度条的总时间不会变化, 而是进度增加的更快.%n%n举例: 为普通MV机器(2级机器)供能§a120EU/A§r * §a1A/t§r时, 若配方需求功率为§e80EU/t§r(2级配方), 机器会以1.5倍速工作, 进度每秒增加1.5秒, 若配方需求§e32EU/t§r(1级配方), 机器会有损超频(功率*4, 速度*2), 需求功率变为§e128EU/t§r, 机器罢工, 若输入功率加至128EU, 机器会以2倍速工作. 标有"消耗额外能量时可以超频"的机器是无损超频, 此时输入128EU的无损超频机器会以4倍速工作. %n%n为普通MV机器供能§a120EU/A §r* §b16A/t§r时, 初始缓存为0, 因而机器需求功率为§e256EU§r(输入上限), 机器会接受§b3A电流§r(§e360EU§r)并消耗§e256EU§r, 缓存变为§e104EU§r, 下一刻时机器需求功率是§e256-104EU(152EU)§r, 将只接受2§bA电流§r(§e240EU§r)存入缓存(§e345EU§r), 消耗§e256EU§r后缓存变为§e89EU§r, 以此类推.
 
-## Quest Line: tfr.line11.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.name=Tier 4.2 - 石化革命
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.desc=与电力一同在第二次工业革命中出现, 是制造便宜储罐和电路板的重要过程, 也是更高效的燃料的来源之一
+# Quest: New Quest
+betterquesting.quest.gVx3Rn-1T76yeMeLRO6fNA.name=
+betterquesting.quest.gVx3Rn-1T76yeMeLRO6fNA.desc=
 
-# Quest: tfru.q115n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=分馏
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=使用微型蒸馏塔将石油初步分馏为三种产物, 更大型的蒸馏塔可以加快速度
+# Quest: tfru.q244n
+betterquesting.quest.iiBWGawQQS-Lxd_EkIUekg.name=入门计算机
+betterquesting.quest.iiBWGawQQS-Lxd_EkIUekg.desc=算力的提升对电路设计质量的提升是巨大的, 接下来就准备用你最新构筑的计算机飞向太空吧. %n%n你也可以选择进行不上天挑战, 不上天将暂时无法获得ae自动化, 详见航天时代任务线
 
-# Quest: tfru.q114n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.name=脱硫
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.desc=第二步需要脱硫, 需要使用至少MV等级的高温搅拌机
+# Quest: tfru.q238n
+betterquesting.quest.kRpriW5tSKGgh5JyTs8A4A.name=动力加速
+betterquesting.quest.kRpriW5tSKGgh5JyTs8A4A.desc=获得这两种高性能金属后你可以制作更高功率的内燃机, 拥有了它们才能在后续复杂的石化、光刻产线省下精力, 铺平走入HV的道路 %n%n你还在用蒸汽发电? 快投入内燃机的怀抱吧!
 
-# Quest: tfru.q113n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.name=脱盐
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.desc=石油并不能直接用作燃料, 第一步需要脱盐, 使用普通青铜搅拌机即可处理
+# Quest: tfru.q232n
+betterquesting.quest.muCPdktcSkiRlRUN7Hj3qw.name=电容电阻
+betterquesting.quest.muCPdktcSkiRlRUN7Hj3qw.desc=制作电容, 线圈, 电阻等来支持电路元件的运行.
 
-# Quest: tfru.q116n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.name=分馏2
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.desc=使用小型蒸馏塔将初底油分馏为可以直接燃烧的燃料, 它们也可以进一步处理为其他有用的工业品
+# Quest: tfru.q241n
+betterquesting.quest.pEiDZLDWTBWKHq3B6qfy9Q.name=初始计算机
+betterquesting.quest.pEiDZLDWTBWKHq3B6qfy9Q.desc=你终于获得了一台高性能计算机! 你可以开始建设ae系统, 制作oc自动化或者借助崭新的计算机计算更好的芯片设计.
 
-# Quest: tfru.q117n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.name=炼油气
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.desc=炼油气主要用于裂化, 产生大量有用的物资, 请参看NEI获取具体信息
+# Quest: tfru.q246n
+betterquesting.quest.r3YHZN7ITya3xcGsPBcghQ.name=保持绝对纯洁
+betterquesting.quest.r3YHZN7ITya3xcGsPBcghQ.desc=不管怎样, 你应该获得了足够数量的稀有气体, 使用它们保护你的单晶硅尽可能的纯净, 这可以进一步提高晶体管的密度, 提升算力. %n前往计算机线构建下一种计算机, 你需要从头开始, 制作极度纯净的单晶硅.
 
-# Quest: tfru.q120n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.name=石脑油
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.desc=石脑油可用于裂化, 产生大量有用的物资, 请参看NEI获取具体信息
+# Quest: tfru.q249n
+betterquesting.quest.sKNw6o9JQICGqZB8h4S7jw.name=基岩钻
+betterquesting.quest.sKNw6o9JQICGqZB8h4S7jw.desc=你应该找到过很多基岩矿脉了(还没有?参考探索的时光一章右下角的任务寻找), 基岩上方的石头矿可以轻松开采, 但基岩矿本身需要基岩钻. %n这台机器就是为你准备的, 他可以消耗润滑油开采基岩矿, 产出无限的矿物.
 
-# Quest: tfru.q118n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.name=柴油
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.desc=柴油用于裂化时产生的化工原料较少, 推荐用于燃烧
-
-# Quest: tfru.q119n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.name=汽油
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.desc=汽油
-
-# Quest: tfru.q121n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.name=煤油
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.desc=煤油仅可用于燃烧, 用它驱动你的工厂吧
-
-# Quest: tfru.q122n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.name=石油脱硫剂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.desc=石油脱硫需要使用石油脱硫剂, 使用甲醇和氢氧化钠即可制造%n%n石油脱硫剂使用后可以使用高温搅拌机循环利用
-
-# Quest: tfru.q123n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.name=丁苯橡胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.desc=用于高压导线的绝缘橡胶, 在EV及电压以上会有应用
-
-# Quest: tfru.q124n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.name=硅橡胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.desc=用于极高压导线的绝缘橡胶, 在ZPM电压以上会有应用
-
-# Quest: tfru.q125n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.name=聚碳酸酯
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.desc=用于制作各种工业品的零件, 很快你便会用到
-
-# Quest: tfru.q126n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.name=聚四氟乙烯
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.desc=很耐腐蚀的塑料, 用于制作低温的酸碱通用反应釜和高速流体管道
-
-# Quest: tfru.q127n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.name=环氧树脂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.desc=用于制作高耐热电路板基板
-
-# Quest: tfru.q128n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACoQ.name=酚醛树脂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACoQ.desc=用于制作光刻胶和电路板
-
-# Quest: tfru.q129n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.name=聚氯乙烯
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.desc=用于制作优质物流管道
-
-# Quest: tfru.q130n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.name=有机玻璃
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.desc=用于制作光刻胶
-
-# Quest: tfru.q131n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.name=聚乙烯醇
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.desc=用于制作细胞培养液
-
-# Quest: tfru.q133n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.name=塑料时代
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.desc=获得了石油的初产品后, 便可以开始制作各种塑料制品了.%n%n它们将推动您建立现代化工厂, 组装先进的电脑, 并送您登上太空 %n%n上面的产品按所应用的阶段从早到晚依次排序, 边框为"主要"(与此任务图标边框相同)的任务是进入太空必做的任务, 右侧一竖列是非必做但很有用的物品
-
-# Quest: tfru.q132n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.name=全氟树脂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.desc=用于制作质子交换膜
-
-# Quest: tfru.q134n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.name=PMMA系光刻胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.desc=用于制作EV后的计算机和微型计算单元
-
-# Quest: tfru.q135n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.name=重氮系光刻胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.desc=第一个光刻胶, 用于制作EV前的中低端计算机, 该任务完成后便可以前往半导体任务页面准备构建计算机了
-
-# Quest: tfru.q136n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.name=聚乙烯
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.desc=最普通的塑料, 用于制作管道, 储物柜, 低级电路板等
-
-# Quest: tfru.q137n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.name=调和油
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.desc=制作调和油可以获得能量密度更高的燃料, 它们通常比直接烧组分更高效.
+# Quest: New Quest
+betterquesting.quest.zxUMzeKMR_ixBGQqcJcCWg.name=
+betterquesting.quest.zxUMzeKMR_ixBGQqcJcCWg.desc=
 
 
 ## Quest Line: tfru.l0n
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGw.name=Tier 5 - 核子时代
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGw.desc=发掘微小的原子核中巨大的能量.
+
+# Quest: tfru.q200n
+betterquesting.quest.66wjoeZPTIqVR5lMAFy35g.name=正在制作..
+betterquesting.quest.66wjoeZPTIqVR5lMAFy35g.desc=你来到了世界的尽头
 
 # Quest: tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABnw.name=正在制作..
@@ -1168,29 +1067,17 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADdw.desc=将铀矿进行浸洗, 多次�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADeA.name=晶质铀
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADeA.desc=在外星能找到的铀矿, 能提取出更多的铀.
 
-# Quest: tfru.q173n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.name=裂变核心
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.desc=这是核裂变反应堆的核心, 用于启动核裂变反应, 产出热冷却液, 具体教程见下:%n%n可控核裂变反应, 即为燃料棒中的重原子核因受到中子, 转为高能态后分裂变成其他原子并放出热能和更多中子的过程. 这个过程中涉及的重要概念包括以下内容：%n%n§l燃料棒§r：即核燃料, 核裂变反应的主要消耗物质. 在GT6中有以下几个参数：%n- 1.§a§on§r：中子数, 当前（燃料、控制）棒上的中子数. GT6中, 核燃料棒的数据每隔一定时间更新一次, 其中棒上最重要的属性就是当前时刻棒上含有的中子数, 这个中子数涉及到后续的热量产生与向外释放的数量. %n- 2.§a§oSelf§r：核燃料棒自身反应发送给自己的中子数, 维持了核反应的基础运行. %n- 3.§a§oEmission§r：燃料棒向四周其他（燃料、控制）棒发送的中子, 这与上面的Self是互不相干的属性. %n- 4.§a§oFactor§r：增殖比率, 当燃料棒除去向自己发送的的中子数外, 剩余数量的中子会按这个比率进行缩放并释放. %n- 5.§a§oMaximum§r：最大稳定中子数, 一个燃料棒如果接受过量的中子, 它的反应会加快, 同时对棒本身的耐久会非线性的增大. 这个过量的边界值就是这个§aMaximum§r值. %n%n§l控制棒§r：对核反应进行调控的棒, 包括以下4种：%n- 1.§o中子吸收棒§r：吸收中子热量, 并高效率转化为热能的控制棒, 产热量有：§aQ §r= §an §r* §b2 其中§aQ§r单位为§cHU/t§r, §an§r为中子数%n- 2.§o中子反射棒§r：将某个方向发射来的中子完整地原路反射回去. %n- 3.§o慢化剂棒§r：对射入的 中子减速并反射, 这会导致有效反应的中子数增加. 在标准情况下, 它会反射某个射来的中子, 如果多个方向, 那么根据射来的方向数, 每一个方向反射的中子数将会乘上这个方向数量, 如东方向射来§aa§r个中子, 西方向射来§ab§r个中子, 北方向射来§ac§r个中子, 则慢化棒向东反射§a3a§r个中子, 向西方反射§a3b§r个, 向北方反射§a3c§r个. 同时, 慢化剂棒会对相邻的燃料棒附加慢化的属性, 加快燃料棒的消耗. %n- 4.§o增殖棒§r：接收中子转化为含有另外一种元素燃料棒的控制棒, 接收中子并转化, 并且速度会越来越快, 慢化的中子不能用于进行转化. %n%n§l反应堆核心§r：核反应发生的环境, 存储冷却液, 热冷却液, 反应棒. 可以通过红石以类似控制机器的方式控制核心的运行与否, 也可以通过软锤敲击的方式禁止或开启某个（燃料、控制）棒工作. %n冷却液：与棒直接接触的液体, 起到承受核反应堆热量和中子辐照的介质. 不仅仅是传递能量的媒介, 还会影响到燃料棒的各项属性, 同时不同的冷却液在被加热和被中子辐照后会有不同的效果, 核燃料棒与冷却液的配套选择是核反应设计的高阶技巧, 常用的冷却液通常会是IC工业冷却液和二氧化碳. %n%n§l中子增殖判定与计算§r%n%n核裂变反应的核心在于利用不断增长的中子进行产热和再利用, 所以计算每个燃料棒获得和发射的中子是必要的. 在GT6中, 一个棒只能和相邻的棒交换中子. 如图中在同一红圈内的棒都视为相邻%n%n每一个棒会向相邻的棒发射中子, 发射量的数值为：%n%n    §aE_n §r= §aEmission §r+ §cMax§r( §b0§r, ( §an§r-§aSelf§r ) ) * §aFactor§r%n%n参数含义见上方的解释. 注意燃料棒的各项数值会根据冷却液变化而不同. %n%n如果( §an §r- §aSelf §r) < §b0§r, 则这一项去掉. %n%n而某一个棒上的中子量为棒向自身发射的中子数与周围向自己发射的中子数之和：%n%n    §an §r= §aSelf§r + §aE_1 §r+ §aE_2 §r+ ⋯%n%n注意, 中子数不是一个存量, 它不是你电池盒里面的电, 而是一个累计的接收值, 这个值同时也是你的棒产生热量的标准值, 在燃料棒中, 中子数就是你产热量的数值, 在吸收棒中, 产热量会变成这个数值的2倍, 反射棒不会产热. %n%n但很明显, 这个中子数在某种情况下会不断不断地增加, 比如在某一种燃料棒的§aFactor§r为§b1/3§r, §aEmission§r是§b2048§r, §aSelf§r是§b512§r, 有5个棒以十字排列, 中间是燃料棒, 四周是反射棒. %n%n刚刚开机时. 这个棒发射的中子数是：%n%n    §aE_0 = §b2048§r%n%n由于四周都是反射棒, 向四周发射的中子全部反射回来了, 所以下一刻的中子数将从0变为%n%n    §an_1 §r= §b512 §r+ §b2048 §r* §b4 §r= §b8704§r%n%n发射量变为%n%n    §aE_1 §r= (§b8704§r - §b512 §r)* §b1/3 §r+ §b2048 §r= §b4778§r%n%n而下一个时刻的中子数%n%n    §an_2 §r= §b512 §r+ §b4778 §r* §b4 §r= §b19642§r%n%n如果你一直计算下去, 你会发现中子数越来越多. 事实上, 如果我们列一个递推公式：%n%n    §an_i §r= §aself §r+( §an_{i-1} §r- §aself §r)* §afactor §r* §b4 §r+ §b4 §r* §aEmission §r= §an_{i-1} §r*§b 4 §r* §afactor §r+( §b1 §r- §b4 §r* §afactor §r)* §aself §r+ §b4 §r* §aEmission§r%n%n如果要让上面的 §an_i§r 比 §an_{i-1}§r 大, 只需要%n%n    §an_{i-1} §r>= §aself §r+ §aEmmision §r/ ( §b1/4 §r- §afactor §r)%n%n注意启动时是没有中子的, 即如果 §aself §r+ §aEmmision §r/ ( §b1/4 §r- §afactor §r)< §b0 §r, 那么就能顺利实现中子从开机就一直不断增长增长增长增长, 直到你的冷却液全部耗尽, 你的燃料和控制棒全部溶解. %n%n但是以上的情况可以通过强行关机来制止, 所以无限增长往往是高功率的关键, 不能无限增加的反应堆我们称为稳定反应堆, 通过红石控制, 保证反应堆工作在无限增长状态但中子数不至于过多的反应堆我们称为超临界反应堆. 一般来说超临界反应堆具有更高的应用价值.
-
-# Quest: tfru.q200n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfA.name=正在制作..
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfA.desc=你来到了世界的尽头
-
 # Quest: tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADfQ.name=正在制作..
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADfQ.desc=你来到了世界的尽头
 
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.desc=
+# Quest: tfru.q200n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.name=正在制作..
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.desc=你来到了世界的尽头
 
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.desc=
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADgA.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADgA.desc=
+# Quest: tfru.q200n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.name=正在制作..
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.desc=你来到了世界的尽头
 
 # Quest: tfru.q180n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADgQ.name=铀-235
@@ -1220,30 +1107,39 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADhg.desc=用于检测反应堆核心的�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADhw.name=钍
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADhw.desc=沥青铀矿处理后剩下的矿渣离心可获得钍, 可制成燃料棒.
 
-# Quest: tfru.q174n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.name=热交换器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.desc=使用它们将热冷却液变为HU输出,同时回收冷的冷却液.%n热交换器只需要提交一种即可
-
-# Quest: tfru.q175n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.name=大型热交换器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.desc=更大的热交换器, 具有更高的输出密度. %n注意热交换器层在上面.
-
-# Quest: tfru.q186n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.name=热能转换
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.desc=拥有了足够的热量之后, 你便可以使用锅炉和蒸汽涡轮将其转化为其他能量. 请前往"多方块产能"任务页查看.
-
-# Quest: tfru.q222n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.name=无损探伤
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.desc=钴-60可以用于探伤, 这将尽可能检测出金属中存在的微小缺陷, 可以用于制作高转速高压力等极端工况的部件.
-
 # Quest: tfru.q221n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADkA.name=钴-60增殖
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADkA.desc=将钴增殖棒放入核反应堆，其中的钴吸收中子后便会变为钴-60, 吸收足够的中子后增殖棒将转变为钴-60棒.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADkA.desc=将钴增殖棒放入核反应堆, 其中的钴吸收中子后便会变为钴-60, 吸收足够的中子后增殖棒将转变为钴-60棒.
+
+# Quest: tfru.q200n
+betterquesting.quest.Y_-MFufxRaG0G7MaVU8lbg.name=正在制作..
+betterquesting.quest.Y_-MFufxRaG0G7MaVU8lbg.desc=你来到了世界的尽头
+
+# Quest: tfru.q200n
+betterquesting.quest.ZQ7nu2i9S7-Qzw8jGlvk9Q.name=正在制作..
+betterquesting.quest.ZQ7nu2i9S7-Qzw8jGlvk9Q.desc=你来到了世界的尽头
+
+# Quest: tfru.q200n
+betterquesting.quest.bPqCnZU3Ri2hVPVT7cNgdg.name=正在制作..
+betterquesting.quest.bPqCnZU3Ri2hVPVT7cNgdg.desc=你来到了世界的尽头
+
+# Quest: tfru.q200n
+betterquesting.quest.hJzaNKdXToizIObp7zP1-g.name=正在制作..
+betterquesting.quest.hJzaNKdXToizIObp7zP1-g.desc=你来到了世界的尽头
+
+
+## Quest Line: tfru.q200n
+betterquesting.questline.EX0I3UlgQPavv4RW0lhnvw.name=正在制作..
+betterquesting.questline.EX0I3UlgQPavv4RW0lhnvw.desc=你来到了世界的尽头
 
 
 ## Quest Line: tfr.line7.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABw.name=Tier 254 - 物理学革命
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABw.desc=在太空探索和生产发展的同时, 基础科学也发生了突破
+
+# Quest: tfr.quest215.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.name=Draconium+
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.desc=Dr+
 
 # Quest: tfr.quest119.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdw.name=人造的神话
@@ -1272,10 +1168,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmQ.desc=科学技术的顶峰也不过�
 # Quest: tfr.quest154.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmg.name=可控小太阳
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmg.desc=将原子核融合
-
-# Quest: tfr.quest215.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.name=Draconium+
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.desc=Dr+
 
 # Quest: tfr.quest368.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABcA.name=抵达HD
@@ -1310,19 +1202,19 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACdg.name=德拉克纳星
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACdg.desc=位于邻近星系的德拉克纳星蕴藏着龙元素这一珍贵元素, 看来是要去一趟了. %n
 
 # Quest: tfr.quest662.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAClg.name=亚原子粒子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAClg.desc=使用电离气体在粒子对撞机中撞击可以产生电子, 正电子, 质子, 反质子. %n这些粒子又可以继续撞击产生中微子, 中子, 甚至希格斯玻色子和克尔黑洞. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAClg.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAClg.desc=
 
 # Quest: tfr.quest667.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmw.name=批量扫描
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACmw.name=
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACmw.desc=
 
 # Quest: tfr.quest668.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnA.name=批量复制
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnA.name=
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACnA.desc=
 
 # Quest: tfr.quest670.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACng.name=批量物质制造
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACng.name=
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACng.desc=
 
 
@@ -1348,655 +1240,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACew.desc=TeamMoeg%n%n概念设计:%nYueS
 
 # Quest: tfr.quest636.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACfA.name=关于我们
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACfA.desc=我们非常欢迎玩家加入我们的QQ交流群或者Discord群聊:%nQQ1群： 1046723658%nQQ2群： 1154748118%nDiscord： https://discord.gg/BWn6E94%n%n或者您也可以通过官网/论坛/Wiki访问我们:%n官网： www.teammoeg.com%n论坛： forum.teammoeg.com%nWiki： wiki.teammoeg.com%n%n或者给我们发送邮件:%n邮箱： support@teammoeg.com
-
-
-## Quest Line: tfr.line4.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.name=§d计算学
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.desc=§9更快的计算机可以让一切加速, 而随着计算速度的增长, 更多意想不到的用途会显现出来…
-
-# Quest: tfru.q168n
-betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.name=结晶器
-betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.desc=通过缓慢的操作将液体结晶, 产出的单晶硅具有规整的原子排列, 这种微观层面的独特性质具有无限潜力…
-
-# Quest: tfru.q169n
-betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.name=激光切割机
-betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.desc=你可能之前已经做过这台机器了, 用它将单晶硅切割为晶圆.
-
-# Quest: tfru.q166n
-betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.name=自动电路设计器
-betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.desc=这台机器使用大量算力, 可以自动设计新一代的电路. 使用它制作下一代机器的掩模版%n%n右侧机器只需要制作其一即可
-
-# Quest: tfru.q167n
-betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.name=单晶硅
-betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.desc=经过漫长的等待, 拥有规整原子排列的单晶硅非常适合制作高性能半导体电路.接下来将它切割为晶圆.
-
-# Quest: tfru.q160n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.name=电路板计算机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.desc=小型节能的电路板也可以组合形成一台计算机…一个更绿色的选择
-
-# Quest: tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.name=第六步: 切割
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.desc=将检测后的晶圆切割, 不同质量的晶片将分别组装为不同的产品.
-
-# Quest: tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.name=第六步: 切割
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.desc=将检测后的晶圆切割, 不同质量的晶片将分别组装为不同的产品.
-
-# Quest: tfru.q153n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=组装内存
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.desc=将刚刚经过复杂工艺做成的内存晶片组装为内存条, 它将成为计算机的存储仓库.
-
-# Quest: tfru.q2
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.desc=
-
-# Quest: tfr.quest236.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.name=光刻机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.desc=一台精妙的机器, 完美地利用光线在晶体上蚀刻出复杂的图形. 
-
-# Quest: tfr.quest237.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.name=光学掩模版
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.desc=合理的过滤光线, 使图形在光刻胶上腐蚀成型. %n使用自动电路设计器研究各种事物来制作掩模版, 这个过程往往需要较长时间, 推荐每次准备升级计算机时考虑最先制作掩模版
-
-# Quest: tfru.q161n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.name=飞向太空
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.desc=新计算机完全可以胜任火箭控制的任务, 终于要走出群峦星了, 现在只需要一个火箭, 便可以踏上其他星球!
-
-# Quest: tfru.q145n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.name=涂胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.desc=初级的晶圆只需要涂上光刻胶, 以后的晶圆会有更复杂的工艺.
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.desc=
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.desc=
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.desc=
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.desc=
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.desc=
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.desc=
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.desc=
-
-# Quest: tfru.q144n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.name=晶圆
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.desc=CPU并不是简单的硅片蚀刻而成, 你需要将它们进行一定的处理才能刻上所需的纹路. 接下来涂上光刻胶.
-
-# Quest: tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.name=第一步: 光刻
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.desc=使用光刻机将掩模版上的纹路投射到光刻胶上, 光刻胶接收到光将会分解, 进而形成凹陷.
-
-# Quest: tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.name=第二步: 显影
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.desc=使用显影液将光刻胶的纹路蚀刻到晶圆上.
-
-# Quest: tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.name=第三步: 除胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.desc=移除晶圆上的光刻胶, 这一步也称作硬烘
-
-# Quest: tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.name=第四步: 掺杂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.desc=向电路沟槽中掺杂其他离子, 以增强导电性, 进而构筑晶体管之间的通路
-
-# Quest: tfru.q152n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.name=组装CPU
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.desc=将刚刚经过复杂工艺做成的CPU晶片组装为CPU, 它与你曾制作的任何电路板都不同. 光刻技术使得计算机体积大幅缩小, 更快的计算速度也可以做更多的事…
-
-# Quest: tfru.q155n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.name=组装计算机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.desc=将CPU与内存和散热, 供电设备组装为计算机, 它将为你提供强大的算力.
-
-# Quest: tfru.q157n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.name=不只是无尽仓库
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.desc=在第一台计算机面前忙碌半周, 你初步掌握了赛特斯石英的用法…你发现利用它似乎可以存储大量物品, 但冥冥中似乎还有更多隐藏在其中等待你发掘…
-
-# Quest: tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.name=第一步: 光刻
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.desc=使用光刻机将掩模版上的纹路投射到光刻胶上, 光刻胶接收到光将会分解, 进而形成凹陷.
-
-# Quest: tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.name=第二步: 显影
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.desc=使用显影液将光刻胶的纹路蚀刻到晶圆上.
-
-# Quest: tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.name=第一步: 光刻
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.desc=使用光刻机将掩模版上的纹路投射到光刻胶上, 光刻胶接收到光将会分解, 进而形成凹陷.
-
-# Quest: tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.name=第二步: 显影
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.desc=使用显影液将光刻胶的纹路蚀刻到晶圆上.
-
-# Quest: tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.name=第三步: 除胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.desc=移除晶圆上的光刻胶, 这一步也称作硬烘
-
-# Quest: tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.name=第四步: 掺杂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.desc=向电路沟槽中掺杂其他离子, 以增强导电性, 进而构筑晶体管之间的通路
-
-# Quest: tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.name=第三步: 除胶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.desc=移除晶圆上的光刻胶, 这一步也称作硬烘
-
-# Quest: tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.name=第四步: 掺杂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.desc=向电路沟槽中掺杂其他离子, 以增强导电性, 进而构筑晶体管之间的通路
-
-# Quest: tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.name=第五步: 检测
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.desc=由于杂质, 振动, 射线等的影响, 一块晶圆上会出现不同质量的晶片. 将晶圆上质量不同的元件标记出来, 以供进一步处理
-
-# Quest: tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.name=第五步: 检测
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.desc=由于杂质, 振动, 射线等的影响, 一块晶圆上会出现不同质量的晶片. 将晶圆上质量不同的元件标记出来, 以供进一步处理
-
-# Quest: tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.name=第六步: 切割
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.desc=将检测后的晶圆切割, 不同质量的晶片将分别组装为不同的产品.
-
-# Quest: tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.name=第五步: 检测
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.desc=由于杂质, 振动, 射线等的影响, 一块晶圆上会出现不同质量的晶片. 将晶圆上质量不同的元件标记出来, 以供进一步处理
-
-# Quest: tfru.q154n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.name=组装电路板
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.desc=将刚刚经过复杂工艺做成的电路元件组装为电路板, 应用光刻技术的它的算力百倍于原工艺, 并且, 它比计算机更节能, 更微小, 这或许可以为便携设备带来巨大的革新…
-
-# Quest: tfru.q156n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.name=代码改变生活
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.desc=拥有了足够算力的计算机, 你尝试将计算机底层的运行原理翻译为易于理解的高级语言, 同时制定了一套软硬件规范…在几天的努力后, 一套完善而强大的理论出现在屏幕上…接下来你将它们付诸实践, 准备用它控制你曾认为不可能自动控制的机器…
-
-# Quest: tfru.q158n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.name=循序渐进
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.desc=在拥有第一个计算机后, 你很快制作了很多实用而有趣的物品, 并改进了现有的机器…你越发想知道算力的不断提升究竟能带来什么…%n%n下一代计算机需要很多HV机器, 不过光刻机不需要更换, 路线也与第一代计算机基本相同.
-
-# Quest: tfru.q159n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.name=世界改变的前夕
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.desc=在第一代计算机强大算力和你的头脑风暴之下, 下一代计算机终于设计出了雏形. 这代计算机计划有数十倍的提升, 理论上用它可以实时计算火箭的飞行…重返太空的曙光就在眼前!
-
-# Quest: New Questasdasd
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.desc=
-
-# Quest: tfru.q170n
-betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.name=晶圆涂胶器
-betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.desc=这台机器可通过电路控制精确地调整转速, 将光刻胶均匀而平整地涂在晶圆上.
-
-# Quest: tfru.q171n
-betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.name=晶圆检测器
-betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.desc=由于晶圆杂质, 光刻不均匀等原因, 光刻后的晶圆往往品质不一. 这台机器可以检测出晶圆的品质并标记, 以供稍后切割并分类.
-
-
-## Quest Line: tfr.line14.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.name=§d存储与物流学
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.desc=关于管道, 存储, 和传输系统.
-
-# Quest: tfr.quest6.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.name=高级工作台
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.desc=高级工作台是一个非必须但很有用的设备. 他可以用管道输入液体资源, 在GUI上部的槽里可以用桶接液体. 也可以在旁边放储物桶, 合成的时候可以自动抽取物品. 侧边是抽屉, 也能存放不少东西, 而且还有专门放工具的槽位. 大力推进！
-
-# Quest: tfr.quest81.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.name=金属包装
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.desc=这特么就是个奇迹, 你居然能放54个物品, 感动吗？
-
-# Quest: tfr.quest100.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.name=储存大量液体
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.desc=焦炉副产的木榴油如果积攒过多很难处理. 为了节约起来给流体燃烧室使用, 你可以制作第一个多方块储罐：大型木储罐. %n他可以储存432000L流体, 不过不要想用他装腐蚀性液体或者气体. 你也可以选择用它作为一个蒸馏水缓存. %n他的摆放方式和焦炉类似. 
-
-# Quest: tfr.quest127.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.name=基础流体传输
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.desc=这一章中我会介绍给你一些关于格雷科技中物品和流体传输, 存储系统的知识. 这并非一个主线章节, 你可以选择性完成. 
-
-# Quest: tfr.quest130.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.name=橡胶管道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.desc=橡胶管道有着不错的属性, 而且不漏气, 而且不算贵, 是性价比很高的一种流体管道. 只能用压模器制造
-
-# Quest: tfr.quest133.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.name=耐腐蚀管道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.desc=不锈钢管道不仅仅不漏气, 耐热, 而且还能抗各种化学腐蚀, 制作硫酸产线前推荐制作. 
-
-# Quest: tfr.quest135.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.name=电动泵
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=电动泵是一种覆盖版, 可以右击贴在格雷机器或者管道上, 作用是抽取/排出面对/所在的容器中的流体. 螺丝刀右击设置抽取/排出. 可以抽取OB储罐中的流体. 
-
-# Quest: tfr.quest138.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.name=现代物流管道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.desc=性价比很高的物流管道, 得到聚氯乙烯后可以大规模生产. 
-
-# Quest: tfr.quest149.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.name=现代管道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.desc=耐腐蚀, 不漏气. 性价比很高的管道, 得到聚四氟乙烯后可以大规模生产. 
-
-# Quest: tfr.quest150.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.name=输送机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.desc=输送机是一种覆盖版, 可以右击贴在格雷机器或者管道上, 作用是抽取/排出面对/所在的容器中的物品. 螺丝刀右击设置抽取/排出. 
-
-# Quest: tfr.quest151.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.name=更好的物流管道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.desc=更好的物流管道
-
-# Quest: tfr.quest152.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.name=最好的物流管道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.desc=最好的物流管道
-
-# Quest: tfr.quest156.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.name=开门, 顺丰快递
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.desc=点对点瞬达的物品管道, 需要两侧都接上远距传输用物品管道作为中继器, 和p2p类似. 
-
-# Quest: tfr.quest165.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.name=削去时间
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.desc=瞬间传输流体, 但是需要两边有中继器. 有四种温度上限的管道可以选择. 
-
-# Quest: tfr.quest166.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.name=清澈的蓄水槽
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.desc=可以盛放几乎一切流体, 但是无法自动输出, 需要一个格雷电动泵抽取, 或者贴在格雷机器的自动输入面. 
-
-# Quest: tfr.quest200.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.name=铁制蓄水槽
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.desc=根据方块介绍摆放, 需要一个阀门输入, 一个阀门输出. 
-
-# Quest: tfr.quest208.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.name=钢制蓄水槽
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.desc=根据方块介绍摆放, 需要一个阀门输入, 一个阀门输出. 
-
-# Quest: tfr.quest268.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.name=不锈钢储罐
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.desc=所有格雷科技储罐都可以用扳手右键设置自动输出. 耐腐蚀的储罐, 比OB储罐大4倍, 很好用. 不锈钢储罐也有多方块版本, 和木的建造方法类似. 
-
-# Quest: tfr.quest300.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.name=高温流体传输
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.desc=开始制作你的蒸汽设备了？你大概需要一些耐高温的流体管道, 青铜就不错. %n%n注意观察你的管道底部的描述, 不同管道有不同的耐热温度, 气密性, 和抗腐蚀性. 
-
-# Quest: tfr.quest301.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.name=低级物品传输
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.desc=黄铜管道是前期容易获得的物品管道之一, 他可以和漏斗交互, 焦炉交互, 大部分机器交互(但是不能和木桶交互！)你以后可能要很多很多物品管道. 
-
-# Quest: tfr.quest302.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.name=防腐木管道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.desc=防腐木管道似乎比木管道好一些, 在流量上
-
-# Quest: tfr.quest303.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.name=低级物品抽取
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.desc=
-
-# Quest: tfr.quest304.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.name=油浸处理
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.desc=这特么就是个奇迹, 你居然能放27个物品, 感动吗？
-
-# Quest: tfr.quest443.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.name=铁箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.desc=更大的存储空间
-
-# Quest: tfr.quest444.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.name=银箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.desc=更大的存储空间
-
-# Quest: tfr.quest445.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.name=铜箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.desc=更大的存储空间
-
-# Quest: tfr.quest446.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.name=钻石箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.desc=更大的存储空间
-
-# Quest: tfr.quest447.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.name=金箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.desc=更大的存储空间
-
-# Quest: tfr.quest448.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.name=水晶箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.desc=更大的存储空间
-
-# Quest: tfr.quest450.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.name=虚空箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.desc=
-
-# Quest: tfr.quest451.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.name=金属箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.desc=把金属锭压缩成块
-
-# Quest: tfr.quest452.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.name=黑曜石箱子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.desc=更大的存储空间
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.desc=
-
-# Quest: tfr.quest457.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.name=储物桶(铁制)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.desc=存储单件10000个物品
-
-# Quest: tfr.quest458.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.name=末影垃圾桶(支持流体)
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.desc=可以与物流管道和流体管道交互, 也就是意味着他可以销毁包括物品和流体在内的一切. %n%n制作自动化时的实用设备, 强烈建议制作
-
-# Quest: tfr.quest551.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.name=存储输入器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.desc=等同于抽屉模组的抽屉管理器, 但是不能和物流管道、AE网络交互. %n%n只能用手将物品放入相连的大容量存储器及储物桶. %n%n适用形状：一面墙, 即 XoY平面或ZoY平面. %n%n适用最大范围(墙壁大小)：水平方向两边各50, 即121格, 输入器放中间. 竖直方向7格, 包括输入器. 最大形状为 121 x 7 x 1(长 x 高 x 宽). %n%n7格计算方式及由来：从地板往上数七格, 人(史蒂夫)手竖直方向最大可交互距离(人性化！)为七格. %n%n地板：输入器面前方块向下七格范围内(1 ~ 7)存在方块, 则将离输入器最近的方块视为地板(人性化！), 并且需要将地板左右各延伸50格(若以最大面积铺满整面墙). %n%n所有存储器及储物桶需朝向一致, 且不被遮盖, 即面前没有方块阻碍(人性化！). %n%n空手右击时, 会将包裹内(3 x 9, 不包括快捷栏)所有最大堆叠数量不为一的物品放入“墙壁”中. %n%n存储输入器不能通过管道进行自动化
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.desc=
-
-
-## Quest Line: tfr.line17.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEQ.name=§d人类的能力没有极限
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEQ.desc=虽然你是一介凡夫, 但是学好物理能让你上天入地. 关于武器与装备
-
-# Quest: tfru.q102n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAw.name=撬棍
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAw.desc=主要用于拆除覆盖板.
-
-# Quest: tfr.quest338.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUg.name=冒险者
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUg.desc=最简陋的装甲, 只需要四块皮革就可以捏制而成(手持1皮革右键进入捏制界面)
-
-# Quest: tfr.quest378.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABeg.name=士兵, 干得漂亮
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABeg.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
-
-# Quest: tfr.quest379.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABew.name=中世纪骑士
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABew.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
-
-# Quest: tfr.quest380.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABfA.name=国王近卫军
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABfA.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
-
-# Quest: tfr.quest381.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABfQ.name=中世纪骑士长
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABfQ.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
-
-# Quest: tfr.quest382.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABfg.name=盖世英雄
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABfg.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
-
-# Quest: tfr.quest384.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABgA.name=滑翔翼
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABgA.desc=如果你手持滑翔翼右键从高处起飞, 你就能借助伯努利原理滑翔很长一段时间. 是个长途旅行的好方法. 
-
-# Quest: tfr.quest388.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABhA.name=双足飞龙装甲
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABhA.desc=一套高级装甲, 消耗RF以承受高强度的打击. 
-
-# Quest: tfr.quest390.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABhg.name=神龙装甲
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABhg.desc=一套超级装甲, 拥有超高级别的立体机动功能, 可以达到普通飞行的6倍速度, 消耗RF以承受几乎极高强度的打击. 
-
-# Quest: tfru.q81n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABjw.name=万用铲
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABjw.desc=主要用于拆除盖板与清空坩埚内废料. %n废料会返还. 
-
-# Quest: tfr.quest382.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.name=盖世英雄
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
-
-# Quest: tfr.quest708.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.name=亮闪闪的工具!
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.desc=许多宝石(如制铝副产蓝宝石)可以做工具!%n比如蓝宝石, 级别是铬级, 耐久比铬高数倍%n为什么不试试呢?
-
-# Quest: tfr.quest707.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.name=软锤
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.desc=主要用于合成和重置机器%n(右键机器强制终止当前制造进程, 不会返还材料)%n木的软锤和橡胶的实际耐久差距不大%n§a现在可以使用群峦木板合成%n 
-
-# Quest: tfru.q9n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6g.name=双足飞龙工具
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6g.desc=龙之力附着在钻石上, 为工具增添了一份诡秘.%n%n借助龙之力, 你可以打出更高的伤害, 挖得更快, 范围更大…等等
-
-# Quest: tfru.q10n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6w.name=神龙工具
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6w.desc=橙色的神龙之力发出耀眼的光芒, 显得十分扎眼.%n%n借助神龙之力, 你能拥有几乎支配一切生物的力量.
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7A.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7A.desc=
-
-# Quest: tfru.q93n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADHA.name=放大镜
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADHA.desc=主要用于查询机器数据, 可使用任意透镜合成. %n右键机器查询, 每次消耗1耐久.
-
-# Quest: tfru.q88n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADOQ.name=弯曲绕筒
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADOQ.desc=仅用于合成. 
-
-# Quest: tfru.q87n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADOg.name=比克打火机、打火机与铂打火机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADOg.desc=通过罐装丙烷和丁烷来点火. 主要用于点火. %n比克打火机有90%的成功率且不能二次利用. 打火机与铂打火机必定点燃, 且可重复罐装使用. %n合成打火机需要全新的比克打火机. 
-
-# Quest: tfru.q94n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADOw.name=手钻
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADOw.desc=主要用于合成和放置炸药%n有电动版本.
-
-# Quest: tfru.q92n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPA.name=刀
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPA.desc=主要用于剪开胶带.
-
-# Quest: tfru.q100n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPQ.name=万能工具
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPQ.desc=多合一工具, 对着地面shift+右键可切换模式. %n内含小刀、锯子、锉刀、螺丝刀、剪线钳、剪刀、凿子共七种工具. 
-
-# Quest: tfru.q99n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPg.name=收集袋
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPg.desc=主要用于在橡胶树上收集粘性树脂的工具. %n将其摆在GT6橡胶树的树脂口即可自动收集树脂. 收集完毕后右键取出粘性树脂. %n最多容纳64个粘性树脂. 
-
-# Quest: tfru.q86n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQQ.name=集成电路
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQQ.desc=用于设定一些合成表的“模式”, 相同原料用相同的合成方式合成出不同产物时往往会在合成中使用此物品. %n可用螺丝刀在工作台内通过不同的摆放位置调整集成电路的模式, 有0~24共25种模式. 
-
-# Quest: tfru.q85n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQg.name=打火石
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQg.desc=主要用于点火, 有30%概率成功. 
-
-# Quest: tfru.q91n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQw.name=胶带
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQw.desc=可用于封装储物桶(被封装后的储物桶被拆除时内部物品不会掉落). %n储物桶被封装后可在其表面看到胶带. %n有三种不同的版本, 其耐久不同, 效果相同. 耐久的消耗等同于储物桶内存储物品的数量.
-
-# Quest: tfru.q90n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRA.name=捕虫网
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRA.desc=用途与林业的捕蜂网相同. 用于捕捉蜜蜂.
-
-# Quest: tfru.q98n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRQ.name=水银温度计
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRQ.desc=主要用于合成温度传感器与测量坩埚温度. %n右键坩埚读取温度. 
-
-# Quest: tfru.q97n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRg.name=usb
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRg.desc=主要用于存储分子扫描仪产生的材料信息. 在复制机中放入usb可复制usb内存储的材料. 
-
-# Quest: tfru.q103n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSA.name=擀面杖
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSA.desc=主要用于合成.
-
-# Quest: tfru.q104n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSQ.name=建筑之杖
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSQ.desc=主要用于快速放置方块.%n不同材料所制作的建筑之杖每次放置的方块数不同, 耐久也不同.%n建筑之杖仅支持建筑类方块的快速放置, 壁板等非建筑方块不支持快速放置. %n还有一种建筑之杖由单独mod提供, 请在NEI自行搜索"建筑之杖".
-
-# Quest: tfru.q78n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSg.name=扳手
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSg.desc=主要用于合成, 调整机器朝向与状态, 调整管道连接情况%n(对准机器、管道, 会出现网格. 指向边缘长方形右键可切换机器正面. %nshift+右键则为切换机器背面. 网格划出的五格中总有一格有叉, 意为该面是机器正面. %n左键拆除机器)%n不同材料做出的扳手等级不同, 扳手只能拆除和自己同等级以及等级更小的机器与管道. %n存在电动版本, 电动版本对准方块shift+右键可切换为活动扳手. 
-
-# Quest: tfru.q80n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSw.name=剪线钳
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADSw.desc=主要用于合成、连接和拆除导线与线缆. %n(对准线缆会出现网格. 指向边缘长方形右键可切换连接状态. %n网格划出的五格中有叉, 意为该面已经连接. )%n剪线钳可以拆除任意等级导线(光纤除外, 需要四级剪线钳)
-
-# Quest: tfru.q79n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTA.name=活动扳手
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTA.desc=主要用于调整机器状态. 与扳手类似, 但有其独特的功能, %n(可用于修改机器的自动输出、漏斗的模式等. %n也可用于拆除机器, 调整管道. )%n存在电动版本, 电动版本对准方块shift+右键可切换为扳手. 
-
-# Quest: tfru.q96n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTQ.name=空白蓝图
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTQ.desc=主要用于自动工作台处理配方. 自动工作台会执行蓝图标记的配方. %n在高级工作台内使用, 可对合成表进行标记. 
-
-# Quest: tfru.q95n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTg.name=矿用电钻
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTg.desc=可同时作为镐和铲使用. 存电量和电池相关. %n挖掘速度和材质及电钻电压等级有关. (低压:1倍, 中压:2倍, 高压:3倍)%n耐久和材质及电钻电压等级有关. (低压:1倍, 中压:2倍, 高压:3倍)%n挖掘时会同时损耗电量和耐久.
-
-# Quest: tfru.q101n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUA.name=铲
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUA.desc=主要用于挖掘土质方块和清空坩埚内废料. %n废料会返还. 
-
-# Quest: tfru.q84n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUQ.name=锉刀
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUQ.desc=仅用于合成. 
-
-# Quest: tfru.q83n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUg.name=凿子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUg.desc=主要用于合成、凿模具与凿方块. 
-
-# Quest: tfru.q89n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUw.name=钳子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADUw.desc=用于避免烫伤的同时夹起模具/浇筑盆内的高温物体. 
-
-# Quest: tfru.q82n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVA.name=螺丝刀
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVA.desc=主要用于合成、调整机器、盖板、料斗、控制面板设置等. %n存在电动版本. 
-
-# Quest: tfru.q141n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADeQ.name=精炼火石
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADeQ.desc=经过处理的火石成为了非常好的点火工具, 并且不会到处点火.%n处理远古残骸可获得火石矿, 精炼火石会吸收周围的岩浆的能量为自己充能.
-
-
-## Quest Line: tfr.line15.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.name=§d[AE]质量-信息转换技术
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.desc=一种神奇的蓝色水晶-赛特斯-将允许你通过建造一种名为ME的网络, 开启一个潜能无限的自动化工厂
-
-# Quest: tfru.q211n
-betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.name=库存维持
-betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.desc=这个机器会自动发布合成任务, 维持网络中某种物品的储量.
-
-# Quest: tfru.q210n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.name=走向智能
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.desc=ae并不只是个大仓库, 前方将真正走入ae最重要的功能之一: 自动化, 但是你需要一些栖息于外星的奇异金属：智金, 使用它制作出智能核心, 才可以正确规划物品和流体的规律流动 %n%n提示: ae的自动化内容较为复杂, 建议提前找资料或视频学习一下, 任务书并不能面面俱到.
-
-# Quest: tfr.quest343.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.name=蚀刻模板
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.desc=陨石不再生成：你只能通过蚀刻铁块制作他们. 
-
-# Quest: tfr.quest521.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.name=光刻模板
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.desc=你需要光刻机与压力成型机来将原材料制作成相对应的板子, 然后将其压制成型. 
-
-# Quest: tfr.quest522.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.name=核心终端
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.desc=相当于主脑%n%n%n每个ME控制器有着32个频道, 意味着它可以供给总共32个端口/机器%n注意：普通线缆限制最高输出八个频道, 也就是你需要接四个面的线缆才能利用完全%n%n将数个ME控制器连在一起, 他们将会变为一个整体, §a线程总数共享%n但连接有着形态上的限制, 例如只能搭§a线性, 长方形§r或者§a长方体§r%n同时每个方向上最多连7个, 也就是最大为7*7*7的立方体%n%n注：其自带“能源接收器”的能量转换功能%n致密线缆可以拥有32个频道%n§9它也可以给相邻方块提供频道, 不需要线缆那种
-
-# Quest: tfr.quest523.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.name=存储中心
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.desc=驱动器+存储元件=只占一个格子的超大箱子%n%n需要说一下的是, 这个普通的存储元件只能存储物品, 存储液体或者气体需要特殊的存储元件
-
-# Quest: tfr.quest524.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.name=摩多摩多
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.desc=还不够！%n我需要更多的存储空间！
-
-# Quest: tfr.quest525.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.name=赛特斯！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.desc=AE的基础矿物, 上天前可通过地狱的下界石英矿§m白色块块矿§r获得少量赛特斯石英, 上天后可以找到大型赛特斯石英矿脉
-
-# Quest: tfr.quest526.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.name=充能赛特斯！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.desc=它的用途只有一个：制作Flux水晶
-
-# Quest: tfr.quest527.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.name=Flux水晶
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.desc=将一个充能赛特斯水晶和一个红石一个下届石英一起扔进水里, 你将得到两个Flux水晶%n%n也可以用搅拌机制作. %n%n多制备点总是无害的. 
-
-# Quest: tfr.quest528.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.name=线缆
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.desc=起连接作用%n同时具备能源、物品、流体的传输功能
-
-# Quest: tfr.quest529.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.name=物质与信息的沟通
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.desc=沟通物质与信息的一块面板%n它能化虚为实, 化实为虚%n%n就是有点费电
-
-# Quest: tfr.quest530.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.name=ae起步
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.desc=ae自动化的控制终端
-
-# Quest: tfr.quest531.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.name=更加方便！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.desc=能拿取物品的同时进行合成
-
-# Quest: tfr.quest532.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.name=ae自动化
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.desc=简单来讲, %n%n§a分子装配室§r, cpu的主板, 是需要ae网络进行启动的自动工作台, 在收到ae的指令后, 通过me端口输入物品并进行自动合成, 再通过me端口将合成物品抽入ae网络, 形成自动化合成%n%n§ame端口§r, ae网络与机器进行物品输入输出的端口, 通过装入样板来“记忆”合成公式%n%n§a物品输入/输出总线§r, 就是个固定输入物品或者输出物品的端口, 当连上机器或者箱子后, 只要ae网络/箱子/机器内有物品, 将会自动进行输出输入%n%n§a并行处理单元+合成单元§r, 相当于cpu, 合成单元为cpu的内存, 并行处理单元为线程数, 需要注意的是, 他们需要贴着放, 但太多放一起后只会算作一个%n%n§a§9总的来说, 在样板终端制作合成样板-放入me端口-终端内选择制作多少个-处理单元收到指令-合成单元提供内存-me端口传输物品-分子装配室制作%n%n%n%n%n
-
-# Quest: tfr.quest533.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.name=安全！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.desc=可以控制不同玩家能否访问你的ae网络, 绑定无线终端也需要使用它.
-
-# Quest: tfr.quest544.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.name=升级升级升级！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.desc=拓展运用
-
-# Quest: tfr.quest545.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.name=空间传输技术！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.desc=远距离拿取物品
-
-# Quest: tfr.quest546.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.name=p2p技术
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.desc=使用内存卡shift右键创建配置, 右键粘贴配置, 配置相同的p2p通道将会连接, 可以传输32个me频道%n%n具有许多其他类型(具体请NEI搜索p2p), 可以使用有关的物品右键以调谐p2p通道.
-
-# Quest: tfr.quest547.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.name=真 空间传输技术
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.desc=%n将八个量子环摆成环状, 中间放一个量子链接仓即可成型%n两个该结构即可进行将量子环两侧的网络直接连在一起(也就是量子环等于一节可以跨维度的超长的导线).%n
-
-# Quest: tfr.quest548.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.name=大型空间传送技术
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.desc=%n将一定空间内的所有方块一起传送走, 用处不大且较为麻烦%n%n具体方法mcmod内有详细教程
-
-# Quest: tfr.quest549.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.name=王 之 财 宝
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.desc=如果真把这些装满的话%n%n会卡的吧%n%n会的吧%n%n会吧%n%n吧
-
-# Quest: tfr.quest550.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.name=液体储存元件
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.desc=使ae网络能储存流体, 气体和液体都可以存于其中.
-
-# Quest: tfru.q138n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.name=流体终端
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.desc=可以通过该终端向ME网络中输入流体, 理论上来说任意储罐均可交互
-
-# Quest: tfru.q212n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.name=me接口
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.desc=ae绝对的核心配件之一, 可以允许ae网络与其他机器交互. %n第一行带下箭头的格子可以设置物品在该接口中的储存量, 第二行的空格子是me接口的物品栏, 其他me接口中的内容物会立刻返回ae网络, 下面几行是放置样板的格子, 默认只有一行, 可以插入样板容量卡解锁其他行.
-
-# Quest: tfru.q213n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.name=二合一me接口
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.desc=二合一me接口可以与机器进行物品和流体交互, 点击切换按钮可以设置流体储存量, 其他逻辑相同
-
-# Quest: tfru.q139n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.name=海量存储
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.desc=存储一整片海!
-
-# Quest: tfru.q214n
-betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.name=无限水元件
-betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.desc=彻底解决你的水资源焦虑, 该元件可以无限取出水. %n%n你问无限中子物质元件? 门都没有!
-
-# Quest: tfru.q209n
-betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.name=无限访问
-betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.desc=安装量子卡之后可以允许无线终端与量子环连接, 可以在任何维度任何位置访问你的ae网络.
-
-# Quest: tfru.q208n
-betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.name=万能终端
-betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.desc=这台无限终端可以完美管理你的整个ae网络, 彻底抛弃那些桎梏你脚步的有线终端吧.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACfA.desc=我们非常欢迎玩家加入我们的QQ交流群:%nQQ1群： 836643851
 
 
 ## Quest Line: tfr.line12.name
@@ -2059,10 +1303,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABpg.desc=
 # Quest: tfr.quest423.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABpw.name=银
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABpw.desc=
-
-# Quest: tfr.quest424.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqA.name=金
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqA.desc=
 
 # Quest: tfr.quest425.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABqQ.name=铜
@@ -2140,6 +1380,187 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAChg.desc=此兑换每3小时刷新一次
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAChw.name=硫磺
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAChw.desc=此兑换每3小时刷新一次
 
+# Quest: tfr.quest424.name
+betterquesting.quest.yylA26wXTgikCWWWVO6lhQ.name=钢
+betterquesting.quest.yylA26wXTgikCWWWVO6lhQ.desc=
+
+
+## Quest Line: tfr.line17.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEQ.name=§a人类的能力没有极限
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEQ.desc=虽然你是一介凡夫, 但是学好物理能让你上天入地. 关于武器与装备
+
+# Quest: tfru.q102n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAw.name=撬棍
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAw.desc=主要用于拆除覆盖板.
+
+# Quest: tfr.quest338.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABUg.name=冒险者
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABUg.desc=最简陋的装甲, 只需要四块皮革就可以捏制而成(手持1皮革右键进入捏制界面)
+
+# Quest: tfr.quest378.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABeg.name=士兵, 干得漂亮
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABeg.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
+
+# Quest: tfr.quest379.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABew.name=中世纪骑士
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABew.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
+
+# Quest: tfr.quest380.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABfA.name=国王近卫军
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABfA.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
+
+# Quest: tfr.quest381.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABfQ.name=中世纪骑士长
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABfQ.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
+
+# Quest: tfr.quest382.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABfg.name=盖世英雄
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABfg.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
+
+# Quest: tfr.quest384.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABgA.name=滑翔翼
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABgA.desc=如果你手持滑翔翼右键从高处起飞, 你就能借助伯努利原理滑翔很长一段时间. 是个长途旅行的好方法. 
+
+# Quest: tfr.quest388.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABhA.name=双足飞龙装甲
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABhA.desc=一套高级装甲, 消耗RF以承受高强度的打击. 
+
+# Quest: tfr.quest390.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABhg.name=神龙装甲
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABhg.desc=一套超级装甲, 拥有超高级别的立体机动功能, 可以达到普通飞行的6倍速度, 消耗RF以承受几乎极高强度的打击. 
+
+# Quest: tfru.q81n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABjw.name=万用铲
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABjw.desc=主要用于拆除盖板与清空坩埚内废料. %n废料会返还. 
+
+# Quest: tfru.q9n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6g.name=双足飞龙工具
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6g.desc=龙之力附着在钻石上, 为工具增添了一份诡秘.%n%n借助龙之力, 你可以打出更高的伤害, 挖得更快, 范围更大…等等
+
+# Quest: tfru.q10n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6w.name=神龙工具
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6w.desc=橙色的神龙之力发出耀眼的光芒, 显得十分扎眼.%n%n借助神龙之力, 你能拥有几乎支配一切生物的力量.
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7A.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7A.desc=
+
+# Quest: tfr.quest382.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.name=盖世英雄
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.desc=金属装甲的制作和皮革不大一样：每种材质的装甲都需要对应材质或以上的金属砧锻造而成. 而且, 装甲锻造分为未完成和完成两个阶段, 所以对于你来说还是挺有挑战的. 不过, 他们能给你提供不错的保护. 
+
+# Quest: tfr.quest708.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.name=亮闪闪的工具!
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.desc=许多宝石(如制铝副产蓝宝石)可以做工具!%n比如蓝宝石, 级别是铬级, 耐久比铬高数倍%n为什么不试试呢?
+
+# Quest: tfr.quest707.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.name=软锤
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.desc=主要用于合成和重置机器%n(右键机器强制终止当前制造进程, 不会返还材料)%n木的软锤和橡胶的实际耐久差距不大%n§a现在可以使用群峦木板合成%n 
+
+# Quest: tfru.q93n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADHA.name=放大镜
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADHA.desc=主要用于查询机器数据, 可使用任意透镜合成. %n右键机器查询, 每次消耗1耐久.
+
+# Quest: tfru.q88n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADOQ.name=弯曲绕筒
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADOQ.desc=仅用于合成. 
+
+# Quest: tfru.q87n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADOg.name=比克打火机、打火机与铂打火机
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADOg.desc=通过罐装丙烷和丁烷来点火. 主要用于点火. %n比克打火机有90%的成功率且不能二次利用. 打火机与铂打火机必定点燃, 且可重复罐装使用. %n合成打火机需要全新的比克打火机. 
+
+# Quest: tfru.q94n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADOw.name=手钻
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADOw.desc=主要用于合成和放置炸药%n有电动版本.
+
+# Quest: tfru.q92n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPA.name=刀
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPA.desc=主要用于剪开胶带.
+
+# Quest: tfru.q100n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPQ.name=万能工具
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPQ.desc=多合一工具, 对着地面shift+右键可切换模式. %n内含小刀、锯子、锉刀、螺丝刀、剪线钳、剪刀、凿子共七种工具. 
+
+# Quest: tfru.q99n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPg.name=收集袋
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPg.desc=主要用于在橡胶树上收集粘性树脂的工具. %n将其摆在GT6橡胶树的树脂口即可自动收集树脂. 收集完毕后右键取出粘性树脂. %n最多容纳64个粘性树脂. 
+
+# Quest: tfru.q86n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQQ.name=集成电路
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQQ.desc=用于设定一些合成表的“模式”, 相同原料用相同的合成方式合成出不同产物时往往会在合成中使用此物品. %n可用螺丝刀在工作台内通过不同的摆放位置调整集成电路的模式, 有0~24共25种模式. 
+
+# Quest: tfru.q85n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQg.name=打火石
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQg.desc=主要用于点火, 有30%概率成功. 
+
+# Quest: tfru.q91n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQw.name=胶带
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQw.desc=可用于封装储物桶(被封装后的储物桶被拆除时内部物品不会掉落). %n储物桶被封装后可在其表面看到胶带. %n有三种不同的版本, 其耐久不同, 效果相同. 耐久的消耗等同于储物桶内存储物品的数量.
+
+# Quest: tfru.q90n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRA.name=捕虫网
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRA.desc=用途与林业的捕蜂网相同. 用于捕捉蜜蜂.
+
+# Quest: tfru.q98n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRQ.name=水银温度计
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRQ.desc=主要用于合成温度传感器与测量坩埚温度. %n右键坩埚读取温度. 
+
+# Quest: tfru.q97n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRg.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRg.desc=
+
+# Quest: tfru.q103n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSA.name=擀面杖
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSA.desc=主要用于合成.
+
+# Quest: tfru.q104n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSQ.name=建筑之杖
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSQ.desc=主要用于快速放置方块.%n不同材料所制作的建筑之杖每次放置的方块数不同, 耐久也不同.%n建筑之杖仅支持建筑类方块的快速放置, 壁板等非建筑方块不支持快速放置. %n还有一种建筑之杖由单独mod提供, 请在NEI自行搜索"建筑之杖".
+
+# Quest: tfru.q78n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSg.name=扳手
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSg.desc=主要用于合成, 调整机器朝向与状态, 调整管道连接情况%n(对准机器、管道, 会出现网格. 指向边缘长方形右键可切换机器正面. %nshift+右键则为切换机器背面. 网格划出的五格中总有一格有叉, 意为该面是机器正面. %n左键拆除机器)%n不同材料做出的扳手等级不同, 扳手只能拆除和自己同等级以及等级更小的机器与管道. %n存在电动版本, 电动版本对准方块shift+右键可切换为活动扳手. 
+
+# Quest: tfru.q80n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSw.name=剪线钳
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADSw.desc=主要用于合成、连接和拆除导线与线缆. %n(对准线缆会出现网格. 指向边缘长方形右键可切换连接状态. %n网格划出的五格中有叉, 意为该面已经连接. )%n剪线钳可以拆除任意等级导线(光纤除外, 需要四级剪线钳)
+
+# Quest: tfru.q79n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTA.name=活动扳手
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTA.desc=主要用于调整机器状态. 与扳手类似, 但有其独特的功能, %n(可用于修改机器的自动输出、漏斗的模式等. %n也可用于拆除机器, 调整管道. )%n存在电动版本, 电动版本对准方块shift+右键可切换为扳手. 
+
+# Quest: tfru.q96n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTQ.name=空白蓝图
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTQ.desc=主要用于自动工作台处理配方. 自动工作台会执行蓝图标记的配方. %n在高级工作台内使用, 可对合成表进行标记. 
+
+# Quest: tfru.q95n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTg.name=矿用电钻
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTg.desc=可同时作为镐和铲使用. 存电量和电池相关. %n挖掘速度和材质及电钻电压等级有关. (低压:1倍, 中压:2倍, 高压:3倍)%n耐久和材质及电钻电压等级有关. (低压:1倍, 中压:2倍, 高压:3倍)%n挖掘时会同时损耗电量和耐久.
+
+# Quest: tfru.q101n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUA.name=铲
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUA.desc=主要用于挖掘土质方块和清空坩埚内废料. %n废料会返还. 
+
+# Quest: tfru.q84n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUQ.name=锉刀
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUQ.desc=仅用于合成. 
+
+# Quest: tfru.q83n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUg.name=凿子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUg.desc=主要用于合成、凿模具与凿方块. 
+
+# Quest: tfru.q89n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUw.name=钳子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADUw.desc=用于避免烫伤的同时夹起模具/浇筑盆内的高温物体. 
+
+# Quest: tfru.q82n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVA.name=螺丝刀
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVA.desc=主要用于合成、调整机器、盖板、料斗、控制面板设置等. %n存在电动版本. 
+
+# Quest: tfru.q141n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADeQ.name=精炼火石
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADeQ.desc=经过处理的火石成为了非常好的点火工具, 并且不会到处点火.%n处理远古残骸可获得火石矿, 按Q将精炼火石扔到岩浆上, 精炼火石便会吸收周围的岩浆的能量为自己充能, 岩浆将转换为黑曜石.
+
 
 ## Quest Line: tfru.l1n
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGg.name=§a探索的时光
@@ -2163,7 +1584,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABlA.desc=你来到了世界的尽头
 
 # Quest: tfru.q201n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABlQ.name=天空法杖
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABlQ.desc=消耗魔力提供一个向上的加速度, 很适合配合滑翔翼使用.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABlQ.desc=消耗魔力将你抛向天空, 很适合配合滑翔翼或鞘翅使用.
 
 # Quest: tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABlw.name=正在制作..
@@ -2173,20 +1594,20 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABlw.desc=你来到了世界的尽头
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABmA.name=正在制作..
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABmA.desc=你来到了世界的尽头
 
-# Quest: tfru.q
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.desc=
+# Quest: tfru.q195n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.name=加速腰带
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.desc=植物魔法提供了两种可以加速的腰带, 有助于你跑的更快
 
 # Quest: tfru.q198n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABmw.name=喷气背包
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABmw.desc=进入电力时代后即可制作消耗沼气的喷气背包, 它能提供竖直向上的推力, 但具有一定高度限制. %n%n沼气可由天然气转换而来, 空喷气背包放入gt的灌装机中即可填充
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABmw.name=封印之布
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABmw.desc=使用这个可以去除任意物品上的附魔, 一块布可以使用36次.
 
-# Quest: tfru.q
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.desc=
+# Quest: tfru.q196n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.name=平原腰带
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.desc=这种腰带在你持续奔跑时会逐渐提高你的速度, 适合平原使用
 
 # Quest: tfru.q193n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACZQ.name=曲速旅行
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACZQ.name=折跃旅行
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACZQ.desc=有时候你需要找一个新的地形, 何不试试用地狱门? 群峦星与地狱的坐标比例是8:1, 可以帮助你快速前往指定地点...%n%n别忘了带打火石
 
 # Quest: tfru.q192n
@@ -2213,9 +1634,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADKg.desc=有时你会在遗迹箱子中�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADKw.name=正在制作..
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADKw.desc=你来到了世界的尽头
 
-# Quest: tfru.q200n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.name=正在制作..
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.desc=你来到了世界的尽头
+# Quest: tfru.q227n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.name=GT矿脉
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.desc=你可能会发现一些不属于tfc的花, 这通常标明附近存在GT基岩矿脉, 挖到y=0的位置便可发现这些矿物. 基岩矿本体需要使用基岩钻开采, 但基岩矿上方附带的矿脉仍有可观的规模.
 
 # Quest: tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADLQ.name=正在制作..
@@ -2230,13 +1651,21 @@ betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEg.desc=证明你的实力吧(指�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYQ.name=敌对生物
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYQ.desc=这个世界的生物与原版大有不同, 我将作为你的导师, 带领你完成一系列挑战. 
 
-# Quest: tfr.quest462.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.name=丧尸猎人
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.desc=击杀一些僵尸, 我会给你一把村好剑
+# Quest: tfr.quest504.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.name=北极熊猎人T4
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.desc=击杀一些北极熊
 
-# Quest: tfr.quest463.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.name=骷髅猎人
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.desc=用槌子能对骷髅造成额外伤害. 击杀一些骷髅, 我会给你一把村好槌
+# Quest: tfr.quest505.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.name=丧尸猎人T5
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.desc=击杀一些僵尸, 我会给你一把村好剑
+
+# Quest: tfr.quest506.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.name=骷髅猎人T5
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.desc=击杀一些骷髅, 我会给你一把村好槌
+
+# Quest: tfr.quest507.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.name=蜘蛛猎人T5
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.desc=击杀一些蜘蛛, 我会给你一把村好弹弓
 
 # Quest: tfr.quest464.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB0A.name=蜘蛛猎人
@@ -2398,22 +1827,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAB9g.desc=击杀一些末影人
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB9w.name=熊猎人T4
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB9w.desc=击杀一些熊
 
-# Quest: tfr.quest504.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.name=北极熊猎人T4
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.desc=击杀一些北极熊
-
-# Quest: tfr.quest505.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.name=丧尸猎人T5
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.desc=击杀一些僵尸, 我会给你一把村好剑
-
-# Quest: tfr.quest506.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.name=骷髅猎人T5
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.desc=击杀一些骷髅, 我会给你一把村好槌
-
-# Quest: tfr.quest507.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.name=蜘蛛猎人T5
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.desc=击杀一些蜘蛛, 我会给你一把村好弹弓
-
 # Quest: tfr.quest508.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_A.name=爬行者猎人T5
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_A.desc=击杀一些爬行者
@@ -2429,6 +1842,14 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_g.desc=击杀一些熊
 # Quest: tfr.quest511.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_w.name=北极熊猎人T5
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_w.desc=击杀一些北极熊
+
+# Quest: tfr.quest462.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.name=丧尸猎人
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.desc=击杀一些僵尸, 我会给你一把村好剑
+
+# Quest: tfr.quest463.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.name=骷髅猎人
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.desc=用槌子能对骷髅造成额外伤害. 击杀一些骷髅, 我会给你一把村好槌
 
 # Quest: tfr.quest512.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACAA.name=贝尔-格里尔斯
@@ -2456,11 +1877,164 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACBQ.desc=
 
 # Quest: tfr.quest518.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACBg.name=达成成就:绞肉机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACBg.desc=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACBg.desc=你征服的万千灵魂将你奉为帝圣...它们凝结成两把对立双生的武器, 它们极度强力而稀世罕见, 能助你踏平一切坎坷...
 
 # Quest: tfr.quest519.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACBw.name=混沌领主
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACBw.desc=(目前不在世界生成, 制作中)
+
+
+## Quest Line: tfr.line14.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.name=§a存储与物流学
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.desc=关于管道, 存储, 和传输系统.
+
+# Quest: tfr.quest208.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.name=钢制蓄水槽
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.desc=根据方块介绍摆放, 需要一个阀门输入, 一个阀门输出. 
+
+# Quest: tfr.quest6.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.name=高级工作台
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.desc=高级工作台是一个非必须但很有用的设备. 他可以用管道输入液体资源, 在GUI上部的槽里可以用桶接液体. 也可以在旁边放储物桶, 合成的时候可以自动抽取物品. 侧边是抽屉, 也能存放不少东西, 而且还有专门放工具的槽位. 大力推进！
+
+# Quest: tfr.quest81.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.name=金属包装
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.desc=这特么就是个奇迹, 你居然能放54个物品, 感动吗？
+
+# Quest: tfr.quest100.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.name=储存大量液体
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.desc=焦炉副产的木榴油如果积攒过多很难处理. 为了节约起来给流体燃烧室使用, 你可以制作第一个多方块储罐：大型木储罐. %n他可以储存432000L流体, 不过不要想用他装腐蚀性液体或者气体. 你也可以选择用它作为一个蒸馏水缓存. %n他的摆放方式和焦炉类似. 
+
+# Quest: tfr.quest127.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.name=基础流体传输
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.desc=这一章中我会介绍给你一些关于格雷科技中物品和流体传输, 存储系统的知识. 这并非一个主线章节, 你可以选择性完成. 
+
+# Quest: tfr.quest130.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.name=橡胶管道
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.desc=橡胶管道有着不错的属性, 而且不漏气, 而且不算贵, 是性价比很高的一种流体管道. 只能用压模器制造
+
+# Quest: tfr.quest133.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.name=耐腐蚀管道
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.desc=不锈钢管道不仅仅不漏气, 耐热, 而且还能抗各种化学腐蚀, 制作硫酸产线前推荐制作. 
+
+# Quest: tfr.quest135.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.name=电动泵
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=电动泵是一种覆盖版, 可以右击贴在格雷机器或者管道上, 作用是抽取/排出面对/所在的容器中的流体. 螺丝刀右击设置抽取/排出. 可以抽取OB储罐中的流体. 
+
+# Quest: tfr.quest138.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.name=现代物流管道
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.desc=性价比很高的物流管道, 得到聚氯乙烯后可以大规模生产. 
+
+# Quest: tfr.quest149.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.name=现代管道
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.desc=耐腐蚀, 不漏气. 性价比很高的管道, 得到聚四氟乙烯后可以大规模生产. 
+
+# Quest: tfr.quest150.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.name=输送机
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.desc=输送机是一种覆盖版, 可以右击贴在格雷机器或者管道上, 作用是抽取/排出面对/所在的容器中的物品. 螺丝刀右击设置抽取/排出. 
+
+# Quest: tfr.quest151.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.name=更好的物流管道
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.desc=更好的物流管道
+
+# Quest: tfr.quest152.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.name=最好的物流管道
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.desc=最好的物流管道
+
+# Quest: tfr.quest156.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.name=开门, 顺丰快递
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.desc=点对点瞬达的物品管道, 需要两侧都接上远距传输用物品管道作为中继器, 和p2p类似. 
+
+# Quest: tfr.quest165.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.name=削去时间
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.desc=瞬间传输流体, 但是需要两边有中继器. 有四种温度上限的管道可以选择. 
+
+# Quest: tfr.quest166.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.name=清澈的蓄水槽
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.desc=可以盛放几乎一切流体, 但是无法自动输出, 需要一个格雷电动泵抽取, 或者贴在格雷机器的自动输入面. 
+
+# Quest: tfr.quest200.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.name=铁制蓄水槽
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.desc=根据方块介绍摆放, 需要一个阀门输入, 一个阀门输出. 
+
+# Quest: tfr.quest268.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.name=不锈钢储罐
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.desc=所有格雷科技储罐都可以用扳手右键设置自动输出. 耐腐蚀的储罐, 比OB储罐大4倍, 很好用. 不锈钢储罐也有多方块版本, 和木的建造方法类似. 
+
+# Quest: tfr.quest300.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.name=高温流体传输
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.desc=开始制作你的蒸汽设备了？你大概需要一些耐高温的流体管道, 青铜就不错. %n%n注意观察你的管道底部的描述, 不同管道有不同的耐热温度, 气密性, 和抗腐蚀性. 
+
+# Quest: tfr.quest301.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.name=低级物品传输
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.desc=黄铜管道是前期容易获得的物品管道之一, 他可以和漏斗交互, 焦炉交互, 大部分机器交互(但是不能和木桶交互！)你以后可能要很多很多物品管道. 
+
+# Quest: tfr.quest302.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.name=防腐木管道
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.desc=防腐木管道似乎比木管道好一些, 在流量上
+
+# Quest: tfr.quest303.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.name=低级物品抽取
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.desc=
+
+# Quest: tfr.quest304.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.name=油浸处理
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.desc=这特么就是个奇迹, 你居然能放27个物品, 感动吗？
+
+# Quest: tfr.quest443.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.name=铁箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.desc=更大的存储空间
+
+# Quest: tfr.quest444.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.name=银箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.desc=更大的存储空间
+
+# Quest: tfr.quest445.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.name=铜箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.desc=更大的存储空间
+
+# Quest: tfr.quest446.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.name=钻石箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.desc=更大的存储空间
+
+# Quest: tfr.quest447.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.name=金箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.desc=更大的存储空间
+
+# Quest: tfr.quest448.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.name=水晶箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.desc=更大的存储空间
+
+# Quest: tfr.quest450.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.name=虚空箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.desc=
+
+# Quest: tfr.quest451.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.name=金属箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.desc=把金属锭压缩成块
+
+# Quest: tfr.quest452.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.name=黑曜石箱子
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.desc=更大的存储空间
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.desc=
+
+# Quest: tfr.quest457.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.name=储物桶(铁制)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.desc=存储单件10000个物品
+
+# Quest: tfr.quest458.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.name=末影垃圾桶(支持流体)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.desc=可以与物流管道和流体管道交互, 也就是意味着他可以销毁包括物品和流体在内的一切. %n%n制作自动化时的实用设备, 强烈建议制作
+
+# Quest: tfr.quest551.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.name=存储输入器
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.desc=等同于抽屉模组的抽屉管理器, 但是不能和物流管道、AE网络交互. %n%n只能用手将物品放入相连的大容量存储器及储物桶. %n%n适用形状：一面墙, 即 XoY平面或ZoY平面. %n%n适用最大范围(墙壁大小)：水平方向两边各50, 即121格, 输入器放中间. 竖直方向7格, 包括输入器. 最大形状为 121 x 7 x 1(长 x 高 x 宽). %n%n7格计算方式及由来：从地板往上数七格, 人(史蒂夫)手竖直方向最大可交互距离(人性化！)为七格. %n%n地板：输入器面前方块向下七格范围内(1 ~ 7)存在方块, 则将离输入器最近的方块视为地板(人性化！), 并且需要将地板左右各延伸50格(若以最大面积铺满整面墙). %n%n所有存储器及储物桶需朝向一致, 且不被遮盖, 即面前没有方块阻碍(人性化！). %n%n空手右击时, 会将包裹内(3 x 9, 不包括快捷栏)所有最大堆叠数量不为一的物品放入“墙壁”中. %n%n存储输入器不能通过管道进行自动化
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.desc=
 
 
 ## Quest Line: tfr.line21.name
@@ -2533,7 +2107,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACZg.desc=
 
 # Quest: tfr.quest615.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACZw.name=泰拉钢
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACZw.desc=用一个黑钢锭, 源质钢锭.精灵尘与魔力钻石融合而成的顶级金属.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACZw.desc=由一个黑钢锭, 源质钢锭.精灵尘与魔力钻石, 加入两池魔力融合而成的顶级金属.
 
 # Quest: tfr.quest616.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACaA.name=盖亚召唤仪式
@@ -2553,7 +2127,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACbA.desc=使用更为强大的植物魔�
 
 # Quest: tfr.quest621.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACbQ.name=泰拉之刃
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACbQ.desc=植物魔法中最强大的武器之一, 右键可以发出一道魔力光束
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACbQ.desc=植物魔法中最强大的武器之一, 拥有很高的基础伤害, 同时左键可以发出一道魔力光束, 可打击碰到的敌对生物(不穿透)
 
 # Quest: tfr.quest737.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADBg.name=群星之怒
@@ -2565,11 +2139,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADCg.desc=利用强大的泰拉钢制作�
 
 # Quest: tfr.quest735.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADCw.name=粉碎一切
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADCw.desc=你并不一定要完成此任务, 但至少可以作为一个挑战: 将泰拉镐充满, 你必须拥有足够强大的魔力发生系统才能完成此任务
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADCw.desc=你并不一定要完成此任务, 但至少可以作为一个挑战: 将泰拉镐充满, 你必须拥有足够强大的魔力发生系统才能完成此任务. 具体来说, 充满一个泰拉粉碎者需要约2000池的魔力, 祝你好运
 
 # Quest: tfr.quest727.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADDA.name=泰拉盔甲
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADDA.desc=使用强大的泰拉钢与季节之力制成, 拥有强大的保护能力, 还可以耗费魔力进行自我修补.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADDA.desc=使用强大的泰拉钢与季节之力制成, 拥有强大的保护能力, 可以治愈使用者, 还可以耗费魔力进行自我修补.%n击败盖亚2后还可以向头盔中插入数位先贤的意志, 进一步强化它. %n%n你大概率会有很长时间穿着它的, 建议给它一些好的附魔, 所有附魔均兼容群峦血量.
 
 # Quest: tfr.quest724.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADDQ.name=翡翠苋
@@ -2581,7 +2155,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADDg.desc=太阳并不总是高悬在天�
 
 # Quest: tfr.quest723.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADDw.name=三阶符文
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADDw.desc=三阶符文由七宗罪命名, 分别是贪婪欲望懒惰暴食暴怒嫉妒傲慢, 制作高端物品的材料, 由纯粹的魔法力量制成. 不过似乎用到它们的物品较少
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADDw.desc=三阶符文由七宗罪命名, 分别是贪婪欲望懒惰暴食暴怒嫉妒傲慢, 是制作高端物品的材料, 由纯粹的魔法力量制成.
 
 # Quest: tfr.quest719.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADEA.name=稀释魔力池
@@ -2593,7 +2167,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADEQ.desc=仿佛是基因中的缺陷, �
 
 # Quest: tfr.quest730.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADEg.name=噬草花
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADEg.desc=你可能痛恨那群被动产能花在你刚站稳脚跟之时抛下你离去, 或者只是翡翠苋为你生产了过多的神秘花而无处存放, 不管怎样, 来试试这个. 它可以吞噬周围的被动产能花来产出魔力, 连续喂食同一种花会使产能降低%n%n如果你是认真的, 认真的想用它进行自动产魔, 苦钻怕推荐你去看看词典的以下几个页面: 翡翠苋, 机巧箱, 花药台, 手掌花.%n%n 此外, GregTech的物品管道, 物品过滤器, 储物桶/量子存储器和队列料斗也可以派上用场.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADEg.desc=你可能痛恨那群被动产能花在你还未站稳脚跟之时抛下你离去, 或者只是翡翠苋为你生产了过多的神秘花而无处存放, 不管怎样, 来试试这个. 它可以吞噬周围的被动产能花来产出魔力, 连续喂食同一种花会使产能降低%n%n如果你是认真的想用它进行自动产魔, 苦钻怕推荐你去看看词典的以下几个页面: 翡翠苋, 机巧箱, 花药台, 手掌花.%n%n 此外, GregTech的物品管道, 物品过滤器, 储物桶/量子存储器和队列料斗也可以派上用场. %n你的付出不会辜负你的. %n%n此外, 还有一朵更强大的饕餮噬草花, 可以吞噬任何种类的产能花, 详见植物魔法词典.
 
 # Quest: tfr.quest722.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADEw.name=二阶符文
@@ -2633,7 +2207,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADHQ.desc=依靠吃树叶产生魔力, �
 
 # Quest: tfr.quest720.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADHw.name=高速魔力通道
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADHw.desc=使用火花可以让魔力在魔力池之间(需要安装火花升级)或魔力池与耗魔方块(比如泰拉凝聚板)之间高速传递魔力, 比发射器有千百倍的提升
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADHw.desc=使用火花可以让魔力在魔力池之间(需要安装火花升级)或魔力池与耗魔方块(比如泰拉凝聚板)之间高速传递魔力, 比发射器有千百倍的提升. %n%n使用花粉可以把火花染上颜色, 不同颜色的火花之间互相隔离. 高版本玩家可能感到熟悉.
 
 # Quest: tfr.quest713.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADIQ.name=太阳花
@@ -2645,7 +2219,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADIg.desc=纯净强大的力量之源, �
 
 # Quest: tfr.quest721.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADIw.name=一阶符文
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADIw.desc=一阶符文有风火水地四种, 是用于制作普通物品的基本材料之一, 它们并不需要强大的魔法力量来制造, 但总有人嫌这些材料难以收集
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADIw.desc=一阶符文有风火水地四种, 是用于制作普通物品的基本材料之一, 它们的原料来自五湖四海, 是将世界的力量凝聚于一体的最初尝试.
 
 # Quest: tfr.quest718.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADJA.name=魔力指示灯
@@ -2667,27 +2241,22 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADJw.desc=魔力远比你想象的有用�
 betterquesting.quest.CLglxv1FR7KUX0DyK3CQsg.name=魔力脉冲枪
 betterquesting.quest.CLglxv1FR7KUX0DyK3CQsg.desc=一种便携魔力发射器, 可以安装透镜(包括复合透镜)以达成许多有趣的应用, 可以安装透镜夹, 潜行即可切换透镜 %n%n§o比如安装挖掘透镜可以当作低配版采矿镭射枪使用.
 
+# Quest: tfru.q247n
+betterquesting.quest.GrYsanQgQhaRVOf_FijyoQ.name=自然核心
+betterquesting.quest.GrYsanQgQhaRVOf_FijyoQ.desc=你可以从精灵们那里获取一些传送门的核心原理, 他们将这些原理封装入这一颗核心. 使用它可以在获得火箭之前到达一些风景优美的宜居星球.
 
-## Quest Line: tfr.line24.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGA.name=§a[OB]开放式方块
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGA.desc=关于开放式方块模组的基本介绍, 制作中
+# Quest: tfru.q198n
+betterquesting.quest.ocP6fZisQW-59ZyUroe9Tg.name=封印之布
+betterquesting.quest.ocP6fZisQW-59ZyUroe9Tg.desc=使用这个可以去除任意物品上的附魔, 一块布可以使用36次.
 
-# Quest: tfr.quest640.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgA.name=用开放式方块统一世界
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgA.desc=这是一个非常实用的模组, 提供了很多实用的功能, 而且造价都不贵. 任何物品和方块的使用方法都可以从这本书里看到！
-
-# Quest: 行李箱
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACqA.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACqA.desc=一个箱子宠物，会自动帮你吃掉附近的掉落物%n右键打开它的物品栏，shift+右键可以把它收回背包%n§8此任务是Unofficial版本特有的
+# Quest: tfru.q248n
+betterquesting.quest.tII1hrqmSWyQ8N2GEluvmQ.name=暮森灵核
+betterquesting.quest.tII1hrqmSWyQ8N2GEluvmQ.desc=使用它可以到达暮色森林, 这不是必须的, 你可以单纯前去放松, 挖矿并获取一些更好的魔法材料制作工具或涡轮机, boss的战利品还可以用在魔法能源吸收器上. %n注意暮色门需要使用原版泥土构建.%n%n§c警告!检测到紊乱机器人信号!请小心行事!
 
 
 ## Quest Line: tfr.line10.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACg.name=§b农业、畜牧业与渔业
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACg.desc=关于你作为一个碳基生物在这个星球活下去的帮助
-
-# Quest: tfr.quest105.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.name=陌生的树苗
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.desc=制作一台木工机之后, 你可以将群峦的橡树苗和覆盖戎转换为原版橡树苗. 树皮可以通过用格雷斧头右键原木获得, 或者通过机器获得. 
 
 # Quest: tfr.quest220.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3A.name=农业
@@ -2725,6 +2294,10 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAA5w.desc=乳制品有两种获得方式:
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6Q.name=动物袋
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6Q.desc=用这玩意可以把动物装起来背在身上, 有的动物需要加强的动物袋.
 
+# Quest: tfr.quest105.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.name=陌生的树苗
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.desc=制作一台木工机之后, 你可以将群峦的橡树苗和覆盖戎转换为原版橡树苗. 树皮可以通过用格雷斧头右键原木获得, 或者通过机器获得. 
+
 # Quest: tfr.quest273.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABEQ.name=农田
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABEQ.desc=农田, 也被称为土壤, 包含了作物的三种基本营养, 如果附近有足够的水源方块, 你的植物就能获得重要的水源. 通过使用金属锄头的水和营养模式, 你可以看到作物的营养水平和水源的获取情况. %n%n%n%n在土壤中种植作物会减少土壤营养, 为了补充营养必须让作物休耕, 使用肥料, 或者周期种植需要不同营养类型的作物. 注:一些农作物, 如大豆和青刀豆, 在生长时需要补充其他营养物质. %n%n%n%n与原版不同, 农田不能变回泥土. 破坏农田块也不会产生任何泥土, 以防止养分的重利用. 
@@ -2743,7 +2316,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABKg.desc=野生作物：在野生环境�
 
 # Quest: tfr.quest305.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABMQ.name=我要坏掉了
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABMQ.desc=§4按F3打开区块边界显示：确保你的冰窖在一个区块内, 否则不会工作. %n%n地窖能避免你辛辛苦苦收获的食物变质坏掉. %n%n用冰窖墙方块制作一个外部高度为4米内部高度为2米的中空长方体结构. %n%n冰窖门需要有两层, 冰窖门所在的位置需要突出墙体本身一格, 而且周围也要有冰窖墙方块. %n%n地窖内部底面其中一个方块需要为冰窖核心, 内部需要放入冰锯挖掘的TFC的冰块才能使冰窖开始运行. %n%n开始运行时打开冰窖核心的GUI右上角能看到温度. %n%n食物只能放在冰窖架里. 冰窖内不能有除了冰窖架之外的任何方块. %n%n冰窖的墙壁四周不能有任何方块接触, 只能底面与地面接触. %n%n这是一个俯视图：%n%nX：墙%nD：门%n%nXXXXX%nX   X%nX   X%nXXDXX%n XDX
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABMQ.desc=§4按F9打开区块边界显示：确保你的冰窖在一个区块内, 否则不会工作. %n%n地窖能避免你辛辛苦苦收获的食物变质坏掉. %n%n用冰窖墙方块制作一个外部高度为4米内部高度为2米的中空长方体结构. %n%n冰窖门需要有两层, 冰窖门所在的位置需要突出墙体本身一格, 而且周围也要有冰窖墙方块. %n%n地窖内部底面其中一个方块需要为冰窖核心, 内部需要放入冰锯挖掘的TFC的冰块才能使冰窖开始运行. %n%n开始运行时打开冰窖核心的GUI右上角能看到温度. %n%n食物只能放在冰窖架里. 冰窖内不能有除了冰窖架之外的任何方块. %n%n冰窖的墙壁四周不能有任何方块接触, 只能底面与地面接触. %n%n这是一个俯视图：%n%nX：墙%nD：门%n%nXXXXX%nX   X%nX   X%nXXDXX%n XDX
 
 # Quest: tfr.quest306.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABMg.name=烧烤
@@ -2755,15 +2328,11 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABNA.desc=一些种子无法在群峦星�
 
 # Quest: tfr.quest309.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABNQ.name=农业大亨
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABNQ.desc=现在你再也不会缺乏食物了. 小心了, 过度耕作可能会导致你的农田养分失效. 当你的耕作等级逐渐提升时, 手持锄头就能看到农田的营养度. %n为了感谢你的付出, 我会送给你两只地球猪, 他们能够提供左旋蛋白质, 一种群峦星没有的特产. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABNQ.desc=现在你再也不会缺乏食物了. 小心了, 过度耕作可能会导致你的农田养分失效. 当你的耕作等级逐渐提升时, 手持锄头就能看到农田的营养度. %n为了感谢你的付出, 我会送给你一些地球生物, 他们能够提供左旋蛋白质, 一种群峦星没有的特产.
 
 # Quest: tfr.quest310.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABNg.name=辛勤的农夫
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABNg.desc=下面的任务对于前期的你来说是很难的：你需要收集二十多种食物并将他们收获. 不过, 最后的奖励可是非常丰厚的哦. %n
-
-# Quest: tfr.quest311.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABNw.name=作物架
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABNw.desc=作物架能提高原版作物的生长速度. 不单单是这样, 在两个作物架种植的作物之间放置两个重叠的作物架还有概率使得两种作物杂交产生新的作物. %n%n新的作物会遗传其祖先的属性, 也可能会产生变化. %n%n甚至, 它会变成一种新的作物. %n%n注意：如果作物架上没有种植任何作物, 它很快就会被杂草覆盖, 而杂草具有传播性, 很可能摧毁你的农田！%n%n为了解决这个问题, 你现在只能制作一个除草剪. %n
 
 # Quest: tfr.quest312.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABOA.name=芦苇
@@ -2785,38 +2354,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABOw.desc=羊毛是通过剪羊毛来获�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABPQ.name=黄麻, 不是大麻
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABPQ.desc=可以做成麻布或者绳子, 是一种实用的工业材料. 
 
-# Quest: tfr.quest318.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPg.name=什么, 产橡胶的甘蔗？
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPg.desc=最容易杂交出的一种作物应该就是树脂甘蔗了. 大规模种植这种作物能让你彻底摆脱从三叶胶木采集胶乳的苦恼. %n
-
-# Quest: tfr.quest319.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPw.name=种子袋
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPw.desc=生长在作物架上的作物一旦成熟, 你便有两种选择：%n1. 右键获取产出的作物, 种子依旧保留在农田中%n2. 左键获取产出的作物和种子袋%n%n请你种植一些甘蔗并获得他们的种子, 我会给你一些奖励
-
-# Quest: tfr.quest326.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRg.name=好吧, 番茄
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRg.desc=番茄似乎是个人畜无害的蔬菜(还是水果？), 但是它富含维生素. 只能通过杂交获得. %n
-
-# Quest: tfr.quest327.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRw.name=成为植物学家的第一步
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRw.desc=你杂交出的产物越来越多了%n%n你双眼空空地看这些作物种子是什么也看不出来的, 这时你就要借助科技的力量了. %n%n这台便携式作物扫描仪在电池盒充电之后可以用来了解作物的名称和属性, 你只需要手持它右键作物架上的作物即可. %n%n同时, 扫描后的作物掉落的种子是带有作物名字的！%n%n拿着作物分析仪按C可以打开杂交测试界面%n
-
-# Quest: tfr.quest328.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSA.name=作物监管机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSA.desc=这台机器只需要一点点电力, 水, 肥料, 和除草剂就能帮你加快作物生长, 除去杂草. 
-
-# Quest: tfr.quest329.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSQ.name=寂静的春天
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSQ.desc=为了永久性的解决杂草丛生的问题, 你只能动用化学武器了. %n%n除草剂放在作物监管机里才能使用. 
-
-# Quest: tfr.quest330.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSg.name=氮, 磷, 钾
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSg.desc=有很多种方法能制作肥料, 他们能加快作物架上的作物生长. 肥料放在作物监管机里才能使用. 
-
-# Quest: tfr.quest331.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSw.name=自动收割机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSw.desc=这台机器价格虽然不便宜, 但是一旦你拥有了一大片已经杂交完成的成品作物田, 配合作物监管机, 他们就能为你的工厂提供源源不断的产出. 
-
 # Quest: tfr.quest332.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTA.name=渔业
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTA.desc=你需要制作鱼竿来钓鱼, 鱼竿需要线做成. 钓到任意大小的鱼都可以提交任务！
@@ -2825,94 +2362,22 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABTA.desc=你需要制作鱼竿来钓鱼,
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTQ.name=线
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTQ.desc=重要的资源, 可以用黄麻纤维或者羊毛纱制作
 
-# Quest: tfr.quest339.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUw.name=绿宝石灌木
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUw.desc=生产绿宝石
-
-# Quest: tfr.quest340.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVA.name=原油浆果
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVA.desc=生产原油
-
-# Quest: tfr.quest341.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVQ.name=银叶草
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVQ.desc=生产银叶子
-
-# Quest: tfr.quest342.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVg.name=锡叶藤
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVg.desc=生产锡细枝
-
-# Quest: tfr.quest344.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWA.name=铅叶子
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWA.desc=
-
-# Quest: tfr.quest345.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWQ.name=钻石草
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWQ.desc=生产钻石粉
-
-# Quest: tfr.quest346.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWg.name=金叶草
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWg.desc=生产金子
-
 # Quest: tfr.quest347.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABWw.name=矿工必备
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABWw.desc=如果你有大量的羊毛纱或者黄麻纤维, 这条绳子比梯子要便宜很多. 下矿的时候你可以通过它爬上爬下, 而不需要挖掘可能会坍塌的阶梯式矿道. 
 
-# Quest: tfr.quest350.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABXg.name=铜棉
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABXg.desc=生产生铜丝
-
-# Quest: tfr.quest352.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYA.name=和平手段
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYA.desc=不想出门打怪？或是不想养殖牛获得皮革？或是不想搭建刷怪塔？杂交帮你忙！
-
-# Quest: tfr.quest353.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYQ.name=死尸之草
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYQ.desc=生产腐肉
-
-# Quest: tfr.quest354.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYg.name=蜘蛛草
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYg.desc=生产蜘蛛产物
-
-# Quest: tfr.quest355.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYw.name=烈焰芦苇
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYw.desc=生产烈焰粉
-
-# Quest: tfr.quest356.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZA.name=杂交值得吗？
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZA.desc=杂交是一个长线任务. 一般来说, 如果你从游戏中前期就开始杂交, 你在后期的时候就能更加轻松地度过资源短缺时期. %n这依旧是你自己的选择. 我安排了很多任务奖励激励你进行杂交. 
-
-# Quest: tfr.quest357.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZQ.name=凋零者之花
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZQ.desc=生产凋零产物
-
-# Quest: tfr.quest358.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZg.name=粘液草
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZg.desc=生产粘液球
-
-# Quest: tfr.quest359.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZw.name=爆炸草
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZw.desc=生产火药
-
-# Quest: tfr.quest360.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaA.name=加强末影百合
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaA.desc=生产末影珍珠
-
-# Quest: tfr.quest361.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaQ.name=皮革花
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaQ.desc=生产皮革
-
-# Quest: tfr.quest362.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABag.name=泪之花
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABag.desc=生产恶魂之泪
-
-# Quest: tfr.quest363.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaw.name=矿物农场
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaw.desc=不想出门挖矿？不想寻找石油？杂交帮你忙！
+# Quest: tfru.q285n
+betterquesting.quest.ikKXtshCTaqFGjDJNXtoBg.name=原始织布机
+betterquesting.quest.ikKXtshCTaqFGjDJNXtoBg.desc=使用它可以将线或羊毛纱变为羊毛，黄麻变为黄麻布，皮革变为背包, 手上拿着原料右键以将原料放进去, 原料足够后潜行右键织布机即可纺织. 任务需求的是任意材质的织布机.%n%n§8有时候织布进度会超过100%, 只需要再多织一会即可.
 
 
 ## Quest Line: tfr.line0.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAA.name=§b养蜂人的日常
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAA.desc=关于蜜蜂的养殖与杂交
+
+# Quest: 测序
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.desc=
 
 # Quest: tfru.q47n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAMQ.name=基础蜂
@@ -2974,25 +2439,25 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAug.desc=使用各种框架, 电刺激�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAuw.name=忍耐
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAuw.desc=
 
-# Quest: 测序
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.desc=
-
 # Quest: tfru.q64n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABdQ.name=批量生产
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABdQ.desc=更高速的工业蜂箱
 
-# Quest: tfr.quest552.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.name=Bumble!
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.desc=开启这一章节, 你需要一个捕蜂网
+# Quest: 创造变异条件
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.desc=
 
-# Quest: tfru.q62n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.name=大型蜂箱
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.desc=建更大的蜂箱, 养更多的蜜蜂%n%n使用蜂箱组方块搭建3*3*3的立方体, 在顶层铺一层3*3的原版木半砖即可
+# Quest: 加速变异
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.desc=
 
-# Quest: tfru.q60n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.name=敬业
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.desc=
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.desc=
+
+# Quest: tfru.q69n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.name=坚毅
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.desc=
 
 # Quest: tfru.q59n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8A.name=帝皇
@@ -3014,21 +2479,17 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAC9g.desc=
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC9w.name=
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC9w.desc=
 
-# Quest: 创造变异条件
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.desc=
+# Quest: tfr.quest552.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.name=Bumble!
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.desc=开启这一章节, 你需要一个捕蜂网
 
-# Quest: 加速变异
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.desc=
+# Quest: tfru.q62n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.name=大型蜂箱
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.desc=建更大的蜂箱, 养更多的蜜蜂%n%n使用蜂箱组方块搭建3*3*3的立方体, 在顶层铺一层3*3的原版木半砖即可
 
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.desc=
-
-# Quest: tfru.q69n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.name=坚毅
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.desc=
+# Quest: tfru.q60n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.name=敬业
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.desc=
 
 # Quest: 培养
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC_A.name=
@@ -3071,9 +2532,476 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADBQ.name=闪闪发光
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADBQ.desc=获得此蜂之后便可以养殖各种宝石蜂了
 
 
+## Quest Line: tfru.l2n
+betterquesting.questline.Mh_NrUeMTxugp0XrI7Gg0w.name=§e能量产生、转换和储存
+betterquesting.questline.Mh_NrUeMTxugp0XrI7Gg0w.desc=工厂的发展离不开逐渐提升的发电功率和各种能量转换方式. 这里提供了整合包中几乎所有的能量生产、转换和储存方式以供选择.
+
+# Quest: tfru.q269n
+betterquesting.quest.-FU0ekZAT-2WaIfK2OP-mQ.name=§9EU
+betterquesting.quest.-FU0ekZAT-2WaIfK2OP-mQ.desc=电能, 最广泛的二级能源, 可以转换为多种其他能源, 也可以驱动大量机器. %n%n§9EU§r机器过载时会§c立刻爆炸
+
+# Quest: tfru.q265n
+betterquesting.quest.1AGXIF2oTRS5gLxbvNuVdQ.name=§cHU
+betterquesting.quest.1AGXIF2oTRS5gLxbvNuVdQ.desc=热能, 最基础和常见的能量, 可以驱动机器, 加热坩埚, 烧锅炉等, 没有直接储存和传导方式%n%nHU机器过载时会§6烧毁
+
+# Quest: tfru.q272n
+betterquesting.quest.28GqByiUQiaDHLzkp9tk3g.name=§eLU
+betterquesting.quest.28GqByiUQiaDHLzkp9tk3g.desc=激光能, 用处很多且很常用, 一般用于驱动机器, 计算线大部分机器均需要LU. %n%nLU机器过载会§6烧毁
+
+# Quest: tfru.q281n
+betterquesting.quest.4iGcz5GiT2ummVtWlDaM9A.name=RF蒸汽引擎
+betterquesting.quest.4iGcz5GiT2ummVtWlDaM9A.desc=使用这些引擎可以将蒸汽转化为RF, GT锅炉产生的蒸汽也可以正常使用.
+
+# Quest: LU2QU
+betterquesting.quest.4i_ExpDVRAGUQW7oupUe3g.name=
+betterquesting.quest.4i_ExpDVRAGUQW7oupUe3g.desc=
+
+# Quest: tfru.q264n
+betterquesting.quest.5D90DE8sScujIa_jLjqx3g.name=管道
+betterquesting.quest.5D90DE8sScujIa_jLjqx3g.desc=蒸汽使用不漏气的管道即可传输, 很合理吧
+
+# Quest: RF2HU
+betterquesting.quest.5YcpqhVXRoKB80hnT5LkUA.name=
+betterquesting.quest.5YcpqhVXRoKB80hnT5LkUA.desc=
+
+# Quest: tfru.q263n
+betterquesting.quest.896HigGUTLa8Op2wBJiHqA.name=科技x魔法
+betterquesting.quest.896HigGUTLa8Op2wBJiHqA.desc=魔法能源吸收器是一个神奇的机器, 它可以根据它上方的魔力方块输出对应的能量, 见下:%n%n龙蛋: §5QU §r%n头颅: §1TU§r(可加速浸洗器等机器至2倍)%n娜迦奖杯: §2KU§r%n巫妖奖杯: §5QU§r%n暮色恶魂奖杯: §eLU§r%n冰雪女王奖杯: §bCU§r%n其他暮色奖杯: §cHU§r
+
+# Quest: tfr.quest74.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.name=全反射(TIR)
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.desc=光可以在折射率不同的两种介质中发生全反射. 光纤就是此发现的运用之一, 他可以传输激光能(LU). 用法和电线类似
+
+# Quest: tfru.q174n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.name=热交换器
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.desc=使用它们将热冷却液变为HU输出,同时回收冷的冷却液.%n热交换器只需要提交一种即可
+
+# Quest: tfru.q175n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.name=大型热交换器
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.desc=更大的热交换器, 具有更高的输出密度. %n注意热吸收层是顶层.
+
+# Quest: tfru.q253n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.name=大型锅炉
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.desc=小型锅炉不太可能承受核裂变释放的巨大热量, 此时你便需要多方块锅炉. 这些锅炉很大, 具有很高的输出功率和足够的空间安装包括锅炉压力传感器, 温度传感器, 甚至自动泄压单元在内的各种自动化保护设施, 可以最大程度防止爆炸. %n%n提示: 锅炉压力传感器的大部分模式显示不了大型锅炉如此高的压力, 建议调成百分比模式配合原版比较器和龙之研究的电位器制作自动关火. 带泄压单元的主方块可以查nei看到, 泄压单元不能防止高温熔化锅炉时残余蒸汽造成的爆炸, 最好保证水供应或贴上温度传感器覆盖板.
+
+# Quest: tfru.q279n
+betterquesting.quest.CqGz7lUlSG2o3LcaOJxJQA.name=红石通量管道
+betterquesting.quest.CqGz7lUlSG2o3LcaOJxJQA.desc=使用足量的红石作为介质做成管道可以传递RF, 使用琥珀金、信素等高级材料可以进一步提升传递速率.
+
+# Quest: tfru.q274n
+betterquesting.quest.EIcmkI2vQoCDu_eaejzAig.name=§5QU
+betterquesting.quest.EIcmkI2vQoCDu_eaejzAig.desc=量子能, 是量子操作必要的能量, 用于驱动物质复制等机器. %n%nQU机器§a不会过载
+
+# Quest: Wire
+betterquesting.quest.H0SdQjDqQWeDMpBR92EXcA.name=
+betterquesting.quest.H0SdQjDqQWeDMpBR92EXcA.desc=
+
+# Quest: tfru.q278n
+betterquesting.quest.IalEVQJOSzmZbt7vO7bHXQ.name=大型发电机
+betterquesting.quest.IalEVQJOSzmZbt7vO7bHXQ.desc=巨大的发电机, 可以提供很高的EU输出, 效率也高于小发电机.
+
+# Quest: RF2CU
+betterquesting.quest.IexuSJH0QB-8a6AxSnyRWA.name=
+betterquesting.quest.IexuSJH0QB-8a6AxSnyRWA.desc=
+
+# Quest: RF2KU
+betterquesting.quest.OLC4hGh-RvqtKvKm9weHYw.name=
+betterquesting.quest.OLC4hGh-RvqtKvKm9weHYw.desc=
+
+# Quest: tfru.q273n
+betterquesting.quest.OUinxG1OQVGjXvSU41fkvA.name=§8MU
+betterquesting.quest.OUinxG1OQVGjXvSU41fkvA.desc=磁场能, 一般用于驱动机器, 粒子研究类机器常用. %n%nMU机器过载会§e损坏§r, 变成废料
+
+# Quest: tfru.q275n
+betterquesting.quest.R-zyn3KiTp68q0FP0JQJKA.name=ZPM放电器
+betterquesting.quest.R-zyn3KiTp68q0FP0JQJKA.desc=在部分古老的建筑结构里你可能会找到§e极度稀有§r的零点能模块, 该模块具有巨大的能量, 可以通过零点放电器将这些能量输出为EU或QU. 该模块不可二次充电.%n%n§8这才是古人的智慧.
+
+# Quest: tfru.q266n
+betterquesting.quest.Uk0NvPWUQS2mqzIR0WXCMQ.name=§8SU
+betterquesting.quest.Uk0NvPWUQS2mqzIR0WXCMQ.desc=蒸汽能, 是一种名义能量, 实际为1L/t的蒸汽流量, 一般用于驱动蒸汽涡轮. %n蒸汽与热流体一样属于发电介质, 进入储罐时会立刻消失. %n%nSU机器过载时会§e损坏§r, 变成废料
+
+# Quest: LiquidBattery
+betterquesting.quest.WezOU4k7SOOme6ytLxuP5Q.name=
+betterquesting.quest.WezOU4k7SOOme6ytLxuP5Q.desc=
+
+# Quest: LU2EU
+betterquesting.quest.XqGVvb9mRv2QDBEqyfaZsw.name=
+betterquesting.quest.XqGVvb9mRv2QDBEqyfaZsw.desc=
+
+# Quest: tfru.q262n
+betterquesting.quest._2aFKsoFQRik7MMZed0O8Q.name=RC锅炉
+betterquesting.quest._2aFKsoFQRik7MMZed0O8Q.desc=这也是蒸汽生产的选择之一, 可以选择RC的固体或液体燃烧室, 燃烧室只需要一层, 锅炉则有多种尺寸选择. 详见锅炉的描述(注: 描述有误, 写的是"燃烧室"尺寸, 实际应为锅炉尺寸). 燃烧室和锅炉本体组成多方块结构即可使用. 该锅炉相对安全, 不需要注意过压爆炸. 但仍注意不要在干烧后加水
+
+# Quest: tfru.q224n
+betterquesting.quest.ceSPniAwRjOGQsX46MVslg.name=飞轮储能
+betterquesting.quest.ceSPniAwRjOGQsX46MVslg.desc=使用飞轮组可以存储一定量的RU %n飞轮组在输入能量时会缓慢加速, 输出也会从0开始缓慢提高, 直到输入输出平衡或飞轮损毁.%n飞轮组会在能量储量达到1/(输出电流)时提高1A电流, 电压则会降低到输出下限. 可以使用按钮选择等覆盖板控制电流数量, 通过覆盖板限制的电流数小于实际可输出电流数时将会持续以(输出上限)电压输出. %n%n飞轮有最大转速限制, 当飞轮转速超过最大允许转速时会损毁并同时破坏外壳, 飞轮描述中的"可存储能量:"即为在损毁前可存储的最大RU数 %n此外, 飞轮组输入过高电压或电流时也会损毁, 但内部的飞轮会保持完好 %n%n飞轮材料的强度越高, 容许的最大转速越高, 单位质量越重, 可存储的能量越多, 前期不推荐用太重的材料制造飞轮.
+
+# Quest: tfru.q271n
+betterquesting.quest.cm7FKcA-Tl6BZ9SsnCBPFg.name=§bCU
+betterquesting.quest.cm7FKcA-Tl6BZ9SsnCBPFg.desc=冷能, 可以驱动机器, 用于冷馏塔产出稀有气体或者加速坩埚冷却.%n%nCU机器§a不会过载
+
+# Quest: tfru.q270n
+betterquesting.quest.dtwQqEAuTrWWnDqwvgVFLg.name=§4RF
+betterquesting.quest.dtwQqEAuTrWWnDqwvgVFLg.desc=红石通量, 一种原始而广泛的能源, 无法转换为部分高级能源, 但仍有一定作用. %n%nRF机器§a不会过载 %n%n§8左侧的两个反应堆不是你现在应该窥探的内容…
+
+# Quest: LongDistance
+betterquesting.quest.hE1faNqBTMKDS3zRRYn1fg.name=
+betterquesting.quest.hE1faNqBTMKDS3zRRYn1fg.desc=
+
+# Quest: RF2MU
+betterquesting.quest.iDRkLN1VRuGfm7KWi_C6Dg.name=
+betterquesting.quest.iDRkLN1VRuGfm7KWi_C6Dg.desc=
+
+# Quest: tfru.q280n
+betterquesting.quest.jIlwihErTqeYBsf8hmnxVQ.name=太阳能电池板
+betterquesting.quest.jIlwihErTqeYBsf8hmnxVQ.desc=它可以在白天产出少量的EU, 可以用于点火器等低耗能设备, 也可以用于野外的采石场等断电不丢失进度的设备.
+
+# Quest: tfru.q277n
+betterquesting.quest.kBYhF56jScax1oBWZKoU0Q.name=轴和齿轮箱
+betterquesting.quest.kBYhF56jScax1oBWZKoU0Q.desc=RU可以使用轴和齿轮箱运输, 轴不能转弯, 因此需要在转角放置一个可调齿轮箱, 连接面需要安装同材质的齿轮才能正常使用, 同时注意内部齿轮旋转方向, 不能打齿.%n%n使用扳手为它安装齿轮
+
+# Quest: tfru.q261n
+betterquesting.quest.kyN5k7CfSmCxCJBpl1-DYw.name=RC储罐
+betterquesting.quest.kyN5k7CfSmCxCJBpl1-DYw.desc=这个多方块储罐可以存储几乎任意流体, 也可用于存蒸汽, 但空间效率不高, 需要较大的储罐才能足够使用. 流体从侧面的阀门输入, 阀门放在底面即可自动输出, 输出流量约1000L/t.
+
+# Quest: tfru.q275n
+betterquesting.quest.mqeLOqJrQxy7jn_wySs-yQ.name=ZPM放电器
+betterquesting.quest.mqeLOqJrQxy7jn_wySs-yQ.desc=在部分古老的建筑结构里你可能会找到§e极度稀有§r的零点能模块, 该模块具有巨大的能量, 可以通过零点放电器将这些能量输出为EU或QU. 该模块不可二次充电.%n%n§8这才是古人的智慧.
+
+# Quest: tfru.q258n
+betterquesting.quest.nBpmxOG8TpegKakeI-Q9jg.name=流化床燃烧室
+betterquesting.quest.nBpmxOG8TpegKakeI-Q9jg.desc=该燃烧室相对难自动化, 但是拥有同材质普通燃烧室的4倍功率. 需要同时消耗粉状类煤炭燃料和熔融方解石. 适合手动操作和短时高功率机器.
+
+# Quest: tfru.q276n
+betterquesting.quest.qbxxuaAUQBy10Duu1cK3Kg.name=避雷针
+betterquesting.quest.qbxxuaAUQBy10Duu1cK3Kg.desc=避雷针可以将地表附近的正电荷导向天空, 在下雨天或雷暴天气会有闪电劈中, 这个避雷针可以保存闪电的能量并输出. %n%n避雷针有内部缓存, 但会缓慢衰减, 建议及时导出. %n%n由于群峦星地表较高, 为达到最大效率你可能需要刨坑.%n%n§8击中避雷针的闪电可以用于获取闪电苦力怕
+
+# Quest: tfru.q260n
+betterquesting.quest.tj2RHEyLSWOVXSk7eYHuYg.name=热流体
+betterquesting.quest.tj2RHEyLSWOVXSk7eYHuYg.desc=太阳能集热塔和核反应堆等高功率热能生产装置往往支持输出热流体, 这样可以使得热量更方便调配, 可以使用一个产热装置带动多个锅炉等. 热流体需要使用热交换器将HU输出, 并变回普通流体. 注意大部分热流体不能进入储罐(ae系统可以), 否则会立刻消失.
+
+# Quest: LUBattery
+betterquesting.quest.v3vN1Lh8TMquvwf3QzpfBg.name=
+betterquesting.quest.v3vN1Lh8TMquvwf3QzpfBg.desc=
+
+# Quest: tfru.q257n
+betterquesting.quest.x4PXrJxMQWObVinuSYlGwg.name=本章说明
+betterquesting.quest.x4PXrJxMQWObVinuSYlGwg.desc=这章任务讲述了本整合包中大部分的能量生成,转换,存储,运输方式, 由于覆盖面广泛, 你能看到的任务并不一定能在你目前所处的时代完成.%n由于大部分任务实际在其他任务线也有提到, 本章的任务大部分是引用而非本体. %n%n能量的任务图标是最大的, 图标右下角是该能量的直接运输方式, 图标右侧是该能量的直接存储方式, 图标下方是该能量转换为其他能量所用到的机器, 图标左侧是从自然/化石燃料等直接产生该能量的生成器%n这意味着某种能量的产生方式不仅有左侧的直接产生方式, 还有上方由其他能量转换而来的方式. %n对应位置没有任务即为无法直接传输/储存/生产 %n%n其他大部分任务图标都是小的, 比小图标大一点的任务图标表示这个任务提到的机器是多方块结构.
+
+# Quest: tfru.q259n
+betterquesting.quest.yK0ufRTdRf-94TvvxT2Hnw.name=太阳能集热塔
+betterquesting.quest.yK0ufRTdRf-94TvvxT2Hnw.desc=§8赞美太阳!%n%n§r这个巨大的塔可以接受反射镜射来的阳光, 并可切换输出HU/输出热流体模式. %n%n右侧可选任务是完成一个1层的塔的最少材料, 准备多倍第二个可选任务的材料可建造更高层数的集热塔.%n%n每个反射镜在清晨生产16HU/t, 随后功率逐渐升高, 在中午时会生产64HU/t, 再逐渐降低, 到傍晚降回16HU/t. 夜晚反射镜会平置并不再产生能量.%n输出区域是顶层中心3*3顶盖的顶面, 每格输出功率均为256 * 热吸收层层数 HU/t, 切换为热流体模式时会以 2048 * 热吸收层层数 HU/t加热流体并在同样位置输出. %n%n塔需要预热, 当温度升高一些后才会以前面提到的功率输出, 使用温度计可以查看温度, 温度过高会使整个塔熔毁.%n%n你可能查看到流体加热配方中有蒸汽, 的确可以直接使用它加热蒸汽, 但效率仅有锅炉的1/4, 不建议使用.
+
+
+## Quest Line: tfr.line11.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.name=§e石化革命
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.desc=与电力一同在第二次工业革命中出现, 是制造便宜储罐和电路板的重要过程, 也是更高效的燃料的来源之一
+
+# Quest: tfru.q121n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.name=煤油
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.desc=煤油仅可用于燃烧, 用它驱动你的工厂吧
+
+# Quest: tfru.q122n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.name=石油脱硫剂
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.desc=石油脱硫需要使用石油脱硫剂, 使用甲醇和氢氧化钠即可制造%n%n石油脱硫剂使用后可以使用高温搅拌机循环利用
+
+# Quest: tfru.q116n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.name=分馏2
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.desc=使用小型蒸馏塔将初底油分馏为可以直接燃烧的燃料, 它们也可以进一步处理为其他有用的工业品
+
+# Quest: tfru.q117n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.name=炼油气
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.desc=炼油气主要用于裂化, 产生大量有用的物资, 请参看NEI获取具体信息
+
+# Quest: tfru.q120n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.name=石脑油
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.desc=石脑油可用于裂化, 产生大量有用的物资, 请参看NEI获取具体信息
+
+# Quest: tfru.q118n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.name=柴油
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.desc=柴油用于裂化时产生的化工原料较少, 推荐用于燃烧
+
+# Quest: tfru.q119n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.name=汽油
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.desc=汽油
+
+# Quest: tfru.q115n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=分馏
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=使用微型蒸馏塔将石油初步分馏为三种产物, 更大型的蒸馏塔可以加快速度
+
+# Quest: tfru.q114n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.name=脱硫
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.desc=第二步需要脱硫, 需要使用至少MV等级的高温搅拌机
+
+# Quest: tfru.q113n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.name=脱盐
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.desc=石油并不能直接用作燃料, 第一步需要脱盐, 使用普通青铜搅拌机即可处理
+
+# Quest: tfru.q123n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.name=丁苯橡胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.desc=用于高压导线的绝缘橡胶, 在EV及电压以上会有应用
+
+# Quest: tfru.q124n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.name=硅橡胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.desc=用于极高压导线的绝缘橡胶, 在ZPM电压以上会有应用
+
+# Quest: tfru.q125n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.name=聚碳酸酯
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.desc=用于制作各种工业品的零件, 很快你便会用到
+
+# Quest: tfru.q126n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.name=聚四氟乙烯
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.desc=很耐腐蚀的塑料, 用于制作低温的酸碱通用反应釜和高速流体管道
+
+# Quest: tfru.q127n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.name=环氧树脂
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.desc=用于制作高耐热电路板基板
+
+# Quest: tfru.q129n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.name=聚氯乙烯
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.desc=用于制作优质物流管道
+
+# Quest: tfru.q130n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.name=有机玻璃
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.desc=用于制作光刻胶
+
+# Quest: tfru.q131n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.name=聚乙烯醇
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.desc=用于制作细胞培养液
+
+# Quest: tfru.q133n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.name=塑料时代
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.desc=获得了石油的初产品后, 便可以开始制作各种塑料制品了.%n%n它们将推动您建立现代化工厂, 组装先进的电脑, 并送您登上太空 %n%n上面的产品按所应用的阶段从早到晚依次排序, 边框为"主要"(与此任务图标边框相同)的任务是进入太空必做的任务, 右侧一竖列是非必做但很有用的物品
+
+# Quest: tfru.q132n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.name=全氟树脂
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.desc=用于制作质子交换膜
+
+# Quest: tfru.q134n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.name=PMMA系光刻胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.desc=用于制作EV后的计算机和微型计算单元
+
+# Quest: tfru.q136n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.name=聚乙烯
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.desc=最普通的塑料, 用于制作管道, 储物柜, 低级电路板等
+
+# Quest: tfru.q137n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.name=调和油
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.desc=制作调和油可以获得能量密度更高的燃料, 它们通常比直接烧组分更高效.
+
+# Quest: tfru.q225n
+betterquesting.quest.LmgC58v6TkOE3CJpxuUxiA.name=油井
+betterquesting.quest.LmgC58v6TkOE3CJpxuUxiA.desc=靠油泉自然溢出的油可能不足以支撑你的整个基地, 你可以使用油井, 输入KU向泉中压入水可以产出混水油, 进一步离心即可. (向天然气泉中压入空气可以产出天然气)
+
+# Quest: tfru.q243n
+betterquesting.quest.ZJRQnOliSiqYyd3sFTw6MQ.name=木煤气
+betterquesting.quest.ZJRQnOliSiqYyd3sFTw6MQ.desc=木头在焦炉中产生
+
+# Quest: tfru.q242n
+betterquesting.quest.oETLC4OqSnuXemk2EZAL3w.name=煤焦
+betterquesting.quest.oETLC4OqSnuXemk2EZAL3w.desc=煤炭在焦炉中产生, 含有重要的杂环原料: 萘和苯
+
+# Quest: tfru.q255n
+betterquesting.quest.ssK5dLFwRciLsxiJFG8R3g.name=质子交换膜
+betterquesting.quest.ssK5dLFwRciLsxiJFG8R3g.desc=使用它可以高度控制质子流动, 是制作环氧树脂和燃料电池的必要材料.
+
+# Quest: tfru.q128n
+betterquesting.quest.z1xdFZ1ESWKXOYN09R9dEw.name=酚醛树脂
+betterquesting.quest.z1xdFZ1ESWKXOYN09R9dEw.desc=用于制作光刻胶和电路板
+
+
+## Quest Line: tfr.line4.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.name=§e计算学
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.desc=§9更快的计算机可以让一切加速, 而随着计算速度的增长, 更多意想不到的用途会显现出来…
+
+# Quest: tfru.q167n
+betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.name=单晶硅
+betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.desc=经过漫长的等待, 拥有规整原子排列的单晶硅非常适合制作高性能半导体电路.接下来将它切割为晶圆.
+
+# Quest: tfru.q145n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.name=涂胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.desc=初级的晶圆只需要涂上光刻胶, 以后的晶圆会有更复杂的工艺.
+
+# Quest: tfr.quest236.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.name=光刻机
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.desc=一台精妙的机器, 完美地利用光线在晶体上蚀刻出复杂的图形. 
+
+# Quest: tfr.quest237.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.name=光学掩模版
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.desc=合理的过滤光线, 使图形在光刻胶上腐蚀成型. %n使用自动电路设计器研究各种事物来制作掩模版, 这个过程往往需要较长时间, 推荐每次准备升级计算机时考虑最先制作掩模版
+
+# Quest: tfru.q161n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.name=飞向太空
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.desc=新计算机完全可以胜任火箭控制的任务, 终于要走出群峦星了, 现在只需要一个火箭, 便可以踏上其他星球!
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.desc=
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.desc=
+
+# Quest: tfru.q160n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.name=电路板计算机
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.desc=小型节能的电路板也可以组合形成一台计算机…一个更绿色的选择
+
+# Quest: tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.name=第六步: 切割
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.desc=将检测后的晶圆切割, 不同质量的晶片将分别组装为不同的产品.
+
+# Quest: tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.name=第六步: 切割
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.desc=将检测后的晶圆切割, 不同质量的晶片将分别组装为不同的产品.
+
+# Quest: tfru.q153n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=组装内存
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.desc=将刚刚经过复杂工艺做成的内存晶片组装为内存条, 它将成为计算机的存储仓库.
+
+# Quest: tfru.q2
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.desc=
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.desc=
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.desc=
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.desc=
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.desc=
+
+# Quest: tfru.q144n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.name=晶圆
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.desc=CPU并不是简单的硅片蚀刻而成, 你需要将它们进行一定的处理才能刻上所需的纹路. 接下来涂上光刻胶.
+
+# Quest: tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.name=第一步: 光刻
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.desc=使用光刻机将掩模版上的纹路投射到光刻胶上, 光刻胶接收到光将会分解, 进而形成凹陷.
+
+# Quest: tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.name=第二步: 显影
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.desc=使用显影液将光刻胶的纹路蚀刻到晶圆上.
+
+# Quest: tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.name=第三步: 除胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.desc=移除晶圆上的光刻胶, 这一步也称作硬烘
+
+# Quest: tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.name=第四步: 掺杂
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.desc=向电路沟槽中掺杂其他离子, 以增强导电性, 进而构筑晶体管之间的通路
+
+# Quest: tfru.q152n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.name=组装CPU
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.desc=将刚刚经过复杂工艺做成的CPU晶片组装为CPU, 它与你曾制作的任何电路板都不同. 光刻技术使得计算机体积大幅缩小, 更快的计算速度也可以做更多的事…
+
+# Quest: tfru.q157n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.name=不只是无尽仓库
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.desc=在第一台计算机面前忙碌半周, 你初步掌握了赛特斯石英的用法…你发现利用它似乎可以存储大量物品, 但冥冥中似乎还有更多隐藏在其中等待你发掘…
+
+# Quest: tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.name=第一步: 光刻
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.desc=使用光刻机将掩模版上的纹路投射到光刻胶上, 光刻胶接收到光将会分解, 进而形成凹陷.
+
+# Quest: tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.name=第二步: 显影
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.desc=使用显影液将光刻胶的纹路蚀刻到晶圆上.
+
+# Quest: tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.name=第一步: 光刻
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.desc=使用光刻机将掩模版上的纹路投射到光刻胶上, 光刻胶接收到光将会分解, 进而形成凹陷.
+
+# Quest: tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.name=第二步: 显影
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.desc=使用显影液将光刻胶的纹路蚀刻到晶圆上.
+
+# Quest: tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.name=第三步: 除胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.desc=移除晶圆上的光刻胶, 这一步也称作硬烘
+
+# Quest: tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.name=第四步: 掺杂
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.desc=向电路沟槽中掺杂其他离子, 以增强导电性, 进而构筑晶体管之间的通路
+
+# Quest: tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.name=第三步: 除胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.desc=移除晶圆上的光刻胶, 这一步也称作硬烘
+
+# Quest: tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.name=第四步: 掺杂
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.desc=向电路沟槽中掺杂其他离子, 以增强导电性, 进而构筑晶体管之间的通路
+
+# Quest: tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.name=第五步: 检测
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.desc=由于杂质, 振动, 射线等的影响, 一块晶圆上会出现不同质量的晶片. 将晶圆上质量不同的元件标记出来, 以供进一步处理
+
+# Quest: tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.name=第五步: 检测
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.desc=由于杂质, 振动, 射线等的影响, 一块晶圆上会出现不同质量的晶片. 将晶圆上质量不同的元件标记出来, 以供进一步处理
+
+# Quest: tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.name=第六步: 切割
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.desc=将检测后的晶圆切割, 不同质量的晶片将分别组装为不同的产品.
+
+# Quest: tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.name=第五步: 检测
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.desc=由于杂质, 振动, 射线等的影响, 一块晶圆上会出现不同质量的晶片. 将晶圆上质量不同的元件标记出来, 以供进一步处理
+
+# Quest: tfru.q154n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.name=组装电路板
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.desc=将刚刚经过复杂工艺做成的电路元件组装为电路板, 应用光刻技术的它的算力百倍于原工艺, 并且, 它比计算机更节能, 更微小, 这或许可以为便携设备带来巨大的革新…
+
+# Quest: tfru.q156n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.name=代码改变生活
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.desc=拥有了足够算力的计算机, 你尝试将计算机底层的运行原理翻译为易于理解的高级语言, 同时制定了一套软硬件规范…在几天的努力后, 一套完善而强大的理论出现在屏幕上…接下来你将它们付诸实践, 准备用它控制你曾认为不可能自动控制的机器…
+
+# Quest: tfru.q158n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.name=循序渐进
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.desc=在拥有第一个计算机后, 你很快制作了很多实用而有趣的物品, 并改进了现有的机器…你越发想知道算力的不断提升究竟能带来什么…%n%n下一代计算机需要很多HV机器, 不过光刻机不需要更换, 路线也与第一代计算机基本相同.
+
+# Quest: New Questasdasd
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.desc=
+
+# Quest: tfru.q170n
+betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.name=晶圆涂胶器
+betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.desc=这台机器可通过电路控制精确地调整转速, 将光刻胶均匀而平整地涂在晶圆上.
+
+# Quest: tfru.q171n
+betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.name=晶圆检测器
+betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.desc=由于晶圆杂质, 光刻不均匀等原因, 光刻后的晶圆往往品质不一. 这台机器可以检测出晶圆的品质并标记, 以供稍后切割并分类.
+
+# Quest: tfru.q169n
+betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.name=激光切割机
+betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.desc=你可能之前已经做过这台机器了, 用它将单晶硅切割为晶圆.
+
+# Quest: tfru.q166n
+betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.name=自动电路设计器
+betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.desc=这台机器使用大量算力, 可以自动设计新一代的电路. 使用它制作下一代机器的掩模版%n%n右侧机器只需要制作其一即可
+
+
 ## Quest Line: tfr.line6.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABg.name=§e航天时代
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABg.desc=载人航天, 小行星采矿, 气体行星开发——基于高级火箭
+
+# Quest: tfr.quest336.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.name=液体燃料火箭！！！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.desc=十足的推力才能将你送上天空
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.desc=
+
+# Quest: tfru.q143n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.name=走向星辰大海
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.desc=人类总是向往着那些遥不可及的星星, 从流传千古的神话, 到锲而不舍的观测, 都展现出人类对星辰的喜爱. 现在, 你终于要迈出走向星空的第一步, 去亲手触摸那些曾经遥不可及的行星.
 
 # Quest: tfr.quest189.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAvQ.name=建造火箭
@@ -3111,18 +3039,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAxA.desc=%n组装好一个采矿火箭%n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAxQ.name=处理数据
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAxQ.desc=多方块%n用于强化小行星芯片的数据%n来使利益更大化
 
-# Quest: tfr.quest336.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.name=液体燃料火箭！！！
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.desc=十足的推力才能将你送上天空
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.desc=
-
-# Quest: tfru.q143n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.name=走向星辰大海
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.desc=人类总是向往着那些遥不可及的星星, 从流传千古的神话, 到锲而不舍的观测, 都展现出人类对星辰的喜爱. 现在, 你终于要迈出走向星空的第一步, 去亲手触摸那些曾经遥不可及的行星.
-
 # Quest: tfr.quest334.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTg.name=一切就绪
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTg.desc=
@@ -3134,10 +3050,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABTw.desc=
 # Quest: tfr.quest336.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABUA.name=液体燃料火箭！！！
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABUA.desc=十足的推力才能将你送上天空
-
-# Quest: tfr.quest337.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.name=抵达Duck Egg B
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.desc=你第一个应该前往的行星是Duck Egg B%n在那里你能获得许多群峦星上罕见的矿物, 比如赛特斯石英和钨. 
 
 # Quest: New Quest
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABbA.name=
@@ -3204,6 +3116,127 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADew.name=不上天挑战
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADew.desc=有时候你在想, 我对那些星星不感兴趣, 也不想制作这些火箭, 地球的拥挤也让我难受, 我只想安心地留在群峦星… %n%n没问题!即使不上天, 你依然有机会体验到本整合包大部分的内容.但这是一段艰辛的旅程…你将需要挖掘成千上万的沥青铀矿, 冷馏数十万L的空气, 在没有ae自动化的协助下度过整个核子时代……祝你好运! %n%n注: 提交的储罐要装满氦, 提交本任务视为开始不上天挑战, 整条航天时代任务线不会解锁, 同时会解锁下一代计算机的任务线
 
 
+## Quest Line: tfr.line15.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.name=§e[AE]质量-信息转换技术
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.desc=一种神奇的蓝色水晶-赛特斯-将允许你通过建造一种名为ME的网络, 开启一个潜能无限的自动化工厂
+
+# Quest: tfru.q211n
+betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.name=库存维持
+betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.desc=这个机器会自动发布合成任务, 维持网络中某种物品的储量.
+
+# Quest: tfru.q210n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.name=走向智能
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.desc=ae并不只是个大仓库, 前方将真正走入ae最重要的功能之一: 自动化, 但是你需要一些栖息于外星的奇异金属：智金, 使用它制作出智能核心, 才可以正确规划物品和流体的规律流动 %n%n提示: ae的自动化内容较为复杂, 建议提前找资料或视频学习一下, 任务书并不能面面俱到.
+
+# Quest: tfr.quest343.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.name=蚀刻模板
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.desc=陨石不再生成：你只能通过蚀刻铁块制作他们. 
+
+# Quest: tfr.quest521.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.name=光刻模板
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.desc=你需要光刻机与压力成型机来将原材料制作成相对应的板子, 然后将其压制成型. 
+
+# Quest: tfr.quest522.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.name=核心终端
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.desc=相当于主脑%n%n%n每个ME控制器有着32个频道, 意味着它可以供给总共32个端口/机器%n注意：普通线缆限制最高输出八个频道, 也就是你需要接四个面的线缆才能利用完全%n%n将数个ME控制器连在一起, 他们将会变为一个整体, §a线程总数共享%n但连接有着形态上的限制, 例如只能搭§a线性, 长方形§r或者§a长方体§r%n同时每个方向上最多连7个, 也就是最大为7*7*7的立方体%n%n注：其自带“能源接收器”的能量转换功能%n致密线缆可以拥有32个频道%n§9它也可以给相邻方块提供频道, 不需要线缆那种
+
+# Quest: tfr.quest524.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.name=摩多摩多
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.desc=还不够！%n我需要更多的存储空间！
+
+# Quest: tfr.quest525.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.name=赛特斯！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.desc=AE的基础矿物, 上天前可通过地狱的下界石英矿§m白色块块矿§r获得少量赛特斯石英, 上天后可以找到大型赛特斯石英矿脉
+
+# Quest: tfr.quest526.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.name=充能赛特斯！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.desc=它的用途只有一个：制作Flux水晶
+
+# Quest: tfr.quest527.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.name=Flux水晶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.desc=将一个充能赛特斯水晶和一个红石一个下届石英一起扔进水里, 你将得到两个Flux水晶%n%n也可以用搅拌机制作. %n%n多制备点总是无害的. 
+
+# Quest: tfr.quest528.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.name=线缆
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.desc=起连接作用%n同时具备能源、物品、流体的传输功能
+
+# Quest: tfr.quest529.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.name=物质与信息的沟通
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.desc=沟通物质与信息的一块面板%n它能化虚为实, 化实为虚%n%n就是有点费电
+
+# Quest: tfr.quest530.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.name=ae起步
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.desc=ae自动化的控制终端
+
+# Quest: tfr.quest531.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.name=更加方便！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.desc=能拿取物品的同时进行合成
+
+# Quest: tfr.quest532.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.name=ae自动化
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.desc=简单来讲, %n%n§a分子装配室§r, cpu的主板, 是需要ae网络进行启动的自动工作台, 在收到ae的指令后, 通过me端口输入物品并进行自动合成, 再通过me端口将合成物品抽入ae网络, 形成自动化合成%n%n§ame端口§r, ae网络与机器进行物品输入输出的端口, 通过装入样板来“记忆”合成公式%n%n§a物品输入/输出总线§r, 就是个固定输入物品或者输出物品的端口, 当连上机器或者箱子后, 只要ae网络/箱子/机器内有物品, 将会自动进行输出输入%n%n§a并行处理单元+合成单元§r, 相当于cpu, 合成单元为cpu的内存, 并行处理单元为线程数, 需要注意的是, 他们需要贴着放, 但太多放一起后只会算作一个%n%n§a§9总的来说, 在样板终端制作合成样板-放入me端口-终端内选择制作多少个-处理单元收到指令-合成单元提供内存-me端口传输物品-分子装配室制作%n%n%n%n%n
+
+# Quest: tfr.quest533.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.name=安全！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.desc=可以控制不同玩家能否访问你的ae网络, 绑定无线终端也需要使用它.
+
+# Quest: tfr.quest544.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.name=升级升级升级！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.desc=拓展运用
+
+# Quest: tfr.quest545.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.name=空间传输技术！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.desc=远距离拿取物品
+
+# Quest: tfr.quest546.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.name=p2p技术
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.desc=使用内存卡shift右键创建配置, 右键粘贴配置, 配置相同的p2p通道将会连接, 可以传输32个me频道%n%n具有许多其他类型(具体请NEI搜索p2p), 可以使用有关的物品右键以调谐p2p通道.
+
+# Quest: tfr.quest547.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.name=真 空间传输技术
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.desc=%n将八个量子环摆成环状, 中间放一个量子链接仓即可成型%n两个该结构即可进行将量子环两侧的网络直接连在一起(也就是量子环等于一节可以跨维度的超长的导线).%n
+
+# Quest: tfr.quest548.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.name=大型空间传送技术
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.desc=%n将一定空间内的所有方块一起传送走, 用处不大且较为麻烦%n%n具体方法mcmod内有详细教程
+
+# Quest: tfr.quest549.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.name=王 之 财 宝
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.desc=如果真把这些装满的话%n%n会卡的吧%n%n会的吧%n%n会吧%n%n吧
+
+# Quest: tfr.quest550.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.name=液体储存元件
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.desc=使ae网络能储存流体, 气体和液体都可以存于其中.
+
+# Quest: tfru.q138n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.name=流体终端
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.desc=可以通过该终端向ME网络中输入流体, 理论上来说任意储罐均可交互
+
+# Quest: tfru.q212n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.name=me接口
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.desc=ae绝对的核心配件之一, 可以允许ae网络与其他机器交互. %n第一行带下箭头的格子可以设置物品在该接口中的储存量, 第二行的空格子是me接口的物品栏, 其他me接口中的内容物会立刻返回ae网络, 下面几行是放置样板的格子, 默认只有一行, 可以插入样板容量卡解锁其他行.
+
+# Quest: tfru.q213n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.name=二合一me接口
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.desc=二合一me接口可以与机器进行物品和流体交互, 点击切换按钮可以设置流体储存量, 其他逻辑相同
+
+# Quest: tfru.q139n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.name=海量存储
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.desc=存储一整片海!
+
+# Quest: tfru.q214n
+betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.name=无限水元件
+betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.desc=彻底解决你的水资源焦虑, 该元件可以无限取出水. %n%n你问无限中子物质元件? 门都没有!
+
+# Quest: tfru.q209n
+betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.name=无限访问
+betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.desc=安装量子卡之后可以允许无线终端与量子环连接, 可以在任何维度任何位置访问你的ae网络.
+
+# Quest: tfru.q208n
+betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.name=万能终端
+betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.desc=这台无限终端可以完美管理你的整个ae网络, 彻底抛弃那些桎梏你脚步的有线终端吧.
+
+
 ## Quest Line: tfr.line23.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAFw.name=§e[OC]信息时代
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAFw.desc=用代码改变世界, 使用lua语言制作的脚本将在本mod的计算机上解决看似不可能的问题.
@@ -3218,7 +3251,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACqQ.desc=好吧, 你还需要许多电�
 
 # Quest: tfr.quest682.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACqg.name=硬盘
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACqg.desc=一个硬盘, 用来安装系统和存储数据, 不过小姐姐们是住不下的.
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACqg.desc=一个硬盘, 用来安装系统和存储数据, 容量很小, 但存储大部分程序还是够用的
 
 # Quest: tfr.quest683.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACqw.name=RAM
@@ -3238,7 +3271,7 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACrg.desc=你需要一个BIOS来引导进
 
 # Quest: tfr.quest687.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACrw.name=适配器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACrw.desc=一个适配器可以让你控制非opencomputer模组的方块%n安装MTU升级可以隔空访问附近的方块, 控制ic2反应堆很有用
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACrw.desc=一个适配器可以让你控制非opencomputer模组的方块%n安装MTU升级可以隔空访问附近的方块
 
 # Quest: tfr.quest688.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACsA.name=显示屏
@@ -3317,144 +3350,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACww.name=Wi-Fi
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACww.desc=使用无线网卡可以摆脱网线的束缚让你的电脑互联%n越高级的网卡范围越大%n苦钻怕这里会帮你升级两张w
 
 
-## Quest Line: tfr.line9.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACQ.name=§e多方块产能
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACQ.desc=增加耗能的同时增加产能
-
-# Quest: tfr.quest67.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQw.name=大蒸汽锅炉2
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQw.desc=%n蒸汽涡轮个人不推荐使用, 除非你已经能够达到能制造核裂变的能力. %n%n
-
-# Quest: tfr.quest110.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAbg.name=燃气3
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAbg.desc=更高级的燃气涡轮机%n%n§c如果不想放弃家底下的天然气泉, 钛又多可以考虑此机器.
-
-# Quest: tfr.quest143.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=大蒸汽锅炉1
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=%n作为目前技术下将热能转化为其他能源最高效率的方法, 你总归要回归蒸汽系统的怀抱. 好消息是大型锅炉有足够的空间外挂自动泄压模块, 可以避免蒸汽过量导致的家毁人亡. 在制作核裂变之后, 选择使用大蒸汽锅炉和蒸汽涡轮能让你快速利用这些能量. %n%n使用流化床燃烧室配合大蒸汽锅炉也可能让你跳过核裂变进入EV, 但如何获取大量的煤炭类燃料值得你考虑.
-
-# Quest: tfr.quest144.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.name=燃气发电 前期实惠
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.desc=%n燃气轮机在前期非常实惠.%n%n§c在考虑建造燃气轮机之前请勘测家底下是否有天然气泉, 没有就请放弃吧.
-
-# Quest: tfr.quest146.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkg.name=大蒸汽锅炉3
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkg.desc=%n%n3台大钨钢锅炉能让一个涡轮满载达到惊人的接近3W发电. %n%n极其推荐配合核裂变使用. 
-
-# Quest: tfr.quest147.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.name=高级燃气发电 
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.desc=%n更高级的燃气涡轮机%n%n§c如果不想放弃家底下的天然气泉, 钛又多可以考虑此机器.
-
-# Quest: tfr.quest169.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqQ.name=蒸汽涡轮2
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqQ.desc=将蒸汽转换为RU, 不同于小型涡轮, 大型涡轮拥有更高的效率, 同时也会输出热蒸馏水, 可以进一步回收热能.
-
-# Quest: tfr.quest171.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqw.name=蒸汽涡轮
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqw.desc=%n将蒸汽转换为RU, 不同于小型涡轮, 大型涡轮拥有更高的效率, 同时也会输出热蒸馏水, 可以进一步回收热能.
-
-# Quest: tfr.quest172.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArA.name=蒸汽涡轮3
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArA.desc=将蒸汽转换为RU, 不同于小型涡轮, 大型涡轮拥有更高的效率, 同时也会输出热蒸馏水, 可以进一步回收热能.
-
-# Quest: tfr.quest174.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArg.name=初级大蒸汽锅炉
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArg.desc=%n作为目前技术下将热能转化为其他能源最高效率的方法, 你总归要回归蒸汽系统的怀抱. 在制作核裂变之后, 选择使用大蒸汽锅炉和蒸汽涡轮能让你快速利用这些能量. %n%n使用流化床燃烧室配合大蒸汽锅炉也可能让你跳过核裂变进入EV, 但如何获取大量的煤炭类燃料值得你考虑.
-
-# Quest: tfr.quest176.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsA.name=大蒸汽锅炉4
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsA.desc=蒸汽涡轮个人不推荐使用, 除非你已经能够达到能制造核裂变的能力. 
-
-# Quest: tfr.quest177.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsQ.name=燃气4
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsQ.desc=更高级的燃气涡轮机%n%n§c如果不想放弃家底下的天然气泉, 钛又多可以考虑此机器.
-
-# Quest: tfr.quest181.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAtQ.name=
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAtQ.desc=
-
-# Quest: tfr.quest188.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAvA.name=关于产能
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAvA.desc=以下的机器并非科技线中必须制作的, 但是合理的选择他们中的一些并进行组合, 辅之以相应的需求, 他们是格雷科技中最值得做的东西. 发电量直接决定你的发展程度. 
-
-
-## Quest Line: tfr.line25.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGQ.name=§e平行处理
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGQ.desc=除了很浪漫之外, 多方块机器还能在消耗同等能量的情况下加工更多的配方
-
-# Quest: tfr.quest142.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.name=更大的破碎
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.desc=
-
-# Quest: tfr.quest145.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkQ.name=更快的研磨
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkQ.desc=
-
-# Quest: tfr.quest282.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABGg.name=超级焙烧炉
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABGg.desc=这玩意可以超速加工硫化矿物
-
-# Quest: tfr.quest650.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACig.name=大型离心机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACig.desc=
-
-# Quest: tfr.quest651.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACiw.name=大型洗矿厂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACiw.desc=
-
-# Quest: tfr.quest652.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjA.name=大型挤压机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjA.desc=
-
-# Quest: tfr.quest653.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjQ.name=大型电解器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjQ.desc=
-
-# Quest: tfr.quest654.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjg.name=大型凝结器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjg.desc=
-
-# Quest: tfr.quest655.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjw.name=大型高温搅拌机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjw.desc=
-
-# Quest: tfr.quest656.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkA.name=大型浸洗器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkA.desc=
-
-# Quest: tfr.quest657.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkQ.name=大型高压釜
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkQ.desc=
-
-# Quest: tfr.quest658.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkg.name=大型搅拌机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkg.desc=
-
-# Quest: tfr.quest659.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkw.name=大型发酵机
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkw.desc=
-
-# Quest: tfr.quest663.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAClw.name=大型结晶器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAClw.desc=
-
-# Quest: tfr.quest664.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmA.name=工业焦炉
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmA.desc=
-
-# Quest: tfr.quest665.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmQ.name=大型压模器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmQ.desc=使用电力的压模器
-
-# Quest: tfr.quest666.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmg.name=大型电炉
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmg.desc=
-
-# Quest: tfr.quest676.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpA.name=水产养殖厂
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpA.desc=这台多方块机器消耗鱼苗和养殖液大量繁殖鱼类, 可以帮助你获取鱼油, 剧毒药水, 汞等材料. 
-
-
 ## Quest Line: tfr.line8.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACA.name=§6[MO]人类的能力是有极限的
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACA.desc=钛金和双锂允许你获得强大的武器和巨量的红石通量能源
@@ -3478,10 +3373,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfA.desc=可以实现物质复制%n%n更
 # Quest: tfr.quest125.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfQ.name=更高级的等线电路
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfQ.desc=你需要双锂透镜来蚀刻他们. 
-
-# Quest: tfr.quest126.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.name=湮灭反应堆
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.desc=可以制作聚变反应堆产生大量RF. 黑洞质量越大产速越高, 可以丢给物品增加质量. %n%n放下之后可以看见环装全息投影. 具体摆放方法查看便携数据仪. %n%n§4此外, 你需要至少两个重力稳定器在重力异常点的两侧(可以贴在反应堆环的内侧)来控制它, 否则会有灾难性的后果. 
 
 # Quest: tfr.quest534.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACFg.name=便携数据仪
@@ -3531,50 +3422,6 @@ betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEA.desc=德拉克纳星深处有一
 # Quest: tfru.q8n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABbw.name=龙尘
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABbw.desc=龙之力的结晶, 深埋在德拉克纳星的底下.%n%n龙研几乎每处都要用它, 请尽量多带些回来.
-
-# Quest: tfru.q27n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.name=错位宝石
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.desc=龙力中包含了末影之力, 可将生物传送很远, 可惜这龙力还不够强, 很容易消散.
-
-# Quest: tfru.q45n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.name=龙之指南书
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.desc=这是一个包含了许多信息的石板, 一些任务书没讲清楚的地方可以试着到这里来看看.
-
-# Quest: tfru.q1n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.name=基础龙力核心
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.desc=最基本的龙力核心, 稀薄的龙力围绕在周围, 这将是你踏上龙之进化之路的第一步.
-
-# Quest: tfru.q2n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.name=飞龙核心
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.desc=强力龙芯片, 紫色的龙力萦绕在它周围, 几乎覆盖了芯片本身.
-
-# Quest: tfru.q3n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.name=觉醒
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.desc=注入了神龙之力的究极龙芯片, 橙色的光芒闪耀, 使人无法直视.
-
-# Quest: tfru.q30n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.name=错位宝石容器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.desc=借助末影与龙力构造的大门可以把你传送到千里之外.%n%n该传送门造法与地狱门类似, 只需要把其中一块黑曜石替换为错位宝石容器便可建成.
-
-# Quest: tfru.q28n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.name=高级错位宝石
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.desc=现在足够强大的龙力可以维持自身, 还可以记录更多坐标点%n每次传送需要消耗末影珍珠
-
-# Quest: tfru.q25n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.name=物品错位器
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.desc=龙之力可以吸走周围的物品, 祝你一臂之力.
-
-# Quest: tfru.q29n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.name=错位宝石底座
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.desc=可以不消耗错位宝石的情况下前往某地, 但错位宝石将留在原地.
-
-# Quest: tfru.q5n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.name=龙力黑曜石
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.desc=借三界之力强化的黑曜石几乎能抵御一切.%n%n主要用于合成材料和建造凋灵笼.
-
-# Quest: tfru.q41n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.name=聚合合成
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.desc=能量与龙力相融合, 可以制造特殊的物品%n使用10个聚合合成器, 5个一组放在聚合核心两旁一定距离的位置, 面对聚合核心, 给注入器充电, 在聚合核心中按开始键或通入红石信号即可启动反应%n%n跟1.12.2的用法几乎相同, 不会用的话请查阅mc百科
 
 # Quest: tfru.q42n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC0A.name=飞龙聚合合成
@@ -3684,14 +3531,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7Q.desc=借神龙之力与巨量能量�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7g.name=混沌聚合合成
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7g.desc=只有疯子和最强大的训龙师敢使用混沌能量合成那些最强大和最危险的物品.
 
-# Quest: tfru.q11n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.name=神龙反应堆
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.desc=由巨量能量和混沌之力构建的它能完美的压制龙的暴虐.%n%n神龙之力在其中碰撞, 咆哮, 嘶喊, 湮灭, 释放出无穷的能量.%n投入许多能量产出许多能量的反应堆, 发电量可达1MRF/t以上.%n较难控制, 推荐观看教程或单人测试后再实战应用%n燃料是神龙粒/锭/块, 生成物是混沌碎片%n%n支持使用opencomputer控制, 传感器需要贴在反应堆稳定器上
-
-# Quest: tfru.q12n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8Q.name=神龙信标
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8Q.desc=混沌能量与神龙之力的剧烈碰撞会引来活龙体内血脉的共鸣%n%n这个装置可以召唤一只混沌守卫和混沌岛的部分结构%n请确定做好了准备再召唤.
-
 # Quest: tfru.q13n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8g.name=神龙能量核心
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8g.desc=通过神龙之力, 它能控制巨量RF使其不会四溢.
@@ -3700,12 +3539,100 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8g.desc=通过神龙之力, 它能控�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8w.name=神龙RF容器
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8w.desc=由神龙之力维持的巨型电容, 可存储大量RF%n%n可通过升级调整器进一步提升RF容量
 
+# Quest: tfru.q27n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.name=错位宝石
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.desc=龙力中包含了末影之力, 可将生物传送很远, 可惜这龙力还不够强, 很容易消散.
+
+# Quest: tfru.q45n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.name=龙之指南书
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.desc=这是一个包含了许多信息的石板, 一些任务书没讲清楚的地方可以试着到这里来看看.
+
+# Quest: tfru.q1n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.name=基础龙力核心
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.desc=最基本的龙力核心, 稀薄的龙力围绕在周围, 这将是你踏上龙之进化之路的第一步.
+
+# Quest: tfru.q2n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.name=飞龙核心
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.desc=强力龙芯片, 紫色的龙力萦绕在它周围, 几乎覆盖了芯片本身.
+
+# Quest: tfru.q3n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.name=觉醒
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.desc=注入了神龙之力的究极龙芯片, 橙色的光芒闪耀, 使人无法直视.
+
+# Quest: tfru.q30n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.name=错位宝石容器
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.desc=借助末影与龙力构造的大门可以把你传送到千里之外.%n%n该传送门造法与地狱门类似, 只需要把其中一块黑曜石替换为错位宝石容器便可建成.
+
+# Quest: tfru.q28n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.name=高级错位宝石
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.desc=现在足够强大的龙力可以维持自身, 还可以记录更多坐标点%n每次传送需要消耗末影珍珠
+
+# Quest: tfru.q25n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.name=物品错位器
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.desc=龙之力可以吸走周围的物品, 祝你一臂之力.
+
+# Quest: tfru.q29n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.name=错位宝石底座
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.desc=可以不消耗错位宝石的情况下前往某地, 但错位宝石将留在原地.
+
+# Quest: tfru.q5n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.name=龙力黑曜石
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.desc=借三界之力强化的黑曜石几乎能抵御一切.%n%n主要用于合成材料和建造凋灵笼.
+
+# Quest: tfru.q41n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.name=聚合合成
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.desc=能量与龙力相融合, 可以制造特殊的物品%n使用10个聚合合成器, 5个一组放在聚合核心两旁一定距离的位置, 面对聚合核心, 给注入器充电, 在聚合核心中按开始键或通入红石信号即可启动反应%n%n跟1.12.2的用法几乎相同, 不会用的话请查阅mc百科
+
 
 ### Quests in multiple quest lines ###
+
+# Quest: tfru.q251n
+betterquesting.quest.0paHItLkRe2R_btwK5rn6Q.name=大蒸汽涡轮
+betterquesting.quest.0paHItLkRe2R_btwK5rn6Q.desc=拥有探伤仪后你可以构建安全稳定的涡轮机, 经过探伤的涡轮不会再突然损坏, 但放入涡轮机后开始运转即会受损, 只能回收重新制作. %n尽管标记了受损, 它仍会运转相当长的时间, 当涡轮即将损坏时会发出异常的声响和振动, 附着于主方块上的振动检测器可以检测这种振动并输出红石信号. %n%n涡轮运转中并不会明显损坏, 因此回收是没有损耗的%n%n普通模式下涡轮机会输出(基础输出)*涡轮功率系数 RU/A * 1A/t的功率, 但功率不会超过面板功率的两倍. %n%n可以使用螺丝刀开启超频模式, 此模式下涡轮耐久将会以8倍速损耗, 但会输出(功率系数整数部分)A的RU, 小数部分作为电压提升分散到电流中. %n%n涡轮耐久是使用n RU*h表示的, 代表涡轮在m RU功率下可以工作n/m小时. %n%n你可以灵活使用NEI的正则表达式搜索模式快速找到你需要的高功率或/且高耐久的涡轮.
+
+# Quest: tfr.quest216.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.name=§b§lOHHHHHHHH
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.desc=这是模组名为Minecraft的工作台, 可以放置. %n%n经历千辛万苦, 你终于制作了这个原版生存里一分钟就能做出的物品. 恭喜！%n%n§l你问我石头怎么得到？用稿子挖掉一个岩石相邻的六个方块, 他就自己掉下来了. 
+
+# Quest: tfr.quest221.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.name=§b§lRF
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.desc=可以发16RF/t的能量, 用来供辊压机和碎石机还是凑合的. %n%n记得用红石信号开机！！！
 
 # Quest: tfr.quest5.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.name=§b§l失传的技艺
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.desc=使用石砧, 你可以开始锻造金属了. %n%n金属砧被挖掘后自动装在人物背上.%n%n但是低等级的砧能加工的金属很少, 所以请用石砧焊接铜锭, 并制作铜砧. %n%n有许多不同的砧, 分成不同的等级. 每一等级都能比以前的等级进行更复杂的金属加工. 砧能将高一等级的锭焊接在一起, 形成双锭. 所有其他的锻造必须在相等或更高级的砧上完成. %n%n例如:石砧只能焊接铜锭. 铜砧能焊铜锭和铜合金锭. %n%n能在坩埚中回收金属砧.%n%n接下来的任务你只需要制作任意一种青铜砧即可解锁下一个任务
+
+# Quest: tfr.quest12.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=§b烧开水！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.desc=你这趟旅途中的第一台蒸汽生产设备.该是提高生产力的时候了！%n%n§5虽然你完成钢砧之后就能进入蒸汽时代, 但我还是建议你完成红钢砧或者蓝钢砧的任务线, 这样你才能获得GT坩锅, 一个极强的增产工具, 否则你在蒸汽时代会极度缺乏材料.
+
+# Quest: tfr.quest17.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.name=§b§l蒸汽引擎
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.desc=对于现在的你来说蒸汽引擎是一台重要的机器, 把它的输出口对准坩埚后启动它可以把空气泵入坩埚内.
+
+# Quest: tfru.q106n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.name=简便KU源
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.desc=使用这个, 可以用RU方便地产生KU.
+
+# Quest: tfr.quest27.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.name=§b§l涡轮机
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.desc=消耗SU(蒸汽)产生RU%n从侧面输出蒸馏水, 若没有可用的流体容器或管道, 蒸馏水会自动被销毁. %n如果正面朝上, 生物站在上面会自己转%n%n注意了, 只有王冠形状的任务是主线任务, 换句话说其他的机器是选做的. 
+
+# Quest: tfr.quest33.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.name=正经的RF发电
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.desc=输入RU就能产生RF的涡轮机, 是不是很科学？用法和普通发电机类似. 即使输入16RU/t, 也相当于近3个民科蒸汽引擎
+
+# Quest: tfr.quest44.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.name=激光能LV
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.desc=电流通过二氧化碳镭射管时会释放集中的光能, 借此技术可以产生LU, 一种重要的能量. 很多机器需要LU运行. 
+
+# Quest: tfr.quest106.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.name=燃烧吧!~~
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.desc=燃烧室！你获取HU(热能)最直接的方法. 格雷科技的许多机器都需要HU, 它们将一直陪伴你到电力时代中后期. 燃烧室从顶部输出热量(HU), 从其他面被动接受燃料, 要停止加热时, 需将燃烧室正面堵住, 并且§c需要等待当前燃料燃烧完毕§r. %n%n燃烧室分为固体, 液体, 气体三种. %n%n固体燃烧室使用固体燃料, 所有可以用在熔炉中的燃料(除了桶装燃料)都可以塞进固体燃烧室中充当燃料. 可以使用料斗从侧面自动添加燃料, 从底面自动取出灰烬. 当正面堵住时, 燃烧§c持续到当前物品烧完§r. 这使得该种燃烧室关火延迟很高(除非使用1/72粉等热值很低的物品), 适合用于需要长期加热并且容错率高的设备, 比如大型坩埚或锅炉.%n%n液体/气体燃烧室, 相对安全的燃烧室, 使用可燃液体或气体(描述中带有§cBurning: §rn §eGU/L§r的). 堵住正面时会燃烧完1L当前燃料, 这使得它的关火延迟很低, 适合用于坩埚. %n%n注：根据找到的油的不同, 也可以决定使用液体还是气体燃烧室. 越重的油产气越少产油和固体产物越多.
+
+# Quest: tfr.quest126.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.name=湮灭反应堆
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.desc=可以制作聚变反应堆产生大量RF. 黑洞质量越大产速越高, 可以丢给物品增加质量. %n%n放下之后可以看见环装全息投影. 具体摆放方法查看便携数据仪. %n%n§4此外, 你需要至少两个重力稳定器在重力异常点的两侧(可以贴在反应堆环的内侧)来控制它, 否则会有灾难性的后果. 
 
 # Quest: tfr.quest202.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyg.name=洋垃圾
@@ -3715,13 +3642,25 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyg.desc=AR的两种芯片用于做一�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzw.name=§b§l发电机(LV)-电, 而不是红石通量
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzw.desc=电力时代的开始
 
-# Quest: tfr.quest216.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.name=§b§lOHHHHHHHH
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.desc=这是模组名为Minecraft的工作台, 可以放置. %n%n经历千辛万苦, 你终于制作了这个原版生存里一分钟就能做出的物品. 恭喜！%n%n§l你问我石头怎么得到？用稿子挖掉一个岩石相邻的六个方块, 他就自己掉下来了. 
-
 # Quest: tfr.quest299.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABKw.name=自动化农场
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABKw.desc=首先, 将这36个方块组成一个3(宽)x3(长)x4(高)的长方体. %n%n在这个长方体周围铺满最远7格的石砖(原版)%n%n从农场水闸输入水. %n%n从农场出货箱或者直接打开GUI输入肥料, 泥土, 和树苗或者作物种子(原版). %n%n从农场齿轮箱输入RF能量. %n%n从农场出货箱用漏斗或者其他方式输出产出的物品和沙子. 如果被堵塞会停止工作.  %n%n放入焊接有不同的电子管的电路板可以种植多种作物, 还可以把原版树苗转换为林业树苗用于杂交.%n%n注意保证农场顶部不要被遮挡. 
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABKw.desc=这个结构虽然看起来略贵, 但绝对物有所值. 它可以帮你完全自动化种植和收获树木, 作物, 仙人掌等, 可用于获取大量木炭/投喂彼方兰等. %n%n首先, 将这36个方块组成一个3(宽)x4(高)x3(长)的长方体. %n%n在这个长方体周围铺满最远7格的石砖(原版), 农场将在它们之上铺设泥土和管理作物%n%n从农场水闸输入水. %n%n从农场出货箱或者直接打开GUI输入肥料, 泥土, 和树苗或者作物种子(原版). %n%n从农场齿轮箱输入RF能量. %n%n从农场出货箱用漏斗或者其他方式输出产出的物品和沙子. 如果被堵塞会停止工作.  %n%n放入焊接有不同的电子管的电路板可以种植多种作物, 还可以把原版树苗转换为林业树苗用于杂交.%n%n注意保证农场顶部不要被遮挡. %n%n此外, 农场还可以进一步扩建, 高度只能为4, 长和宽可以在3/4/5之间变化, 但必须是完整的长方体, 按长宽中最长的一边计算, 周围延伸出去的石砖长度分别为7/9/11.
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.name=
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.desc=
+
+# Quest: tfr.quest337.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.name=抵达Duck Egg B
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.desc=你第一个应该前往的行星是Duck Egg B%n%n你应该首选挖掘智金和月面土, 前者是发展ae自动化的必要材料, 后者可以离心获得多种稀有气体, 是获得高纯单晶硅, 进一步提高算力的必由之路. %n此外, 赛特斯石英和钨等群峦星罕见的矿物也值得挖掘. %n%n完成此任务后下一代计算机的任务线将会解锁.
+
+# Quest: tfru.q74n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.name=简便RU源
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.desc=不只有蒸汽涡轮可以产生RU, 燃油引擎/燃气涡轮分别可以消耗燃油和可燃气体生产RU, 虽然功率较低, 但它是一个安全而便捷的RU来源%n%n将来你会见到更大的燃气涡轮的ww
+
+# Quest: tfru.q112n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.name=手动RU源
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.desc=使用生物化学能转化为RU的机器, 百RU消耗两oz面包!
 
 # Quest: tfr.quest442.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABug.name=木工奇迹
@@ -3731,25 +3670,89 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABug.desc=这特么就是个奇迹, 你�
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABxw.name=储物桶(青铜制)
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABxw.desc=存储单件5000个物品
 
+# Quest: tfru.q11n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.name=神龙反应堆
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.desc=由巨量能量和混沌之力构建的它能完美的压制龙的暴虐.%n%n神龙之力在其中碰撞, 咆哮, 嘶喊, 湮灭, 释放出无穷的能量.%n投入许多能量产出许多能量的反应堆, 发电量可达1MRF/t以上.%n较难控制, 推荐观看教程或单人测试后再实战应用%n燃料是神龙粒/锭/块, 生成物是混沌碎片%n%n支持使用opencomputer控制, 传感器需要贴在反应堆稳定器上
+
+# Quest: tfr.quest523.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.name=存储中心
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.desc=驱动器+存储元件=只占一个格子的超大箱子%n%n需要说一下的是, 这个普通的存储元件只能存储物品, 存储液体或者气体需要特殊的存储元件
+
+# Quest: tfr.quest565.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.name=吸吸吸！
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.desc=电磁铁产生MU磁场能, 用来磁化金属等功能, 必做机器
+
+# Quest: tfr.quest567.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.name=电驴
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.desc=和蒸汽引擎的功能一样, 不过使用的是EU作为能源
+
+# Quest: tfr.quest571.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.name=打电动
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.desc=和蒸汽涡轮机功能一样, 不过使用EU作为能源
+
+# Quest: tfr.quest572.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.name=又到了白色相簿的季节
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.desc=通过电力和半导体进行冷却, 同时产生CU和HU, 在正面和背面输出. 他可以用来快速冷却模具里的熔融金属. 
+
+# Quest: tfr.quest573.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.name=电暖器～
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.desc=和燃烧室功能一样, 不过使用EU作为能源
+
+# Quest: tfr.quest593.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.name=存储电力
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.desc=电池盒里可以放四个电池, 每个电池可输出1A的电流, 但是不能高于电池盒的电压. 放进电池盒里的电池可以被充电, 也可以被放电. 一些需要电力的工具和装备也可以在这里充电, 比如电动扳手, 电钻, 喷气背包等. 但是充电之前, 注意电压等级哦. 
+
 # Quest: tfru.q197n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADIA.name=天翼族之冠
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADIA.desc=天翼族之冠
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADIA.desc=来自盖亚的强大力量可以让你消耗魔力自由飞行, 但只能维持一段时间. %n%n获得天翼族之眼可以让你无限时间飞行. %n除此之外, 也可以潜行+右键它绑定一个坐标, 长按右键以回到绑定的坐标
+
+# Quest: tfru.q135n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.name=重氮系光刻胶
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.desc=第一个光刻胶, 用于制作EV前的中低端计算机, 该任务完成后便可以前往半导体任务页面准备构建计算机了 %n%n提交的储罐需要装有任意L的重氮系光刻胶
+
+# Quest: tfru.q155n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.name=组装计算机
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.desc=将CPU与内存和散热, 供电设备组装为计算机, 它将为你提供强大的算力.
+
+# Quest: tfru.q159n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.name=世界改变的前夕
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.desc=在第一代计算机强大算力和你的头脑风暴之下, 下一代计算机终于设计出了雏形. 这代计算机计划有数十倍的提升, 理论上用它可以实时计算火箭的飞行…重返太空的曙光就在眼前!
+
+# Quest: tfru.q173n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.name=裂变核心
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.desc=这是核裂变反应堆的核心, 用于启动核裂变反应, 产出热冷却液, 具体教程见下:%n%n可控核裂变反应, 即为燃料棒中的重原子核因受到中子, 转为高能态后分裂变成其他原子并放出热能和更多中子的过程. 这个过程中涉及的重要概念包括以下内容：%n%n§l燃料棒§r：即核燃料, 核裂变反应的主要消耗物质. 在GT6中有以下几个参数：%n- 1.§a§on§r：中子数, 当前（燃料、控制）棒上的中子数. GT6中, 核燃料棒的数据每隔一定时间更新一次, 其中棒上最重要的属性就是当前时刻棒上含有的中子数, 这个中子数涉及到后续的热量产生与向外释放的数量. %n- 2.§a§oSelf§r：核燃料棒自身反应发送给自己的中子数, 维持了核反应的基础运行. %n- 3.§a§oEmission§r：燃料棒向四周其他（燃料、控制）棒发送的中子, 这与上面的Self是互不相干的属性. %n- 4.§a§oFactor§r：增殖比率, 当燃料棒除去向自己发送的的中子数外, 剩余数量的中子会按这个比率进行缩放并释放. %n- 5.§a§oMaximum§r：最大稳定中子数, 一个燃料棒如果接受过量的中子, 它的反应会加快, 同时对棒本身的耐久会非线性的增大. 这个过量的边界值就是这个§aMaximum§r值. %n%n§l控制棒§r：对核反应进行调控的棒, 包括以下4种：%n- 1.§o中子吸收棒§r：吸收中子热量, 并高效率转化为热能的控制棒, 产热量有：§aQ §r= §an §r* §b2 其中§aQ§r单位为§cHU/t§r, §an§r为中子数%n- 2.§o中子反射棒§r：将某个方向发射来的中子完整地原路反射回去. %n- 3.§o慢化剂棒§r：对射入的 中子减速并反射, 这会导致有效反应的中子数增加. 在标准情况下, 它会反射某个射来的中子, 如果多个方向, 那么根据射来的方向数, 每一个方向反射的中子数将会乘上这个方向数量, 如东方向射来§aa§r个中子, 西方向射来§ab§r个中子, 北方向射来§ac§r个中子, 则慢化棒向东反射§a3a§r个中子, 向西方反射§a3b§r个, 向北方反射§a3c§r个. 同时, 慢化剂棒会对相邻的燃料棒附加慢化的属性, 加快燃料棒的消耗. %n- 4.§o增殖棒§r：接收中子转化为含有另外一种元素燃料棒的控制棒, 接收中子并转化, 并且速度会越来越快, 慢化的中子不能用于进行转化. %n%n§l反应堆核心§r：核反应发生的环境, 存储冷却液, 热冷却液, 反应棒. 可以通过红石以类似控制机器的方式控制核心的运行与否, 也可以通过软锤敲击的方式禁止或开启某个（燃料、控制）棒工作. %n冷却液：与棒直接接触的液体, 起到承受核反应堆热量和中子辐照的介质. 不仅仅是传递能量的媒介, 还会影响到燃料棒的各项属性, 同时不同的冷却液在被加热和被中子辐照后会有不同的效果, 核燃料棒与冷却液的配套选择是核反应设计的高阶技巧, 常用的冷却液通常会是IC工业冷却液和二氧化碳. %n%n§l中子增殖判定与计算§r%n%n核裂变反应的核心在于利用不断增长的中子进行产热和再利用, 所以计算每个燃料棒获得和发射的中子是必要的. 在GT6中, 一个棒只能和相邻的棒交换中子. 如图中在同一红圈内的棒都视为相邻%n%n每一个棒会向相邻的棒发射中子, 发射量的数值为：%n%n    §aE_n §r= §aEmission §r+ §c( §an§r-§aSelf §c) §r* §aFactor§r%n若§c( §an§r-§aSelf §c)§r<0, 则视为0 %n参数含义见上方的解释. 注意燃料棒的各项数值会根据冷却液变化而不同. %n%n而某一个棒上的中子量为棒向自身发射的中子数与周围向自己发射的中子数之和：%n%n    §an §r= §aSelf§r + §aE_1 §r+ §aE_2 §r+ ⋯%n%n注意, 中子数不是一个存量, 它不是你电池盒里面的电, 而是一个累计的接收值, 这个值同时也是你的棒产生热量的标准值, 在燃料棒中, 中子数就是你产热量的数值, 在吸收棒中, 产热量会变成这个数值的2倍, 反射棒不会产热. %n%n但很明显, 这个中子数在某种情况下会不断不断地增加, 比如在某一种燃料棒的§aFactor§r为§b1/3§r, §aEmission§r是§b2048§r, §aSelf§r是§b512§r, 有5个棒以十字排列, 中间是燃料棒, 四周是反射棒. %n%n刚刚开机时. 这个棒发射的中子数是：%n%n    §aE_0 = §b2048§r%n%n由于四周都是反射棒, 向四周发射的中子全部反射回来了, 所以下一刻的中子数将从0变为%n%n    §an_1 §r= §b512 §r+ §b2048 §r* §b4 §r= §b8704§r%n%n发射量变为%n%n    §aE_1 §r= (§b8704§r - §b512 §r)* §b1/3 §r+ §b2048 §r= §b4778§r%n%n而下一个时刻的中子数%n%n    §an_2 §r= §b512 §r+ §b4778 §r* §b4 §r= §b19642§r%n%n如果你一直计算下去, 你会发现中子数越来越多. 事实上, 如果我们列一个递推公式：%n%n    §an_i §r= §aself §r+( §an_{i-1} §r- §aself §r)* §afactor §r* §b4 §r+ §b4 §r* §aEmission §r= §an_{i-1} §r*§b 4 §r* §afactor §r+( §b1 §r- §b4 §r* §afactor §r)* §aself §r+ §b4 §r* §aEmission§r%n%n如果要让上面的 §an_i§r 比 §an_{i-1}§r 大, 只需要%n%n    §an_{i-1} §r>= §aself §r+ §aEmmision §r/ ( §b1/4 §r- §afactor §r)%n%n注意启动时是没有中子的, 即如果 §aself §r+ §aEmmision §r/ ( §b1/4 §r- §afactor §r)< §b0 §r, 那么就能顺利实现中子从开机就一直不断增长增长增长增长, 直到你的冷却液全部耗尽, 你的燃料和控制棒全部溶解. %n%n但是以上的情况可以通过强行关机来制止, 所以无限增长往往是高功率的关键, 不能无限增加的反应堆我们称为稳定反应堆, 通过红石控制, 保证反应堆工作在无限增长状态但中子数不至于过多的反应堆我们称为超临界反应堆. 一般来说超临界反应堆具有更高的应用价值.
+
+# Quest: tfru.q222n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.name=无损探伤
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.desc=钴-60可以用于探伤, 这将尽可能检测出金属中存在的微小缺陷, 可以用于制作高转速高压力等极端工况的部件.
+
+# Quest: tfru.q252n
+betterquesting.quest.Fpe4WqBbQpuSHkgUGWE8sA.name=大燃气涡轮
+betterquesting.quest.Fpe4WqBbQpuSHkgUGWE8sA.desc=尽管不推荐, 石化燃料可能仍然是你的最爱, 涡轮的具体规则请参考蒸汽涡轮任务, 燃气涡轮需要额外的压气和燃烧部分因而更重一些, 建议制作完整个涡轮再进行探伤. %n%n不推荐的原因? 多方块燃气涡轮功率很高, 你家的产线很可能无法供给如此巨量的燃气用于发电, 这不是一个可持续的选择. 锅炉爆炸问题请参考上一章的多方块锅炉任务.
+
+# Quest: tfru.q256n
+betterquesting.quest.NdfPD5zOTQef23TNim7dOw.name=燃料电池
+betterquesting.quest.NdfPD5zOTQef23TNim7dOw.desc=使用质子交换膜和特制电极可以使得部分燃料自然反应产生电能, 这样生产电能更加方便而高效. %n这款是8单元合并的, 效率根据使用的配方组合而不同, 总体在35%-65%之间. %n%nNEI搜索任意电极查看用途来查看燃料电池的配方表, 建议提前确定要使用的电极、电解质和燃料组合. %n使用活动扳手切换内容更换模式, 开启内容更换模式后用电极点击即可插入电极，用漏斗或管道输入电解质后即可切换回正常模式，从上面输出电能，从左右两侧输入燃料，前后面输出产物. %n尽管电解质不消耗，但是至少需要1000L才能开始反应哦.
+
+# Quest: tfru.q186n
+betterquesting.quest.O7MJUjOBT3mTdvPmrHhxrA.name=手动KU源
+betterquesting.quest.O7MJUjOBT3mTdvPmrHhxrA.desc=使用生物化学能转化为KU的机器, 百KU消耗四oz面包!
 
 # Quest: tfru.q218n
 betterquesting.quest.XLbdorFkSje-w3L-i5PtLg.name=附魔!
 betterquesting.quest.XLbdorFkSje-w3L-i5PtLg.desc=附魔可以进一步增强你的装备, 你能获取的所有附魔全部兼容群峦血量.
 
+# Quest: tfru.q168n
+betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.name=结晶器
+betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.desc=通过缓慢的操作将液体结晶, 产出的单晶硅具有规整的原子排列, 这种微观层面的独特性质具有无限潜力…
+
+# Quest: tfru.q268n
+betterquesting.quest.w8O4sBY8T86oax1NKi4gyQ.name=§2KU
+betterquesting.quest.w8O4sBY8T86oax1NKi4gyQ.desc=往复动能, 可以松动坩埚内容物以炼钢, 也可以驱动机器. 没有直接储存和传导方式.%n%nKU机器过载时会§e损坏§r, 变成废料
+
+# Quest: tfru.q267n
+betterquesting.quest.z_AIsNUvS5ifglAyrJYDXA.name=§aRU
+betterquesting.quest.z_AIsNUvS5ifglAyrJYDXA.desc=旋转动能, 用途很广泛, 来源也很多. %n%nRU机器过载时会§e损坏§r, 变成废料
+
 
 ### Quests in no quest lines ###
-
-# Quest: New Quest
-betterquesting.quest.KmNAFUcuQf2z9ML91ay8bQ.name=
-betterquesting.quest.KmNAFUcuQf2z9ML91ay8bQ.desc=
-
-# Quest: tfru.q203n
-betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.name=铬从哪来?
-betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.desc=你很快就会需要很多铬…不管是MV和HV的不锈钢塔, 还是EV的机械外壳. %n%n直接挖掘铬铁矿后洗矿可以获得少量铬, 但处理铬铁矿需要MV电压. %n 你也可以离心洗矿获得的废水获取一些铬, 这也是较为可观的来源之一
-
-# Quest: New Quest
-betterquesting.quest.eh8Y9kVoTgOx9VCIwdwa7w.name=
-betterquesting.quest.eh8Y9kVoTgOx9VCIwdwa7w.desc=

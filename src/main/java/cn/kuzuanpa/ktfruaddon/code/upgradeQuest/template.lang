@@ -5,9 +5,13 @@
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAFg.name=tfr.line22.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAFg.desc=tfr.line22.desc
 
-# Quest: tfru.q187n
-betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.name=tfru.q187n
-betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.desc=tfru.q187d
+# Quest: tfr.quest223.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.name=tfr.quest223.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.desc=tfr.quest223.desc
+
+# Quest: tfr.quest224.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.name=tfr.quest224.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.desc=tfr.quest224.desc
 
 # Quest: tfr.quest0.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAAA.name=tfr.quest0.name
@@ -77,14 +81,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnQ.desc=tfr.quest157.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAow.name=tfr.quest163.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAow.desc=tfr.quest163.desc
 
-# Quest: tfr.quest223.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.name=tfr.quest223.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3w.desc=tfr.quest223.desc
-
-# Quest: tfr.quest224.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.name=tfr.quest224.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA4A.desc=tfr.quest224.desc
-
 # Quest: tfr.quest271.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABDw.name=tfr.quest271.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABDw.desc=tfr.quest271.desc
@@ -100,10 +96,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABFA.desc=tfr.quest276.desc
 # Quest: tfr.quest281.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABGQ.name=tfr.quest281.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABGQ.desc=tfr.quest281.desc
-
-# Quest: tfr.quest288.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABIA.name=tfr.quest288.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABIA.desc=tfr.quest288.desc
 
 # Quest: tfr.quest293.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABJQ.name=tfr.quest293.name
@@ -125,10 +117,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABcQ.desc=tfr.quest369.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABcg.name=tfr.quest370.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABcg.desc=tfr.quest370.desc
 
-# Quest: tfr.quest417.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABoQ.name=tfr.quest417.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABoQ.desc=tfr.quest417.desc
-
 # Quest: tfr.quest460.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzA.name=tfr.quest460.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzA.desc=tfr.quest460.desc
@@ -137,17 +125,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABzA.desc=tfr.quest460.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzQ.name=tfr.quest461.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABzQ.desc=tfr.quest461.desc
 
-# Quest: tfr.quest520.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCA.name=tfr.quest520.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCA.desc=tfr.quest520.desc
-
 # Quest: tfr.quest561.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACMQ.name=tfr.quest561.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACMQ.desc=tfr.quest561.desc
-
-# Quest: tfr.quest598.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVg.name=tfr.quest598.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVg.desc=tfr.quest598.desc
 
 # Quest: tfr.quest619.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACaw.name=tfr.quest619.name
@@ -165,10 +145,26 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACfg.desc=tfr.quest638.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACiA.name=tfr.quest648.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACiA.desc=tfr.quest648.desc
 
+# Quest: tfru.q187n
+betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.name=tfru.q187n
+betterquesting.quest.offYKZN_T62YIgmx2xQiPQ.desc=tfru.q187d
+
 
 ## Quest Line: tfr.line13.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAADQ.name=tfr.line13.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAADQ.desc=tfr.line13.desc
+
+# Quest: tfr.quest217.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.name=tfr.quest217.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.desc=tfr.quest217.desc
+
+# Quest: tfr.quest218.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.name=tfr.quest218.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.desc=tfr.quest218.desc
+
+# Quest: tfr.quest219.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.name=tfr.quest219.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.desc=tfr.quest219.desc
 
 # Quest: tfr.quest19.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEw.name=tfr.quest19.name
@@ -201,18 +197,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAApA.desc=tfr.quest164.desc
 # Quest: tfr.quest168.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqA.name=tfr.quest168.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqA.desc=tfr.quest168.desc
-
-# Quest: tfr.quest217.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.name=tfr.quest217.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2Q.desc=tfr.quest217.desc
-
-# Quest: tfr.quest218.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.name=tfr.quest218.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2g.desc=tfr.quest218.desc
-
-# Quest: tfr.quest219.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.name=tfr.quest219.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2w.desc=tfr.quest219.desc
 
 # Quest: tfr.quest261.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBQ.name=tfr.quest261.name
@@ -283,6 +267,26 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAChA.desc=tfr.quest644.desc
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAQ.name=tfr.line1.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAQ.desc=tfr.line1.desc
 
+# Quest: tfr.quest210.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.name=tfr.quest210.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.desc=tfr.quest210.desc
+
+# Quest: tfr.quest214.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.name=tfr.quest214.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.desc=tfr.quest214.desc
+
+# Quest: tfr.quest222.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.name=tfr.quest222.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.desc=tfr.quest222.desc
+
+# Quest: tfr.quest232.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.name=tfr.quest232.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.desc=tfr.quest232.desc
+
+# Quest: tfru.q140n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.name=tfru.q140n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.desc=tfru.q140d
+
 # Quest: tfr.quest11.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.name=tfr.quest11.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAACw.desc=tfr.quest11.desc
@@ -323,10 +327,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAWw.desc=tfr.quest91.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.name=tfr.quest101.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZQ.desc=tfr.quest101.desc
 
-# Quest: tfr.quest106.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.name=tfr.quest106.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.desc=tfr.quest106.desc
-
 # Quest: tfr.quest107.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.name=tfr.quest107.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaw.desc=tfr.quest107.desc
@@ -354,30 +354,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAog.desc=tfr.quest162.desc
 # Quest: tfr.quest167.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAApw.name=tfr.quest167.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAApw.desc=tfr.quest167.desc
-
-# Quest: tfr.quest210.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.name=tfr.quest210.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0g.desc=tfr.quest210.desc
-
-# Quest: tfr.quest214.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.name=tfr.quest214.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1g.desc=tfr.quest214.desc
-
-# Quest: tfr.quest221.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.name=tfr.quest221.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.desc=tfr.quest221.desc
-
-# Quest: tfr.quest222.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.name=tfr.quest222.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3g.desc=tfr.quest222.desc
-
-# Quest: tfr.quest232.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.name=tfr.quest232.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6A.desc=tfr.quest232.desc
-
-# Quest: tfru.q140n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.name=tfru.q140n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9g.desc=tfru.q140d
 
 # Quest: tfr.quest260.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBA.name=tfr.quest260.name
@@ -467,30 +443,30 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACow.desc=tfr.quest675.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACpQ.name=tfr.quest677.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACpQ.desc=tfr.quest677.desc
 
+# Quest: tfru.q229n
+betterquesting.quest.Tk94v6vvShWprSGhzvjBRA.name=tfru.q229n
+betterquesting.quest.Tk94v6vvShWprSGhzvjBRA.desc=tfru.q229d
+
+# Quest: tfru.q228n
+betterquesting.quest.jBPHEKqYSyalUnqrFzYbJg.name=tfru.q228n
+betterquesting.quest.jBPHEKqYSyalUnqrFzYbJg.desc=tfru.q228d
+
 
 ## Quest Line: tfr.line2.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.name=tfr.line2.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAg.desc=tfr.line2.desc
 
-# Quest: jinxi
-betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.name=jinxi
-betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.desc=No Description
-
 # Quest: tfru.q188n
 betterquesting.quest.0MYmYGfXS1ipsqYASxBB7w.name=tfru.q188n
 betterquesting.quest.0MYmYGfXS1ipsqYASxBB7w.desc=tfru.q188d
 
-# Quest: tfr.quest12.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=tfr.quest12.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.desc=tfr.quest12.desc
+# Quest: tfr.quest209.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=tfr.quest209.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=tfr.quest209.desc
 
 # Quest: tfr.quest16.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEA.name=tfr.quest16.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEA.desc=tfr.quest16.desc
-
-# Quest: tfr.quest17.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.name=tfr.quest17.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.desc=tfr.quest17.desc
 
 # Quest: tfr.quest18.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEg.name=tfr.quest18.name
@@ -500,10 +476,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEg.desc=tfr.quest18.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFA.name=tfr.quest20.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFA.desc=tfr.quest20.desc
 
-# Quest: tfru.q106n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.name=tfru.q106n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.desc=tfru.q106d
-
 # Quest: tfr.quest24.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.name=tfr.quest24.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.desc=tfr.quest24.desc
@@ -511,10 +483,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGA.desc=tfr.quest24.desc
 # Quest: tfr.quest26.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGg.name=tfr.quest26.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGg.desc=tfr.quest26.desc
-
-# Quest: tfr.quest27.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.name=tfr.quest27.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.desc=tfr.quest27.desc
 
 # Quest: tfr.quest28.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHA.name=tfr.quest28.name
@@ -535,10 +503,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAHw.desc=tfr.quest31.desc
 # Quest: tfr.quest32.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIA.name=tfr.quest32.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIA.desc=tfr.quest32.desc
-
-# Quest: tfr.quest33.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.name=tfr.quest33.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.desc=tfr.quest33.desc
 
 # Quest: tfr.quest35.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIw.name=tfr.quest35.name
@@ -636,10 +600,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjQ.desc=tfr.quest141.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyQ.name=tfr.quest201.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyQ.desc=tfr.quest201.desc
 
-# Quest: tfr.quest209.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.name=tfr.quest209.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0Q.desc=tfr.quest209.desc
-
 # Quest: tfru.q109n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBw.name=tfru.q109n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABBw.desc=tfru.q109d
@@ -680,10 +640,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABig.desc=No Description
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABiw.name=tfru.q107n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABiw.desc=tfru.q107d
 
-# Quest: tfru.q74n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.name=tfru.q74n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.desc=tfru.q74d
-
 # Quest: tfr.quest400.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABkA.name=tfr.quest400.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABkA.desc=tfr.quest400.desc
@@ -699,10 +655,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABnA.desc=tfr.quest412.desc
 # Quest: tfr.quest413.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABnQ.name=tfr.quest413.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABnQ.desc=tfr.quest413.desc
-
-# Quest: tfru.q112n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.name=tfru.q112n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.desc=tfru.q112d
 
 # Quest: tfr.quest559.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACLw.name=tfr.quest559.name
@@ -731,6 +683,26 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADMw.desc=tfru.q77d
 # Quest: tfr.quest710.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADNQ.name=tfr.quest710.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADNQ.desc=tfr.quest710.desc
+
+# Quest: tfru.q233n
+betterquesting.quest.BUw-V13KRDml_NDs2fWYbA.name=tfru.q233n
+betterquesting.quest.BUw-V13KRDml_NDs2fWYbA.desc=tfru.q233d
+
+# Quest: tfru.q203n
+betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.name=tfru.q203n
+betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.desc=tfru.q203d
+
+# Quest: tfru.q286n
+betterquesting.quest._uhgx_QUTbCDSw32pU5tAA.name=tfru.q286n
+betterquesting.quest._uhgx_QUTbCDSw32pU5tAA.desc=tfru.q286d
+
+# Quest: tfru.q237n
+betterquesting.quest.dUhtgFPPTtum9Bx-e1kk4g.name=tfru.q237n
+betterquesting.quest.dUhtgFPPTtum9Bx-e1kk4g.desc=tfru.q237d
+
+# Quest: jinxi
+betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.name=jinxi
+betterquesting.quest.rvVJI6xtQk62odF1ZkjGeg.desc=No Description
 
 
 ## Quest Line: tfr.line5.name
@@ -790,6 +762,34 @@ betterquesting.quest.c1WJ1lbSTEOnXIFVoosJdw.desc=tfru.q204d
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.name=tfr.line3.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAw.desc=tfr.line3.desc
 
+# Quest: tfru.q240n
+betterquesting.quest.1YS3AQyfTsq2xODMXTVhhA.name=tfru.q240n
+betterquesting.quest.1YS3AQyfTsq2xODMXTVhhA.desc=tfru.q240d
+
+# Quest: tfru.q231n
+betterquesting.quest.3tBtgGcKSHWxbAOCaG5ifw.name=tfru.q231n
+betterquesting.quest.3tBtgGcKSHWxbAOCaG5ifw.desc=tfru.q231d
+
+# Quest: tfru.q239n
+betterquesting.quest.4EjbsU9lTbaZbAwfH_T8Ug.name=tfru.q239n
+betterquesting.quest.4EjbsU9lTbaZbAwfH_T8Ug.desc=tfru.q239d
+
+# Quest: tfru.q230n
+betterquesting.quest.90w0BotNQFSAHI8QhMcUwg.name=tfru.q230n
+betterquesting.quest.90w0BotNQFSAHI8QhMcUwg.desc=tfru.q230d
+
+# Quest: tfru.q254n
+betterquesting.quest.9hHfX_wWQLiEO6oAUGe-PA.name=tfru.q254n
+betterquesting.quest.9hHfX_wWQLiEO6oAUGe-PA.desc=tfru.q254d
+
+# Quest: tfru.q217n
+betterquesting.quest.A6l748W9RZivMyKbrXJEUA.name=tfru.q217n
+betterquesting.quest.A6l748W9RZivMyKbrXJEUA.desc=tfru.q217d
+
+# Quest: tfr.quest240.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.name=tfr.quest240.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.desc=tfr.quest240.desc
+
 # Quest: tfr.quest34.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.name=tfr.quest34.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIg.desc=tfr.quest34.desc
@@ -805,10 +805,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKg.desc=tfr.quest42.desc
 # Quest: tfr.quest43.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.name=tfr.quest43.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAKw.desc=tfr.quest43.desc
-
-# Quest: tfr.quest44.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.name=tfr.quest44.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.desc=tfr.quest44.desc
 
 # Quest: tfr.quest45.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAALQ.name=tfr.quest45.name
@@ -837,18 +833,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPg.desc=tfr.quest62.desc
 # Quest: tfr.quest64.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.name=tfr.quest64.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQA.desc=tfr.quest64.desc
-
-# Quest: tfr.quest69.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.name=tfr.quest69.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARQ.desc=ph.empty
-
-# Quest: tfr.quest72.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASA.name=tfr.quest72.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASA.desc=ph.empty
-
-# Quest: tfr.quest74.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.name=tfr.quest74.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.desc=tfr.quest74.desc
 
 # Quest: tfr.quest79.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAATw.name=tfr.quest79.name
@@ -890,21 +874,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZw.desc=tfr.quest103.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.name=tfr.quest114.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcg.desc=tfr.quest114.desc
 
-# Quest: tfr.quest240.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.name=tfr.quest240.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8A.desc=tfr.quest240.desc
-
 # Quest: tfr.quest267.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABCw.name=tfr.quest267.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABCw.desc=tfr.quest267.desc
-
-# Quest: tfr.quest565.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.name=tfr.quest565.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.desc=tfr.quest565.desc
-
-# Quest: tfr.quest567.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.name=tfr.quest567.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.desc=tfr.quest567.desc
 
 # Quest: tfr.quest568.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACOA.name=tfr.quest568.name
@@ -917,18 +889,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACOQ.desc=ph.empty
 # Quest: tfr.quest570.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACOg.name=tfr.quest570.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACOg.desc=ph.empty
-
-# Quest: tfr.quest571.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.name=tfr.quest571.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.desc=tfr.quest571.desc
-
-# Quest: tfr.quest572.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.name=tfr.quest572.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.desc=tfr.quest572.desc
-
-# Quest: tfr.quest573.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.name=tfr.quest573.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.desc=tfr.quest573.desc
 
 # Quest: tfr.quest574.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACPg.name=tfr.quest574.name
@@ -994,10 +954,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACTw.desc=tfr.quest591.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUA.name=tfr.quest592.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUA.desc=tfr.quest592.desc
 
-# Quest: tfr.quest593.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.name=tfr.quest593.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.desc=tfr.quest593.desc
-
 # Quest: tfr.quest594.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUg.name=tfr.quest594.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACUg.desc=tfr.quest594.desc
@@ -1030,127 +986,70 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADjA.desc=tfru.q164d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADjQ.name=tfru.q165n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADjQ.desc=tfru.q165d
 
-# Quest: tfru.q217n
-betterquesting.quest.A6l748W9RZivMyKbrXJEUA.name=tfru.q217n
-betterquesting.quest.A6l748W9RZivMyKbrXJEUA.desc=tfru.q217d
+# Quest: tfru.q223n
+betterquesting.quest.H5JZmUBiTHShvne-FAc2zw.name=tfru.q223n
+betterquesting.quest.H5JZmUBiTHShvne-FAc2zw.desc=tfru.q223d
+
+# Quest: New Quest
+betterquesting.quest.KPUC9K--RJ6m4XXAY_8oTw.name=New Quest
+betterquesting.quest.KPUC9K--RJ6m4XXAY_8oTw.desc=No Description
 
 # Quest: tfru.q190n
 betterquesting.quest.OYIaLDRCTG2x7y6hbaDMfA.name=tfru.q190n
 betterquesting.quest.OYIaLDRCTG2x7y6hbaDMfA.desc=tfru.q190d
 
+# Quest: tfru.q245n
+betterquesting.quest.SY6acegSQmKM7QRDrUFx8w.name=tfru.q245n
+betterquesting.quest.SY6acegSQmKM7QRDrUFx8w.desc=tfru.q245d
+
 # Quest: tfr.quest40.name
 betterquesting.quest.WhUkruM8Sn-3k9Rgk70ZaA.name=tfr.quest40.name
 betterquesting.quest.WhUkruM8Sn-3k9Rgk70ZaA.desc=tfr.quest40.desc
 
+# Quest: tfru.q236n
+betterquesting.quest.ebL6rnt9Tdie--ANgC0sAw.name=tfru.q236n
+betterquesting.quest.ebL6rnt9Tdie--ANgC0sAw.desc=tfru.q236d
 
-## Quest Line: tfr.line11.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.name=tfr.line11.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.desc=tfr.line11.desc
+# Quest: New Quest
+betterquesting.quest.gVx3Rn-1T76yeMeLRO6fNA.name=New Quest
+betterquesting.quest.gVx3Rn-1T76yeMeLRO6fNA.desc=No Description
 
-# Quest: tfru.q115n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=tfru.q115n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=tfru.q115d
+# Quest: tfru.q244n
+betterquesting.quest.iiBWGawQQS-Lxd_EkIUekg.name=tfru.q244n
+betterquesting.quest.iiBWGawQQS-Lxd_EkIUekg.desc=tfru.q244d
 
-# Quest: tfru.q114n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.name=tfru.q114n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.desc=tfru.q114d
+# Quest: tfru.q238n
+betterquesting.quest.kRpriW5tSKGgh5JyTs8A4A.name=tfru.q238n
+betterquesting.quest.kRpriW5tSKGgh5JyTs8A4A.desc=tfru.q238d
 
-# Quest: tfru.q113n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.name=tfru.q113n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.desc=tfru.q113d
+# Quest: tfru.q232n
+betterquesting.quest.muCPdktcSkiRlRUN7Hj3qw.name=tfru.q232n
+betterquesting.quest.muCPdktcSkiRlRUN7Hj3qw.desc=tfru.q232d
 
-# Quest: tfru.q116n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.name=tfru.q116n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.desc=tfru.q116d
+# Quest: tfru.q241n
+betterquesting.quest.pEiDZLDWTBWKHq3B6qfy9Q.name=tfru.q241n
+betterquesting.quest.pEiDZLDWTBWKHq3B6qfy9Q.desc=tfru.q241d
 
-# Quest: tfru.q117n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.name=tfru.q117n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.desc=tfru.q117d
+# Quest: tfru.q246n
+betterquesting.quest.r3YHZN7ITya3xcGsPBcghQ.name=tfru.q246n
+betterquesting.quest.r3YHZN7ITya3xcGsPBcghQ.desc=tfru.q246d
 
-# Quest: tfru.q120n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.name=tfru.q120n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.desc=tfru.q120d
+# Quest: tfru.q249n
+betterquesting.quest.sKNw6o9JQICGqZB8h4S7jw.name=tfru.q249n
+betterquesting.quest.sKNw6o9JQICGqZB8h4S7jw.desc=tfru.q249d
 
-# Quest: tfru.q118n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.name=tfru.q118n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.desc=tfru.q118d
-
-# Quest: tfru.q119n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.name=tfru.q119n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.desc=tfru.q119n
-
-# Quest: tfru.q121n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.name=tfru.q121n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.desc=tfru.q121d
-
-# Quest: tfru.q122n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.name=tfru.q122n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.desc=tfru.q122d
-
-# Quest: tfru.q123n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.name=tfru.q123n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.desc=tfru.q123d
-
-# Quest: tfru.q124n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.name=tfru.q124n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.desc=tfru.q124d
-
-# Quest: tfru.q125n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.name=tfru.q125n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.desc=tfru.q125d
-
-# Quest: tfru.q126n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.name=tfru.q126n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.desc=tfru.q126d
-
-# Quest: tfru.q127n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.name=tfru.q127n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.desc=tfru.q127d
-
-# Quest: tfru.q128n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACoQ.name=tfru.q128n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACoQ.desc=tfru.q128d
-
-# Quest: tfru.q129n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.name=tfru.q129n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.desc=tfru.q129d
-
-# Quest: tfru.q130n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.name=tfru.q130n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.desc=tfru.q130d
-
-# Quest: tfru.q131n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.name=tfru.q131n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.desc=tfru.q131d
-
-# Quest: tfru.q133n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.name=tfru.q133n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.desc=tfru.q133d
-
-# Quest: tfru.q132n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.name=tfru.q132n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.desc=tfru.q132d
-
-# Quest: tfru.q134n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.name=tfru.q134n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.desc=tfru.q134d
-
-# Quest: tfru.q135n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.name=tfru.q135n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.desc=tfru.q135d
-
-# Quest: tfru.q136n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.name=tfru.q136n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.desc=tfru.q136d
-
-# Quest: tfru.q137n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.name=tfru.q137n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.desc=tfru.q137d
+# Quest: New Quest
+betterquesting.quest.zxUMzeKMR_ixBGQqcJcCWg.name=New Quest
+betterquesting.quest.zxUMzeKMR_ixBGQqcJcCWg.desc=No Description
 
 
 ## Quest Line: tfru.l0n
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGw.name=tfru.l0n
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGw.desc=tfru.l0d
+
+# Quest: tfru.q200n
+betterquesting.quest.66wjoeZPTIqVR5lMAFy35g.name=tfru.q200n
+betterquesting.quest.66wjoeZPTIqVR5lMAFy35g.desc=tfru.q200d
 
 # Quest: tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABnw.name=tfru.q200n
@@ -1168,29 +1067,17 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADdw.desc=tfru.q179d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADeA.name=tfru.q178n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADeA.desc=tfru.q178d
 
-# Quest: tfru.q173n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.name=tfru.q173n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.desc=tfru.q173d
-
-# Quest: tfru.q200n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfA.name=tfru.q200n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfA.desc=tfru.q200d
-
 # Quest: tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADfQ.name=tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADfQ.desc=tfru.q200d
 
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.desc=No Description
+# Quest: tfru.q200n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.name=tfru.q200n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfg.desc=tfru.q200d
 
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.desc=No Description
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADgA.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADgA.desc=No Description
+# Quest: tfru.q200n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.name=tfru.q200n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADfw.desc=tfru.q200d
 
 # Quest: tfru.q180n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADgQ.name=tfru.q180n
@@ -1220,30 +1107,39 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADhg.desc=tfru.q176d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADhw.name=tfru.q182n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADhw.desc=tfru.q182d
 
-# Quest: tfru.q174n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.name=tfru.q174n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.desc=tfru.q174d
-
-# Quest: tfru.q175n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.name=tfru.q175n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.desc=tfru.q175d
-
-# Quest: tfru.q186n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.name=tfru.q186n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.desc=tfru.q186d
-
-# Quest: tfru.q222n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.name=tfru.q222n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.desc=tfru.q222d
-
 # Quest: tfru.q221n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADkA.name=tfru.q221n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADkA.desc=tfru.q221d
+
+# Quest: tfru.q200n
+betterquesting.quest.Y_-MFufxRaG0G7MaVU8lbg.name=tfru.q200n
+betterquesting.quest.Y_-MFufxRaG0G7MaVU8lbg.desc=tfru.q200d
+
+# Quest: tfru.q200n
+betterquesting.quest.ZQ7nu2i9S7-Qzw8jGlvk9Q.name=tfru.q200n
+betterquesting.quest.ZQ7nu2i9S7-Qzw8jGlvk9Q.desc=tfru.q200d
+
+# Quest: tfru.q200n
+betterquesting.quest.bPqCnZU3Ri2hVPVT7cNgdg.name=tfru.q200n
+betterquesting.quest.bPqCnZU3Ri2hVPVT7cNgdg.desc=tfru.q200d
+
+# Quest: tfru.q200n
+betterquesting.quest.hJzaNKdXToizIObp7zP1-g.name=tfru.q200n
+betterquesting.quest.hJzaNKdXToizIObp7zP1-g.desc=tfru.q200d
+
+
+## Quest Line: tfru.q200n
+betterquesting.questline.EX0I3UlgQPavv4RW0lhnvw.name=tfru.q200n
+betterquesting.questline.EX0I3UlgQPavv4RW0lhnvw.desc=tfru.q200d
 
 
 ## Quest Line: tfr.line7.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABw.name=tfr.line7.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABw.desc=tfr.line7.desc
+
+# Quest: tfr.quest215.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.name=tfr.quest215.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.desc=tfr.quest215.desc
 
 # Quest: tfr.quest119.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdw.name=tfr.quest119.name
@@ -1272,10 +1168,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmQ.desc=tfr.quest153.desc
 # Quest: tfr.quest154.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmg.name=tfr.quest154.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmg.desc=tfr.quest154.desc
-
-# Quest: tfr.quest215.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.name=tfr.quest215.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA1w.desc=tfr.quest215.desc
 
 # Quest: tfr.quest368.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABcA.name=tfr.quest368.name
@@ -1351,350 +1243,146 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACfA.name=tfr.quest636.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACfA.desc=tfr.quest636.desc
 
 
-## Quest Line: tfr.line4.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.name=tfr.line4.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.desc=tfr.line4.desc
-
-# Quest: tfru.q168n
-betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.name=tfru.q168n
-betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.desc=tfru.q168d
-
-# Quest: tfru.q169n
-betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.name=tfru.q169n
-betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.desc=tfru.q169d
-
-# Quest: tfru.q166n
-betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.name=tfru.q166n
-betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.desc=tfru.q166d
-
-# Quest: tfru.q167n
-betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.name=tfru.q167n
-betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.desc=tfru.q167d
-
-# Quest: tfru.q160n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.name=tfru.q160n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.desc=tfru.q160d
-
-# Quest: tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.name=tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.desc=tfru.q151d
-
-# Quest: tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.name=tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.desc=tfru.q151d
-
-# Quest: tfru.q153n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=tfru.q153n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.desc=tfru.q153d
-
-# Quest: tfru.q2
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.name=tfru.q2
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.desc=tfru.q
-
-# Quest: tfr.quest236.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.name=tfr.quest236.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.desc=tfr.quest236.desc
-
-# Quest: tfr.quest237.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.name=tfr.quest237.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.desc=tfr.quest237.desc
-
-# Quest: tfru.q161n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.name=tfru.q161n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.desc=tfru.q161d
-
-# Quest: tfru.q145n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.name=tfru.q145n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.desc=tfru.q145d
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.desc=No Description
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.desc=No Description
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.desc=No Description
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.desc=No Description
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.desc=No Description
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.desc=No Description
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.desc=No Description
-
-# Quest: tfru.q144n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.name=tfru.q144n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.desc=tfru.q144d
-
-# Quest: tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.name=tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.desc=tfru.q146d
-
-# Quest: tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.name=tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.desc=tfru.q147d
+## Quest Line: tfr.line12.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADA.name=tfr.line12.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADA.desc=tfr.line12.desc
 
-# Quest: tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.name=tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.desc=tfru.q148d
+# Quest: tfr.quest283.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABGw.name=tfr.quest283.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABGw.desc=tfr.quest283.desc
 
-# Quest: tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.name=tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.desc=tfru.q149d
+# Quest: tfr.quest285.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABHQ.name=tfr.quest285.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABHQ.desc=tfr.quest285.desc
 
-# Quest: tfru.q152n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.name=tfru.q152n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.desc=tfru.q152d
+# Quest: tfr.quest324.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABRA.name=tfr.quest324.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABRA.desc=tfr.quest324.desc
 
-# Quest: tfru.q155n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.name=tfru.q155n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.desc=tfru.q155d
+# Quest: tfr.quest377.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABeQ.name=tfr.quest377.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABeQ.desc=tfr.quest377.desc
 
-# Quest: tfru.q157n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.name=tfru.q157n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.desc=tfru.q157d
+# Quest: tfr.quest459.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByw.name=tfr.quest459.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByw.desc=tfr.quest459.desc
 
-# Quest: tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.name=tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.desc=tfru.q146d
+# Quest: tfr.quest642.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACgg.name=tfr.quest642.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACgg.desc=tfr.quest642.desc
 
-# Quest: tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.name=tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.desc=tfru.q147d
+# Quest: tfr.quest643.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACgw.name=tfr.quest643.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACgw.desc=tfr.quest643.desc
 
-# Quest: tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.name=tfru.q146n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.desc=tfru.q146d
 
-# Quest: tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.name=tfru.q147n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.desc=tfru.q147d
+## Quest Line: tfr.line19.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEw.name=tfr.line19.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEw.desc=tfr.line19.desc
 
-# Quest: tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.name=tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.desc=tfru.q148d
+# Quest: tfr.quest290.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABIg.name=tfr.quest290.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABIg.desc=tfr.quest290.desc
 
-# Quest: tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.name=tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.desc=tfru.q149d
+# Quest: tfr.quest292.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABJA.name=tfr.quest292.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABJA.desc=tfr.quest292.desc
 
-# Quest: tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.name=tfru.q148n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.desc=tfru.q148d
+# Quest: tfr.quest420.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpA.name=tfr.quest420.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpA.desc=ph.empty
 
-# Quest: tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.name=tfru.q149n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.desc=tfru.q149d
+# Quest: tfr.quest421.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpQ.name=tfr.quest421.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpQ.desc=ph.empty
 
-# Quest: tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.name=tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.desc=tfru.q150d
+# Quest: tfr.quest422.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpg.name=tfr.quest422.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpg.desc=ph.empty
 
-# Quest: tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.name=tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.desc=tfru.q150d
+# Quest: tfr.quest423.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpw.name=tfr.quest423.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABpw.desc=ph.empty
 
-# Quest: tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.name=tfru.q151n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.desc=tfru.q151d
+# Quest: tfr.quest425.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABqQ.name=tfr.quest425.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABqQ.desc=ph.empty
 
-# Quest: tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.name=tfru.q150n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.desc=tfru.q150d
+# Quest: tfr.quest426.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABqg.name=tfr.quest426.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABqg.desc=ph.empty
 
-# Quest: tfru.q154n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.name=tfru.q154n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.desc=tfru.q154d
+# Quest: tfr.quest427.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABqw.name=tfr.quest427.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABqw.desc=ph.empty
 
-# Quest: tfru.q156n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.name=tfru.q156n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.desc=tfru.q156d
+# Quest: tfr.quest428.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrA.name=tfr.quest428.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrA.desc=ph.empty
 
-# Quest: tfru.q158n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.name=tfru.q158n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.desc=tfru.q158d
+# Quest: tfr.quest429.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrQ.name=tfr.quest429.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrQ.desc=tfr.quest429.desc
 
-# Quest: tfru.q159n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.name=tfru.q159n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.desc=tfru.q159d
+# Quest: tfr.quest430.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrg.name=tfr.quest430.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrg.desc=ph.empty
 
-# Quest: New Questasdasd
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.name=New Questasdasd
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.desc=No Description
+# Quest: tfr.quest431.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrw.name=tfr.quest431.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABrw.desc=ph.empty
 
-# Quest: tfru.q170n
-betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.name=tfru.q170n
-betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.desc=tfru.q170d
+# Quest: tfr.quest432.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsA.name=tfr.quest432.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsA.desc=ph.empty
 
-# Quest: tfru.q171n
-betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.name=tfru.q171n
-betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.desc=tfru.q171d
+# Quest: tfr.quest433.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsQ.name=tfr.quest433.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsQ.desc=tfr.quest433.desc
 
+# Quest: tfr.quest434.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsg.name=tfr.quest434.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsg.desc=tfr.quest434.desc
 
-## Quest Line: tfr.line14.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.name=tfr.line14.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.desc=tfr.line14.desc
+# Quest: tfr.quest435.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsw.name=tfr.quest435.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABsw.desc=tfr.quest435.desc
 
-# Quest: tfr.quest6.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.name=tfr.quest6.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.desc=tfr.quest6.desc
+# Quest: tfr.quest436.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABtA.name=tfr.quest436.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABtA.desc=tfr.quest436.desc
 
-# Quest: tfr.quest81.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.name=tfr.quest81.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.desc=tfr.quest81.desc
+# Quest: tfr.quest554.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKg.name=tfr.quest554.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKg.desc=tfr.quest554.desc
 
-# Quest: tfr.quest100.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.name=tfr.quest100.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.desc=tfr.quest100.desc
+# Quest: tfr.quest555.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKw.name=tfr.quest555.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKw.desc=tfr.quest555.desc
 
-# Quest: tfr.quest127.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.name=tfr.quest127.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.desc=tfr.quest127.desc
+# Quest: tfr.quest556.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLA.name=tfr.quest556.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLA.desc=tfr.quest556.desc
 
-# Quest: tfr.quest130.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.name=tfr.quest130.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.desc=tfr.quest130.desc
+# Quest: tfr.quest557.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLQ.name=tfr.quest557.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLQ.desc=tfr.quest557.desc
 
-# Quest: tfr.quest133.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.name=tfr.quest133.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.desc=tfr.quest133.desc
+# Quest: tfr.quest645.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAChQ.name=tfr.quest645.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAChQ.desc=tfr.quest645.desc
 
-# Quest: tfr.quest135.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.name=tfr.quest135.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=tfr.quest135.desc
+# Quest: tfr.quest646.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAChg.name=tfr.quest646.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAChg.desc=tfr.quest646.desc
 
-# Quest: tfr.quest138.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.name=tfr.quest138.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.desc=tfr.quest138.desc
+# Quest: tfr.quest647.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAChw.name=tfr.quest647.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAChw.desc=tfr.quest647.desc
 
-# Quest: tfr.quest149.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.name=tfr.quest149.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.desc=tfr.quest149.desc
-
-# Quest: tfr.quest150.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.name=tfr.quest150.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.desc=tfr.quest150.desc
-
-# Quest: tfr.quest151.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.name=tfr.quest151.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.desc=tfr.quest151.desc
-
-# Quest: tfr.quest152.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.name=tfr.quest152.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.desc=tfr.quest152.desc
-
-# Quest: tfr.quest156.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.name=tfr.quest156.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.desc=tfr.quest156.desc
-
-# Quest: tfr.quest165.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.name=tfr.quest165.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.desc=tfr.quest165.desc
-
-# Quest: tfr.quest166.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.name=tfr.quest166.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.desc=tfr.quest166.desc
-
-# Quest: tfr.quest200.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.name=tfr.quest200.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.desc=tfr.quest200.desc
-
-# Quest: tfr.quest208.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.name=tfr.quest208.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.desc=tfr.quest208.desc
-
-# Quest: tfr.quest268.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.name=tfr.quest268.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.desc=tfr.quest268.desc
-
-# Quest: tfr.quest300.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.name=tfr.quest300.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.desc=tfr.quest300.desc
-
-# Quest: tfr.quest301.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.name=tfr.quest301.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.desc=tfr.quest301.desc
-
-# Quest: tfr.quest302.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.name=tfr.quest302.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.desc=tfr.quest302.desc
-
-# Quest: tfr.quest303.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.name=tfr.quest303.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.desc=ph.empty
-
-# Quest: tfr.quest304.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.name=tfr.quest304.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.desc=tfr.quest304.desc
-
-# Quest: tfr.quest443.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.name=tfr.quest443.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.desc=tfr.quest443.desc
-
-# Quest: tfr.quest444.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.name=tfr.quest444.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.desc=tfr.quest444.desc
-
-# Quest: tfr.quest445.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.name=tfr.quest445.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.desc=tfr.quest445.desc
-
-# Quest: tfr.quest446.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.name=tfr.quest446.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.desc=tfr.quest446.desc
-
-# Quest: tfr.quest447.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.name=tfr.quest447.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.desc=tfr.quest447.desc
-
-# Quest: tfr.quest448.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.name=tfr.quest448.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.desc=tfr.quest448.desc
-
-# Quest: tfr.quest450.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.name=tfr.quest450.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.desc=ph.empty
-
-# Quest: tfr.quest451.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.name=tfr.quest451.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.desc=tfr.quest451.desc
-
-# Quest: tfr.quest452.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.name=tfr.quest452.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.desc=tfr.quest452.desc
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.desc=No Description
-
-# Quest: tfr.quest457.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.name=tfr.quest457.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.desc=tfr.quest457.desc
-
-# Quest: tfr.quest458.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.name=tfr.quest458.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.desc=tfr.quest458.desc
-
-# Quest: tfr.quest551.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.name=tfr.quest551.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.desc=tfr.quest551.desc
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.desc=No Description
+# Quest: tfr.quest424.name
+betterquesting.quest.yylA26wXTgikCWWWVO6lhQ.name=tfr.quest424.name
+betterquesting.quest.yylA26wXTgikCWWWVO6lhQ.desc=ph.empty
 
 
 ## Quest Line: tfr.line17.name
@@ -1745,18 +1433,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABhg.desc=tfr.quest390.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABjw.name=tfru.q81n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABjw.desc=tfru.q81d
 
-# Quest: tfr.quest382.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.name=tfr.quest382.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.desc=tfr.quest382.desc
-
-# Quest: tfr.quest708.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.name=tfr.quest708.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.desc=tfr.quest708.desc
-
-# Quest: tfr.quest707.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.name=tfr.quest707.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.desc=tfr.quest707.desc
-
 # Quest: tfru.q9n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6g.name=tfru.q9n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6g.desc=tfru.q9d
@@ -1768,6 +1444,18 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAC6w.desc=tfru.q10d
 # Quest: New Quest
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7A.name=New Quest
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7A.desc=No Description
+
+# Quest: tfr.quest382.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.name=tfr.quest382.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACpg.desc=tfr.quest382.desc
+
+# Quest: tfr.quest708.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.name=tfr.quest708.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACwg.desc=tfr.quest708.desc
+
+# Quest: tfr.quest707.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.name=tfr.quest707.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxA.desc=tfr.quest707.desc
 
 # Quest: tfru.q93n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADHA.name=tfru.q93n
@@ -1874,273 +1562,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADeQ.name=tfru.q141n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADeQ.desc=tfru.q141d
 
 
-## Quest Line: tfr.line15.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.name=tfr.line15.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.desc=tfr.line15.desc
-
-# Quest: tfru.q211n
-betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.name=tfru.q211n
-betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.desc=tfru.q211d
-
-# Quest: tfru.q210n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.name=tfru.q210n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.desc=tfru.q210d
-
-# Quest: tfr.quest343.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.name=tfr.quest343.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.desc=tfr.quest343.desc
-
-# Quest: tfr.quest521.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.name=tfr.quest521.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.desc=tfr.quest521.desc
-
-# Quest: tfr.quest522.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.name=tfr.quest522.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.desc=tfr.quest522.desc
-
-# Quest: tfr.quest523.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.name=tfr.quest523.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.desc=tfr.quest523.desc
-
-# Quest: tfr.quest524.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.name=tfr.quest524.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.desc=tfr.quest524.desc
-
-# Quest: tfr.quest525.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.name=tfr.quest525.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.desc=tfr.quest525.desc
-
-# Quest: tfr.quest526.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.name=tfr.quest526.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.desc=tfr.quest526.desc
-
-# Quest: tfr.quest527.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.name=tfr.quest527.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.desc=tfr.quest527.desc
-
-# Quest: tfr.quest528.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.name=tfr.quest528.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.desc=tfr.quest528.desc
-
-# Quest: tfr.quest529.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.name=tfr.quest529.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.desc=tfr.quest529.desc
-
-# Quest: tfr.quest530.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.name=tfr.quest530.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.desc=tfr.quest530.desc
-
-# Quest: tfr.quest531.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.name=tfr.quest531.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.desc=tfr.quest531.desc
-
-# Quest: tfr.quest532.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.name=tfr.quest532.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.desc=tfr.quest532.desc
-
-# Quest: tfr.quest533.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.name=tfr.quest533.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.desc=tfr.quest533.desc
-
-# Quest: tfr.quest544.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.name=tfr.quest544.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.desc=tfr.quest544.desc
-
-# Quest: tfr.quest545.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.name=tfr.quest545.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.desc=tfr.quest545.desc
-
-# Quest: tfr.quest546.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.name=tfr.quest546.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.desc=tfr.quest546.desc
-
-# Quest: tfr.quest547.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.name=tfr.quest547.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.desc=tfr.quest547.desc
-
-# Quest: tfr.quest548.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.name=tfr.quest548.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.desc=tfr.quest548.desc
-
-# Quest: tfr.quest549.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.name=tfr.quest549.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.desc=tfr.quest549.desc
-
-# Quest: tfr.quest550.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.name=tfr.quest550.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.desc=tfr.quest550.desc
-
-# Quest: tfru.q138n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.name=tfru.q138n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.desc=tfru.q138d
-
-# Quest: tfru.q212n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.name=tfru.q212n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.desc=tfru.q212d
-
-# Quest: tfru.q213n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.name=tfru.q213n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.desc=tfru.q213d
-
-# Quest: tfru.q139n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.name=tfru.q139n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.desc=tfru.q139d
-
-# Quest: tfru.q214n
-betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.name=tfru.q214n
-betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.desc=tfru.q214d
-
-# Quest: tfru.q209n
-betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.name=tfru.q209n
-betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.desc=tfru.q209d
-
-# Quest: tfru.q208n
-betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.name=tfru.q208n
-betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.desc=tfru.q208d
-
-
-## Quest Line: tfr.line12.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADA.name=tfr.line12.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAADA.desc=tfr.line12.desc
-
-# Quest: tfr.quest283.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABGw.name=tfr.quest283.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABGw.desc=tfr.quest283.desc
-
-# Quest: tfr.quest285.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABHQ.name=tfr.quest285.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABHQ.desc=tfr.quest285.desc
-
-# Quest: tfr.quest324.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRA.name=tfr.quest324.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRA.desc=tfr.quest324.desc
-
-# Quest: tfr.quest377.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABeQ.name=tfr.quest377.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABeQ.desc=tfr.quest377.desc
-
-# Quest: tfr.quest459.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByw.name=tfr.quest459.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAByw.desc=tfr.quest459.desc
-
-# Quest: tfr.quest642.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgg.name=tfr.quest642.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgg.desc=tfr.quest642.desc
-
-# Quest: tfr.quest643.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgw.name=tfr.quest643.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgw.desc=tfr.quest643.desc
-
-
-## Quest Line: tfr.line19.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEw.name=tfr.line19.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEw.desc=tfr.line19.desc
-
-# Quest: tfr.quest290.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABIg.name=tfr.quest290.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABIg.desc=tfr.quest290.desc
-
-# Quest: tfr.quest292.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABJA.name=tfr.quest292.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABJA.desc=tfr.quest292.desc
-
-# Quest: tfr.quest420.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpA.name=tfr.quest420.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpA.desc=ph.empty
-
-# Quest: tfr.quest421.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpQ.name=tfr.quest421.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpQ.desc=ph.empty
-
-# Quest: tfr.quest422.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpg.name=tfr.quest422.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpg.desc=ph.empty
-
-# Quest: tfr.quest423.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpw.name=tfr.quest423.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABpw.desc=ph.empty
-
-# Quest: tfr.quest424.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqA.name=tfr.quest424.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqA.desc=ph.empty
-
-# Quest: tfr.quest425.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqQ.name=tfr.quest425.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqQ.desc=ph.empty
-
-# Quest: tfr.quest426.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqg.name=tfr.quest426.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqg.desc=ph.empty
-
-# Quest: tfr.quest427.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqw.name=tfr.quest427.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABqw.desc=ph.empty
-
-# Quest: tfr.quest428.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrA.name=tfr.quest428.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrA.desc=ph.empty
-
-# Quest: tfr.quest429.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrQ.name=tfr.quest429.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrQ.desc=tfr.quest429.desc
-
-# Quest: tfr.quest430.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrg.name=tfr.quest430.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrg.desc=ph.empty
-
-# Quest: tfr.quest431.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrw.name=tfr.quest431.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABrw.desc=ph.empty
-
-# Quest: tfr.quest432.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsA.name=tfr.quest432.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsA.desc=ph.empty
-
-# Quest: tfr.quest433.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsQ.name=tfr.quest433.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsQ.desc=tfr.quest433.desc
-
-# Quest: tfr.quest434.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsg.name=tfr.quest434.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsg.desc=tfr.quest434.desc
-
-# Quest: tfr.quest435.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsw.name=tfr.quest435.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABsw.desc=tfr.quest435.desc
-
-# Quest: tfr.quest436.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABtA.name=tfr.quest436.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABtA.desc=tfr.quest436.desc
-
-# Quest: tfr.quest554.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKg.name=tfr.quest554.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKg.desc=tfr.quest554.desc
-
-# Quest: tfr.quest555.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKw.name=tfr.quest555.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKw.desc=tfr.quest555.desc
-
-# Quest: tfr.quest556.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLA.name=tfr.quest556.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLA.desc=tfr.quest556.desc
-
-# Quest: tfr.quest557.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLQ.name=tfr.quest557.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACLQ.desc=tfr.quest557.desc
-
-# Quest: tfr.quest645.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAChQ.name=tfr.quest645.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAChQ.desc=tfr.quest645.desc
-
-# Quest: tfr.quest646.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAChg.name=tfr.quest646.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAChg.desc=tfr.quest646.desc
-
-# Quest: tfr.quest647.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAChw.name=tfr.quest647.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAChw.desc=tfr.quest647.desc
-
-
 ## Quest Line: tfru.l1n
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGg.name=tfru.l1n
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGg.desc=tfru.l1d
@@ -2173,17 +1594,17 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABlw.desc=tfru.q200d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABmA.name=tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABmA.desc=tfru.q200d
 
-# Quest: tfru.q
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.name=tfru.q
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.desc=tfru.q
+# Quest: tfru.q195n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.name=tfru.q195n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABmg.desc=tfru.q195d
 
 # Quest: tfru.q198n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABmw.name=tfru.q198n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABmw.desc=tfru.q198d
 
-# Quest: tfru.q
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.name=tfru.q
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.desc=tfru.q
+# Quest: tfru.q196n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.name=tfru.q196n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACVA.desc=tfru.q196d
 
 # Quest: tfru.q193n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACZQ.name=tfru.q193n
@@ -2213,9 +1634,9 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADKg.desc=tfru.q202d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADKw.name=tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADKw.desc=tfru.q200d
 
-# Quest: tfru.q200n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.name=tfru.q200n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.desc=tfru.q200d
+# Quest: tfru.q227n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.name=tfru.q227n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLA.desc=tfru.q227d
 
 # Quest: tfru.q200n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADLQ.name=tfru.q200n
@@ -2230,13 +1651,21 @@ betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEg.desc=tfr.line18.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYQ.name=tfr.quest97.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAYQ.desc=tfr.quest97.desc
 
-# Quest: tfr.quest462.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.name=tfr.quest462.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.desc=tfr.quest462.desc
+# Quest: tfr.quest504.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.name=tfr.quest504.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.desc=tfr.quest504.desc
 
-# Quest: tfr.quest463.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.name=tfr.quest463.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.desc=tfr.quest463.desc
+# Quest: tfr.quest505.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.name=tfr.quest505.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.desc=tfr.quest505.desc
+
+# Quest: tfr.quest506.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.name=tfr.quest506.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.desc=tfr.quest506.desc
+
+# Quest: tfr.quest507.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.name=tfr.quest507.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.desc=tfr.quest507.desc
 
 # Quest: tfr.quest464.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB0A.name=tfr.quest464.name
@@ -2398,22 +1827,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAB9g.desc=tfr.quest502.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB9w.name=tfr.quest503.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB9w.desc=tfr.quest503.desc
 
-# Quest: tfr.quest504.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.name=tfr.quest504.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-A.desc=tfr.quest504.desc
-
-# Quest: tfr.quest505.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.name=tfr.quest505.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-Q.desc=tfr.quest505.desc
-
-# Quest: tfr.quest506.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.name=tfr.quest506.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-g.desc=tfr.quest506.desc
-
-# Quest: tfr.quest507.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.name=tfr.quest507.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAB-w.desc=tfr.quest507.desc
-
 # Quest: tfr.quest508.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_A.name=tfr.quest508.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_A.desc=tfr.quest508.desc
@@ -2429,6 +1842,14 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_g.desc=tfr.quest510.desc
 # Quest: tfr.quest511.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_w.name=tfr.quest511.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAB_w.desc=tfr.quest511.desc
+
+# Quest: tfr.quest462.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.name=tfr.quest462.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzg.desc=tfr.quest462.desc
+
+# Quest: tfr.quest463.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.name=tfr.quest463.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABzw.desc=tfr.quest463.desc
 
 # Quest: tfr.quest512.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACAA.name=tfr.quest512.name
@@ -2456,11 +1877,164 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACBQ.desc=ph.empty
 
 # Quest: tfr.quest518.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACBg.name=tfr.quest518.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACBg.desc=ph.empty
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACBg.desc=tfr.quest518.desc
 
 # Quest: tfr.quest519.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACBw.name=tfr.quest519.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACBw.desc=tfr.quest519.desc
+
+
+## Quest Line: tfr.line14.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.name=tfr.line14.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADg.desc=tfr.line14.desc
+
+# Quest: tfr.quest208.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.name=tfr.quest208.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0A.desc=tfr.quest208.desc
+
+# Quest: tfr.quest6.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.name=tfr.quest6.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAABg.desc=tfr.quest6.desc
+
+# Quest: tfr.quest81.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.name=tfr.quest81.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAUQ.desc=tfr.quest81.desc
+
+# Quest: tfr.quest100.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.name=tfr.quest100.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAZA.desc=tfr.quest100.desc
+
+# Quest: tfr.quest127.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.name=tfr.quest127.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfw.desc=tfr.quest127.desc
+
+# Quest: tfr.quest130.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.name=tfr.quest130.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAgg.desc=tfr.quest130.desc
+
+# Quest: tfr.quest133.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.name=tfr.quest133.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhQ.desc=tfr.quest133.desc
+
+# Quest: tfr.quest135.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.name=tfr.quest135.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAhw.desc=tfr.quest135.desc
+
+# Quest: tfr.quest138.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.name=tfr.quest138.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAig.desc=tfr.quest138.desc
+
+# Quest: tfr.quest149.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.name=tfr.quest149.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlQ.desc=tfr.quest149.desc
+
+# Quest: tfr.quest150.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.name=tfr.quest150.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlg.desc=tfr.quest150.desc
+
+# Quest: tfr.quest151.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.name=tfr.quest151.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAlw.desc=tfr.quest151.desc
+
+# Quest: tfr.quest152.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.name=tfr.quest152.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAmA.desc=tfr.quest152.desc
+
+# Quest: tfr.quest156.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.name=tfr.quest156.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAnA.desc=tfr.quest156.desc
+
+# Quest: tfr.quest165.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.name=tfr.quest165.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApQ.desc=tfr.quest165.desc
+
+# Quest: tfr.quest166.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.name=tfr.quest166.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAApg.desc=tfr.quest166.desc
+
+# Quest: tfr.quest200.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.name=tfr.quest200.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyA.desc=tfr.quest200.desc
+
+# Quest: tfr.quest268.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.name=tfr.quest268.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABDA.desc=tfr.quest268.desc
+
+# Quest: tfr.quest300.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.name=tfr.quest300.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLA.desc=tfr.quest300.desc
+
+# Quest: tfr.quest301.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.name=tfr.quest301.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLQ.desc=tfr.quest301.desc
+
+# Quest: tfr.quest302.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.name=tfr.quest302.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLg.desc=tfr.quest302.desc
+
+# Quest: tfr.quest303.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.name=tfr.quest303.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABLw.desc=ph.empty
+
+# Quest: tfr.quest304.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.name=tfr.quest304.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABMA.desc=tfr.quest304.desc
+
+# Quest: tfr.quest443.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.name=tfr.quest443.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABuw.desc=tfr.quest443.desc
+
+# Quest: tfr.quest444.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.name=tfr.quest444.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvA.desc=tfr.quest444.desc
+
+# Quest: tfr.quest445.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.name=tfr.quest445.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvQ.desc=tfr.quest445.desc
+
+# Quest: tfr.quest446.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.name=tfr.quest446.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvg.desc=tfr.quest446.desc
+
+# Quest: tfr.quest447.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.name=tfr.quest447.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABvw.desc=tfr.quest447.desc
+
+# Quest: tfr.quest448.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.name=tfr.quest448.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwA.desc=tfr.quest448.desc
+
+# Quest: tfr.quest450.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.name=tfr.quest450.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABwg.desc=ph.empty
+
+# Quest: tfr.quest451.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.name=tfr.quest451.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABww.desc=tfr.quest451.desc
+
+# Quest: tfr.quest452.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.name=tfr.quest452.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxA.desc=tfr.quest452.desc
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABxQ.desc=No Description
+
+# Quest: tfr.quest457.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.name=tfr.quest457.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByQ.desc=tfr.quest457.desc
+
+# Quest: tfr.quest458.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.name=tfr.quest458.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAByg.desc=tfr.quest458.desc
+
+# Quest: tfr.quest551.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.name=tfr.quest551.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJw.desc=tfr.quest551.desc
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADjg.desc=No Description
 
 
 ## Quest Line: tfr.line21.name
@@ -2667,27 +2241,22 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADJw.desc=tfr.quest732.desc
 betterquesting.quest.CLglxv1FR7KUX0DyK3CQsg.name=tfr.quest740.name
 betterquesting.quest.CLglxv1FR7KUX0DyK3CQsg.desc=tfr.quest740.desc
 
+# Quest: tfru.q247n
+betterquesting.quest.GrYsanQgQhaRVOf_FijyoQ.name=tfru.q247n
+betterquesting.quest.GrYsanQgQhaRVOf_FijyoQ.desc=tfru.q247d
 
-## Quest Line: tfr.line24.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGA.name=tfr.line24.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGA.desc=tfr.line24.desc
+# Quest: tfru.q198n
+betterquesting.quest.ocP6fZisQW-59ZyUroe9Tg.name=tfru.q198n
+betterquesting.quest.ocP6fZisQW-59ZyUroe9Tg.desc=tfru.q198d
 
-# Quest: tfr.quest640.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgA.name=tfr.quest640.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACgA.desc=tfr.quest640.desc
-
-# Quest: 行李箱
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACqA.name=行李箱
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACqA.desc=一个箱子宠物，会自动帮你吃掉附近的掉落物%n右键打开它的物品栏，shift+右键可以把它收回背包%n§8此任务是Unofficial版本特有的
+# Quest: tfru.q248n
+betterquesting.quest.tII1hrqmSWyQ8N2GEluvmQ.name=tfru.q248n
+betterquesting.quest.tII1hrqmSWyQ8N2GEluvmQ.desc=tfru.q248d
 
 
 ## Quest Line: tfr.line10.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACg.name=tfr.line10.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACg.desc=tfr.line10.desc
-
-# Quest: tfr.quest105.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.name=tfr.quest105.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.desc=tfr.quest105.desc
 
 # Quest: tfr.quest220.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3A.name=tfr.quest220.name
@@ -2725,6 +2294,10 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAA5w.desc=tfr.quest231.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6Q.name=tfr.quest233.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAA6Q.desc=tfr.quest233.desc
 
+# Quest: tfr.quest105.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.name=tfr.quest105.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAaQ.desc=tfr.quest105.desc
+
 # Quest: tfr.quest273.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABEQ.name=tfr.quest273.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABEQ.desc=tfr.quest273.desc
@@ -2761,10 +2334,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABNQ.desc=tfr.quest309.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABNg.name=tfr.quest310.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABNg.desc=tfr.quest310.desc
 
-# Quest: tfr.quest311.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABNw.name=tfr.quest311.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABNw.desc=tfr.quest311.desc
-
 # Quest: tfr.quest312.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABOA.name=tfr.quest312.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABOA.desc=tfr.quest312.desc
@@ -2785,38 +2354,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABOw.desc=tfr.quest315.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABPQ.name=tfr.quest317.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABPQ.desc=tfr.quest317.desc
 
-# Quest: tfr.quest318.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPg.name=tfr.quest318.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPg.desc=tfr.quest318.desc
-
-# Quest: tfr.quest319.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPw.name=tfr.quest319.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABPw.desc=tfr.quest319.desc
-
-# Quest: tfr.quest326.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRg.name=tfr.quest326.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRg.desc=tfr.quest326.desc
-
-# Quest: tfr.quest327.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRw.name=tfr.quest327.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABRw.desc=tfr.quest327.desc
-
-# Quest: tfr.quest328.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSA.name=tfr.quest328.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSA.desc=tfr.quest328.desc
-
-# Quest: tfr.quest329.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSQ.name=tfr.quest329.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSQ.desc=tfr.quest329.desc
-
-# Quest: tfr.quest330.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSg.name=tfr.quest330.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSg.desc=tfr.quest330.desc
-
-# Quest: tfr.quest331.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSw.name=tfr.quest331.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABSw.desc=tfr.quest331.desc
-
 # Quest: tfr.quest332.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTA.name=tfr.quest332.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTA.desc=tfr.quest332.desc
@@ -2825,94 +2362,22 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABTA.desc=tfr.quest332.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTQ.name=tfr.quest333.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTQ.desc=tfr.quest333.desc
 
-# Quest: tfr.quest339.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUw.name=tfr.quest339.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUw.desc=tfr.quest339.desc
-
-# Quest: tfr.quest340.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVA.name=tfr.quest340.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVA.desc=tfr.quest340.desc
-
-# Quest: tfr.quest341.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVQ.name=tfr.quest341.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVQ.desc=tfr.quest341.desc
-
-# Quest: tfr.quest342.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVg.name=tfr.quest342.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABVg.desc=tfr.quest342.desc
-
-# Quest: tfr.quest344.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWA.name=tfr.quest344.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWA.desc=ph.empty
-
-# Quest: tfr.quest345.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWQ.name=tfr.quest345.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWQ.desc=tfr.quest345.desc
-
-# Quest: tfr.quest346.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWg.name=tfr.quest346.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABWg.desc=tfr.quest346.desc
-
 # Quest: tfr.quest347.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABWw.name=tfr.quest347.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABWw.desc=tfr.quest347.desc
 
-# Quest: tfr.quest350.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABXg.name=tfr.quest350.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABXg.desc=tfr.quest350.desc
-
-# Quest: tfr.quest352.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYA.name=tfr.quest352.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYA.desc=tfr.quest352.desc
-
-# Quest: tfr.quest353.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYQ.name=tfr.quest353.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYQ.desc=tfr.quest353.desc
-
-# Quest: tfr.quest354.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYg.name=tfr.quest354.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYg.desc=tfr.quest354.desc
-
-# Quest: tfr.quest355.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYw.name=tfr.quest355.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABYw.desc=tfr.quest355.desc
-
-# Quest: tfr.quest356.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZA.name=tfr.quest356.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZA.desc=tfr.quest356.desc
-
-# Quest: tfr.quest357.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZQ.name=tfr.quest357.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZQ.desc=tfr.quest357.desc
-
-# Quest: tfr.quest358.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZg.name=tfr.quest358.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZg.desc=tfr.quest358.desc
-
-# Quest: tfr.quest359.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZw.name=tfr.quest359.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABZw.desc=tfr.quest359.desc
-
-# Quest: tfr.quest360.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaA.name=tfr.quest360.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaA.desc=tfr.quest360.desc
-
-# Quest: tfr.quest361.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaQ.name=tfr.quest361.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaQ.desc=tfr.quest361.desc
-
-# Quest: tfr.quest362.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABag.name=tfr.quest362.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABag.desc=tfr.quest362.desc
-
-# Quest: tfr.quest363.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaw.name=tfr.quest363.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABaw.desc=tfr.quest363.desc
+# Quest: tfru.q285n
+betterquesting.quest.ikKXtshCTaqFGjDJNXtoBg.name=tfru.q285n
+betterquesting.quest.ikKXtshCTaqFGjDJNXtoBg.desc=tfru.q285d
 
 
 ## Quest Line: tfr.line0.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAA.name=tfr.line0.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAAAA.desc=tfr.line0.desc
+
+# Quest: 测序
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.name=测序
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.desc=No Description
 
 # Quest: tfru.q47n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAMQ.name=tfru.q47n
@@ -2974,25 +2439,25 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAug.desc=tfru.q66d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAuw.name=tfru.q68n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAuw.desc=ph.empty
 
-# Quest: 测序
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.name=测序
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9w.desc=No Description
-
 # Quest: tfru.q64n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABdQ.name=tfru.q64n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABdQ.desc=tfru.q64d
 
-# Quest: tfr.quest552.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.name=tfr.quest552.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.desc=tfr.quest552.desc
+# Quest: 创造变异条件
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.name=创造变异条件
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.desc=No Description
 
-# Quest: tfru.q62n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.name=tfru.q62n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.desc=tfru.q62d
+# Quest: 加速变异
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.name=加速变异
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.desc=No Description
 
-# Quest: tfru.q60n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.name=tfru.q60n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.desc=ph.empty
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.desc=No Description
+
+# Quest: tfru.q69n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.name=tfru.q69n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.desc=ph.empty
 
 # Quest: tfru.q59n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8A.name=tfru.q59n
@@ -3014,21 +2479,17 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAC9g.desc=No Description
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC9w.name=训练
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC9w.desc=No Description
 
-# Quest: 创造变异条件
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.name=创造变异条件
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-A.desc=No Description
+# Quest: tfr.quest552.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.name=tfr.quest552.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKA.desc=tfr.quest552.desc
 
-# Quest: 加速变异
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.name=加速变异
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-Q.desc=No Description
+# Quest: tfru.q62n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.name=tfru.q62n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACKQ.desc=tfru.q62d
 
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-g.desc=No Description
-
-# Quest: tfru.q69n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.name=tfru.q69n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC-w.desc=ph.empty
+# Quest: tfru.q60n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.name=tfru.q60n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACTg.desc=ph.empty
 
 # Quest: 培养
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC_A.name=培养
@@ -3071,9 +2532,476 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADBQ.name=tfru.q71n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADBQ.desc=tfru.q71d
 
 
+## Quest Line: tfru.l2n
+betterquesting.questline.Mh_NrUeMTxugp0XrI7Gg0w.name=tfru.l2n
+betterquesting.questline.Mh_NrUeMTxugp0XrI7Gg0w.desc=tfru.l2d
+
+# Quest: tfru.q269n
+betterquesting.quest.-FU0ekZAT-2WaIfK2OP-mQ.name=tfru.q269n
+betterquesting.quest.-FU0ekZAT-2WaIfK2OP-mQ.desc=tfru.q269d
+
+# Quest: tfru.q265n
+betterquesting.quest.1AGXIF2oTRS5gLxbvNuVdQ.name=tfru.q265n
+betterquesting.quest.1AGXIF2oTRS5gLxbvNuVdQ.desc=tfru.q265d
+
+# Quest: tfru.q272n
+betterquesting.quest.28GqByiUQiaDHLzkp9tk3g.name=tfru.q272n
+betterquesting.quest.28GqByiUQiaDHLzkp9tk3g.desc=tfru.q272d
+
+# Quest: tfru.q281n
+betterquesting.quest.4iGcz5GiT2ummVtWlDaM9A.name=tfru.q281n
+betterquesting.quest.4iGcz5GiT2ummVtWlDaM9A.desc=tfru.q281d
+
+# Quest: LU2QU
+betterquesting.quest.4i_ExpDVRAGUQW7oupUe3g.name=LU2QU
+betterquesting.quest.4i_ExpDVRAGUQW7oupUe3g.desc=No Description
+
+# Quest: tfru.q264n
+betterquesting.quest.5D90DE8sScujIa_jLjqx3g.name=tfru.q264n
+betterquesting.quest.5D90DE8sScujIa_jLjqx3g.desc=tfru.q264d
+
+# Quest: RF2HU
+betterquesting.quest.5YcpqhVXRoKB80hnT5LkUA.name=RF2HU
+betterquesting.quest.5YcpqhVXRoKB80hnT5LkUA.desc=No Description
+
+# Quest: tfru.q263n
+betterquesting.quest.896HigGUTLa8Op2wBJiHqA.name=tfru.q263n
+betterquesting.quest.896HigGUTLa8Op2wBJiHqA.desc=tfru.q263d
+
+# Quest: tfr.quest74.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.name=tfr.quest74.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAASg.desc=tfr.quest74.desc
+
+# Quest: tfru.q174n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.name=tfru.q174n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiA.desc=tfru.q174d
+
+# Quest: tfru.q175n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.name=tfru.q175n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiQ.desc=tfru.q175d
+
+# Quest: tfru.q253n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.name=tfru.q253n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADig.desc=tfru.q253d
+
+# Quest: tfru.q279n
+betterquesting.quest.CqGz7lUlSG2o3LcaOJxJQA.name=tfru.q279n
+betterquesting.quest.CqGz7lUlSG2o3LcaOJxJQA.desc=tfru.q279d
+
+# Quest: tfru.q274n
+betterquesting.quest.EIcmkI2vQoCDu_eaejzAig.name=tfru.q274n
+betterquesting.quest.EIcmkI2vQoCDu_eaejzAig.desc=tfru.q274d
+
+# Quest: Wire
+betterquesting.quest.H0SdQjDqQWeDMpBR92EXcA.name=Wire
+betterquesting.quest.H0SdQjDqQWeDMpBR92EXcA.desc=No Description
+
+# Quest: tfru.q278n
+betterquesting.quest.IalEVQJOSzmZbt7vO7bHXQ.name=tfru.q278n
+betterquesting.quest.IalEVQJOSzmZbt7vO7bHXQ.desc=tfru.q278d
+
+# Quest: RF2CU
+betterquesting.quest.IexuSJH0QB-8a6AxSnyRWA.name=RF2CU
+betterquesting.quest.IexuSJH0QB-8a6AxSnyRWA.desc=No Description
+
+# Quest: RF2KU
+betterquesting.quest.OLC4hGh-RvqtKvKm9weHYw.name=RF2KU
+betterquesting.quest.OLC4hGh-RvqtKvKm9weHYw.desc=No Description
+
+# Quest: tfru.q273n
+betterquesting.quest.OUinxG1OQVGjXvSU41fkvA.name=tfru.q273n
+betterquesting.quest.OUinxG1OQVGjXvSU41fkvA.desc=tfru.q273d
+
+# Quest: tfru.q275n
+betterquesting.quest.R-zyn3KiTp68q0FP0JQJKA.name=tfru.q275n
+betterquesting.quest.R-zyn3KiTp68q0FP0JQJKA.desc=tfru.q275d
+
+# Quest: tfru.q266n
+betterquesting.quest.Uk0NvPWUQS2mqzIR0WXCMQ.name=tfru.q266n
+betterquesting.quest.Uk0NvPWUQS2mqzIR0WXCMQ.desc=tfru.q266d
+
+# Quest: LiquidBattery
+betterquesting.quest.WezOU4k7SOOme6ytLxuP5Q.name=LiquidBattery
+betterquesting.quest.WezOU4k7SOOme6ytLxuP5Q.desc=No Description
+
+# Quest: LU2EU
+betterquesting.quest.XqGVvb9mRv2QDBEqyfaZsw.name=LU2EU
+betterquesting.quest.XqGVvb9mRv2QDBEqyfaZsw.desc=No Description
+
+# Quest: tfru.q262n
+betterquesting.quest._2aFKsoFQRik7MMZed0O8Q.name=tfru.q262n
+betterquesting.quest._2aFKsoFQRik7MMZed0O8Q.desc=tfru.q262d
+
+# Quest: tfru.q224n
+betterquesting.quest.ceSPniAwRjOGQsX46MVslg.name=tfru.q224n
+betterquesting.quest.ceSPniAwRjOGQsX46MVslg.desc=tfru.q224d
+
+# Quest: tfru.q271n
+betterquesting.quest.cm7FKcA-Tl6BZ9SsnCBPFg.name=tfru.q271n
+betterquesting.quest.cm7FKcA-Tl6BZ9SsnCBPFg.desc=tfru.q271d
+
+# Quest: tfru.q270n
+betterquesting.quest.dtwQqEAuTrWWnDqwvgVFLg.name=tfru.q270n
+betterquesting.quest.dtwQqEAuTrWWnDqwvgVFLg.desc=tfru.q270d
+
+# Quest: LongDistance
+betterquesting.quest.hE1faNqBTMKDS3zRRYn1fg.name=LongDistance
+betterquesting.quest.hE1faNqBTMKDS3zRRYn1fg.desc=No Description
+
+# Quest: RF2MU
+betterquesting.quest.iDRkLN1VRuGfm7KWi_C6Dg.name=RF2MU
+betterquesting.quest.iDRkLN1VRuGfm7KWi_C6Dg.desc=No Description
+
+# Quest: tfru.q280n
+betterquesting.quest.jIlwihErTqeYBsf8hmnxVQ.name=tfru.q280n
+betterquesting.quest.jIlwihErTqeYBsf8hmnxVQ.desc=tfru.q280d
+
+# Quest: tfru.q277n
+betterquesting.quest.kBYhF56jScax1oBWZKoU0Q.name=tfru.q277n
+betterquesting.quest.kBYhF56jScax1oBWZKoU0Q.desc=tfru.q277d
+
+# Quest: tfru.q261n
+betterquesting.quest.kyN5k7CfSmCxCJBpl1-DYw.name=tfru.q261n
+betterquesting.quest.kyN5k7CfSmCxCJBpl1-DYw.desc=tfru.q261d
+
+# Quest: tfru.q275n
+betterquesting.quest.mqeLOqJrQxy7jn_wySs-yQ.name=tfru.q275n
+betterquesting.quest.mqeLOqJrQxy7jn_wySs-yQ.desc=tfru.q275d
+
+# Quest: tfru.q258n
+betterquesting.quest.nBpmxOG8TpegKakeI-Q9jg.name=tfru.q258n
+betterquesting.quest.nBpmxOG8TpegKakeI-Q9jg.desc=tfru.q258d
+
+# Quest: tfru.q276n
+betterquesting.quest.qbxxuaAUQBy10Duu1cK3Kg.name=tfru.q276n
+betterquesting.quest.qbxxuaAUQBy10Duu1cK3Kg.desc=tfru.q276d
+
+# Quest: tfru.q260n
+betterquesting.quest.tj2RHEyLSWOVXSk7eYHuYg.name=tfru.q260n
+betterquesting.quest.tj2RHEyLSWOVXSk7eYHuYg.desc=tfru.q260d
+
+# Quest: LUBattery
+betterquesting.quest.v3vN1Lh8TMquvwf3QzpfBg.name=LUBattery
+betterquesting.quest.v3vN1Lh8TMquvwf3QzpfBg.desc=No Description
+
+# Quest: tfru.q257n
+betterquesting.quest.x4PXrJxMQWObVinuSYlGwg.name=tfru.q257n
+betterquesting.quest.x4PXrJxMQWObVinuSYlGwg.desc=tfru.q257d
+
+# Quest: tfru.q259n
+betterquesting.quest.yK0ufRTdRf-94TvvxT2Hnw.name=tfru.q259n
+betterquesting.quest.yK0ufRTdRf-94TvvxT2Hnw.desc=tfru.q259d
+
+
+## Quest Line: tfr.line11.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.name=tfr.line11.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAACw.desc=tfr.line11.desc
+
+# Quest: tfru.q121n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.name=tfru.q121n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-g.desc=tfru.q121d
+
+# Quest: tfru.q122n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.name=tfru.q122n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-w.desc=tfru.q122d
+
+# Quest: tfru.q116n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.name=tfru.q116n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA0w.desc=tfru.q116d
+
+# Quest: tfru.q117n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.name=tfru.q117n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7g.desc=tfru.q117d
+
+# Quest: tfru.q120n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.name=tfru.q120n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7w.desc=tfru.q120d
+
+# Quest: tfru.q118n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.name=tfru.q118n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8Q.desc=tfru.q118d
+
+# Quest: tfru.q119n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.name=tfru.q119n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8g.desc=tfru.q119n
+
+# Quest: tfru.q115n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.name=tfru.q115n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAACQ.desc=tfru.q115d
+
+# Quest: tfru.q114n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.name=tfru.q114n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAPw.desc=tfru.q114d
+
+# Quest: tfru.q113n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.name=tfru.q113n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAARw.desc=tfru.q113d
+
+# Quest: tfru.q123n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.name=tfru.q123n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCA.desc=tfru.q123d
+
+# Quest: tfru.q124n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.name=tfru.q124n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABCQ.desc=tfru.q124d
+
+# Quest: tfru.q125n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.name=tfru.q125n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACLg.desc=tfru.q125d
+
+# Quest: tfru.q126n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.name=tfru.q126n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnQ.desc=tfru.q126d
+
+# Quest: tfru.q127n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.name=tfru.q127n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACnw.desc=tfru.q127d
+
+# Quest: tfru.q129n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.name=tfru.q129n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACog.desc=tfru.q129d
+
+# Quest: tfru.q130n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.name=tfru.q130n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADPw.desc=tfru.q130d
+
+# Quest: tfru.q131n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.name=tfru.q131n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADQA.desc=tfru.q131d
+
+# Quest: tfru.q133n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.name=tfru.q133n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADRw.desc=tfru.q133d
+
+# Quest: tfru.q132n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.name=tfru.q132n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADTw.desc=tfru.q132d
+
+# Quest: tfru.q134n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.name=tfru.q134n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVQ.desc=tfru.q134d
+
+# Quest: tfru.q136n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.name=tfru.q136n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVw.desc=tfru.q136d
+
+# Quest: tfru.q137n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.name=tfru.q137n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWA.desc=tfru.q137d
+
+# Quest: tfru.q225n
+betterquesting.quest.LmgC58v6TkOE3CJpxuUxiA.name=tfru.q225n
+betterquesting.quest.LmgC58v6TkOE3CJpxuUxiA.desc=tfru.q225d
+
+# Quest: tfru.q243n
+betterquesting.quest.ZJRQnOliSiqYyd3sFTw6MQ.name=tfru.q243n
+betterquesting.quest.ZJRQnOliSiqYyd3sFTw6MQ.desc=tfru.q243d
+
+# Quest: tfru.q242n
+betterquesting.quest.oETLC4OqSnuXemk2EZAL3w.name=tfru.q242n
+betterquesting.quest.oETLC4OqSnuXemk2EZAL3w.desc=tfru.q242d
+
+# Quest: tfru.q255n
+betterquesting.quest.ssK5dLFwRciLsxiJFG8R3g.name=tfru.q255n
+betterquesting.quest.ssK5dLFwRciLsxiJFG8R3g.desc=tfru.q255d
+
+# Quest: tfru.q128n
+betterquesting.quest.z1xdFZ1ESWKXOYN09R9dEw.name=tfru.q128n
+betterquesting.quest.z1xdFZ1ESWKXOYN09R9dEw.desc=tfru.q128d
+
+
+## Quest Line: tfr.line4.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.name=tfr.line4.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAABA.desc=tfr.line4.desc
+
+# Quest: tfru.q167n
+betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.name=tfru.q167n
+betterquesting.quest.4lx3e8j_SjurBIn8HtDGjg.desc=tfru.q167d
+
+# Quest: tfru.q145n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.name=tfru.q145n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-Q.desc=tfru.q145d
+
+# Quest: tfr.quest236.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.name=tfr.quest236.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7A.desc=tfr.quest236.desc
+
+# Quest: tfr.quest237.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.name=tfr.quest237.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA7Q.desc=tfr.quest237.desc
+
+# Quest: tfru.q161n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.name=tfru.q161n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA8w.desc=tfru.q161d
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_Q.desc=No Description
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_w.desc=No Description
+
+# Quest: tfru.q160n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.name=tfru.q160n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcQ.desc=tfru.q160d
+
+# Quest: tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.name=tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAcw.desc=tfru.q151d
+
+# Quest: tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.name=tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdA.desc=tfru.q151d
+
+# Quest: tfru.q153n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.name=tfru.q153n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAdQ.desc=tfru.q153d
+
+# Quest: tfru.q2
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.name=tfru.q2
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjA.desc=tfru.q
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAA.desc=No Description
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAQ.desc=No Description
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABAg.desc=No Description
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQw.desc=No Description
+
+# Quest: tfru.q144n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.name=tfru.q144n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWQ.desc=tfru.q144d
+
+# Quest: tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.name=tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWg.desc=tfru.q146d
+
+# Quest: tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.name=tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADWw.desc=tfru.q147d
+
+# Quest: tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.name=tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXA.desc=tfru.q148d
+
+# Quest: tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.name=tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXQ.desc=tfru.q149d
+
+# Quest: tfru.q152n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.name=tfru.q152n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXg.desc=tfru.q152d
+
+# Quest: tfru.q157n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.name=tfru.q157n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYA.desc=tfru.q157d
+
+# Quest: tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.name=tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYQ.desc=tfru.q146d
+
+# Quest: tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.name=tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYg.desc=tfru.q147d
+
+# Quest: tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.name=tfru.q146n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADYw.desc=tfru.q146d
+
+# Quest: tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.name=tfru.q147n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZA.desc=tfru.q147d
+
+# Quest: tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.name=tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZQ.desc=tfru.q148d
+
+# Quest: tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.name=tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZg.desc=tfru.q149d
+
+# Quest: tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.name=tfru.q148n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADZw.desc=tfru.q148d
+
+# Quest: tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.name=tfru.q149n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaA.desc=tfru.q149d
+
+# Quest: tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.name=tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaQ.desc=tfru.q150d
+
+# Quest: tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.name=tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADag.desc=tfru.q150d
+
+# Quest: tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.name=tfru.q151n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADaw.desc=tfru.q151d
+
+# Quest: tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.name=tfru.q150n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbA.desc=tfru.q150d
+
+# Quest: tfru.q154n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.name=tfru.q154n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADbQ.desc=tfru.q154d
+
+# Quest: tfru.q156n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.name=tfru.q156n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcA.desc=tfru.q156d
+
+# Quest: tfru.q158n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.name=tfru.q158n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADcQ.desc=tfru.q158d
+
+# Quest: New Questasdasd
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.name=New Questasdasd
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdQ.desc=No Description
+
+# Quest: tfru.q170n
+betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.name=tfru.q170n
+betterquesting.quest.PfkRf6SHQJG6zAjiRvVTdg.desc=tfru.q170d
+
+# Quest: tfru.q171n
+betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.name=tfru.q171n
+betterquesting.quest.Z6pgMNHvRXeKf6dOe-We5g.desc=tfru.q171d
+
+# Quest: tfru.q169n
+betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.name=tfru.q169n
+betterquesting.quest.yC1qenasQtW2i3EZMZbYpQ.desc=tfru.q169d
+
+# Quest: tfru.q166n
+betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.name=tfru.q166n
+betterquesting.quest.yMESgoqoRpyYpoeZIJlbSA.desc=tfru.q166d
+
+
 ## Quest Line: tfr.line6.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABg.name=tfr.line6.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAABg.desc=tfr.line6.desc
+
+# Quest: tfr.quest336.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.name=tfr.quest336.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.desc=tfr.quest336.desc
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.desc=No Description
+
+# Quest: tfru.q143n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.name=tfru.q143n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.desc=tfru.q143d
 
 # Quest: tfr.quest189.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAvQ.name=tfr.quest189.name
@@ -3111,18 +3039,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAxA.desc=tfr.quest196.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAxQ.name=tfr.quest197.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAxQ.desc=tfr.quest197.desc
 
-# Quest: tfr.quest336.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.name=tfr.quest336.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA-A.desc=tfr.quest336.desc
-
-# Quest: New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.name=New Quest
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_A.desc=No Description
-
-# Quest: tfru.q143n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.name=tfru.q143n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA_g.desc=tfru.q143d
-
 # Quest: tfr.quest334.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTg.name=tfr.quest334.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABTg.desc=ph.empty
@@ -3134,10 +3050,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABTw.desc=ph.empty
 # Quest: tfr.quest336.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABUA.name=tfr.quest336.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABUA.desc=tfr.quest336.desc
-
-# Quest: tfr.quest337.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.name=tfr.quest337.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.desc=tfr.quest337.desc
 
 # Quest: New Quest
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABbA.name=New Quest
@@ -3202,6 +3114,127 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAADcw.desc=No Description
 # Quest: tfru.q142n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADew.name=tfru.q142n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADew.desc=tfru.q142d
+
+
+## Quest Line: tfr.line15.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.name=tfr.line15.name
+betterquesting.questline.AAAAAAAAAAAAAAAAAAAADw.desc=tfr.line15.desc
+
+# Quest: tfru.q211n
+betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.name=tfru.q211n
+betterquesting.quest.-Op9uo3_TMKPCrWOMe_LBQ.desc=tfru.q211d
+
+# Quest: tfru.q210n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.name=tfru.q210n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA9A.desc=tfru.q210d
+
+# Quest: tfr.quest343.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.name=tfr.quest343.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABVw.desc=tfr.quest343.desc
+
+# Quest: tfr.quest521.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.name=tfr.quest521.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCQ.desc=tfr.quest521.desc
+
+# Quest: tfr.quest522.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.name=tfr.quest522.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCg.desc=tfr.quest522.desc
+
+# Quest: tfr.quest524.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.name=tfr.quest524.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDA.desc=tfr.quest524.desc
+
+# Quest: tfr.quest525.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.name=tfr.quest525.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDQ.desc=tfr.quest525.desc
+
+# Quest: tfr.quest526.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.name=tfr.quest526.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDg.desc=tfr.quest526.desc
+
+# Quest: tfr.quest527.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.name=tfr.quest527.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACDw.desc=tfr.quest527.desc
+
+# Quest: tfr.quest528.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.name=tfr.quest528.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEA.desc=tfr.quest528.desc
+
+# Quest: tfr.quest529.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.name=tfr.quest529.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEQ.desc=tfr.quest529.desc
+
+# Quest: tfr.quest530.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.name=tfr.quest530.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEg.desc=tfr.quest530.desc
+
+# Quest: tfr.quest531.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.name=tfr.quest531.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACEw.desc=tfr.quest531.desc
+
+# Quest: tfr.quest532.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.name=tfr.quest532.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFA.desc=tfr.quest532.desc
+
+# Quest: tfr.quest533.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.name=tfr.quest533.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACFQ.desc=tfr.quest533.desc
+
+# Quest: tfr.quest544.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.name=tfr.quest544.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIA.desc=tfr.quest544.desc
+
+# Quest: tfr.quest545.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.name=tfr.quest545.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIQ.desc=tfr.quest545.desc
+
+# Quest: tfr.quest546.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.name=tfr.quest546.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIg.desc=tfr.quest546.desc
+
+# Quest: tfr.quest547.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.name=tfr.quest547.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACIw.desc=tfr.quest547.desc
+
+# Quest: tfr.quest548.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.name=tfr.quest548.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJA.desc=tfr.quest548.desc
+
+# Quest: tfr.quest549.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.name=tfr.quest549.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJQ.desc=tfr.quest549.desc
+
+# Quest: tfr.quest550.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.name=tfr.quest550.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACJg.desc=tfr.quest550.desc
+
+# Quest: tfru.q138n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.name=tfru.q138n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADLg.desc=tfru.q138d
+
+# Quest: tfru.q212n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.name=tfru.q212n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMQ.desc=tfru.q212d
+
+# Quest: tfru.q213n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.name=tfru.q213n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADMg.desc=tfru.q213d
+
+# Quest: tfru.q139n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.name=tfru.q139n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADNA.desc=tfru.q139d
+
+# Quest: tfru.q214n
+betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.name=tfru.q214n
+betterquesting.quest.C6MzlH35TdCL_wL4_v9EXg.desc=tfru.q214d
+
+# Quest: tfru.q209n
+betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.name=tfru.q209n
+betterquesting.quest.EDr-0jV0QEes2JKXY42ZWg.desc=tfru.q209d
+
+# Quest: tfru.q208n
+betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.name=tfru.q208n
+betterquesting.quest.KmJrvBS_S1S3zkJC8rlWWg.desc=tfru.q208d
 
 
 ## Quest Line: tfr.line23.name
@@ -3317,144 +3350,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAACww.name=tfr.quest706.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACww.desc=tfr.quest706.desc
 
 
-## Quest Line: tfr.line9.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACQ.name=tfr.line9.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAACQ.desc=tfr.line9.desc
-
-# Quest: tfr.quest67.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQw.name=tfr.quest67.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAQw.desc=tfr.quest67.desc
-
-# Quest: tfr.quest110.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAbg.name=tfr.quest110.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAbg.desc=tfr.quest110.desc
-
-# Quest: tfr.quest143.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.name=tfr.quest143.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjw.desc=tfr.quest143.desc
-
-# Quest: tfr.quest144.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.name=tfr.quest144.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkA.desc=tfr.quest144.desc
-
-# Quest: tfr.quest146.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkg.name=tfr.quest146.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkg.desc=tfr.quest146.desc
-
-# Quest: tfr.quest147.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.name=tfr.quest147.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkw.desc=tfr.quest147.desc
-
-# Quest: tfr.quest169.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqQ.name=tfr.quest169.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqQ.desc=tfr.quest169.desc
-
-# Quest: tfr.quest171.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqw.name=tfr.quest171.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAqw.desc=tfr.quest171.desc
-
-# Quest: tfr.quest172.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArA.name=tfr.quest172.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArA.desc=tfr.quest172.desc
-
-# Quest: tfr.quest174.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArg.name=tfr.quest174.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAArg.desc=tfr.quest174.desc
-
-# Quest: tfr.quest176.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsA.name=tfr.quest176.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsA.desc=tfr.quest176.desc
-
-# Quest: tfr.quest177.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsQ.name=tfr.quest177.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAsQ.desc=tfr.quest177.desc
-
-# Quest: tfr.quest181.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAtQ.name=tfr.quest181.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAtQ.desc=tfr.quest181.desc
-
-# Quest: tfr.quest188.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAvA.name=tfr.quest188.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAvA.desc=tfr.quest188.desc
-
-
-## Quest Line: tfr.line25.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGQ.name=tfr.line25.name
-betterquesting.questline.AAAAAAAAAAAAAAAAAAAAGQ.desc=tfr.line25.desc
-
-# Quest: tfr.quest142.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.name=tfr.quest142.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAjg.desc=ph.empty
-
-# Quest: tfr.quest145.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkQ.name=tfr.quest145.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAkQ.desc=ph.empty
-
-# Quest: tfr.quest282.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABGg.name=tfr.quest282.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAABGg.desc=tfr.quest282.desc
-
-# Quest: tfr.quest650.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACig.name=tfr.quest650.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACig.desc=ph.empty
-
-# Quest: tfr.quest651.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACiw.name=tfr.quest651.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACiw.desc=ph.empty
-
-# Quest: tfr.quest652.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjA.name=tfr.quest652.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjA.desc=ph.empty
-
-# Quest: tfr.quest653.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjQ.name=tfr.quest653.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjQ.desc=ph.empty
-
-# Quest: tfr.quest654.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjg.name=tfr.quest654.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjg.desc=ph.empty
-
-# Quest: tfr.quest655.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjw.name=tfr.quest655.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACjw.desc=ph.empty
-
-# Quest: tfr.quest656.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkA.name=tfr.quest656.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkA.desc=ph.empty
-
-# Quest: tfr.quest657.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkQ.name=tfr.quest657.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkQ.desc=ph.empty
-
-# Quest: tfr.quest658.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkg.name=tfr.quest658.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkg.desc=ph.empty
-
-# Quest: tfr.quest659.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkw.name=tfr.quest659.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACkw.desc=ph.empty
-
-# Quest: tfr.quest663.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAClw.name=tfr.quest663.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAClw.desc=ph.empty
-
-# Quest: tfr.quest664.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmA.name=tfr.quest664.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmA.desc=ph.empty
-
-# Quest: tfr.quest665.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmQ.name=tfr.quest665.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmQ.desc=tfr.quest665.desc
-
-# Quest: tfr.quest666.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmg.name=tfr.quest666.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACmg.desc=ph.empty
-
-# Quest: tfr.quest676.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpA.name=tfr.quest676.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACpA.desc=tfr.quest676.desc
-
-
 ## Quest Line: tfr.line8.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACA.name=tfr.line8.name
 betterquesting.questline.AAAAAAAAAAAAAAAAAAAACA.desc=tfr.line8.desc
@@ -3478,10 +3373,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfA.desc=tfr.quest124.desc
 # Quest: tfr.quest125.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfQ.name=tfr.quest125.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfQ.desc=tfr.quest125.desc
-
-# Quest: tfr.quest126.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.name=tfr.quest126.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.desc=tfr.quest126.desc
 
 # Quest: tfr.quest534.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAACFg.name=tfr.quest534.name
@@ -3531,50 +3422,6 @@ betterquesting.questline.AAAAAAAAAAAAAAAAAAAAEA.desc=tfr.line16.desc
 # Quest: tfru.q8n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABbw.name=tfru.q8n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABbw.desc=tfru.q8d
-
-# Quest: tfru.q27n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.name=tfru.q27n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.desc=tfru.q27d
-
-# Quest: tfru.q45n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.name=tfru.q45n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.desc=tfru.q45d
-
-# Quest: tfru.q1n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.name=tfru.q1n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.desc=tfru.q1d
-
-# Quest: tfru.q2n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.name=tfru.q2n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.desc=tfru.q2d
-
-# Quest: tfru.q3n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.name=tfru.q3n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.desc=tfru.q3d
-
-# Quest: tfru.q30n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.name=tfru.q30n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.desc=tfru.q30d
-
-# Quest: tfru.q28n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.name=tfru.q28n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.desc=tfru.q28d
-
-# Quest: tfru.q25n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.name=tfru.q25n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.desc=tfru.q25d
-
-# Quest: tfru.q29n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.name=tfru.q29n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.desc=tfru.q29d
-
-# Quest: tfru.q5n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.name=tfru.q5n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.desc=tfru.q5d
-
-# Quest: tfru.q41n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.name=tfru.q41n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.desc=tfru.q41d
 
 # Quest: tfru.q42n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC0A.name=tfru.q42n
@@ -3684,14 +3531,6 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7Q.desc=tfru.q4d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7g.name=tfru.q44n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7g.desc=tfru.q44d
 
-# Quest: tfru.q11n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.name=tfru.q11n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.desc=tfru.q11d
-
-# Quest: tfru.q12n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8Q.name=tfru.q12n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8Q.desc=tfru.q12d
-
 # Quest: tfru.q13n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8g.name=tfru.q13n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8g.desc=tfru.q13d
@@ -3700,12 +3539,100 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8g.desc=tfru.q13d
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8w.name=tfru.q14n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAC8w.desc=tfru.q14d
 
+# Quest: tfru.q27n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.name=tfru.q27n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxQ.desc=tfru.q27d
+
+# Quest: tfru.q45n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.name=tfru.q45n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxg.desc=tfru.q45d
+
+# Quest: tfru.q1n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.name=tfru.q1n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACxw.desc=tfru.q1d
+
+# Quest: tfru.q2n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.name=tfru.q2n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyA.desc=tfru.q2d
+
+# Quest: tfru.q3n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.name=tfru.q3n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyQ.desc=tfru.q3d
+
+# Quest: tfru.q30n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.name=tfru.q30n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyg.desc=tfru.q30d
+
+# Quest: tfru.q28n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.name=tfru.q28n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACyw.desc=tfru.q28d
+
+# Quest: tfru.q25n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.name=tfru.q25n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzA.desc=tfru.q25d
+
+# Quest: tfru.q29n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.name=tfru.q29n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzQ.desc=tfru.q29d
+
+# Quest: tfru.q5n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.name=tfru.q5n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzg.desc=tfru.q5d
+
+# Quest: tfru.q41n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.name=tfru.q41n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACzw.desc=tfru.q41d
+
 
 ### Quests in multiple quest lines ###
+
+# Quest: tfru.q251n
+betterquesting.quest.0paHItLkRe2R_btwK5rn6Q.name=tfru.q251n
+betterquesting.quest.0paHItLkRe2R_btwK5rn6Q.desc=tfru.q251d
+
+# Quest: tfr.quest216.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.name=tfr.quest216.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.desc=tfr.quest216.desc
+
+# Quest: tfr.quest221.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.name=tfr.quest221.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAA3Q.desc=tfr.quest221.desc
 
 # Quest: tfr.quest5.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.name=tfr.quest5.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAABQ.desc=tfr.quest5.desc
+
+# Quest: tfr.quest12.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.name=tfr.quest12.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAADA.desc=tfr.quest12.desc
+
+# Quest: tfr.quest17.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.name=tfr.quest17.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAEQ.desc=tfr.quest17.desc
+
+# Quest: tfru.q106n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.name=tfru.q106n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAFw.desc=tfru.q106d
+
+# Quest: tfr.quest27.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.name=tfr.quest27.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAGw.desc=tfr.quest27.desc
+
+# Quest: tfr.quest33.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.name=tfr.quest33.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAIQ.desc=tfr.quest33.desc
+
+# Quest: tfr.quest44.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.name=tfr.quest44.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAALA.desc=tfr.quest44.desc
+
+# Quest: tfr.quest106.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.name=tfr.quest106.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAag.desc=tfr.quest106.desc
+
+# Quest: tfr.quest126.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.name=tfr.quest126.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAAfg.desc=tfr.quest126.desc
 
 # Quest: tfr.quest202.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyg.name=tfr.quest202.name
@@ -3715,13 +3642,25 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAAAyg.desc=tfr.quest202.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzw.name=tfr.quest207.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAAAzw.desc=tfr.quest207.desc
 
-# Quest: tfr.quest216.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.name=tfr.quest216.name
-betterquesting.quest.AAAAAAAAAAAAAAAAAAAA2A.desc=tfr.quest216.desc
-
 # Quest: tfr.quest299.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABKw.name=tfr.quest299.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABKw.desc=tfr.quest299.desc
+
+# Quest: New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.name=New Quest
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABQg.desc=No Description
+
+# Quest: tfr.quest337.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.name=tfr.quest337.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABUQ.desc=tfr.quest337.desc
+
+# Quest: tfru.q74n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.name=tfru.q74n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABjA.desc=tfru.q74d
+
+# Quest: tfru.q112n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.name=tfru.q112n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAABog.desc=tfru.q112d
 
 # Quest: tfr.quest442.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABug.name=tfr.quest442.name
@@ -3731,25 +3670,89 @@ betterquesting.quest.AAAAAAAAAAAAAAAAAAABug.desc=tfr.quest442.desc
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABxw.name=tfr.quest455.name
 betterquesting.quest.AAAAAAAAAAAAAAAAAAABxw.desc=tfr.quest455.desc
 
+# Quest: tfru.q11n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.name=tfru.q11n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAAC7w.desc=tfru.q11d
+
+# Quest: tfr.quest523.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.name=tfr.quest523.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACCw.desc=tfr.quest523.desc
+
+# Quest: tfr.quest565.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.name=tfr.quest565.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNQ.desc=tfr.quest565.desc
+
+# Quest: tfr.quest567.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.name=tfr.quest567.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACNw.desc=tfr.quest567.desc
+
+# Quest: tfr.quest571.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.name=tfr.quest571.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACOw.desc=tfr.quest571.desc
+
+# Quest: tfr.quest572.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.name=tfr.quest572.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPA.desc=tfr.quest572.desc
+
+# Quest: tfr.quest573.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.name=tfr.quest573.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACPQ.desc=tfr.quest573.desc
+
+# Quest: tfr.quest593.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.name=tfr.quest593.name
+betterquesting.quest.AAAAAAAAAAAAAAAAAAACUQ.desc=tfr.quest593.desc
+
 # Quest: tfru.q197n
 betterquesting.quest.AAAAAAAAAAAAAAAAAAADIA.name=tfru.q197n
-betterquesting.quest.AAAAAAAAAAAAAAAAAAADIA.desc=tfru.q197n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADIA.desc=tfru.q197d
+
+# Quest: tfru.q135n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.name=tfru.q135n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADVg.desc=tfru.q135d
+
+# Quest: tfru.q155n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.name=tfru.q155n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADXw.desc=tfru.q155d
+
+# Quest: tfru.q159n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.name=tfru.q159n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADdA.desc=tfru.q159d
+
+# Quest: tfru.q173n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.name=tfru.q173n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADeg.desc=tfru.q173d
+
+# Quest: tfru.q222n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.name=tfru.q222n
+betterquesting.quest.AAAAAAAAAAAAAAAAAAADiw.desc=tfru.q222d
+
+# Quest: tfru.q252n
+betterquesting.quest.Fpe4WqBbQpuSHkgUGWE8sA.name=tfru.q252n
+betterquesting.quest.Fpe4WqBbQpuSHkgUGWE8sA.desc=tfru.q252d
+
+# Quest: tfru.q256n
+betterquesting.quest.NdfPD5zOTQef23TNim7dOw.name=tfru.q256n
+betterquesting.quest.NdfPD5zOTQef23TNim7dOw.desc=tfru.q256d
+
+# Quest: tfru.q186n
+betterquesting.quest.O7MJUjOBT3mTdvPmrHhxrA.name=tfru.q186n
+betterquesting.quest.O7MJUjOBT3mTdvPmrHhxrA.desc=tfru.q186d
 
 # Quest: tfru.q218n
 betterquesting.quest.XLbdorFkSje-w3L-i5PtLg.name=tfru.q218n
 betterquesting.quest.XLbdorFkSje-w3L-i5PtLg.desc=tfru.q218d
 
+# Quest: tfru.q168n
+betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.name=tfru.q168n
+betterquesting.quest.pLUtgipnRZ2Xawg9X8ycsg.desc=tfru.q168d
+
+# Quest: tfru.q268n
+betterquesting.quest.w8O4sBY8T86oax1NKi4gyQ.name=tfru.q268n
+betterquesting.quest.w8O4sBY8T86oax1NKi4gyQ.desc=tfru.q268d
+
+# Quest: tfru.q267n
+betterquesting.quest.z_AIsNUvS5ifglAyrJYDXA.name=tfru.q267n
+betterquesting.quest.z_AIsNUvS5ifglAyrJYDXA.desc=tfru.q267d
+
 
 ### Quests in no quest lines ###
-
-# Quest: New Quest
-betterquesting.quest.KmNAFUcuQf2z9ML91ay8bQ.name=New Quest
-betterquesting.quest.KmNAFUcuQf2z9ML91ay8bQ.desc=No Description
-
-# Quest: tfru.q203n
-betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.name=tfru.q203n
-betterquesting.quest.XqyuwBIgSZO-KFmlBt9qUA.desc=tfru.q203d
-
-# Quest: New Quest
-betterquesting.quest.eh8Y9kVoTgOx9VCIwdwa7w.name=New Quest
-betterquesting.quest.eh8Y9kVoTgOx9VCIwdwa7w.desc=No Description

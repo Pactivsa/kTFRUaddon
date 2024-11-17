@@ -3,20 +3,16 @@
  * part of the kTFRUAddon Mod. Get the Source Code in github:
  * https://github.com/kuzuanpa/kTFRUAddon
  *
+ * kTFRUAddon is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
  * kTFRUAddon is Open Source and distributed under the
- * LGPLv3 License: https://www.gnu.org/licenses/lgpl-3.0.txt
+ * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  *
  */
 
-/*
- * This class was created by <kuzuanpa>. It is distributed as
- * part of the kTFRUAddon Mod. Get the Source Code in github:
- * https://github.com/kuzuanpa/kTFRUAddon
- * 
- * kTFRUAddon is Open Source and distributed under the
- * LGPLv3 License: https://www.gnu.org/licenses/lgpl-3.0.txt
- *
- */
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.model;
 //This is an example machine used to learn structures, grammars etc. It's based on large bath vat in gregtech6
 //这是一个示例机器，用于学习多方块机器的结构，语法等，这个机器是基于gregtech6中的大浸洗器创建的

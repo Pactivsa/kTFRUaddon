@@ -3,10 +3,16 @@
  * part of the kTFRUAddon Mod. Get the Source Code in github:
  * https://github.com/kuzuanpa/kTFRUAddon
  *
+ * kTFRUAddon is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
  * kTFRUAddon is Open Source and distributed under the
- * LGPLv3 License: https://www.gnu.org/licenses/lgpl-3.0.txt
+ * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  *
  */
+
 
 
 package cn.kuzuanpa.ktfruaddon.i18n;
@@ -72,6 +78,34 @@ public class i18nPostInit {
         LH.add(kUserInterface.FUSION_TOKAMAK_STATE_ERROR,"ERROR");
         LH.add(kUserInterface.FUSION_TOKAMAK_STATE_VOIDCHARGE,"Void Charging");
 
+
+
+        LH.add(kUserInterface.TYPE ,"Type");
+        LH.add(kUserInterface.COMPUTECLUSTER_CLIENT              ,"Client");
+        LH.add(kUserInterface.COMPUTECLUSTER_CLUSTER             ,"Cluster");
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER          ,"Controller");
+        LH.add(kUserInterface.COMPUTECLUSTER_CLUSTER_STATE_OFFLINE           ,"Offline");
+        LH.add(kUserInterface.COMPUTECLUSTER_CLUSTER_STATE_NORMAL            ,"§2Normal" );
+        LH.add(kUserInterface.COMPUTECLUSTER_CLUSTER_STATE_WARNING           ,"§eWarning");
+        LH.add(kUserInterface.COMPUTECLUSTER_CLUSTER_STATE_ERROR             ,"§4ERROR"  );
+        LH.add(kUserInterface.COMPUTECLUSTER_CLUSTER_OVERVIEW                ,"Cluster View");
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_STATE_OFFLINE        ,"Offline");
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_STATE_NORMAL         ,"§2Normal" );
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_STATE_WARNING        ,"§eWarning");
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_STATE_ERROR          ,"§4ERROR"  );
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_STATE_ERR_BELONG     ,"§cBelong Error");
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_INFO                 ,"Info");
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_PROVIDING            ,"Providing");
+        LH.add(kUserInterface.COMPUTECLUSTER_CONTROLLER_LIST                 ,"Controllers");
+        LH.add(kUserInterface.COMPUTECLUSTER_CLIENT_LIST                     ,"Clients");
+        LH.add(kUserInterface.COMPUTECLUSTER_RECENT_EVENTS                   ,"Events");
+
+
+        LH.add(kUserInterface.COMPUTE_POWER                   ,"Computer Power");
+        LH.add(kUserInterface.COMPUTE_POWER_LOGIC             ,"Logic");
+        LH.add(kUserInterface.COMPUTE_POWER_BIOLOGY           ,"Biology");
+        LH.add(kUserInterface.COMPUTE_POWER_QUANTUM           ,"Quantum");
+        LH.add(kUserInterface.COMPUTE_POWER_SPACETIME         ,"Spacetime");
 
         itemPreInit.turbineLargeGas         .addTooltips(LH.Chat.RED+LH.get(kTooltips.TURBINE_UNCHECKED));
         itemPreInit.turbineLargeGasChecked  .addTooltips(LH.Chat.RED+LH.get(kTooltips.TURBINE_UNCHECKED));
