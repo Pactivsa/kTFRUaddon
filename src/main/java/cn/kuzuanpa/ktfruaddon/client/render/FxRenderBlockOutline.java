@@ -28,8 +28,8 @@ import org.jetbrains.annotations.NotNull;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.*;
+import java.util.List;
 
 public final class FxRenderBlockOutline {
     private int lines;
@@ -37,33 +37,39 @@ public final class FxRenderBlockOutline {
     }
 
     private static class blockOutlineToRender{
-        protected blockOutlineToRender(ChunkCoordinates pos, int color, float thickness){
-            this.pos=pos;
+        protected blockOutlineToRender(int color, float thickness, long removeAtSystemTimeMillis){
             this.color=color;
             this.thickness=thickness;
+            this.removeAtSystemTimeMillis = removeAtSystemTimeMillis;
         }
-        protected ChunkCoordinates pos;
         protected int color;
         protected float thickness;
+        protected long removeAtSystemTimeMillis;
     }
-    public static ArrayList<blockOutlineToRender> blockOutlineToRenderArrayList = new ArrayList<blockOutlineToRender>();
+    public static Map<ChunkCoordinates, blockOutlineToRender> blockOutlineToRender = new HashMap<>();
 
+    public static void addBlockOutlineToRender(@NotNull ChunkCoordinates pos, int color, float thickness){
+        blockOutlineToRender.put(pos,new blockOutlineToRender(color,thickness,-1));
+    }
     /**return: true when added,false when duplicated**/
-    public static boolean addBlockOutlineToRender(@NotNull ChunkCoordinates pos, int color, float thickness){
-        for (blockOutlineToRender blockOutline : blockOutlineToRenderArrayList)if (Objects.equals(blockOutline, new blockOutlineToRender(pos, color, thickness))||blockOutline.pos.equals(pos))return false;
-        blockOutlineToRenderArrayList.add(new blockOutlineToRender(pos,color,thickness));
-        return true;
+    public static void addBlockOutlineToRender(@NotNull ChunkCoordinates pos, int color, float thickness, long removeAtSystemTimeMillis){
+        blockOutlineToRender.put(pos,new blockOutlineToRender(color,thickness,removeAtSystemTimeMillis));
     }
 
     public static void removeBlockOutlineToRender(@NotNull ChunkCoordinates pos){
-        blockOutlineToRenderArrayList.removeIf(blockOutline -> blockOutline.pos.equals(pos));
+        blockOutlineToRender.remove(pos);
     }
 
     @SubscribeEvent
     public void onWorldRenderLast(RenderWorldLastEvent event) {
-        if(blockOutlineToRenderArrayList.isEmpty())return;
+        if(blockOutlineToRender.isEmpty())return;
         try {
-            blockOutlineToRenderArrayList.forEach(blockOutline -> renderBlockOutlineAt(blockOutline.pos, blockOutline.color, blockOutline.thickness));
+            List<ChunkCoordinates> remove = new ArrayList<>();
+            blockOutlineToRender.forEach((pos, blockOutline) -> {
+                renderBlockOutlineAt(pos, blockOutline.color, blockOutline.thickness);
+                if (blockOutline.removeAtSystemTimeMillis != 0 && blockOutline.removeAtSystemTimeMillis < System.currentTimeMillis())remove.add(pos);
+            });
+            remove.forEach(pos-> blockOutlineToRender.remove(pos));
         }catch (Throwable ignored){}
     }
     /**Copied from Botania**/

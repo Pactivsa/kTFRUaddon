@@ -35,6 +35,7 @@ import gregapi.oredict.OreDictPrefix;
 import gregapi.util.UT;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.RegistryDefaulted;
 import net.minecraft.world.World;
@@ -190,9 +191,11 @@ public class OreScanner {
         return block!=null&&(block == TFCBlocks.ore || block == TFCBlocks.ore2 || block == TFCBlocks.ore3) && world.getTileEntity(x, y, z) instanceof TEOre;
     }
     public static int getMaterialIDForTFCOre(World world,Block block, int x, int y, int z) {
-        TEOre te = (TEOre) world.getTileEntity(x, y, z);
+        TileEntity tile =  world.getTileEntity(x, y, z);
+        if(!(tile instanceof TEOre))return -1;
+
         int meta=world.getBlockMetadata(x, y, z);
-        if (block == TFCBlocks.ore)  meta = ((BlockOre) block).getOreGrade(te, meta);
+        if (block == TFCBlocks.ore)  meta = ((BlockOre) block).getOreGrade((TEOre)tile, meta);
         if (block == TFCBlocks.ore2) meta = meta + Global.ORE_METAL.length;
         if (block == TFCBlocks.ore3) meta = meta + Global.ORE_METAL.length + Global.ORE_MINERAL.length;
         switch (meta) {
@@ -286,7 +289,7 @@ public class OreScanner {
         if(name.startsWith("terrafirmacraft")) matID = getMaterialIDForTFCOre(world,block,x,y,z);
         if(name.startsWith("gregtech")&&world.getTileEntity(x, y, z) instanceof PrefixBlockTileEntity)matID = OreDictMaterial.get(((PrefixBlockTileEntity) world.getTileEntity(x, y, z)).mMetaData).mID;
         OreDictMaterial oreDictMaterial = OreDictMaterial.get(matID);
-        if(oreDictMaterial!=null)return oreDictMaterial.mRGBaSolid;
+        if(matID>0 && oreDictMaterial!=null)return oreDictMaterial.mRGBaSolid;
         return new short[0];
     }
     public static short getVanillaOreMaterialID(String name){
