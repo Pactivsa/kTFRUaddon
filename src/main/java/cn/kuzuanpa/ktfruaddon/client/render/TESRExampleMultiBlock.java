@@ -96,7 +96,7 @@ public class TESRExampleMultiBlock extends TileEntitySpecialRenderer {
             //if(multiBlockTile.getOutputs() != null && (outputStack = multiBlockTile.getOutputs().get(0)) != null)
             //    color = MaterialRegistry.getColorFromItemMaterial(outputStack);
             //else
-                color = 0;
+                color = 0xffffff;
 
             GL11.glColor3d((0xff & color >> 16)/256f, (0xff & color >> 8)/256f , (color & 0xff)/256f);
 
