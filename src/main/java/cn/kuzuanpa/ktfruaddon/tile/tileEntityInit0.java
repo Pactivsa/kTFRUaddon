@@ -24,7 +24,7 @@ import cn.kuzuanpa.ktfruaddon.ktfruaddon;
 import cn.kuzuanpa.ktfruaddon.material.matList;
 import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
 import cn.kuzuanpa.ktfruaddon.tile.casing.rustBronzeCasing;
-import cn.kuzuanpa.ktfruaddon.tile.computeCluster.TestController;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.TestController;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.DebugGenerator;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.FuelBattery;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.ManualGenerator;
@@ -422,6 +422,8 @@ public class tileEntityInit0 {
         aMat = MT.Bronze;              kRegistry0.add("DeRust Bronze Machine Casing"     , "kTFRUAddon: Casing", 32762, 1230, MultiTileEntityMultiBlockPart.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F,NBT_TEXTURE, "wall"));RM.Welder.addRecipe2(F,16,200,kRegistry0.getItem(32762,1),OP.plate.mat(MT.Bronze,1),ZL_FS,ZL_FS,OP.casingMachine.mat(MT.Bronze,1));
         aMat = MT.RedSteel;              kRegistry0.add("Red Steel Crucible Model"     , "kTFRUAddon: Machines", 32763, 20001, CrucibleModel.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,   2.0F),"   "," M ","hPf",'P',OP.plate.mat(MT.RedSteel,1), 'M', ItemList.CrucibleModelInnerLayer.get(1));
         aMat = MT.BlueSteel;              kRegistry0.add("Blue Steel Crucible Model"     , "kTFRUAddon: Machines", 32764, 20001, CrucibleModel.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,  2.0F),"   "," M ","hPf",'P',OP.plate.mat(MT.BlueSteel,1), 'M', ItemList.CrucibleModelInnerLayer.get(1));
+
+        aMat = MT.BlueSteel;              kRegistry0.add("Test Controller"     , "kTFRUAddon: Machines", 32765, 20001, TestController.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,  2.0F));
 
         aMat = MT.Trinitanium;              kRegistry0.add("Debug Generator"     , "kTFRUAddon: Machines", 32766, 20001, DebugGenerator.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS, -1, NBT_RESISTANCE,  -1));
 

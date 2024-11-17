@@ -10,6 +10,7 @@
 
 package cn.kuzuanpa.ktfruaddon.client.gui;
 
+import cn.kuzuanpa.ktfruaddon.client.gui.button.CommonGuiButton;
 import gregapi.code.ArrayListNoNulls;
 import gregapi.gui.ContainerClient;
 import gregapi.gui.ContainerCommon;
@@ -17,34 +18,58 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.input.Mouse;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.util.vector.Vector2f;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public abstract class ContainerClientbase extends ContainerClient {
-    ArrayList<requestedTooltip> requestedTooltipLists = new ArrayListNoNulls<requestedTooltip>();
+    HashMap<Integer,requestedTooltip> requestedTooltipMap = new HashMap<>();
     protected GuiButton selectedButton;
 
     protected static class requestedTooltip {
-        protected requestedTooltip(ArrayList<String> strings,boolean isVisable){this.strings=strings;this.isVisable=isVisable;}
-        protected ArrayList<String> strings;
-        protected boolean isVisable;
+        protected requestedTooltip(List<String> strings, Predicate<Vector2f> posPredicate, boolean additionalCondition){
+            this.strings=strings;
+            this.posPredicate=posPredicate;
+            this.additionalCondition=additionalCondition;
+        }
+        protected List<String> strings;
+        protected Predicate<Vector2f> posPredicate;
+        public boolean isPosCheckPassed = false;
+        protected boolean additionalCondition;
     }
-    public void requestOrUpdateTooltip(int id,String[] strings,boolean isVisable){
-        if (requestedTooltipLists.size()<=id||requestedTooltipLists.get(id)==null) requestedTooltipLists.add(id,new requestedTooltip(new ArrayList<String>(Arrays.asList(strings)),isVisable));
-        else requestedTooltipLists.set(id,new requestedTooltip(new ArrayList<String>(Arrays.asList(strings)),isVisable));
+
+    public void addTooltip(int id, String[] strings, Predicate<Vector2f> MousePositionPredicate, boolean additionalCondition){
+        requestedTooltipMap.put(id, new requestedTooltip(Arrays.asList(strings),MousePositionPredicate,additionalCondition));
     }
-    public void requestOrUpdateTooltip(int id,ArrayList<String> strings,boolean isVisable){
-        if (requestedTooltipLists.size()<=id||requestedTooltipLists.get(id)==null) requestedTooltipLists.add(id,new requestedTooltip(strings,isVisable));
-        else requestedTooltipLists.set(id,new requestedTooltip(strings,isVisable));
+
+    public void updateTooltip(int id, boolean additionalCondition){
+        if(requestedTooltipMap.get(id)!=null)requestedTooltipMap.get(id).additionalCondition=additionalCondition;
     }
+
+    public void addOrUpdateTooltip(int id, String[] strings,Predicate<Vector2f> MousePositionPredicate){
+        if(requestedTooltipMap.get(id)!=null)requestedTooltipMap.get(id).strings= Arrays.asList(strings);
+        else addTooltip(id,strings,MousePositionPredicate,true);
+    }
+    public void addOrUpdateTooltip(int id, String[] strings,Predicate<Vector2f> MousePositionPredicate,boolean additionalCondition){
+        if(requestedTooltipMap.get(id)!=null){
+            requestedTooltipMap.get(id).strings= Arrays.asList(strings);
+            requestedTooltipMap.get(id).additionalCondition=additionalCondition;
+        }
+        else addTooltip(id,strings,MousePositionPredicate,additionalCondition);
+    }
+
     public ContainerClientbase(ContainerCommon aContainer, String aBackgroundPath) {
         super(aContainer, aBackgroundPath);
     }
     @Override
     protected void drawGuiContainerForegroundLayer(int par1, int par2) {
         drawGuiContainerForegroundLayer2(par1,par2);
-        requestedTooltipLists.stream().forEach(tooltip -> {if (tooltip!=null&&tooltip.isVisable)drawHoveringText(tooltip.strings, par1-(width - xSize) / 2, par2-(height - ySize) / 2, fontRendererObj);});
+        requestedTooltipMap.values().forEach(tooltip -> {
+            if (tooltip!=null&& tooltip.additionalCondition &&tooltip.isPosCheckPassed)drawHoveringText(tooltip.strings, par1-(width - xSize) / 2, par2-(height - ySize) / 2, fontRendererObj);
+        });
     }
     protected abstract void drawGuiContainerForegroundLayer2(int par1, int par2);
     @Override
@@ -87,7 +112,12 @@ public abstract class ContainerClientbase extends ContainerClient {
         }
     }
 
-    public abstract void mouseMove(int x, int y);
+    public void mouseMove(int x, int y){
+        int ContainerX = (width - xSize) / 2;
+        int ContainerY = (height - ySize) / 2;
+        buttonList.forEach(button-> {if (button instanceof CommonGuiButton)((CommonGuiButton) button).isMouseHover= ((CommonGuiButton) button).isMouseOverButton(x, y);});
+        requestedTooltipMap.values().forEach(tooltip-> tooltip.isPosCheckPassed=tooltip.posPredicate.test(new Vector2f(x-ContainerX,y-ContainerY)));
+    };
     public abstract boolean onButtonPressed(GuiButton button);
     public abstract boolean onNoButtonPressed();
 }

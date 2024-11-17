@@ -14,8 +14,11 @@ public class EnvironmentHelper {
         try {if(            vazkii.botania.common.TFRUEnvHelper.isModTFRU)isBotaniaTFRU           = true;}catch (Exception e){isBotaniaTFRU           = false;}
         try {if(com.brandon3055.draconicevolution.TFRUEnvHelper.isModTFRU)isDraconicEvolutionTFRU = true;}catch (Exception e){isDraconicEvolutionTFRU = false;}
         try {if(                         forestry.TFRUEnvHelper.isModTFRU)isForestryTFRU          = true;}catch (Exception e){isForestryTFRU          = false;}
+
         isInTFRU = isGregtechTFRU&&isAdvancedRocketryTFRU&&isTFCTFRU&&isBotaniaTFRU&&isDraconicEvolutionTFRU&&isForestryTFRU&&Loader.isModLoaded("thinker")&&Loader.isModLoaded("tfc-mixin");
-        if(isInTFRU)try {            gregtech.TFRUEnvHelper.isInTFRU=true;
+
+        if(!isInTFRU)return;
+        try {                        gregtech.TFRUEnvHelper.isInTFRU=true;
                   zmaster587.advancedRocketry.TFRUEnvHelper.isInTFRU=true;
                                 com.bioxx.tfc.TFRUEnvHelper.isInTFRU=true;
                         vazkii.botania.common.TFRUEnvHelper.isInTFRU=true;

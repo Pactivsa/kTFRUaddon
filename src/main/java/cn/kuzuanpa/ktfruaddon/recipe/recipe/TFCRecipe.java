@@ -35,7 +35,7 @@ public class TFCRecipe {
         KilnCraftingManager.getInstance().addRecipe(new KilnRecipe(ItemList.ClayGlassBlockMold .get(1), 0, ItemList.CeramicGlassBlockMold .get(1)));
         KilnCraftingManager.getInstance().addRecipe(new KilnRecipe(ItemList.ClayGlassBottleMold.get(1), 0, ItemList.CeramicGlassBottleMold.get(1)));
 
-        CR.shapeless(ItemList.CeramicGlassBlockMoldFull .get(1),new Object[]{ItemList.CeramicGlassBlockMold .get(1), OP.dust.dat(MT.Glass), OP.dust.dat(MT.Glass), OP.dust.dat(MT.Glass)});
+        CR.shapeless(ItemList.CeramicGlassBlockMoldFull .get(1),new Object[]{ItemList.CeramicGlassBlockMold .get(1), OP.blockDust.dat(MT.Glass)});
         CR.shapeless(ItemList.CeramicGlassBottleMoldFull.get(1),new Object[]{ItemList.CeramicGlassBottleMold.get(1), OP.dust.dat(MT.Glass)});
 
         HeatRegistry.getInstance().addIndex(new HeatIndex(ItemList.CeramicGlassBlockMoldFull .get(1), 0.3, 800, ItemList.CeramicGlassBlockMoldComplete .get(1)));
