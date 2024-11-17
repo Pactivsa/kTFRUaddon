@@ -21,14 +21,22 @@ import com.bioxx.tfc.Blocks.Terrain.BlockOre;
 import com.bioxx.tfc.TileEntities.TEOre;
 import com.bioxx.tfc.api.Constant.Global;
 import com.bioxx.tfc.api.TFCBlocks;
+import cpw.mods.fml.common.registry.GameData;
+import cpw.mods.fml.common.registry.GameRegistry;
+import forestry.core.blocks.BlockRegistry;
 import gregapi.block.IPrefixBlock;
+import gregapi.block.prefixblock.PrefixBlockTileEntity;
 import gregapi.data.MD;
 import gregapi.data.MT;
+import gregapi.data.OP;
+import gregapi.oredict.OreDictManager;
 import gregapi.oredict.OreDictMaterial;
+import gregapi.oredict.OreDictPrefix;
 import gregapi.util.UT;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.RegistryDefaulted;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
@@ -131,7 +139,7 @@ public class OreScanner {
                 Block block = world.getBlock(xPos,yPos,zPos);
                 if(!(block instanceof IPrefixBlock))continue;
                 if (MD.TFC.mLoaded&&isTFCOre(block,xPos,yPos,zPos)) {
-                    addDiscoveredOres(getMaterialIDForTFCOre(block,xPos,yPos,zPos), xPos,yPos,zPos, 4);
+                    addDiscoveredOres(getMaterialIDForTFCOre(world, block,xPos,yPos,zPos), xPos,yPos,zPos, 4);
                     continue;
                 }
                 if (includeBedRockOre && block.getUnlocalizedName().startsWith("gt.meta.ore.normal.bedrock")) {
@@ -181,7 +189,7 @@ public class OreScanner {
     public boolean isTFCOre(Block block, int x, int y, int z) {
         return block!=null&&(block == TFCBlocks.ore || block == TFCBlocks.ore2 || block == TFCBlocks.ore3) && world.getTileEntity(x, y, z) instanceof TEOre;
     }
-    public int getMaterialIDForTFCOre(Block block, int x, int y, int z) {
+    public static int getMaterialIDForTFCOre(World world,Block block, int x, int y, int z) {
         TEOre te = (TEOre) world.getTileEntity(x, y, z);
         int meta=world.getBlockMetadata(x, y, z);
         if (block == TFCBlocks.ore)  meta = ((BlockOre) block).getOreGrade(te, meta);
@@ -268,5 +276,30 @@ public class OreScanner {
     public int posY;
     public int posZ;
     public short oreType;
+    }
+    public static short[] getOreColor(World world, int x,int y,int z){
+        Block block = world.getBlock(x,y,z);
+        String name = GameData.getBlockRegistry().getNameForObject(block);
+        if(name == null) return new short[0];
+        int matID = -1;
+        if(name.startsWith("minecraft"))matID = getVanillaOreMaterialID(name);
+        if(name.startsWith("terrafirmacraft")) matID = getMaterialIDForTFCOre(world,block,x,y,z);
+        if(name.startsWith("gregtech")&&world.getTileEntity(x, y, z) instanceof PrefixBlockTileEntity)matID = OreDictMaterial.get(((PrefixBlockTileEntity) world.getTileEntity(x, y, z)).mMetaData).mID;
+        OreDictMaterial oreDictMaterial = OreDictMaterial.get(matID);
+        if(oreDictMaterial!=null)return oreDictMaterial.mRGBaSolid;
+        return new short[0];
+    }
+    public static short getVanillaOreMaterialID(String name){
+        switch (name){
+            case "minecraft:iron_ore": return MT.OREMATS.BrownLimonite.mID;
+            case "minecraft:gold_ore": return MT.Au.mID;
+            case "minecraft:coal_ore": return MT.Coal.mID;
+            case "minecraft:diamond_ore": return MT.Diamond.mID;
+            case "minecraft:redstone_ore": return MT.Redstone.mID;
+            case "minecraft:lapis_ore": return MT.Lapis.mID;
+            case "minecraft:emerald_ore": return MT.Emerald.mID;
+            case "minecraft:quartz_ore": return MT.NetherQuartz.mID;
+        }
+        return -1;
     }
 }
