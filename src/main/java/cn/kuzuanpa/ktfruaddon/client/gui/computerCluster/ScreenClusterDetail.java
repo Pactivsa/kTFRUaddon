@@ -141,8 +141,8 @@ public class ScreenClusterDetail extends kGuiScreenContainerLayerBase {
     }
 
     @Override
-    public void handleMouseInput() {
-        super.handleMouseInput();
+    public void handleMouseInput2() {
+        super.handleMouseInput2();
         int index =0;
         addOrUpdateTooltip(index++, new String[]{"Data plotted on a logarithmic scale"}, vector2-> (2<vector2.x&&vector2.x<166&& 99 < vector2.y && vector2.y <= 107));
 

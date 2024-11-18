@@ -86,7 +86,7 @@ public class ContainerClientClusterController extends kGuiContainerBase implemen
 			case 3: childGui = new ScreenClientList()      .setup(this.width,this.height,ContainerX,ContainerY).setParentGui(this).setMC(mc).setFontRenderer(fontRendererObj); break;
 		}
 		if(childGui!=null){
-			childGui.initGui();
+			childGui.initGui2();
 			syncValuesToChildGui();
 			return true;
 		}
