@@ -76,5 +76,10 @@ public class Chemistry {
         recipeMaps.FuelBattery.addRecipe2(F,-180, 10, ItemList.BatteryPoleCarbon.get(0),ItemList.BatteryPolePlatinum.get(0),FL.array(flList.Methanol.make(20)      ,FL.Oxygen.make(30),MT.H2SO4.fluid(0,false)),FL.array(FL.CarbonDioxide.make(20), FL.DistW.make(40)),ZL_IS);
         recipeMaps.FuelBattery.addRecipe2(F,-288, 10, ItemList.BatteryPoleCarbon.get(0),ItemList.BatteryPolePlatinum.get(0),FL.array(FL.BioEthanol.make(20)        ,FL.Oxygen.make(60),MT.H2SO4.fluid(0,false)),FL.array(FL.CarbonDioxide.make(40), FL.DistW.make(60)),ZL_IS);
 
+        recipeMaps.FuelDeburner.addRecipe1(F, 64, 4000, ST.tag(0), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Diesel.make(1200))).setSpecialNumber(576);
+
+        recipeMaps.FuelDeburner.addRecipe1(F, 256, 4000, ST.tag(1), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Fuel.make(1200))).setSpecialNumber(1576);
+
+        recipeMaps.FuelDeburner.addRecipe1(F, 1024, 4000, ST.tag(2), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Methane.make(1200))).setSpecialNumber(276);
     }
 }
