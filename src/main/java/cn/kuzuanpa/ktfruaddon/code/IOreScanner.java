@@ -15,6 +15,6 @@
 package cn.kuzuanpa.ktfruaddon.code;
 
 public interface IOreScanner {
-    void onOreFind(int x, int y, int z, short materialID, int type);
+    void onOreFind(int x, int y, int z, short materialID, byte type);
     void onFinished();
 }

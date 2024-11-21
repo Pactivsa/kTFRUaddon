@@ -211,7 +211,7 @@ public class Miner extends TileEntityBase09FacingSingle implements ITileEntityEn
     @Override
     public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
         aSize = Math.abs(aSize);
-        if (aSize > getEnergySizeInputMax(aEnergyType, aSide) && !TD.Energy.RF.equals(mEnergyTypeAccepted)) {
+        if (aSize > getEnergySizeInputMax(aEnergyType, aSide) && !TD.Energy.ALL_SIZE_IRRELEVANT.contains(mEnergyTypeAccepted)) {
             if (aDoInject) overcharge(aSize, aEnergyType);
             return aAmount;
         }

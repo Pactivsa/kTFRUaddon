@@ -1,0 +1,9 @@
+{
+  "tile.noise.n": {
+    "category": "ambient",
+    "sounds": [
+      { "name": "noise_n",
+      "stream": true}
+    ]
+  }
+}

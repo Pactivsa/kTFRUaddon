@@ -75,7 +75,7 @@ public final class FxRenderBlockOutline {
             List<ChunkCoordinates> remove = new ArrayList<>();
             blockOutlineToRender.forEach((pos, blockOutline) -> {
                 if(!blockOutline.needManacle || Botania.proxy.isClientPlayerWearingMonocle()) renderBlockOutlineAt(pos, blockOutline.color, blockOutline.thickness);
-                if (blockOutline.removeAtSystemTimeMillis != 0 && blockOutline.removeAtSystemTimeMillis < System.currentTimeMillis())remove.add(pos);
+                if (blockOutline.removeAtSystemTimeMillis > 0 && blockOutline.removeAtSystemTimeMillis < System.currentTimeMillis())remove.add(pos);
             });
             remove.forEach(pos-> blockOutlineToRender.remove(pos));
         }catch (Throwable ignored){}

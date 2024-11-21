@@ -17,6 +17,8 @@
 package cn.kuzuanpa.ktfruaddon.code;
 
 import cn.kuzuanpa.ktfruaddon.client.render.FxRenderBlockOutline;
+import cn.kuzuanpa.ktfruaddon.tile.machine.TileOreScanner;
+import codechicken.lib.vec.BlockCoord;
 import com.bioxx.tfc.Blocks.Terrain.BlockOre;
 import com.bioxx.tfc.TileEntities.TEOre;
 import com.bioxx.tfc.api.Constant.Global;
@@ -32,14 +34,19 @@ import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
+import net.minecraftforge.common.DimensionManager;
 import org.apache.logging.log4j.Level;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class OreScanner {
-    public byte ORE_TYPE_GT_NORMAL=0,ORE_TYPE_GT_SMALL=1,ORE_TYPE_GT_BEDROCK=2,ORE_TYPE_GT_BEDROCK_SMALL=3,ORE_TYPE_TFC=4, ORE_TYPE_VANILLA=5;
-    public int range, xPos, yPos, zPos, timerA,timerB, xChunkPos = 0, zChunkPos = 0, xChunkStart = 0, zChunkStart = 0;
+    public static final byte ORE_TYPE_GT_NORMAL=0,ORE_TYPE_GT_SMALL=1,ORE_TYPE_GT_BEDROCK=2,ORE_TYPE_GT_BEDROCK_SMALL=3,ORE_TYPE_TFC=4, ORE_TYPE_VANILLA=5;
+    public int range, xPos, yPos, zPos, timerA,timerB, xChunkPos = 0, zChunkPos = 0;
+    public final int xChunkStart, zChunkStart;
     public World world;
     public boolean includeSmallOre = false, finished = false, includeBedRockOre = true;
     public List<discoveredOres> discoveredOres = new ArrayList<>();
@@ -48,7 +55,6 @@ public class OreScanner {
         this.theScanner = theScanner;
         return this;
     }
-
     public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre) {
         this.range = range;
         this.xPos = xPos;
@@ -58,8 +64,8 @@ public class OreScanner {
         this.timerA = 0;
         this.timerB=0;
         this.includeSmallOre = includeSmallOre;
-        if (world != null) xChunkPos = xChunkStart = world.getChunkFromBlockCoords(xPos, zPos).xPosition - range;
-        if (world != null) zChunkPos = zChunkStart = world.getChunkFromBlockCoords(xPos, zPos).zPosition - range;
+        xChunkPos = xChunkStart = world.getChunkFromBlockCoords(xPos, zPos).xPosition - range;
+        zChunkPos = zChunkStart = world.getChunkFromBlockCoords(xPos, zPos).zPosition - range;
         includeBedRockOre = true;
     }
 
@@ -72,8 +78,8 @@ public class OreScanner {
         this.timerA = 0;
         this.timerB=0;
         this.includeSmallOre = includeSmallOre;
-        if (world != null) xChunkPos = xChunkStart = world.getChunkFromBlockCoords(xPos, zPos).xPosition - range;
-        if (world != null) zChunkPos = zChunkStart = world.getChunkFromBlockCoords(xPos, zPos).zPosition - range;
+        xChunkPos = xChunkStart = world.getChunkFromBlockCoords(xPos, zPos).xPosition - range;
+        zChunkPos = zChunkStart = world.getChunkFromBlockCoords(xPos, zPos).zPosition - range;
         this.includeBedRockOre = includeBedRockOre;
     }
 
@@ -114,11 +120,12 @@ public class OreScanner {
                 Block block = world.getBlock(xPos,yPos,zPos);
                 String name = GameData.getBlockRegistry().getNameForObject(block);
                 if (name.startsWith("minecraft")) {
-                    addDiscoveredOres(getVanillaOreMaterialID(name), xPos,yPos,zPos, ORE_TYPE_VANILLA);
+                    if(getVanillaOreMaterialID(name) > 0)addDiscoveredOres(getVanillaOreMaterialID(name), xPos,yPos,zPos, ORE_TYPE_VANILLA);
                     continue;
                 }
                 if (MD.TFC.mLoaded && isTFCOre(block,xPos,yPos,zPos)) {
-                    addDiscoveredOres(getMaterialIDForTFCOre(world, block,xPos,yPos,zPos), xPos,yPos,zPos, ORE_TYPE_TFC);
+                    int matID = getMaterialIDForTFCOre(world, block,xPos,yPos,zPos);
+                    if(matID > 0)addDiscoveredOres(matID, xPos,yPos,zPos, ORE_TYPE_TFC);
                     continue;
                 }
                 if(!(name.startsWith("gregtech:")))continue;
@@ -170,7 +177,51 @@ public class OreScanner {
     public void clearRendedOres(){
         discoveredOres.forEach(ore -> FxRenderBlockOutline.removeBlockOutlineToRender(new ChunkCoordinates(ore.posX, ore.posY, ore.posZ)));
     }
-
+    public static byte[] serialize(OreScanner scanner) {
+        try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
+            DataOutputStream dos = new DataOutputStream(bos);
+            dos.writeInt(scanner.range);
+            dos.writeInt(scanner.xPos);
+            dos.writeInt(scanner.yPos);
+            dos.writeInt(scanner.zPos);
+            dos.writeInt(scanner.timerA);
+            dos.writeInt(scanner.timerB);
+            dos.writeInt(scanner.xChunkPos);
+            dos.writeInt(scanner.zChunkPos);
+            dos.writeInt(scanner.world.provider.dimensionId);
+            dos.writeBoolean(scanner.includeSmallOre);
+            dos.writeBoolean(scanner.includeBedRockOre);
+            dos.flush();
+            return bos.toByteArray();
+        }catch (Exception ignored){}
+        return null;
+    }
+    public static OreScanner deserialize(byte[] bytes) {
+        ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
+        DataInputStream dis = new DataInputStream(bis);
+        Map<BlockCoord, TileOreScanner.OreData> list = new HashMap<>();
+        try {
+            int range = dis.readInt();
+            int xPos  = dis.readInt();
+            int yPos  = dis.readInt();
+            int zPos  = dis.readInt();
+            int timerA= dis.readInt();
+            int timerB= dis.readInt();
+            int world = dis.readInt();
+            int xChunkPos = dis.readInt();
+            int zChunkPos = dis.readInt();
+            boolean includeSmallOre = dis.readBoolean();
+            boolean includeBedRockOre = dis.readBoolean();
+            OreScanner scanner = new OreScanner(range,xPos,yPos,zPos, DimensionManager.getWorld(world), includeSmallOre,includeBedRockOre);
+            scanner.timerA=timerA;
+            scanner.timerB=timerB;
+            scanner.xChunkPos=xChunkPos;
+            scanner.zChunkPos=zChunkPos;
+            return scanner;
+        } catch (IOException e) {
+            return null;
+        }
+    }
     /**oreType: 0=normal,1=small,2=bedrock normal,3=bedrock small,4=TFCOre**/
     public static class discoveredOres {
     public discoveredOres(short materialID, int posX, int posY, int posZ,byte oreType){
