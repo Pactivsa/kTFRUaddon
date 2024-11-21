@@ -76,10 +76,12 @@ public class Chemistry {
         recipeMaps.FuelBattery.addRecipe2(F,-180, 10, ItemList.BatteryPoleCarbon.get(0),ItemList.BatteryPolePlatinum.get(0),FL.array(flList.Methanol.make(20)      ,FL.Oxygen.make(30),MT.H2SO4.fluid(0,false)),FL.array(FL.CarbonDioxide.make(20), FL.DistW.make(40)),ZL_IS);
         recipeMaps.FuelBattery.addRecipe2(F,-288, 10, ItemList.BatteryPoleCarbon.get(0),ItemList.BatteryPolePlatinum.get(0),FL.array(FL.BioEthanol.make(20)        ,FL.Oxygen.make(60),MT.H2SO4.fluid(0,false)),FL.array(FL.CarbonDioxide.make(40), FL.DistW.make(60)),ZL_IS);
 
-        recipeMaps.FuelDeburner.addRecipe1(F, 64, 4000, ST.tag(0), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Diesel.make(1200))).setSpecialNumber(576);
+        //FuelDeburner配方表较特殊, 根据温度可加速最多128倍, 产物的热值应按该公式计算: 产物热值=原料热值+ 功率*耗时/128 + 原料的总质量*64*(最佳温度-常温), 视严格度(功率越高越严格)和耗时(耗时越长维持温度越困难)给予一定加成
+        recipeMaps.FuelDeburner.addRecipe1(F, 64, 4000, ST.tag(0), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(2000)), FL.array(FL.Diesel.make(150))).setSpecialNumber(576);
 
-        recipeMaps.FuelDeburner.addRecipe1(F, 256, 4000, ST.tag(1), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Fuel.make(1200))).setSpecialNumber(1576);
+        recipeMaps.FuelDeburner.addRecipe1(F, 256, 4000, ST.tag(1), FL.array(FL.Water.make(100), FL.CarbonDioxide.make(200)), FL.array(FL.Fuel.make(200))).setSpecialNumber(1576);
 
-        recipeMaps.FuelDeburner.addRecipe1(F, 1024, 4000, ST.tag(2), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Methane.make(1200))).setSpecialNumber(276);
+        recipeMaps.FuelDeburner.addRecipe1(F, 1024, 4000, ST.tag(2), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Methane.make(1200))).setSpecialNumber(376);
+
     }
 }

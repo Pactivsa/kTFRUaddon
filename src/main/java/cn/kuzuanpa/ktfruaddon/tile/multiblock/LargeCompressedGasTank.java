@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.tile.ICompressGasTank;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.FL;
@@ -39,16 +39,16 @@ public class LargeCompressedGasTank extends MultiTileEntityTank implements IComp
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
         aList.add(LH.Chat.CYAN     + LH.get(LH.STRUCTURE) + ":");
-        aList.add(LH.Chat.WHITE    + LH.get(kTooltips.TANK_GAS_COMPRESSED_0));
-        aList.add(LH.Chat.WHITE    + LH.get(kTooltips.TANK_GAS_COMPRESSED_1));
-        aList.add(LH.Chat.WHITE    + LH.get(kTooltips.TANK_GAS_COMPRESSED_2));
+        aList.add(LH.Chat.WHITE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_0));
+        aList.add(LH.Chat.WHITE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_1));
+        aList.add(LH.Chat.WHITE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_2));
         super.addToolTips(aList, aStack, aF3_H);
     }
 
     static {
-        LH.add(kTooltips.TANK_GAS_COMPRESSED_0,"");
-        LH.add(kTooltips.TANK_GAS_COMPRESSED_1,"");
-        LH.add(kTooltips.TANK_GAS_COMPRESSED_2,"");
+        LH.add(I18nHandler.TANK_GAS_COMPRESSED_0,"");
+        LH.add(I18nHandler.TANK_GAS_COMPRESSED_1,"");
+        LH.add(I18nHandler.TANK_GAS_COMPRESSED_2,"");
     }
     @Override
     public boolean checkStructure2() {

@@ -17,7 +17,7 @@
 package cn.kuzuanpa.ktfruaddon.cover;
 
 import cn.kuzuanpa.ktfruaddon.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import gregapi.code.TagData;
 import gregapi.cover.CoverData;
 import gregapi.cover.covers.AbstractCoverAttachment;
@@ -72,7 +72,7 @@ import static gregapi.data.CS.*;
                         aChatReturn.add("Filter is empty!");
                         aData.mNBTs[aCoverSide] = null;
                     } else {
-                        aChatReturn.add(LH.Chat.GREEN+ LH.get(kMessages.FILTERING_PROPERTIES)+LH.Chat.WHITE+" " + aData.mNBTs[aCoverSide].getString("ktfru.filter.property"));
+                        aChatReturn.add(LH.Chat.GREEN+ LH.get(I18nHandler.FILTERING_PROPERTIES)+LH.Chat.WHITE+" " + aData.mNBTs[aCoverSide].getString("ktfru.filter.property"));
                     }
                 }
                 return 1;
@@ -97,7 +97,7 @@ import static gregapi.data.CS.*;
                         lastClickStackTags = getProperties(tStack);
                     }
                     if(clickPointer==0) {
-                        UT.Entities.sendchat(aPlayer, LH.Chat.CYAN+LH.get(kMessages.FILTER_PROPERTIES_ALL));
+                        UT.Entities.sendchat(aPlayer, LH.Chat.CYAN+LH.get(I18nHandler.FILTER_PROPERTIES_ALL));
                         lastClickStackTags.forEach(str-> UT.Entities.sendchat(aPlayer,str));
                     }
 
@@ -105,7 +105,7 @@ import static gregapi.data.CS.*;
                     if(aData.mNBTs[aCoverSide]==null)aData.mNBTs[aCoverSide] = UT.NBT.make();
                     aData.mNBTs[aCoverSide].setString("ktfru.filter.property",tmp);
                     UT.Sounds.send(aData.mTileEntity.getWorld(), SFX.MC_CLICK, 1, 1, aData.mTileEntity.getCoords());
-                    UT.Entities.sendchat(aPlayer, LH.Chat.GREEN+ LH.get(kMessages.FILTERING_PROPERTIES)+LH.Chat.WHITE+" " + tmp);
+                    UT.Entities.sendchat(aPlayer, LH.Chat.GREEN+ LH.get(I18nHandler.FILTERING_PROPERTIES)+LH.Chat.WHITE+" " + tmp);
 
                 }
             }

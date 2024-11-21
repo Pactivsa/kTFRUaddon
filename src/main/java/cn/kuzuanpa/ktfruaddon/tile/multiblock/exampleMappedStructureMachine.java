@@ -17,6 +17,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 //This is an example machine used to learn structures, grammars etc. It's based on large bath vat in gregtech6
 //这是一个示例机器，用于学习多方块机器的结构，语法等，这个机器是基于gregtech6中的大浸洗器创建的
 
+import cn.kuzuanpa.ktfruaddon.client.render.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.TileEntityBaseLimitedOutputMachine;
 import cn.kuzuanpa.ktfruaddon.tile.util.utils;
@@ -126,6 +127,7 @@ public class exampleMappedStructureMachine extends TileEntityBaseLimitedOutputMa
         int tX = xCoord, tY = yCoord, tZ = zCoord;
         if (!worldObj.blockExists(tX, tY, tZ)) return mStructureOkay;
         lastFailedPos = checkMappedStructure(null, sizeX, sizeY, sizeZ,xMapOffset,0,zMapOffset);
+        if(lastFailedPos!=null) FxRenderBlockOutline.addBlockOutlineToRender(lastFailedPos,0xff0000,2,System.currentTimeMillis()+30000);
         return lastFailedPos==null;
     }
 

@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.item.items;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import gregapi.code.ModData;
 import gregapi.data.LH;
 import gregapi.oredict.OreDictMaterial;
@@ -45,7 +45,7 @@ public class itemFlywheel extends itemPrefixWithTooltip{
     public void addInformation(ItemStack aStack, EntityPlayer aPlayer, List aList, boolean aF3_H) {
         super.addInformation(aStack, aPlayer, aList, aF3_H);
         DecimalFormat format = new DecimalFormat("0.00");
-        aList.add(LH.Chat.WHITE+LH.get(kTooltips.FLYWHEEL_MaxRPM)+ " " +LH.Chat.ORANGE+ format.format(getMaxRPM(ST.meta(aStack)))+" RU/t");
-        aList.add(LH.Chat.WHITE+LH.get(kTooltips.FLYWHEEL_STORAGE)+ " " +LH.Chat.GREEN+ getMaxStorage(ST.meta(aStack)) + " RU");
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.FLYWHEEL_MaxRPM)+ " " +LH.Chat.ORANGE+ format.format(getMaxRPM(ST.meta(aStack)))+" RU/t");
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.FLYWHEEL_STORAGE)+ " " +LH.Chat.GREEN+ getMaxStorage(ST.meta(aStack)) + " RU");
     }
 }

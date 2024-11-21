@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.energy.storage;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.item.items.itemFlywheel;
 import cn.kuzuanpa.ktfruaddon.material.prefix.prefixList;
 import gregapi.code.TagData;
@@ -80,7 +80,7 @@ public class FlywheelBox extends AdaptiveOutputBattery {
     @Override
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if (aTool.equals(TOOL_magnifyingglass) && isServerSide() && aChatReturn!=null) {
-            aChatReturn.add(LH.get(kMessages.INVENTORY)+":");
+            aChatReturn.add(LH.get(I18nHandler.INVENTORY)+":");
             for (int i = 0; i < invsize(); i++) {
                 if(slotHas(i))aChatReturn.add(slot(i).getDisplayName());
             }

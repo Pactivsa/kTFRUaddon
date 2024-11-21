@@ -19,7 +19,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator.SunHeater;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.relauncher.Side;
@@ -81,13 +81,13 @@ public class SunHeaterMirror extends TileEntityBase09FacingSingle implements IMu
                     if (worldObj.getTileEntity(targetSunBoilerPos.posX, targetSunBoilerPos.posY, targetSunBoilerPos.posZ) instanceof SunHeater) {
                         target= (SunHeater) worldObj.getTileEntity(targetSunBoilerPos.posX, targetSunBoilerPos.posY, targetSunBoilerPos.posZ);
                         updateClientData();
-                        aPlayer.addChatMessage(new ChatComponentText(LH.get(kMessages.SUN_BOILER_MIRROR) + targetSunBoilerPos.posX + "," + targetSunBoilerPos.posY + "," + targetSunBoilerPos.posZ));
+                        aPlayer.addChatMessage(new ChatComponentText(LH.get(I18nHandler.SUN_BOILER_MIRROR) + targetSunBoilerPos.posX + "," + targetSunBoilerPos.posY + "," + targetSunBoilerPos.posZ));
                     } else targetSunBoilerPos = null;
                     return true;
                 }
                 return false;
             }else {
-                aPlayer.addChatMessage(new ChatComponentText(LH.get(kMessages.SUN_BOILER_MIRROR_ERR)));
+                aPlayer.addChatMessage(new ChatComponentText(LH.get(I18nHandler.SUN_BOILER_MIRROR_ERR)));
                 return true;
             }
         }else return true;

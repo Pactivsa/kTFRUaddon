@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.energy.storage;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;
 import gregapi.data.LH;
@@ -43,8 +43,8 @@ public class FlywheelBoxElec extends FlywheelBox implements IMultiTileEntity.IMT
     @Override
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if (aTool.equals(TOOL_magnifyingglass) && isServerSide() && aChatReturn!=null) {
-            aChatReturn.add(LH.get(kMessages.STORED_ENERGY)+": "+mEnergyStored);
-            aChatReturn.add(LH.get(kMessages.CAPACITY)+": "+mCapacity);
+            aChatReturn.add(LH.get(I18nHandler.STORED_ENERGY)+": "+mEnergyStored);
+            aChatReturn.add(LH.get(I18nHandler.CAPACITY)+": "+mCapacity);
         }
         return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
     }

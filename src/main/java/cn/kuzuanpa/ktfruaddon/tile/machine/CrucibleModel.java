@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.machine;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;
@@ -202,7 +202,7 @@ public class CrucibleModel extends TileEntityBase07Paintable{
         }
         if(isServerSide()&&aPlayer.inventory.getCurrentItem().getItem()==ItemList.CrucibleModelInnerLayer.getItem()){
             if(mState==2&&ST.move(aPlayer.inventory, this, aPlayer.inventory.currentItem, 1,1) > 0)mState=3;
-            else if(mState<2)aPlayer.addChatMessage(new ChatComponentText(LH.get(kMessages.CRUCIBLE_MODEL_0)+(7-slot(0).stackSize)+LH.get(kMessages.CRUCIBLE_MODEL_1)));
+            else if(mState<2)aPlayer.addChatMessage(new ChatComponentText(LH.get(I18nHandler.CRUCIBLE_MODEL_0)+(7-slot(0).stackSize)+LH.get(I18nHandler.CRUCIBLE_MODEL_1)));
         }
         updateClientData();
         return T;

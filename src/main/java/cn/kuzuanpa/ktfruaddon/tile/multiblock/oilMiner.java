@@ -17,7 +17,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
 import cn.kuzuanpa.ktfruaddon.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.fluid.flList;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -40,7 +40,6 @@ import net.minecraftforge.fluids.IFluidTank;
 import java.util.Collection;
 import java.util.List;
 
-import static cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips.*;
 import static gregapi.data.CS.SIDE_BOTTOM;
 import static gregapi.data.CS.SIDE_FRONT;
 import static gregapi.data.CS.*;
@@ -81,19 +80,19 @@ public class oilMiner extends TileEntityBase10MultiBlockBase implements IMultiBl
         aList.add(LH.Chat.YELLOW+LH.get(LH.CHEAP_OVERCLOCKING));
         LH.addEnergyToolTips(this, aList, mEnergyTypeAccepted, null, null, null);
         aList.add(LH.Chat.CYAN+LH.get(LH.STRUCTURE)+": ");
-        aList.add(LH.Chat.WHITE+LH.get(OIL_MINER_0));
-        aList.add(LH.Chat.WHITE+LH.get(OIL_MINER_1));
-        aList.add(LH.Chat.WHITE+LH.get(OIL_MINER_2));
-        aList.add(LH.Chat.WHITE+LH.get(OIL_MINER_3));
-        aList.add(LH.Chat.CYAN+LH.get(HAS_PROJECTOR_STRUCTURE));
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.OIL_MINER_0));
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.OIL_MINER_1));
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.OIL_MINER_2));
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.OIL_MINER_3));
+        aList.add(LH.Chat.CYAN+LH.get(I18nHandler.HAS_PROJECTOR_STRUCTURE));
 
     }
 
     static {
-        LH.add(OIL_MINER_0,"Walls used in recipes placed on left and right side of main Block, energy input from them");
-        LH.add(OIL_MINER_1,"2*3 Oil Miner Drill in back of main Block, springs should under these drills");
-        LH.add(OIL_MINER_2,"a layer of 3*3 Walls used in recipes placed on top");
-        LH.add(OIL_MINER_3,"fluid input at any top layer wall , fluid auto output at top of the wall below the main block");
+        LH.add(I18nHandler.OIL_MINER_0,"Walls used in recipes placed on left and right side of main Block, energy input from them");
+        LH.add(I18nHandler.OIL_MINER_1,"2*3 Oil Miner Drill in back of main Block, springs should under these drills");
+        LH.add(I18nHandler.OIL_MINER_2,"a layer of 3*3 Walls used in recipes placed on top");
+        LH.add(I18nHandler.OIL_MINER_3,"fluid input at any top layer wall , fluid auto output at top of the wall below the main block");
     }
     @Override
     public void onTick2(long aTimer, boolean aIsServerSide) {
@@ -143,8 +142,8 @@ public class oilMiner extends TileEntityBase10MultiBlockBase implements IMultiBl
     @Override
     public void onMagnifyingGlass2(List<String> aChatReturn) {
         super.onMagnifyingGlass2(aChatReturn);
-        aChatReturn.add(LH.get(kMessages.INPUT )+" "+LH.get(kMessages.TANK)+": "+ (mTankInput.isEmpty()? LH.get(kMessages.EMPTY) :mTankInput.fluid().getLocalizedName(mTankInput.get())+" "+mTankInput.amount()+"L"));
-        aChatReturn.add(LH.get(kMessages.OUTPUT)+" "+LH.get(kMessages.TANK)+": "+ (mTank.isEmpty()? LH.get(kMessages.EMPTY) : mTank.fluid().getLocalizedName(mTank.get())+" "+mTank.amount()+"L"));
+        aChatReturn.add(LH.get(I18nHandler.INPUT )+" "+LH.get(I18nHandler.TANK)+": "+ (mTankInput.isEmpty()? LH.get(I18nHandler.EMPTY) :mTankInput.fluid().getLocalizedName(mTankInput.get())+" "+mTankInput.amount()+"L"));
+        aChatReturn.add(LH.get(I18nHandler.OUTPUT)+" "+LH.get(I18nHandler.TANK)+": "+ (mTank.isEmpty()? LH.get(I18nHandler.EMPTY) : mTank.fluid().getLocalizedName(mTank.get())+" "+mTank.amount()+"L"));
     }
 
     //Energy

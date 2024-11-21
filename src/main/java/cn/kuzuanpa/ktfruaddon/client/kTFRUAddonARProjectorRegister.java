@@ -47,6 +47,7 @@ public class kTFRUAddonARProjectorRegister implements IDummyMultiBlockRegisterer
         dummyStructures.add(new DummyTileMultiBlock(new Object[][][]{TokamakTier1Layer13(),TokamakTier1Layer12(),TokamakTier1Layer11(),TokamakTier1Layer10(),TokamakTier1Layer9(),TokamakTier1Layer8(),TokamakTier1Layer7(),TokamakTier1Layer6(),TokamakTier1Layer5(),TokamakTier1Layer4(),TokamakTier1Layer3(),TokamakTier1Layer2(),TokamakTier1Layer1(),TokamakTier1Layer0()},"ktfru.projector.fusionReactorTokamakT1"));
         dummyStructures.add(new DummyTileMultiBlock(oilMiner(),"ktfru.projector.oilMiner"));
         dummyStructures.add(new DummyTileMultiBlock(cncMachine3(),"ktfru.projector.cncMachine3"));
+        dummyStructures.add(new DummyTileMultiBlock(FuelDeburnFactory(),"ktfru.projector.fuelDeburnFactory"));
 
         return dummyStructures;
     }
@@ -762,4 +763,269 @@ return new Object[][] {
             { null , null , null , null , null , null , null , null ,CondTe, null , null , null , null , null , null , null , null },
     }};}
 
+    static Object[][][] FuelDeburnFactory() {
+
+        BlockMeta SFrame= tile(k,31037);
+        BlockMeta ChPipe= tile(k,31038);
+        BlockMeta StWall= tile(g,18002);
+        BlockMeta MainBl= tile(k,30027);
+        return new Object[][][]{
+        {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, SFrame, SFrame, SFrame, SFrame, SFrame,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , SFrame, SFrame, SFrame, SFrame, SFrame, SFrame,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe, ChPipe, ChPipe, ChPipe,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame, ChPipe,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall, ChPipe,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall, ChPipe,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , {ChPipe, StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , {ChPipe, StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , {ChPipe, SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , {ChPipe, ChPipe, ChPipe,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame, SFrame, SFrame, SFrame, SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, SFrame, SFrame, SFrame, SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame,  null ,  null ,  null , SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , StWall,  null , StWall,  null ,  null ,  null , SFrame, SFrame, SFrame}
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame,  null , SFrame,  null , SFrame,  null ,  null , SFrame, SFrame, SFrame}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , SFrame, SFrame, SFrame}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , SFrame, SFrame, SFrame}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , SFrame, SFrame, SFrame}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , SFrame, SFrame, SFrame}
+                , {ChPipe, StWall,  null ,  null ,  null ,  null , StWall,  null , SFrame, SFrame, SFrame}
+                , {ChPipe, StWall,  null ,  null ,  null ,  null , StWall,  null , SFrame, SFrame, SFrame}
+                , {ChPipe, SFrame, StWall, StWall, StWall, StWall, SFrame,  null , SFrame, SFrame, SFrame}
+                , {ChPipe, ChPipe, ChPipe,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame,  null , SFrame, SFrame, SFrame,  null ,  null ,  null , ChPipe,  null }
+                , { null , SFrame, StWall, StWall, StWall,  null ,  null ,  null ,  null , ChPipe,  null }
+                , { null , SFrame, StWall,  null , StWall, SFrame,  null ,  null , StWall, ChPipe, StWall}
+                , { null ,  null , StWall, StWall, StWall, SFrame,  null ,  null ,  null , ChPipe,  null }
+                , { null , SFrame, SFrame, ChPipe, SFrame, SFrame,  null ,  null , StWall, ChPipe, StWall}
+                , { null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null , ChPipe,  null }
+                , { null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null , StWall, ChPipe, StWall}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null , ChPipe,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall, ChPipe, StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null , ChPipe,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall, ChPipe, StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null , ChPipe,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , StWall, ChPipe, StWall}
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame,  null ,  null ,  null , SFrame,  null ,  null ,  null , ChPipe,  null }
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , StWall,  null , StWall,  null ,  null ,  null , StWall,  null , StWall}
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame,  null , SFrame,  null , SFrame,  null ,  null , StWall,  null , StWall}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , StWall,  null , StWall}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , {ChPipe, StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , {ChPipe, StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , {ChPipe, SFrame, StWall, StWall, StWall, StWall, SFrame,  null , StWall,  null , StWall}
+                , {ChPipe, ChPipe, ChPipe,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame, SFrame, SFrame,  null , SFrame,  null ,  null ,  null , ChPipe,  null }
+                , { null ,  null , StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall,  null , StWall, SFrame,  null ,  null , StWall,  null , StWall}
+                , { null , SFrame, StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, SFrame, ChPipe, SFrame, SFrame,  null ,  null , StWall,  null , StWall}
+                , { null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null , StWall,  null , StWall}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , StWall,  null , StWall}
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame,  null ,  null ,  null , SFrame,  null ,  null ,  null , ChPipe,  null }
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , StWall,  null , StWall,  null ,  null ,  null , StWall,  null , StWall}
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame,  null , SFrame,  null , SFrame,  null ,  null , StWall,  null , StWall}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , StWall,  null , StWall}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , StWall,  null , StWall}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame,  null , SFrame, SFrame, SFrame,  null ,  null ,  null , ChPipe,  null }
+                , { null , SFrame, StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall,  null , StWall, SFrame,  null ,  null , StWall,  null , StWall}
+                , { null ,  null , StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, SFrame, ChPipe, SFrame, SFrame,  null ,  null , StWall,  null , StWall}
+                , { null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null , StWall,  null , StWall}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall,  null , StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , StWall,  null , StWall}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null , SFrame,  null ,  null ,  null , SFrame, MainBl,  null ,  null , ChPipe,  null }
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null , StWall,  null , StWall,  null ,  null ,  null , StWall, ChPipe, StWall}
+                , { null ,  null , StWall, StWall, StWall,  null ,  null ,  null ,  null , ChPipe,  null }
+                , { null , SFrame,  null , SFrame,  null , SFrame,  null ,  null , StWall, ChPipe, StWall}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , ChPipe,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , StWall, ChPipe, StWall}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null , ChPipe,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall, ChPipe, StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null , ChPipe,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null , StWall, ChPipe, StWall}
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null , ChPipe,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , StWall, ChPipe, StWall}
+                , { null ,  null ,  null ,  null , ChPipe, ChPipe, ChPipe, ChPipe, ChPipe, ChPipe,  null }
+        }, {
+                { null , SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, SFrame,  null ,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, SFrame,  null ,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, SFrame,  null ,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, SFrame, SFrame, SFrame, SFrame,  null ,  null , SFrame, SFrame, SFrame}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , SFrame, SFrame, SFrame}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null , SFrame, SFrame, SFrame}
+                , { null , SFrame, SFrame, SFrame, SFrame, SFrame, SFrame,  null , SFrame, SFrame, SFrame}
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }
+    };
+    }
 }

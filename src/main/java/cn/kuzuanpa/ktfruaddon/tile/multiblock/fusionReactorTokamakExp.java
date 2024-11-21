@@ -55,7 +55,7 @@ import net.minecraftforge.fluids.IFluidTank;
 
 import java.util.*;
 
-import static cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips.HAS_PROJECTOR_STRUCTURE;
+import static cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler.HAS_PROJECTOR_STRUCTURE;
 import static gregapi.data.CS.*;
 
 public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase implements IMultiTileEntity.IMTE_SyncDataByteArray, ITileEntityEnergy, IMultiBlockEnergy, IMultiBlockFluidHandler, IMultiBlockInventory, IMappedStructure {

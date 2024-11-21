@@ -17,7 +17,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.item.items.random.itemComputer;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.data.LH;
@@ -114,12 +114,12 @@ public class MultiBlockPartComputeClusterSimple extends TileEntityBase09FacingSi
                 boolean saidSomething = F;
                 for (int i=0;i < 2;i++) if (slot(i) != null) {
                     saidSomething = T;
-                    aChatReturn.add(LH.get(kMessages.SLOT)+i+": " + slot(i).getDisplayName());
+                    aChatReturn.add(LH.get(I18nHandler.SLOT)+i+": " + slot(i).getDisplayName());
                 }
-                if (!saidSomething) aChatReturn.add(LH.get(kMessages.COMPUTE_CLUSTER_0));
+                if (!saidSomething) aChatReturn.add(LH.get(I18nHandler.COMPUTE_CLUSTER_0));
                 updateComputePower();
-                aChatReturn.add(LH.get(kMessages.COMPUTE_CLUSTER_1)+(isRunning?LH.get(kMessages.NORMAL):LH.get(kMessages.COMPUTE_CLUSTER_3)));
-                aChatReturn.add(LH.get(kMessages.COMPUTE_CLUSTER_2)+getComputePower());
+                aChatReturn.add(LH.get(I18nHandler.COMPUTE_CLUSTER_1)+(isRunning?LH.get(I18nHandler.NORMAL):LH.get(I18nHandler.COMPUTE_CLUSTER_3)));
+                aChatReturn.add(LH.get(I18nHandler.COMPUTE_CLUSTER_2)+getComputePower());
             }
         }
         if (getFacingTool() != null && aTool.equals(getFacingTool())) {byte aTargetSide = UT.Code.getSideWrenching(aSide, aHitX, aHitY, aHitZ); if (getValidSides()[aTargetSide]) {byte oFacing = mFacing; mFacing = aTargetSide; updateClientData(); causeBlockUpdate(); onFacingChange(oFacing); return 10000;}}

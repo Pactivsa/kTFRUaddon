@@ -14,8 +14,7 @@
  */
 package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;
@@ -116,12 +115,12 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
         aList.add(Chat.CYAN     + LH.get(LH.RECIPES) + ": " + Chat.WHITE + LH.get(mRecipes.mNameInternal));
-        aList.add(Chat.GREEN    + LH.get(LH.FLUID_INPUT)+ ": " + Chat.WHITE + LH.get(kTooltips.SIDE_FRONT)+", "+LH.get(kTooltips.SIDE_BACK)+" "+LH.get(kTooltips.AUTO));
-        aList.add(Chat.RED      + LH.get(LH.FLUID_OUTPUT)+ ": " + Chat.WHITE + LH.get(kTooltips.SIDE_RIGHT)+", "+LH.get(kTooltips.SIDE_LEFT)+" "+LH.get(kTooltips.AUTO));
+        aList.add(Chat.GREEN    + LH.get(LH.FLUID_INPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_FRONT)+", "+LH.get(I18nHandler.SIDE_BACK)+" "+LH.get(I18nHandler.AUTO));
+        aList.add(Chat.RED      + LH.get(LH.FLUID_OUTPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_RIGHT)+", "+LH.get(I18nHandler.SIDE_LEFT)+" "+LH.get(I18nHandler.AUTO));
         LH.addEnergyToolTips(this, aList, null, mEnergyTypeEmitted, null, LH.get(LH.FACE_FRONT));
         aList.add(Chat.ORANGE   + LH.get(LH.NO_GUI_FUNNEL_TAP_TO_TANK));
         aList.add(Chat.DGRAY    + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
-        aList.add(Chat.DGRAY    + LH.get(kTooltips.USE_MONKEY_WRENCH_CHANGE_STRUCTURE));
+        aList.add(Chat.DGRAY    + LH.get(I18nHandler.USE_MONKEY_WRENCH_CHANGE_STRUCTURE));
         super.addToolTips(aList, aStack, aF3_H);
     }
 
@@ -198,8 +197,8 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
             return 1;
         }
         if(aTool.equals(TOOL_monkeywrench)){
-            if (changingStaticTank) aChatReturn.add(LH.get(kMessages.CHANGING_STRUCTURE));
-            else aChatReturn.add(LH.get(kMessages.DONE_CHANGING_STRUCTURE));
+            if (changingStaticTank) aChatReturn.add(LH.get(I18nHandler.CHANGING_STRUCTURE));
+            else aChatReturn.add(LH.get(I18nHandler.DONE_CHANGING_STRUCTURE));
             changingStaticTank = !changingStaticTank;
             updateClientData();
         }

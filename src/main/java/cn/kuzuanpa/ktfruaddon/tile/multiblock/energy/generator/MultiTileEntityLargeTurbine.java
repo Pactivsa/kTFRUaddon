@@ -18,7 +18,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientTurbine;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonTurbine;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.item.items.itemTurbine;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;
@@ -211,7 +211,7 @@ public abstract class MultiTileEntityLargeTurbine extends TileEntityBase10MultiB
 	public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
 		if (aTool.equals(TOOL_screwdriver)) {
 			mOverclock=!mOverclock;
-			aChatReturn.add(LH.Chat.ORANGE+LH.get(kMessages.OVERCLOCKING)+" "+mOverclock);
+			aChatReturn.add(LH.Chat.ORANGE+LH.get(I18nHandler.OVERCLOCKING)+" "+mOverclock);
 		}
 		return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
 	}

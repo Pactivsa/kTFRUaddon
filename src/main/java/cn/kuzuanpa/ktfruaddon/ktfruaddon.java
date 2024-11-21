@@ -14,9 +14,11 @@
  */
 
 package cn.kuzuanpa.ktfruaddon;
+import cn.kuzuanpa.ktfruaddon.command.CommandTileCodeConvert;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import gregapi.api.Abstract_Mod;
 import gregapi.api.Abstract_Proxy;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
@@ -35,7 +37,10 @@ public final class ktfruaddon extends Abstract_Mod {
     public static MultiTileEntityRegistry kTileRegistry0 = null;
     public ktfruaddon() {
     }
-
+    @Mod.EventHandler
+    public void registerCommands(FMLServerStartingEvent e){
+        e.registerServerCommand(new CommandTileCodeConvert());
+    }
     public String getModID() {
         return "ktfruaddon";
     }

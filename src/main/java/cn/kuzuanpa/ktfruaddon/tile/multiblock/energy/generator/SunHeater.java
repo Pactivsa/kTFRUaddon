@@ -15,7 +15,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kMessages;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
 import cn.kuzuanpa.ktfruaddon.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
@@ -241,7 +241,7 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
     }
     public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if (isServerSide()){
-        if(!mStructureOkay)aPlayer.addChatMessage(new ChatComponentText(LH.Chat.RED+LH.get(kMessages.SUN_BOILER_ERR)));
+        if(!mStructureOkay)aPlayer.addChatMessage(new ChatComponentText(LH.Chat.RED+LH.get(I18nHandler.SUN_BOILER_ERR)));
         ItemStack equippedItem=aPlayer.getCurrentEquippedItem();
         if (!(OM.is(OD_USB_STICKS[0],equippedItem))) return false;
         NBTTagCompound aNBT = UT.NBT.make();
@@ -253,10 +253,10 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
             if (clickDoubleCheck) {
                 equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
                 equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
-                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(kMessages.SUN_BOILER_0)));
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.SUN_BOILER_0)));
                 clickDoubleCheck=false;
             } else {
-                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.YELLOW+LH.get(kMessages.SUN_BOILER_1)));
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.YELLOW+LH.get(I18nHandler.SUN_BOILER_1)));
                 clickDoubleCheck=true;
             }
         }
@@ -264,7 +264,7 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
             equippedItem.setTagCompound(UT.NBT.make());
             equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
             equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
-            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(kMessages.SUN_BOILER_0)));
+            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.SUN_BOILER_0)));
         }
         }
         return true;

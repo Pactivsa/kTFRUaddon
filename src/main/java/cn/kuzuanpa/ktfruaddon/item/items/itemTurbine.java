@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.item.items;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import gregapi.code.ModData;
 import gregapi.data.LH;
 import gregapi.oredict.OreDictMaterial;
@@ -41,8 +41,8 @@ public class itemTurbine extends itemPrefixWithTooltip {
         super.addInformation(aStack, aPlayer, aList, aF3_H);
         OreDictMaterial tMat = this.getMaterial(ST.meta(aStack));
         DecimalFormat format = new DecimalFormat("0.00");
-        aList.add(LH.Chat.WHITE+LH.get(kTooltips.TURBINE_POWERRATE)+ " " +LH.Chat.CYAN+ format.format(getTurbineEfficiency(tMat)));
-        aList.add(LH.Chat.WHITE+LH.get(kTooltips.TURBINE_DURABILITY)+ " " +LH.Chat.GREEN+ getTurbineDurability(tMat)/(20*3600) + "RU * h");
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.TURBINE_POWERRATE)+ " " +LH.Chat.CYAN+ format.format(getTurbineEfficiency(tMat)));
+        aList.add(LH.Chat.WHITE+LH.get(I18nHandler.TURBINE_DURABILITY)+ " " +LH.Chat.GREEN+ getTurbineDurability(tMat)/(20*3600) + "RU * h");
     }
     @Override public int getItemStackLimit(ItemStack aStack) {return 1;}
 }

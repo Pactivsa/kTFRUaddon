@@ -33,7 +33,7 @@ import net.minecraftforge.fluids.IFluidHandler;
 
 import java.util.List;
 
-import static cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips.HAS_PROJECTOR_STRUCTURE;
+import static cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler.HAS_PROJECTOR_STRUCTURE;
 import static gregapi.data.CS.*;
 
 public class CNCMachine3 extends ModelRenderBaseMultiBlockMachine {

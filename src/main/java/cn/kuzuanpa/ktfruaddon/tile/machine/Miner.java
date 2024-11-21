@@ -19,7 +19,7 @@ package cn.kuzuanpa.ktfruaddon.tile.machine;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientMiner;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonMiner;
 import cn.kuzuanpa.ktfruaddon.code.NetServerHandlerFake;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kTooltips;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT;
 import com.mojang.authlib.GameProfile;
 import gregapi.block.multitileentity.IMultiTileEntity;
@@ -194,13 +194,13 @@ public class Miner extends TileEntityBase09FacingSingle implements ITileEntityEn
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
         LH.addEnergyToolTips(this, aList, mEnergyTypeAccepted, null, null, null);
-        aList.add(LH.Chat.CYAN    + LH.get(kTooltips.MINER));
+        aList.add(LH.Chat.CYAN    + LH.get(I18nHandler.MINER));
         aList.add(LH.Chat.DGRAY    + LH.get(LH.TOOL_TO_RESET_SOFT_HAMMER));
         aList.add(LH.Chat.DGRAY    + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
     }
 
     static {
-        LH.add(kTooltips.MINER,"");
+        LH.add(I18nHandler.MINER,"");
     }
 
     @Override
