@@ -41,7 +41,7 @@ public class i18nPostInit {
         LH.add(I18nHandler.TURBINE_POWERRATE,"Turbine Power Rate: ");
         LH.add(I18nHandler.FLYWHEEL_STORAGE,"Can Store:");
         LH.add(I18nHandler.FLYWHEEL_MaxRPM,"Max RPM:");
-        LH.add(I18nHandler.ORE_SCANNER_REQUIRE_PIPES,"Require Pipe: ");
+        LH.add(I18nHandler.ORE_SCANNER_REQUIRE_PIPES,"Require Pipe");
 
         LH.add(I18nHandler.REQUIRE_MANA_BURST,"Require Mana Burst To Work!");
         LH.add(I18nHandler.DONE_CHANGING_STRUCTURE,"Changing Contents");

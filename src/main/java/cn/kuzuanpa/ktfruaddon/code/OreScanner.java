@@ -31,6 +31,7 @@ import gregapi.data.MT;
 import gregapi.oredict.OreDictMaterial;
 import gregapi.util.UT;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
@@ -45,8 +46,9 @@ import java.util.Map;
 
 public class OreScanner {
     public static final byte ORE_TYPE_GT_NORMAL=0,ORE_TYPE_GT_SMALL=1,ORE_TYPE_GT_BEDROCK=2,ORE_TYPE_GT_BEDROCK_SMALL=3,ORE_TYPE_TFC=4, ORE_TYPE_VANILLA=5;
-    public int range, xPos, yPos, zPos, timerA,timerB, xChunkPos = 0, zChunkPos = 0;
+    public int range, xPos, yPos, zPos, yPointer, xChunkPos = 0, zChunkPos = 0;
     public final int xChunkStart, zChunkStart;
+    public short speed = 1;
     public World world;
     public boolean includeSmallOre = false, finished = false, includeBedRockOre = true;
     public List<discoveredOres> discoveredOres = new ArrayList<>();
@@ -61,11 +63,10 @@ public class OreScanner {
         this.yPos = yPos;
         this.zPos = zPos;
         this.world = world;
-        this.timerA = 0;
-        this.timerB=0;
+        this.yPointer =0;
         this.includeSmallOre = includeSmallOre;
-        xChunkPos = xChunkStart =  xPos >> 4 - range;
-        zChunkPos = zChunkStart =  zPos >> 4 - range;
+        xChunkPos = xChunkStart =  (xPos >> 4 )- range;
+        zChunkPos = zChunkStart =  (zPos >> 4 )- range;
     }
 
     public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre) {
@@ -74,12 +75,16 @@ public class OreScanner {
         this.yPos = yPos;
         this.zPos = zPos;
         this.world = world;
-        this.timerA = 0;
-        this.timerB=0;
+        this.yPointer =0;
         this.includeSmallOre = includeSmallOre;
-        xChunkPos = xChunkStart = xPos >> 4 - range;
-        zChunkPos = zChunkStart = zPos >> 4 - range;
+        xChunkPos = xChunkStart = (xPos >> 4) - range;
+        zChunkPos = zChunkStart = (zPos >> 4) - range;
         this.includeBedRockOre = includeBedRockOre;
+    }
+
+    public OreScanner setSpeed(short speed) {
+        this.speed = speed;
+        return this;
     }
 
     /**
@@ -87,7 +92,9 @@ public class OreScanner {
      */
     public boolean startOrContinueScanOres() {
         if (finished) return true;
-        if (timerA != 0 && timerA % yPos == 0) {
+
+        if (yPointer > yPos) {
+            yPointer = 0;
             xChunkPos++;
             if (xChunkPos > xChunkStart + range * 2) {
                 xChunkPos = xChunkStart;
@@ -98,23 +105,23 @@ public class OreScanner {
                 }
             }
         }
+
         scanOres();
-        timerA++;
         return false;
     }
 
     public void resetScanOres() {
         clear();
-        timerA = 0;
-        timerB = 0;
+        yPointer = 0;
     }
 
     protected boolean scanOres() {
         if (world == null) return false;
-        for (int x = 0; x < 16; x++) {
-            for (int z = 0; z < 16; z++) {
+        for (int y = 0; y < speed; y++){
+            yPointer++;
+            for (int x = 0; x < 16; x++) for (int z = 0; z < 16; z++)  {
                 int xPos=xChunkPos * 16 + x;
-                int yPos=timerA % this.yPos;
+                int yPos= yPointer;
                 int zPos=zChunkPos * 16 + z;
                 Block block = world.getBlock(xPos,yPos,zPos);
                 String name = GameData.getBlockRegistry().getNameForObject(block);
@@ -145,6 +152,7 @@ public class OreScanner {
                     addDiscoveredOres(block.getDamageValue(world, xPos,yPos,zPos), xPos,yPos,zPos, ORE_TYPE_GT_SMALL);
                     continue;
                 }
+
             }
         }
         return true;
@@ -183,8 +191,7 @@ public class OreScanner {
             dos.writeInt(scanner.xPos);
             dos.writeInt(scanner.yPos);
             dos.writeInt(scanner.zPos);
-            dos.writeInt(scanner.timerA);
-            dos.writeInt(scanner.timerB);
+            dos.writeInt(scanner.yPointer);
             dos.writeInt(scanner.xChunkPos);
             dos.writeInt(scanner.zChunkPos);
             dos.writeInt(scanner.world.provider.dimensionId);
@@ -204,7 +211,6 @@ public class OreScanner {
             int xPos  = dis.readInt();
             int yPos  = dis.readInt();
             int zPos  = dis.readInt();
-            int timerA= dis.readInt();
             int timerB= dis.readInt();
             int xChunkPos = dis.readInt();
             int zChunkPos = dis.readInt();
@@ -213,8 +219,7 @@ public class OreScanner {
             boolean includeBedRockOre = dis.readBoolean();
             if(DimensionManager.getWorld(world) == null)return null;
             OreScanner scanner = new OreScanner(range,xPos,yPos,zPos, DimensionManager.getWorld(world), includeSmallOre,includeBedRockOre);
-            scanner.timerA=timerA;
-            scanner.timerB=timerB;
+            scanner.yPointer =timerB;
             scanner.xChunkPos=xChunkPos;
             scanner.zChunkPos=zChunkPos;
             return scanner;

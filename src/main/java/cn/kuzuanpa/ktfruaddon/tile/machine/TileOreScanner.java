@@ -58,7 +58,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     public static IIconContainer mTextureMaterial, mTextureFront, mTextureFrontActive, mTextureFrontFinished;
     public static final byte STATE_IDLE = 0, STATE_RUNNING = 1, STATE_FINISHED = 2;
     public byte mState = STATE_IDLE;
-    public short pipeID = 26141, range = 1 ,usedPipes = 0, mana = 0, interval = 10;
+    public short pipeID = 26141, range = 1 ,usedPipes = 0, mana = 0, interval = 10, speed=1;
     public long mEnergyStored =0, mCost=64;
     public TagData mEnergyTypeAccepted = TD.Energy.EU;
     public OreScanner mScanner = null;
@@ -77,8 +77,10 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         if(aNBT.hasKey(NBT_ENERGY))mEnergyStored = aNBT.getLong(NBT_ENERGY);
         if(aNBT.hasKey("scanner"))mScanner = OreScanner.deserialize(aNBT.getByteArray("scanner"));
         if(aNBT.hasKey(NBT_DESIGN))pipeID = aNBT.getShort(NBT_DESIGN);
+        if(aNBT.hasKey(NBT_INPUT))mCost = aNBT.getShort(NBT_INPUT);
         if(aNBT.hasKey(kTileNBT.MAX_RANGE))range = aNBT.getShort(kTileNBT.MAX_RANGE);
         if(aNBT.hasKey(kTileNBT.INTERVAL))interval = aNBT.getShort(kTileNBT.INTERVAL);
+        if(aNBT.hasKey(kTileNBT.MINER_SPEED))speed = aNBT.getShort(kTileNBT.MINER_SPEED);
         if(mScanner!=null)mScanner.setScanner(this);
     }
 
@@ -98,10 +100,14 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     @Override
     public void onTick2(long aTimer, boolean aIsServerSide) {
         super.onTick2(aTimer, aIsServerSide);
-        if(!aIsServerSide && mState != STATE_IDLE && aTimer%100==0)  UT.Sounds.play("ktfruaddon:tile.noise.n",5,1.0F, 1.0F,new ChunkCoordinates(xCoord,yCoord,zCoord));
+        if(!aIsServerSide && mState == STATE_RUNNING && aTimer%100==0)  UT.Sounds.play("ktfruaddon:tile.noise.n",5,1.0F, 1.0F,new ChunkCoordinates(xCoord,yCoord,zCoord));
         if(!aIsServerSide)return;
         mState=STATE_IDLE;
-        if(mScanner==null || mEnergyStored<mCost)return;
+        if(mScanner==null)return;
+        if(mEnergyStored<mCost){
+            mEnergyStored=0;
+            return;
+        }
         mEnergyStored-=mCost;
         if(mana>16)mana-=16;
         else return;
@@ -113,20 +119,17 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     @Override
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if(aTool.equals(TOOL_softhammer)){
+            stateSyncRequired=true;
             if(isClientSide()){
                 cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.removeBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos)));
                 cachedFoundOres.clear();
                 return 1;
             }
-            if(usedPipes>0){//Scanning In Progress
-                mScanner.resetScanOres();
-                aChatReturn.add("Reset a Running OreScanning process");
-            }
             //Try to consume pipe and start scan
-            else if((slotHas(0) && gRegistry.getItem(pipeID).getItem().equals(slot(0).getItem()) && slot(0).getItemDamage() == pipeID && slot(0).stackSize >= Math.min(yCoord,64))) {
+            if(usedPipes == 0 && (slotHas(0) && gRegistry.getItem(pipeID).getItem().equals(slot(0).getItem()) && slot(0).getItemDamage() == pipeID && slot(0).stackSize == 64)) {
                 usedPipes = (short) slot(0).stackSize;
                 slotKill(0);
-                if(mScanner==null) mScanner = new OreScanner(range,xCoord,yCoord,zCoord,worldObj,true,true).setScanner(this);
+                if(mScanner==null) mScanner = new OreScanner(range,xCoord,yCoord,zCoord,worldObj,true,true).setSpeed(speed).setScanner(this);
                 else mScanner.resetScanOres();
                 aChatReturn.add("Started a OreScanning process");
             }
@@ -142,15 +145,29 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
         LH.addEnergyToolTips(this, aList, mEnergyTypeAccepted,null, LH.get(LH.FACE_ANY),null);
-        aList.add(LH.Chat.CYAN + LH.get(I18nHandler.ORE_SCANNER_REQUIRE_PIPES)+" "+gRegistry.getItem(pipeID).getDisplayName());
-        aList.add(LH.Chat.CYAN + LH.get(I18nHandler.REQUIRE_MANA_BURST));
-        aList.add(LH.Chat.CYAN + LH.get(LH.TOOL_TO_TOGGLE_SOFT_HAMMER));
+        aList.add(LH.Chat.WHITE + LH.get(I18nHandler.ORE_SCANNER_REQUIRE_PIPES)+": "+gRegistry.getItem(pipeID).getDisplayName());
+        aList.add(LH.Chat.WHITE + LH.get(I18nHandler.REQUIRE_MANA_BURST));
+        aList.add(LH.Chat.BLINKING_CYAN + LH.get(I18nHandler.HINT_NEED_MULTI_AMPERE_INPUT));
+        aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_TOGGLE_SOFT_HAMMER));
+        aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
         super.addToolTips(aList, aStack, aF3_H);
+    }
+
+    @Override
+    public boolean[] getValidSides() {
+        return SIDES_HORIZONTAL;
     }
 
     @Override
     public boolean canDrop(int aSlot) {
         return true;
+    }
+
+    @Override
+    public boolean breakBlock() {
+        onFinished();
+        super.breakBlock();
+        return false;
     }
 
     @Override
@@ -168,7 +185,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     public void onFinished() {
         setInventorySlotContents(0,gRegistry.getItem(pipeID, usedPipes));
         usedPipes=0;
-        isFinishedSent=false;
+        stateSyncRequired =true;
     }
     //Energy
     @Override
@@ -203,19 +220,28 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
 
     @Override
     public long getEnergySizeInputMax(TagData aEnergyType, byte aSide) {
-        return mCost*2;
+        return mCost;
     }
 
-    boolean isFinishedSent = false;
+    boolean stateSyncRequired = false;
     //Client Sync
     @Override
     public boolean onTickCheck(long aTimer) {
-        return super.onTickCheck(aTimer) || !cachedFoundOres.isEmpty() || !isFinishedSent&&mState==STATE_FINISHED;
+        return super.onTickCheck(aTimer) || !cachedFoundOres.isEmpty() || stateSyncRequired;
     }
 
     @Override
     public IPacket getClientDataPacket(boolean aSendAll) {
-        byte[] data = serializeOreData(cachedFoundOres);
+        Map<BlockCoord, OreData> subOreMap = new HashMap<>();
+        int putData = 0;
+        //Limit pack size
+        for(Map.Entry<BlockCoord, OreData> entry : cachedFoundOres.entrySet()){
+            if(putData>8)break;
+            putData ++;
+            subOreMap.put(entry.getKey(),entry.getValue());
+        }
+        subOreMap.forEach((k,v)->cachedFoundOres.remove(k));
+        byte[] data = serializeOreData(subOreMap);
         if(data == null)return super.getClientDataPacket(aSendAll);
         try{
             if(aSendAll){
@@ -227,18 +253,16 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
                 combineData[4] =  getVisualData();
                 combineData[5] = getDirectionData();
                 System.arraycopy(data, 0, combineData, 6, data.length);
-                cachedFoundOres.clear();
-                if(mState==STATE_FINISHED)isFinishedSent=true;
-                return getClientDataPacketByteArray(aSendAll, combineData);
+                if(mState==STATE_FINISHED) stateSyncRequired =true;
+                return getClientDataPacketByteArray(true, combineData);
             }
             else {
                 byte[] combineData = new byte[data.length+2];
                 combineData[0] = -2;
                 combineData[1] =  getVisualData();
                 System.arraycopy(data, 0, combineData, 2, data.length);
-                cachedFoundOres.clear();
-                if(mState==STATE_FINISHED)isFinishedSent=true;
-                return getClientDataPacketByteArray(aSendAll, combineData);
+                if(mState==STATE_FINISHED) stateSyncRequired =true;
+                return getClientDataPacketByteArray(false, combineData);
             }
         }catch (Exception ignored) {}
         //Not clear cachedOres when error happened
@@ -251,17 +275,20 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     }
 
     @Override
+    public void setVisualData(byte aData) {
+        mState=aData;
+    }
+
+    @Override
     public boolean receiveDataByteArray(byte[] aData, INetworkHandler aNetworkHandler) {
         if(aData[0] > 0)return super.receiveDataByteArray(aData, aNetworkHandler);
         else if (aData[0] == -1) {
             byte[] superData = Arrays.copyOfRange(aData, 1, 6);
             super.receiveDataByteArray(superData, aNetworkHandler);
-            mState=aData[4];
             byte[] receivedOreData = Arrays.copyOfRange(aData, 6, aData.length);
             cachedFoundOres.putAll(deserializeOreData(receivedOreData));
         } else if (aData[0] == -2) {
             super.receiveDataByte(aData[1], aNetworkHandler);
-            mState=aData[1];
             byte[] receivedOreData = Arrays.copyOfRange(aData, 2, aData.length);
             cachedFoundOres.putAll(deserializeOreData(receivedOreData));
         }
@@ -304,14 +331,13 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
 
     @Override
     public boolean canRecieveManaFromBursts() {
-        return true;
+        return mState!=STATE_FINISHED;
     }
 
     @Override
     public int getCurrentMana() {
         return mana;
     }
-
 
     public static class OreData{
         public short materialID;
@@ -338,21 +364,20 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
             });
 
             dos.flush();
-            dos.close();
             return bos.toByteArray();
-        }catch (Exception ignored){}
+        }catch (Exception e){e.printStackTrace();}
         return null;
     }
     public static Map<BlockCoord,OreData> deserializeOreData(byte[] bytes) {
         try (ByteArrayInputStream bis = new ByteArrayInputStream(bytes)) {
             DataInputStream dis = new DataInputStream(bis);
             Map<BlockCoord,OreData> list = new HashMap<>();
-            int size = 0;
-            size = dis.readInt();
+            int size = dis.readInt();
             for (int i = 0; i < size; i++) list.put(new BlockCoord(dis.readInt(), dis.readInt(), dis.readInt()), new OreData(dis.readShort(), dis.readByte()));
             dis.close();
             return list;
         } catch (IOException e) {
+            e.printStackTrace();
             return new HashMap<>();
         }
     }

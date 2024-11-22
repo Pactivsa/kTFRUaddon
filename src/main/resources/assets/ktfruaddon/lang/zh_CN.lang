@@ -25,10 +25,11 @@ ktfru.text.common.capacity=容量
 ktfru.text.common.outputting=正在输出
 ktfru.text.common.auto=(自动)
 ktfru.text.common.structure_projector=可使用投影仪预览结构
-ktfru.text.common.require_mana_burst=需要魔力才能工作!
+ktfru.text.common.require_mana_burst=需要魔力才能工作
 ktfru.text.tools.monkey_wrench_changing_structure=使用 活动扳手 修改机器结构
 ktfru.text.common.changing_structure=开始调整机器结构
 ktfru.text.common.done_changing_structure=机器结构调整完成
+ktfru.text.common.hint.multi_ampere_input=提示: 需要多A输入
 
 ktfru.text.item.turbine.powerrate=涡轮能量系数:
 ktfru.text.item.turbine.durability=涡轮耐久:
