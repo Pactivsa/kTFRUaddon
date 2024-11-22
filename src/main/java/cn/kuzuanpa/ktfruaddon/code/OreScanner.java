@@ -64,9 +64,8 @@ public class OreScanner {
         this.timerA = 0;
         this.timerB=0;
         this.includeSmallOre = includeSmallOre;
-        xChunkPos = xChunkStart = world.getChunkFromBlockCoords(xPos, zPos).xPosition - range;
-        zChunkPos = zChunkStart = world.getChunkFromBlockCoords(xPos, zPos).zPosition - range;
-        includeBedRockOre = true;
+        xChunkPos = xChunkStart =  xPos >> 4 - range;
+        zChunkPos = zChunkStart =  zPos >> 4 - range;
     }
 
     public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre) {
@@ -78,8 +77,8 @@ public class OreScanner {
         this.timerA = 0;
         this.timerB=0;
         this.includeSmallOre = includeSmallOre;
-        xChunkPos = xChunkStart = world.getChunkFromBlockCoords(xPos, zPos).xPosition - range;
-        zChunkPos = zChunkStart = world.getChunkFromBlockCoords(xPos, zPos).zPosition - range;
+        xChunkPos = xChunkStart = xPos >> 4 - range;
+        zChunkPos = zChunkStart = zPos >> 4 - range;
         this.includeBedRockOre = includeBedRockOre;
     }
 
@@ -207,11 +206,12 @@ public class OreScanner {
             int zPos  = dis.readInt();
             int timerA= dis.readInt();
             int timerB= dis.readInt();
-            int world = dis.readInt();
             int xChunkPos = dis.readInt();
             int zChunkPos = dis.readInt();
+            int world = dis.readInt();
             boolean includeSmallOre = dis.readBoolean();
             boolean includeBedRockOre = dis.readBoolean();
+            if(DimensionManager.getWorld(world) == null)return null;
             OreScanner scanner = new OreScanner(range,xPos,yPos,zPos, DimensionManager.getWorld(world), includeSmallOre,includeBedRockOre);
             scanner.timerA=timerA;
             scanner.timerB=timerB;

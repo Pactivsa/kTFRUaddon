@@ -3,50 +3,54 @@ ktfru.projector.fusionReactorTokamakT1=托卡马克堆(T1)
 ktfru.projector.cncMachine3=3轴数控车床
 ktfru.projector.oilMiner=油井
 
-ktfru.tooltip.common.side.front=前侧
-ktfru.tooltip.common.side.back=后侧
-ktfru.tooltip.common.side.left=左侧
-ktfru.tooltip.common.side.right=右侧
-ktfru.tooltip.common.side.top=顶端
-ktfru.tooltip.common.side.bottom=底端
-ktfru.tooltip.common.auto=(自动)
-ktfru.tooltip.common.structure_projector=可使用投影仪预览结构
+ktfru.text.common.side.front=前侧
+ktfru.text.common.side.back=后侧
+ktfru.text.common.side.left=左侧
+ktfru.text.common.side.right=右侧
+ktfru.text.common.side.top=顶端
+ktfru.text.common.side.bottom=底端
+ktfru.text.common.overclocking=启用超频
+ktfru.text.common.input=输入
+ktfru.text.common.output=输出
+ktfru.text.common.inventory=物品栏
+ktfru.text.common.slot=物品格
+ktfru.text.common.tank=流体槽
+ktfru.text.common.empty=空
+ktfru.text.common.null=无
+ktfru.text.common.normal=正常
+ktfru.text.common.error=错误
+ktfru.text.common.temperature=温度
+ktfru.text.common.stored_energy=能量储量
+ktfru.text.common.capacity=容量
+ktfru.text.common.outputting=正在输出
+ktfru.text.common.auto=(自动)
+ktfru.text.common.structure_projector=可使用投影仪预览结构
+ktfru.text.common.require_mana_burst=需要魔力才能工作!
+ktfru.text.tools.monkey_wrench_changing_structure=使用 活动扳手 修改机器结构
+ktfru.text.common.changing_structure=开始调整机器结构
+ktfru.text.common.done_changing_structure=机器结构调整完成
 
-ktfru.tooltip.item.turbine.powerrate=涡轮能量系数:
-ktfru.tooltip.item.turbine.durability=涡轮耐久:
-ktfru.tooltip.item.turbine.unchecked=这个涡轮未经检测, 可能在高速旋转时碎裂并导致爆炸
-ktfru.tooltip.item.turbine.damaged=这个涡轮已受损，你可以回收它
-ktfru.tooltip.item.flywheel.maxRPM=最高转速:
-ktfru.tooltip.item.flywheel.storage=可存储能量:
-
-ktfru.tooltip.tools.monkey_wrench_changing_structure=使用 活动扳手 修改机器结构
-
-ktfru.msg.common.changing_structure=开始调整机器结构
-ktfru.msg.common.done_changing_structure=机器结构调整完成
-ktfru.msg.common.input=输入
-ktfru.msg.common.output=输出
-ktfru.msg.common.inventory=物品栏
-ktfru.msg.common.slot=物品格
-ktfru.msg.common.tank=流体槽
-ktfru.msg.common.empty=空
-ktfru.msg.common.null=无
-ktfru.msg.common.normal=正常
+ktfru.text.item.turbine.powerrate=涡轮能量系数:
+ktfru.text.item.turbine.durability=涡轮耐久:
+ktfru.text.item.turbine.unchecked=这个涡轮未经检测, 可能在高速旋转时碎裂并导致爆炸
+ktfru.text.item.turbine.damaged=这个涡轮已受损，你可以回收它
+ktfru.text.item.flywheel.maxRPM=最高转速:
+ktfru.text.item.flywheel.storage=可存储能量:
 
 
-ktfru.msg.machine.cruciblemodel.0=还需要
-ktfru.msg.machine.cruciblemodel.1=个粘土
-ktfru.msg.multiblock.sunboiler.mirror=成功绑定到太阳能集热塔, 坐标:
-ktfru.msg.multiblock.sunboiler.mirror.err=周围或上方的方块遮挡了阳光
-ktfru.msg.multiblock.sunboiler.0=该方块的坐标已写入USB
-ktfru.msg.multiblock.sunboiler.1=USB中已存在数据，再次右键以覆盖这些数据
-ktfru.msg.multiblock.sunboiler.err=结构不完整或存在错误
-ktfru.msg.multiblock.compute_cluster.0=集群中没有计算机
-ktfru.msg.multiblock.compute_cluster.1=集群工作状态:
-ktfru.msg.multiblock.compute_cluster.2=集群总算力:
-ktfru.msg.multiblock.compute_cluster.3=离线
-ktfru.msg.filter.properties=当前过滤属性:
-ktfru.msg.filter.properties.all=全部可用属性:
-ktfru.msg.overclocking=超频模式:
+ktfru.text.machine.cruciblemodel.0=还需要
+ktfru.text.machine.cruciblemodel.1=个粘土
+ktfru.text.multiblock.sunboiler.mirror=成功绑定到太阳能集热塔, 坐标:
+ktfru.text.multiblock.sunboiler.mirror.err=周围或上方的方块遮挡了阳光
+ktfru.text.multiblock.sunboiler.0=该方块的坐标已写入USB
+ktfru.text.multiblock.sunboiler.1=USB中已存在数据，再次右键以覆盖这些数据
+ktfru.text.multiblock.sunboiler.err=结构不完整或存在错误
+ktfru.text.multiblock.compute_cluster.0=集群中没有计算机
+ktfru.text.multiblock.compute_cluster.1=集群工作状态:
+ktfru.text.multiblock.compute_cluster.2=集群总算力:
+ktfru.text.multiblock.compute_cluster.3=离线
+ktfru.text.filter.properties=当前过滤属性:
+ktfru.text.filter.properties.all=全部可用属性:
 
 
 

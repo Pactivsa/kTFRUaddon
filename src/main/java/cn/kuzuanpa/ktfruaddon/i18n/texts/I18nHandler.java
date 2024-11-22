@@ -21,7 +21,7 @@ public class I18nHandler {
     public static final String SIDE_BACK  ="ktfru.text.common.side.right";
     public static final String SIDE_RIGHT ="ktfru.text.common.side.top";
     public static final String SIDE_LEFT  ="ktfru.text.common.side.bottom";
-    public static final String OVERCLOCKING="ktfru.text.overclocking";
+    public static final String OVERCLOCKING="ktfru.text.common.overclocking";
     public static final String INPUT="ktfru.text.common.input";
     public static final String OUTPUT="ktfru.text.common.output";
     public static final String INVENTORY="ktfru.text.common.inventory";
@@ -71,5 +71,5 @@ public class I18nHandler {
     public static final String MINER="ktfru.text.item.flywheel.miner";
     public static final String FILTERING_PROPERTIES ="ktfru.text.filter.properties";
     public static final String FILTER_PROPERTIES_ALL="ktfru.text.filter.properties.all";
-    public static final String ORE_SCANNER_REQUIRE_PIPE="ktfru.text.filter.orescanner.require_pipe";
+    public static final String ORE_SCANNER_REQUIRE_PIPES ="ktfru.text.filter.orescanner.require_pipe";
 }

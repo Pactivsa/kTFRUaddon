@@ -34,7 +34,7 @@ public class MachineCodeUtil extends MultiTileEntityBasicMachine {
     public OreScanner oreVeinScanner;
     public void readFromNBT2(NBTTagCompound aNBT) {
         super.readFromNBT2(aNBT);
-        oreVeinScanner = new OreScanner(0,xCoord,yCoord,zCoord, worldObj,true,true);
+       // oreVeinScanner = new OreScanner(0,xCoord,yCoord,zCoord, worldObj,true,true);
     }
 @Override
 public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {

@@ -55,19 +55,18 @@ import static gregapi.data.CS.*;
 import static cn.kuzuanpa.ktfruaddon.code.OreScanner.*;
 
 public class TileOreScanner extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IMultiTileEntity.IMTE_SyncDataByteArray, IOreScanner, IManaReceiver {
-    public static IIconContainer mTextureMaterial, mTextureFront, mTextureFrontActive, mTextureFrontFinished, mTextureAutoInput;
+    public static IIconContainer mTextureMaterial, mTextureFront, mTextureFrontActive, mTextureFrontFinished;
     public static final byte STATE_IDLE = 0, STATE_RUNNING = 1, STATE_FINISHED = 2;
     public byte mState = STATE_IDLE;
-    public short pipeID = 26141, range = 2 ,usedPipes = 0, mana = 0, interval = 10;
+    public short pipeID = 26141, range = 1 ,usedPipes = 0, mana = 0, interval = 10;
     public long mEnergyStored =0, mCost=64;
     public TagData mEnergyTypeAccepted = TD.Energy.EU;
     public OreScanner mScanner = null;
     static {
-        mTextureMaterial      = new Textures.BlockIcons.CustomIcon("machines/miner/colored");
-        mTextureFront         = new Textures.BlockIcons.CustomIcon("machines/miner/front");
-        mTextureFrontActive   = new Textures.BlockIcons.CustomIcon("machines/miner/front_active");
-        mTextureFrontFinished = new Textures.BlockIcons.CustomIcon("machines/miner/front_finished");
-        mTextureAutoInput     = new Textures.BlockIcons.CustomIcon("machines/miner/side_in");
+        mTextureMaterial      = new Textures.BlockIcons.CustomIcon("machines/oreScanner/colored");
+        mTextureFront         = new Textures.BlockIcons.CustomIcon("machines/oreScanner/front");
+        mTextureFrontActive   = new Textures.BlockIcons.CustomIcon("machines/oreScanner/front_active");
+        mTextureFrontFinished = new Textures.BlockIcons.CustomIcon("machines/oreScanner/front_finished");
     }
 
     @Override
@@ -80,6 +79,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         if(aNBT.hasKey(NBT_DESIGN))pipeID = aNBT.getShort(NBT_DESIGN);
         if(aNBT.hasKey(kTileNBT.MAX_RANGE))range = aNBT.getShort(kTileNBT.MAX_RANGE);
         if(aNBT.hasKey(kTileNBT.INTERVAL))interval = aNBT.getShort(kTileNBT.INTERVAL);
+        if(mScanner!=null)mScanner.setScanner(this);
     }
 
     @Override
@@ -92,7 +92,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     }
 
     @Override public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
-        return aShouldSideBeRendered[aSide] ? BlockTextureMulti.get(BlockTextureDefault.get(mTextureMaterial, mRGBa), aSide==mFacing? BlockTextureDefault.get(mState==STATE_IDLE? mTextureFront: mState==STATE_FINISHED? mTextureFrontFinished : mTextureFrontActive): aSide==SIDE_TOP ? BlockTextureDefault.get(mTextureAutoInput) : null) : null;
+        return aShouldSideBeRendered[aSide] ? BlockTextureMulti.get(BlockTextureDefault.get(mTextureMaterial, mRGBa), aSide==mFacing? BlockTextureDefault.get(mState==STATE_IDLE? mTextureFront: mState==STATE_FINISHED? mTextureFrontFinished : mTextureFrontActive): null) : null;
     }
 
     @Override
@@ -103,7 +103,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         mState=STATE_IDLE;
         if(mScanner==null || mEnergyStored<mCost)return;
         mEnergyStored-=mCost;
-        if(mana>0)mana--;
+        if(mana>16)mana-=16;
         else return;
         mState=STATE_RUNNING;
         if(!mScanner.finished && aTimer % interval == 0)mScanner.startOrContinueScanOres();
@@ -130,9 +130,11 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
                 else mScanner.resetScanOres();
                 aChatReturn.add("Started a OreScanning process");
             }
+            return 1;
         }
-        if(aTool.equals(TOOL_magnifyingglass) && isClientSide()){
-            cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1));
+        if(aTool.equals(TOOL_magnifyingglass)){
+            if(isClientSide())cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1));
+            return 1;
         }
         return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
     }
@@ -140,9 +142,9 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
         LH.addEnergyToolTips(this, aList, mEnergyTypeAccepted,null, LH.get(LH.FACE_ANY),null);
+        aList.add(LH.Chat.CYAN + LH.get(I18nHandler.ORE_SCANNER_REQUIRE_PIPES)+" "+gRegistry.getItem(pipeID).getDisplayName());
         aList.add(LH.Chat.CYAN + LH.get(I18nHandler.REQUIRE_MANA_BURST));
-        aList.add(LH.get(LH.TOOL_TO_TOGGLE_SOFT_HAMMER));
-        aList.add(LH.get(I18nHandler.ORE_SCANNER_REQUIRE_PIPE));
+        aList.add(LH.Chat.CYAN + LH.get(LH.TOOL_TO_TOGGLE_SOFT_HAMMER));
         super.addToolTips(aList, aStack, aF3_H);
     }
 
@@ -163,6 +165,13 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     }
 
     @Override
+    public void onFinished() {
+        setInventorySlotContents(0,gRegistry.getItem(pipeID, usedPipes));
+        usedPipes=0;
+        isFinishedSent=false;
+    }
+    //Energy
+    @Override
     public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
         aSize = Math.abs(aSize);
         if (aSize > getEnergySizeInputMax(aEnergyType, aSide) && !TD.Energy.ALL_SIZE_IRRELEVANT.contains(mEnergyTypeAccepted)) {
@@ -177,20 +186,31 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         }
         return 0;
     }
-
     @Override
     public boolean isEnergyAcceptingFrom(TagData aEnergyType, byte aSide, boolean aTheoretical) {
         return aEnergyType.equals(mEnergyTypeAccepted);
     }
 
     @Override
-    public void onFinished() {
-        setInventorySlotContents(0,gRegistry.getItem(pipeID, usedPipes));
+    public long getEnergySizeInputMin(TagData aEnergyType, byte aSide) {
+        return mCost/4;
     }
 
     @Override
+    public long getEnergySizeInputRecommended(TagData aEnergyType, byte aSide) {
+        return mCost;
+    }
+
+    @Override
+    public long getEnergySizeInputMax(TagData aEnergyType, byte aSide) {
+        return mCost*2;
+    }
+
+    boolean isFinishedSent = false;
+    //Client Sync
+    @Override
     public boolean onTickCheck(long aTimer) {
-        return super.onTickCheck(aTimer) || !cachedFoundOres.isEmpty();
+        return super.onTickCheck(aTimer) || !cachedFoundOres.isEmpty() || !isFinishedSent&&mState==STATE_FINISHED;
     }
 
     @Override
@@ -208,6 +228,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
                 combineData[5] = getDirectionData();
                 System.arraycopy(data, 0, combineData, 6, data.length);
                 cachedFoundOres.clear();
+                if(mState==STATE_FINISHED)isFinishedSent=true;
                 return getClientDataPacketByteArray(aSendAll, combineData);
             }
             else {
@@ -216,6 +237,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
                 combineData[1] =  getVisualData();
                 System.arraycopy(data, 0, combineData, 2, data.length);
                 cachedFoundOres.clear();
+                if(mState==STATE_FINISHED)isFinishedSent=true;
                 return getClientDataPacketByteArray(aSendAll, combineData);
             }
         }catch (Exception ignored) {}
@@ -234,16 +256,16 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         else if (aData[0] == -1) {
             byte[] superData = Arrays.copyOfRange(aData, 1, 6);
             super.receiveDataByteArray(superData, aNetworkHandler);
-            mState=aData[6];
+            mState=aData[4];
             byte[] receivedOreData = Arrays.copyOfRange(aData, 6, aData.length);
             cachedFoundOres.putAll(deserializeOreData(receivedOreData));
         } else if (aData[0] == -2) {
             super.receiveDataByte(aData[1], aNetworkHandler);
-            mState=aData[2];
+            mState=aData[1];
             byte[] receivedOreData = Arrays.copyOfRange(aData, 2, aData.length);
             cachedFoundOres.putAll(deserializeOreData(receivedOreData));
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -272,13 +294,12 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     //mana
     @Override
     public boolean isFull() {
-        return mana > 1024;
+        return mana >= 16384;
     }
 
     @Override
     public void recieveMana(int i) {
-        if(i <= 1024) mana+= (short) i;
-        else mana = 1024;
+        if(i <= 32767) mana+= (short) i;
     }
 
     @Override
