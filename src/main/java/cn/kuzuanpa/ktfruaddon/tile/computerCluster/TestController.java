@@ -17,11 +17,15 @@ package cn.kuzuanpa.ktfruaddon.tile.computerCluster;
 import cn.kuzuanpa.ktfruaddon.client.gui.computerCluster.ContainerClientClusterController;
 import cn.kuzuanpa.ktfruaddon.client.gui.computerCluster.ContainerCommonClusterController;
 import cn.kuzuanpa.ktfruaddon.code.SingleEntry;
+import cn.kuzuanpa.ktfruaddon.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import codechicken.lib.vec.BlockCoord;
+import gregapi.data.LH;
 import gregapi.network.INetworkHandler;
 import gregapi.network.IPacket;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase07Paintable;
+import gregapi.util.OM;
 import gregapi.util.UT;
 import gregapi.util.WD;
 import net.minecraft.block.Block;
@@ -30,6 +34,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.world.World;
+import net.minecraftforge.common.DimensionManager;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -69,8 +78,8 @@ public class TestController extends TileEntityBase07Paintable implements IComput
     @Override
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if(!isServerSide())return 0;
-        if(aTool.equals(TOOL_plunger))cluster = new ComputerCluster(null);
-        if(aTool.equals(TOOL_screwdriver))cluster.join(worldObj,new BlockCoord(xCoord,yCoord,zCoord),this);
+        if(aTool.equals(TOOL_plunger)) cluster = new ComputerCluster(null);
+        if(aTool.equals(TOOL_screwdriver)) cluster.join(worldObj,new BlockCoord(xCoord,yCoord,zCoord),this);
         if(aTool.equals(TOOL_chisel)) cluster.join(worldObj,new BlockCoord(xCoord,yCoord+1,zCoord), (IComputerClusterController) WD.te(worldObj,xCoord,yCoord+1,zCoord,false));
 
         return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
@@ -92,11 +101,79 @@ public class TestController extends TileEntityBase07Paintable implements IComput
         if(aTimer%10 == 0)return true;
         return false;
     }
+    public boolean clickDoubleCheck=false;
+
+    public void writePosToUSB(EntityPlayer aPlayer){
+        ItemStack equippedItem=aPlayer.getCurrentEquippedItem();
+        if (!(OM.is(OD_USB_STICKS[0],equippedItem))) return;
+        NBTTagCompound aNBT = UT.NBT.make();
+        aNBT.setInteger("worldID", this.worldObj.provider.dimensionId);
+        aNBT.setInteger(NBT_TARGET_X, this.xCoord);
+        aNBT.setInteger(NBT_TARGET_Y, this.yCoord);
+        aNBT.setInteger(NBT_TARGET_Z, this.zCoord);
+
+        if (equippedItem.hasTagCompound()) {
+            if (clickDoubleCheck) {
+                equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
+                equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.POS_WRITE_TO_USB)));
+                clickDoubleCheck=false;
+            } else {
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.YELLOW+LH.get(I18nHandler.USB_ALREAY_HAVE_DATA)));
+                clickDoubleCheck=true;
+            }
+        }
+        if (!equippedItem.hasTagCompound()){
+            equippedItem.setTagCompound(UT.NBT.make());
+            equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
+            equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
+            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.POS_WRITE_TO_USB)));
+        }
+    }
+
+    public boolean addControllerFromUSB(EntityPlayer aPlayer){
+        ItemStack equippedItem=aPlayer.getCurrentEquippedItem();
+        if (!(OM.is(OD_USB_STICKS[0],equippedItem))) return false;
+
+        if (equippedItem.hasTagCompound() && equippedItem.getTagCompound().hasKey(NBT_USB_DATA)) {
+            NBTTagCompound aNBT = equippedItem.getTagCompound().getCompoundTag(NBT_USB_DATA);
+
+            if(!aNBT.hasKey("worldID") || !aNBT.hasKey(NBT_TARGET_X) || !aNBT.hasKey(NBT_TARGET_Y) || !aNBT.hasKey(NBT_TARGET_Z)){
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Failed: USB data not valid")));
+                return false;
+            }
+
+            ChunkCoordinates coord = new ChunkCoordinates();
+            World world = DimensionManager.getWorld(aNBT.getInteger("worldID"));
+
+            if(world == null){
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Failed: World ID"+aNBT.getInteger("worldID")+" not exists")));
+                return false;
+            }
+
+            coord.posX = aNBT.getInteger(NBT_TARGET_X);
+            coord.posY = aNBT.getInteger(NBT_TARGET_Y);
+            coord.posZ = aNBT.getInteger(NBT_TARGET_Z);
+            TileEntity tile = WD.te(world,coord,false);
+
+            if(!(tile instanceof IComputerClusterController)){
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Failed: target not exist or not loaded")));
+                return false;
+            }
+
+            String err = cluster.join(world, codeUtil.MCCoord2CCCoord(coord),(IComputerClusterController)tile);
+            if(err != null)aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Failed: "+err)));
+            else aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Success")));
+        }
+
+        return true;
+    }
 
     @Override
     public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if(isServerSide()) {
-            openGUI(aPlayer, aSide);
+            if(aPlayer.isSneaking())writePosToUSB(aPlayer);
+            else if(!addControllerFromUSB(aPlayer))openGUI(aPlayer, aSide);
             return true;
         }
         return false;
@@ -168,105 +245,6 @@ public class TestController extends TileEntityBase07Paintable implements IComput
     public ComputerCluster getCluster() {
         return cluster;
     }
-
-    ComputerClusterClientData.ControllerList   dataControllerList ;
-    ComputerClusterClientData.ClientList       dataClientList ;
-    ComputerClusterClientData.ClusterDetail    dataClusterDetail ;
-    ComputerClusterClientData.ControllerDetail dataControllerDetail ;
-    @Override
-    public void setClientData(ComputerClusterClientData.ControllerList data) {
-        dataControllerList = data;
-    }
-
-    @Override
-    public void setClientData(ComputerClusterClientData.ClientList data) {
-        dataClientList = data;
-    }
-
-    @Override
-    public void setClientData(ComputerClusterClientData.ClusterDetail data) {
-        dataClusterDetail = data;
-    }
-
-    @Override
-    public void setClientData(ComputerClusterClientData.ControllerDetail data) {
-        dataControllerDetail = data;
-    }
-
-    @Override
-    public ComputerClusterClientData.ControllerList getClientDataControllerList() {
-        return dataControllerList;
-    }
-
-    @Override
-    public ComputerClusterClientData.ClientList getClientDataClientList() {
-        return dataClientList;
-    }
-
-    @Override
-    public ComputerClusterClientData.ClusterDetail getClientDataClusterDetail() {
-        return dataClusterDetail;
-    }
-
-    @Override
-    public ComputerClusterClientData.ControllerDetail getClientDataControllerDetail() {
-        return dataControllerDetail;
-    }
-
-    @Override
-    public boolean receiveDataByteArray(byte[] aData, INetworkHandler aNetworkHandler) {
-        super.receiveDataByteArray(Arrays.copyOf(aData,4), aNetworkHandler);
-        if(aData.length<5)return true;
-        try {
-            switch (aData[4]) {
-                case 0:
-                    setClientData(ComputerClusterClientData.ClientList.deserialize(Arrays.copyOfRange(aData, 5, aData.length)));
-                    return true;
-                case 1:
-                    setClientData(ComputerClusterClientData.ControllerList.deserialize(Arrays.copyOfRange(aData, 5, aData.length)));
-                    return true;
-                case 2:
-                    setClientData(ComputerClusterClientData.ClusterDetail.deserialize(Arrays.copyOfRange(aData, 5, aData.length)));
-                    return true;
-                case 3:
-                    setClientData(ComputerClusterClientData.ControllerDetail.deserialize(Arrays.copyOfRange(aData, 5, aData.length)));
-                    return true;
-            }
-        }catch (IOException e){}
-        return true;
-    }
-
-    public byte sendType = 0;
-    @Override
-    public IPacket getClientDataPacket(boolean aSendAll) {
-        byte[] bytes;
-        if(cluster == null) return super.getClientDataPacket(aSendAll);
-        try {
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            try (DataOutputStream dos = new DataOutputStream(baos)) {
-                dos.writeByte((byte) UT.Code.getR(mRGBa));
-                dos.writeByte((byte) UT.Code.getG(mRGBa));
-                dos.writeByte((byte) UT.Code.getB(mRGBa));
-                dos.writeByte(getVisualData());
-                dos.writeByte(sendType);
-                switch (sendType){
-                    case 0: dos.write(ComputerClusterClientData.ClientList.serialize(cluster.fetchClientDataClientList())); break;
-                    case 1: dos.write(ComputerClusterClientData.ControllerList.serialize(cluster.fetchClientDataControllerList())); break;
-                    case 2: dos.write(ComputerClusterClientData.ClusterDetail.serialize(cluster.fetchClientDataClusterDetail())); break;
-                    case 3: dos.write(ComputerClusterClientData.ControllerDetail.serialize(cluster.fetchClientDataControllerDetail(myUUID))); break;
-                }
-                if(sendType<4)sendType++;
-                else sendType=0;
-                dos.flush();
-                bytes = baos.toByteArray();
-            }
-            baos.close();
-            return getClientDataPacketByteArray(aSendAll, bytes);
-        }catch (IOException e){
-            return super.getClientDataPacket(aSendAll);
-        }
-    }
-
     @Override
     public Object getGUIClient2(int aGUIID, EntityPlayer aPlayer) {
         return new ContainerClientClusterController(aPlayer.inventory, this, aGUIID,"");

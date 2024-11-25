@@ -122,7 +122,6 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
             stateSyncRequired=true;
             if(isClientSide()){
                 cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.removeBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos)));
-                cachedFoundOres.clear();
                 return 1;
             }
             //Try to consume pipe and start scan
@@ -136,7 +135,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
             return 1;
         }
         if(aTool.equals(TOOL_magnifyingglass)){
-            if(isClientSide())cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1));
+            if(isClientSide())cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1, System.currentTimeMillis() + 3600000));
             return 1;
         }
         return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
@@ -166,6 +165,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     @Override
     public boolean breakBlock() {
         onFinished();
+        cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.removeBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos)));
         super.breakBlock();
         return false;
     }

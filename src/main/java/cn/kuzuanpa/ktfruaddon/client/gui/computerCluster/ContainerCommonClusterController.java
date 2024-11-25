@@ -15,23 +15,27 @@
 
 package cn.kuzuanpa.ktfruaddon.client.gui.computerCluster;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import cn.kuzuanpa.ktfruaddon.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.ComputerClusterClientData;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.IComputerClusterController;
+import cpw.mods.fml.common.FMLLog;
 import gregapi.gui.ContainerCommon;
 import gregapi.gui.Slot_Render;
 import gregapi.tileentity.ITileEntityInventoryGUI;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
+import org.apache.logging.log4j.Level;
 
-import java.util.List;
+import java.io.IOException;
+import java.util.*;
 
 public class ContainerCommonClusterController extends ContainerCommon {
 
 	public ContainerCommonClusterController(InventoryPlayer aInventoryPlayer, ITileEntityInventoryGUI aTileEntity, int aGUIID) {
 		super(aInventoryPlayer, aTileEntity, aGUIID);
 	}
-	
+
 	@Override
 	public int addSlots(InventoryPlayer aPlayerInventory) {
 		int tIndex =0;
@@ -50,8 +54,132 @@ public class ContainerCommonClusterController extends ContainerCommon {
 			addSlotToContainer(new Slot(aInventoryPlayer, i, playerInvXOffset + 8 + i * 18, aOffset + 58));
 		}
 	}
+	@Override
+	@SuppressWarnings("unchecked")
+	public void detectAndSendChanges() {
+		super.detectAndSendChanges();
+		for (ICrafting crafter : (List<ICrafting>)crafters) {
+            try {
+				if(timer % 80 == 1)sendData(crafter);
+				timer++;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+	}
 
-	public boolean mState = false;
+	int[][] cachedIntArray = new int[4][];
+	int timer = 0;
+
+	public void sendData(ICrafting crafter) throws IOException{
+		IComputerClusterController controller = (IComputerClusterController) mTileEntity;
+		for (byte sendType = 0; sendType < 4; sendType++) {
+			byte[] bytes = null;
+			switch (sendType){
+				case 0:  bytes = ComputerClusterClientData.ClientList.serialize(controller.getCluster().fetchClientDataClientList()); break;
+				case 1:  bytes = ComputerClusterClientData.ControllerList.serialize(controller.getCluster().fetchClientDataControllerList()); break;
+				case 2:  bytes = ComputerClusterClientData.ClusterDetail.serialize(controller.getCluster().fetchClientDataClusterDetail()); break;
+				case 3:  bytes = ComputerClusterClientData.ControllerDetail.serialize(controller.getCluster().fetchClientDataControllerDetail(controller.getUUID())); break;
+			}
+			int[] data = codeUtil.compressToIntegerArray(bytes);
+			if(Arrays.equals(cachedIntArray[sendType], data))continue;
+
+			cachedIntArray[sendType] = data;
+
+			if(data.length > 16777214) {
+				StringBuilder sb = new StringBuilder("data: ");
+				Arrays.stream(data).forEach(sb::append);
+				FMLLog.log(Level.FATAL, sb.toString());
+				throw new RuntimeException("Too large data in Computer Cluster! Please report this bug to author");
+			}
+
+            for (int i = 0; i < data.length; i++) {
+                int datum = data[i];
+                crafter.sendProgressBarUpdate(this, sendType<<24|i, datum);
+            }
+			crafter.sendProgressBarUpdate(this, 5<<24, sendType);
+		}
+	}
+	public ComputerClusterClientData.ControllerList   dataControllerList ;
+	public ComputerClusterClientData.ClientList       dataClientList ;
+	public ComputerClusterClientData.ClusterDetail    dataClusterDetail ;
+	public ComputerClusterClientData.ControllerDetail dataControllerDetail ;
+
+	Map<Integer,Integer> receivedDataClientList       = new HashMap<>();
+	Map<Integer,Integer> receivedDataControllerList   = new HashMap<>();
+	Map<Integer,Integer> receivedDataClusterDetail    = new HashMap<>();
+	Map<Integer,Integer> receivedDataControllerDetail = new HashMap<>();
+	int[] dataMaxIndex = new int[4];
+	boolean[] receivedDataEOF  = new boolean[4];
+
+	@Override
+	public void updateProgressBar(int aIndex, int aValue) {
+		try {
+			int type = aIndex >>> 24;
+			int index = aIndex & 0x00FFFFFF;
+			if (type == 5) {
+				receivedDataEOF[aValue] = true;
+				checkEOFAndExtractData(aValue);
+				return;
+			}
+			dataMaxIndex[type] = Math.max(dataMaxIndex[type], index);
+			switch (type) {
+				case 0:
+					receivedDataClientList.put(index, aValue);
+					break;
+				case 1:
+					receivedDataControllerList.put(index, aValue);
+					break;
+				case 2:
+					receivedDataClusterDetail.put(index, aValue);
+					break;
+				case 3:
+					receivedDataControllerDetail.put(index, aValue);
+					break;
+			}
+			checkEOFAndExtractData(type);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
+	public void checkEOFAndExtractData(int type) throws IOException{
+		switch (type) {
+			case 0:
+				if(!checkEOF(receivedDataClientList,dataMaxIndex[type], receivedDataEOF[type])) return;
+				dataClientList = ComputerClusterClientData.ClientList.deserialize(codeUtil.decompressFromIntegerArray(receivedDataClientList.values().stream().mapToInt(v->v).toArray()));
+				receivedDataClientList.clear();
+				break;
+			case 1:
+				if(!checkEOF(receivedDataControllerList,dataMaxIndex[type], receivedDataEOF[type])) return;
+				dataControllerList = ComputerClusterClientData.ControllerList.deserialize(codeUtil.decompressFromIntegerArray(receivedDataControllerList.values().stream().mapToInt(v->v).toArray()));
+				receivedDataControllerList.clear();
+				break;
+			case 2:
+				if(!checkEOF(receivedDataClusterDetail,dataMaxIndex[type], receivedDataEOF[type])) return;
+				dataClusterDetail = ComputerClusterClientData.ClusterDetail.deserialize(codeUtil.decompressFromIntegerArray(receivedDataClusterDetail.values().stream().mapToInt(v->v).toArray()));
+				receivedDataClusterDetail.clear();
+				break;
+			case 3:
+				if(!checkEOF(receivedDataControllerDetail,dataMaxIndex[type], receivedDataEOF[type])) return;
+				dataControllerDetail = ComputerClusterClientData.ControllerDetail.deserialize(codeUtil.decompressFromIntegerArray(receivedDataControllerDetail.values().stream().mapToInt(v->v).toArray()));
+				receivedDataControllerDetail.clear();
+				break;
+		}
+		dataMaxIndex[type] = 0;
+		receivedDataEOF[type] = false;
+	}
+
+	public boolean checkEOF(Map<Integer,Integer> map, int maxIndex, boolean receivedEOF){
+		if(!receivedEOF)return false;
+		for (int i = 0; i <= maxIndex; i++) {
+			if(!map.containsKey(i)||map.get(i)==null)return false;
+		}
+		updated = true;
+		return true;
+	}
+
+	public boolean updated = false;
 
 	@Override public int getStartIndex() {return 0;}
 	@Override public int getSlotCount() {return 1;}

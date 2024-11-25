@@ -112,4 +112,35 @@ public class codeUtil {
         return subNum +"."+ suffix +(i>0?NumUnits[i-1]:"");
     }
 
+
+    public static int[] compressToIntegerArray(byte[] byteArray) {
+        int numInts = (int) Math.ceil((double) byteArray.length / 4);
+        int[] intArray = new int[numInts + 1];
+
+        intArray[0] = byteArray.length;
+
+        for (int i = 0; i < numInts; i++) {
+            int value = 0;
+            for (int j = 0; j < 4 && i * 4 + j < byteArray.length; j++) {
+                value |= (byteArray[i * 4 + j] & 0xFF) << (j * 8);
+            }
+            intArray[i + 1] = value;
+        }
+
+        return intArray;
+    }
+
+    public static byte[] decompressFromIntegerArray(int[] intArray) {
+        int length = intArray[0];
+
+        byte[] byteArray = new byte[length];
+
+        for (int i = 0; i < intArray.length - 1; i++) {
+            for (int j = 0; j < 4 && i * 4 + j < length; j++) {
+                byteArray[i * 4 + j] = (byte) ((intArray[i + 1] >> (j * 8)) & 0xFF);
+            }
+        }
+
+        return byteArray;
+    }
 }

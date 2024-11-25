@@ -38,30 +38,4 @@ public interface IComputerClusterController {
     boolean setCluster(ComputerCluster cluster);
     ComputerCluster getCluster();
 
-
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    void setClientData(ComputerClusterClientData.ControllerList data);
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    void setClientData(ComputerClusterClientData.ClientList data);
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    void setClientData(ComputerClusterClientData.ClusterDetail data);
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    void setClientData(ComputerClusterClientData.ControllerDetail data);
-
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    ComputerClusterClientData.ControllerList getClientDataControllerList();
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    ComputerClusterClientData.ClientList getClientDataClientList();
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    ComputerClusterClientData.ClusterDetail getClientDataClusterDetail();
-    /**For client container render**/
-    @SideOnly(Side.CLIENT)
-    ComputerClusterClientData.ControllerDetail getClientDataControllerDetail();
 }

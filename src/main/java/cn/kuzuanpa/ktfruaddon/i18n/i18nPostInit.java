@@ -58,12 +58,12 @@ public class i18nPostInit {
         LH.add(I18nHandler.STORED_ENERGY,"Stored Energy");
         LH.add(I18nHandler.CAPACITY,"Capacity");
         LH.add(I18nHandler.OUTPUTTING,"Outputting");
+        LH.add(I18nHandler.POS_WRITE_TO_USB,"The Position of this block wrote to USB stick.");
+        LH.add(I18nHandler.USB_ALREAY_HAVE_DATA,"There already have some data in USB stick, click again to overwrite it.");
         LH.add(I18nHandler.CRUCIBLE_MODEL_0,"Still need ");
         LH.add(I18nHandler.CRUCIBLE_MODEL_1," clay ball.");
         LH.add(I18nHandler.SUN_BOILER_MIRROR,"Successfully binding Sun Boiler target:");
         LH.add(I18nHandler.SUN_BOILER_MIRROR_ERR,"Some block above or around the mirror blocked the sunlight");
-        LH.add(I18nHandler.SUN_BOILER_0,"The Position of this block wrote to USB stick.");
-        LH.add(I18nHandler.SUN_BOILER_1,"There already have some data in USB stick, click again to overwrite it.");
         LH.add(I18nHandler.SUN_BOILER_ERR,"There are some errors in structure.");
         LH.add(I18nHandler.COMPUTE_CLUSTER_0,"No computer inserted.");
         LH.add(I18nHandler.COMPUTE_CLUSTER_1,"Compute Cluster State: ");

@@ -435,6 +435,8 @@ public class tileEntityInit0 {
         aMat = MT.RedSteel;                    kRegistry0.add("Red Steel Crucible Model"     , "kTFRUAddon: Machines", 32763, 20001, CrucibleModel.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,   2.0F),"   "," M ","hPf",'P',OP.plate.mat(MT.RedSteel,1), 'M', ItemList.CrucibleModelInnerLayer.get(1));
         aMat = MT.BlueSteel;                   kRegistry0.add("Blue Steel Crucible Model"     , "kTFRUAddon: Machines", 32764, 20001, CrucibleModel.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,  2.0F),"   "," M ","hPf",'P',OP.plate.mat(MT.BlueSteel,1), 'M', ItemList.CrucibleModelInnerLayer.get(1));
 
+        aMat = MT.BlueSteel;                   kRegistry0.add("Test controller"     , "kTFRUAddon: Machines", 32765, 20001, TestController.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,  2.0F));
+
 
         aMat = MT.Trinitanium;                 kRegistry0.add("Debug Generator"     , "kTFRUAddon: Machines", 32766, 20001, DebugGenerator.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS, -1, NBT_RESISTANCE,  -1));
 

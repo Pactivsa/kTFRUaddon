@@ -41,6 +41,8 @@ public class I18nHandler {
     public static final String USE_MONKEY_WRENCH_CHANGE_STRUCTURE ="ktfru.text.common.monkey_wrench_changing_structure";
     public static final String DONE_CHANGING_STRUCTURE ="ktfru.text.common.done_changing_structure";
     public static final String CHANGING_STRUCTURE ="ktfru.text.common.changing_structure";
+    public static final String POS_WRITE_TO_USB ="ktfru.text.common.pos_to_usb";
+    public static final String USB_ALREAY_HAVE_DATA ="ktfru.text.common.usb_have_data";
     public static final String HINT_NEED_MULTI_AMPERE_INPUT = "ktfru.text.common.hint.multi_ampere_input";
 
 
@@ -48,8 +50,6 @@ public class I18nHandler {
     public static final String CRUCIBLE_MODEL_1 ="ktfru.text.machine.cruciblemodel.1";
     public static final String SUN_BOILER_MIRROR="ktfru.text.multiblock.sunboiler.mirror";
     public static final String SUN_BOILER_MIRROR_ERR="ktfru.text.multiblock.sunboiler.mirror.err";
-    public static final String SUN_BOILER_0="ktfru.text.multiblock.sunboiler.0";
-    public static final String SUN_BOILER_1="ktfru.text.multiblock.sunboiler.1";
     public static final String SUN_BOILER_ERR="ktfru.text.multiblock.sunboiler.err";
     public static final String COMPUTE_CLUSTER_0="ktfru.text.multiblock.compute_cluster.0";
     public static final String COMPUTE_CLUSTER_1="ktfru.text.multiblock.compute_cluster.1";

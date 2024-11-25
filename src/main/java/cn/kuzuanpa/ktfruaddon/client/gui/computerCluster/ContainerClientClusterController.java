@@ -40,13 +40,9 @@ import static cn.kuzuanpa.ktfruaddon.ktfruaddon.MOD_ID;
 public class ContainerClientClusterController extends kGuiContainerBase implements IHiddenNei {
 	private ContainerCommonClusterController mContainer;
 
-	ComputerClusterClientData.ClientList       dataClientList      ;
-	ComputerClusterClientData.ClusterDetail    dataClusterDetail   ;
-	ComputerClusterClientData.ControllerDetail dataControllerDetail;
-	ComputerClusterClientData.ControllerList   dataControllerList  ;
-
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_) {
+		if(mContainer.updated)syncValuesToChildGui();
 		GL11.glEnable(GL11.GL_BLEND);
 		mc.getTextureManager().bindTexture(commonBackground);
 		GL11.glColor4f(1,1,1,1);
@@ -94,10 +90,11 @@ public class ContainerClientClusterController extends kGuiContainerBase implemen
 	}
 
 	public void syncValuesToChildGui(){
-		if(childGui instanceof ScreenControllerDetail)((ScreenControllerDetail) childGui).updateFromData(((IComputerClusterController)mContainer.mTileEntity).getClientDataControllerDetail());
-		if(childGui instanceof ScreenClusterDetail   )((ScreenClusterDetail   ) childGui).updateFromData(((IComputerClusterController)mContainer.mTileEntity).getClientDataClusterDetail());
-		if(childGui instanceof ScreenControllerList  )((ScreenControllerList  ) childGui).updateFromData(((IComputerClusterController)mContainer.mTileEntity).getClientDataControllerList());
-		if(childGui instanceof ScreenClientList      )((ScreenClientList      ) childGui).updateFromData(((IComputerClusterController)mContainer.mTileEntity).getClientDataClientList());
+		if(childGui instanceof ScreenControllerDetail)((ScreenControllerDetail) childGui).updateFromData(mContainer.dataControllerDetail);
+		if(childGui instanceof ScreenClusterDetail   )((ScreenClusterDetail   ) childGui).updateFromData(mContainer.dataClusterDetail);
+		if(childGui instanceof ScreenControllerList  )((ScreenControllerList  ) childGui).updateFromData(mContainer.dataControllerList);
+		if(childGui instanceof ScreenClientList      )((ScreenClientList      ) childGui).updateFromData(mContainer.dataClientList);
+		mContainer.updated=false;
 	}
 
 	@Override

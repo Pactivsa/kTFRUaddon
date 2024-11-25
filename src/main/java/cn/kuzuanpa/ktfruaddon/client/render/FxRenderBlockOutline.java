@@ -117,40 +117,47 @@ public final class FxRenderBlockOutline {
         GL11.glPopAttrib();
         GL11.glPopMatrix();
     }
+    int glListID = -1;
     /**Copied from Botania**/
     private void renderBlockOutline(AxisAlignedBB aabb) {
-        Tessellator tessellator = Tessellator.instance;
-        double ix = aabb.minX;
-        double iy = aabb.minY;
-        double iz = aabb.minZ;
-        double ax = aabb.maxX;
-        double ay = aabb.maxY;
-        double az = aabb.maxZ;
-        tessellator.startDrawing(1);
-        tessellator.addVertex(ix, iy, iz);
-        tessellator.addVertex(ix, ay, iz);
-        tessellator.addVertex(ix, ay, iz);
-        tessellator.addVertex(ax, ay, iz);
-        tessellator.addVertex(ax, ay, iz);
-        tessellator.addVertex(ax, iy, iz);
-        tessellator.addVertex(ax, iy, iz);
-        tessellator.addVertex(ix, iy, iz);
-        tessellator.addVertex(ix, iy, az);
-        tessellator.addVertex(ix, ay, az);
-        tessellator.addVertex(ix, iy, az);
-        tessellator.addVertex(ax, iy, az);
-        tessellator.addVertex(ax, iy, az);
-        tessellator.addVertex(ax, ay, az);
-        tessellator.addVertex(ix, ay, az);
-        tessellator.addVertex(ax, ay, az);
-        tessellator.addVertex(ix, iy, iz);
-        tessellator.addVertex(ix, iy, az);
-        tessellator.addVertex(ix, ay, iz);
-        tessellator.addVertex(ix, ay, az);
-        tessellator.addVertex(ax, iy, iz);
-        tessellator.addVertex(ax, iy, az);
-        tessellator.addVertex(ax, ay, iz);
-        tessellator.addVertex(ax, ay, az);
-        tessellator.draw();
+        if(glListID == -1) {
+            glListID = GL11.glGenLists(1);
+            GL11.glNewList(glListID, GL11.GL_COMPILE);
+            Tessellator tessellator = Tessellator.instance;
+            double ix = aabb.minX;
+            double iy = aabb.minY;
+            double iz = aabb.minZ;
+            double ax = aabb.maxX;
+            double ay = aabb.maxY;
+            double az = aabb.maxZ;
+            tessellator.startDrawing(1);
+            tessellator.addVertex(ix, iy, iz);
+            tessellator.addVertex(ix, ay, iz);
+            tessellator.addVertex(ix, ay, iz);
+            tessellator.addVertex(ax, ay, iz);
+            tessellator.addVertex(ax, ay, iz);
+            tessellator.addVertex(ax, iy, iz);
+            tessellator.addVertex(ax, iy, iz);
+            tessellator.addVertex(ix, iy, iz);
+            tessellator.addVertex(ix, iy, az);
+            tessellator.addVertex(ix, ay, az);
+            tessellator.addVertex(ix, iy, az);
+            tessellator.addVertex(ax, iy, az);
+            tessellator.addVertex(ax, iy, az);
+            tessellator.addVertex(ax, ay, az);
+            tessellator.addVertex(ix, ay, az);
+            tessellator.addVertex(ax, ay, az);
+            tessellator.addVertex(ix, iy, iz);
+            tessellator.addVertex(ix, iy, az);
+            tessellator.addVertex(ix, ay, iz);
+            tessellator.addVertex(ix, ay, az);
+            tessellator.addVertex(ax, iy, iz);
+            tessellator.addVertex(ax, iy, az);
+            tessellator.addVertex(ax, ay, iz);
+            tessellator.addVertex(ax, ay, az);
+            tessellator.draw();
+            GL11.glEndList();
+        }
+        if(glListID!=-1)GL11.glCallList(glListID);
     }
 }

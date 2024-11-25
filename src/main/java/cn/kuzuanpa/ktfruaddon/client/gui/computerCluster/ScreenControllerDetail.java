@@ -85,6 +85,8 @@ public class ScreenControllerDetail extends kGuiScreenContainerLayerBase {
                 stateButton.u =48;
                 stateTextButton.text = "Error";
         }
+        controllerCountButton.text = String.valueOf(controllerProviding);
+        clientCountButton.text = String.valueOf(clusterTotal);
     }
     @Override
     public void addButtons() {
@@ -161,7 +163,7 @@ public class ScreenControllerDetail extends kGuiScreenContainerLayerBase {
             this.drawTexturedModalRect(xPosition,yPosition, 0, 236, width, heightPerBar);
 
             //Providing
-            int aWidthProviding = (int) Math.max(1,(width * (Math.sqrt(controllerProviding)/Math.sqrt(clusterTotal))));
+            int aWidthProviding = (int) Math.max(1,(width * ((controllerProviding)*1F/(clusterTotal))));
             GL11.glColor3ub((byte) (0xff & color >> 16), (byte)(0xff & color >> 8) , (byte)(color & 0xff));
             this.drawTexturedModalRect(xPosition,yPosition+1, 0, 236, aWidthProviding, heightPerBar-2);
 

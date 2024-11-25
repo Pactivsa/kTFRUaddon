@@ -62,7 +62,7 @@ public class ScreenControllerList extends kGuiScreenContainerLayerBase {
 
         buttons.add(new Text(3,"Providing",ContainerX+162,ContainerY+3)                                .setAnimatedInFBO(true).addAnime(new animeMoveLinear(-1,0, 50,0)).addAnime(new animeMoveSlowIn(0, 600,-50,0,2)).addAnime(new animeRGBA(0,400,255,255,255,55,-150,-150,-150,200)));
 
-        dataListButton = new ButtonList(4, ContainerX,ContainerY+14,width,height-14);
+        dataListButton = new ButtonList(4, ContainerX,ContainerY+14,width,129);
 
         buttons.add(dataListButton);
     }

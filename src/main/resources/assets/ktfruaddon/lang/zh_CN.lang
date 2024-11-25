@@ -29,6 +29,8 @@ ktfru.text.common.require_mana_burst=需要魔力才能工作
 ktfru.text.tools.monkey_wrench_changing_structure=使用 活动扳手 修改机器结构
 ktfru.text.common.changing_structure=开始调整机器结构
 ktfru.text.common.done_changing_structure=机器结构调整完成
+ktfru.text.common.pos_to_usb=该方块的坐标已写入USB
+ktfru.text.common.usb_have_data=USB中已存在数据，再次右键以覆盖这些数据
 ktfru.text.common.hint.multi_ampere_input=提示: 需要多A输入
 
 ktfru.text.item.turbine.powerrate=涡轮能量系数:
@@ -43,8 +45,6 @@ ktfru.text.machine.cruciblemodel.0=还需要
 ktfru.text.machine.cruciblemodel.1=个粘土
 ktfru.text.multiblock.sunboiler.mirror=成功绑定到太阳能集热塔, 坐标:
 ktfru.text.multiblock.sunboiler.mirror.err=周围或上方的方块遮挡了阳光
-ktfru.text.multiblock.sunboiler.0=该方块的坐标已写入USB
-ktfru.text.multiblock.sunboiler.1=USB中已存在数据，再次右键以覆盖这些数据
 ktfru.text.multiblock.sunboiler.err=结构不完整或存在错误
 ktfru.text.multiblock.compute_cluster.0=集群中没有计算机
 ktfru.text.multiblock.compute_cluster.1=集群工作状态:
