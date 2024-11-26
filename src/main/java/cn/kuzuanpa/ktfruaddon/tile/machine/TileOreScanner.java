@@ -25,6 +25,8 @@ import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
 import gregapi.data.LH;
+import gregapi.data.MT;
+import gregapi.data.OP;
 import gregapi.data.TD;
 import gregapi.gui.ContainerClientDefault;
 import gregapi.gui.ContainerCommonDefault;
@@ -38,6 +40,7 @@ import gregapi.render.IIconContainer;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase09FacingSingle;
 import gregapi.tileentity.energy.ITileEntityEnergy;
+import gregapi.util.OM;
 import gregapi.util.UT;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -45,11 +48,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChunkCoordinates;
 import vazkii.botania.api.mana.IManaReceiver;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static gregapi.data.CS.*;
 import static cn.kuzuanpa.ktfruaddon.code.OreScanner.*;
@@ -62,6 +67,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     public long mEnergyStored =0, mCost=64;
     public TagData mEnergyTypeAccepted = TD.Energy.EU;
     public OreScanner mScanner = null;
+    public List<Short> validOreIDs = new ArrayList<>();
     static {
         mTextureMaterial      = new Textures.BlockIcons.CustomIcon("machines/oreScanner/colored");
         mTextureFront         = new Textures.BlockIcons.CustomIcon("machines/oreScanner/front");
@@ -125,7 +131,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
                 return 1;
             }
             //Try to consume pipe and start scan
-            if(usedPipes == 0 && (slotHas(0) && gRegistry.getItem(pipeID).getItem().equals(slot(0).getItem()) && slot(0).getItemDamage() == pipeID && slot(0).stackSize == 64)) {
+            if(mState==STATE_IDLE && usedPipes == 0 && (slotHas(0) && gRegistry.getItem(pipeID).getItem().equals(slot(0).getItem()) && slot(0).getItemDamage() == pipeID && slot(0).stackSize == 64)) {
                 usedPipes = (short) slot(0).stackSize;
                 slotKill(0);
                 if(mScanner==null) mScanner = new OreScanner(range,xCoord,yCoord,zCoord,worldObj,true,true).setSpeed(speed).setScanner(this);
@@ -136,6 +142,9 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         }
         if(aTool.equals(TOOL_magnifyingglass)){
             if(isClientSide())cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1, System.currentTimeMillis() + 3600000));
+
+            aChatReturn.add(LH.Chat.CYAN+LH.get("known Ores:"));
+            aChatReturn.add(validOreIDs.stream().map(this::getOreName).collect(Collectors.joining(", ")));
             return 1;
         }
         return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
@@ -148,6 +157,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         aList.add(LH.Chat.WHITE + LH.get(I18nHandler.REQUIRE_MANA_BURST));
         aList.add(LH.Chat.BLINKING_CYAN + LH.get(I18nHandler.HINT_NEED_MULTI_AMPERE_INPUT));
         aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_TOGGLE_SOFT_HAMMER));
+        aList.add(LH.Chat.DGRAY + LH.get(I18nHandler.HAS_USB_IO_CLICK));
         aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
         super.addToolTips(aList, aStack, aF3_H);
     }
@@ -178,7 +188,8 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     Map<BlockCoord, OreData> cachedFoundOres = new HashMap<>();
     @Override
     public void onOreFind(int x, int y, int z, short materialID, byte type) {
-        cachedFoundOres.put(new BlockCoord(x,y,z), new OreData(materialID, type));
+        if(validOreIDs.contains(materialID))cachedFoundOres.put(new BlockCoord(x,y,z), new OreData(materialID, type));
+        else cachedFoundOres.put(new BlockCoord(x,y,z), new OreData(MT.ElvenElementium.mID, type));
     }
 
     @Override
@@ -286,19 +297,93 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
             byte[] superData = Arrays.copyOfRange(aData, 1, 6);
             super.receiveDataByteArray(superData, aNetworkHandler);
             byte[] receivedOreData = Arrays.copyOfRange(aData, 6, aData.length);
-            cachedFoundOres.putAll(deserializeOreData(receivedOreData));
+            Map<BlockCoord,OreData> deserializedOreData = deserializeOreData(receivedOreData);
+            cachedFoundOres.putAll(deserializedOreData);
+            deserializedOreData.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1, System.currentTimeMillis() + 3600000));
         } else if (aData[0] == -2) {
             super.receiveDataByte(aData[1], aNetworkHandler);
             byte[] receivedOreData = Arrays.copyOfRange(aData, 2, aData.length);
-            cachedFoundOres.putAll(deserializeOreData(receivedOreData));
+            Map<BlockCoord,OreData> deserializedOreData = deserializeOreData(receivedOreData);
+
+            cachedFoundOres.putAll(deserializedOreData);
+            deserializedOreData.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1, System.currentTimeMillis() + 3600000));
         }
+        return true;
+    }
+
+    boolean clickDoubleCheck = false;
+    public boolean writeIDsToUSB(EntityPlayer aPlayer){
+        ItemStack equippedItem=aPlayer.getCurrentEquippedItem();
+        if (!(OM.is(OD_USB_STICKS[0],equippedItem))) return false;
+        NBTTagCompound aNBT = UT.NBT.make();
+        aNBT.setIntArray("ktfru.oreScanner.knownOreList", validOreIDs.stream().mapToInt(n->n).toArray());
+
+        if (equippedItem.hasTagCompound()) {
+            if (clickDoubleCheck) {
+                equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
+                equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.DATA_WRITE_TO_USB)));
+                clickDoubleCheck=false;
+            } else {
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.YELLOW+LH.get(I18nHandler.USB_ALREAY_HAVE_DATA)));
+                clickDoubleCheck=true;
+            }
+            return true;
+        }
+
+        equippedItem.setTagCompound(UT.NBT.make());
+        equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
+        equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
+        aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.DATA_WRITE_TO_USB)));
+
+        return true;
+    }
+
+    public boolean addIDsFromUSB(EntityPlayer aPlayer){
+        ItemStack equippedItem=aPlayer.getCurrentEquippedItem();
+        if (!(OM.is(OD_USB_STICKS[0],equippedItem))) return false;
+
+        if (equippedItem.hasTagCompound() && equippedItem.getTagCompound().hasKey(NBT_USB_DATA)) {
+            NBTTagCompound aNBT = equippedItem.getTagCompound().getCompoundTag(NBT_USB_DATA);
+
+            if(!aNBT.hasKey("ktfru.oreScanner.knownOreList")){
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Failed: USB data not for oreScanner")));
+                return false;
+            }
+
+            int[] array = aNBT.getIntArray("ktfru.oreScanner.knownOreList");
+
+            if(array == null){
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Failed: USB data corrupted")));
+                return false;
+            }
+
+            Arrays.stream(array).filter(n->!validOreIDs.contains((short)n)).forEach(n->validOreIDs.add((short)n));
+
+            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Successfully read ore data from USB, known Ores:")));
+            aPlayer.addChatMessage(new ChatComponentText(validOreIDs.stream().map(this::getOreName).collect(Collectors.joining(", "))));
+        }
+
         return true;
     }
 
     @Override
     public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
-        if(isServerSide())return openGUI(aPlayer,aSide);
+        if(isServerSide()){
+            if(aPlayer.getCurrentEquippedItem() != null && (OP.dustSmall.contains(aPlayer.getCurrentEquippedItem()) || OP.dustTiny.contains(aPlayer.getCurrentEquippedItem()))){
+                short materialID = (short) aPlayer.getCurrentEquippedItem().getItemDamage();
+                if(!validOreIDs.contains(materialID))validOreIDs.add(materialID);
+                aPlayer.addChatComponentMessage(new ChatComponentText("Successfully Scanned Material "+getOreName(materialID)+", will display correct info if found"));
+                return true;
+            }
+            if(aPlayer.isSneaking()? writeIDsToUSB(aPlayer) : addIDsFromUSB(aPlayer)) return true;
+            return openGUI(aPlayer,aSide);
+        }
         return false;
+    }
+
+    public String getOreName(short id){
+        return OreDictMaterial.get(id).mNameLocal;
     }
 
     @Override

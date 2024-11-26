@@ -21,8 +21,6 @@ import cn.kuzuanpa.ktfruaddon.code.codeUtil;
 import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import codechicken.lib.vec.BlockCoord;
 import gregapi.data.LH;
-import gregapi.network.INetworkHandler;
-import gregapi.network.IPacket;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase07Paintable;
 import gregapi.util.OM;
@@ -40,9 +38,6 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import net.minecraftforge.common.DimensionManager;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
 import java.util.*;
 
 import static cn.kuzuanpa.ktfruaddon.tile.computerCluster.Constants.STATE_NORMAL;
@@ -116,7 +111,7 @@ public class TestController extends TileEntityBase07Paintable implements IComput
             if (clickDoubleCheck) {
                 equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
                 equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
-                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.POS_WRITE_TO_USB)));
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.DATA_WRITE_TO_USB)));
                 clickDoubleCheck=false;
             } else {
                 aPlayer.addChatMessage(new ChatComponentText(LH.Chat.YELLOW+LH.get(I18nHandler.USB_ALREAY_HAVE_DATA)));
@@ -127,7 +122,7 @@ public class TestController extends TileEntityBase07Paintable implements IComput
             equippedItem.setTagCompound(UT.NBT.make());
             equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
             equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
-            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.POS_WRITE_TO_USB)));
+            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.DATA_WRITE_TO_USB)));
         }
     }
 

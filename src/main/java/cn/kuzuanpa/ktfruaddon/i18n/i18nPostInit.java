@@ -43,6 +43,7 @@ public class i18nPostInit {
         LH.add(I18nHandler.FLYWHEEL_MaxRPM,"Max RPM:");
         LH.add(I18nHandler.ORE_SCANNER_REQUIRE_PIPES,"Require Pipe");
 
+        LH.add(I18nHandler.HAS_USB_IO_CLICK,"Click with USB stick to write or read Data.");
         LH.add(I18nHandler.REQUIRE_MANA_BURST,"Require Mana Burst To Work!");
         LH.add(I18nHandler.DONE_CHANGING_STRUCTURE,"Changing Contents");
         LH.add(I18nHandler.CHANGING_STRUCTURE,"Done Changing Contents");
@@ -58,7 +59,7 @@ public class i18nPostInit {
         LH.add(I18nHandler.STORED_ENERGY,"Stored Energy");
         LH.add(I18nHandler.CAPACITY,"Capacity");
         LH.add(I18nHandler.OUTPUTTING,"Outputting");
-        LH.add(I18nHandler.POS_WRITE_TO_USB,"The Position of this block wrote to USB stick.");
+        LH.add(I18nHandler.DATA_WRITE_TO_USB,"The Position of this block wrote to USB stick.");
         LH.add(I18nHandler.USB_ALREAY_HAVE_DATA,"There already have some data in USB stick, click again to overwrite it.");
         LH.add(I18nHandler.CRUCIBLE_MODEL_0,"Still need ");
         LH.add(I18nHandler.CRUCIBLE_MODEL_1," clay ball.");

@@ -253,7 +253,7 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
             if (clickDoubleCheck) {
                 equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
                 equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
-                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.POS_WRITE_TO_USB)));
+                aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.DATA_WRITE_TO_USB)));
                 clickDoubleCheck=false;
             } else {
                 aPlayer.addChatMessage(new ChatComponentText(LH.Chat.YELLOW+LH.get(I18nHandler.USB_ALREAY_HAVE_DATA)));
@@ -264,7 +264,7 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
             equippedItem.setTagCompound(UT.NBT.make());
             equippedItem.getTagCompound().setTag(NBT_USB_DATA, aNBT);
             equippedItem.getTagCompound().setByte(NBT_USB_TIER, (byte)1);
-            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.POS_WRITE_TO_USB)));
+            aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get(I18nHandler.DATA_WRITE_TO_USB)));
         }
         }
         return true;
