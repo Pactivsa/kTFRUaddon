@@ -164,6 +164,11 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     }
 
     @Override
+    public byte getDefaultSide() {
+        return SIDE_FRONT;
+    }
+
+    @Override
     public boolean[] getValidSides() {
         return SIDES_HORIZONTAL;
     }
