@@ -17,15 +17,24 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
 import cn.kuzuanpa.ktfruaddon.client.render.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.code.BoundingBox;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.TileEntityBaseLimitedOutputMachine;
+import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
+import gregapi.code.TagData;
 import gregapi.data.LH;
+import gregapi.data.TD;
+import gregapi.fluid.FluidTankGT;
+import gregapi.oredict.OreDictManager;
+import gregapi.oredict.OreDictMaterialStack;
+import gregapi.tileentity.data.ITileEntityTemperature;
 import gregapi.tileentity.delegate.DelegatorTileEntity;
 import gregapi.tileentity.multiblocks.MultiTileEntityMultiBlockPart;
+import gregapi.tileentity.multiblocks.TileEntityBase10MultiBlockMachine;
 import gregapi.util.ST;
+import net.minecraft.entity.Entity;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.fluids.Fluid;
@@ -35,9 +44,172 @@ import java.util.List;
 
 import static gregapi.data.CS.*;
 
-public class fuelDeburnFactory extends TileEntityBaseLimitedOutputMachine implements IMappedStructure{
+public class fuelDeburnFactory extends TileEntityBase10MultiBlockMachine implements IMappedStructure, ITileEntityTemperature {
 
-    public final short sizeX = 11, sizeY = 1, sizeZ = 14;
+    public TagData mEnergyTypeHeat = TD.Energy.HU;
+    public long mTempMax = Integer.MAX_VALUE, mMassTotal=1,mMassSelf=1,maxStrictEUt=1024,mMassLast=1;
+    public float mTemp = C, recipeBestTemp= C, recipeFactor = 0.1F;
+    @Override
+    public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
+        if (mStopped) return 0;
+        boolean tPositive = (aSize > 0);
+        aSize = Math.abs(aSize);
+        if (aEnergyType == mEnergyTypeHeat) {
+            if (aDoInject) mTemp += (aSize * aAmount)*64F/mMassTotal;
+            this.receivedEnergy.add(new MeterData(aEnergyType,aSize, aAmount));
+            return aAmount;
+        }
+        if (aEnergyType == mEnergyTypeAccepted) {
+            if(aDoInject && aSize > getEnergySizeInputMax(aEnergyType, aSide))overcharge(aSide,aEnergyType);
+            if (aDoInject) mStateNew = tPositive;
+            long tInput = Math.min(mInputMax - mEnergy, aSize * aAmount), tConsumed = Math.min(aAmount, (tInput/aSize) + (tInput%aSize!=0?1:0));
+            if (aDoInject) mEnergy += tConsumed * aSize;
+            this.receivedEnergy.add(new MeterData(aEnergyType, aSize, tConsumed));
+            return tConsumed;
+        }
+        return 0;
+    }
+
+    @Override
+    public void readFromNBT2(NBTTagCompound aNBT) {
+        super.readFromNBT2(aNBT);
+        mSpecialIsStartEnergy=false;
+        if (aNBT.hasKey(NBT_ENERGY_ACCEPTED_2)) mEnergyTypeHeat = TagData.createTagData(aNBT.getString(NBT_ENERGY_ACCEPTED_2));
+        if (aNBT.hasKey("ktfru.nbt.massSelf")) mMassTotal = mMassSelf = aNBT.getLong("ktfru.nbt.massSelf");
+        if (aNBT.hasKey(NBT_TEMPERATURE+".max")) mTempMax = aNBT.getLong(NBT_TEMPERATURE+".max");
+
+        if (aNBT.hasKey(NBT_TEMPERATURE)) mTemp = aNBT.getFloat(NBT_TEMPERATURE);
+    }
+
+    @Override
+    public void writeToNBT2(NBTTagCompound aNBT) {
+        super.writeToNBT2(aNBT);
+        aNBT.setFloat(NBT_TEMPERATURE, mTemp);
+    }
+
+    @Override
+    public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
+        if(aTool.equals(TOOL_thermometer)){
+            if(aChatReturn!=null)aChatReturn.add(LH.get(I18nHandler.TEMPERATURE) +": "+ mTemp + " / " + mTempMax);
+            return 1;
+        }
+        return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
+    }
+
+    @Override
+    public void onTick2(long aTimer, boolean aIsServerSide) {
+        if(mInventoryChanged){
+            updateMass();
+        }
+        super.onTick2(aTimer, aIsServerSide);
+    }
+
+    public void updateMass(){
+        mMassLast = mMassTotal;
+        mMassTotal = mMassSelf;
+        for (int i = 0; i < invsize(); i++) {
+            if(!slotHas(i) || OreDictManager.INSTANCE.getItemData(slot(i)) == null)continue;
+            mMassTotal += (long) OreDictManager.INSTANCE.getItemData(slot(i)).getAllMaterialStacks().stream().mapToDouble(OreDictMaterialStack::weight).sum();
+        }
+        for (FluidTankGT tankGT:mTanksInput) {
+            if(tankGT==null || tankGT.isEmpty())continue;
+            mMassTotal += tankGT.fluid().getDensity()* tankGT.amount()/1000 ;
+        }
+        if(mMassLast<mMassTotal) {
+            float deltaTemp = mTemp - C;
+            cooldown( mTemp-(deltaTemp*mMassLast/mMassTotal+C));
+        }
+    }
+
+    @Override
+    public boolean doActive(long aTimer, long aEnergy) {
+        if(mTemp > mTempMax)overcharge(mInputMax,TD.Energy.HU);
+        //Natural Cooldown
+        cooldown(Math.min(10F*Math.abs(mTemp-C)/mMassTotal, Math.abs(mTemp-C)));
+
+        //Promote extra progress when Temp is Suitable, and if not suitable decreases the progress
+        if (mMaxProgress > 0 && !(mSpecialIsStartEnergy && mChargeRequirement > 0) && mProgress <= mMaxProgress) {
+            mProgress += (long) (aEnergy * getTempFactor());
+        }
+        if(mProgress<0)mProgress=0;
+        return super.doActive(aTimer, aEnergy);
+    }
+
+
+    @Override
+    public int checkRecipe(boolean aApplyRecipe, boolean aUseAutoIO) {
+        int i = super.checkRecipe(aApplyRecipe, aUseAutoIO);
+
+        if(mCurrentRecipe!=null) {
+            updateMass();
+            recipeBestTemp = mCurrentRecipe.mSpecialValue;
+            recipeFactor = 20.1F-20*Math.min(1F, mCurrentRecipe.mEUt*1F/maxStrictEUt);
+        }
+        return i;
+    }
+
+    public void cooldown(float value){
+        if(Math.abs(mTemp-C)< value){
+            mTemp=C;
+            return;
+        }
+        value=Math.abs(value);
+        mTemp -= mTemp>C ? value: -value;
+    }
+    public float getTempFactor() {
+        float delta = Math.abs(mTemp - recipeBestTemp);
+        return Math.min(128, ((256*recipeFactor / (float)Math.sqrt(delta)) - (float) Math.pow(delta, 1.5F) / recipeFactor )/recipeFactor);
+    }
+
+    @Override
+    public long getTemperatureValue(byte aSide) {
+        return (long) mTemp;
+    }
+
+    @Override
+    public long getTemperatureMax(byte aSide) {
+        return mTempMax;
+    }
+    //这是设置主方块的物品提示
+    //controls tooltip of controller block
+    static {
+        LH.add("ktfru.multitileentity.multiblock.fuel_deburner.1", "Store Energy into Fuel.");
+        LH.add("ktfru.multitileentity.multiblock.fuel_deburner.2", "Main Block centered on Side-Bottom and facing outwards");
+        LH.add("ktfru.multitileentity.multiblock.fuel_deburner.3", "Input and Output at any Blocks");
+    }
+
+    @Override
+    public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
+        aList.add(LH.Chat.CYAN + LH.get(I18nHandler.HAS_PROJECTOR_STRUCTURE));
+        aList.add(LH.Chat.WHITE + LH.get("ktfru.multitileentity.multiblock.fuel_deburner.1"));
+        aList.add(LH.Chat.WHITE + LH.get("ktfru.multitileentity.multiblock.fuel_deburner.2"));
+        aList.add(LH.Chat.WHITE + LH.get("ktfru.multitileentity.multiblock.fuel_deburner.3"));
+        super.addToolTips(aList, aStack, aF3_H);
+    }
+
+    @Override
+    public DelegatorTileEntity<IFluidHandler> getFluidOutputTarget(byte aSide, Fluid aOutput) {
+        return getAdjacentTank(SIDE_BOTTOM);
+    }
+
+    @Override
+    public DelegatorTileEntity<TileEntity> getItemOutputTarget(byte aSide) {
+        return getAdjacentTileEntity(SIDE_BOTTOM);
+    }
+
+    @Override
+    public DelegatorTileEntity<IInventory> getItemInputTarget(byte aSide) {
+        return null;
+    }
+
+    @Override
+    public DelegatorTileEntity<IFluidHandler> getFluidInputTarget(byte aSide) {
+        return null;
+    }
+
+
+    //Structure
+    public final short sizeX = 11, sizeY = 19, sizeZ = 14;
     public final short xMapOffset = -6,yMapOffset=-1, zMapOffset = 0;
 
     short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
@@ -50,6 +222,7 @@ public class fuelDeburnFactory extends TileEntityBaseLimitedOutputMachine implem
 
     @Override
     public int getUsage(int mapX, int mapY, int mapZ, int registryID, int blockID) {
+        if(mapY == 1 && blockID == 18002)return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
         if (blockID == 18002&&registryID==k) {
             return  MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
         } else if (blockID == 18002||blockID==18022&&registryID==g) {
@@ -78,48 +251,9 @@ public class fuelDeburnFactory extends TileEntityBaseLimitedOutputMachine implem
         return lastFailedPos==null;
     }
 
-    //这是设置主方块的物品提示
-    //controls tooltip of controller block
-    static {
-        LH.add("gt.tooltip.multiblock.example.complex.1", "5x5x2 of Stainless Steel Walls");
-        LH.add("gt.tooltip.multiblock.example.complex.2", "Main Block centered on Side-Bottom and facing outwards");
-        LH.add("gt.tooltip.multiblock.example.complex.3", "Input and Output at any Blocks");
-    }
-
-    @Override
-    public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
-        aList.add(LH.Chat.CYAN + LH.get(LH.STRUCTURE) + ":");
-        aList.add(LH.Chat.WHITE + LH.get("gt.tooltip.multiblock.example.complex.1"));
-        aList.add(LH.Chat.WHITE + LH.get("gt.tooltip.multiblock.example.complex.2"));
-        aList.add(LH.Chat.WHITE + LH.get("gt.tooltip.multiblock.example.complex.3"));
-        super.addToolTips(aList, aStack, aF3_H);
-    }
-    //这里是设置该机器的内部区域
-    //controls areas inside the machine
     @Override
     public boolean isInsideStructure(int aX, int aY, int aZ) {
         return new BoundingBox(utils.getRealX(mFacing,xCoord,xMapOffset,zMapOffset),yCoord,utils.getRealZ(mFacing,zCoord,xMapOffset,zMapOffset),utils.getRealX(mFacing,utils.getRealX(mFacing,xCoord,xMapOffset,zMapOffset), sizeX, sizeZ),yCoord+ sizeY,utils.getRealZ(mFacing,utils.getRealZ(mFacing,zCoord,xMapOffset,zMapOffset), sizeX, sizeZ)).isXYZInBox(aX,aY,aZ);
-    }
-    //下面四个是设置输入输出的地方,return null是任意面
-    //controls where to I/O, return null=any side
-    @Override
-    public DelegatorTileEntity<IFluidHandler> getFluidOutputTarget(byte aSide, Fluid aOutput) {
-        return getAdjacentTank(SIDE_BOTTOM);
-    }
-
-    @Override
-    public DelegatorTileEntity<TileEntity> getItemOutputTarget(byte aSide) {
-        return getAdjacentTileEntity(SIDE_BOTTOM);
-    }
-
-    @Override
-    public DelegatorTileEntity<IInventory> getItemInputTarget(byte aSide) {
-        return null;
-    }
-
-    @Override
-    public DelegatorTileEntity<IFluidHandler> getFluidInputTarget(byte aSide) {
-        return null;
     }
 
     public final static int[][][] blockIDMap = {

@@ -42,6 +42,10 @@ public class itemPreInit {
 
         new PrefixItem(MOD_DATA,"ktfru.item.meta.turbine.blade", prefixList.largeTurbineBlade);
 
+        new PrefixItem(MOD_DATA,"ktfru.item.meta.dust.pure.commercial", prefixList.CommercialPureDust);
+        new PrefixItem(MOD_DATA,"ktfru.item.meta.dust.pure.analytical", prefixList.AnalyticalPureDust);
+        new PrefixItem(MOD_DATA,"ktfru.item.meta.dust.pure.absolutely", prefixList.AbsolutelyPureDust);
+
         ItemList.TwilightCore.set(new ItemBase(MOD_ID,"ktfru.item.twilightCore","Twilight Core","Throw into that pool"));
 
         flywheel                 = new itemFlywheel(MOD_DATA,"ktfru.item.meta.flywheel", prefixList.flywheel);

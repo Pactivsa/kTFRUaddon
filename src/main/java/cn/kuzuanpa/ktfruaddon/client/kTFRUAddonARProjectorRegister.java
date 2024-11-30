@@ -875,6 +875,36 @@ return new Object[][] {
                 , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
                 , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
                 , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+        },  {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+        }, {
+                { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe, ChPipe, ChPipe, ChPipe,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame, ChPipe,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall, ChPipe,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall, ChPipe,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , StWall,  null ,  null ,  null ,  null , StWall,  null ,  null ,  null ,  null }
+                , { null , SFrame, StWall, StWall, StWall, StWall, SFrame,  null ,  null ,  null ,  null }
+                , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }
         }, {
                 { null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null ,  null }
                 , { null ,  null ,  null ,  null , ChPipe,  null ,  null ,  null ,  null ,  null ,  null }

@@ -25,17 +25,22 @@ import com.bioxx.tfc.api.Constant.Global;
 import com.bioxx.tfc.api.TFCBlocks;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.registry.GameData;
+import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.block.prefixblock.PrefixBlockTileEntity;
+import gregapi.data.FL;
 import gregapi.data.MD;
 import gregapi.data.MT;
 import gregapi.oredict.OreDictMaterial;
 import gregapi.util.UT;
+import gregapi.util.WD;
+import gregtech.tileentity.misc.MultiTileEntityFluidSpring;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.fluids.FluidStack;
 import org.apache.logging.log4j.Level;
 
 import java.io.*;
@@ -45,14 +50,15 @@ import java.util.List;
 import java.util.Map;
 
 public class OreScanner {
-    public static final byte ORE_TYPE_GT_NORMAL=0,ORE_TYPE_GT_SMALL=1,ORE_TYPE_GT_BEDROCK=2,ORE_TYPE_GT_BEDROCK_SMALL=3,ORE_TYPE_TFC=4, ORE_TYPE_VANILLA=5;
+    public static final byte ORE_TYPE_GT_NORMAL=0,ORE_TYPE_GT_SMALL=1,ORE_TYPE_GT_BEDROCK=2,ORE_TYPE_GT_BEDROCK_SMALL=3,ORE_TYPE_TFC=4, ORE_TYPE_VANILLA=5, ORE_TYPE_FLUID_SPRING=6;
     public int range, xPos, yPos, zPos, yPointer, xChunkPos = 0, zChunkPos = 0;
     public final int xChunkStart, zChunkStart;
     public short speed = 1;
     public World world;
-    public boolean includeSmallOre = false, finished = false, includeBedRockOre = true;
+    public boolean includeSmallOre = false, finished = false, includeBedRockOre = true, includeFluidSpring = true;
     public List<discoveredOres> discoveredOres = new ArrayList<>();
     protected IOreScanner theScanner = null;
+    final static MultiTileEntityRegistry gRegistry = MultiTileEntityRegistry.getRegistry("gt.multitileentity");
     public OreScanner setScanner(IOreScanner theScanner) {
         this.theScanner = theScanner;
         return this;
@@ -70,16 +76,13 @@ public class OreScanner {
     }
 
     public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre) {
-        this.range = range;
-        this.xPos = xPos;
-        this.yPos = yPos;
-        this.zPos = zPos;
-        this.world = world;
-        this.yPointer =0;
-        this.includeSmallOre = includeSmallOre;
-        xChunkPos = xChunkStart = (xPos >> 4) - range;
-        zChunkPos = zChunkStart = (zPos >> 4) - range;
+        this(range, xPos, yPos, zPos, world, includeSmallOre);
         this.includeBedRockOre = includeBedRockOre;
+    }
+
+    public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre, boolean includeFluidSpring) {
+        this(range, xPos, yPos, zPos, world, includeSmallOre, includeBedRockOre);
+        this.includeFluidSpring = includeFluidSpring;
     }
 
     public OreScanner setSpeed(short speed) {
@@ -118,7 +121,6 @@ public class OreScanner {
     protected boolean scanOres() {
         if (world == null) return false;
         for (int y = 0; y < speed; y++){
-            yPointer++;
             for (int x = 0; x < 16; x++) for (int z = 0; z < 16; z++)  {
                 int xPos=xChunkPos * 16 + x;
                 int yPos= yPointer;
@@ -152,8 +154,13 @@ public class OreScanner {
                     addDiscoveredOres(block.getDamageValue(world, xPos,yPos,zPos), xPos,yPos,zPos, ORE_TYPE_GT_SMALL);
                     continue;
                 }
+                if (includeFluidSpring && WD.te(world,new ChunkCoordinates(xPos,yPos,zPos),false) instanceof MultiTileEntityFluidSpring){
+                    short fakeMatID = getFakeFluidSpringMaterialID(WD.te(world,new ChunkCoordinates(xPos,yPos,zPos),false));
+                    if(fakeMatID > 0)addDiscoveredOres(fakeMatID,xPos,yPos,zPos,ORE_TYPE_FLUID_SPRING);
+                }
 
             }
+            yPointer++;
         }
         return true;
     }
@@ -253,6 +260,18 @@ public class OreScanner {
         OreDictMaterial oreDictMaterial = OreDictMaterial.get(matID);
         if(matID>0 && oreDictMaterial!=null)return oreDictMaterial.mRGBaSolid;
         return new short[0];
+    }
+    public static short getFakeFluidSpringMaterialID(TileEntity tile){
+        if (!(tile instanceof MultiTileEntityFluidSpring))return -1;
+        FluidStack fluid = ((MultiTileEntityFluidSpring) tile).mFluid;
+        if(FL.Oil_ExtraHeavy.is(fluid))return MT.Oil.mID;
+        if(FL.Oil_Heavy.is(fluid))return MT.Oil.mID;
+        if(FL.Oil_Medium.is(fluid))return MT.Oil.mID;
+        if(FL.Oil_Light.is(fluid))return MT.Oil.mID;
+        if(FL.Water_Geothermal.is(fluid))return MT.Water.mID;
+        if(FL.Gas_Natural.is(fluid))return MT.MethaneIce.mID;
+        if(FL.Lava.is(fluid))return MT.Lava.mID;
+        return MT.U_235.mID;
     }
     public static short getVanillaOreMaterialID(String name){
         switch (name){

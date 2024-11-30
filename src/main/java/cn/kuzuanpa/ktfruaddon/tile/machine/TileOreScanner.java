@@ -116,8 +116,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
             return;
         }
         mEnergyStored-=mCost;
-        if(mana>16)mana-=16;
-        else return;
+        if(mana<16)return;
         mState=STATE_RUNNING;
         if(!mScanner.finished && aTimer % interval == 0)mScanner.startOrContinueScanOres();
         if( mScanner.finished)mState=STATE_FINISHED;
@@ -126,11 +125,11 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     @Override
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if(aTool.equals(TOOL_softhammer)){
+            if(isClientSide())cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.removeBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos)));
+            return 1;
+        }
+        if(aTool.equals(TOOL_screwdriver)){
             stateSyncRequired=true;
-            if(isClientSide()){
-                cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.removeBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos)));
-                return 1;
-            }
             //Try to consume pipe and start scan
             if(mState==STATE_IDLE && usedPipes == 0 && (slotHas(0) && gRegistry.getItem(pipeID).getItem().equals(slot(0).getItem()) && slot(0).getItemDamage() == pipeID && slot(0).stackSize == 64)) {
                 usedPipes = (short) slot(0).stackSize;
@@ -142,7 +141,10 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
             return 1;
         }
         if(aTool.equals(TOOL_magnifyingglass)){
-            if(isClientSide())cachedFoundOres.forEach((pos,data)->FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1, System.currentTimeMillis() + 3600000));
+            if(isClientSide())cachedFoundOres.forEach((pos,data)->{
+                FxRenderBlockOutline.removeBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos));
+                FxRenderBlockOutline.addBlockOutlineToRender(codeUtil.CCCoord2MCCoord(pos), UT.Code.getRGBInt(OreDictMaterial.get(data.materialID).fRGBaSolid), data.type == ORE_TYPE_GT_BEDROCK || data.type == ORE_TYPE_GT_BEDROCK_SMALL ? 4 : 1, System.currentTimeMillis() + 1800000);
+            });
 
             aChatReturn.add(LH.Chat.CYAN+LH.get("known Ores:"));
             aChatReturn.add(validOreIDs.stream().map(this::getOreName).collect(Collectors.joining(", ")));
@@ -157,7 +159,8 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
         aList.add(LH.Chat.WHITE + LH.get(I18nHandler.ORE_SCANNER_REQUIRE_PIPES)+": "+gRegistry.getItem(pipeID).getDisplayName());
         aList.add(LH.Chat.WHITE + LH.get(I18nHandler.REQUIRE_MANA_BURST));
         aList.add(LH.Chat.BLINKING_CYAN + LH.get(I18nHandler.HINT_NEED_MULTI_AMPERE_INPUT));
-        aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_TOGGLE_SOFT_HAMMER));
+        aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_TOGGLE_SCREWDRIVER));
+        aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_RESET_SOFT_HAMMER));
         aList.add(LH.Chat.DGRAY + LH.get(I18nHandler.HAS_USB_IO_CLICK));
         aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
         super.addToolTips(aList, aStack, aF3_H);
@@ -194,8 +197,9 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     Map<BlockCoord, OreData> cachedFoundOres = new HashMap<>();
     @Override
     public void onOreFind(int x, int y, int z, short materialID, byte type) {
-        if(validOreIDs.contains(materialID))cachedFoundOres.put(new BlockCoord(x,y,z), new OreData(materialID, type));
+        if(validOreIDs.contains(materialID) || type == ORE_TYPE_FLUID_SPRING)cachedFoundOres.put(new BlockCoord(x,y,z), new OreData(materialID, type));
         else cachedFoundOres.put(new BlockCoord(x,y,z), new OreData(MT.ElvenElementium.mID, type));
+        mana-=4;
     }
 
     @Override
@@ -270,7 +274,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
                 combineData[4] =  getVisualData();
                 combineData[5] = getDirectionData();
                 System.arraycopy(data, 0, combineData, 6, data.length);
-                if(mState==STATE_FINISHED) stateSyncRequired =true;
+                stateSyncRequired =false;
                 return getClientDataPacketByteArray(true, combineData);
             }
             else {
@@ -278,7 +282,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
                 combineData[0] = -2;
                 combineData[1] =  getVisualData();
                 System.arraycopy(data, 0, combineData, 2, data.length);
-                if(mState==STATE_FINISHED) stateSyncRequired =true;
+                stateSyncRequired =false;
                 return getClientDataPacketByteArray(false, combineData);
             }
         }catch (Exception ignored) {}

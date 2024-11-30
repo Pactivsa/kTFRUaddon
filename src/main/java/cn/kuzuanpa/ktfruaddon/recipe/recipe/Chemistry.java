@@ -77,11 +77,22 @@ public class Chemistry {
         recipeMaps.FuelBattery.addRecipe2(F,-288, 10, ItemList.BatteryPoleCarbon.get(0),ItemList.BatteryPolePlatinum.get(0),FL.array(FL.BioEthanol.make(20)        ,FL.Oxygen.make(60),MT.H2SO4.fluid(0,false)),FL.array(FL.CarbonDioxide.make(40), FL.DistW.make(60)),ZL_IS);
 
         //FuelDeburner配方表较特殊, 根据温度可加速最多128倍, 产物的热值应按该公式计算: 产物热值=原料热值+ 功率*耗时/128 + 原料的总质量*64*(最佳温度-常温), 视严格度(功率越高越严格)和耗时(耗时越长维持温度越困难)给予一定加成
-        recipeMaps.FuelDeburner.addRecipe1(F, 64, 4000, ST.tag(0), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(2000)), FL.array(FL.Diesel.make(150))).setSpecialNumber(576);
+        recipeMaps.FuelDeburner.addRecipe1(F,   24,  3000, ST.tag(0), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make( 2000)), FL.array(flList.RecycledFuel0.make(1000))).setSpecialNumber(638);                         //Base:  61180 Bonus: * 2.2
+        recipeMaps.FuelDeburner.addRecipe1(F,   80,  5000, ST.tag(1), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make( 4000)), FL.array(flList.RecycledFuel1.make(1000))).setSpecialNumber(1022);                        //Base: 193125 Bonus: * 3.4
+        recipeMaps.FuelDeburner.addRecipe1(F,  240,  5000, ST.tag(2), FL.array(FL.Water.make(2000), FL.CarbonDioxide.make( 6000)), FL.array(flList.RecycledFuel2.make(1000))).setSpecialNumber(1788);                        //Base: 612776 Bonus: * 3.6
+        recipeMaps.FuelDeburner.addRecipe1(F,  800, 12800, ST.tag(3), FL.array(FL.Water.make(2000), FL.CarbonDioxide.make(12000), FL.Nitrogen.make(1000)), FL.array(flList.RecycledFuel3.make(1000))).setSpecialNumber(1464);//Base: 1045750 Bonus: * 6.2
+        recipeMaps.FuelDeburner.addRecipe1(F, 1800, 25600, ST.tag(4), FL.array(FL.Water.make(4000), FL.CarbonDioxide.make(16000), FL.Nitrogen.make(4000)), FL.array(flList.RecycledFuel4.make(1000))).setSpecialNumber(1892);//Base: 2259356 Bonus: * 14.6
 
-        recipeMaps.FuelDeburner.addRecipe1(F, 256, 4000, ST.tag(1), FL.array(FL.Water.make(100), FL.CarbonDioxide.make(200)), FL.array(FL.Fuel.make(200))).setSpecialNumber(1576);
+        FM.Engine.addRecipe0(F,-135  ,10,FL.array(flList.RecycledFuel0.make(10)),FL.array(FL.Steam.make(16000), FL.CarbonDioxide.make( 200)));
+        FM.Engine.addRecipe0(F,-657  ,10,FL.array(flList.RecycledFuel1.make(10)),FL.array(FL.Steam.make(16000), FL.CarbonDioxide.make( 400)));
+        FM.Engine.addRecipe0(F,-2205 ,10,FL.array(flList.RecycledFuel2.make(10)),FL.array(FL.Steam.make(32000), FL.CarbonDioxide.make( 600)));
+        FM.Engine.addRecipe0(F,-6483 ,10,FL.array(flList.RecycledFuel3.make(10)),FL.array(FL.Steam.make(32000), FL.CarbonDioxide.make(1200), FL.Nitrogen.make(100)));
+        FM.Engine.addRecipe0(F,-32986,10,FL.array(flList.RecycledFuel4.make(10)),FL.array(FL.Steam.make(64000), FL.CarbonDioxide.make(1600), FL.Nitrogen.make(400)));
 
-        recipeMaps.FuelDeburner.addRecipe1(F, 1024, 4000, ST.tag(2), FL.array(FL.Water.make(1000), FL.CarbonDioxide.make(200)), FL.array(FL.Methane.make(1200))).setSpecialNumber(376);
-
+        FM.Burn.addRecipe0(F,-135  ,8,FL.array(flList.RecycledFuel0.make(10)),FL.array(FL.Steam.make(16000), FL.CarbonDioxide.make( 200)));
+        FM.Burn.addRecipe0(F,-657  ,8,FL.array(flList.RecycledFuel1.make(10)),FL.array(FL.Steam.make(16000), FL.CarbonDioxide.make( 400)));
+        FM.Burn.addRecipe0(F,-2205 ,8,FL.array(flList.RecycledFuel2.make(10)),FL.array(FL.Steam.make(32000), FL.CarbonDioxide.make( 600)));
+        FM.Burn.addRecipe0(F,-6483 ,8,FL.array(flList.RecycledFuel3.make(10)),FL.array(FL.Steam.make(32000), FL.CarbonDioxide.make(1200), FL.Nitrogen.make(100)));
+        FM.Burn.addRecipe0(F,-32986,8,FL.array(flList.RecycledFuel4.make(10)),FL.array(FL.Steam.make(64000), FL.CarbonDioxide.make(1600), FL.Nitrogen.make(400)));
     }
 }

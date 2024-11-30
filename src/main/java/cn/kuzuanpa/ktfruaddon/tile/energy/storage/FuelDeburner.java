@@ -38,6 +38,7 @@ import java.util.List;
 import static gregapi.data.CS.*;
 
 public class FuelDeburner extends MultiTileEntityBasicMachine implements ITileEntityTemperature {
+
     public TagData mEnergyTypeHeated = TD.Energy.HU;
     public long mTempMax = Integer.MAX_VALUE, mMassTotal=1,mMassSelf=1,maxStrictEUt=1024,mMassLast=1;
     public float mTemp = C, recipeBestTemp= C, recipeFactor = 0.1F;

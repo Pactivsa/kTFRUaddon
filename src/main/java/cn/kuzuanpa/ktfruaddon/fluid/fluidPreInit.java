@@ -235,6 +235,12 @@ public class fluidPreInit {
         //四氟化硅
         flList.SiliconTetrafluoride.register("SiliconTetrafluoride","SiliconTetrafluoride",matList.SiliconTetrafluoride.get(), GAS);
 
+        flList.RecycledFuel0.register("RecycledFuel0","#0 Recycled Fuel",null, LIQUID);
+        flList.RecycledFuel1.register("RecycledFuel1","#1 Recycled Fuel",null, LIQUID);
+        flList.RecycledFuel2.register("RecycledFuel2","#2 Recycled Fuel",null, LIQUID);
+        flList.RecycledFuel3.register("RecycledFuel3","#3 Recycled Fuel",null, LIQUID);
+        flList.RecycledFuel4.register("RecycledFuel4","#4 Recycled Fuel",null, LIQUID);
+
         flList.CrackedNaphthaLow.register("CrackedNaphthaLow","Cracked Naphtha (Low Temperature)",null, LIQUID);
         flList.CrackedNaphthaMedium.register("CrackedNaphthaMedium","Cracked Naphtha (Medium Temperature)",null, LIQUID);
         flList.CrackedNaphthaHigh.register("CrackedNaphthaHigh","Cracked Naphtha (High Temperature)",null, LIQUID);
