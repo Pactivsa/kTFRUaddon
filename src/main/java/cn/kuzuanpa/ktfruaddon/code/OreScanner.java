@@ -19,9 +19,7 @@ package cn.kuzuanpa.ktfruaddon.code;
 import cn.kuzuanpa.ktfruaddon.client.render.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.tile.machine.TileOreScanner;
 import codechicken.lib.vec.BlockCoord;
-import com.bioxx.tfc.Blocks.Terrain.BlockOre;
 import com.bioxx.tfc.TileEntities.TEOre;
-import com.bioxx.tfc.api.Constant.Global;
 import com.bioxx.tfc.api.TFCBlocks;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.registry.GameData;
@@ -35,7 +33,6 @@ import gregapi.util.UT;
 import gregapi.util.WD;
 import gregtech.tileentity.misc.MultiTileEntityFluidSpring;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
@@ -51,11 +48,12 @@ import java.util.Map;
 
 public class OreScanner {
     public static final byte ORE_TYPE_GT_NORMAL=0,ORE_TYPE_GT_SMALL=1,ORE_TYPE_GT_BEDROCK=2,ORE_TYPE_GT_BEDROCK_SMALL=3,ORE_TYPE_TFC=4, ORE_TYPE_VANILLA=5, ORE_TYPE_FLUID_SPRING=6;
-    public int range, xPos, yPos, zPos, yPointer, xChunkPos = 0, zChunkPos = 0;
+    public int range, xPos, yPos, zPos, yPointer, xChunkPos, zChunkPos;
     public final int xChunkStart, zChunkStart;
     public short speed = 1;
     public World world;
-    public boolean includeSmallOre = false, finished = false, includeBedRockOre = true, includeFluidSpring = true;
+    public final boolean includeSmallOre, includeBedRockOre, includeFluidSpring;
+    public boolean finished = false;
     public List<discoveredOres> discoveredOres = new ArrayList<>();
     protected IOreScanner theScanner = null;
     final static MultiTileEntityRegistry gRegistry = MultiTileEntityRegistry.getRegistry("gt.multitileentity");
@@ -63,7 +61,20 @@ public class OreScanner {
         this.theScanner = theScanner;
         return this;
     }
+
+    public OreScanner(int range, int xPos, int yPos, int zPos, World world) {
+        this(range, xPos, yPos,zPos,world,false, false, false);
+    }
     public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre) {
+        this(range, xPos, yPos,zPos,world,includeSmallOre, false, false);
+
+    }
+
+    public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre) {
+        this(range, xPos, yPos,zPos,world,includeSmallOre, includeBedRockOre, false);
+    }
+
+    public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre, boolean includeFluidSpring) {
         this.range = range;
         this.xPos = xPos;
         this.yPos = yPos;
@@ -71,18 +82,10 @@ public class OreScanner {
         this.world = world;
         this.yPointer =0;
         this.includeSmallOre = includeSmallOre;
-        xChunkPos = xChunkStart =  (xPos >> 4 )- range;
-        zChunkPos = zChunkStart =  (zPos >> 4 )- range;
-    }
-
-    public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre) {
-        this(range, xPos, yPos, zPos, world, includeSmallOre);
         this.includeBedRockOre = includeBedRockOre;
-    }
-
-    public OreScanner(int range, int xPos, int yPos, int zPos, World world, boolean includeSmallOre, boolean includeBedRockOre, boolean includeFluidSpring) {
-        this(range, xPos, yPos, zPos, world, includeSmallOre, includeBedRockOre);
         this.includeFluidSpring = includeFluidSpring;
+        xChunkPos = xChunkStart =  (xPos >> 4)- range;
+        zChunkPos = zChunkStart =  (zPos >> 4)- range;
     }
 
     public OreScanner setSpeed(short speed) {
@@ -105,6 +108,7 @@ public class OreScanner {
                 if (zChunkPos > zChunkStart + range * 2) {
                     if(theScanner !=null) theScanner.onFinished();
                     finished = true;
+                    return true;
                 }
             }
         }
@@ -131,8 +135,8 @@ public class OreScanner {
                     if(getVanillaOreMaterialID(name) > 0)addDiscoveredOres(getVanillaOreMaterialID(name), xPos,yPos,zPos, ORE_TYPE_VANILLA);
                     continue;
                 }
-                if (MD.TFC.mLoaded && isTFCOre(block,xPos,yPos,zPos)) {
-                    int matID = getMaterialIDForTFCOre(world, block,xPos,yPos,zPos);
+                if (MD.TFC.mLoaded && isTFCOre(block)) {
+                    int matID = getMaterialIDForTFCOre(world,xPos,yPos,zPos);
                     if(matID > 0)addDiscoveredOres(matID, xPos,yPos,zPos, ORE_TYPE_TFC);
                     continue;
                 }
@@ -255,7 +259,7 @@ public class OreScanner {
         if(name == null) return new short[0];
         int matID = -1;
         if(name.startsWith("minecraft"))matID = getVanillaOreMaterialID(name);
-        if(name.startsWith("terrafirmacraft")) matID = getMaterialIDForTFCOre(world,block,x,y,z);
+        if(name.startsWith("terrafirmacraft")) matID = getMaterialIDForTFCOre(world,x,y,z);
         if(name.startsWith("gregtech")&&world.getTileEntity(x, y, z) instanceof PrefixBlockTileEntity)matID = OreDictMaterial.get(((PrefixBlockTileEntity) world.getTileEntity(x, y, z)).mMetaData).mID;
         OreDictMaterial oreDictMaterial = OreDictMaterial.get(matID);
         if(matID>0 && oreDictMaterial!=null)return oreDictMaterial.mRGBaSolid;
@@ -286,17 +290,14 @@ public class OreScanner {
         }
         return -1;
     }
-    public boolean isTFCOre(Block block, int x, int y, int z) {
-        return block!=null&&(block == TFCBlocks.ore || block == TFCBlocks.ore2 || block == TFCBlocks.ore3) && world.getTileEntity(x, y, z) instanceof TEOre;
+    public boolean isTFCOre(Block block) {
+        return block!=null&& block == TFCBlocks.ore;
     }
-    public static short getMaterialIDForTFCOre(World world,Block block, int x, int y, int z) {
+    public static short getMaterialIDForTFCOre(World world, int x, int y, int z) {
         TileEntity tile =  world.getTileEntity(x, y, z);
-        if(!(tile instanceof TEOre))return -1;
 
-        int meta=world.getBlockMetadata(x, y, z);
-        if (block == TFCBlocks.ore)  meta = ((BlockOre) block).getOreGrade((TEOre)tile, meta);
-        if (block == TFCBlocks.ore2) meta = meta + Global.ORE_METAL.length;
-        if (block == TFCBlocks.ore3) meta = meta + Global.ORE_METAL.length + Global.ORE_MINERAL.length;
+        int meta = tile instanceof TEOre ? ((TEOre) tile).droppedOreID: -1;
+
         switch (meta) {
             case 35:
             case 49:

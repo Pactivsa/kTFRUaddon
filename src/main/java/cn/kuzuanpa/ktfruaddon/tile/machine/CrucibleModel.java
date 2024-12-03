@@ -18,6 +18,9 @@ package cn.kuzuanpa.ktfruaddon.tile.machine;
 
 import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
+import com.bioxx.tfc.api.TileEntities.IHeatAccepter;
+import com.bioxx.tfc.api.TileEntities.IHeater;
+import cpw.mods.fml.common.Optional;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;
 import gregapi.data.MD;
@@ -30,6 +33,7 @@ import gregapi.render.IIconContainer;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase07Paintable;
 import gregapi.util.ST;
+import gregapi.util.WD;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -45,11 +49,12 @@ import java.util.Objects;
 import static cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT.CRUCIBLE_MODEL_TIMER;
 import static gregapi.data.CS.*;
 
-public class CrucibleModel extends TileEntityBase07Paintable{
+@Optional.Interface(iface = "com.bioxx.tfc.api.TileEntities.IHeatAccepter", modid = "terrafirmacraft")
+public class CrucibleModel extends TileEntityBase07Paintable implements IHeatAccepter {
     //0=nothing,1=placed clay,2=full clay,3=composed,4=completed
     public byte mState=0;
     public short mTimer=0;
-    public long mTemperature =30;
+    public long mTemperature;
     public final short REQUIRED_TIME=400;
 
     public static IIconContainer
@@ -167,15 +172,9 @@ public class CrucibleModel extends TileEntityBase07Paintable{
                updateClientData();
            }
            if (MD.TFC.mLoaded){
-               if(Objects.equals(worldObj.getBlock(xCoord, yCoord - 1, zCoord), com.bioxx.tfc.api.TFCBlocks.forge))
-               {
-                   com.bioxx.tfc.TileEntities.TEForge te = (com.bioxx.tfc.TileEntities.TEForge) worldObj.getTileEntity(xCoord, yCoord - 1, zCoord);
-                   if (te.fireTemp > mTemperature)
-                       mTemperature +=2;
-                   if(mState==3&&mTemperature >1400)mTimer++;
-               }
-               if(mTemperature > com.bioxx.tfc.Core.TFC_Climate.getHeightAdjustedTemp(worldObj, xCoord, yCoord, zCoord))
-                   mTemperature--;
+               if(mState==3&&mTemperature > 1700)mTimer++;
+               if(mTemperature > WD.envTemp(worldObj, xCoord,yCoord,zCoord))mTemperature--;
+               else mTemperature++;
            }else mTimer++;
        }
     }
@@ -218,5 +217,14 @@ public class CrucibleModel extends TileEntityBase07Paintable{
     @Override
     public String getTileEntityName() {
         return "ktfru.multitileentity.cruciblemodel";
+    }
+
+    @Override
+    public float consumeHeat(IHeater iHeater) {
+        if(iHeater.getCurrentTemperature() > mTemperature) {
+            mTemperature += 2;
+            return 18;
+        }
+        return 0;
     }
 }

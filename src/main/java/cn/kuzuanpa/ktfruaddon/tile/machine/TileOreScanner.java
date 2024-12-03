@@ -21,6 +21,7 @@ import cn.kuzuanpa.ktfruaddon.code.codeUtil;
 import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT;
 import codechicken.lib.vec.BlockCoord;
+import cpw.mods.fml.common.Optional;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -59,6 +60,7 @@ import java.util.stream.Collectors;
 import static gregapi.data.CS.*;
 import static cn.kuzuanpa.ktfruaddon.code.OreScanner.*;
 
+@Optional.Interface(iface = "vazkii.botania.api.mana.IManaReceiver", modid = "botania")
 public class TileOreScanner extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IMultiTileEntity.IMTE_SyncDataByteArray, IOreScanner, IManaReceiver {
     public static IIconContainer mTextureMaterial, mTextureFront, mTextureFrontActive, mTextureFrontFinished;
     public static final byte STATE_IDLE = 0, STATE_RUNNING = 1, STATE_FINISHED = 2;
