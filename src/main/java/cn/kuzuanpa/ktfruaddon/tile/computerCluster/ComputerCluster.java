@@ -43,6 +43,14 @@ public class ComputerCluster {
         if(uuid != null)this.clusterUUID = uuid;
         else this.clusterUUID = UUID.randomUUID();
     }
+
+    public static ComputerCluster create(World initialControllerWorld, BlockCoord initialControllerPos) {
+        ComputerCluster cluster = new ComputerCluster(null);
+        if (cluster.join(initialControllerWorld,initialControllerPos) != null)return null;
+        cluster.update();
+        return cluster;
+    }
+
     public void update(){
         if(MinecraftServer.getServer().getTickCounter() <= lastUpdateTime)return;
         lastUpdateTime= MinecraftServer.getServer().getTickCounter();
@@ -104,6 +112,13 @@ public class ComputerCluster {
     public void mergeTo(ComputerCluster to){
 
     }
+
+    public String join(World world, BlockCoord pos){
+        TileEntity tile = world.getTileEntity(pos.x,pos.y,pos.z);
+        if(!(tile instanceof IComputerClusterController))return "ktfru.compute_cluster.msg.join.not_controller";
+        return join(world,pos, (IComputerClusterController) tile);
+    }
+
     /**@return ERROR message, null if successful**/
     public String join(World world, BlockCoord pos, IComputerClusterController controller){
         if(controller.getUUID()!=null && controllerList.containsKey(controller.getUUID())){

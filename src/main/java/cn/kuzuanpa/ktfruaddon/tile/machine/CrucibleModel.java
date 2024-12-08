@@ -164,6 +164,11 @@ public class CrucibleModel extends TileEntityBase07Paintable implements IHeatAcc
         }
     }
     @Override
+    public int getRenderPasses2(Block aBlock, boolean[] aShouldSideBeRendered) {
+        return 15;
+    }
+
+    @Override
     public void onTick2(long aTimer, boolean aIsServerSide) {
        if (isServerSide()){
            if(mTimer>REQUIRED_TIME) {
@@ -177,10 +182,6 @@ public class CrucibleModel extends TileEntityBase07Paintable implements IHeatAcc
                else mTemperature++;
            }else mTimer++;
        }
-    }
-    @Override
-    public int getRenderPasses2(Block aBlock, boolean[] aShouldSideBeRendered) {
-        return 15;
     }
 
     @Override

@@ -73,11 +73,10 @@ public class TestController extends TileEntityBase07Paintable implements IComput
     @Override
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if(!isServerSide())return 0;
-        if(aTool.equals(TOOL_plunger)) cluster = new ComputerCluster(null);
-        if(aTool.equals(TOOL_screwdriver)) cluster.join(worldObj,new BlockCoord(xCoord,yCoord,zCoord),this);
+        if(aTool.equals(TOOL_plunger)) cluster = ComputerCluster.create(worldObj, new BlockCoord(xCoord,yCoord,zCoord));
         if(aTool.equals(TOOL_chisel)) cluster.join(worldObj,new BlockCoord(xCoord,yCoord+1,zCoord), (IComputerClusterController) WD.te(worldObj,xCoord,yCoord+1,zCoord,false));
 
-        return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
+        return 10000;
     }
 
     @Override
@@ -151,12 +150,12 @@ public class TestController extends TileEntityBase07Paintable implements IComput
             coord.posZ = aNBT.getInteger(NBT_TARGET_Z);
             TileEntity tile = WD.te(world,coord,false);
 
-            if(!(tile instanceof IComputerClusterController)){
+            if(!(tile instanceof IComputerClusterController) || ((IComputerClusterController) tile).getCluster() == null){
                 aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Failed: target not exist or not loaded")));
                 return false;
             }
 
-            String err = cluster.join(world, codeUtil.MCCoord2CCCoord(coord),(IComputerClusterController)tile);
+            String err = ((IComputerClusterController) tile).getCluster().join(world, new BlockCoord(xCoord,yCoord,zCoord),this);
             if(err != null)aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Failed: "+err)));
             else aPlayer.addChatMessage(new ChatComponentText(LH.Chat.CYAN+LH.get("Join Success")));
         }

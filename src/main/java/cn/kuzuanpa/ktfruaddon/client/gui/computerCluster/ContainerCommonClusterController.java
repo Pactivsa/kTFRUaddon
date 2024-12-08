@@ -73,6 +73,7 @@ public class ContainerCommonClusterController extends ContainerCommon {
 
 	public void sendData(ICrafting crafter) throws IOException{
 		IComputerClusterController controller = (IComputerClusterController) mTileEntity;
+		if(controller.getCluster() == null)return;
 		for (byte sendType = 0; sendType < 4; sendType++) {
 			byte[] bytes = null;
 			switch (sendType){
@@ -82,6 +83,7 @@ public class ContainerCommonClusterController extends ContainerCommon {
 				case 3:  bytes = ComputerClusterClientData.ControllerDetail.serialize(controller.getCluster().fetchClientDataControllerDetail(controller.getUUID())); break;
 			}
 			int[] data = codeUtil.compressToIntegerArray(bytes);
+			//Saves bandwidth
 			if(Arrays.equals(cachedIntArray[sendType], data))continue;
 
 			cachedIntArray[sendType] = data;
@@ -97,7 +99,7 @@ public class ContainerCommonClusterController extends ContainerCommon {
                 int datum = data[i];
                 crafter.sendProgressBarUpdate(this, sendType<<24|i, datum);
             }
-			crafter.sendProgressBarUpdate(this, 5<<24, sendType);
+			crafter.sendProgressBarUpdate(this, 5<<24, sendType<<24|data.length);
 		}
 	}
 	public ComputerClusterClientData.ControllerList   dataControllerList ;
@@ -110,7 +112,6 @@ public class ContainerCommonClusterController extends ContainerCommon {
 	Map<Integer,Integer> receivedDataClusterDetail    = new HashMap<>();
 	Map<Integer,Integer> receivedDataControllerDetail = new HashMap<>();
 	int[] dataMaxIndex = new int[4];
-	boolean[] receivedDataEOF  = new boolean[4];
 
 	@Override
 	public void updateProgressBar(int aIndex, int aValue) {
@@ -118,11 +119,10 @@ public class ContainerCommonClusterController extends ContainerCommon {
 			int type = aIndex >>> 24;
 			int index = aIndex & 0x00FFFFFF;
 			if (type == 5) {
-				receivedDataEOF[aValue] = true;
-				checkEOFAndExtractData(aValue);
+				dataMaxIndex[aValue >>> 24] = aValue & 0x00FFFFFF;
+				checkEOFAndExtractData(aValue >>> 24);
 				return;
 			}
-			dataMaxIndex[type] = Math.max(dataMaxIndex[type], index);
 			switch (type) {
 				case 0:
 					receivedDataClientList.put(index, aValue);
@@ -137,7 +137,7 @@ public class ContainerCommonClusterController extends ContainerCommon {
 					receivedDataControllerDetail.put(index, aValue);
 					break;
 			}
-			checkEOFAndExtractData(type);
+			if(dataMaxIndex[type] > 0)checkEOFAndExtractData(type);
 		}catch (Exception e){
 			e.printStackTrace();
 		}
@@ -146,33 +146,32 @@ public class ContainerCommonClusterController extends ContainerCommon {
 	public void checkEOFAndExtractData(int type) throws IOException{
 		switch (type) {
 			case 0:
-				if(!checkEOF(receivedDataClientList,dataMaxIndex[type], receivedDataEOF[type])) return;
+				if(!checkEOF(receivedDataClientList,dataMaxIndex[type])) return;
 				dataClientList = ComputerClusterClientData.ClientList.deserialize(codeUtil.decompressFromIntegerArray(receivedDataClientList.values().stream().mapToInt(v->v).toArray()));
 				receivedDataClientList.clear();
 				break;
 			case 1:
-				if(!checkEOF(receivedDataControllerList,dataMaxIndex[type], receivedDataEOF[type])) return;
+				if(!checkEOF(receivedDataControllerList,dataMaxIndex[type])) return;
 				dataControllerList = ComputerClusterClientData.ControllerList.deserialize(codeUtil.decompressFromIntegerArray(receivedDataControllerList.values().stream().mapToInt(v->v).toArray()));
 				receivedDataControllerList.clear();
 				break;
 			case 2:
-				if(!checkEOF(receivedDataClusterDetail,dataMaxIndex[type], receivedDataEOF[type])) return;
+				if(!checkEOF(receivedDataClusterDetail,dataMaxIndex[type])) return;
 				dataClusterDetail = ComputerClusterClientData.ClusterDetail.deserialize(codeUtil.decompressFromIntegerArray(receivedDataClusterDetail.values().stream().mapToInt(v->v).toArray()));
 				receivedDataClusterDetail.clear();
 				break;
 			case 3:
-				if(!checkEOF(receivedDataControllerDetail,dataMaxIndex[type], receivedDataEOF[type])) return;
+				if(!checkEOF(receivedDataControllerDetail,dataMaxIndex[type])) return;
 				dataControllerDetail = ComputerClusterClientData.ControllerDetail.deserialize(codeUtil.decompressFromIntegerArray(receivedDataControllerDetail.values().stream().mapToInt(v->v).toArray()));
 				receivedDataControllerDetail.clear();
 				break;
 		}
 		dataMaxIndex[type] = 0;
-		receivedDataEOF[type] = false;
 	}
 
-	public boolean checkEOF(Map<Integer,Integer> map, int maxIndex, boolean receivedEOF){
-		if(!receivedEOF)return false;
-		for (int i = 0; i <= maxIndex; i++) {
+	public boolean checkEOF(Map<Integer,Integer> map, int maxIndex){
+		if(map.size() < maxIndex)return false;
+		for (int i = 0; i < maxIndex; i++) {
 			if(!map.containsKey(i)||map.get(i)==null)return false;
 		}
 		updated = true;

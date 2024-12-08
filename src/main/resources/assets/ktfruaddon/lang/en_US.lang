@@ -32,7 +32,7 @@ ktfru.msg.common.tank=流体槽
 ktfru.msg.common.empty=空
 ktfru.msg.common.null=无
 ktfru.msg.common.normal=正常
-
+ktfru.msg.outdated=You're playing on Outdated TFRU! Please update or you WONT get supported!
 
 ktfru.msg.machine.cruciblemodel.0=还需要
 ktfru.msg.machine.cruciblemodel.1=个粘土

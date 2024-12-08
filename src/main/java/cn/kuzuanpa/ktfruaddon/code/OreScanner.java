@@ -161,7 +161,9 @@ public class OreScanner {
                 if (includeFluidSpring && WD.te(world,new ChunkCoordinates(xPos,yPos,zPos),false) instanceof MultiTileEntityFluidSpring){
                     short fakeMatID = getFakeFluidSpringMaterialID(WD.te(world,new ChunkCoordinates(xPos,yPos,zPos),false));
                     if(fakeMatID > 0)addDiscoveredOres(fakeMatID,xPos,yPos,zPos,ORE_TYPE_FLUID_SPRING);
+                    continue;
                 }
+
 
             }
             yPointer++;
@@ -290,6 +292,7 @@ public class OreScanner {
         }
         return -1;
     }
+
     public boolean isTFCOre(Block block) {
         return block!=null&& block == TFCBlocks.ore;
     }

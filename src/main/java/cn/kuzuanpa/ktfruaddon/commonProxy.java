@@ -24,8 +24,15 @@ import cn.kuzuanpa.ktfruaddon.material.materialPreInit;
 import cn.kuzuanpa.ktfruaddon.recipe.recipeInit;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityInit0;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityPreInit;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import gregapi.api.Abstract_Proxy;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.util.ChatComponentText;
+import net.minecraftforge.common.MinecraftForge;
 
 import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.isAdvancedRocketryTFRU;
 import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.updateTFRUEnvironment;
@@ -37,7 +44,9 @@ public class commonProxy extends Abstract_Proxy {
     public void registerRenderers() {
     }
     public void preInit(FMLPreInitializationEvent aEvent) {
-        updateTFRUEnvironment();
+        MinecraftForge.EVENT_BUS.register(this);
+        FMLCommonHandler.instance().bus().register(this);
+        updateTFRUEnvironment(aEvent);
       //  new prefixPreInit(aEvent);
         materialPreInit.init(aEvent);
         tileEntityPreInit.init(aEvent);
@@ -73,6 +82,9 @@ public class commonProxy extends Abstract_Proxy {
 
     public void serverStopped(FMLServerStoppedEvent aEvent) {
     }
-
+    @SubscribeEvent
+    public void sendMessage(PlayerEvent.PlayerLoggedInEvent e){
+        if(!EnvironmentHelper.TFRUVer.equalsIgnoreCase(EnvironmentHelper.checkedTFRUVer)) e.player.addChatComponentMessage(new ChatComponentText(I18n.format("ktfru.msg.outdated")));
+    }
 }
 
