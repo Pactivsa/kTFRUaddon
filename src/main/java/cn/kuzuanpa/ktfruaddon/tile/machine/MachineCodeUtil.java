@@ -17,8 +17,8 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.machine;
 
-import cn.kuzuanpa.ktfruaddon.code.CodeTranslate;
-import cn.kuzuanpa.ktfruaddon.code.OreScanner;
+import cn.kuzuanpa.ktfruaddon.api.code.CodeTranslate;
+import cn.kuzuanpa.ktfruaddon.api.code.OreScanner;
 import cpw.mods.fml.common.FMLLog;
 import gregapi.old.Textures;
 import gregapi.render.IIconContainer;

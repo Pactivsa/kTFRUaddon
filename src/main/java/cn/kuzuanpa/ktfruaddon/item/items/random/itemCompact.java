@@ -17,7 +17,7 @@
 
 package cn.kuzuanpa.ktfruaddon.item.items.random;
 
-import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
 import gregapi.data.MT;
 import gregapi.item.CreativeTab;
 import gregapi.item.multiitem.MultiItemRandom;

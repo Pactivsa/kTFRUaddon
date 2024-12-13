@@ -16,8 +16,8 @@
 
 package cn.kuzuanpa.ktfruaddon.recipe.recipe;
 
-import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.data.FL;
 import gregapi.data.MT;
 import gregapi.util.ST;

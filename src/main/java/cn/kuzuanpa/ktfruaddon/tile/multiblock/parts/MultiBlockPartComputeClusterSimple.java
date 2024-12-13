@@ -17,7 +17,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.item.items.random.itemComputer;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.data.LH;

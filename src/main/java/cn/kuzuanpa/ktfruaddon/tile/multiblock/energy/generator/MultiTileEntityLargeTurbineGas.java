@@ -16,7 +16,7 @@
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
 import cn.kuzuanpa.ktfruaddon.item.items.itemTurbine;
-import cn.kuzuanpa.ktfruaddon.material.prefix.prefixList;
+import cn.kuzuanpa.ktfruaddon.api.material.prefix.prefixList;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.FL;
 import gregapi.data.FM;

@@ -19,9 +19,8 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator.SunHeater;
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gregapi.block.multitileentity.IMultiTileEntity;
@@ -39,7 +38,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChunkCoordinates;
-import org.apache.logging.log4j.Level;
 
 import static gregapi.data.CS.*;
 
@@ -98,7 +96,7 @@ public class SunHeaterMirror extends TileEntityBase09FacingSingle implements IMu
     @Override
     public void onTick2(long aTimer, boolean isServerside){
         if (!isServerside&&getTimer()%10==0) {
-            if (this.getWorld().getWorldTime() % getDayTotalTime() < getDayTotalTime()/2 &&targetSunBoilerPos!=null&&isValid) updateRotates();
+            if (targetSunBoilerPos!=null&&isValid) updateRotates();
             else rotateVerticalToMove=0;
         }
         if(isServerside&&target!=null) ITileEntityEnergy.Util.insertEnergyInto(TD.Energy.HU,SIDE_BOTTOM,generateRate,1,this,target);
@@ -116,10 +114,12 @@ public class SunHeaterMirror extends TileEntityBase09FacingSingle implements IMu
     }
     @SideOnly(Side.CLIENT)
     public void updateRotates(){
-        long Ti= getWorldObj().getWorldTime() % getDayTotalTime();
-        double Xn=0,Yn=0,Zn=0;
+        long Ti= (getWorldObj().getWorldTime()) % getDayTotalTime();
 
-        Ti = Ti > getDayTotalTime()/2 ? getTimeNoon() : Ti;
+        if(Ti > getDayTotalTime()/2){
+            rotateVerticalToMove =0;
+            return;
+        }
 
         int X2A = targetSunBoilerPos.posX - xCoord, Y2A = targetSunBoilerPos.posY - yCoord, Z2A = targetSunBoilerPos.posZ - zCoord;
 
@@ -150,6 +150,7 @@ public class SunHeaterMirror extends TileEntityBase09FacingSingle implements IMu
                 break;
             }
         }
+        double Xn=0,Yn=0,Zn=0;
 
         Xn = mV.get(0, index);
         Yn = mV.get(1, index);
@@ -193,23 +194,14 @@ public class SunHeaterMirror extends TileEntityBase09FacingSingle implements IMu
             int dx = targetSunBoilerPos.posX - this.xCoord;
             int dy = targetSunBoilerPos.posY - this.yCoord;
             int dz = targetSunBoilerPos.posY - this.yCoord;
-            int Ti = (int) (getWorldObj().getWorldTime() % getDayTotalTime() + getOffset());
-            generateRate =Ti > getDayTotalTime()/2 ? 0 : (int) (16+ 48* (1-(Math.abs(getTimeNoon() - Ti) / getTimeNoon())) - (Math.floor(Math.sqrt(dx * dx + dy * dy + dz * dz) * 0.2f)));
-
-            FMLLog.log(Level.FATAL,""+getWorldObj().getWorldTime() % getDayTotalTime());
+            int currentTime = (int) getWorldObj().getWorldTime() % getDayTotalTime() ;
+            int halfDayTime = getDayTotalTime()/2;
+            generateRate = currentTime > halfDayTime ? 0 : (int) (16+ 48* (1-(Math.abs ( halfDayTime - currentTime ) / (float)halfDayTime)) - (Math.floor(Math.sqrt(dx * dx + dy * dy + dz * dz) * 0.2f)));
         }
         return isValid;
     }
-    /**Offset: 2 * Time elapsed from (Sun just raise from horizon) to (Day Time = 0)**/
-    public int getOffset(){
-        return getDayTotalTime()/12;
-    }
     public int getDayTotalTime(){
         return 24000;
-    }
-
-    public int getTimeNoon(){
-        return getDayTotalTime()/4+getOffset();
     }
     @Override
     public IPacket getClientDataPacket(boolean aSendAll) {

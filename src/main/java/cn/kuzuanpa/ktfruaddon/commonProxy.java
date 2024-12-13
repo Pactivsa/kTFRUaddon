@@ -16,11 +16,11 @@
 package cn.kuzuanpa.ktfruaddon;
 
 import cn.kuzuanpa.ktfruaddon.client.kTFRUAddonARProjectorRegister;
-import cn.kuzuanpa.ktfruaddon.fluid.fluidPreInit;
-import cn.kuzuanpa.ktfruaddon.i18n.i18nPostInit;
+import cn.kuzuanpa.ktfruaddon.api.fluid.fluidPreInit;
+import cn.kuzuanpa.ktfruaddon.api.i18n.i18nPostInit;
 import cn.kuzuanpa.ktfruaddon.item.itemPreInit;
 import cn.kuzuanpa.ktfruaddon.loot.lootPostInit;
-import cn.kuzuanpa.ktfruaddon.material.materialPreInit;
+import cn.kuzuanpa.ktfruaddon.api.material.materialPreInit;
 import cn.kuzuanpa.ktfruaddon.recipe.recipeInit;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityInit0;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityPreInit;
@@ -29,7 +29,6 @@ import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 import gregapi.api.Abstract_Proxy;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.MinecraftForge;

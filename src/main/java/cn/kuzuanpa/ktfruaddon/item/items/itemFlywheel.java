@@ -16,7 +16,8 @@
 
 package cn.kuzuanpa.ktfruaddon.item.items;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.item.items.itemPrefixWithTooltip;
 import gregapi.code.ModData;
 import gregapi.data.LH;
 import gregapi.oredict.OreDictMaterial;
@@ -28,7 +29,7 @@ import net.minecraft.item.ItemStack;
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class itemFlywheel extends itemPrefixWithTooltip{
+public class itemFlywheel extends itemPrefixWithTooltip {
     public static float getMaxRPM(int meta){
         OreDictMaterial mat = OreDictMaterial.get(meta);
         return (float) (Math.pow(Math.max(0.4,mat.mToolQuality),2.4) * mat.mToolSpeed*4);

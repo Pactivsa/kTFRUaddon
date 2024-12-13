@@ -18,9 +18,9 @@ package cn.kuzuanpa.ktfruaddon.tile.machine;
 
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientMiner;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonMiner;
-import cn.kuzuanpa.ktfruaddon.code.NetServerHandlerFake;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
-import cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT;
+import cn.kuzuanpa.ktfruaddon.api.code.NetServerHandlerFake;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import com.mojang.authlib.GameProfile;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;

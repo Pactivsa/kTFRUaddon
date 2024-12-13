@@ -16,8 +16,8 @@
 
 package cn.kuzuanpa.ktfruaddon.recipe.recipe;
 
-import cn.kuzuanpa.ktfruaddon.fluid.flList;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.fluid.flList;
+import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.FL;
 

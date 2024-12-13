@@ -19,7 +19,7 @@ import gregapi.data.FL;
 import gregapi.data.MT;
 import gregapi.util.OM;
 
-import static cn.kuzuanpa.ktfruaddon.recipe.recipeMaps.HeatMixer;
+import static cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps.HeatMixer;
 import static gregapi.data.CS.*;
 
 public class HeatMixer {

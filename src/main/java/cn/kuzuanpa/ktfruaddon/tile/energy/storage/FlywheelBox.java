@@ -16,9 +16,10 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.energy.storage;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.tile.energy.storage.AdaptiveOutputBattery;
 import cn.kuzuanpa.ktfruaddon.item.items.itemFlywheel;
-import cn.kuzuanpa.ktfruaddon.material.prefix.prefixList;
+import cn.kuzuanpa.ktfruaddon.api.material.prefix.prefixList;
 import gregapi.code.TagData;
 import gregapi.data.CS;
 import gregapi.data.LH;

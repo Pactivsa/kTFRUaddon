@@ -15,12 +15,12 @@
 
 package cn.kuzuanpa.ktfruaddon.recipe.recipe;
 
-import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
 import gregapi.data.FL;
 import gregapi.data.MT;
 import gregapi.util.ST;
 
-import static cn.kuzuanpa.ktfruaddon.recipe.recipeMaps.ParticleCollider;
+import static cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps.ParticleCollider;
 import static gregapi.data.CS.T;
 import static gregapi.data.CS.U;
 

@@ -14,24 +14,19 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.energy.storage;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
-import cpw.mods.fml.common.FMLLog;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import gregapi.code.TagData;
-import gregapi.data.CS;
 import gregapi.data.LH;
 import gregapi.data.TD;
 import gregapi.fluid.FluidTankGT;
 import gregapi.oredict.OreDictManager;
-import gregapi.oredict.OreDictMaterial;
 import gregapi.oredict.OreDictMaterialStack;
-import gregapi.oredict.OreDictPrefix;
 import gregapi.tileentity.data.ITileEntityTemperature;
 import gregapi.tileentity.machines.MultiTileEntityBasicMachine;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import org.apache.logging.log4j.Level;
 
 import java.util.List;
 

@@ -16,9 +16,9 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.base;
 
-import cn.kuzuanpa.ktfruaddon.code.BoundingBox;
-import cn.kuzuanpa.ktfruaddon.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.tile.util.utils;
+import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
+import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import codechicken.lib.vec.BlockCoord;
 import cpw.mods.fml.common.FMLLog;
 import gregapi.tileentity.base.TileEntityBase09FacingSingle;

@@ -24,8 +24,8 @@ import cn.kuzuanpa.kGuiLib.client.objects.gui.ButtonList;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.CommonTexturedButton;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.Text;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
-import cn.kuzuanpa.ktfruaddon.tile.computerCluster.ComputerClusterClientData;
-import cn.kuzuanpa.ktfruaddon.tile.computerCluster.ControllerData;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ControllerData;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
@@ -33,7 +33,7 @@ import org.lwjgl.opengl.GL11;
 
 import java.util.List;
 
-import static cn.kuzuanpa.ktfruaddon.code.codeUtil.getDisplayShortNum;
+import static cn.kuzuanpa.ktfruaddon.api.code.codeUtil.getDisplayShortNum;
 import static cn.kuzuanpa.ktfruaddon.ktfruaddon.MOD_ID;
 
 public class ScreenControllerList extends kGuiScreenContainerLayerBase {

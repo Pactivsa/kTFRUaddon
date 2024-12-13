@@ -15,9 +15,9 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.model;
 
-import cn.kuzuanpa.ktfruaddon.code.BoundingBox;
+import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.ModelRenderBaseMultiBlockMachine;
-import cn.kuzuanpa.ktfruaddon.tile.util.utils;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;
 import gregapi.tileentity.delegate.DelegatorTileEntity;
@@ -33,7 +33,7 @@ import net.minecraftforge.fluids.IFluidHandler;
 
 import java.util.List;
 
-import static cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler.HAS_PROJECTOR_STRUCTURE;
+import static cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler.HAS_PROJECTOR_STRUCTURE;
 import static gregapi.data.CS.*;
 
 public class CNCMachine3 extends ModelRenderBaseMultiBlockMachine {

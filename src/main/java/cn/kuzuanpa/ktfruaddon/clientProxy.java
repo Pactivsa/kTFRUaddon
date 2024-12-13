@@ -15,8 +15,9 @@
 
 package cn.kuzuanpa.ktfruaddon;
 
+import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.client.render.*;
-import cn.kuzuanpa.ktfruaddon.nei.NeiHiddener;
+import cn.kuzuanpa.ktfruaddon.api.nei.NeiHiddener;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.storage.LiquidBattery;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.model.CNCMachine3;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.model.circuitAssembler;

@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.recipe.recipe;
 
-import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
 import com.bioxx.tfc.api.Crafting.CraftingManagerTFC;
 import com.bioxx.tfc.api.Crafting.KilnCraftingManager;
 import com.bioxx.tfc.api.Crafting.KilnRecipe;

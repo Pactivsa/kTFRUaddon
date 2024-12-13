@@ -42,8 +42,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT.LOSS_PERCENT;
-import static cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT.MAX_AMPERE;
+import static cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT.LOSS_PERCENT;
+import static cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT.MAX_AMPERE;
 import static gregapi.data.CS.*;
 import static gregapi.data.CS.T;
 

@@ -16,10 +16,10 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
-import cn.kuzuanpa.ktfruaddon.client.render.FxRenderBlockOutline;
+import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IComputeNode;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IConditionParts;
-import cn.kuzuanpa.ktfruaddon.tile.util.utils;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
 import gregapi.util.WD;
 import net.minecraft.util.ChunkCoordinates;
@@ -30,8 +30,7 @@ import java.util.List;
 
 public interface IMappedStructure extends ITileEntityMultiBlockController {
     /**@return null = structure complete**/
-    @Nullable
-    default ChunkCoordinates checkMappedStructure(ChunkCoordinates lastFailedPos, int machineX, int machineY, int machineZ, int xMapOffset, int yMapOffset, int zMapOffset){
+    default @Nullable ChunkCoordinates checkMappedStructure(ChunkCoordinates lastFailedPos, int machineX, int machineY, int machineZ, int xMapOffset, int yMapOffset, int zMapOffset){
         if (lastFailedPos != null) FxRenderBlockOutline.removeBlockOutlineToRender(lastFailedPos);
         int tX = getX(), tY = getY(), tZ = getZ();
         if (!getWorld().blockExists(tX, tY, tZ)) return null;
@@ -55,7 +54,7 @@ public interface IMappedStructure extends ITileEntityMultiBlockController {
     /**@return will we ignore this error and continue check**/
     default boolean onCheckFailed(int mapX,int mapY,int mapZ){return false;}
 
-    default List<ChunkCoordinates> getConditionPartsPosList(){return null;}
+    default @Nullable List<ChunkCoordinates> getConditionPartsPosList(){return null;}
 
     int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID);
     int getUsage(int mapX, int mapY, int mapZ, int registryID, int blockID);
@@ -68,5 +67,5 @@ public interface IMappedStructure extends ITileEntityMultiBlockController {
     int getZ();
     World getWorld();
      
-    List<ChunkCoordinates> getComputeNodesCoordList();
+    @Nullable List<ChunkCoordinates> getComputeNodesCoordList();
 }

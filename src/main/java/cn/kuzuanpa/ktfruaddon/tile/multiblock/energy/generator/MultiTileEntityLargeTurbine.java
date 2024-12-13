@@ -18,7 +18,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientTurbine;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonTurbine;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.item.items.itemTurbine;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;

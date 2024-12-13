@@ -18,10 +18,10 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientFusionTokamakT1;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonFusionTokamakT1;
-import cn.kuzuanpa.ktfruaddon.code.BoundingBox;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
+import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IComputeNode;
-import cn.kuzuanpa.ktfruaddon.tile.util.utils;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -56,7 +56,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import static cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler.HAS_PROJECTOR_STRUCTURE;
+import static cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler.HAS_PROJECTOR_STRUCTURE;
 import static gregapi.data.CS.*;
 
 public class fusionReactorTokamakT1 extends TileEntityBase10MultiBlockBase implements IMultiTileEntity.IMTE_SyncDataByteArray, ITileEntityEnergy, IMultiBlockEnergy, IMultiBlockFluidHandler, IMultiBlockInventory, IMappedStructure {

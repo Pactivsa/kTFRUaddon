@@ -15,44 +15,35 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
-import cn.kuzuanpa.ktfruaddon.tile.util.utils;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
 import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.TD;
 import gregapi.fluid.FluidTankGT;
-import gregapi.recipes.Recipe;
-import gregapi.tileentity.behavior.TE_Behavior_Active_Trinary;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.tileentity.multiblocks.IMultiBlockFluidHandler;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
 import gregapi.tileentity.multiblocks.MultiTileEntityMultiBlockPart;
-import gregapi.tileentity.multiblocks.TileEntityBase10MultiBlockBase;
 import gregapi.util.OM;
 import gregapi.util.ST;
 import gregapi.util.UT;
 import gregapi.util.WD;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.IFluidTank;
 
 import java.util.Collection;
 import java.util.List;
 
-import static cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT.WORKING_MODE;
 import static gregapi.data.CS.*;
 
-public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiBlockFluidHandler, ITileEntityEnergy{
+public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, ITileEntityEnergy{
     public String getTileEntityName() {
         return "ktfru.multitileentity.multiblock.sunheater";
     }
@@ -62,14 +53,8 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
     public static final short machineX = 5;
     public static final short machineYmax = 16;
     public static final short machineZ = 5;
-    public short workingMode=0;
-    public long mRate=32,mEnergy=0, maxEnergyStorePerLayer =5000000, maxEmitRatePerLayer =256;
-    public double timeRemains=-1;
-    public TE_Behavior_Active_Trinary mActivity = null;
-    public Recipe.RecipeMap mRecipes = recipeMaps.FluidHeating;
-    public Recipe mLastRecipe = null;
-    private TagData mEnergyTypeEmitted=TD.Energy.HU;
-    public long mTemperature=DEFAULT_ENVIRONMENT_TEMPERATURE;
+    public long mRate=32, maxEnergyStorePerLayer =5000000, maxEmitRatePerLayer =256;
+    public TagData mEnergyTypeEmitted=TD.Energy.HU;
     public boolean clickDoubleCheck=false;
     public short machineY=0;
     //决定结构检测的起始位置，默认情况下是从主方块起始
@@ -128,31 +113,6 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
             {k, k, k, k, k},
             {k, k, k, k, k},
     }};
-    public static boolean[][][] ignoreMap = {{
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-    },{
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-    },{
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-    },{
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-            {F, F, F, F, F},
-    }};
 
     public int getUsage(int blockID ,short registryID){
         if(blockID==18002&&registryID==g)return MultiTileEntityMultiBlockPart.ONLY_FLUID_IN;
@@ -163,50 +123,29 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
         super.readFromNBT2(aNBT);
-        mActivity = new TE_Behavior_Active_Trinary(this, aNBT);
         if (aNBT.hasKey(NBT_OUTPUT_MAX)) maxEmitRatePerLayer = aNBT.getLong(NBT_OUTPUT_MAX);
-        if (aNBT.hasKey(NBT_ENERGY)) mEnergy = aNBT.getLong(NBT_ENERGY);
-        if (aNBT.hasKey(WORKING_MODE)) workingMode = aNBT.getShort(WORKING_MODE);
-        mTanks[0].readFromNBT(aNBT, NBT_TANK+".0").setCapacity(80000);
-        mTanks[1].readFromNBT(aNBT, NBT_TANK+".1").setCapacity(80000);
     }
     public void writeToNBT2(NBTTagCompound aNBT) {
         super.writeToNBT2(aNBT);
-        mActivity.save(aNBT);
         UT.NBT.setNumber(aNBT, NBT_OUTPUT_MAX, maxEmitRatePerLayer);
-        UT.NBT.setNumber(aNBT, NBT_ENERGY, mEnergy);
-        UT.NBT.setNumber(aNBT, WORKING_MODE, workingMode);
-        mTanks[0].writeToNBT(aNBT, NBT_TANK+".0");
-        mTanks[1].writeToNBT(aNBT, NBT_TANK+".1");
     }
-        @Override
+    @Override
     public boolean checkStructure2() {
         int tX = xCoord, tY = yCoord, tZ = zCoord;
         if (worldObj.blockExists(tX, tY, tZ)) {
             boolean tSuccess = T;
-            if (getFacing() == (short) 2) {
-                tZ += zMapOffset;
-                tX -= xMapOffset;
-            } else if (getFacing() == (short) 3) {
-                tZ -= zMapOffset;
-                tX += xMapOffset;
-            } else if (getFacing() == (short) 4) {
-                tX += zMapOffset;
-                tZ += xMapOffset;
-            } else if (getFacing() == (short) 5) {
-                tX -= zMapOffset;
-                tZ -= xMapOffset;
-            } else {
-                tSuccess = F;
-            }
+            tX = utils.getRealX(getFacing(), tX, xMapOffset, -zMapOffset);
+            tZ = utils.getRealZ(getFacing(), tZ, xMapOffset, -zMapOffset);
             int checkX, checkY, checkZ;
-            for (checkY  = 0; checkY < 2 &&tSuccess; checkY++) for (checkZ = 0; checkZ < machineZ&&tSuccess; checkZ++) for (checkX = 0; checkX < machineX&&tSuccess; checkX++) if (!ITileEntityMultiBlockController.Util.checkAndSetTarget(this, utils.getRealX(mFacing, tX, checkX, checkZ), tY + checkY -1, utils.getRealZ(mFacing, tZ, checkX, checkZ), blockIDMap[checkY][checkZ][checkX], registryIDMap[checkY][checkZ][checkX], 0, getUsage( blockIDMap[checkY][checkZ][checkX], registryIDMap[checkY][checkZ][checkX]))) tSuccess = ignoreMap[checkY][checkZ][checkX];
+            for (checkY  = 0; checkY < 2 &&tSuccess; checkY++) for (checkZ = 0; checkZ < machineZ&&tSuccess; checkZ++) for (checkX = 0; checkX < machineX&&tSuccess; checkX++) if (!ITileEntityMultiBlockController.Util.checkAndSetTarget(this, utils.getRealX(mFacing, tX, checkX, checkZ), tY + checkY -1, utils.getRealZ(mFacing, tZ, checkX, checkZ), blockIDMap[checkY][checkZ][checkX], registryIDMap[checkY][checkZ][checkX], 0, getUsage( blockIDMap[checkY][checkZ][checkX], registryIDMap[checkY][checkZ][checkX]))) tSuccess = F;
             if(!tSuccess)return false;
-            for (checkY  = 2; checkY < machineYmax &&tSuccess; checkY++) for (checkZ = 0; checkZ < machineZ && tSuccess; checkZ++) for (checkX = 0; checkX < machineX && tSuccess; checkX++) if (!ITileEntityMultiBlockController.Util.checkAndSetTarget(this, utils.getRealX(mFacing, tX, checkX, checkZ), tY + checkY - 1, utils.getRealZ(mFacing, tZ, checkX, checkZ), blockIDMap[2][checkZ][checkX], registryIDMap[2][checkZ][checkX], 0, getUsage(blockIDMap[3][checkZ][checkX], registryIDMap[2][checkZ][checkX]))) tSuccess = ignoreMap[2][checkZ][checkX];
+
+            for (checkY  = 2; checkY < machineYmax &&tSuccess; checkY++) for (checkZ = 0; checkZ < machineZ && tSuccess; checkZ++) for (checkX = 0; checkX < machineX && tSuccess; checkX++) if (!ITileEntityMultiBlockController.Util.checkAndSetTarget(this, utils.getRealX(mFacing, tX, checkX, checkZ), tY + checkY - 1, utils.getRealZ(mFacing, tZ, checkX, checkZ), blockIDMap[2][checkZ][checkX], registryIDMap[2][checkZ][checkX], 0, getUsage(blockIDMap[3][checkZ][checkX], registryIDMap[2][checkZ][checkX]))) tSuccess = F;
             machineY = (short) (checkY - (tSuccess ? 2 : 3));
             if (!tSuccess) checkY--;
             tSuccess=T;
-            for (checkZ = 0; checkZ < machineZ && tSuccess; checkZ++) for (checkX = 0; checkX < machineX && tSuccess; checkX++)if (!ITileEntityMultiBlockController.Util.checkAndSetTarget(this, utils.getRealX(mFacing, tX, checkX, checkZ), tY + checkY - 1, utils.getRealZ(mFacing, tZ, checkX, checkZ), blockIDMap[3][checkZ][checkX], registryIDMap[3][checkZ][checkX], 0, getUsage(blockIDMap[3][checkZ][checkX], registryIDMap[3][checkZ][checkX]))) tSuccess = ignoreMap[3][checkZ][checkX];
+
+            for (checkZ = 0; checkZ < machineZ && tSuccess; checkZ++) for (checkX = 0; checkX < machineX && tSuccess; checkX++)if (!ITileEntityMultiBlockController.Util.checkAndSetTarget(this, utils.getRealX(mFacing, tX, checkX, checkZ), tY + checkY - 1, utils.getRealZ(mFacing, tZ, checkX, checkZ), blockIDMap[3][checkZ][checkX], registryIDMap[3][checkZ][checkX], 0, getUsage(blockIDMap[3][checkZ][checkX], registryIDMap[3][checkZ][checkX]))) tSuccess = F;
             return tSuccess;
         }
         return mStructureOkay;
@@ -218,8 +157,8 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
         LH.add("ktfru.tooltip.multiblock.sunheater.3", "layers of Absorb Layer:");
         LH.add("ktfru.tooltip.multiblock.sunheater.4", "  5x5 Sunlight Absorber as ring and 3x3 Sun Heator Transmitter as ring, centered stainless steel wall");
         LH.add("ktfru.tooltip.multiblock.sunheater.5", "5x1x5 Sun Heater Top Layer on the top");
-        LH.add("ktfru.tooltip.multiblock.sunheater.6", "Emit HU/Output Liquid from top side of top layer");
-        LH.add("ktfru.tooltip.multiblock.sunheater.7", "Rate: 256x(Num of Absorb Layer) HU/t(HU mode), 8x faster in Hot Liquid mode");
+        LH.add("ktfru.tooltip.multiblock.sunheater.6", "Emit HU/Output Liquid from 3x3 area of top layer");
+        LH.add("ktfru.tooltip.multiblock.sunheater.7", "Rate: 256x(Num of Absorb Layer) HU/t per block (HU mode), 4x faster in Hot Liquid mode");
         LH.add("ktfru.tooltip.multiblock.sunheater.8", "Right click with USB to record coord for mirrors");
     }
 
@@ -272,123 +211,62 @@ public class SunHeater extends TileEntityBase10MultiBlockBase implements IMultiB
 
     public void onTick2(long aTimer, boolean aIsServerSide) {
         super.onTick2(aTimer,aIsServerSide);
-        if (!aIsServerSide||!mStructureOkay) return;
-        if (mEnergy > getMaxEnergyStore()) {
-            overheat();
-            mEnergy = 0;
+        if (aTimer%60==0)clickDoubleCheck=false;
+    }
+
+    @Override
+    public void doOutputEnergy() {
+        //emitEnergy
+        if (mEnergyStored <= mRate * 9) return;
+        mRate = getEmitRate();
+        for (int x = -1; x < 2; x++) for (int z = 1; z < 4; z++) {
+            TileEntity tileToEmit = worldObj.getTileEntity(utils.getRealX(mFacing, xCoord, x, z), yCoord + 2 + machineY, utils.getRealZ(mFacing, zCoord, x, z));
+            if (tileToEmit instanceof ITileEntityEnergy) mEnergyStored -= mRate * ITileEntityEnergy.Util.insertEnergyInto(TD.Energy.HU, SIDE_BOTTOM, mRate, 1, this, tileToEmit);
         }
-        if (mEnergy < 0) mEnergy = 0;
-        //AutoOutput
+    }
+
+    @Override
+    public void doOutputFluid() {
         for (int x = -1; x < 2; x++) for (int z = 1; z < 4; z++) {
             FL.move(mTanks[1],WD.te(worldObj,utils.getRealX(mFacing, xCoord, x, z), yCoord + 2 + machineY, utils.getRealZ(mFacing, zCoord, x, z),SIDE_BOTTOM,false));
         }
-        //Do Work
-        if(workingMode==0) {
-            //emitEnergy
-            if (mEnergy <= mRate * 9) return;
-            mRate = mEnergy > getMaxEnergyStore() * 0.2 ? getEmitRate() : (int) ((mEnergy / (getMaxEnergyStore() * 0.2f)) * getEmitRate());
-            for (int x = -1; x < 2; x++) for (int z = 1; z < 4; z++) {
-                TileEntity tileToEmit = worldObj.getTileEntity(utils.getRealX(mFacing, xCoord, x, z), yCoord + 2 + machineY, utils.getRealZ(mFacing, zCoord, x, z));
-                if (tileToEmit instanceof ITileEntityEnergy) mEnergy -= mRate * ITileEntityEnergy.Util.insertEnergyInto(TD.Energy.HU, SIDE_BOTTOM, mRate, 1, this, tileToEmit);
-            }
-        }
-        if (workingMode==1) {
-            if (mEnergy<16) return;
-            //doRecipe
-            int mRateCurrent=(mEnergy > getMaxEnergyStore() * 0.2 ? getEmitRate() : (int) ((mEnergy / (getMaxEnergyStore() * 0.2f)) * getEmitRate()))*8;
-            if (timeRemains>0){
-                if(mRateCurrent<(float)mLastRecipe.mEUt){
-                    //Not Enough Energy
-                    mActivity.mActive = F;
-                    UT.Sounds.send(SFX.MC_FIZZ, this);
-                    timeRemains=mLastRecipe.mDuration;
-                    return;
-                }
-                double speed=(mRateCurrent/(float)mLastRecipe.mEUt);
-                if(timeRemains>=speed){
-                    mEnergy -= Math.abs(mRateCurrent);
-                    timeRemains-=speed;
-                    return;
-                } else {
-                    //Done One Recipe
-                    mEnergy -= Math.abs(mRateCurrent*(timeRemains/speed));
-                    timeRemains=0.0F;
-                    mTanks[1].fill(mLastRecipe.mFluidOutputs[0]);
-                    mActivity.mActive = F;
-                }
-            }
-            Recipe tRecipe = mRecipes.findRecipe(this, mLastRecipe, T, Long.MAX_VALUE, NI, mTanks, ZL_IS);
-            if (tRecipe == null||tRecipe.mFluidInputs.length != 1||tRecipe.mFluidOutputs.length != 1||tRecipe.mEUt>mRateCurrent){
-                mLastRecipe=null;
-                mActivity.mActive = F;
-                return;
-            }
-            if(!mTanks[1].canFillAll(tRecipe.mFluidOutputs[0]))return;
-            if (tRecipe.isRecipeInputEqual(T, T, mTanks, ZL_IS)) {
-                mActivity.mActive = T;
-                timeRemains=tRecipe.mDuration;
-                mLastRecipe = tRecipe;
-            }
-        }
-    }
-    @Override
-    public boolean onTickCheck(long aTimer) {
-        if (aTimer%60==0){
-            clickDoubleCheck=false;
-            mTemperature= (int) getTemperature();
-        }
-        return super.onTickCheck(aTimer);
     }
 
+    @Override
+    public long getHotLiquidRecipeRate() {
+        return getMaxEmitRate()*36;//9 block output and 4* faster
+    }
     public void overheat() {
         for (int x = -2; x < machineX-2; x++)for(int z=0;z<machineZ;z++)for(int y=0;y<machineY+1;y++)worldObj.setBlock(utils.getRealX(mFacing,xCoord,x,z),yCoord+y,utils.getRealZ(mFacing,zCoord,x,z), Blocks.flowing_lava);
     }
-    public int getEmitRate(){
-        return mStructureOkay ? (int) (maxEmitRatePerLayer * machineY) : 0;
-    }
-    public long getMaxEnergyStore(){
+
+    @Override
+    public long getCapacity() {
         return mStructureOkay?maxEnergyStorePerLayer * machineY +10000000 :10000000;
     }
-    @Override
-    public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
-        if (aTool.equals(TOOL_thermometer)) aChatReturn.add("Temperature: " + getTemperature()+"/"+(961+DEFAULT_ENVIRONMENT_TEMPERATURE)+"K");
-        if (aTool.equals(TOOL_magnifyingglass)){
-            if(mTanks[0].getFluid()!=null)aChatReturn.add("Tanks: " + mTanks[0].getFluid().getUnlocalizedName()+":"+mTanks[0].getFluid().amount);
-            if(mTanks[0].getFluid()!=null&&mTanks[1].getFluid()!=null)aChatReturn.add("Tanks: " + mTanks[0].getFluid().getUnlocalizedName()+":"+mTanks[0].getFluid().amount+"/"+mTanks[1].getFluid().getUnlocalizedName()+":"+mTanks[1].getFluid().amount);
-        }
-        if (aTool.equals(TOOL_screwdriver)) {
-            workingMode= (short) (workingMode==0?1:0);
-            aChatReturn.add(LH.Chat.ORANGE+"Working Mode:"+(workingMode==0?"Direct HU":"Hot Liquid"));
-        }
-        return super.onToolClick2(aTool, aRemainingDurability, aQuality, aPlayer, aChatReturn, aPlayerInventory, aSneaking, aStack, aSide, aHitX, aHitY, aHitZ);
+
+    public long getEmitRate(){
+        return mEnergyStored > getCapacity() * 0.2 ? getMaxEmitRate() : (int) ((mEnergyStored / (getCapacity() * 0.2f)) * getMaxEmitRate());
+    }
+    public long getMaxEmitRate(){
+        return mStructureOkay ?(maxEmitRatePerLayer * machineY) : 0;
     }
 
-    public float getTemperature(){return ((float)mEnergy/(float)getMaxEnergyStore() *961)+DEFAULT_ENVIRONMENT_TEMPERATURE;}
+    public float getTemperature(){return ((float)mEnergyStored/(float)getCapacity() *961)+DEFAULT_ENVIRONMENT_TEMPERATURE;}
     @Override
     public boolean isInsideStructure(int aX, int aY, int aZ) {return true;}
-    @Override protected IFluidTank[] getFluidTanks(MultiTileEntityMultiBlockPart aPart, byte aSide) {return mTanks;}
-    @Override
-    public IFluidTank getFluidTankFillable2(byte aSide, FluidStack aFluidToFill) {
-        return mTanks[0];
-    }
-    @Override
-    public IFluidTank getFluidTankDrainable2(byte aSide, FluidStack aFluidToDrain) {
-        if (!mActivity.mActive && !mTanks[1].isEmpty()) return mTanks[1];
-        return null;
-    }
-    @Override public boolean isEnergyType(TagData aEnergyType, byte aSide, boolean aEmitting) {
-        return aEmitting && aEnergyType == mEnergyTypeEmitted;}
+
     public boolean isEnergyAcceptingFrom(TagData aEnergyType, byte aSide, boolean aTheoretical) {return aEnergyType==TD.Energy.HU&&aSide==SIDE_BOTTOM&&mStructureOkay;}
-    @Override public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {if (aDoInject) mEnergy += (aAmount * aSize); return aAmount;}
+
+    @Override public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {if (aDoInject) mEnergyStored += (aAmount * aSize); return aAmount;}
 
     @Override public boolean isEnergyEmittingTo(TagData aEnergyType, byte aSide, boolean aTheoretical) {
         return aSide == SIDE_TOP && super.isEnergyEmittingTo(aEnergyType, aSide, aTheoretical);}
     @Override public long getEnergyOffered(TagData aEnergyType, byte aSide, long aSize) {
-        return Math.min(mRate, mEnergy);}
-    @Override public long getEnergySizeOutputRecommended(TagData aEnergyType, byte aSide) {return mRate;}
-    @Override public long getEnergySizeOutputMin(TagData aEnergyType, byte aSide) {return mRate;}
-    @Override public long getEnergySizeOutputMax(TagData aEnergyType, byte aSide) {return mRate;}
+        return Math.min(mRate, mEnergyStored);
+    }
+    @Override public long getEnergySizeOutputRecommended(TagData aEnergyType, byte aSide) {return maxEmitRatePerLayer;}
+    @Override public long getEnergySizeOutputMin(TagData aEnergyType, byte aSide) {return maxEmitRatePerLayer;}
+    @Override public long getEnergySizeOutputMax(TagData aEnergyType, byte aSide) {return maxEmitRatePerLayer*machineYmax;}
     @Override public Collection<TagData> getEnergyTypes(byte aSide) {return mEnergyTypeEmitted.AS_LIST;}
-
-
 }

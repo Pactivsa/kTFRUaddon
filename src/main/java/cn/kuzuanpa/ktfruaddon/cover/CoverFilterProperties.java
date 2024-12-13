@@ -16,8 +16,8 @@
 
 package cn.kuzuanpa.ktfruaddon.cover;
 
-import cn.kuzuanpa.ktfruaddon.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import gregapi.code.TagData;
 import gregapi.cover.CoverData;
 import gregapi.cover.covers.AbstractCoverAttachment;

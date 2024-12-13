@@ -14,12 +14,12 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.machine;
 
-import cn.kuzuanpa.ktfruaddon.client.render.FxRenderBlockOutline;
-import cn.kuzuanpa.ktfruaddon.code.IOreScanner;
-import cn.kuzuanpa.ktfruaddon.code.OreScanner;
-import cn.kuzuanpa.ktfruaddon.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
-import cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT;
+import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
+import cn.kuzuanpa.ktfruaddon.api.code.IOreScanner;
+import cn.kuzuanpa.ktfruaddon.api.code.OreScanner;
+import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import codechicken.lib.vec.BlockCoord;
 import cpw.mods.fml.common.Optional;
 import gregapi.block.multitileentity.IMultiTileEntity;
@@ -58,9 +58,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static gregapi.data.CS.*;
-import static cn.kuzuanpa.ktfruaddon.code.OreScanner.*;
+import static cn.kuzuanpa.ktfruaddon.api.code.OreScanner.*;
 
-@Optional.Interface(iface = "vazkii.botania.api.mana.IManaReceiver", modid = "botania")
+@Optional.Interface(iface = "vazkii.botania.api.mana.IManaReceiver", modid = "Botania")
 public class TileOreScanner extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IMultiTileEntity.IMTE_SyncDataByteArray, IOreScanner, IManaReceiver {
     public static IIconContainer mTextureMaterial, mTextureFront, mTextureFrontActive, mTextureFrontFinished;
     public static final byte STATE_IDLE = 0, STATE_RUNNING = 1, STATE_FINISHED = 2;
@@ -424,6 +424,7 @@ public class TileOreScanner extends TileEntityBase09FacingSingle implements ITil
     @Override
     public void recieveMana(int i) {
         if(i <= 32767) mana+= (short) i;
+        else mana = 32767;
     }
 
     @Override

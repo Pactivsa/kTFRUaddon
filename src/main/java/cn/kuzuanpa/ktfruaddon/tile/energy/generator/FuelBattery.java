@@ -14,8 +14,8 @@
  */
 package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;
 import gregapi.data.FL;

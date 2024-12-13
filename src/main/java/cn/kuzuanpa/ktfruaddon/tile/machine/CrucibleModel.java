@@ -16,8 +16,8 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.machine;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
-import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
 import com.bioxx.tfc.api.TileEntities.IHeatAccepter;
 import com.bioxx.tfc.api.TileEntities.IHeater;
 import cpw.mods.fml.common.Optional;
@@ -44,9 +44,8 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 
 import java.util.List;
-import java.util.Objects;
 
-import static cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT.CRUCIBLE_MODEL_TIMER;
+import static cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT.CRUCIBLE_MODEL_TIMER;
 import static gregapi.data.CS.*;
 
 @Optional.Interface(iface = "com.bioxx.tfc.api.TileEntities.IHeatAccepter", modid = "terrafirmacraft")

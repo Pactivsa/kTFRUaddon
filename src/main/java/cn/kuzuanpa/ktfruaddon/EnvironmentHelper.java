@@ -43,7 +43,7 @@ public class EnvironmentHelper {
         try {if(com.brandon3055.draconicevolution.TFRUEnvHelper.isModTFRU)isDraconicEvolutionTFRU = true;}catch (Throwable e){isDraconicEvolutionTFRU = false;}
         try {if(                         forestry.TFRUEnvHelper.isModTFRU)isForestryTFRU          = true;}catch (Throwable e){isForestryTFRU          = false;}
 
-        isInTFRU = isGregtechTFRU&&isAdvancedRocketryTFRU&&isTFCTFRU&&isBotaniaTFRU&&isDraconicEvolutionTFRU&&isForestryTFRU;
+        isInTFRU = isGregtechTFRU&&isAdvancedRocketryTFRU&&isTFCTFRU&&isBotaniaTFRU&&isDraconicEvolutionTFRU&&isForestryTFRU&&Loader.isModLoaded("tfc-mixin");
 
         if(!isInTFRU)return;
         try {                        gregtech.TFRUEnvHelper.isInTFRU=true;

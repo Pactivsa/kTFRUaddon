@@ -15,9 +15,9 @@
 
 package cn.kuzuanpa.ktfruaddon.client.gui.computerCluster;
 
-import cn.kuzuanpa.ktfruaddon.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.tile.computerCluster.ComputerClusterClientData;
-import cn.kuzuanpa.ktfruaddon.tile.computerCluster.IComputerClusterController;
+import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.IComputerClusterController;
 import cpw.mods.fml.common.FMLLog;
 import gregapi.gui.ContainerCommon;
 import gregapi.gui.Slot_Render;

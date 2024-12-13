@@ -14,11 +14,11 @@
  */
 package cn.kuzuanpa.ktfruaddon.tile.computerCluster;
 
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.*;
 import cn.kuzuanpa.ktfruaddon.client.gui.computerCluster.ContainerClientClusterController;
 import cn.kuzuanpa.ktfruaddon.client.gui.computerCluster.ContainerCommonClusterController;
-import cn.kuzuanpa.ktfruaddon.code.SingleEntry;
-import cn.kuzuanpa.ktfruaddon.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.code.SingleEntry;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import codechicken.lib.vec.BlockCoord;
 import gregapi.data.LH;
 import gregapi.render.ITexture;
@@ -40,8 +40,8 @@ import net.minecraftforge.common.DimensionManager;
 
 import java.util.*;
 
-import static cn.kuzuanpa.ktfruaddon.tile.computerCluster.Constants.STATE_NORMAL;
-import static cn.kuzuanpa.ktfruaddon.tile.computerCluster.Constants.STATE_OFFLINE;
+import static cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.Constants.STATE_NORMAL;
+import static cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.Constants.STATE_OFFLINE;
 import static gregapi.data.CS.*;
 
 public class TestController extends TileEntityBase07Paintable implements IComputerClusterController {

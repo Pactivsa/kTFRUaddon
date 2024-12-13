@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 
-import cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import gregapi.GT_API;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;

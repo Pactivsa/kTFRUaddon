@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.energy.storage;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;
 import gregapi.data.LH;

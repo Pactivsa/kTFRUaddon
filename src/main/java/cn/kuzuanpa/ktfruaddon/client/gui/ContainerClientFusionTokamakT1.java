@@ -16,8 +16,8 @@
 package cn.kuzuanpa.ktfruaddon.client.gui;
 
 import cn.kuzuanpa.ktfruaddon.client.gui.button.CommonGuiButton;
-import cn.kuzuanpa.ktfruaddon.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.i18n.texts.kUserInterface;
+import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.kUserInterface;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -16,9 +16,9 @@
 
 package cn.kuzuanpa.ktfruaddon.recipe.recipe;
 
-import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
-import cn.kuzuanpa.ktfruaddon.material.matList;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.material.matList;
+import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.*;
 import gregapi.oredict.OreDictMaterial;

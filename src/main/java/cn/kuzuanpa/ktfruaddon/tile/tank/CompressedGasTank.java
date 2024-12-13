@@ -16,7 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.tank;
 
-import cn.kuzuanpa.ktfruaddon.tile.ICompressGasTank;
+import cn.kuzuanpa.ktfruaddon.api.tile.ICompressGasTank;
 import gregapi.data.FL;
 import gregtech.tileentity.tanks.MultiTileEntityBarrelMetal;
 import net.minecraft.item.ItemStack;

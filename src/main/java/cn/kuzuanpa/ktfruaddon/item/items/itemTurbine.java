@@ -16,7 +16,8 @@
 
 package cn.kuzuanpa.ktfruaddon.item.items;
 
-import cn.kuzuanpa.ktfruaddon.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.item.items.itemPrefixWithTooltip;
 import gregapi.code.ModData;
 import gregapi.data.LH;
 import gregapi.oredict.OreDictMaterial;

@@ -15,10 +15,10 @@
 
 package cn.kuzuanpa.ktfruaddon.tile;
 
-import cn.kuzuanpa.ktfruaddon.item.util.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
 import cn.kuzuanpa.ktfruaddon.ktfruaddon;
-import cn.kuzuanpa.ktfruaddon.material.matList;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.material.matList;
+import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import cn.kuzuanpa.ktfruaddon.tile.casing.rustBronzeCasing;
 import cn.kuzuanpa.ktfruaddon.tile.computerCluster.TestController;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.DebugGenerator;
@@ -26,7 +26,6 @@ import cn.kuzuanpa.ktfruaddon.tile.energy.generator.FuelBattery;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.ManualGenerator;
 import cn.kuzuanpa.ktfruaddon.tile.energy.storage.FlywheelBox;
 import cn.kuzuanpa.ktfruaddon.tile.energy.storage.FlywheelBoxElec;
-import cn.kuzuanpa.ktfruaddon.tile.energy.storage.FuelDeburner;
 import cn.kuzuanpa.ktfruaddon.tile.machine.*;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.*;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator.MultiTileEntityLargeTurbineGas;
@@ -37,7 +36,7 @@ import cn.kuzuanpa.ktfruaddon.tile.multiblock.model.CNCMachine3;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.*;
 import cn.kuzuanpa.ktfruaddon.tile.space.dysonSphere.dysonSphereMonitor;
 import cn.kuzuanpa.ktfruaddon.tile.tank.CompressedGasTank;
-import cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import gregapi.block.multitileentity.MultiTileEntityBlock;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
@@ -64,8 +63,8 @@ import vazkii.botania.common.lib.LibOreDict;
 import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.isBotaniaTFRU;
 import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.isGregtechTFRU;
 import static cn.kuzuanpa.ktfruaddon.ktfruaddon.MOD_ID;
-import static cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT.LOSS_PERCENT;
-import static cn.kuzuanpa.ktfruaddon.tile.util.kTileNBT.MAX_AMPERE;
+import static cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT.LOSS_PERCENT;
+import static cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT.MAX_AMPERE;
 import static gregapi.data.CS.*;
 import static gregapi.util.CR.DEF;
 

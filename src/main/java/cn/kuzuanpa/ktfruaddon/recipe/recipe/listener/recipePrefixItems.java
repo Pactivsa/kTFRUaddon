@@ -17,8 +17,8 @@
 
 package cn.kuzuanpa.ktfruaddon.recipe.recipe.listener;
 
-import cn.kuzuanpa.ktfruaddon.material.prefix.prefixList;
-import cn.kuzuanpa.ktfruaddon.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.material.prefix.prefixList;
+import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.code.ICondition;
 import gregapi.data.FL;
 import gregapi.data.MT;
