@@ -16,6 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.client;
 
+import cn.kuzuanpa.ktfruaddon.ktfruaddon;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.block.multitileentity.MultiTileEntityContainer;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
@@ -33,7 +34,7 @@ public class kTFRUAddonARProjectorRegister implements IDummyMultiBlockRegisterer
     public List<DummyTileMultiBlock> dummyStructures = new ArrayList<>();
     public kTFRUAddonARProjectorRegister(){
         g = MultiTileEntityRegistry.getRegistry("gt.multitileentity");
-        k = MultiTileEntityRegistry.getRegistry("ktfru.multitileentity");
+        k = ktfruaddon.kTileRegistry0;
     }
     public static BlockMeta tile(MultiTileEntityRegistry registry,int id){
         MultiTileEntityContainer container = registry.getNewTileEntityContainer(id, new NBTTagCompound());
