@@ -25,7 +25,7 @@ import cn.kuzuanpa.kGuiLib.client.objects.gui.CommonTexturedButton;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.Text;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
-import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerPower;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
@@ -40,7 +40,7 @@ public class ScreenControllerDetail extends kGuiScreenContainerLayerBase {
     protected Text stateTextButton  = null, stateInfo0Button= null, stateInfo1Button= null, stateInfo2Button= null, stateInfo3Button = null, controllerCountButton= null, clientCountButton     = null;
     protected ButtonList controllerEventListButton = null;
 
-    protected ComputerPower computing =ComputerPower.Normal;
+    protected ComputePower computing = ComputePower.Normal;
     protected byte controllerState = 0;
     protected long controllerProviding = 0,clusterTotal=0;
 
@@ -54,7 +54,7 @@ public class ScreenControllerDetail extends kGuiScreenContainerLayerBase {
 
     public ScreenControllerDetail updateController(byte controllerState, byte computing, long controllerProviding, long clusterTotal, byte[] events){
         this.controllerState =controllerState;
-        this.computing=ComputerPower.getType(computing);
+        this.computing= ComputePower.getType(computing);
         this.controllerProviding=controllerProviding;
         this.clusterTotal=clusterTotal;
         syncStateButton();
@@ -135,7 +135,7 @@ public class ScreenControllerDetail extends kGuiScreenContainerLayerBase {
 
     public class ControllerOverviewChartButton extends ThinkerButtonBase {
         public ControllerOverviewChartButton(int id, int xPos, int yPos, int width, int heightPerBar) {
-            super(id, xPos, yPos, width, heightPerBar* ComputerPower.values().length, "");
+            super(id, xPos, yPos, width, heightPerBar* ComputePower.values().length, "");
             setAnimatedInFBO(true);
             this.heightPerBar = heightPerBar;
         }

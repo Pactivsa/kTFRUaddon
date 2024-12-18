@@ -15,12 +15,10 @@
 package cn.kuzuanpa.ktfruaddon.tile.energy.storage;
 
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.tile.IReversibleReactionVessel;
 import gregapi.code.TagData;
 import gregapi.data.LH;
 import gregapi.data.TD;
-import gregapi.fluid.FluidTankGT;
-import gregapi.oredict.OreDictManager;
-import gregapi.oredict.OreDictMaterialStack;
 import gregapi.tileentity.data.ITileEntityTemperature;
 import gregapi.tileentity.machines.MultiTileEntityBasicMachine;
 import net.minecraft.entity.Entity;
@@ -32,21 +30,18 @@ import java.util.List;
 
 import static gregapi.data.CS.*;
 
-public class FuelDeburner extends MultiTileEntityBasicMachine implements ITileEntityTemperature {
+public class FuelDeburner extends MultiTileEntityBasicMachine implements IReversibleReactionVessel, ITileEntityTemperature {
 
     public TagData mEnergyTypeHeated = TD.Energy.HU;
-    public long mTempMax = Integer.MAX_VALUE, mMassTotal=1,mMassSelf=1,maxStrictEUt=1024,mMassLast=1;
+    public long mTempMax = Integer.MAX_VALUE, mMass =1,mMassSelf=1,maxStrictEUt=1024;
     public float mTemp = C, recipeBestTemp= C, recipeFactor = 0.1F;
-    public static final int HUPerMassTemp = 10;
     @Override
     public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
         if (mStopped) return 0;
         boolean tPositive = (aSize > 0);
         aSize = Math.abs(aSize);
         if (aEnergyType == mEnergyTypeHeated) {
-            if (aDoInject) mTemp += (aSize * aAmount)*64F/mMassTotal;
-            this.receivedEnergy.add(new MeterData(aEnergyType,aSize, aAmount));
-            return aAmount;
+            this.receivedEnergy.add(new MeterData(aEnergyType, aSize, onHeat(aSize, aAmount, aDoInject)));
         }
         if (aEnergyType == mEnergyTypeAccepted) {
             if(aDoInject && aSize > getEnergySizeInputMax(aEnergyType, aSide))overcharge(aSide,aEnergyType);
@@ -64,7 +59,7 @@ public class FuelDeburner extends MultiTileEntityBasicMachine implements ITileEn
         super.readFromNBT2(aNBT);
         mSpecialIsStartEnergy=false;
         if (aNBT.hasKey(NBT_ENERGY_ACCEPTED_2)) mEnergyTypeHeated = TagData.createTagData(aNBT.getString(NBT_ENERGY_ACCEPTED_2));
-        if (aNBT.hasKey("ktfru.nbt.massSelf")) mMassTotal = mMassSelf = aNBT.getLong("ktfru.nbt.massSelf");
+        if (aNBT.hasKey("ktfru.nbt.massSelf")) mMass = mMassSelf = aNBT.getLong("ktfru.nbt.massSelf");
         if (aNBT.hasKey(NBT_TEMPERATURE+".max")) mTempMax = aNBT.getLong(NBT_TEMPERATURE+".max");
 
         if (aNBT.hasKey(NBT_TEMPERATURE)) mTemp = aNBT.getFloat(NBT_TEMPERATURE);
@@ -88,33 +83,15 @@ public class FuelDeburner extends MultiTileEntityBasicMachine implements ITileEn
     @Override
     public void onTick2(long aTimer, boolean aIsServerSide) {
         if(mInventoryChanged){
-            updateMass();
+            updateMass(this, mTanksInput);
         }
+        //Natural Cooldown
+        cooldown(Math.min(10F*Math.abs(mTemp-C)/ mMass, Math.abs(mTemp-C)));
         super.onTick2(aTimer, aIsServerSide);
     }
-
-    public void updateMass(){
-        mMassLast = mMassTotal;
-        mMassTotal = mMassSelf;
-        for (int i = 0; i < invsize(); i++) {
-            if(!slotHas(i) || OreDictManager.INSTANCE.getItemData(slot(i)) == null)continue;
-            mMassTotal += (long) OreDictManager.INSTANCE.getItemData(slot(i)).getAllMaterialStacks().stream().mapToDouble(OreDictMaterialStack::weight).sum();
-        }
-        for (FluidTankGT tankGT:mTanksInput) {
-            if(tankGT==null || tankGT.isEmpty())continue;
-            mMassTotal += tankGT.fluid().getDensity()* tankGT.amount()/1000 ;
-        }
-        if(mMassLast<mMassTotal) {
-            float deltaTemp = mTemp - C;
-            cooldown( mTemp-(deltaTemp*mMassLast/mMassTotal+C));
-        }
-    }
-
     @Override
     public boolean doActive(long aTimer, long aEnergy) {
-        if(mTemp > mTempMax)overcharge(mInputMax,TD.Energy.HU);
-        //Natural Cooldown
-        cooldown(Math.min(10F*Math.abs(mTemp-C)/mMassTotal, Math.abs(mTemp-C)));
+        if(mTemp > mTempMax)overcharge(mInputMax,mEnergyTypeHeated);
 
         //Promote extra progress when Temp is Suitable, and if not suitable decreases the progress
         if (mMaxProgress > 0 && !(mSpecialIsStartEnergy && mChargeRequirement > 0) && mProgress <= mMaxProgress) {
@@ -128,26 +105,10 @@ public class FuelDeburner extends MultiTileEntityBasicMachine implements ITileEn
     @Override
     public int checkRecipe(boolean aApplyRecipe, boolean aUseAutoIO) {
         int i = super.checkRecipe(aApplyRecipe, aUseAutoIO);
-
         if(mCurrentRecipe!=null) {
-            updateMass();
-            recipeBestTemp = mCurrentRecipe.mSpecialValue;
-            recipeFactor = 20.1F-20*Math.min(1F, mCurrentRecipe.mEUt*1F/maxStrictEUt);
+            onRecipeFound(this,mTanksInput,mCurrentRecipe);
         }
         return i;
-    }
-
-    public void cooldown(float value){
-        if(Math.abs(mTemp-C)< value){
-            mTemp=C;
-            return;
-        }
-        value=Math.abs(value);
-        mTemp -= mTemp>C ? value: -value;
-    }
-    public float getTempFactor() {
-        float delta = Math.abs(mTemp - recipeBestTemp);
-        return Math.min(128, ((256*recipeFactor / (float)Math.sqrt(delta)) - (float) Math.pow(delta, 1.5F) / recipeFactor )/recipeFactor);
     }
 
     @Override
@@ -155,13 +116,16 @@ public class FuelDeburner extends MultiTileEntityBasicMachine implements ITileEn
         return "ktfru.multitileentity.energy.fueldeburner";
     }
 
-    @Override
-    public long getTemperatureValue(byte aSide) {
-        return (long) mTemp;
-    }
-
-    @Override
-    public long getTemperatureMax(byte aSide) {
-        return mTempMax;
-    }
+    @Override public long getTemperatureValue(byte aSide) {return (long) mTemp;}
+    @Override public long getTemperatureMax(byte aSide) {return mTempMax;}
+    @Override public void setTemp(float temp) {mTemp = temp;}
+    @Override public float getTemp() {return mTemp;}
+    @Override public float getRecipeBestTemp() {return recipeBestTemp;}
+    @Override public void setRecipeBestTemp(float temp) {recipeBestTemp = temp;}
+    @Override public float getRecipeFactor() {return recipeFactor;}
+    @Override public void setRecipeFactor(float factor) {recipeFactor=factor;}
+    @Override public long getMass() {return mMass;}
+    @Override public void setMass(long mass) {mMass=mass;}
+    @Override public long getMassSelf() {return mMassSelf;}
+    @Override public long getStrictestEUt() {return maxStrictEUt;}
 }

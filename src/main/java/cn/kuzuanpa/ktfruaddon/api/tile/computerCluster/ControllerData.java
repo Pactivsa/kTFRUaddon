@@ -43,7 +43,7 @@ public class ControllerData{
     public World world;
     public BlockCoord pos;
     public byte state;
-    public Map.Entry<ComputerPower, Long> power = new SingleEntry<>(ComputerPower.Normal, 0L);
+    public Map.Entry<ComputePower, Long> power = new SingleEntry<>(ComputePower.Normal, 0L);
     public boolean needToSendToClient = false;
     public Queue<Byte> events = new ArrayDeque<>();
     public ControllerData(World world, BlockCoord pos){this.world=world;this.pos=pos;}
@@ -109,7 +109,7 @@ public class ControllerData{
         bais.close();
         ControllerData data = new ControllerData(DimensionManager.getWorld(worldID),new BlockCoord(posX,posY,posZ));
         data.state=state;
-        data.power = new SingleEntry<>(ComputerPower.getType(powerType),powerAmount);
+        data.power = new SingleEntry<>(ComputePower.getType(powerType),powerAmount);
         return data;
     }
 }

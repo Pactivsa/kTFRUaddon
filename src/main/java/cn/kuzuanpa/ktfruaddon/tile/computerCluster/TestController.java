@@ -209,8 +209,8 @@ public class TestController extends TileEntityBase07Paintable implements IComput
     }
 
     @Override
-    public Map.Entry<ComputerPower, Long> getComputePower() {
-        return new SingleEntry<>(ComputerPower.Normal, 1000L);
+    public Map.Entry<ComputePower, Long> getComputePower() {
+        return new SingleEntry<>(ComputePower.Normal, 1000L);
     }
 
     @Override

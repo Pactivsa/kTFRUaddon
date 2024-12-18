@@ -18,6 +18,7 @@ package cn.kuzuanpa.ktfruaddon;
 import cn.kuzuanpa.ktfruaddon.client.kTFRUAddonARProjectorRegister;
 import cn.kuzuanpa.ktfruaddon.api.fluid.fluidPreInit;
 import cn.kuzuanpa.ktfruaddon.api.i18n.i18nPostInit;
+import cn.kuzuanpa.ktfruaddon.item.ItemPostInit;
 import cn.kuzuanpa.ktfruaddon.item.itemPreInit;
 import cn.kuzuanpa.ktfruaddon.loot.lootPostInit;
 import cn.kuzuanpa.ktfruaddon.api.material.materialPreInit;
@@ -67,6 +68,7 @@ public class commonProxy extends Abstract_Proxy {
         new i18nPostInit(aEvent);
         recipeInit.init(aEvent);
         lootPostInit.init(aEvent);
+        ItemPostInit.init(aEvent);
 
     }
 

@@ -124,11 +124,11 @@ public class ComputerClusterClientData {
         public byte clusterState;
         public int controllerCount;
         public int clientCount;
-        public Map<ComputerPower, Long> availPowers;
-        public Map<ComputerPower, Long> usedPowers;
+        public Map<ComputePower, Long> availPowers;
+        public Map<ComputePower, Long> usedPowers;
         public byte[] events;
 
-        public ClusterDetail(byte clusterState, int controllerCount, int clientCount, Map<ComputerPower, Long> availPowers, Map<ComputerPower, Long> usedPowers, byte[] events) {
+        public ClusterDetail(byte clusterState, int controllerCount, int clientCount, Map<ComputePower, Long> availPowers, Map<ComputePower, Long> usedPowers, byte[] events) {
             this.clusterState = clusterState;
             this.controllerCount = controllerCount;
             this.clientCount = clientCount;
@@ -136,7 +136,7 @@ public class ComputerClusterClientData {
             this.usedPowers = usedPowers;
             this.events = events;
         }
-        public ClusterDetail(byte clusterState, int controllerCount, int clientCount, Map<ComputerPower, Long> availPowers, Map<ComputerPower, Long> usedPowers, Object[] events) {
+        public ClusterDetail(byte clusterState, int controllerCount, int clientCount, Map<ComputePower, Long> availPowers, Map<ComputePower, Long> usedPowers, Object[] events) {
             this.clusterState = clusterState;
             this.controllerCount = controllerCount;
             this.clientCount = clientCount;
@@ -161,14 +161,14 @@ public class ComputerClusterClientData {
 
             //availPowers
             dos.writeInt(detail.availPowers.size());
-            for (Map.Entry<ComputerPower, Long> entry : detail.availPowers.entrySet()) {
+            for (Map.Entry<ComputePower, Long> entry : detail.availPowers.entrySet()) {
                 dos.writeByte(entry.getKey().ordinal());
                 dos.writeLong(entry.getValue());
             }
 
             //usedPowers
             dos.writeInt(detail.usedPowers.size());
-            for (Map.Entry<ComputerPower, Long> entry : detail.usedPowers.entrySet()) {
+            for (Map.Entry<ComputePower, Long> entry : detail.usedPowers.entrySet()) {
                 dos.writeByte(entry.getKey().ordinal());
                 dos.writeLong(entry.getValue());
             }
@@ -193,20 +193,20 @@ public class ComputerClusterClientData {
 
             //availPowers
             int availPowersSize = dis.readInt();
-            Map<ComputerPower, Long> availPowers = new HashMap<>();
+            Map<ComputePower, Long> availPowers = new HashMap<>();
             for (int i = 0; i < availPowersSize; i++) {
                 byte key = dis.readByte();
                 Long value = dis.readLong();
-                availPowers.put(ComputerPower.getType(key), value);
+                availPowers.put(ComputePower.getType(key), value);
             }
 
             //usedPowers
             int usedPowersSize = dis.readInt();
-            Map<ComputerPower, Long> usedPowers = new HashMap<>();
+            Map<ComputePower, Long> usedPowers = new HashMap<>();
             for (int i = 0; i < usedPowersSize; i++) {
                 byte key = dis.readByte();
                 Long value = dis.readLong();
-                usedPowers.put(ComputerPower.getType(key), value);
+                usedPowers.put(ComputePower.getType(key), value);
             }
 
             //events

@@ -27,7 +27,7 @@ import cn.kuzuanpa.kGuiLib.client.objects.gui.Text;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.kUserInterface;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
-import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerPower;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.Constants;
 import gregapi.data.LH;
 import net.minecraft.client.Minecraft;
@@ -50,15 +50,15 @@ public class ScreenClusterDetail extends kGuiScreenContainerLayerBase {
     protected byte clusterState  = 0;
     protected int  controllerCount  = 0,clientCount=0;
 
-    Map<ComputerPower,Long> clusterAvailPowers = new HashMap<>();
-    Map<ComputerPower,Long> clusterUsedPowers = new HashMap<>();
+    Map<ComputePower,Long> clusterAvailPowers = new HashMap<>();
+    Map<ComputePower,Long> clusterUsedPowers = new HashMap<>();
 
     public ScreenClusterDetail updateFromData(ComputerClusterClientData.ClusterDetail data){
         if(data == null)return this;
         updateCluster(data.clusterState,data.controllerCount,data.clientCount,data.availPowers,data.usedPowers,data.events);
         return this;
     }
-    public ScreenClusterDetail updateCluster(byte clusterState, int controllerCount, int clientCount, Map<ComputerPower,Long> availPowers, Map<ComputerPower,Long> usedPowers, byte[] events){
+    public ScreenClusterDetail updateCluster(byte clusterState, int controllerCount, int clientCount, Map<ComputePower,Long> availPowers, Map<ComputePower,Long> usedPowers, byte[] events){
         this.clusterState=clusterState;
         this.controllerCount=controllerCount;
         this.clientCount=clientCount;
@@ -146,12 +146,12 @@ public class ScreenClusterDetail extends kGuiScreenContainerLayerBase {
         int index =0;
         addOrUpdateTooltip(index++, new String[]{"Data plotted on a logarithmic scale"}, vector2-> (2<vector2.x&&vector2.x<166&& 99 < vector2.y && vector2.y <= 107));
 
-        for (ComputerPower computerPower : ComputerPower.values()){
-            if(clusterAvailPowers.get(computerPower)==null || clusterAvailPowers.get(computerPower)==0)continue;
-            addOrUpdateTooltip(index+ computerPower.ordinal(),
-                    new String[]{LH.get(kUserInterface.TYPE)+": "+LH.get(kUserInterface.COMPUTE_POWER+"."+ computerPower.ordinal()),
-                            "Avail: "+clusterAvailPowers.get(computerPower)+", Used: "+ clusterUsedPowers.getOrDefault(computerPower,0L)},
-                    vector2-> (2<vector2.x&&vector2.x<166&& 109+ 8*(computerPower.ordinal()) < vector2.y && vector2.y <= 121 + 8*(computerPower.ordinal())));
+        for (ComputePower computePower : ComputePower.values()){
+            if(clusterAvailPowers.get(computePower)==null || clusterAvailPowers.get(computePower)==0)continue;
+            addOrUpdateTooltip(index+ computePower.ordinal(),
+                    new String[]{LH.get(kUserInterface.TYPE)+": "+LH.get(kUserInterface.COMPUTE_POWER+"."+ computePower.ordinal()),
+                            "Avail: "+clusterAvailPowers.get(computePower)+", Used: "+ clusterUsedPowers.getOrDefault(computePower,0L)},
+                    vector2-> (2<vector2.x&&vector2.x<166&& 109+ 8*(computePower.ordinal()) < vector2.y && vector2.y <= 121 + 8*(computePower.ordinal())));
         }
 
     }
@@ -163,7 +163,7 @@ public class ScreenClusterDetail extends kGuiScreenContainerLayerBase {
 
     public class ClusterOverviewChartButton extends ThinkerButtonBase {
         public ClusterOverviewChartButton(int id, int xPos, int yPos, int width, int heightPerBar) {
-            super(id, xPos, yPos, width, heightPerBar*ComputerPower.values().length, "");
+            super(id, xPos, yPos, width, heightPerBar* ComputePower.values().length, "");
             this.heightPerBar = heightPerBar;
         }
 
@@ -180,18 +180,18 @@ public class ScreenClusterDetail extends kGuiScreenContainerLayerBase {
             AtomicLong longest = new AtomicLong();
             clusterAvailPowers.forEach((k,v)-> longest.set(Math.max(longest.get(), v)));
 
-            for (ComputerPower computerPower : ComputerPower.values()){
-                if(clusterAvailPowers.get(computerPower)==null)continue;
-                int color = computerPower.color;
+            for (ComputePower computePower : ComputePower.values()){
+                if(clusterAvailPowers.get(computePower)==null)continue;
+                int color = computePower.color;
 
-                int aWidth = (int) Math.max(1,(width * (Math.sqrt(clusterAvailPowers.get(computerPower))/Math.sqrt(longest.get()))));
+                int aWidth = (int) Math.max(1,(width * (Math.sqrt(clusterAvailPowers.get(computePower))/Math.sqrt(longest.get()))));
                 GL11.glColor3ub((byte) (0xff & color >> 16), (byte)(0xff & color >> 8) , (byte)(color & 0xff));
-                this.drawTexturedModalRect(xPosition,yPosition+ heightPerBar* computerPower.ordinal(), 0, 236, aWidth, heightPerBar);
+                this.drawTexturedModalRect(xPosition,yPosition+ heightPerBar* computePower.ordinal(), 0, 236, aWidth, heightPerBar);
 
-                long used = clusterUsedPowers.get(computerPower)==null?0:clusterUsedPowers.get(computerPower);
+                long used = clusterUsedPowers.get(computePower)==null?0:clusterUsedPowers.get(computePower);
                 int aWidthUsed = (int) Math.max(1,(width * (Math.sqrt(used)/Math.sqrt(longest.get()))));
                 GL11.glColor3ub((byte) ((0xff & color >> 16)*0.6F), (byte)((0xff & color >> 8)*0.6F) , (byte)((0xff & color)*0.6F));
-                this.drawTexturedModalRect(xPosition,yPosition+1+ heightPerBar* computerPower.ordinal(), 0, 236, aWidthUsed-1, heightPerBar-2);
+                this.drawTexturedModalRect(xPosition,yPosition+1+ heightPerBar* computePower.ordinal(), 0, 236, aWidthUsed-1, heightPerBar-2);
             }
         }
 

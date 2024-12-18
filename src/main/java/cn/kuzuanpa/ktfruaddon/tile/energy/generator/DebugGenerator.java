@@ -24,7 +24,7 @@ import gregapi.render.BlockTextureDefault;
 import gregapi.render.IIconContainer;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase09FacingSingle;
-import gregapi.tileentity.energy.IMeterDetectable;
+import cn.kuzuanpa.ktfruaddon.api.tile.IMeterDetectable;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.util.UT;
 import net.minecraft.block.Block;

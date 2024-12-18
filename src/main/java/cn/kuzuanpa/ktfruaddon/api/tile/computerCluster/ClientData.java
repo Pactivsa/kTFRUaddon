@@ -41,7 +41,7 @@ public class ClientData {
     public World world;
     public BlockCoord pos;
     public byte state;
-    public Map<ComputerPower, Long> consumingPower = new HashMap<>();
+    public Map<ComputePower, Long> consumingPower = new HashMap<>();
     public boolean needToSendToClient = false;
     public ClientData(World world, BlockCoord pos){this.world=world;this.pos=pos;}
 
@@ -80,8 +80,8 @@ public class ClientData {
             dos.writeInt(data.pos.z);
             dos.writeByte(data.state);
             dos.writeByte(data.consumingPower.size());
-            for (Map.Entry<ComputerPower, Long> entry : data.consumingPower.entrySet()) {
-                ComputerPower key = entry.getKey();
+            for (Map.Entry<ComputePower, Long> entry : data.consumingPower.entrySet()) {
+                ComputePower key = entry.getKey();
                 Long amount = entry.getValue();
                 dos.writeByte(key.ordinal());
                 dos.writeLong(amount);
@@ -103,9 +103,9 @@ public class ClientData {
         short posY = dis.readShort();
         int posZ = dis.readInt();
         byte state = dis.readByte();
-        Map<ComputerPower, Long> consumingPower = new HashMap<>();
+        Map<ComputePower, Long> consumingPower = new HashMap<>();
         for (int i = 0; i < dis.readByte(); i++) {
-            consumingPower.put(ComputerPower.getType(dis.readByte()), dis.readLong());
+            consumingPower.put(ComputePower.getType(dis.readByte()), dis.readLong());
         }
 
         dis.close();

@@ -45,8 +45,8 @@ import java.util.stream.Collectors;
 public class ComputerCluster {
     public Map<UUID, ControllerData> controllerList = new HashMap<>();
     public Map<UUID, ClientData> clientList = new HashMap<>();
-    public Map<ComputerPower, Long> totalComputePower = new HashMap<>();
-    public Map<ComputerPower, Long> usedComputePower = new HashMap<>();
+    public Map<ComputePower, Long> totalComputePower = new HashMap<>();
+    public Map<ComputePower, Long> usedComputePower = new HashMap<>();
     public Queue<Byte> events = new ArrayDeque<>();
 
     public long lastUpdateTime = -1;
@@ -68,7 +68,7 @@ public class ComputerCluster {
     public void update(){
         if(MinecraftServer.getServer().getTickCounter() <= lastUpdateTime)return;
         lastUpdateTime= MinecraftServer.getServer().getTickCounter();
-        Map<ComputerPower, Long> totalComputePowerMap = new HashMap<>();
+        Map<ComputePower, Long> totalComputePowerMap = new HashMap<>();
         controllerList.forEach((uuid,data) -> {
             ControllerData oldData = data.copy();
             updateControllerData(uuid,data,totalComputePowerMap);
@@ -77,7 +77,7 @@ public class ComputerCluster {
         totalComputePower = totalComputePowerMap;
     }
 
-    public void updateControllerData(UUID uuid, ControllerData data, Map<ComputerPower, Long> totalComputePowerMap){
+    public void updateControllerData(UUID uuid, ControllerData data, Map<ComputePower, Long> totalComputePowerMap){
         IComputerClusterController controller = getControllerFromData(data);
         if(controller == null){
             data.state = Constants.STATE_OFFLINE;

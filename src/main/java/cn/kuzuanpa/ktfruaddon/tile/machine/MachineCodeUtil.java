@@ -19,21 +19,31 @@ package cn.kuzuanpa.ktfruaddon.tile.machine;
 
 import cn.kuzuanpa.ktfruaddon.api.code.CodeTranslate;
 import cn.kuzuanpa.ktfruaddon.api.code.OreScanner;
+import cn.kuzuanpa.ktfruaddon.api.tile.ICircuitChangeableTileEntity;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
 import cpw.mods.fml.common.FMLLog;
 import gregapi.old.Textures;
 import gregapi.render.IIconContainer;
 import gregapi.tileentity.machines.MultiTileEntityBasicMachine;
 import net.minecraft.block.Block;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import org.apache.logging.log4j.Level;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import static gregapi.data.CS.PX_P;
 
-public class MachineCodeUtil extends MultiTileEntityBasicMachine {
+public class MachineCodeUtil extends MultiTileEntityBasicMachine implements ICircuitChangeableTileEntity {
     public OreScanner oreVeinScanner;
     public void readFromNBT2(NBTTagCompound aNBT) {
         super.readFromNBT2(aNBT);
+        loadCircuitInfo(aNBT);
        // oreVeinScanner = new OreScanner(0,xCoord,yCoord,zCoord, worldObj,true,true);
     }
 @Override
@@ -43,12 +53,20 @@ public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, 
         try {
             for (int i=0;i<this.ACCESSIBLE_SLOTS.length;i++) FMLLog.log(Level.FATAL,""+ CodeTranslate.itemToCode(slot(i)));
            // FMLLog.log(Level.FATAL,worldObj.getChunkFromChunkCoords(-28, 43).getBlock(5, 5,0).toString());
+            for (ItemStack computer : getComputers()) {
+                worldObj.spawnEntityInWorld(new EntityItem(worldObj,xCoord,yCoord + 2,zCoord,computer));
+            }
         }catch (Throwable ignored) {}
     }
     if(aPlayer.isSneaking()) oreVeinScanner.clearRendedOres();
     return false;
 }
     public void onTick2(long aTimer, boolean isServerside){
+
+        try{
+            NBTTagCompound tagCompound = new NBTTagCompound();
+            saveCircuitInfo(tagCompound);
+        }catch (Exception e){}
         //if(isServerside)oreVeinScanner.startOrContinueUpdateGTOre((WorldServer)worldObj);
         //if(!isServerside&&worldObj!=null)oreVeinScanner.startOrContinueScanOres();
         //if(!isServerSide()&&aTimer%100==0)oreVeinScanner.rendOres(-10);
@@ -76,4 +94,20 @@ public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, 
     public static IIconContainer
             sTextureCommon= new Textures.BlockIcons.CustomIcon("machines/cruciblemodel/common"),
             sTextureCommosn= new Textures.BlockIcons.CustomIcon("machines/cruciblemodel/commsson");
+
+    List<ItemStack> computerList = new ArrayList<>();
+    @Override
+    public @NotNull List<ItemStack> getComputers() {
+        return computerList;
+    }
+
+    @Override
+    public @NotNull Map<ComputePower, Long> getComputePowerRequired() {
+        return ComputePower.Normal.asMap(4000);
+    }
+
+    @Override
+    public void setComputers(List<ItemStack> computers) {
+        computerList = computers;
+    }
 }

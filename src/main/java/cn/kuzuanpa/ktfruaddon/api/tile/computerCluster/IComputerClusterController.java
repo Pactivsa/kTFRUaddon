@@ -44,7 +44,7 @@ public interface IComputerClusterController {
 
     void setUUID(UUID uuid);
     byte getState();
-    Map.Entry<ComputerPower,Long> getComputePower();
+    Map.Entry<ComputePower,Long> getComputePower();
     void notifyControllerEvent(short event);
     boolean setCluster(ComputerCluster cluster);
     ComputerCluster getCluster();

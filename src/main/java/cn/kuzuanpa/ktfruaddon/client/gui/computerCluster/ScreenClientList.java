@@ -26,7 +26,7 @@ import cn.kuzuanpa.kGuiLib.client.objects.gui.Text;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ClientData;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
-import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerPower;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
@@ -101,18 +101,18 @@ public class ScreenClientList extends kGuiScreenContainerLayerBase {
             this.drawTexturedModalRect(xPosition,yPosition,16*data.state,146,16,16);
             wrappedDrawStr(data.pos.toString()+" @Dim"+data.world.provider.dimensionId,xPosition+24,yPosition+3,0x000000);
 
-            for (int i = 0; i < ComputerPower.values().length; i++) {
-                if(data.consumingPower.get(ComputerPower.getType(i)) == null)continue;
+            for (int i = 0; i < ComputePower.values().length; i++) {
+                if(data.consumingPower.get(ComputePower.getType(i)) == null)continue;
 
                 mc.getTextureManager().bindTexture(background);
 
-                int color = ComputerPower.getType(i).color;
+                int color = ComputePower.getType(i).color;
 
                 GL11.glColor3ub((byte) (0xff & color >> 16), (byte)(0xff & color >> 8) , (byte)(color & 0xff));
-                this.drawTexturedModalRect(xPosition+width-94-(ComputerPower.values().length - i)*22,yPosition+1,0,236,8,8);
+                this.drawTexturedModalRect(xPosition+width-94-(ComputePower.values().length - i)*22,yPosition+1,0,236,8,8);
 
-                String str = getDisplayShortNum(data.consumingPower.get(ComputerPower.getType(i)), 1);
-                wrappedDrawStr(str ,xPosition+width-90-(ComputerPower.values().length - i)*22 - (fontRendererObj.getStringWidth(str)/2),yPosition+9,0x000000);
+                String str = getDisplayShortNum(data.consumingPower.get(ComputePower.getType(i)), 1);
+                wrappedDrawStr(str ,xPosition+width-90-(ComputePower.values().length - i)*22 - (fontRendererObj.getStringWidth(str)/2),yPosition+9,0x000000);
             }
         }
 

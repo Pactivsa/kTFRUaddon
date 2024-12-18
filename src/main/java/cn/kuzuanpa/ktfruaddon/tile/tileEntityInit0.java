@@ -16,6 +16,7 @@
 package cn.kuzuanpa.ktfruaddon.tile;
 
 import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
+import cn.kuzuanpa.ktfruaddon.api.tile.ICircuitChangeableTileEntity;
 import cn.kuzuanpa.ktfruaddon.ktfruaddon;
 import cn.kuzuanpa.ktfruaddon.api.material.matList;
 import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
@@ -431,7 +432,7 @@ public class tileEntityInit0 {
 
         aMat = MT.StainlessSteel;              kRegistry0.add("Compute Cluster Simple"     , "kTFRUAddon: Multiblock", 32006, 17200, MultiBlockPartComputeClusterSimple.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F, NBT_TEXTURE, "computerclustersimple"   , NBT_DESIGNS, 7));
         aMat = MT.StainlessSteel;              kRegistry0.add("Dyson Sphere Monitor"     , "kTFRUAddon: Multiblock", 32750, 17200, dysonSphereMonitor.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F, NBT_TEXTURE, "computercluster", NBT_INPUT, 3072, NBT_INPUT_MIN,    2048, NBT_INPUT_MAX,   4096  ,NBT_RECIPEMAP, recipeMaps.Code , NBT_ENERGY_ACCEPTED, TD.Energy.EU));
-        aMat = MT.StainlessSteel;              kRegistry0.add("Code Util Machine"     , "kTFRUAddon: Multiblock", 32760, 17200, MachineCodeUtil.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F, NBT_TEXTURE, "computercluster", NBT_INPUT, 3072, NBT_INPUT_MIN,    2048, NBT_INPUT_MAX,   4096  ,NBT_RECIPEMAP, recipeMaps.Code , NBT_ENERGY_ACCEPTED, TD.Energy.EU));
+        aMat = MT.StainlessSteel;              kRegistry0.add("Code Util Machine"     , "kTFRUAddon: Multiblock", 32760, 17200, MachineCodeUtil.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F, NBT_TEXTURE, "computercluster", NBT_INPUT, 3072, NBT_INPUT_MIN,    2048, NBT_INPUT_MAX,   4096  ,NBT_RECIPEMAP, recipeMaps.Code , NBT_ENERGY_ACCEPTED, TD.Energy.EU, "ktfru.circuits", ICircuitChangeableTileEntity.addCircuitInfo(1,1,3,3,2,2,1,2,1,3,1,4,1,5)));
         aMat = MT.Bronze;                      kRegistry0.add("Rust Bronze Machine Casing"     , "kTFRUAddon: Casing", 32761, 1230, rustBronzeCasing.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F));
         aMat = MT.Bronze;                      kRegistry0.add("DeRust Bronze Machine Casing"     , "kTFRUAddon: Casing", 32762, 1230, MultiTileEntityMultiBlockPart.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F,NBT_TEXTURE, "wall"));RM.Welder.addRecipe2(F,16,200,kRegistry0.getItem(32762,1),OP.plate.mat(MT.Bronze,1),ZL_FS,ZL_FS,OP.casingMachine.mat(MT.Bronze,1));
         aMat = MT.RedSteel;                    kRegistry0.add("Red Steel Crucible Model"     , "kTFRUAddon: Machines", 32763, 20001, CrucibleModel.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,   2.0F),"   "," M ","hPf",'P',OP.plate.mat(MT.RedSteel,1), 'M', ItemList.CrucibleModelInnerLayer.get(1));

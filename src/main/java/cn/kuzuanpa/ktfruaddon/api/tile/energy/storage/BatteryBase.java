@@ -38,7 +38,7 @@ import gregapi.gui.ContainerClientDefault;
 import gregapi.gui.ContainerCommonDefault;
 import gregapi.tileentity.base.TileEntityBase09FacingSingle;
 import gregapi.tileentity.data.ITileEntityProgress;
-import gregapi.tileentity.energy.IMeterDetectable;
+import cn.kuzuanpa.ktfruaddon.api.tile.IMeterDetectable;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.tileentity.energy.ITileEntityEnergyDataCapacitor;
 import gregapi.tileentity.machines.ITileEntityRunningActively;

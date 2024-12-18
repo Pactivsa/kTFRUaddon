@@ -28,14 +28,19 @@
  */
 package cn.kuzuanpa.ktfruaddon.api.tile.computerCluster;
 
-public enum ComputerPower {
+import cn.kuzuanpa.ktfruaddon.api.code.SingleEntry;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public enum ComputePower {
     Normal(0x33cce5), Biology(0x99e533), Quantum(0xb233cc), Spacetime(0x334ce5);
 
     public final int color;
-    ComputerPower(int color){
+    ComputePower(int color){
         this.color = color;
     }
-    public static ComputerPower getType(int ordinal){
+    public static ComputePower getType(int ordinal){
         switch (ordinal){
             case 0:return Normal;
             case 1:return Biology;
@@ -43,5 +48,13 @@ public enum ComputerPower {
             case 3:return Spacetime;
         }
         return Normal;
+    }
+    public Map.Entry<ComputePower, Long> asEntry(long amount){
+        return new SingleEntry<>(this, amount);
+    }
+    public Map<ComputePower, Long> asMap(long amount){
+        Map<ComputePower, Long> map = new HashMap<>();
+        map.put(this, amount);
+        return map;
     }
 }
