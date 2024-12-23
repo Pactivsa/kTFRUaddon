@@ -17,9 +17,12 @@
 package cn.kuzuanpa.ktfruaddon.recipe.recipe;
 
 import cn.kuzuanpa.ktfruaddon.api.fluid.flList;
+import cn.kuzuanpa.ktfruaddon.api.item.ItemList;
 import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.FL;
+import gregapi.util.ST;
+import net.minecraft.init.Items;
 
 import static gregapi.data.CS.ZL_IS;
 
@@ -34,5 +37,7 @@ public class FakeRecipe {
         recipeMaps.OilMiner.addRecipe1(false,false,true,false,true, 1, 1, kRegistry.getItem(30013), FL.Water.make(1), flList.AqueousOilNormal.make(1),ZL_IS);
         recipeMaps.OilMiner.addRecipe1(false,false,true,false,true, 1, 1, kRegistry.getItem(30013), FL.Water.make(1), flList.AqueousOilLight.make(1),ZL_IS);
         recipeMaps.OilMiner.addRecipe1(false,false,true,false,true, 1, 1, kRegistry.getItem(30013), FL.Air.make(1), FL.Gas_Natural.make(1),ZL_IS);
+
+        recipeMaps.CrucibleModel.addRecipe2(false, false,true,false,true,16,20, ItemList.CrucibleModelInnerLayer.get(0), ST.make(Items.clay_ball,7,0), gRegistry.getItem(1005));
     }
 }
