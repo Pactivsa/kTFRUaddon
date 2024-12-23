@@ -43,11 +43,18 @@ public class MachineCodeUtil extends MultiTileEntityBasicMachine implements ICir
     public OreScanner oreVeinScanner;
     public void readFromNBT2(NBTTagCompound aNBT) {
         super.readFromNBT2(aNBT);
-        loadCircuitInfo(aNBT);
+        setComputers(ICircuitChangeableTileEntity.loadCircuitInfo(aNBT));
        // oreVeinScanner = new OreScanner(0,xCoord,yCoord,zCoord, worldObj,true,true);
     }
-@Override
-public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
+
+    @Override
+    public void writeToNBT2(NBTTagCompound aNBT) {
+        super.writeToNBT2(aNBT);
+        ICircuitChangeableTileEntity.saveCircuitInfo(aNBT,getComputers());
+    }
+
+    @Override
+    public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
     if (isServerSide()) {
         openGUI(aPlayer, aSide);
         try {
@@ -61,15 +68,14 @@ public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, 
     if(aPlayer.isSneaking()) oreVeinScanner.clearRendedOres();
     return false;
 }
-    public void onTick2(long aTimer, boolean isServerside){
 
-        try{
-            NBTTagCompound tagCompound = new NBTTagCompound();
-            saveCircuitInfo(tagCompound);
-        }catch (Exception e){}
-        //if(isServerside)oreVeinScanner.startOrContinueUpdateGTOre((WorldServer)worldObj);
-        //if(!isServerside&&worldObj!=null)oreVeinScanner.startOrContinueScanOres();
-        //if(!isServerSide()&&aTimer%100==0)oreVeinScanner.rendOres(-10);
+    @Override
+    public NBTTagCompound writeItemNBT2(NBTTagCompound aNBT) {
+        ICircuitChangeableTileEntity.saveCircuitInfo(aNBT,getComputers());
+        return super.writeItemNBT2(aNBT);
+    }
+
+    public void onTick2(long aTimer, boolean isServerside){
 
     }
     public boolean setBlockBounds2(Block aBlock, int aRenderPass, boolean[] aShouldSideBeRendered) {
@@ -81,6 +87,12 @@ public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, 
         }
         return true;
     }
+    @Override
+    public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
+        super.addToolTips(aList, aStack, aF3_H);
+        addCircuitTooltip(aList, aStack, aF3_H);
+    }
+
     @Override
     public String getTileEntityName() {
         return "ktfru.multitileentity.machine.code";

@@ -93,4 +93,8 @@ public interface IComputerItem {
         if (aNBT.hasKey("tag")) rStack.setTagCompound(aNBT.getCompoundTag("tag"));
         return rStack;
     }
+
+    static String getDescOneLine(ItemStack stack){
+        return ComputePower.getDescOneLine(IComputerItem.getComputePower(stack));
+    }
 }

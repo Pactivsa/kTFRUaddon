@@ -74,6 +74,16 @@ public class i18nPostInit {
         LH.add(I18nHandler.FILTER_PROPERTIES_ALL,"All Properties: ");
         LH.add(I18nHandler.OVERCLOCKING,"Overclocking:");
 
+        LH.add(I18nHandler.COMPUTE_POWER, "Compute Power");
+        LH.add(I18nHandler.COMPUTE_POWER_NORMAL, "Normal");
+        LH.add(I18nHandler.COMPUTE_POWER_BIOLOGY, "Biology");
+        LH.add(I18nHandler.COMPUTE_POWER_QUANTUM, "Quantum");
+        LH.add(I18nHandler.COMPUTE_POWER_TIMESPACE, "TimeSpace");
+        LH.add(I18nHandler.COMPUTE_POWER_DESC,"%2$s U/t %1$s");
+        LH.add(I18nHandler.COMPUTE_TILE_EMPTY,"Don't have any Computer");
+        LH.add(I18nHandler.COMPUTE_TILE_COMPUTERS,"Computers: ");
+        LH.add(I18nHandler.COMPUTE_TILE_SHIFT_SHOW_COMPUTERS,"Hold [LSHIFT] to show computers");
+
         LH.add(kUserInterface.FUSION_TOKAMAK_STATE_STOPPED,"Stopped");
         LH.add(kUserInterface.FUSION_TOKAMAK_STATE_CHARGING,"Charging");
         LH.add(kUserInterface.FUSION_TOKAMAK_STATE_RUNNING,"Running");

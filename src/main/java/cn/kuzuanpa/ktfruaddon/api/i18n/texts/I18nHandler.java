@@ -46,6 +46,17 @@ public class I18nHandler {
     public static final String USB_ALREAY_HAVE_DATA ="ktfru.text.common.usb_have_data";
     public static final String HINT_NEED_MULTI_AMPERE_INPUT = "ktfru.text.common.hint.multi_ampere_input";
 
+    public static final String COMPUTE_POWER  = "ktfru.text.compute.power";
+    public static final String COMPUTE_POWER_NORMAL   = "ktfru.text.compute.power.0";
+    public static final String COMPUTE_POWER_BIOLOGY  = "ktfru.text.compute.power.1";
+    public static final String COMPUTE_POWER_QUANTUM  = "ktfru.text.compute.power.2";
+    public static final String COMPUTE_POWER_TIMESPACE= "ktfru.text.compute.power.3";
+    public static final String COMPUTE_COMPUTING  = "ktfru.text.compute.computing";
+    public static final String COMPUTE_POWER_DESC  = "ktfru.text.compute.power.desc";
+    public static final String COMPUTE_TILE_EMPTY  = "ktfru.text.compute.tile.empty";
+    public static final String COMPUTE_TILE_COMPUTERS  = "ktfru.text.compute.tile.computers";
+    public static final String COMPUTE_TILE_SHIFT_SHOW_COMPUTERS  = "ktfru.text.compute.tile.shift_show_computers";
+
 
     public static final String CRUCIBLE_MODEL_0 ="ktfru.text.machine.cruciblemodel.0";
     public static final String CRUCIBLE_MODEL_1 ="ktfru.text.machine.cruciblemodel.1";
