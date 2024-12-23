@@ -22,6 +22,7 @@ import com.bioxx.tfc.api.TileEntities.IHeatAccepter;
 import com.bioxx.tfc.api.TileEntities.IHeater;
 import cpw.mods.fml.common.Optional;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
+import gregapi.code.TagData;
 import gregapi.data.LH;
 import gregapi.data.MD;
 import gregapi.data.MT;
@@ -32,6 +33,7 @@ import gregapi.render.BlockTextureDefault;
 import gregapi.render.IIconContainer;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase07Paintable;
+import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.util.ST;
 import gregapi.util.WD;
 import net.minecraft.block.Block;
@@ -49,7 +51,7 @@ import static cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT.CRUCIBLE_MODEL_TIMER
 import static gregapi.data.CS.*;
 
 @Optional.Interface(iface = "com.bioxx.tfc.api.TileEntities.IHeatAccepter", modid = "terrafirmacraft")
-public class CrucibleModel extends TileEntityBase07Paintable implements IHeatAccepter {
+public class CrucibleModel extends TileEntityBase07Paintable implements IHeatAccepter, ITileEntityEnergy {
     //0=nothing,1=placed clay,2=full clay,3=composed,4=completed
     public byte mState=0;
     public short mTimer=0;
@@ -217,6 +219,13 @@ public class CrucibleModel extends TileEntityBase07Paintable implements IHeatAcc
     @Override
     public String getTileEntityName() {
         return "ktfru.multitileentity.cruciblemodel";
+    }
+
+    @Override
+    public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
+        if(aSide != SIDE_UP)return 0;
+        mTemperature += (aAmount*aSize)/9;
+        return aAmount;
     }
 
     @Override
