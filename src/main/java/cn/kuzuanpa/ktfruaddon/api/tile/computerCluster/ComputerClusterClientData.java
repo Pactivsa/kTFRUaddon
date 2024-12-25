@@ -33,24 +33,24 @@ import java.util.*;
 
 public class ComputerClusterClientData {
     /**ID: 0**/
-    public static class ClientList{
-        public List<ClientData> datas;
-        public ClientList(List<ClientData> datas){
+    public static class UserList {
+        public List<UserData> datas;
+        public UserList(List<UserData> datas){
             if(datas==null)this.datas=new ArrayList<>();
-            this.datas=datas;
+            else this.datas=datas;
         }
-        public ClientList(Collection<ClientData> datas){
+        public UserList(Collection<UserData> datas){
             this.datas=new ArrayList<>();
             this.datas.addAll(datas);
         }
-        public static byte[] serialize(ClientList list) throws IOException {
+        public static byte[] serialize(UserList list) throws IOException {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             DataOutputStream dos = new DataOutputStream(bos);
 
             dos.writeInt(list.datas.size());
 
-            for (ClientData data : list.datas) {
-                byte[] dataBytes = ClientData.serialize(data);
+            for (UserData data : list.datas) {
+                byte[] dataBytes = UserData.serialize(data);
                 dos.writeInt(dataBytes.length);
                 dos.write(dataBytes);
             }
@@ -58,22 +58,22 @@ public class ComputerClusterClientData {
             dos.flush();
             return bos.toByteArray();
         }
-        public static ClientList deserialize(byte[] bytes) throws IOException {
+        public static UserList deserialize(byte [] bytes) throws IOException {
             ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
             DataInputStream dis = new DataInputStream(bis);
 
             int size = dis.readInt();
-            List<ClientData> datas = new ArrayList<>(size);
+            List<UserData> datas = new ArrayList<>(size);
 
             for (int i = 0; i < size; i++) {
                 int length = dis.readInt();
                 byte[] dataBytes = new byte[length];
                 dis.readFully(dataBytes);
-                ClientData data = ClientData.deserialize(dataBytes);
+                UserData data = UserData.deserialize(dataBytes);
                 datas.add(data);
             }
 
-            return new ClientList(datas);
+            return new UserList(datas);
         }
     }
     /**ID: 1**/
@@ -101,7 +101,7 @@ public class ComputerClusterClientData {
             dos.flush();
             return bos.toByteArray();
         }
-        public static ControllerList deserialize(byte[] bytes) throws IOException {
+        public static ControllerList deserialize(byte [] bytes) throws IOException {
             ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
             DataInputStream dis = new DataInputStream(bis);
 
@@ -136,7 +136,7 @@ public class ComputerClusterClientData {
             this.usedPowers = usedPowers;
             this.events = events;
         }
-        public ClusterDetail(byte clusterState, int controllerCount, int clientCount, Map<ComputePower, Long> availPowers, Map<ComputePower, Long> usedPowers, Object[] events) {
+        public ClusterDetail(byte clusterState, int controllerCount, int clientCount, Map<ComputePower, Long> availPowers, Map<ComputePower, Long> usedPowers, Object [] events) {
             this.clusterState = clusterState;
             this.controllerCount = controllerCount;
             this.clientCount = clientCount;
@@ -180,7 +180,7 @@ public class ComputerClusterClientData {
             dos.flush();
             return bos.toByteArray();
         }
-        public static ClusterDetail deserialize(byte[] bytes) throws IOException {
+        public static ClusterDetail deserialize(byte [] bytes) throws IOException {
             ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
             DataInputStream dis = new DataInputStream(bis);
 
@@ -232,7 +232,7 @@ public class ComputerClusterClientData {
             this.clusterTotal = clusterTotal;
             this.events = events;
         }
-        public ControllerDetail(byte controllerState, byte computing, long controllerProviding, long clusterTotal, Object[] events) {
+        public ControllerDetail(byte controllerState, byte computing, long controllerProviding, long clusterTotal, Object [] events) {
             this.controllerState = controllerState;
             this.computing = computing;
             this.controllerProviding = controllerProviding;
@@ -260,7 +260,7 @@ public class ComputerClusterClientData {
             return bos.toByteArray();
         }
 
-        public static ControllerDetail deserialize(byte[] bytes) throws IOException {
+        public static ControllerDetail deserialize(byte [] bytes) throws IOException {
             ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
             DataInputStream dis = new DataInputStream(bis);
 

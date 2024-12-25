@@ -22,6 +22,8 @@ import cn.kuzuanpa.ktfruaddon.api.tile.ICircuitChangeableTileEntity;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import cn.kuzuanpa.ktfruaddon.ktfruaddon;
 import cn.kuzuanpa.ktfruaddon.tile.casing.rustBronzeCasing;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.TestController;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.TestUser;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.DebugGenerator;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.FuelBattery;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.ManualGenerator;
@@ -119,6 +121,8 @@ public class tileEntityInit0 {
         MultiTileEntityPipeItem.addItemPipes(26, 25202, 8192, 4, true, false,kRegistry0, aMachine, gregapi.tileentity.connectors.MultiTileEntityPipeItem.class,  MT.PVC);
         //gregapi.tileentity.connectors.MultiTileEntityWireElectric.addElectricWires(50, 0, gregapi.data.CS.VMAX[4], 1, 0, 0, true, false, true, kRegistry0, tWireBlock, gregapi.tileentity.connectors.MultiTileEntityWireElectric.class, tExamplium);
 
+        aMat = MT.StainlessSteel;      kRegistry0.add("Test Controller"                                       , "ktfruaddon: Energy",  9900, 1304, TestController.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
+        aMat = MT.StainlessSteel;      kRegistry0.add("Test User"                                             , "ktfruaddon: Energy",  9901, 1304, TestUser.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU)); 
 
         aMat = MT.Co;                   kRegistry0.add("Co-60 Breeder Rod"                               , "ktfruaddon: Energy",  9980,  9200, MultiTileEntityReactorRodBreeder.class  , aMat.mToolQuality, 16, aMachine     , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  10.0F, NBT_RESISTANCE,  10.0F, NBT_MAXDURABILITY,   6400000L, NBT_NUCLEAR_LOSS,  1000, NBT_VALUE, 9990)); 
         //aMat = MT.U_238;                kRegistry0.add("Uranium-238 Breeder Rod"                                 , "ktfruaddon: Energy",  9981,  9200, MultiTileEntityReactorRodBreeder.class  , aMat.mToolQuality, 16, aMachine     , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  10.0F, NBT_RESISTANCE,  10.0F, NBT_MAXDURABILITY,  256000000L, NBT_NUCLEAR_LOSS,  2500, NBT_VALUE, 9991)); RM.Canner.addRecipe2(F, 16, 16, OP.bolt.mat(aMat, 4), IL.Reactor_Rod_Empty.get(1), kRegistry0.getItem());
@@ -436,9 +440,6 @@ public class tileEntityInit0 {
         aMat = MT.Bronze;                      kRegistry0.add("DeRust Bronze Machine Casing"     , "kTFRUAddon: Casing", 32762, 1230, MultiTileEntityMultiBlockPart.class , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   6.0F, NBT_RESISTANCE,   6.0F,NBT_TEXTURE, "wall"));RM.Welder.addRecipe2(F,16,200,kRegistry0.getItem(32762,1),OP.plate.mat(MT.Bronze,1),ZL_FS,ZL_FS,OP.casingMachine.mat(MT.Bronze,1));
         aMat = MT.RedSteel;                    kRegistry0.add("Red Steel Crucible Model"     , "kTFRUAddon: Machines", 32763, 20001, CrucibleModel.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,   2.0F),"   "," M ","hPf",'P',OP.plate.mat(MT.RedSteel,1), 'M', ItemList.CrucibleModelInnerLayer.get(1)); recipeMaps.CrucibleModel.mRecipeMachineList.add(kRegistry0.getItem());
         aMat = MT.BlueSteel;                   kRegistry0.add("Blue Steel Crucible Model"     , "kTFRUAddon: Machines", 32764, 20001, CrucibleModel.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,  2.0F),"   "," M ","hPf",'P',OP.plate.mat(MT.BlueSteel,1), 'M', ItemList.CrucibleModelInnerLayer.get(1));recipeMaps.CrucibleModel.mRecipeMachineList.add(kRegistry0.getItem());
-
-        aMat = MT.BlueSteel;                   kRegistry0.add("Test circuit changer", "kTFRUAddon: Machines", 32765, 20001, CircuitChanger.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS,   2.0F, NBT_RESISTANCE,  2.0F));
-
 
         aMat = MT.Trinitanium;                 kRegistry0.add("Debug Generator"     , "kTFRUAddon: Machines", 32766, 20001, DebugGenerator.class , aMat.mToolQuality, 16, tMetalBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_COLOR, UT.Code.getRGBInt(aMat.fRGBaSolid),NBT_HARDNESS, -1, NBT_RESISTANCE,  -1));
 

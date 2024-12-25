@@ -92,7 +92,7 @@ public class ContainerClientClusterController extends kGuiContainerBase implemen
 		if(childGui instanceof ScreenControllerDetail)((ScreenControllerDetail) childGui).updateFromData(mContainer.dataControllerDetail);
 		if(childGui instanceof ScreenClusterDetail   )((ScreenClusterDetail   ) childGui).updateFromData(mContainer.dataClusterDetail);
 		if(childGui instanceof ScreenControllerList  )((ScreenControllerList  ) childGui).updateFromData(mContainer.dataControllerList);
-		if(childGui instanceof ScreenClientList      )((ScreenClientList      ) childGui).updateFromData(mContainer.dataClientList);
+		if(childGui instanceof ScreenClientList      )((ScreenClientList      ) childGui).updateFromData(mContainer.dataUserList);
 		mContainer.updated=false;
 	}
 

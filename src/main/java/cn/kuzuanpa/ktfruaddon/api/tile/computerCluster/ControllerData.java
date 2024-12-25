@@ -36,7 +36,6 @@ import net.minecraftforge.common.DimensionManager;
 import java.io.*;
 import java.util.ArrayDeque;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Queue;
 
 public class ControllerData{
@@ -54,15 +53,13 @@ public class ControllerData{
         if (!(o instanceof ControllerData)) return false;
 
         ControllerData that = (ControllerData) o;
-        return state == that.state && world.equals(that.world) && pos.equals(that.pos) && Objects.equals(power, that.power);
+        return world.equals(that.world) && pos.equals(that.pos);
     }
 
     @Override
     public int hashCode() {
         int result = world.hashCode();
         result = 31 * result + pos.hashCode();
-        result = 31 * result + state;
-        result = 31 * result + Objects.hashCode(power);
         return result;
     }
 
@@ -93,7 +90,7 @@ public class ControllerData{
         return bytes;
     }
 
-    public static ControllerData deserialize(byte[] bytes) throws IOException {
+    public static ControllerData deserialize(byte [] bytes) throws IOException {
         ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
         DataInputStream dis = new DataInputStream(bais);
 

@@ -24,7 +24,7 @@ import cn.kuzuanpa.kGuiLib.client.objects.gui.ButtonList;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.CommonTexturedButton;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.Text;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
-import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ClientData;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.UserData;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
 import net.minecraft.client.Minecraft;
@@ -40,12 +40,12 @@ import static cn.kuzuanpa.ktfruaddon.ktfruaddon.MOD_ID;
 public class ScreenClientList extends kGuiScreenContainerLayerBase {
 
     ButtonList dataListButton = null;
-    public ScreenClientList updateFromData(ComputerClusterClientData.ClientList data){
+    public ScreenClientList updateFromData(ComputerClusterClientData.UserList data){
         if(data == null)return this;
         updateClientList(data.datas);
         return this;
     }
-    public void updateClientList(List<ClientData> datas){
+    public void updateClientList(List<UserData> datas){
         dataListButton.clearSubButton();
         for (int i = 0; i < datas.size(); i++) {
             dataListButton.addSubButton(new ClientButton(10+i,ContainerX+4,ContainerY+14,320).setData(datas.get(i)).setFBOOffset(0,i*18).setJoinLeaveTime(i*70,Integer.MAX_VALUE).addAnime(new animeMoveLinear(-1,0, 50,0)).addAnime(new animeTransparency(-1,0,255,-255)).addAnime(new animeMoveSlowIn(i*70, 800+i*70,-50,0,2)).addAnime(new animeTransparency(i*70,600+i*70,0,255)));
@@ -79,12 +79,12 @@ public class ScreenClientList extends kGuiScreenContainerLayerBase {
             setAnimatedInFBO(true);
         }
 
-        public ClientButton setData(ClientData data) {
+        public ClientButton setData(UserData data) {
             this.data = data;
             return this;
         }
 
-        public ClientData data = null;
+        public UserData data = null;
 
         final ResourceLocation background = new ResourceLocation(MOD_ID,"textures/gui/computerCluster/clientBar.png");
 
@@ -99,7 +99,7 @@ public class ScreenClientList extends kGuiScreenContainerLayerBase {
             mc.getTextureManager().bindTexture(background);
 
             this.drawTexturedModalRect(xPosition,yPosition,16*data.state,146,16,16);
-            wrappedDrawStr(data.pos.toString()+" @Dim"+data.world.provider.dimensionId,xPosition+24,yPosition+3,0x000000);
+            wrappedDrawStr("User",xPosition+24,yPosition+3,0x000000);
 
             for (int i = 0; i < ComputePower.values().length; i++) {
                 if(data.consumingPower.get(ComputePower.getType(i)) == null)continue;

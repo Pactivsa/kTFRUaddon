@@ -77,14 +77,14 @@ public class ContainerCommonClusterController extends ContainerCommon {
 		for (byte sendType = 0; sendType < 4; sendType++) {
 			byte[] bytes = null;
 			switch (sendType){
-				case 0:  bytes = ComputerClusterClientData.ClientList.serialize(controller.getCluster().fetchClientDataClientList()); break;
+				case 0:  bytes = ComputerClusterClientData.UserList.serialize(controller.getCluster().fetchClientDataUserList()); break;
 				case 1:  bytes = ComputerClusterClientData.ControllerList.serialize(controller.getCluster().fetchClientDataControllerList()); break;
 				case 2:  bytes = ComputerClusterClientData.ClusterDetail.serialize(controller.getCluster().fetchClientDataClusterDetail()); break;
 				case 3:  bytes = ComputerClusterClientData.ControllerDetail.serialize(controller.getCluster().fetchClientDataControllerDetail(controller.getUUID())); break;
 			}
 			int[] data = codeUtil.compressToIntegerArray(bytes);
 			//Saves bandwidth
-			if(Arrays.equals(cachedIntArray[sendType], data))continue;
+			//if(Arrays.equals(cachedIntArray[sendType], data))continue;
 
 			cachedIntArray[sendType] = data;
 
@@ -103,7 +103,7 @@ public class ContainerCommonClusterController extends ContainerCommon {
 		}
 	}
 	public ComputerClusterClientData.ControllerList   dataControllerList ;
-	public ComputerClusterClientData.ClientList       dataClientList ;
+	public ComputerClusterClientData.UserList         dataUserList;
 	public ComputerClusterClientData.ClusterDetail    dataClusterDetail ;
 	public ComputerClusterClientData.ControllerDetail dataControllerDetail ;
 
@@ -147,7 +147,7 @@ public class ContainerCommonClusterController extends ContainerCommon {
 		switch (type) {
 			case 0:
 				if(!checkEOF(receivedDataClientList,dataMaxIndex[type])) return;
-				dataClientList = ComputerClusterClientData.ClientList.deserialize(codeUtil.decompressFromIntegerArray(receivedDataClientList.values().stream().mapToInt(v->v).toArray()));
+				dataUserList = ComputerClusterClientData.UserList.deserialize(codeUtil.decompressFromIntegerArray(receivedDataClientList.values().stream().mapToInt(v->v).toArray()));
 				receivedDataClientList.clear();
 				break;
 			case 1:

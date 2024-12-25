@@ -29,8 +29,14 @@
 package cn.kuzuanpa.ktfruaddon.api.tile.computerCluster;
 
 import cn.kuzuanpa.ktfruaddon.api.code.SingleEntry;
+import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import gregapi.data.LH;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public enum ComputePower {
@@ -56,5 +62,25 @@ public enum ComputePower {
         Map<ComputePower, Long> map = new HashMap<>();
         map.put(this, amount);
         return map;
+    }
+    public String desc(long amount){
+        String name = LH.get(I18nHandler.COMPUTE_POWER+"."+this.ordinal());
+        String number = codeUtil.getDisplayShortNum(amount,1);
+        return String.format(LH.get(I18nHandler.COMPUTE_POWER_DESC),name, number);
+    }
+    public String prefixedDesc(long amount){
+        return LH.get(I18nHandler.COMPUTE_POWER)+": "+ desc(amount);
+    }
+    public static List<String> getDesc(Map<ComputePower, Long> map){
+        List<String> list = new ArrayList<>();
+        list.add(LH.get(I18nHandler.COMPUTE_POWER)+": ");
+        map.forEach((k,v)->list.add(" "+k.desc(v)));
+        return list;
+    }
+
+    public static String getDescOneLine(Map<ComputePower, Long> map){
+        StringBuilder sb = new StringBuilder(LH.get(I18nHandler.COMPUTE_POWER)+": ");
+        map.forEach((k,v)-> sb.append(k.desc(v)).append(", "));
+        return sb.toString();
     }
 }

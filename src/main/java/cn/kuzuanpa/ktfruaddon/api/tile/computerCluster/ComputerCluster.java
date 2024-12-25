@@ -30,13 +30,9 @@ package cn.kuzuanpa.ktfruaddon.api.tile.computerCluster;
 
 import codechicken.lib.vec.BlockCoord;
 import gregapi.util.WD;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagIntArray;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.*;
-import net.minecraftforge.common.DimensionManager;
+import net.minecraft.world.World;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -44,7 +40,7 @@ import java.util.stream.Collectors;
 
 public class ComputerCluster {
     public Map<UUID, ControllerData> controllerList = new HashMap<>();
-    public Map<UUID, ClientData> clientList = new HashMap<>();
+    public Map<UUID, UserData> userList = new HashMap<>();
     public Map<ComputePower, Long> totalComputePower = new HashMap<>();
     public Map<ComputePower, Long> usedComputePower = new HashMap<>();
     public Queue<Byte> events = new ArrayDeque<>();
@@ -57,7 +53,6 @@ public class ComputerCluster {
         if(uuid != null)this.clusterUUID = uuid;
         else this.clusterUUID = UUID.randomUUID();
     }
-
     public static ComputerCluster create(World initialControllerWorld, BlockCoord initialControllerPos) {
         ComputerCluster cluster = new ComputerCluster(null);
         if (cluster.join(initialControllerWorld,initialControllerPos) != null)return null;
@@ -103,6 +98,68 @@ public class ComputerCluster {
             totalComputePowerMap.merge(data.power.getKey(), data.power.getValue(), Long::sum);
         }
     }
+    public void joinUser(IComputerClusterUser user){
+        if(user == null || userList.get(user.getUUID()) != null)return;
+        UserData data = new UserData(user);
+        userList.put(user.getUUID(), data);
+        updateUserData(user);
+    }
+
+    public UserData getUserData(UUID uuid){
+        return userList.get(uuid);
+    }
+
+    public void updateUserData(IComputerClusterUser user){
+        if(user == null)return;
+        UserData data = userList.get(user.getUUID());
+        if(data == null)return;
+
+        if(user.getController() == null || user.getController().getCluster() != this){
+            data.state = Constants.STATE_BELONG_ERR;
+            return;
+        }
+        data.lastUpdated = (short) (MinecraftServer.getServer().getTickCounter() % 16384);
+        data.state = user.getState();
+        if(data.state != Constants.STATE_NORMAL && data.state != Constants.STATE_WARNING){
+            freeUserComputePower(user);
+        }
+    }
+
+    public boolean isComputePowerSufficient(Map<ComputePower, Long> additions){
+        return additions.entrySet().stream().allMatch(this::isComputePowerSufficient);
+    }
+
+    public boolean isComputePowerSufficient(Map.Entry<ComputePower, Long> power){
+        long used = usedComputePower.get(power.getKey()) == null ? 0: usedComputePower.get(power.getKey());
+        return totalComputePower.get(power.getKey()) >= (used + power.getValue());
+    }
+
+    public boolean allocateUserComputePower(IComputerClusterUser user){
+        if(user == null)return false;
+        if(getUserData(user.getUUID()) == null)joinUser(user);
+        UserData data = getUserData(user.getUUID());
+        if(data == null)return false;
+
+        if(Math.abs((MinecraftServer.getServer().getTickCounter() % 16384) - data.lastUpdated) > 5)updateUserData(user);
+        if(data.state == Constants.STATE_NORMAL || data.state == Constants.STATE_WARNING){
+            if (!isComputePowerSufficient(user.getComputePowerNeeded()))return false;
+            user.getComputePowerNeeded().forEach((k,v)->usedComputePower.merge(k, v, Long::sum));
+            data.consumingPower = user.getComputePowerNeeded();
+            return true;
+        }
+        return false;
+    }
+
+    public boolean freeUserComputePower(IComputerClusterUser user){
+        if(user == null || getUserData(user.getUUID()) == null)return false;
+        UserData data = getUserData(user.getUUID());
+        if(data == null)return false;
+        if(!data.consumingPower.isEmpty()){
+            data.consumingPower.forEach((k,v) -> usedComputePower.merge(k, v,(a, b) -> a-b));
+            user.onComputerPowerReleased();
+        }
+        return true;
+    }
 
     public List<ControllerData> getOnlineControllers(){
         return controllerList.values().stream().filter(data->data.state== Constants.STATE_NORMAL).collect(Collectors.toList());
@@ -122,9 +179,6 @@ public class ComputerCluster {
                 cluster.join(data.world,data.pos,controller);
             }
         }
-    }
-    public void mergeTo(ComputerCluster to){
-
     }
 
     public String join(World world, BlockCoord pos){
@@ -188,56 +242,24 @@ public class ComputerCluster {
         }));
     }
     public static IComputerClusterController getControllerFromData(ControllerData data){
-        if (data.world == null||data.pos == null)return null;
         TileEntity te = WD.te(data.world,data.pos.x, data.pos.y, data.pos.z,false);
         if(te instanceof IComputerClusterController)return (IComputerClusterController) te;
         return null;
     }
-
     public void destroy(){
         postEventToAllControllers(Constants.EVENT_CLUSTER_DESTROY);
     }
 
-    public static void writeClusterToNBT(NBTTagCompound nbt, IComputerClusterController controller){
-        if(controller.getUUID() !=null){
-            nbt.setLong("myUUIDHigh", controller.getUUID().getMostSignificantBits());
-            nbt.setLong("myUUIDLow", controller.getUUID().getLeastSignificantBits());
-        }
-        if(controller.getCluster() !=null){
-            nbt.setLong("clusterUUIDHigh", controller.getCluster().clusterUUID.getMostSignificantBits());
-            nbt.setLong("clusterUUIDLow", controller.getCluster().clusterUUID.getLeastSignificantBits());
-            NBTTagList controllers = new NBTTagList();
-            for (Map.Entry<UUID, ControllerData> entry : controller.getCluster().controllerList.entrySet()) {
-                ControllerData data = entry.getValue();
-                controllers.appendTag(new NBTTagIntArray(new int[] {data.world.provider.dimensionId, data.pos.x, data.pos.y, data.pos.z}));
-            }
-            nbt.setTag("clusterControllers", controllers);
-        }
-    }
-    public static void readClusterFromNBT(NBTTagCompound nbt, IComputerClusterController controller){
-        if(nbt.hasKey("myUUIDHigh") && nbt.hasKey("myUUIDLow")) controller.setUUID(new UUID(nbt.getLong("myUUIDHigh"), nbt.getLong("myUUIDLow")));
-        else controller.setUUID(UUID.randomUUID());
-        if(nbt.hasKey("clusterUUIDHigh")&& nbt.hasKey("clusterUUIDLow")){
-            controller.setSavedClusterUUID(new UUID(nbt.getLong("clusterUUIDHigh"), nbt.getLong("clusterUUIDHigh")));
-            List<ControllerData> datas = new ArrayList<>();
-            NBTTagList list = nbt.getTagList("clusterControllers", 11);
-            for (int i = 0; i < list.tagCount(); i++) {
-                int[] data = list.func_150306_c(i);
-                datas.add(new ControllerData(DimensionManager.getWorld(data[0]), new BlockCoord(data[1],data[2],data[3])));
-            }
-            controller.setSavedClusterControllers(datas);
-        }
-    }
     public ComputerClusterClientData.ControllerList fetchClientDataControllerList() {
         return new ComputerClusterClientData.ControllerList(controllerList.values());
     }
 
-    public ComputerClusterClientData.ClientList fetchClientDataClientList() {
-        return new ComputerClusterClientData.ClientList(clientList.values());
+    public ComputerClusterClientData.UserList fetchClientDataUserList() {
+        return new ComputerClusterClientData.UserList(userList.values());
     }
 
     public ComputerClusterClientData.ClusterDetail fetchClientDataClusterDetail() {
-        return new ComputerClusterClientData.ClusterDetail(state,controllerList.size(),clientList.size(),totalComputePower,usedComputePower, events.toArray());
+        return new ComputerClusterClientData.ClusterDetail(state,controllerList.size(), userList.size(),totalComputePower,usedComputePower, events.toArray());
     }
 
     public ComputerClusterClientData.ControllerDetail fetchClientDataControllerDetail(UUID controllerID) {

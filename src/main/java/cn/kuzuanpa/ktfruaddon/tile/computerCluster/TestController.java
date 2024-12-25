@@ -55,14 +55,13 @@ public class TestController extends TileEntityBase07Paintable implements IComput
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
         super.readFromNBT2(aNBT);
-        ComputerCluster.readClusterFromNBT(aNBT,this);
-
+        IComputerClusterController.readFromNBT(aNBT,this);
     }
 
     @Override
     public void writeToNBT2(NBTTagCompound aNBT) {
         super.writeToNBT2(aNBT);
-        ComputerCluster.writeClusterToNBT(aNBT,this);
+        IComputerClusterController.writeToNBT(aNBT,this);
     }
 
     @Override
@@ -239,6 +238,17 @@ public class TestController extends TileEntityBase07Paintable implements IComput
     public ComputerCluster getCluster() {
         return cluster;
     }
+
+    @Override
+    public boolean canReachUser(IComputerClusterUser user) {
+        return true;
+    }
+
+    @Override
+    public BlockCoord getPos() {
+        return new BlockCoord(xCoord,yCoord,zCoord);
+    }
+
     @Override
     public Object getGUIClient2(int aGUIID, EntityPlayer aPlayer) {
         return new ContainerClientClusterController(aPlayer.inventory, this, aGUIID,"");
