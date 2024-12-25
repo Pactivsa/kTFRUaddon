@@ -49,24 +49,17 @@ import static gregapi.data.CS.*;
 public class tankGasCompressedInputer extends TileEntityBase09FacingSingle implements ITileEntityEnergy,IFluidHandler {
     public static TagData mEnergyTypeAccepted = TD.Energy.KU;
     public long mInput=0,mInputMin=0,mInputMax=0;
+    public boolean hasEnergyInput = false;
+    public byte mState = 0, mStateOld = 0;
     FluidTankGT mTank = new FluidTankGT(64000);
-    public static IIconContainer[] mTexturesMaterial = L6_IICONCONTAINER, mTexturesInactive = L6_IICONCONTAINER;
+    public static IIconContainer mTexturesMaterial = null, mOverlayBack = null, mOverlayFrontInactive = null,mOverlayFrontRunning = null, mOverlayFrontActive = null;
 
     static {
-        mTexturesMaterial = new IIconContainer[]{
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/colored/bottom"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/colored/top"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/colored/left"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/colored/front"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/colored/right"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/colored/back")};
-        mTexturesInactive = new IIconContainer[]{
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/overlay/bottom"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/overlay/top"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/overlay/left"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/overlay/front"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/overlay/right"),
-                new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/overlay/back")};
+        mTexturesMaterial     = new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/material");
+        mOverlayBack          = new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/back");
+        mOverlayFrontInactive = new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/front");
+        mOverlayFrontRunning  = new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/front_running");
+        mOverlayFrontActive   = new Textures.BlockIcons.CustomIcon("machines/tankgascompressedinputer/front_active");
     }
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
@@ -86,9 +79,25 @@ public class tankGasCompressedInputer extends TileEntityBase09FacingSingle imple
         aList.add(LH.Chat.DGRAY    + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
     }
 
+    @Override
+    public void onTick2(long aTimer, boolean aIsServerSide) {
+        if(hasEnergyInput)hasEnergyInput=false;
+        else if (aIsServerSide)mState = (byte) (mTank.isEmpty()?0:1);
+    }
+
+    @Override
+    public boolean onTickCheck(long aTimer) {
+        if(mStateOld != mState){
+            mStateOld=mState;
+            return true;
+        }
+        return false;
+    }
+
     public void doOutputFluids(int inputSpeed) {
         DelegatorTileEntity<IFluidHandler> aTo = getAdjacentTank(OPOS[mFacing]);
         if (aTo == null||mTank.getFluid()==null)return;
+        hasEnergyInput=true;
         ICompressGasTank target = null;
         if (aTo.mTileEntity instanceof ICompressGasTank) target= (ICompressGasTank) aTo.mTileEntity;
         if ((aTo.mTileEntity instanceof MultiTileEntityMultiBlockPart)&& ((MultiTileEntityMultiBlockPart)aTo.mTileEntity).getTarget(F) instanceof ICompressGasTank) target=(ICompressGasTank)((MultiTileEntityMultiBlockPart)aTo.mTileEntity).getTarget(F);
@@ -97,6 +106,7 @@ public class tankGasCompressedInputer extends TileEntityBase09FacingSingle imple
         fluidStack.amount=Math.min(fluidStack.amount, inputSpeed);
         long used = (target.fillCompressedGas(fluidStack));
         if (used <= 0) return;
+        mState = 2;
         mTank.remove(used);
         updateInventory();
     }
@@ -131,7 +141,22 @@ public class tankGasCompressedInputer extends TileEntityBase09FacingSingle imple
     }
 
     @Override public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
-        return aShouldSideBeRendered[aSide] ? BlockTextureMulti.get(BlockTextureDefault.get(mTexturesMaterial[FACING_ROTATIONS[mFacing][aSide]], mRGBa), BlockTextureDefault.get(mTexturesInactive[FACING_ROTATIONS[mFacing][aSide]])) : null;
+        return aShouldSideBeRendered[aSide] ? BlockTextureMulti.get(BlockTextureDefault.get(mTexturesMaterial, mRGBa),BlockTextureDefault.get(aSide == OPOS[mFacing]? mOverlayBack : aSide == mFacing ? mState==2? mOverlayFrontActive : mState ==1? mOverlayFrontRunning : mOverlayFrontInactive: null)) : null;
+    }
+
+    @Override
+    public byte getVisualData() {
+        return mState;
+    }
+
+    @Override
+    public void setVisualData(byte aData) {
+        mState = aData;
+    }
+
+    @Override
+    public byte getDefaultSide() {
+        return SIDE_FRONT;
     }
 
     @Override public boolean isEnergyType                   (TagData aEnergyType, byte aSide, boolean aEmitting) {return  aEnergyType == mEnergyTypeAccepted;}
