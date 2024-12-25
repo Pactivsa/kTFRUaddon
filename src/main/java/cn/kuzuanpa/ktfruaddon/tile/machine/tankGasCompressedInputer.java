@@ -33,7 +33,6 @@ import gregapi.tileentity.base.TileEntityBase09FacingSingle;
 import gregapi.tileentity.delegate.DelegatorTileEntity;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.tileentity.multiblocks.MultiTileEntityMultiBlockPart;
-import gregapi.util.UT;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -87,7 +86,7 @@ public class tankGasCompressedInputer extends TileEntityBase09FacingSingle imple
         aList.add(LH.Chat.DGRAY    + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
     }
 
-    public void doOutputFluids(int amount) {
+    public void doOutputFluids(int inputSpeed) {
         DelegatorTileEntity<IFluidHandler> aTo = getAdjacentTank(OPOS[mFacing]);
         if (aTo == null||mTank.getFluid()==null)return;
         ICompressGasTank target = null;
@@ -95,10 +94,10 @@ public class tankGasCompressedInputer extends TileEntityBase09FacingSingle imple
         if ((aTo.mTileEntity instanceof MultiTileEntityMultiBlockPart)&& ((MultiTileEntityMultiBlockPart)aTo.mTileEntity).getTarget(F) instanceof ICompressGasTank) target=(ICompressGasTank)((MultiTileEntityMultiBlockPart)aTo.mTileEntity).getTarget(F);
         if (target==null) return;
         FluidStack fluidStack = mTank.getFluid().copy();
-        fluidStack.amount=amount;
-        int used = UT.Code.bindInt((target.fillCompressedGas(fluidStack)));
+        fluidStack.amount=Math.min(fluidStack.amount, inputSpeed);
+        long used = (target.fillCompressedGas(fluidStack));
         if (used <= 0) return;
-        mTank.drain(used, T);
+        mTank.remove(used);
         updateInventory();
     }
 
