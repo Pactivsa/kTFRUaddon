@@ -67,9 +67,9 @@ public class I18nHandler {
     public static final String COMPUTE_CLUSTER_1="ktfru.text.multiblock.compute_cluster.1";
     public static final String COMPUTE_CLUSTER_2="ktfru.text.multiblock.compute_cluster.2";
     public static final String COMPUTE_CLUSTER_3="ktfru.text.multiblock.compute_cluster.3";
-    public static final String TANK_GAS_COMPRESSED_0="ktfru.text.multiblock.tank.gas.compressed.0";
-    public static final String TANK_GAS_COMPRESSED_1="ktfru.text.multiblock.tank.gas.compressed.1";
-    public static final String TANK_GAS_COMPRESSED_2="ktfru.text.multiblock.tank.gas.compressed.2";
+    public static final String TANK_GAS_COMPRESSED_NEED_INPUTER ="ktfru.text.tank.gas.compressed.inputer";
+    public static final String TANK_GAS_COMPRESSED_1="ktfru.text.tank.gas.compressed.1";
+    public static final String TANK_GAS_COMPRESSED_2="ktfru.text.tank.gas.compressed.2";
     public static final String TANK_GAS_COMPRESSED_INPUTER="ktfru.text.machine.compressedgasinputer";
     public static final String OIL_MINER_0="ktfru.text.multiblock.oilminer.0";
     public static final String OIL_MINER_1="ktfru.text.multiblock.oilminer.1";

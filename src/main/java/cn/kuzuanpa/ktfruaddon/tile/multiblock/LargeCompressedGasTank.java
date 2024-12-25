@@ -38,17 +38,16 @@ import static gregapi.data.CS.*;
 public class LargeCompressedGasTank extends MultiTileEntityTank implements ICompressGasTank {
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
-        aList.add(LH.Chat.CYAN     + LH.get(LH.STRUCTURE) + ":");
-        aList.add(LH.Chat.WHITE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_0));
         aList.add(LH.Chat.WHITE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_1));
-        aList.add(LH.Chat.WHITE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_2));
+        aList.add(LH.Chat.ORANGE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_2));
+        aList.add(LH.Chat.ORANGE    + LH.get(I18nHandler.TANK_GAS_COMPRESSED_NEED_INPUTER));
         super.addToolTips(aList, aStack, aF3_H);
     }
 
     static {
-        LH.add(I18nHandler.TANK_GAS_COMPRESSED_0,"");
-        LH.add(I18nHandler.TANK_GAS_COMPRESSED_1,"");
-        LH.add(I18nHandler.TANK_GAS_COMPRESSED_2,"");
+        LH.add(I18nHandler.TANK_GAS_COMPRESSED_1,"Store gas at liquid state");
+        LH.add(I18nHandler.TANK_GAS_COMPRESSED_2,"Can only store Gas!");
+        LH.add(I18nHandler.TANK_GAS_COMPRESSED_NEED_INPUTER,"Needs Gas Compressor to work!");
     }
     @Override
     public boolean checkStructure2() {

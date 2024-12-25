@@ -52,6 +52,9 @@ ktfru.text.multiblock.compute_cluster.2=集群总算力:
 ktfru.text.multiblock.compute_cluster.3=离线
 ktfru.text.filter.properties=当前过滤属性:
 ktfru.text.filter.properties.all=全部可用属性:
+ktfru.text.tank.gas.compressed.inputer=需要配合气体压缩机使用
+ktfru.text.tank.gas.compressed.1=以液体形态存储巨量气体
+ktfru.text.tank.gas.compressed.2=只能存储气体!
 
 ktfru.msg.outdated=检测到TFRU有更新, 请及时升级! 如果遇到bug, 请升级重新测试后再反馈!
 
