@@ -213,6 +213,10 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
         return mEnergyStored > getCapacity() * 0.1 ? mRateMax : (int) ((mEnergyStored / (getCapacity() * 0.1f)) * mRateMax);
     }
 
+    @Override
+    public boolean[] getValidSides() {
+        return SIDES_HORIZONTAL;
+    }
     public float getTemperature(){return ((float)mEnergyStored/(float)getCapacity() *961)+DEFAULT_ENVIRONMENT_TEMPERATURE;}
     @Override
     public boolean isInsideStructure(int aX, int aY, int aZ) {return true;}

@@ -47,7 +47,7 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     public final short sizeX = 5, sizeY = 1, sizeZ = 4;
     //决定结构检测的起始位置，默认情况下是从主方块起始
     //This controls where is the start point to check structure,Default is the position of controller block
-    public final short xMapOffset = -2, zMapOffset = 0;
+    public final short xMapOffset = -2, yMapOffset = 0, zMapOffset = 0;
     //映射表方向:
     //                 |
     //                 |
@@ -137,7 +137,7 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     public boolean asyncCheckStructure(AsyncStructureManager.WorldContainer world) {
         int tX = xCoord, tY = yCoord, tZ = zCoord;
         if (world.getBlock(tX, tY, tZ) == null) return mStructureOkay;
-        lastFailedPos = checkMappedStructure(world,null, sizeX, sizeY, sizeZ,xMapOffset,0,zMapOffset,true);
+        lastFailedPos = checkMappedStructure(world,null, sizeX, sizeY, sizeZ,xMapOffset,yMapOffset,zMapOffset,true);
         return lastFailedPos==null;
     }
 
@@ -168,7 +168,7 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     //controls areas inside the machine
     @Override
     public boolean isInsideStructure(int aX, int aY, int aZ) {
-        return new BoundingBox(utils.getRealX(mFacing,xCoord,xMapOffset,zMapOffset),yCoord,utils.getRealZ(mFacing,zCoord,xMapOffset,zMapOffset),utils.getRealX(mFacing,utils.getRealX(mFacing,xCoord,xMapOffset,zMapOffset), sizeX, sizeZ),yCoord+ sizeY,utils.getRealZ(mFacing,utils.getRealZ(mFacing,zCoord,xMapOffset,zMapOffset), sizeX, sizeZ)).isXYZInBox(aX,aY,aZ);
+        return new BoundingBox(utils.getRealX(mFacing,xCoord,xMapOffset,zMapOffset),yCoord + yMapOffset,utils.getRealZ(mFacing,zCoord,xMapOffset,zMapOffset),utils.getRealX(mFacing,utils.getRealX(mFacing,xCoord,xMapOffset,zMapOffset), sizeX, sizeZ),yCoord+ sizeY,utils.getRealZ(mFacing,utils.getRealZ(mFacing,zCoord,xMapOffset,zMapOffset), sizeX, sizeZ)).isXYZInBox(aX,aY,aZ);
     }
     //下面四个是设置输入输出的地方,return null是任意面
     //controls where to I/O, return null=any side
@@ -180,6 +180,11 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     @Override
     public DelegatorTileEntity<TileEntity> getItemOutputTarget(byte aSide) {
         return getAdjacentTileEntity(SIDE_BOTTOM);
+    }
+
+    @Override
+    public boolean[] getValidSides() {
+        return SIDES_HORIZONTAL;
     }
 
     @Override
