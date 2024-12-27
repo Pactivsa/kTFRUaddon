@@ -15,7 +15,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.TileEntityBaseRoom;
+import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseRoom;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;

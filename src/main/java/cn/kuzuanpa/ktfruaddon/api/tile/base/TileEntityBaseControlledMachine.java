@@ -14,17 +14,18 @@
  */
 
 
-package cn.kuzuanpa.ktfruaddon.tile.multiblock.base;
+package cn.kuzuanpa.ktfruaddon.api.tile.base;
 
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IConditionParts;
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IConditionParts;
 import gregapi.tileentity.multiblocks.TileEntityBase10MultiBlockMachine;
 import gregapi.util.WD;
 import net.minecraft.util.ChunkCoordinates;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class TileEntityBaseControlledMachine extends TileEntityBase10MultiBlockMachine {
-    public ArrayList<ChunkCoordinates> ConditionPartsPos = new ArrayList<>();
+    public List<ChunkCoordinates> ConditionPartsPos = new ArrayList<>();
 
     public void addInputSubSource(ChunkCoordinates p){
         this.ConditionPartsPos.add(p);

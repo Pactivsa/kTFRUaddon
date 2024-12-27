@@ -12,9 +12,9 @@
  * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  *
  */
-package cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async;
+package cn.kuzuanpa.ktfruaddon.api.tile.async;
 
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IMultiBlockPart;
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IMultiBlockPart;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
 import gregapi.tileentity.multiblocks.MultiTileEntityMultiBlockPart;
 import net.minecraft.tileentity.TileEntity;

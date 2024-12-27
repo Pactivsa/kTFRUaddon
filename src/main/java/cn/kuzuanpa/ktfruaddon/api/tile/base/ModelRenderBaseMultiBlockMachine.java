@@ -14,7 +14,7 @@
  */
 
 
-package cn.kuzuanpa.ktfruaddon.tile.multiblock.base;
+package cn.kuzuanpa.ktfruaddon.api.tile.base;
 
 import gregapi.data.CS;
 import gregapi.render.ITexture;

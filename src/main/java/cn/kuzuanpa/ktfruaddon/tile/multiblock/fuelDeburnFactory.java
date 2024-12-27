@@ -18,6 +18,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -239,8 +240,6 @@ public class fuelDeburnFactory extends TileEntityBase10MultiBlockMachine impleme
     }
     public short getRegistryID(int checkX, int checkY, int checkZ){return getBlockID(checkX,checkY,checkZ) == 18002?g:k;}
 
-    @Override
-    public List<ChunkCoordinates> getComputeNodesCoordList() {return null;}
     ChunkCoordinates lastFailedPos=null;
     @Override
     public boolean checkStructure2() {

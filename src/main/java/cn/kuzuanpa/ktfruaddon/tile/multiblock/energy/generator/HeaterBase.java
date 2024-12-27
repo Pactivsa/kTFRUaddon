@@ -17,12 +17,14 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
 import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.code.TagData;
+import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.TD;
 import gregapi.fluid.FluidTankGT;
 import gregapi.recipes.Recipe;
 import gregapi.tileentity.behavior.TE_Behavior_Active_Trinary;
 import gregapi.tileentity.energy.ITileEntityEnergy;
+import gregapi.tileentity.multiblocks.IMultiBlockEnergy;
 import gregapi.tileentity.multiblocks.IMultiBlockFluidHandler;
 import gregapi.tileentity.multiblocks.MultiTileEntityMultiBlockPart;
 import gregapi.tileentity.multiblocks.TileEntityBase10MultiBlockBase;
@@ -40,7 +42,7 @@ import java.util.List;
 import static cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT.WORKING_MODE;
 import static gregapi.data.CS.*;
 
-public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implements IMultiBlockFluidHandler, ITileEntityEnergy{
+public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implements IMultiBlockFluidHandler, ITileEntityEnergy, IMultiBlockEnergy {
 
     public short workingMode=0;
     public long mEnergyStored = 0;
@@ -147,7 +149,7 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
     @Override protected IFluidTank[] getFluidTanks(MultiTileEntityMultiBlockPart aPart, byte aSide) {return mTanks;}
     @Override
     public IFluidTank getFluidTankFillable2(byte aSide, FluidStack aFluidToFill) {
-        return mTanks[0];
+        return FL.powerconducting(aFluidToFill)? mTanks[0] : null;
     }
     @Override
     public IFluidTank getFluidTankDrainable2(byte aSide, FluidStack aFluidToDrain) {

@@ -18,6 +18,8 @@
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IComputeNode;
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IMultiBlockPart;
 import cn.kuzuanpa.ktfruaddon.item.items.random.itemComputer;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.data.LH;
@@ -45,7 +47,7 @@ import java.util.List;
 
 import static gregapi.data.CS.*;
 
-public class MultiBlockPartComputeCluster extends TileEntityBase09FacingSingle implements IMultiTileEntity.IMTE_SyncDataByteArray, IMultiTileEntity.IMTE_AddToolTips,IMultiBlockPart,IComputeNode {
+public class MultiBlockPartComputeCluster extends TileEntityBase09FacingSingle implements IMultiTileEntity.IMTE_SyncDataByteArray, IMultiTileEntity.IMTE_AddToolTips, IMultiBlockPart, IComputeNode {
 
     public boolean isRunning,isActive;
     public byte mState;

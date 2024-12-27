@@ -16,12 +16,14 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
-import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientFusionTokamakExp;
-import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonFusionTokamakExp;
+import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IComputeNode;
+import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IComputeNode;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
+import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientFusionTokamakExp;
+import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonFusionTokamakExp;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -49,11 +51,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidTank;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler.HAS_PROJECTOR_STRUCTURE;
 import static gregapi.data.CS.*;
@@ -74,7 +78,7 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
     public FluidStack[] mOutputFluids = ZL_FS;
     public FluidTankGT[] mTanks = {new FluidTankGT(2000),new FluidTankGT(2000), new FluidTankGT(2000), new FluidTankGT(2000)},
             mTanksInput = {mTanks[0],mTanks[1]}, mTanksOutput ={ mTanks[2],mTanks[3]};
-    private final ArrayList<ChunkCoordinates> computeNodesCoord= new ArrayList<>();
+    private List<ChunkCoordinates> computeNodesCoord= new ArrayList<>();
 
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
@@ -239,6 +243,20 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
         setState(STATE_ERROR);
     }
     @Override
+    public long doInject (TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject ) {
+        if(aEnergyType==mEnergyTypeCharging&&mState!=STATE_STOPPED&&mState!=STATE_ERROR){
+            mRateCharging += aSize*aAmount;
+            return aAmount;
+        }
+        if(aEnergyType==mEnergyTypeAccepted&&mEnergy<mRate){
+            if(aSize > mRate)return 0;
+            long amountNeeded = (long)Math.ceil((mRate-mEnergy*1F)/aSize);
+            mEnergy+=amountNeeded*aSize;
+            return amountNeeded;
+        }
+        return 0;
+    }
+    @Override
     protected IFluidTank getFluidTankFillable2(byte aSide, FluidStack aFluidToFill) {
         return mTanksInput[0].isEmpty()||aFluidToFill.isFluidEqual(mTanksInput[0].getFluid())?mTanksInput[0]:mTanksInput[1];
     }
@@ -263,19 +281,6 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
             sOverlayErr       = new Textures.BlockIcons.CustomIcon("machines/fusion/tokamak/exp/overlay_error"),
             sOverlayVoidCharge= new Textures.BlockIcons.CustomIcon("machines/fusion/tokamak/exp/overlay_void_charging");
 
-    public long doInject (TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject ) {
-        if(aEnergyType==mEnergyTypeCharging&&mState!=STATE_STOPPED&&mState!=STATE_ERROR){
-            mRateCharging += aSize*aAmount;
-            return aAmount;
-        }
-        if(aEnergyType==mEnergyTypeAccepted&&mEnergy<mRate){
-            if(aSize > mRate)return 0;
-            long amountNeeded = (long)Math.ceil((mRate-mEnergy*1F)/aSize);
-            mEnergy+=amountNeeded*aSize;
-            return amountNeeded;
-        }
-        return 0;
-    }
 
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
@@ -387,8 +392,13 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
     }
 
     @Override
-    public List<ChunkCoordinates> getComputeNodesCoordList() {
-        return computeNodesCoord;
+    public boolean isPartSpecial(TileEntity tile) {
+        return tile instanceof IComputeNode;
+    }
+
+    @Override
+    public void receiveSpecialBlockList(List<TileEntity> list) {
+        computeNodesCoord = list.stream().map(tile -> new ChunkCoordinates(tile.xCoord,tile.yCoord,tile.zCoord)).collect(Collectors.toList());
     }
 
     private ChunkCoordinates lastFailedPos=null;
@@ -396,6 +406,7 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
     public boolean checkStructure2() {
         if (!worldObj.blockExists(xCoord, yCoord, zCoord)) return mStructureOkay;
         lastFailedPos = checkMappedStructure(lastFailedPos,machineX,machineY,machineZ,xMapOffset,yMapOffset,zMapOffset);
+        if(lastFailedPos!=null) FxRenderBlockOutline.addBlockOutlineToRender(lastFailedPos,0xff0000,2,System.currentTimeMillis()+8000);
         return lastFailedPos==null;
     }
 
@@ -420,6 +431,12 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
         if (rReturn > 0) return rReturn;
         if (isClientSide()) return 0;
         return 0;
+    }
+
+    @Override
+    public void onMagnifyingGlass(List<String> aChatReturn) {
+        super.onMagnifyingGlass(aChatReturn);
+        if(lastFailedPos != null)aChatReturn.add("Last Failed Pos: "+ lastFailedPos.toString());
     }
 
     public void onMagnifyingGlass2(List<String> aChatReturn) {

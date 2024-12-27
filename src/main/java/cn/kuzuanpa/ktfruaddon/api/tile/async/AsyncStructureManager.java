@@ -13,7 +13,7 @@
  *
  */
 
-package cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async;
+package cn.kuzuanpa.ktfruaddon.api.tile.async;
 
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
@@ -103,6 +103,7 @@ public class AsyncStructureManager {
         public Block getBlock(int x,int y,int z){
             return world.getBlock(x,y,z);
         }
+        public boolean isBlockExist(int x,int y,int z){return world.blockExists(x, y, z);}
         public TileEntity getTileEntity(int x,int y,int z){
             return world.getTileEntity(x,y,z);
         }

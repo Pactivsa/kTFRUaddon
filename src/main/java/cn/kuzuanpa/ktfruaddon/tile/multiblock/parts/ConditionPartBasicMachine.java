@@ -16,6 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IConditionParts;
 import gregapi.data.LH;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;

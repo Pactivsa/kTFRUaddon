@@ -16,6 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IMultiBlockPart;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.tileentity.machines.MultiTileEntityBasicMachine;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
@@ -29,7 +30,7 @@ import java.util.List;
 import static gregapi.data.CS.NBT_DESIGN;
 import static gregapi.data.CS.NBT_TARGET;
 
-public class CommonMachinePart extends MultiTileEntityBasicMachine implements IMultiTileEntity.IMTE_BreakBlock,IMultiBlockPart {
+public class CommonMachinePart extends MultiTileEntityBasicMachine implements IMultiTileEntity.IMTE_BreakBlock, IMultiBlockPart {
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
         if (aNBT.hasKey(NBT_TARGET)) mTargetPos = IMultiBlockPart.readTargetPosFromNBT(aNBT);

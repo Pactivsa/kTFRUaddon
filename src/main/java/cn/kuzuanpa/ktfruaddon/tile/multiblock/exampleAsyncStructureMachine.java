@@ -18,10 +18,10 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 //这是一个示例机器，用于学习多方块机器的结构，语法等，这个机器是基于gregtech6中的大浸洗器创建的
 
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.TileEntityBaseLimitedOutputMachine;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.AsyncStructureManager;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.IAsyncMappedStructure;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.IAsyncStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseLimitedOutputMachine;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.AsyncStructureManager;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;
@@ -122,8 +122,6 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     }
     public short getRegistryID(int checkX, int checkY, int checkZ){return registryIDMap[checkY][checkZ][checkX];}
 
-    @Override
-    public List<ChunkCoordinates> getComputeNodesCoordList() {return null;}
     UUID asyncTaskID = UUID.randomUUID();
     ChunkCoordinates lastFailedPos=null;
 
@@ -139,7 +137,7 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     public boolean asyncCheckStructure(AsyncStructureManager.WorldContainer world) {
         int tX = xCoord, tY = yCoord, tZ = zCoord;
         if (world.getBlock(tX, tY, tZ) == null) return mStructureOkay;
-        lastFailedPos = checkMappedStructure(world,null, sizeX, sizeY, sizeZ,xMapOffset,0,zMapOffset,false);
+        lastFailedPos = checkMappedStructure(world,null, sizeX, sizeY, sizeZ,xMapOffset,0,zMapOffset,true);
         return lastFailedPos==null;
     }
 

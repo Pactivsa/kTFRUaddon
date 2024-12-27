@@ -16,6 +16,8 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.parts;
 
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IConditionParts;
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IMultiBlockPart;
 import gregapi.GT_API;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -41,7 +43,7 @@ import java.util.List;
 
 import static gregapi.data.CS.*;
 
-public class ConditionPartEnergy extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IConditionParts, IMultiBlockPart{
+public class ConditionPartEnergy extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IConditionParts, IMultiBlockPart {
     boolean isEnergyEnough;
     long mInputMin=-1,mInputMax=-1,mEnergy=0;
     TagData mEnergyTypeAccepted;

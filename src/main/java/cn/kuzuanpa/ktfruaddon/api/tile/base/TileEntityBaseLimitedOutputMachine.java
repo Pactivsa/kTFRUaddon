@@ -14,7 +14,7 @@
  */
 
 
-package cn.kuzuanpa.ktfruaddon.tile.multiblock.base;
+package cn.kuzuanpa.ktfruaddon.api.tile.base;
 
 import cn.kuzuanpa.ktfruaddon.api.code.CodeTranslate;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utilLimitedOutputTarget.*;

@@ -16,7 +16,7 @@
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.model;
 
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.ModelRenderBaseMultiBlockMachine;
+import cn.kuzuanpa.ktfruaddon.api.tile.base.ModelRenderBaseMultiBlockMachine;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;

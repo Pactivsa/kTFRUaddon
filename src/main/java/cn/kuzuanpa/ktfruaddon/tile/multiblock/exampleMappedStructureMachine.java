@@ -19,7 +19,8 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.TileEntityBaseLimitedOutputMachine;
+import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseLimitedOutputMachine;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;
@@ -37,7 +38,7 @@ import java.util.List;
 
 import static gregapi.data.CS.*;
 
-public class exampleMappedStructureMachine extends TileEntityBaseLimitedOutputMachine implements IMappedStructure{
+public class exampleMappedStructureMachine extends TileEntityBaseLimitedOutputMachine implements IMappedStructure {
 
     //决定机器大小
     //this controls the size of machine.
@@ -119,8 +120,6 @@ public class exampleMappedStructureMachine extends TileEntityBaseLimitedOutputMa
     }
     public short getRegistryID(int checkX, int checkY, int checkZ){return registryIDMap[checkY][checkZ][checkX];}
 
-    @Override
-    public List<ChunkCoordinates> getComputeNodesCoordList() {return null;}
     ChunkCoordinates lastFailedPos=null;
     @Override
     public boolean checkStructure2() {

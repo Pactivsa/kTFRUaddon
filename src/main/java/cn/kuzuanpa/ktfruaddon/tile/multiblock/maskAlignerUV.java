@@ -16,7 +16,9 @@
 package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.TileEntityBaseControlledMachine;
+import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseControlledMachine;
+import cn.kuzuanpa.ktfruaddon.api.tile.part.IConditionParts;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.cover.ICover;
@@ -40,6 +42,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.IFluidHandler;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static gregapi.data.CS.*;
 public class maskAlignerUV extends TileEntityBaseControlledMachine implements IMappedStructure {
@@ -80,8 +83,6 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
 
     public short getRegistryID(int x,int y,int z){return k;}
 
-    @Override
-    public List<ChunkCoordinates> getComputeNodesCoordList() {return null;}
     ChunkCoordinates lastFailedPos=null;
     @Override
     public boolean checkStructure2() {
@@ -91,9 +92,15 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
         if(lastFailedPos!=null)resetParts();
         return lastFailedPos==null;
     }
+
     @Override
-    public List<ChunkCoordinates> getConditionPartsPosList() {
-        return ConditionPartsPos;
+    public boolean isPartSpecial(TileEntity tile) {
+        return tile instanceof IConditionParts;
+    }
+
+    @Override
+    public void receiveSpecialBlockList(List<TileEntity> list) {
+        ConditionPartsPos = list.stream().map(tile -> new ChunkCoordinates(tile.xCoord,tile.yCoord,tile.zCoord)).collect(Collectors.toList());
     }
 
     public void resetParts() {

@@ -18,9 +18,9 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.storage;
 
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.AsyncStructureManager;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.IAsyncMappedStructure;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async.IAsyncStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.AsyncStructureManager;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import codechicken.lib.vec.BlockCoord;
@@ -258,7 +258,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
             if(!checkRange.isCoordInBox(coord))return false;//Out Bound
 
             //check the block below is in sink || the below block is a valid wall
-            if(((layer!=0 && !checkedAirList.contains(new BlockCoord(coord.x, yCoord+layer-1, coord.z))) && Arrays.stream(getAvailableTiles()).noneMatch(availTile -> IAsyncStructure.checkAndSetTarget(worldContainer, this, new ChunkCoordinates(coord.x, yCoord+layer-1, coord.z), availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage)))) return false;
+            if(!checkedAirList.contains(new BlockCoord(coord.x, yCoord+layer-1, coord.z)) && Arrays.stream(getAvailableTiles()).noneMatch(availTile -> IAsyncStructure.checkAndSetTarget(worldContainer, this, new ChunkCoordinates(coord.x, yCoord+layer-1, coord.z), availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage))) return false;
             for (int i = 0; i < 4; i++) {
                 BlockCoord coordNext = new BlockCoord(coord.x + forX[i], yCoord + layer, coord.z + forZ[i]);
                 if(checkedAirList.contains(coordNext))continue;
@@ -385,8 +385,6 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     public boolean isIgnored(int checkX, int checkY, int checkZ){return false;}
     public short getRegistryID(int x,int y,int z){return g;}
 
-    @Override
-    public List<ChunkCoordinates> getComputeNodesCoordList() {return null;}
     ChunkCoordinates lastFailedPos=null;
     UUID asyncTaskID = UUID.randomUUID();
     @Override
@@ -397,7 +395,8 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
         if(!isServerSide()&& Blocks.stonebrick.equals(worldObj.getBlock(tX,tY-2,tZ)))disableTESR=true;
         if(!isServerSide() && disableTESR)return false;
         if(!isServerSide())mStructureOkay=false;//disable Client TESR to avoid Concurrent access to TESR data lists.
-        if(AsyncStructureManager.getCheckState(asyncTaskID) == AsyncStructureManager.STATE_NOT_FOUND)AsyncStructureManager.addStructureComputeTask(new AsyncStructureManager.StructureComputeData(asyncTaskID,worldObj,this).setDesc(this.toString()+"/x:"+xCoord+"/y:"+yCoord+"/z:"+zCoord));
+        FMLLog.log(Level.FATAL,"Sent Async Check Request");
+        if(AsyncStructureManager.getCheckState(asyncTaskID) == AsyncStructureManager.STATE_NOT_FOUND)AsyncStructureManager.addStructureComputeTask(new AsyncStructureManager.StructureComputeData(asyncTaskID,worldObj,this).setDesc(this.toString()+"/x:"+xCoord+"/y:"+yCoord+"/z:"+zCoord+"/isServerSide: "+isServerSide()));
         return false;
     }
 
@@ -415,7 +414,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     public void onAsyncCheckStructureCompleted() {
         try {
             mStructureOkay = AsyncStructureManager.isStructureCompleted(asyncTaskID);
-            FMLLog.log(Level.FATAL,"Successfully received Async Check: "+mStructureOkay+this.toString()+"/x:"+xCoord+"/y:"+yCoord+"/z:"+zCoord);
+            FMLLog.log(Level.FATAL,"Successfully received Async Check:   "+mStructureOkay+this.toString()+"  /x:"+xCoord+"/y:"+yCoord+"/z:"+zCoord);
             AsyncStructureManager.removeCompletedTask(asyncTaskID);
         }catch (AsyncStructureManager.NotCompletedException e){}
     }

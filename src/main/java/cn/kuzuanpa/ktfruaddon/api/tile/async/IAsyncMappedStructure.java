@@ -14,24 +14,20 @@
  */
 
 
-package cn.kuzuanpa.ktfruaddon.tile.multiblock.base.async;
+package cn.kuzuanpa.ktfruaddon.api.tile.async;
 
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
-import cn.kuzuanpa.ktfruaddon.tile.multiblock.parts.IComputeNode;
+import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
-import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
 import net.minecraft.util.ChunkCoordinates;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
-public interface IAsyncMappedStructure extends ITileEntityMultiBlockController {
+public interface IAsyncMappedStructure extends IMappedStructure {
     /**@return null = structure complete**/
-    @Nullable
-    default ChunkCoordinates checkMappedStructure(AsyncStructureManager.WorldContainer worldContainer, ChunkCoordinates lastFailedPos, int machineX, int machineY, int machineZ, int xMapOffset, int yMapOffset, int zMapOffset, boolean loadChunk){
+    default @Nullable ChunkCoordinates checkMappedStructure(AsyncStructureManager.WorldContainer worldContainer, ChunkCoordinates lastFailedPos, int machineX, int machineY, int machineZ, int xMapOffset, int yMapOffset, int zMapOffset, boolean loadChunk){
         if (lastFailedPos != null) FxRenderBlockOutline.removeBlockOutlineToRender(lastFailedPos);
         int tX = getX(), tY = getY(), tZ = getZ();
-        if (worldContainer.getBlock(tX, tY, tZ) == null && !loadChunk) return null;
+        if (!worldContainer.isBlockExist(tX, tY, tZ) && !loadChunk) return null;
         tX = utils.getRealX(getFacing(), tX, xMapOffset, -zMapOffset);
         tY += yMapOffset;
         tZ = utils.getRealZ(getFacing(), tZ, xMapOffset, -zMapOffset);
@@ -40,29 +36,10 @@ public interface IAsyncMappedStructure extends ITileEntityMultiBlockController {
             int realX=utils.getRealX(getFacing(), tX, mapX, mapZ),realY=tY + mapY,realZ=utils.getRealZ(getFacing(), tZ, mapX, mapZ);
             if (isIgnored(mapX,mapY,mapZ)) continue;
             if (IAsyncStructure.checkAndSetTarget(worldContainer,this, new ChunkCoordinates(realX, realY, realZ), getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ), getDesign(mapX,mapY,mapZ, getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ) ), getUsage(mapX,mapY,mapZ, getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ) ))) {
-                if (getControllerPosList()!=null && isController(mapX,mapY,mapZ, getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ))) getControllerPosList().add(new ChunkCoordinates(realX,realY,realZ));
-                if (getComputeNodesCoordList()!=null&& worldContainer.getTileEntity(realX,realY,realZ) instanceof IComputeNode) getComputeNodesCoordList().add(new ChunkCoordinates(realX,realY,realZ));
+
             } else if(!onCheckFailed(mapX,mapY,mapZ))return new ChunkCoordinates(realX,realY,realZ);
         }
         return null;
     }
 
-    /**@return will we ignore this error and continue check**/
-    default boolean onCheckFailed(int mapX,int mapY,int mapZ){return false;}
-
-    /**These are made for TileEntityBaseControlledMachine**/
-    default boolean isController(int mapX,int mapY,int mapZ, int registryID, int blockID) {return false;}
-    default List<ChunkCoordinates> getControllerPosList(){return null;}
-
-    int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID);
-    int getUsage(int mapX, int mapY, int mapZ, int registryID, int blockID);
-    int getBlockID(int mapX,int mapY,int mapZ);
-    boolean isIgnored(int mapX,int mapY,int mapZ);
-    short getRegistryID(int mapX,int mapY,int mapZ);
-    short getFacing();
-    int getX();
-    int getY();
-    int getZ();
-     
-    List<ChunkCoordinates> getComputeNodesCoordList();
 }
