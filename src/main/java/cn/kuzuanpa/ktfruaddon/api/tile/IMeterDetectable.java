@@ -20,21 +20,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface IMeterDetectable {
-
-    static void sendReceiveEmitMessage(ArrayList<cn.kuzuanpa.ktfruaddon.api.tile.IMeterDetectable.MeterData> receivedEnergyList, TagData mEnergyTypeEmitting, long mSizeEmitting, long mAmperageEmitting, List<String> aChatReturn) {
+    static void sendReceiveEmitMessage(ArrayList<MeterData> receivedEnergyList, ArrayList<MeterData> emittedEnergyList, List<String> aChatReturn) {
         if (!receivedEnergyList.isEmpty()) {
             aChatReturn.add("Receiving Energies: ");
-            receivedEnergyList.forEach(e->aChatReturn.add(e.mSize + " "+e.mEnergyType.getLocalisedChatNameShort()+"\u00a7r/A * "+e.mAmperage +" A/t"));
+            receivedEnergyList.forEach(e->aChatReturn.add(e.mSize + " "+e.mEnergyType.getLocalisedChatNameShort()+"§r/A * "+e.mAmperage +" A/t"));
         }
         else aChatReturn.add("Not Receiving Power");
 
-        if (mSizeEmitting!=0&&mAmperageEmitting !=0) aChatReturn.add("Emitting: "+mSizeEmitting+" "+mEnergyTypeEmitting.getLocalisedChatNameShort()+"\u00a7r/A * "+mAmperageEmitting + " A/t");
+        if (!emittedEnergyList.isEmpty()) {
+            aChatReturn.add("Emitting Energies: ");
+            emittedEnergyList.forEach(e->aChatReturn.add(e.mSize + " "+e.mEnergyType.getLocalisedChatNameShort()+"§r/A * "+e.mAmperage +" A/t"));
+        }
         else aChatReturn.add("Not Emitting Power");
     }
-    static void sendTransferMessage(ArrayList<cn.kuzuanpa.ktfruaddon.api.tile.IMeterDetectable.MeterData> transferedEnergyList, List<String> aChatReturn) {
+
+    static void sendReceiveEmitMessage(ArrayList<MeterData> receivedEnergyList, TagData mEnergyTypeEmitting, long mSizeEmitting, long mAmperageEmitting, List<String> aChatReturn) {
+        if (!receivedEnergyList.isEmpty()) {
+            aChatReturn.add("Receiving Energies: ");
+            receivedEnergyList.forEach(e->aChatReturn.add(e.mSize + " "+e.mEnergyType.getLocalisedChatNameShort()+"§r/A * "+e.mAmperage +" A/t"));
+        }
+        else aChatReturn.add("Not Receiving Power");
+
+        if (mSizeEmitting!=0&&mAmperageEmitting !=0) aChatReturn.add("Emitting: "+mSizeEmitting+" "+mEnergyTypeEmitting.getLocalisedChatNameShort()+"§r/A * "+mAmperageEmitting + " A/t");
+        else aChatReturn.add("Not Emitting Power");
+    }
+    static void sendTransferMessage(ArrayList<MeterData> transferedEnergyList, List<String> aChatReturn) {
         if (!transferedEnergyList.isEmpty()) {
             aChatReturn.add("Transferring Energies: ");
-            transferedEnergyList.forEach(e->aChatReturn.add(e.mSize + " "+e.mEnergyType.getLocalisedChatNameShort()+"\u00a7r/A * "+e.mAmperage +" A/t"));
+            transferedEnergyList.forEach(e->aChatReturn.add(e.mSize + " "+e.mEnergyType.getLocalisedChatNameShort()+"§r/A * "+e.mAmperage +" A/t"));
         }
         else aChatReturn.add("Not Transfer Power");
     }

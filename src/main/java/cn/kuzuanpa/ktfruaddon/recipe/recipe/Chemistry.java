@@ -25,7 +25,7 @@ import static gregapi.data.CS.*;
 
 public class Chemistry {
     public static void init(){
-        recipeMaps.FluidHeating.addRecipe0(F,80,400,FL.array(FL.DistW.make(100)),FL.array(FL.Steam.make(16000)));
+        recipeMaps.FluidHeating.addRecipe0(F,80,20,FL.array(FL.DistW.make(10)),FL.array(FL.Steam.make(1600)));
 
         recipeMaps.FluidHeating.addRecipe0(F,20,10,FL.array(FL.Coolant_IC2.make(10)),FL.array(FL.Coolant_IC2_Hot.make(10)));
         recipeMaps.FluidHeating.addRecipe0(F,72,10,FL.array(flList.MoltenNaK.make(10)),FL.array(flList.HotMoltenNaK.make(10)));
