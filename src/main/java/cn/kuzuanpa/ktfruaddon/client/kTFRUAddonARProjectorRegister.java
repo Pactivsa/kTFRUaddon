@@ -43,15 +43,49 @@ public class kTFRUAddonARProjectorRegister implements IDummyMultiBlockRegisterer
     }
     @Override
     public List<DummyTileMultiBlock> getDummyMultiBlocks() {
-
+        dummyStructures.add(new DummyTileMultiBlock(cncMachine3(),"ktfru.projector.cncMachine3"));
+        dummyStructures.add(new DummyTileMultiBlock(MantleHeater(),"ktfru.projector.MantleHeater"));
         dummyStructures.add(new DummyTileMultiBlock(TokamakTierExp(),"ktfru.projector.fusionReactorTokamakExperiment"));
         dummyStructures.add(new DummyTileMultiBlock(new Object[][][]{TokamakTier1Layer13(),TokamakTier1Layer12(),TokamakTier1Layer11(),TokamakTier1Layer10(),TokamakTier1Layer9(),TokamakTier1Layer8(),TokamakTier1Layer7(),TokamakTier1Layer6(),TokamakTier1Layer5(),TokamakTier1Layer4(),TokamakTier1Layer3(),TokamakTier1Layer2(),TokamakTier1Layer1(),TokamakTier1Layer0()},"ktfru.projector.fusionReactorTokamakT1"));
         dummyStructures.add(new DummyTileMultiBlock(oilMiner(),"ktfru.projector.oilMiner"));
-        dummyStructures.add(new DummyTileMultiBlock(cncMachine3(),"ktfru.projector.cncMachine3"));
         dummyStructures.add(new DummyTileMultiBlock(FuelDeburnFactory(),"ktfru.projector.fuelDeburnFactory"));
 
         return dummyStructures;
     }
+    static Object[][][] MantleHeater() {
+        BlockMeta main = tile(k, 30028);
+        BlockMeta wall = tile(g, 18004);
+        BlockMeta dril = tile(k, 31039);
+        BlockMeta pipe = tile(k, 31003);
+        BlockMeta topl = tile(k, 31004);
+
+        return new Object[][][]{{
+                {wall, wall, wall, wall, wall},
+                {wall, wall, wall, wall, wall},
+                {wall, wall, dril, wall, wall},
+                {wall, wall, wall, wall, wall},
+                {wall, wall, wall, wall, wall},
+        }, {
+                {wall, wall, main, wall, wall},
+                {wall, pipe, pipe, pipe, wall},
+                {wall, pipe, pipe, pipe, wall},
+                {wall, pipe, pipe, pipe, wall},
+                {wall, wall, wall, wall, wall},
+        }, {
+                {null, wall, wall, wall, null},
+                {wall, pipe, pipe, pipe, wall},
+                {wall, pipe, pipe, pipe, wall},
+                {wall, pipe, pipe, pipe, wall},
+                {null, wall, wall, wall, null},
+        }, {
+                {null, null, wall, null, null},
+                {null, wall, topl, wall, null},
+                {wall, topl, topl, topl, wall},
+                {null, wall, topl, wall, null},
+                {null, null, wall, null, null},
+        }};
+    }
+
     static Object[][][] cncMachine3(){
         BlockMeta main = tile(k, 30012);
         BlockMeta wall = tile(k, 31000);

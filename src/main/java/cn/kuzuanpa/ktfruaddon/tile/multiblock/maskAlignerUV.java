@@ -44,7 +44,8 @@ import net.minecraftforge.fluids.IFluidHandler;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static gregapi.data.CS.*;
+import static gregapi.data.CS.SIDE_BOTTOM;
+import static gregapi.data.CS.T;
 public class maskAlignerUV extends TileEntityBaseControlledMachine implements IMappedStructure {
     public final short sizeX = 3, sizeY = 2, sizeZ = 2;
     public final short xMapOffset = -1;
@@ -73,7 +74,7 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
 
     @Override
     public int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID) {
-        return 1;
+        return 0;
     }
 
     public int getBlockID(int checkX, int checkY, int checkZ){return blockIDMap[checkY][checkZ][checkX];}
@@ -89,7 +90,6 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
         int tX = xCoord, tY = yCoord, tZ = zCoord;
         if (!worldObj.blockExists(tX, tY, tZ)) return mStructureOkay;
         lastFailedPos = checkMappedStructure(null, sizeX, sizeY, sizeZ,xMapOffset,0,0);
-        if(lastFailedPos!=null)resetParts();
         return lastFailedPos==null;
     }
 
@@ -103,21 +103,6 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
         ConditionPartsPos = list.stream().map(tile -> new ChunkCoordinates(tile.xCoord,tile.yCoord,tile.zCoord)).collect(Collectors.toList());
     }
 
-    public void resetParts() {
-        int tX = xCoord, tY = yCoord, tZ = zCoord;
-        if (worldObj.blockExists(tX, tY, tZ)) {
-            tX= utils.getRealX(mFacing,tX,xMapOffset,0);
-            tZ=utils.getRealZ(mFacing,tZ,xMapOffset,0);
-            int cX, cY, cZ;
-            for (cY  = 0; cY < sizeY; cY++) {
-                for (cZ = 0; cZ < sizeZ; cZ++) {
-                    for (cX = 0; cX < sizeX; cX++) {
-                        if(!isIgnored(cX,cY,cZ))utils.resetTarget(this, utils.getRealX(mFacing, tX, cX, cZ), tY + cY, utils.getRealZ(mFacing, tZ, cX, cZ), 0, getUsage( cX,cY,cZ,getBlockID(cX,cY,cZ), getRegistryID(cX,cY,cZ)));
-                    }
-                }
-            }
-        }
-    }
         //这是设置主方块的物品提示
         //controls tooltip of controller block
         static {
@@ -175,54 +160,28 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
 
     @Override
     public int getRenderPasses2(Block aBlock, boolean[] aShouldSideBeRendered) {
-        return 5;
+        return 3;
     }
 
     @Override
     public boolean setBlockBounds2(Block aBlock, int aRenderPass, boolean[] aShouldSideBeRendered) {
         if (mStructureOkay) {
             BoundingBox box;
-            switch (aRenderPass) {
-                case 0:
-                    box = new BoundingBox(utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, -1.502, -0.4999, -0.502), utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, 1.501, 2.5, 1.501));
-                    return box(aBlock, box.minX, box.minY, box.minZ, box.maxX, box.maxY, box.maxZ);
-                case 1:
-                    box = new BoundingBox(utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, -0.5, -0.502, -0.5), utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, 0.5, 1.502, 0.5));
-                    return box(aBlock, box.minX, box.minY, box.minZ, box.maxX, box.maxY, box.maxZ);
-                case 2:
-                    //box for Top&Bottom overlay
-                    box = new BoundingBox(utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, -0.5, -0.502, 0.5), utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, 0.5, 1.502, 1.5));
-                    return box(aBlock, box.minX, box.minY, box.minZ, box.maxX, box.maxY, box.maxZ);
-                case 3:
-                    //box for Top&Bottom texture
-                    box = new BoundingBox(utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, -1.5, -0.501, -0.5), utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, 1.5, 1.501, 2.5));
-                    return box(aBlock, box.minX, box.minY, box.minZ, box.maxX, box.maxY, box.maxZ);
-                case 4:
-                    box = new BoundingBox(utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, -1.501, -0.5, -0.5), utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, 1.501, 1.5, 1.5));
-                    return box(aBlock, box.minX, box.minY, box.minZ, box.maxX, box.maxY, box.maxZ);
+            if (aRenderPass == 1) {
+                box = new BoundingBox(utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, -1.502, -0.4999, -0.502), utils.getRealCoord(mFacing, 0.5, 0.5, 0.5, 1.501, 2.5, 1.501));
+                return box(aBlock, box.minX, box.minY, box.minZ, box.maxX, box.maxY, box.maxZ);
             }
         }
         return T;
     }
 
-
     public static IIconContainer
-            sTextureSidesA      = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/normal/sidesa"),
-            sTextureSidesB      = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/normal/sidesb"),
             sTextureSingle      = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/single/sides"),
             sOverlaySingleFront = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/single/front"),
             sOverlayFront       = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/front"),
             sOverlayFrontActive = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/front_active"),
             sOverlayFrontRunningGlow = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/front_running_glow"),
-            sOverlayFrontActiveGlow = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/front_active_glow"),
-            sOverlayBack        = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/back"),
-            sOverlayTopA        = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/topa"),
-            sOverlayTopB        = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/topb"),
-            sOverlayBottomB        = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/bottom"),
-    sTextureTopA       = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/normal/topa"),
-    sTextureTopB       = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/normal/topb"),
-    sTextureTopC       = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/normal/topc"),
-    sTextureTopD       = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/normal/topd")
+            sOverlayFrontActiveGlow = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/overlay/front_active_glow")
             ;
     @Override
     public boolean breakBlock() {
@@ -231,7 +190,6 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
         CS.GarbageGT.trash(mTanksOutput);
         CS.GarbageGT.trash(mOutputItems);
         CS.GarbageGT.trash(mOutputFluids);
-        resetParts();
         return super.breakBlock();
     }
     @Override
@@ -240,25 +198,9 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
         if (mStructureOkay) {
             switch (aRenderPass) {
-                case 0:
-                    if (mActive) {
-                        return aSide == mFacing ? BlockTextureMulti.get(BlockTextureDefault.get(sTextureSidesA, mRGBa), BlockTextureDefault.get(sOverlayFrontActive), BlockTextureDefault.get(sOverlayFrontActiveGlow, true)) : SIDE_TOP == aSide||SIDE_BOTTOM == aSide ?null: aSide == OPOS[mFacing] ? BlockTextureMulti.get(BlockTextureDefault.get(sTextureSidesA, mRGBa),BlockTextureDefault.get(sOverlayBack)) : null;
-                    } else if (mRunning) {
-                        return aSide == mFacing ? BlockTextureMulti.get(BlockTextureDefault.get(sTextureSidesA, mRGBa), BlockTextureDefault.get(sOverlayFront), BlockTextureDefault.get(sOverlayFrontRunningGlow, true)) : SIDE_TOP == aSide||SIDE_BOTTOM == aSide ? null: aSide == OPOS[mFacing] ? BlockTextureMulti.get(BlockTextureDefault.get(sTextureSidesA, mRGBa),BlockTextureDefault.get(sOverlayBack)) : null;
-                    }
-                    return aSide == mFacing ? BlockTextureMulti.get(BlockTextureDefault.get(sTextureSidesA, mRGBa), BlockTextureDefault.get(sOverlayFront)) :  SIDE_TOP == aSide||SIDE_BOTTOM == aSide ? null :  aSide == OPOS[mFacing] ? BlockTextureMulti.get(BlockTextureDefault.get(sTextureSidesA, mRGBa),BlockTextureDefault.get(sOverlayBack)) : null;
+                case 0:return BlockTextureDefault.get(sTextureSingle, mRGBa);
                 case 1:
-                    return aSide == SIDE_TOP?BlockTextureMulti.get(BlockTextureDefault.get(sOverlayTopA)):null;
-                case 2:
-                    return aSide == SIDE_BOTTOM?BlockTextureMulti.get(BlockTextureDefault.get(sOverlayBottomB)):aSide == SIDE_TOP?BlockTextureMulti.get(BlockTextureDefault.get(sOverlayTopB)):null;
-                case 3:
-                    if(mFacing==2) return aSide == SIDE_BOTTOM||aSide == SIDE_TOP?BlockTextureMulti.get(BlockTextureDefault.get(sTextureTopC,mRGBa)):null;
-                    if(mFacing==3) return aSide == SIDE_BOTTOM||aSide == SIDE_TOP?BlockTextureMulti.get(BlockTextureDefault.get(sTextureTopA,mRGBa)):null;
-                    if(mFacing==4) return aSide == SIDE_BOTTOM||aSide == SIDE_TOP?BlockTextureMulti.get(BlockTextureDefault.get(sTextureTopB,mRGBa)):null;
-                    if(mFacing==5) return aSide == SIDE_BOTTOM||aSide == SIDE_TOP?BlockTextureMulti.get(BlockTextureDefault.get(sTextureTopD,mRGBa)):null;
-
-                case 4:
-                    return aSide != mFacing &&aSide != OPOS[mFacing] &&aSide != SIDE_BOTTOM &&aSide != SIDE_TOP ? BlockTextureMulti.get(BlockTextureDefault.get(sTextureSidesB, mRGBa)):null;
+                    return aSide == mFacing?BlockTextureMulti.get(BlockTextureDefault.get(mActive?sOverlayFrontActive:sOverlayFront), BlockTextureDefault.get(mActive?sOverlayFrontActiveGlow: mRunning? sOverlayFrontRunningGlow : null, true)):null;
 
             }
         }

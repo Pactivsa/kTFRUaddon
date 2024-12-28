@@ -2,6 +2,8 @@ ktfru.projector.fusionReactorTokamakExperiment=托卡马克堆(实验)
 ktfru.projector.fusionReactorTokamakT1=托卡马克堆(T1)
 ktfru.projector.cncMachine3=3轴数控车床
 ktfru.projector.oilMiner=油井
+ktfru.projector.MantleHeater=地热站
+ktfru.projector.fuelDeburnFactory=回收燃料厂
 
 ktfru.text.common.side.front=前侧
 ktfru.text.common.side.back=后侧

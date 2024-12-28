@@ -2,6 +2,8 @@ ktfru.projector.fusionReactorTokamakExperiment=Tokamak Reactor(Exp)
 ktfru.projector.fusionReactorTokamakT1=Tokamak Reactor(T1)
 ktfru.projector.cncMachine3=3-axle CNC Machine
 ktfru.projector.oilMiner=Oil Miner
+ktfru.projector.MantleHeater=Mantle Heater
+ktfru.projector.fuelDeburnFactory=Fuel Deburn Factory
 
 
 ktfru.tooltip.common.side.front=front

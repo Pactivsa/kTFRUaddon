@@ -16,6 +16,7 @@
 package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
@@ -130,8 +131,7 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
 
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
-        aList.add(LH.Chat.CYAN + LH.get(LH.STRUCTURE) + ":");
-        aList.add(LH.Chat.WHITE + LH.get("ktfru.tooltip.multiblock.sunheater.1"));
+        aList.add(LH.Chat.CYAN + LH.get(I18nHandler.HAS_PROJECTOR_STRUCTURE));
         aList.add(LH.Chat.DRED + LH.get(LH.HAZARD_MELTDOWN));
         aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_TOGGLE_SCREWDRIVER));
         aList.add(LH.Chat.DGRAY + LH.get(LH.TOOL_TO_MEASURE_THERMOMETER));
@@ -166,8 +166,8 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
 
         return true;
     }
-    private static byte[] forX = {0, 0, 0, 1, -1};
-    private static byte[] forZ = {0, 1, -1, 0, 0};
+    private static final byte[] forX = {0, 0, 0, 1, -1};
+    private static final byte[] forZ = {0, 1, -1, 0, 0};
     @Override
     public void doOutputEnergy() {
         //emitEnergy
@@ -245,7 +245,7 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
         if (!aShouldSideBeRendered[aSide]) return null;
-        if(aSide==mFacing) return BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides, mRGBa),BlockTextureDefault.get(sOverlayStop      ));
+        if(aSide==mFacing) return BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides, mRGBa),BlockTextureDefault.get(sOverlayStop ));
         return BlockTextureDefault.get(sTextureSides, mRGBa);
     }
     public String getTileEntityName() {
