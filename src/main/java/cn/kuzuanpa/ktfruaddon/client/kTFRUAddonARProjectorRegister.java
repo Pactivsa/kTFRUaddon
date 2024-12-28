@@ -60,11 +60,17 @@ public class kTFRUAddonARProjectorRegister implements IDummyMultiBlockRegisterer
         BlockMeta topl = tile(k, 31004);
 
         return new Object[][][]{{
-                {wall, wall, wall, wall, wall},
-                {wall, wall, wall, wall, wall},
-                {wall, wall, dril, wall, wall},
-                {wall, wall, wall, wall, wall},
-                {wall, wall, wall, wall, wall},
+                {null, null, wall, null, null},
+                {null, wall, topl, wall, null},
+                {wall, topl, topl, topl, wall},
+                {null, wall, topl, wall, null},
+                {null, null, wall, null, null},
+        }, {
+                {null, wall, wall, wall, null},
+                {wall, pipe, pipe, pipe, wall},
+                {wall, pipe, pipe, pipe, wall},
+                {wall, pipe, pipe, pipe, wall},
+                {null, wall, wall, wall, null},
         }, {
                 {wall, wall, main, wall, wall},
                 {wall, pipe, pipe, pipe, wall},
@@ -72,17 +78,11 @@ public class kTFRUAddonARProjectorRegister implements IDummyMultiBlockRegisterer
                 {wall, pipe, pipe, pipe, wall},
                 {wall, wall, wall, wall, wall},
         }, {
-                {null, wall, wall, wall, null},
-                {wall, pipe, pipe, pipe, wall},
-                {wall, pipe, pipe, pipe, wall},
-                {wall, pipe, pipe, pipe, wall},
-                {null, wall, wall, wall, null},
-        }, {
-                {null, null, wall, null, null},
-                {null, wall, topl, wall, null},
-                {wall, topl, topl, topl, wall},
-                {null, wall, topl, wall, null},
-                {null, null, wall, null, null},
+                {wall, wall, wall, wall, wall},
+                {wall, wall, wall, wall, wall},
+                {wall, wall, dril, wall, wall},
+                {wall, wall, wall, wall, wall},
+                {wall, wall, wall, wall, wall},
         }};
     }
 
