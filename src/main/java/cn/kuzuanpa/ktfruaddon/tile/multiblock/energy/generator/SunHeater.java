@@ -22,7 +22,6 @@ import gregapi.code.TagData;
 import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.TD;
-import gregapi.fluid.FluidTankGT;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.tileentity.multiblocks.IMultiBlockFluidHandler;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
@@ -60,7 +59,6 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
     //决定结构检测的起始位置，默认情况下是从主方块起始
     //This controls where is the start point to check structure,Default is the position of controller block
     public final short xMapOffset = -2, zMapOffset = 0;
-    public FluidTankGT[] mTanks = {new FluidTankGT(80000),new FluidTankGT(80000)};
     public static int[][][] blockIDMap = {{
             {18002, 18002, 18002, 18002, 18002},
             {18002, 18002, 18002, 18002, 18002},

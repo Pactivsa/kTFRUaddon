@@ -64,11 +64,7 @@ public class maskAlignerEUV extends TileEntityBaseControlledMachine implements I
 
     //change value there to set usage of every block.
 
-    public int getUsage(int mapX, int mapY, int mapZ, int blockID, int registryID){
-        if (registryID==k) switch (blockID){
-            case 31110: return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
-            case 31120: return MultiTileEntityMultiBlockPart.ONLY_ITEM_FLUID;
-        }
+    public int getUsage(int mapX, int mapY, int mapZ){
         return MultiTileEntityMultiBlockPart.ONLY_IN;
     }
 
@@ -82,7 +78,7 @@ public class maskAlignerEUV extends TileEntityBaseControlledMachine implements I
 
     public short getRegistryID(int x,int y,int z){return k;}
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ, int blockID, int registryID) {
+    public int getDesign(int mapX, int mapY, int mapZ) {
         return 1;
     }
     @Override
@@ -113,7 +109,7 @@ public class maskAlignerEUV extends TileEntityBaseControlledMachine implements I
             for (cY  = 0; cY < machineY; cY++) {
                 for (cZ = 0; cZ < machineZ; cZ++) {
                     for (cX = 0; cX < machineX; cX++) {
-                        if(!isIgnored(cX,cY,cZ))utils.resetTarget(this, utils.getRealX(mFacing, tX, cX, cZ), tY + cY, utils.getRealZ(mFacing, tZ, cX, cZ), 0, getUsage( cX,cY,cZ,getBlockID(cX,cY,cZ), getRegistryID(cX,cY,cZ)));
+                        if(!isIgnored(cX,cY,cZ))utils.resetTarget(this, utils.getRealX(mFacing, tX, cX, cZ), tY + cY, utils.getRealZ(mFacing, tZ, cX, cZ), 0, getUsage( cX,cY,cZ));
                     }
                 }
             }

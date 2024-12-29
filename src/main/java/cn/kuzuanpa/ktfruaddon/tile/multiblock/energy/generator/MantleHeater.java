@@ -24,7 +24,6 @@ import gregapi.code.TagData;
 import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.TD;
-import gregapi.fluid.FluidTankGT;
 import gregapi.old.Textures;
 import gregapi.render.BlockTextureDefault;
 import gregapi.render.BlockTextureMulti;
@@ -58,7 +57,7 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
 
     public short progress = 0;
     public final short xMapOffset = -2, zMapOffset = 0;
-    public FluidTankGT[] mTanks = {new FluidTankGT(80000),new FluidTankGT(80000)};
+
     public static int[][][] blockIDMap = {{
             {18004, 18004, 18004, 18004, 18004},
             {18004, 18004, 18004, 18004, 18004},
@@ -87,9 +86,10 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
     short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
     short g = ST.id(MultiTileEntityRegistry.getRegistry("gt.multitileentity").mBlock);
 
-    public int getUsage(int mapX, int mapY, int mapZ, int registryID, int blockID){
-        if(blockID==18004&&registryID==g)return MultiTileEntityMultiBlockPart.ONLY_ITEM_FLUID_ENERGY_IN;
-        if(blockID==31004&&registryID==k)return MultiTileEntityMultiBlockPart.ONLY_FLUID_OUT;
+    public int getUsage(int mapX, int mapY, int mapZ) {
+int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
+        if(blockID==18004)return MultiTileEntityMultiBlockPart.ONLY_IN;
+        if(blockID==31004)return MultiTileEntityMultiBlockPart.ONLY_FLUID_OUT;
         return MultiTileEntityMultiBlockPart.NOTHING;
     }
 
@@ -106,9 +106,6 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
         super.writeToNBT2(aNBT);
         aNBT.setShort(NBT_PROGRESS, progress);
     }
-
-    @Override
-    public int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID) {return 0;}
 
     @Override
     public int getBlockID(int mapX, int mapY, int mapZ) {
@@ -201,7 +198,7 @@ public class MantleHeater extends HeaterBase implements IMultiBlockFluidHandler,
     }
 
     public void overheat() {
-        for (int x = -2; x < machineX-2; x++)for(int z=0;z<machineZ;z++)for(int y=0;y<machineY;y++)worldObj.setBlock(utils.getRealX(mFacing,xCoord,x,z),yCoord+y,utils.getRealZ(mFacing,zCoord,x,z), Blocks.flowing_lava);
+        for (int x = -2; x < machineX-2; x++)for(int z=0;z<machineZ;z++)for(int y=0;y<machineY-1;y++)worldObj.setBlock(utils.getRealX(mFacing,xCoord,x,z),yCoord+y,utils.getRealZ(mFacing,zCoord,x,z), Blocks.flowing_lava);
     }
 
     @Override

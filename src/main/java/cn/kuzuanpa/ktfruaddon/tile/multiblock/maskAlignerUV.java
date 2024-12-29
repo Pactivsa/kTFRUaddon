@@ -64,7 +64,8 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
     //change value there to set usage of every block.
 
     @Override
-    public int getUsage(int mapX,int mapY,int mapZ, int registryID, int blockID){
+    public int getUsage(int mapX, int mapY, int mapZ){
+        int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
         if (registryID==k) switch (blockID){
             case 31110: return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
             case 31120: return MultiTileEntityMultiBlockPart.ONLY_ITEM_FLUID;
@@ -73,7 +74,7 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
     }
 
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID) {
+    public int getDesign(int mapX, int mapY, int mapZ) {
         return 0;
     }
 
@@ -160,7 +161,7 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
 
     @Override
     public int getRenderPasses2(Block aBlock, boolean[] aShouldSideBeRendered) {
-        return 3;
+        return 2;
     }
 
     @Override
@@ -199,8 +200,7 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
         if (mStructureOkay) {
             switch (aRenderPass) {
                 case 0:return BlockTextureDefault.get(sTextureSingle, mRGBa);
-                case 1:
-                    return aSide == mFacing?BlockTextureMulti.get(BlockTextureDefault.get(mActive?sOverlayFrontActive:sOverlayFront), BlockTextureDefault.get(mActive?sOverlayFrontActiveGlow: mRunning? sOverlayFrontRunningGlow : null, true)):null;
+                case 1: return aSide == mFacing?BlockTextureMulti.get(BlockTextureDefault.get(mActive?sOverlayFrontActive:sOverlayFront), BlockTextureDefault.get(mActive?sOverlayFrontActiveGlow: mRunning? sOverlayFrontRunningGlow : null, true)):null;
 
             }
         }

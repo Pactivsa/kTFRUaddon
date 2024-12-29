@@ -371,13 +371,13 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     //change value there to set usage of every block.
 
     @Override
-    public int getUsage(int mapX,int mapY,int mapZ, int registryID, int blockID){
+    public int getUsage(int mapX, int mapY, int mapZ){
         if(mapY==0)return MultiTileEntityMultiBlockPart.ONLY_FLUID;
         return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
     }
 
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID) {
+    public int getDesign(int mapX, int mapY, int mapZ) {
         return 0;
     }
 

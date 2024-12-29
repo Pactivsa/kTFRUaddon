@@ -217,12 +217,13 @@ public class fuelDeburnFactory extends TileEntityBase10MultiBlockMachine impleme
     short g = ST.id(MultiTileEntityRegistry.getRegistry("gt.multitileentity").mBlock);
 
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID) {
+    public int getDesign(int mapX, int mapY, int mapZ) {
         return 0;
     }
 
     @Override
-    public int getUsage(int mapX, int mapY, int mapZ, int registryID, int blockID) {
+    public int getUsage(int mapX, int mapY, int mapZ) {
+int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
         if(mapY == 1 && blockID == 18002)return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
         if (blockID == 18002&&registryID==k) {
             return  MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;

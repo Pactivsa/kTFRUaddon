@@ -79,7 +79,8 @@ public class maskAlignerUVPlus extends TileEntityBaseControlledMachine implement
             {k, k, k},
     }};
     @Override
-    public int getUsage(int mapX,int mapY,int mapZ, int registryID, int blockID){
+    public int getUsage(int mapX, int mapY, int mapZ){
+        int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
         if (registryID==k) switch (blockID){
             case 31011: return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
             case 31021: return MultiTileEntityMultiBlockPart.ONLY_ITEM_FLUID;
@@ -101,7 +102,7 @@ public class maskAlignerUVPlus extends TileEntityBaseControlledMachine implement
     }
 
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ, int blockId, int registryID) {
+    public int getDesign(int mapX, int mapY, int mapZ) {
         return 1;
     }
     @Override

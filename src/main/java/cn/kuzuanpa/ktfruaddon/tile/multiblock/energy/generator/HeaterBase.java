@@ -17,7 +17,6 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 
 import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import gregapi.code.TagData;
-import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.TD;
 import gregapi.fluid.FluidTankGT;
@@ -135,8 +134,8 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
     public long onToolClick2(String aTool, long aRemainingDurability, long aQuality, Entity aPlayer, List<String> aChatReturn, IInventory aPlayerInventory, boolean aSneaking, ItemStack aStack, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if (aTool.equals(TOOL_thermometer)) aChatReturn.add("Temperature: " + getTemperature()+"/"+(961+DEFAULT_ENVIRONMENT_TEMPERATURE)+"K");
         if (aTool.equals(TOOL_magnifyingglass)){
-            if(mTanks[0].getFluid()!=null)aChatReturn.add("Tanks: " + mTanks[0].getFluid().getUnlocalizedName()+":"+mTanks[0].getFluid().amount);
             if(mTanks[0].getFluid()!=null&&mTanks[1].getFluid()!=null)aChatReturn.add("Tanks: " + mTanks[0].getFluid().getUnlocalizedName()+":"+mTanks[0].getFluid().amount+"/"+mTanks[1].getFluid().getUnlocalizedName()+":"+mTanks[1].getFluid().amount);
+            else if(mTanks[0].getFluid()!=null)aChatReturn.add("Tanks: " + mTanks[0].getFluid().getUnlocalizedName()+":"+mTanks[0].getFluid().amount);
         }
         if (aTool.equals(TOOL_screwdriver)) {
             workingMode= (short) (workingMode==0?1:0);
@@ -149,7 +148,7 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
     @Override protected IFluidTank[] getFluidTanks(MultiTileEntityMultiBlockPart aPart, byte aSide) {return mTanks;}
     @Override
     public IFluidTank getFluidTankFillable2(byte aSide, FluidStack aFluidToFill) {
-        return FL.powerconducting(aFluidToFill)? mTanks[0] : null;
+        return mTanks[0] ;
     }
     @Override
     public IFluidTank getFluidTankDrainable2(byte aSide, FluidStack aFluidToDrain) {

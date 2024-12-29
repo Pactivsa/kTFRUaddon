@@ -35,7 +35,7 @@ public interface IAsyncMappedStructure extends IMappedStructure {
         for (mapY = 0; mapY < machineY; mapY++) for (mapZ = 0; mapZ < machineZ ; mapZ++) for (mapX = 0; mapX < machineX; mapX++) {
             int realX=utils.getRealX(getFacing(), tX, mapX, mapZ),realY=tY + mapY,realZ=utils.getRealZ(getFacing(), tZ, mapX, mapZ);
             if (isIgnored(mapX,mapY,mapZ)) continue;
-            if (IAsyncStructure.checkAndSetTarget(worldContainer,this, new ChunkCoordinates(realX, realY, realZ), getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ), getDesign(mapX,mapY,mapZ, getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ) ), getUsage(mapX,mapY,mapZ, getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ) ))) {
+            if (IAsyncStructure.checkAndSetTarget(worldContainer,this, new ChunkCoordinates(realX, realY, realZ), getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ), getDesign(mapX,mapY,mapZ), getUsage(mapX,mapY,mapZ))) {
 
             } else if(!onCheckFailed(mapX,mapY,mapZ))return new ChunkCoordinates(realX,realY,realZ);
         }
