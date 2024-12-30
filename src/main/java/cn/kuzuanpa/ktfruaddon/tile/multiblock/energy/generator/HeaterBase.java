@@ -117,6 +117,7 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
                     timeRemains=0.0F;
                     mTanks[1].fill(recipeOutput);
                     mActivity.mActive = F;
+                    return;
                 }
             }
             Recipe tRecipe = mRecipes.findRecipe(this, mLastRecipe, T, Long.MAX_VALUE, NI, mTanks, ZL_IS);

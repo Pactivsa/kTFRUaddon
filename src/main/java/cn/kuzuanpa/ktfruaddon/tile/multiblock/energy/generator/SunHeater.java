@@ -62,7 +62,6 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
     public TagData mEnergyTypeEmitted=TD.Energy.HU;
     public boolean clickDoubleCheck=false;
     public short machineY=0;
-    public long mEnergyStoredLast = 0;
     //决定结构检测的起始位置，默认情况下是从主方块起始
     //This controls where is the start point to check structure,Default is the position of controller block
     public final short xMapOffset = -2, zMapOffset = 0;
@@ -217,7 +216,6 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
     public void onTick2(long aTimer, boolean aIsServerSide) {
         super.onTick2(aTimer,aIsServerSide);
         if (aTimer%60==0)clickDoubleCheck=false;
-        mEnergyStoredLast=mEnergyStored;
     }
 
     @Override
@@ -284,34 +282,16 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
         return SIDES_HORIZONTAL;
     }
 
-    public boolean mActive = false;
-
-    @Override
-    public boolean onTickCheck(long aTimer) {
-        return super.onTickCheck(aTimer) || mEnergyStoredLast!=mEnergyStored;
-    }
-
-    @Override
-    public byte getVisualData() {
-        return (byte) (mEnergyStoredLast!=mEnergyStored ?1:0);
-    }
-
-    @Override
-    public void setVisualData(byte aData) {
-        mActive = aData == 1;
-    }
-
     // Icons
     public final static IIconContainer
             sTextureSides     = new Textures.BlockIcons.CustomIcon("machines/multiblockmains/sunHeater/base"),
-            sOverlayStop      = new Textures.BlockIcons.CustomIcon("machines/multiblockmains/sunHeater/front"),
-            sOverlayActive    = new Textures.BlockIcons.CustomIcon("machines/multiblockmains/sunHeater/front_active");
+            sOverlayActive    = new Textures.BlockIcons.CustomIcon("machines/multiblockmains/sunHeater/front");
 
 
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
         if (!aShouldSideBeRendered[aSide]) return null;
-        if(aSide==mFacing) return BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides, mRGBa),BlockTextureDefault.get(mActive?sOverlayActive:sOverlayStop));
+        if(aSide==mFacing) return BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides, mRGBa),BlockTextureDefault.get(sOverlayActive));
         return BlockTextureDefault.get(sTextureSides, mRGBa);
     }
 }
