@@ -122,10 +122,6 @@ int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY,
         return getBlockID(mapX,mapY,mapZ) == 18004 ? g:k;
     }
 
-    static {
-        LH.add("ktfru.tooltip.multiblock.sunheater.1", "5x2x5 of Stainless Steel Walls");
-    }
-
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
         aList.add(LH.Chat.CYAN + LH.get(I18nHandler.HAS_PROJECTOR_STRUCTURE));
@@ -185,7 +181,7 @@ int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY,
 
     @Override
     public long getHotLiquidRecipeRate() {
-        return mRateMax * 4;
+        return mRateMax * 5 * 4;
     }
 
     @Override

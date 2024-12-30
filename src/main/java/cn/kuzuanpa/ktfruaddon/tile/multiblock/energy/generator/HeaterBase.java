@@ -49,6 +49,7 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
     public TE_Behavior_Active_Trinary mActivity = null;
     public Recipe.RecipeMap mRecipes = recipeMaps.FluidHeating;
     public Recipe mLastRecipe = null;
+    public FluidStack recipeOutput = null;
     private TagData mEnergyTypeEmitted=TD.Energy.HU;
 
     public FluidTankGT[] mTanks = {new FluidTankGT(80000),new FluidTankGT(80000)};
@@ -69,6 +70,10 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
         UT.NBT.setNumber(aNBT, WORKING_MODE, workingMode);
         mTanks[0].writeToNBT(aNBT, NBT_TANK+".0");
         mTanks[1].writeToNBT(aNBT, NBT_TANK+".1");
+        NBTTagCompound tag = new NBTTagCompound();
+        recipeOutput.writeToNBT(tag);
+        aNBT.setTag("recipe.Output",tag);
+        aNBT.setDouble("recipe.timeRemain",timeRemains);
     }
     public abstract void doOutputEnergy();
     public abstract void doOutputFluid();
@@ -84,16 +89,15 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
             overheat();
             mEnergyStored = 0;
         }
-        if (mEnergyStored < 0) mEnergyStored = 0;
 
         doOutputFluid();
 
         //Do Work
         if(workingMode==0) doOutputEnergy();
         if (workingMode==1) {
-            if (mEnergyStored <16) return;
             //doRecipe
             long mRateCurrent= getHotLiquidRecipeRate();
+            if (mEnergyStored < mRateCurrent) return;
             if (timeRemains>0){
                 if(mRateCurrent<(float)mLastRecipe.mEUt){
                     //Not Enough Energy
@@ -111,7 +115,7 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
                     //Done One Recipe
                     mEnergyStored -= (long) Math.abs(mRateCurrent*(timeRemains/speed));
                     timeRemains=0.0F;
-                    mTanks[1].fill(mLastRecipe.mFluidOutputs[0]);
+                    mTanks[1].fill(recipeOutput);
                     mActivity.mActive = F;
                 }
             }
@@ -122,10 +126,18 @@ public abstract class HeaterBase extends TileEntityBase10MultiBlockBase implemen
                 return;
             }
             if(!mTanks[1].canFillAll(tRecipe.mFluidOutputs[0]))return;
-            if (tRecipe.isRecipeInputEqual(T, T, mTanks, ZL_IS)) {
+            recipeOutput = tRecipe.mFluidOutputs[0].copy();
+            if (tRecipe.isRecipeInputEqual(T, F, mTanks, ZL_IS)) {
                 mActivity.mActive = T;
                 timeRemains=tRecipe.mDuration;
                 mLastRecipe = tRecipe;
+                double speed=(mRateCurrent/(float)mLastRecipe.mEUt);
+                while(speed > timeRemains){
+                    if(!mTanks[1].canFillAll(tRecipe.mFluidOutputs[0]) || !tRecipe.isRecipeInputEqual(T, F, mTanks, ZL_IS))break;
+                    timeRemains+=tRecipe.mDuration;
+                    recipeOutput.amount += tRecipe.mFluidOutputs[0].amount;
+                }
+
             }
         }
     }

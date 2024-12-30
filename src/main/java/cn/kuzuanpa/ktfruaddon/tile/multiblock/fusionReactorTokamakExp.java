@@ -134,13 +134,13 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
     public void onTick2(long aTimer, boolean aIsServerSide) {
         if (!aIsServerSide) return;
         if (!mStructureOkay){
-            if(mEnergyCharged>0)onError();
+            if(mEnergyCharged>1024)onError();
             return;
         }
         isComputePowerEnough = (computeNodesCoord.stream().filter(coord->WD.te(worldObj,coord,true) instanceof IComputeNode).mapToLong(coord->((IComputeNode) WD.te(worldObj,coord,true)).getComputePower()).sum() >= computePowerNeeded);
         if(!isComputePowerEnough){
             mFieldStrength= (short) Math.max(-1,mFieldStrength-1);
-            if(mFieldStrength<0&&mEnergyCharged>0)onError();
+            if(mFieldStrength<0&&mEnergyCharged>1024)onError();
             return;
         }
         //refresh state
@@ -235,7 +235,7 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
     }
 
     protected void onError(){
-        ((TileEntityBase01Root) WD.te(worldObj, xCoord, yCoord + 4, zCoord, false)).explode(2);
+        ((TileEntityBase01Root) WD.te(worldObj, xCoord, yCoord + 2, zCoord, false)).explode(2);
         Arrays.stream(mTanks).forEach(FluidTankGT::setEmpty);
         mEnergyCharged=0;
         mFieldStrength=0;
@@ -243,7 +243,7 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
         setState(STATE_ERROR);
     }
     @Override
-    public long doInject (TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject ) {
+    public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject ) {
         if(aEnergyType==mEnergyTypeCharging&&mState!=STATE_STOPPED&&mState!=STATE_ERROR){
             mRateCharging += aSize*aAmount;
             return aAmount;

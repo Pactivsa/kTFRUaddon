@@ -22,6 +22,11 @@ import gregapi.code.TagData;
 import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.TD;
+import gregapi.old.Textures;
+import gregapi.render.BlockTextureDefault;
+import gregapi.render.BlockTextureMulti;
+import gregapi.render.IIconContainer;
+import gregapi.render.ITexture;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.tileentity.multiblocks.IMultiBlockFluidHandler;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
@@ -30,6 +35,7 @@ import gregapi.util.OM;
 import gregapi.util.ST;
 import gregapi.util.UT;
 import gregapi.util.WD;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -56,6 +62,7 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
     public TagData mEnergyTypeEmitted=TD.Energy.HU;
     public boolean clickDoubleCheck=false;
     public short machineY=0;
+    public long mEnergyStoredLast = 0;
     //决定结构检测的起始位置，默认情况下是从主方块起始
     //This controls where is the start point to check structure,Default is the position of controller block
     public final short xMapOffset = -2, zMapOffset = 0;
@@ -210,6 +217,7 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
     public void onTick2(long aTimer, boolean aIsServerSide) {
         super.onTick2(aTimer,aIsServerSide);
         if (aTimer%60==0)clickDoubleCheck=false;
+        mEnergyStoredLast=mEnergyStored;
     }
 
     @Override
@@ -256,7 +264,10 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
 
     public boolean isEnergyAcceptingFrom(TagData aEnergyType, byte aSide, boolean aTheoretical) {return aEnergyType==TD.Energy.HU&&aSide==SIDE_BOTTOM&&mStructureOkay;}
 
-    @Override public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {if (aDoInject) mEnergyStored += (aAmount * aSize); return aAmount;}
+    @Override public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
+        if (aDoInject) mEnergyStored += (aAmount * aSize);
+        return aAmount;
+    }
 
     @Override public boolean isEnergyEmittingTo(TagData aEnergyType, byte aSide, boolean aTheoretical) {
         return aSide == SIDE_TOP && super.isEnergyEmittingTo(aEnergyType, aSide, aTheoretical);}
@@ -267,4 +278,40 @@ public class SunHeater extends HeaterBase implements IMultiBlockFluidHandler, IT
     @Override public long getEnergySizeOutputMin(TagData aEnergyType, byte aSide) {return maxEmitRatePerLayer;}
     @Override public long getEnergySizeOutputMax(TagData aEnergyType, byte aSide) {return maxEmitRatePerLayer*machineYmax;}
     @Override public Collection<TagData> getEnergyTypes(byte aSide) {return mEnergyTypeEmitted.AS_LIST;}
+
+    @Override
+    public boolean[] getValidSides() {
+        return SIDES_HORIZONTAL;
+    }
+
+    public boolean mActive = false;
+
+    @Override
+    public boolean onTickCheck(long aTimer) {
+        return super.onTickCheck(aTimer) || mEnergyStoredLast!=mEnergyStored;
+    }
+
+    @Override
+    public byte getVisualData() {
+        return (byte) (mEnergyStoredLast!=mEnergyStored ?1:0);
+    }
+
+    @Override
+    public void setVisualData(byte aData) {
+        mActive = aData == 1;
+    }
+
+    // Icons
+    public final static IIconContainer
+            sTextureSides     = new Textures.BlockIcons.CustomIcon("machines/multiblockmains/sunHeater/base"),
+            sOverlayStop      = new Textures.BlockIcons.CustomIcon("machines/multiblockmains/sunHeater/front"),
+            sOverlayActive    = new Textures.BlockIcons.CustomIcon("machines/multiblockmains/sunHeater/front_active");
+
+
+    @Override
+    public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
+        if (!aShouldSideBeRendered[aSide]) return null;
+        if(aSide==mFacing) return BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides, mRGBa),BlockTextureDefault.get(mActive?sOverlayActive:sOverlayStop));
+        return BlockTextureDefault.get(sTextureSides, mRGBa);
+    }
 }
