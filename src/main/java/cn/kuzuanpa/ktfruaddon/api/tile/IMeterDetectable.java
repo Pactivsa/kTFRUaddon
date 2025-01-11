@@ -41,7 +41,7 @@ public interface IMeterDetectable {
         }
         else aChatReturn.add("Not Receiving Power");
 
-        if (mSizeEmitting!=0&&mAmperageEmitting !=0) aChatReturn.add("Emitting: "+mSizeEmitting+" "+mEnergyTypeEmitting.getLocalisedChatNameShort()+"§r/A * "+mAmperageEmitting + " A/t");
+        if (mSizeEmitting!=0) aChatReturn.add("Emitting: "+mSizeEmitting+" "+mEnergyTypeEmitting.getLocalisedChatNameShort()+"§r/A * "+mAmperageEmitting + " A/t");
         else aChatReturn.add("Not Emitting Power");
     }
     static void sendTransferMessage(ArrayList<MeterData> transferedEnergyList, List<String> aChatReturn) {

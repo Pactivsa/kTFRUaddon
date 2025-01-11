@@ -14,23 +14,20 @@
  */
 
 package cn.kuzuanpa.ktfruaddon;
+
+import cn.kuzuanpa.ktfruaddon.command.CommandARRecipeGen;
 import cn.kuzuanpa.ktfruaddon.command.CommandTileCodeConvert;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.PlayerEvent;
 import gregapi.api.Abstract_Mod;
 import gregapi.api.Abstract_Proxy;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.ModData;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
-import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = cn.kuzuanpa.ktfruaddon.ktfruaddon.MOD_ID, name = ktfruaddon.MOD_NAME, version = ktfruaddon.VERSION,dependencies= ktfruaddon.DEPENDS , acceptedMinecraftVersions = "1.7.10")
 public final class ktfruaddon extends Abstract_Mod {
@@ -48,6 +45,7 @@ public final class ktfruaddon extends Abstract_Mod {
     @Mod.EventHandler
     public void registerCommands(FMLServerStartingEvent e){
         e.registerServerCommand(new CommandTileCodeConvert());
+        e.registerServerCommand(new CommandARRecipeGen());
     }
     public String getModID() {
         return "ktfruaddon";

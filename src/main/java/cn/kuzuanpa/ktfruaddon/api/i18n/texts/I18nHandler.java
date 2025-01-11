@@ -85,4 +85,6 @@ public class I18nHandler {
     public static final String FILTERING_PROPERTIES ="ktfru.text.filter.properties";
     public static final String FILTER_PROPERTIES_ALL="ktfru.text.filter.properties.all";
     public static final String ORE_SCANNER_REQUIRE_PIPES ="ktfru.text.filter.orescanner.require_pipe";
+    public static final String FUEL_BATTERY_0 ="ktfru.text.machine.fuelbattery.0";
+
 }

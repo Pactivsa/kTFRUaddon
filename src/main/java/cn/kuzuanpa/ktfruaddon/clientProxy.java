@@ -18,6 +18,8 @@ package cn.kuzuanpa.ktfruaddon;
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.client.render.*;
 import cn.kuzuanpa.ktfruaddon.api.nei.NeiHiddener;
+import cn.kuzuanpa.ktfruaddon.tile.energy.generator.WaterMill;
+import cn.kuzuanpa.ktfruaddon.tile.machine.TFCPresser;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.storage.LiquidBattery;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.model.CNCMachine3;
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.model.circuitAssembler;
@@ -50,6 +52,8 @@ public class clientProxy extends commonProxy {
         ClientRegistry.bindTileEntitySpecialRenderer(exampleMachineModel.class, new TESRExampleMultiBlock());
         ClientRegistry.bindTileEntitySpecialRenderer(circuitAssembler.class, new TESRCircuitAssembler());
         ClientRegistry.bindTileEntitySpecialRenderer(SunHeaterMirror.class, new TESRSunBoilerMirror());
+        ClientRegistry.bindTileEntitySpecialRenderer(WaterMill.class, new TESRWaterMill());
+        ClientRegistry.bindTileEntitySpecialRenderer(TFCPresser.class, new TESRTFCPresser());
         ClientRegistry.bindTileEntitySpecialRenderer(CNCMachine3.class, new TESRCNCMachine3());
         ClientRegistry.bindTileEntitySpecialRenderer(LiquidBattery.class, new TESRLiquidBattery());
 

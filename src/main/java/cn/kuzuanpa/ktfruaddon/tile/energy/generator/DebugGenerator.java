@@ -16,15 +16,14 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 
+import cn.kuzuanpa.ktfruaddon.api.tile.IMeterDetectable;
 import gregapi.code.TagData;
-import gregapi.data.LH;
 import gregapi.data.TD;
 import gregapi.old.Textures;
 import gregapi.render.BlockTextureDefault;
 import gregapi.render.IIconContainer;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase09FacingSingle;
-import cn.kuzuanpa.ktfruaddon.api.tile.IMeterDetectable;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.util.UT;
 import net.minecraft.block.Block;
@@ -33,6 +32,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class DebugGenerator extends TileEntityBase09FacingSingle implements ITil
     public TagData mEnergyTypeEmitted = TD.Energy.EU;
     public static final TagData[] availEmitEnergy = {TD.Energy.EU,TD.Energy.RU,TD.Energy.KU,TD.Energy.HU,TD.Energy.LU,TD.Energy.RF,TD.Energy.QU,TD.Energy.CU,TD.Energy.MU,TD.Energy.TU,TD.Energy.NU,TD.Energy.AU, };
     public int emitPointer;
-
+    ArrayList<MeterData> receivedEnergyList = new ArrayList<>(), receivedEnergyListLast = new ArrayList<>();
     @Override
     public void writeToNBT2(NBTTagCompound aNBT) {
         super.writeToNBT2(aNBT);
@@ -68,6 +68,8 @@ public class DebugGenerator extends TileEntityBase09FacingSingle implements ITil
     public void onTick2(long aTimer, boolean aIsServerSide) {
         if (aIsServerSide) {
             ITileEntityEnergy.Util.emitEnergyToNetwork(mEnergyTypeEmitted, mRate, mAmount, this);
+            receivedEnergyListLast = receivedEnergyList;
+            receivedEnergyList = new ArrayList<>();
         }
     }
 
@@ -136,7 +138,7 @@ public class DebugGenerator extends TileEntityBase09FacingSingle implements ITil
             mAmount-=1;
         }
         if (aChatReturn != null) {
-            aChatReturn.add("Emitting " + mRate + " " + mEnergyTypeEmitted.getLocalisedChatNameShort() + LH.Chat.WHITE + " /A * " + mAmount + LH.Chat.CYAN + " A /t");
+            IMeterDetectable.sendReceiveEmitMessage(receivedEnergyListLast,mEnergyTypeEmitted, mRate, mAmount, aChatReturn);
         }
         if (getFacingTool() != null && aTool.equals(getFacingTool())) {byte aTargetSide = UT.Code.getSideWrenching(aSide, aHitX, aHitY, aHitZ); if (getValidSides()[aTargetSide]) {byte oFacing = mFacing; mFacing = aTargetSide; updateClientData(); causeBlockUpdate(); onFacingChange(oFacing); return 10000;}}
         return 0;
@@ -144,6 +146,7 @@ public class DebugGenerator extends TileEntityBase09FacingSingle implements ITil
 
     @Override
     public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
+        receivedEnergyList.add(new MeterData(aEnergyType,aSize,aAmount));
         return aAmount;
     }
 

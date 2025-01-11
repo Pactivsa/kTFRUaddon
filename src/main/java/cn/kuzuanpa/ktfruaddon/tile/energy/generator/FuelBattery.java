@@ -16,6 +16,7 @@ package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import gregapi.block.multitileentity.IMultiTileEntity;
 import gregapi.code.TagData;
 import gregapi.data.FL;
@@ -64,6 +65,7 @@ import static gregapi.data.CS.*;
 public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidHandler, ITileEntityTapAccessible, ITileEntityFunnelAccessible, ITileEntityEnergy, ITileEntityRunningActively, ITileEntityAdjacentOnOff, IMultiTileEntity.IMTE_SyncDataByteArray {
     public boolean mStopped = F;
     public short mEfficiency = 10000;
+    public int mElectrolyteRequired=1000;
     public long mEnergy = 0, mRate = 32;
     public TagData mEnergyTypeEmitted = TD.Energy.EU;
     public RecipeMap mRecipes = recipeMaps.FuelBattery;
@@ -87,6 +89,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
         mActivity = new TE_Behavior_Active_Trinary(this, aNBT);
         if (aNBT.hasKey(NBT_STOPPED)) mStopped = aNBT.getBoolean(NBT_STOPPED);
         if (aNBT.hasKey(NBT_OUTPUT)) mRate = aNBT.getLong(NBT_OUTPUT);
+        if (aNBT.hasKey(kTileNBT.LIQUID_CATALYST_REQUIRED)) mElectrolyteRequired = aNBT.getInteger(kTileNBT.LIQUID_CATALYST_REQUIRED);
         if (aNBT.hasKey(NBT_EFFICIENCY)) mEfficiency = (short)UT.Code.bind_(0, 10000, aNBT.getShort(NBT_EFFICIENCY));
         if (aNBT.hasKey(NBT_ENERGY_EMITTED)) mEnergyTypeEmitted = TagData.createTagData(aNBT.getString(NBT_ENERGY_EMITTED));
         if (aNBT.hasKey(NBT_FUELMAP)) mRecipes = RecipeMap.RECIPE_MAPS.get(aNBT.getString(NBT_FUELMAP));
@@ -118,6 +121,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
         aList.add(Chat.GREEN    + LH.get(LH.FLUID_INPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_FRONT)+", "+LH.get(I18nHandler.SIDE_BACK)+" "+LH.get(I18nHandler.AUTO));
         aList.add(Chat.RED      + LH.get(LH.FLUID_OUTPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_RIGHT)+", "+LH.get(I18nHandler.SIDE_LEFT)+" "+LH.get(I18nHandler.AUTO));
         LH.addEnergyToolTips(this, aList, null, mEnergyTypeEmitted, null, LH.get(LH.FACE_FRONT));
+        aList.add(Chat.WHITE    + String.format(LH.get(I18nHandler.FUEL_BATTERY_0), mElectrolyteRequired));
         aList.add(Chat.ORANGE   + LH.get(LH.NO_GUI_FUNNEL_TAP_TO_TANK));
         aList.add(Chat.DGRAY    + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));
         aList.add(Chat.DGRAY    + LH.get(I18nHandler.USE_MONKEY_WRENCH_CHANGE_STRUCTURE));
@@ -145,7 +149,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
                 mEnergy -= mRate;
             }
             //doRecipe
-            if (!changingStaticTank&&mEnergy < mRate * 2 && !mStopped &&slot(0)!=null&&slot(1)!=null && mTankStatic.amount() >= 1000) {
+            if (!changingStaticTank&&mEnergy < mRate * 2 && !mStopped &&slot(0)!=null&&slot(1)!=null && mTankStatic.amount() >= mElectrolyteRequired) {
                 mActivity.mActive = F;
                 Recipe tRecipe = mRecipes.findRecipe(this, mLastRecipe, T, Long.MAX_VALUE, NI, mTanksRecipe, slot(0),slot(1));
                 if (tRecipe != null) {
@@ -333,7 +337,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
         return T;
     }
     @Override public String getTileEntityName() {return "ktfru.multitileentity.generator.gasbattery";}
-    //Inventroy
+    //Inventory
     @Override public ItemStack[] getDefaultInventory(NBTTagCompound aNBT) {return new ItemStack[2];}
     @Override public boolean canDrop(int aInventorySlot) {return T;}
 

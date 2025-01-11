@@ -69,7 +69,7 @@ public interface IComputerClusterUser {
         if(user.getController().getCluster() == null)return;
         List<ControllerData> list = user.getController().getCluster().getOnlineControllers();
         if(list.size() < 2)return;
-        int[] ints = new int[list.size()];
+        int[] ints = new int[list.size()*4];
         for (int i = 0; i < list.size(); i++) {
             ints[i*4] = list.get(i).world.provider.dimensionId;
             ints[i*4+1] = list.get(i).pos.x;

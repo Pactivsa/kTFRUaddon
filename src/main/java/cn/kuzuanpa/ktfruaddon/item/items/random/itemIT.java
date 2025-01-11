@@ -25,7 +25,7 @@ import static cn.kuzuanpa.ktfruaddon.ktfruaddon.MOD_ID;
 public class itemIT extends MultiItemRandom {
     public itemIT() {
         super(MOD_ID, "ktfru.item.it");
-        setCreativeTab(new CreativeTab(getUnlocalizedName(), "kTFRUAddon: IT", this, (short) 9951));
+        setCreativeTab(new CreativeTab(getUnlocalizedName(), "kTFRUAddon: IT", this, (short) 9701));
 
     }
 
