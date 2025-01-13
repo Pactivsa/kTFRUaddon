@@ -55,6 +55,8 @@ configurations {
 minecraft {
     version = project.minecraft_version + "-" + project.forge_version
     runDir = "run"
+    accessTransformer("src/main/resources/META-INF/ktfruaddon_at.cfg")
+    accessTransformer("kguilib_at.cfg")
 }
 
 dependencies {
@@ -122,6 +124,13 @@ artifacts {
     archives devJar
 }
 
+jar {
+    manifest {
+        attributes(
+                'FMLAT': 'ktfruaddon_at.cfg'
+        )
+    }
+}
 // This block configures any maven publications you want to make.
 publishing {
     publications {

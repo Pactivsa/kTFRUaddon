@@ -81,6 +81,8 @@ public class tileEntityInit0 {
         MultiTileEntityRegistry gRegistry = MultiTileEntityRegistry.getRegistry("gt.multitileentity");
         MultiTileEntityBlock tWireBlock = MultiTileEntityBlock.getOrCreate(MOD_ID, "machine", gregapi.block.MaterialMachines.instance, net.minecraft.block.Block.soundTypeMetal, gregapi.data.CS.TOOL_cutter, 0, 0, 15, F, F);
         MultiTileEntityBlock tMetalBlock = MultiTileEntityBlock.getOrCreate(MOD_ID, "iron", net.minecraft.block.material.Material.iron, net.minecraft.block.Block.soundTypeMetal, gregapi.data.CS.TOOL_pickaxe, 0, 0, 15, F, F);
+        MultiTileEntityBlock tWoodBlock  = MultiTileEntityBlock.getOrCreate(MOD_ID, "wood"         , Material.wood             , Block.soundTypeWood , TOOL_axe    , 0, 0, 15, F, F);
+
         OreDictMaterial aMat; Class<? extends net.minecraft.tileentity.TileEntity> aClass;
 
         int i;
@@ -124,10 +126,11 @@ public class tileEntityInit0 {
         //gregapi.tileentity.connectors.MultiTileEntityWireElectric.addElectricWires(50, 0, gregapi.data.CS.VMAX[4], 1, 0, 0, true, false, true, kRegistry0, tWireBlock, gregapi.tileentity.connectors.MultiTileEntityWireElectric.class, tExamplium);
 
         //9800-9899, Early TFC Stage Machines
-        aMat = MT.StainlessSteel;      kRegistry0.add("Water Mill"                                       , "ktfruaddon: Energy",  9800, 1304, WaterMill.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  1.5F, NBT_RESISTANCE,  1.5F), "SPS", "PRP", "SPS", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze));
-        aMat = MT.StainlessSteel;      kRegistry0.add("Primitive Press"                                  , "ktfruaddon: Energy",  9801, 1304, TFCPresser.class      , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  4.5F, NBT_RESISTANCE,  4.5F), "SPS", "PPP", "hIw", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze), 'I', OP.ingotDouble.dat(MT.Bronze));
+        aMat = MT.StainlessSteel;      kRegistry0.add("Water Mill"                                       , "ktfruaddon: Energy",  9800, 1304, WaterMill.class       , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  1.5F, NBT_RESISTANCE,  1.5F), "SPS", "PRP", "SPS", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze));
+        aMat = MT.StainlessSteel;      kRegistry0.add("Primitive Press"                                  , "ktfruaddon: Energy",  9801, 1304, TFCPresser.class      , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  4.5F, NBT_RESISTANCE,  4.5F), "SPS", "PPP", "hIw", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze), 'I', OP.ingotDouble.dat(MT.Bronze));
 
 
+        //9900-9999, Reactor Rods
         aMat = MT.StainlessSteel;      kRegistry0.add("Test Controller"                                  , "ktfruaddon: Energy",  9900, 1304, TestController.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
         aMat = MT.StainlessSteel;      kRegistry0.add("Test User"                                        , "ktfruaddon: Energy",  9901, 1304, TestUser.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
 
