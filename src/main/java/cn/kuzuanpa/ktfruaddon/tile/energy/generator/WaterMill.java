@@ -14,7 +14,9 @@
 package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 
 
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import gregapi.code.TagData;
+import gregapi.data.LH;
 import gregapi.data.TD;
 import gregapi.old.Textures;
 import gregapi.render.BlockTextureDefault;
@@ -25,8 +27,11 @@ import gregapi.tileentity.delegate.DelegatorTileEntity;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
-import net.minecraft.init.Blocks;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -34,10 +39,10 @@ import static gregapi.data.CS.*;
 import static net.minecraftforge.common.util.ForgeDirection.VALID_DIRECTIONS;
 
 public class WaterMill extends TileEntityBase09FacingSingle implements ITileEntityEnergy{
-
     public String getTileEntityName() {
         return "ktfru.multitileentity.energy.generator.watermill";
     }
+
 
     public float rotateTorque = 0;
 
@@ -100,7 +105,7 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
         for (int i = 0; i < 6; i++) if(!(Math.abs(checkBlockX[i]) == Math.abs(front.offsetX) && Math.abs(checkBlockY[i]) == Math.abs(front.offsetY) && Math.abs(checkBlockZ[i]) == Math.abs(front.offsetZ))) {
             Block b = getWorld().getBlock(xCoord + checkBlockX[i], yCoord + checkBlockY[i], zCoord + checkBlockZ[i]);
             if(!(b instanceof BlockLiquid)) {
-                if(b != Blocks.air) return 0;
+                if(b.isOpaqueCube()) return 0;
                 continue;
             }
 
@@ -115,6 +120,16 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
             }
         }
         return torque;
+    }
+
+
+    @Override
+    public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
+        if(isServerSide() && aPlayer.getCurrentEquippedItem() == null){
+            aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_0) + (int)(rotateTorque*10)));
+            return true;
+        }
+        return super.onBlockActivated3(aPlayer, aSide, aHitX, aHitY, aHitZ);
     }
 
     @Override
@@ -148,10 +163,15 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
     }
 
 
+    @Override
+    public boolean renderItem(Block aBlock, RenderBlocks aRenderer) {
+        TileEntityRendererDispatcher.instance.renderTileEntityAt(this, 0, 0, 0, 0);
+        return F;
+    }
     public static IIconContainer
-            sTextureSingle      = new Textures.BlockIcons.CustomIcon("machines/maskaligner/0/single/sides");
+            sTextureSingle      = new Textures.BlockIcons.CustomIcon("machines/generators/watermill/side");
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
-        return BlockTextureDefault.get(sTextureSingle, mRGBa);
+        return BlockTextureDefault.get(sTextureSingle);
     }
 }

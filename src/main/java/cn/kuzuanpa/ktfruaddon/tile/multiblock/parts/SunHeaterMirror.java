@@ -33,6 +33,8 @@ import gregapi.tileentity.base.TileEntityBase09FacingSingle;
 import gregapi.tileentity.energy.ITileEntityEnergy;
 import gregapi.util.UT;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -89,6 +91,12 @@ public class SunHeaterMirror extends TileEntityBase09FacingSingle implements IMu
                 return true;
             }
         }else return true;
+    }
+
+    @Override
+    public boolean renderItem(Block aBlock, RenderBlocks aRenderer) {
+        TileEntityRendererDispatcher.instance.renderTileEntityAt(this, 0, 0, 0, 0);
+        return T;
     }
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {return null;}

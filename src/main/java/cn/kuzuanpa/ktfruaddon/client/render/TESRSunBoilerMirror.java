@@ -54,7 +54,7 @@ public class TESRSunBoilerMirror extends TileEntitySpecialRenderer {
         SunHeaterMirror tile = (SunHeaterMirror)til;
         GL11.glPushMatrix();
         //Initial setup
-        int bright = tile.getWorldObj().getLightBrightnessForSkyBlocks(tile.xCoord, tile.yCoord + 1, tile.zCoord,0);
+        int bright = tile.getWorldObj()==null? 15728656 : tile.getWorldObj().getLightBrightnessForSkyBlocks(tile.xCoord, tile.yCoord + 1, tile.zCoord,0);
         int brightX = bright % 65536;
         int brightY = bright / 65536;
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, brightX, brightY);
@@ -83,8 +83,6 @@ public class TESRSunBoilerMirror extends TileEntitySpecialRenderer {
         GL11.glPushMatrix();
             GL11.glRotatef(-tile.rotateHorizontal, 0, 1, 0);
             GL11.glCallList(bodyLists+2);
-
-            int color;
 
 
         GL11.glPopMatrix();

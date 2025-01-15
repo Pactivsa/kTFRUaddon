@@ -17,6 +17,7 @@ package cn.kuzuanpa.ktfruaddon.client.render;
 
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.WaterMill;
 import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
@@ -28,6 +29,7 @@ import org.lwjgl.opengl.GL11;
 import static net.minecraftforge.common.util.ForgeDirection.VALID_DIRECTIONS;
 
 public class TESRWaterMill extends TileEntitySpecialRenderer {
+    /**model come from Create under MIT license**/
     IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation("ktfruaddon:models/water_wheel.obj"));
     ResourceLocation texture = new ResourceLocation("ktfruaddon:textures/model/TFCBrichPlank.png");
 
@@ -47,7 +49,7 @@ public class TESRWaterMill extends TileEntitySpecialRenderer {
         WaterMill tile = (WaterMill)til;
         GL11.glPushMatrix();
         //Initial setup
-        int bright = tile.getWorldObj().getLightBrightnessForSkyBlocks(tile.xCoord, tile.yCoord, tile.zCoord,0);
+        int bright = tile.getWorldObj()==null? 15728656 : tile.getWorldObj().getLightBrightnessForSkyBlocks(tile.xCoord, tile.yCoord, tile.zCoord,0);
         int brightX = bright % 65536;
         int brightY = bright / 65536;
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, brightX, brightY);
@@ -67,6 +69,7 @@ public class TESRWaterMill extends TileEntitySpecialRenderer {
 
         GL11.glColor4f(1f, 1f, 1f, 1f);
 
+        bindTexture(TextureMap.locationBlocksTexture);
         GL11.glPopMatrix();
     }
 }

@@ -30,6 +30,8 @@ import gregapi.util.ST;
 import gregapi.util.UT;
 import gregapi.util.WD;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -97,7 +99,6 @@ public class TFCPresser extends TileEntityBase09FacingSingle implements ITileEnt
         if(OP.ingotDouble.contains(slot(0)) && anvilLevel >= GTRecipes.getAnvilReqFromMaterial(OM.data(slot(0)).mMaterial.mMaterial).Tier){
             setInventorySlotContents(0, OP.plate.mat(OM.data(slot(0)).mMaterial.mMaterial, 1));
             UT.Sounds.send(SFX.MC_BREAK, this);
-            worldObj.spawnParticle("iconcrack_"+ ST.id(slot(0)),xCoord, yCoord + 1, zCoord,0,0,0);
         }
     }
 
@@ -111,7 +112,7 @@ public class TFCPresser extends TileEntityBase09FacingSingle implements ITileEnt
         if(!aEnergyType.equals(TD.Energy.RU))return 0;
         if(Math.abs(aSize) > 64)overcharge(8, aEnergyType);
         long tInput = Math.min(mCost*4L - mEnergy, aSize * aAmount), tConsumed = Math.min(aAmount, (tInput/aSize) + (tInput%aSize!=0?1:0));
-        if (aDoInject) mEnergy += tConsumed * aSize;
+        if (aDoInject) mEnergy += tConsumed * Math.abs(aSize);
         return tConsumed;
     }
 
@@ -169,6 +170,11 @@ public class TFCPresser extends TileEntityBase09FacingSingle implements ITileEnt
         return 1;
     }
 
+    @Override
+    public boolean renderItem(Block aBlock, RenderBlocks aRenderer) {
+        TileEntityRendererDispatcher.instance.renderTileEntityAt(this, 0, 0, 0, 0);
+        return T;
+    }
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
         return null;

@@ -53,7 +53,7 @@ public class TESRTFCPresser extends TileEntitySpecialRenderer {
         TFCPresser tile = (TFCPresser)til;
         GL11.glPushMatrix();
         //Initial setup
-        int bright = tile.getWorldObj().getLightBrightnessForSkyBlocks(tile.xCoord, tile.yCoord, tile.zCoord,0);
+        int bright = tile.getWorldObj()==null? 15728656 : tile.getWorldObj().getLightBrightnessForSkyBlocks(tile.xCoord, tile.yCoord, tile.zCoord,0);
         int brightX = bright % 65536;
         int brightY = bright / 65536;
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, brightX, brightY);
