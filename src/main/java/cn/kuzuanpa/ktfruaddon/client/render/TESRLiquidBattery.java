@@ -17,22 +17,17 @@
 package cn.kuzuanpa.ktfruaddon.client.render;
 
 import cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.storage.LiquidBattery;
-import codechicken.lib.vec.BlockCoord;
-import cpw.mods.fml.common.FMLLog;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Vec3;
-import org.apache.logging.log4j.Level;
 import org.lwjgl.opengl.GL11;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.stream.Collectors;
+
+import static org.lwjgl.opengl.GL11.*;
 
 public class TESRLiquidBattery extends TileEntitySpecialRenderer {
 
@@ -78,6 +73,7 @@ public class TESRLiquidBattery extends TileEntitySpecialRenderer {
         int brightX = bright % 65536;
         int brightY = bright / 65536;
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, brightX, brightY);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
         float finalMaxYCoord = tile.liquidYLevelRender *1F/100F;
 

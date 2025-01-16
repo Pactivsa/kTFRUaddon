@@ -27,6 +27,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.opengl.GL11;
 
 import static net.minecraftforge.common.util.ForgeDirection.VALID_DIRECTIONS;
+import static org.lwjgl.opengl.GL11.*;
 
 public class TESRWaterMill extends TileEntitySpecialRenderer {
     /**model come from Create under MIT license**/
@@ -54,6 +55,7 @@ public class TESRWaterMill extends TileEntitySpecialRenderer {
         int brightY = bright / 65536;
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, brightX, brightY);
 
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
         //Rotate and move the model into position
         GL11.glTranslated(x, y, z );

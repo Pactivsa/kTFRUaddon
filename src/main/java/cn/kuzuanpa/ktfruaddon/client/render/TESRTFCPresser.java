@@ -29,6 +29,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.opengl.GL11;
 
 import static net.minecraftforge.common.util.ForgeDirection.VALID_DIRECTIONS;
+import static org.lwjgl.opengl.GL11.*;
 
 public class TESRTFCPresser extends TileEntitySpecialRenderer {
     IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation("ktfruaddon:models/tfc_presser.obj"));
@@ -58,6 +59,7 @@ public class TESRTFCPresser extends TileEntitySpecialRenderer {
         int brightY = bright / 65536;
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, brightX, brightY);
 
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
         //Rotate and move the model into position
         GL11.glTranslated(x + .5f, y+ .6f, z + .5f);
