@@ -5,12 +5,12 @@ ktfru.projector.oilMiner=油井
 ktfru.projector.MantleHeater=地热站
 ktfru.projector.fuelDeburnFactory=回收燃料厂
 
-ktfru.text.common.side.front=前侧
-ktfru.text.common.side.back=后侧
+ktfru.text.common.side.front=正面
+ktfru.text.common.side.back=背面
 ktfru.text.common.side.left=左侧
 ktfru.text.common.side.right=右侧
-ktfru.text.common.side.top=顶端
-ktfru.text.common.side.bottom=底端
+ktfru.text.common.side.top=顶面
+ktfru.text.common.side.bottom=底面
 ktfru.text.common.overclocking=启用超频
 ktfru.text.common.input=输入
 ktfru.text.common.output=输出
@@ -58,7 +58,7 @@ ktfru.text.tank.gas.compressed.inputer=需要配合气体压缩机使用
 ktfru.text.tank.gas.compressed.1=以液体形态存储巨量气体
 ktfru.text.tank.gas.compressed.2=只能存储气体!
 ktfru.text.machine.tfc.watermill.0=你轻推水车, 感到流水推力约有
-ktfru.text.machine.fuelbattery.0=需求电解质: %sL
+ktfru.text.machine.fuelbattery.0=需求电解质量: %sL
 
 ktfru.msg.outdated=检测到TFRU有更新, 请及时升级! 如果遇到bug, 请升级重新测试后再反馈!
 

@@ -66,13 +66,13 @@ import static gregapi.data.CS.*;
 public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidHandler, ITileEntityTapAccessible, ITileEntityFunnelAccessible, ITileEntityEnergy, ITileEntityRunningActively, ITileEntityAdjacentOnOff, IMultiTileEntity.IMTE_SyncDataByteArray {
     public boolean mStopped = F;
     public short mEfficiency = 10000;
-    public int mElectrolyteRequired=1000;
+    public int mElectrolyteRequired = 1000;
     public long mEnergy = 0, mRate = 32;
     public TagData mEnergyTypeEmitted = TD.Energy.EU;
     public RecipeMap mRecipes = recipeMaps.FuelBattery;
     public int mDesign = 0;
     public Recipe mLastRecipe = null;
-    public FluidTankGT[] mTanks = {new FluidTankGT(1000),new FluidTankGT(1000), new FluidTankGT(1000), new FluidTankGT(1000), new FluidTankGT(1000)}
+    public FluidTankGT[] mTanks = {new FluidTankGT(8000),new FluidTankGT(8000), new FluidTankGT(8000), new FluidTankGT(8000), new FluidTankGT(mElectrolyteRequired)}
 
     , mTanksInput = {mTanks[0],mTanks[1]}, mTanksOutput ={ mTanks[2],mTanks[3]}, mTanksRecipe={mTanks[0],mTanks[1],mTanks[4]};
 
@@ -101,7 +101,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
         mTanks[1].readFromNBT(aNBT, NBT_TANK+".1").setCapacity(8000);
         mTanks[2].readFromNBT(aNBT, NBT_TANK+".2").setCapacity(8000);
         mTanks[3].readFromNBT(aNBT, NBT_TANK+".3").setCapacity(8000);
-        mTanks[4].readFromNBT(aNBT, NBT_TANK+".4").setCapacity(1000);
+        mTanks[4].readFromNBT(aNBT, NBT_TANK+".4").setCapacity(mElectrolyteRequired);
     }
 
     @Override
@@ -121,9 +121,9 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
         aList.add(Chat.CYAN     + LH.get(LH.RECIPES) + ": " + Chat.WHITE + LH.get(mRecipes.mNameInternal));
-        aList.add(Chat.GREEN    + LH.get(LH.FLUID_INPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_FRONT)+", "+LH.get(I18nHandler.SIDE_BACK)+" "+LH.get(I18nHandler.AUTO));
-        aList.add(Chat.RED      + LH.get(LH.FLUID_OUTPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_RIGHT)+", "+LH.get(I18nHandler.SIDE_LEFT)+" "+LH.get(I18nHandler.AUTO));
-        LH.addEnergyToolTips(this, aList, null, mEnergyTypeEmitted, null, LH.get(LH.FACE_FRONT));
+        aList.add(Chat.GREEN    + LH.get(LH.FLUID_INPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_RIGHT)+", "+LH.get(I18nHandler.SIDE_LEFT));
+        aList.add(Chat.RED      + LH.get(LH.FLUID_OUTPUT)+ ": " + Chat.WHITE + LH.get(I18nHandler.SIDE_FRONT)+" "+LH.get(I18nHandler.AUTO)+", "+LH.get(I18nHandler.SIDE_BACK)+" "+LH.get(I18nHandler.AUTO));
+        LH.addEnergyToolTips(this, aList, null, mEnergyTypeEmitted, null, LH.get(LH.FACE_TOP));
         aList.add(Chat.WHITE    + String.format(LH.get(I18nHandler.FUEL_BATTERY_0), mElectrolyteRequired));
         aList.add(Chat.ORANGE   + LH.get(LH.NO_GUI_FUNNEL_TAP_TO_TANK));
         aList.add(Chat.DGRAY    + LH.get(LH.TOOL_TO_DETAIL_MAGNIFYINGGLASS));

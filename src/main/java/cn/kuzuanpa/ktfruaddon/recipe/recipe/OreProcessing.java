@@ -92,12 +92,13 @@ public class OreProcessing {
         RM.Mixer.addRecipe0(F,962,40,FL.array(flList.MethylTertiaryAmine.make(1000),flList.EthylOleate.make(1000),FL.Petrol.make(1000)),FL.array(flList.UraniumExtractant.make(1000)),ZL_IS);
 
         RM.Mixer.addRecipe0(F,128,20,FL.array(flList.UranylCarbonateSolution.make(1000),flList.UraniumExtractant.make(1000)),FL.array(flList.ExtractedUranium.make(1000),MT.H2S.gas(U,false)),ZL_IS);
-        RM.Mixer.addRecipe0(F,128,20,FL.array(flList.ExtractedUranium.make(1000),flList.TributylPhosphate.make(1000)),FL.array(flList.UraniumExtractant.make(1000),flList.ExtractedUranium2.make(1000)),ZL_IS);
+        RM.Mixer.addRecipe0(F,128,20,FL.array(flList.ExtractedUranium.make(1000),flList.TributylPhosphate.make(1000)),FL.array(flList.UsedUraniumExtractant.make(1000),flList.ExtractedUranium2.make(1000)),ZL_IS);
         RM.Mixer.addRecipe0(F,128,20,FL.array(flList.ExtractedUranium2.make(1000),MT.AquaRegia.liquid(2*U,false)),ZL_FS,matList.UraniumNitrateHexahydrate.getDust(3),OP.dust.mat(MT.NaCl,2));
 
         recipeMaps.HeatMixer.addRecipe1(F,1428,20,matList.UraniumNitrateHexahydrate.getDust(1),FL.array(MT.HF.gas(4*U,false)),ZL_FS,OP.dust.mat(MT.UF4,1));
 
-        recipeMaps.HeatMixer.addRecipe1(F,468,20,OP.dust.mat(MT.PO4,1),FL.array(flList.Butanol.make(3000)),FL.array(flList.TributylPhosphate.make(1000),FL.Water.make(1000)),ZL_IS);
+        recipeMaps.HeatMixer.addRecipe0(F,386,300,FL.array(FL.Propane.make(1000), flList.Acetaldehyde.make(3000)),FL.array(flList.Butanol.make(1000), flList.Ethane.make(1000)));
+        recipeMaps.HeatMixer.addRecipe1(F,468, 80,OP.dust.mat(MT.PO4,1),FL.array(flList.Butanol.make(3000)),FL.array(flList.TributylPhosphate.make(1000),FL.Water.make(1000)),ZL_IS);
 
         recipeMaps.HeatMixer.addRecipe2(F,465,100,OP.dust.mat(MT.WaxParaffin,1),OP.dust.mat(MT.MnO2,0),FL.array(FL.Oxygen.make(1000)),ZL_FS,matList.OleicAcid.getDust(1));
         recipeMaps.HeatMixer.addRecipe1(F,120,600,OP.ingot.mat(MT.Butter,2),FL.array(MT.HCl.gas(0,false)),FL.array(MT.Glycerol.liquid(U,false)),matList.OleicAcid.getDust(3));

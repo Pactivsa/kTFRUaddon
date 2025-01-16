@@ -206,7 +206,6 @@ public class fluidPreInit {
         flList.YttriumZirconiumOxide.register("yttriumzirconiumoxide","Yttrium-Zirconium Oxide",null,LIQUID,1000,2700);
 
 
-        flList.SolutionPotassiumHydroxide.registerSolution("solutionpotassiumhydroxide","Potassium Hydroxide Solution",MT.KOH,1000);
         flList.MoltenTeflon.registerMolten("teflon","Teflon",MT.Teflon);
         flList.MoltenBakelite.registerMolten("bakelite","Bakelite",MT.Bakelite);
         flList.MoltenNaK.registerMolten("potassiumsodium","Potassium Sodium",matList.PotassiumSodium.mat);
@@ -214,26 +213,26 @@ public class fluidPreInit {
         flList.MoltenPolycarbonate.registerMolten("polycarbonate","Polycarbonate",MT.Polycarbonate);
 
         //磷酸三丁酯
-        flList.TributylPhosphate.register("TributylPhosphate","TributylPhosphate",matList.TributylPhosphate.get(), LIQUID);
+        flList.TributylPhosphate.register("tributylphosphate","TributylPhosphate",matList.TributylPhosphate.get(), LIQUID);
         //丁醇
-        flList.Butanol.register("Butanol","Butanol",matList.Butanol.get(), LIQUID);
+        flList.Butanol.register("butanol","Butanol",matList.Butanol.get(), LIQUID);
         //碳酸铀酰络合离子溶液
-        flList.UranylCarbonateSolution.register("UranylCarbonateSolution","UranylCarbonateSolution",matList.UranylCarbonateSolution.get(), LIQUID);
+        flList.UranylCarbonateSolution.register("uranylcarbonatesolution","UranylCarbonateSolution",matList.UranylCarbonateSolution.get(), LIQUID);
         //甲基叔胺
-        flList.MethylTertiaryAmine.register("MethylTertiaryAmine","MethylTertiaryAmine",matList.MethylTertiaryAmine.get(), LIQUID);
+        flList.MethylTertiaryAmine.register("methyltertiaryamine","MethylTertiaryAmine",matList.MethylTertiaryAmine.get(), LIQUID);
         //油酸乙酯
-        flList.EthylOleate.register("EthylOleate","EthylOleate",matList.EthylOleate.get(), LIQUID);
+        flList.EthylOleate.register("ethyloleate","EthylOleate",matList.EthylOleate.get(), LIQUID);
         //铀萃取剂
-        flList.UraniumExtractant.register("UraniumExtractant","Uranium Extractant",null, LIQUID);
+        flList.UraniumExtractant.register("uraniumextractant","Uranium Extractant",null, LIQUID);
         //用过的铀萃取剂
-        flList.UsedUraniumExtractant.register("UsedUraniumExtractant","Used Uranium Extractant",null, LIQUID);
+        flList.UsedUraniumExtractant.register("useduraniumextractant","Used Uranium Extractant",null, LIQUID);
         //萃取的铀
-        flList.ExtractedUranium.register("ExtractedUranium","Extracted Uranium",null, LIQUID);
+        flList.ExtractedUranium.register("extracteduranium","Extracted Uranium",null, LIQUID);
         flList.ExtractedUranium2.register("ExtractedUranium2","Extracted Uranium 2",null, LIQUID);
         //硅烷
-        flList.Silane.register("Silane","Silane",matList.Silane.get(), GAS);
+        flList.Silane.register("silane","Silane",matList.Silane.get(), GAS);
         //四氟化硅
-        flList.SiliconTetrafluoride.register("SiliconTetrafluoride","SiliconTetrafluoride",matList.SiliconTetrafluoride.get(), GAS);
+        flList.SiliconTetrafluoride.register("silicontetrafluoride","Silicon Tetrafluoride",matList.SiliconTetrafluoride.get(), GAS);
 
         flList.RecycledFuel0.register("RecycledFuel0","#0 Recycled Fuel",null, LIQUID);
         flList.RecycledFuel1.register("RecycledFuel1","#1 Recycled Fuel",null, LIQUID);
@@ -244,8 +243,8 @@ public class fluidPreInit {
         flList.CrackedNaphthaLow.register("CrackedNaphthaLow","Cracked Naphtha (Low Temperature)",null, LIQUID);
         flList.CrackedNaphthaMedium.register("CrackedNaphthaMedium","Cracked Naphtha (Medium Temperature)",null, LIQUID);
         flList.CrackedNaphthaHigh.register("CrackedNaphthaHigh","Cracked Naphtha (High Temperature)",null, LIQUID);
-        flList.CrackedDieselLow.register("CrackedDieselLow","Cracked Diesel (Low Temperature)",null, LIQUID);
-        flList.CrackedDieselMedium.register("CrackedDieselMedium","Cracked Diesel (Medium Temperature)",null, LIQUID);
-        flList.CrackedDieselHigh.register("CrackedDieselHigh","Cracked Diesel (High Temperature)",null, LIQUID);
+        flList.CrackedPetrolLow.register("CrackedPetrolLow","Cracked Petrol (Low Temperature)",null, LIQUID);
+        flList.CrackedPetrolMedium.register("CrackedPetrolMedium","Cracked Petrol (Medium Temperature)",null, LIQUID);
+        flList.CrackedPetrolHigh.register("CrackedPetrolHigh","Cracked Petrol (High Temperature)",null, LIQUID);
     }
 }

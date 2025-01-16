@@ -15,12 +15,12 @@
 package cn.kuzuanpa.ktfruaddon.api.i18n.texts;
 
 public class I18nHandler {
-    public static final String SIDE_TOP   ="ktfru.text.common.side.front";
-    public static final String SIDE_BOTTOM="ktfru.text.common.side.back";
-    public static final String SIDE_FRONT ="ktfru.text.common.side.left";
-    public static final String SIDE_BACK  ="ktfru.text.common.side.right";
-    public static final String SIDE_RIGHT ="ktfru.text.common.side.top";
-    public static final String SIDE_LEFT  ="ktfru.text.common.side.bottom";
+    public static final String SIDE_TOP   ="ktfru.text.common.side.top";
+    public static final String SIDE_BOTTOM="ktfru.text.common.side.bottom";
+    public static final String SIDE_FRONT ="ktfru.text.common.side.front";
+    public static final String SIDE_BACK  ="ktfru.text.common.side.back";
+    public static final String SIDE_RIGHT ="ktfru.text.common.side.right";
+    public static final String SIDE_LEFT  ="ktfru.text.common.side.left";
     public static final String OVERCLOCKING="ktfru.text.common.overclocking";
     public static final String INPUT="ktfru.text.common.input";
     public static final String OUTPUT="ktfru.text.common.output";
