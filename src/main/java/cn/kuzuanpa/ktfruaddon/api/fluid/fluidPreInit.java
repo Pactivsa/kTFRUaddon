@@ -210,7 +210,7 @@ public class fluidPreInit {
         flList.MoltenTeflon.registerMolten("teflon","Teflon",MT.Teflon);
         flList.MoltenBakelite.registerMolten("bakelite","Bakelite",MT.Bakelite);
         flList.MoltenNaK.registerMolten("potassiumsodium","Potassium Sodium",matList.PotassiumSodium.mat);
-        flList.HotMoltenNaK.registerMolten("potassiumsodium_hot","Hot Potassium Sodium",matList.PotassiumSodium.mat,800);
+        flList.HotMoltenNaK.registerMolten("potassiumsodiumhot","Hot Potassium Sodium",matList.PotassiumSodium.mat,800);
         flList.MoltenPolycarbonate.registerMolten("polycarbonate","Polycarbonate",MT.Polycarbonate);
 
         //磷酸三丁酯

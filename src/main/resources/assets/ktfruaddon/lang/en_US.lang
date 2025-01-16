@@ -22,7 +22,7 @@ ktfru.tooltip.item.turbine.damaged=这个涡轮已受损，你可以回收它
 ktfru.tooltip.item.flywheel.maxRPM=最高转速:
 ktfru.tooltip.item.flywheel.storage=可存储能量:
 
-ktfru.tooltip.tools.monkey_wrench_changing_structure=使用 活动扳手 修改机器结构
+ktfru.tooltip.tools.monkey_wrench_changing_structure=Use Monkey Wrench to Change Contents.
 
 ktfru.msg.common.changing_structure=开始调整机器结构
 ktfru.msg.common.done_changing_structure=机器结构调整完成

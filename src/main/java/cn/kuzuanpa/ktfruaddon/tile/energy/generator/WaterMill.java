@@ -169,9 +169,10 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
         return F;
     }
     public static IIconContainer
-            sTextureSingle      = new Textures.BlockIcons.CustomIcon("machines/generators/watermill/side");
+            sTextureFace      = new Textures.BlockIcons.CustomIcon("machines/generators/watermill/face"),
+            sTextureSide      = new Textures.BlockIcons.CustomIcon("machines/generators/watermill/side");
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
-        return BlockTextureDefault.get(sTextureSingle);
+        return aSide==mFacing || aSide == OPOS[mFacing] ? BlockTextureDefault.get(sTextureFace) : BlockTextureDefault.get(sTextureSide);
     }
 }

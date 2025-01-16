@@ -22,6 +22,7 @@ import gregapi.code.TagData;
 import gregapi.data.FL;
 import gregapi.data.LH;
 import gregapi.data.LH.Chat;
+import gregapi.data.MT;
 import gregapi.data.TD;
 import gregapi.fluid.FluidTankGT;
 import gregapi.network.INetworkHandler;
@@ -69,6 +70,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
     public long mEnergy = 0, mRate = 32;
     public TagData mEnergyTypeEmitted = TD.Energy.EU;
     public RecipeMap mRecipes = recipeMaps.FuelBattery;
+    public int mDesign = 0;
     public Recipe mLastRecipe = null;
     public FluidTankGT[] mTanks = {new FluidTankGT(1000),new FluidTankGT(1000), new FluidTankGT(1000), new FluidTankGT(1000), new FluidTankGT(1000)}
 
@@ -94,6 +96,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
         if (aNBT.hasKey(NBT_ENERGY_EMITTED)) mEnergyTypeEmitted = TagData.createTagData(aNBT.getString(NBT_ENERGY_EMITTED));
         if (aNBT.hasKey(NBT_FUELMAP)) mRecipes = RecipeMap.RECIPE_MAPS.get(aNBT.getString(NBT_FUELMAP));
         if (aNBT.hasKey(NBT_FACING)) mFacing = aNBT.getByte(NBT_FACING);
+        if (aNBT.hasKey(NBT_DESIGN)) mDesign = aNBT.getInteger(NBT_DESIGN);
         mTanks[0].readFromNBT(aNBT, NBT_TANK+".0").setCapacity(8000);
         mTanks[1].readFromNBT(aNBT, NBT_TANK+".1").setCapacity(8000);
         mTanks[2].readFromNBT(aNBT, NBT_TANK+".2").setCapacity(8000);
@@ -194,15 +197,15 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
 
         if (aTool.equals(TOOL_magnifyingglass)) {
             if (aChatReturn != null) {
-                aChatReturn.add("Compositions: "+mTankStatic.content()+" "+(slot(0)==null?"empty":slot(0).getUnlocalizedName())+" "+(slot(1)==null?"null":slot(1).getUnlocalizedName()));
-                aChatReturn.add("Input: "  + mTanks[0].content()+ mTanks[1].content());
-                aChatReturn.add("Output: " + mTanks[2].content()+ mTanks[3].content());
+                aChatReturn.add("Compositions: "+mTankStatic.content()+" "+(slot(0)==null?LH.get(I18nHandler.EMPTY):slot(0).getDisplayName())+" "+(slot(1)==null?LH.get(I18nHandler.EMPTY):slot(1).getDisplayName()));
+                aChatReturn.add(LH.get(I18nHandler.INPUT ) + ": "  + mTanks[0].content()+" / "+ mTanks[1].content());
+                aChatReturn.add(LH.get(I18nHandler.OUTPUT) + ": " + mTanks[2].content()+" / "+ mTanks[3].content());
             }
             return 1;
         }
         if(aTool.equals(TOOL_monkeywrench)){
-            if (changingStaticTank) aChatReturn.add(LH.get(I18nHandler.CHANGING_STRUCTURE));
-            else aChatReturn.add(LH.get(I18nHandler.DONE_CHANGING_STRUCTURE));
+            if (changingStaticTank) aChatReturn.add(LH.get(I18nHandler.DONE_CHANGING_STRUCTURE));
+            else aChatReturn.add(LH.get(I18nHandler.CHANGING_STRUCTURE));
             changingStaticTank = !changingStaticTank;
             updateClientData();
         }
@@ -236,45 +239,35 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
 
     // Icons
     public final static IIconContainer
-            sTextureSides       = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/colored/sides"),
-            sTextureTop         = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/colored/top"),
-            sTextureBottom      = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/colored/bottom"),
+            sTexture            = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/color"),
             sOverlaySides       = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides"),
+            sOverlaySidesInner  = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_inner"),
+            sOverlayTop         = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/top"),
             sOverlayFront       = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/front"),
-            sOverlaySidesActive       = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_active"),
+            sOverlaySidesActive = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_active"),
             sOverlayFrontActive = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/front_active"),
             sOverlayFrontPole   = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/front_pole"),
 
-            sOverlaySidesPoleA   = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_pole_a"),
-            sOverlaySidesPoleB   = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_pole_b")
-                    ;
+            sOverlaySidesPoleA1   = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_pole_a_1"),
+            sOverlaySidesPoleA2   = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_pole_a_2"),
+            sOverlaySidesPoleB1   = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_pole_b_1"),
+            sOverlaySidesPoleB2   = new Textures.BlockIcons.CustomIcon("machines/generators/fuel_battery/overlay/sides_pole_b_2");
 
     @Override
     public ITexture getTexture2(Block aBlock, int aRenderPass, byte aSide, boolean[] aShouldSideBeRendered) {
         if (!aShouldSideBeRendered[aSide]) return null;
         if (aSide == mFacing||aSide == OPOS[mFacing]){
-            if (mDisplayMat[0]==0||mDisplayMat[1]==0) {
-                //If any pole didn't exist
-                if (mDisplayMat[0]!=0&&aSide==mFacing) return       BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlayFrontPole, getColorForTexture(mDisplayMat[0])),BlockTextureDefault.get(sOverlayFront));
-                if (mDisplayMat[1]!=0&&aSide==OPOS[mFacing]) return BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlayFrontPole, getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlayFront));
-                return                                              BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa)                                                                               ,BlockTextureDefault.get(sOverlayFront));
-            }
-            if (mActivity.mState>0) return                          BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlayFrontPole, aSide==mFacing? getColorForTexture(mDisplayMat[0]) : getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlayFront),BlockTextureDefault.get(sOverlayFrontActive));
-            return                                                  BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlayFrontPole, aSide==mFacing? getColorForTexture(mDisplayMat[0]) : getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlayFront));
-
+            if (mActivity.mState>0)       return BlockTextureMulti.get(BlockTextureDefault.get(sTexture, mRGBa),BlockTextureDefault.get(sOverlayFrontPole, aSide==mFacing? getColorForTexture(mDisplayMat[0]) : getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlayFront),BlockTextureDefault.get(sOverlayFrontActive));
+            return                               BlockTextureMulti.get(BlockTextureDefault.get(sTexture, mRGBa),BlockTextureDefault.get(sOverlayFrontPole, aSide==mFacing? getColorForTexture(mDisplayMat[0]) : getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlayFront));
         }
-        if (aSide == SIDE_TOP) return                               BlockTextureMulti.get(BlockTextureDefault.get(sTextureTop   , mRGBa));
-        if (aSide == SIDE_BOTTOM) return                            BlockTextureMulti.get(BlockTextureDefault.get(sTextureBottom, mRGBa));
+        if (aSide == SIDE_TOP)            return BlockTextureMulti.get(BlockTextureDefault.get(sTexture, mRGBa), BlockTextureDefault.get(sOverlayTop));
+        if (aSide == SIDE_BOTTOM)         return BlockTextureMulti.get(BlockTextureDefault.get(sTexture, mRGBa));
 
+        IIconContainer sOverlaySidesPoleA = mDesign == 1? sOverlaySidesPoleA1 : sOverlaySidesPoleA2;
+        IIconContainer sOverlaySidesPoleB = mDesign == 1? sOverlaySidesPoleB1 : sOverlaySidesPoleB2;
         //Left Right
-        if (mDisplayMat[0]==0||mDisplayMat[1]==0) {
-            //If any pole didn't exist
-            if (mDisplayMat[0]!=0) return                           BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlaySidesPoleA,getColorForTexture(mDisplayMat[0])),BlockTextureDefault.get(sOverlaySides));
-            if (mDisplayMat[1]!=0) return                           BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlaySidesPoleB,getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlaySides));
-            return                                                  BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa)                                                                               ,BlockTextureDefault.get(sOverlaySides));
-        }
-        if (mActivity.mState>0) return                              BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlaySidesPoleA,getColorForTexture(mDisplayMat[0])),BlockTextureDefault.get(sOverlaySidesPoleB,getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlaySides),BlockTextureDefault.get(sOverlaySidesActive));
-        return                                                      BlockTextureMulti.get(BlockTextureDefault.get(sTextureSides , mRGBa),BlockTextureDefault.get(sOverlaySidesPoleA,getColorForTexture(mDisplayMat[0])),BlockTextureDefault.get(sOverlaySidesPoleB,getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlaySides));
+        if (mActivity.mState>0) return    BlockTextureMulti.get(BlockTextureDefault.get(sTexture, mRGBa), BlockTextureDefault.get(sOverlaySidesInner), mDisplayMat[0]==MT.Teflon.mID?null:BlockTextureDefault.get(sOverlaySidesPoleA,getColorForTexture(mDisplayMat[0])),mDisplayMat[1]==MT.Teflon.mID?null:BlockTextureDefault.get(sOverlaySidesPoleB,getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlaySides),BlockTextureDefault.get(sOverlaySidesActive));
+        return                            BlockTextureMulti.get(BlockTextureDefault.get(sTexture, mRGBa), BlockTextureDefault.get(sOverlaySidesInner), mDisplayMat[0]==MT.Teflon.mID?null:BlockTextureDefault.get(sOverlaySidesPoleA,getColorForTexture(mDisplayMat[0])),mDisplayMat[1]==MT.Teflon.mID?null:BlockTextureDefault.get(sOverlaySidesPoleB,getColorForTexture(mDisplayMat[1])),BlockTextureDefault.get(sOverlaySides));
 
     }
 
@@ -319,7 +312,7 @@ public class FuelBattery extends TileEntityBase09FacingSingle implements IFluidH
 
     public short getSlotItemMaterial(int slot){
         if(slot(slot)!=null&&slot(slot).getUnlocalizedName().contains("ktfru.item.battery.pole")&&slot(slot).getItemDamage()<32768)return (short) slot(slot).getItemDamage();
-        return 0;
+        return MT.Teflon.mID;
     }
 
     @Override

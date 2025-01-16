@@ -35,7 +35,7 @@ public class itemBatteryPole  extends MultiItemRandom {
     public void addItems() {
 
         ItemList.BatteryPoleNickel.set(addItem(MT.Ni.mID, "Nickel Pole", ""));
-        ItemList.BatteryPoleCaTiO3.set(addItem(MT.Fe.mID, "CaTiO"+NUM_SUB[3]+" Pole", ""));
+        ItemList.BatteryPoleCaTiO3.set(addItem(MT.Ti.mID, "CaTiO"+NUM_SUB[3]+" Pole", ""));
         ItemList.BatteryPolePlatinum.set(addItem(MT.Pt.mID, "Platinum Pole", ""));
         ItemList.BatteryPoleCarbon.set(addItem(MT.C.mID, "Carbon Pole", ""));
 
