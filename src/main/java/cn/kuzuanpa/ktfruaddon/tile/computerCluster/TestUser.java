@@ -17,6 +17,7 @@ package cn.kuzuanpa.ktfruaddon.tile.computerCluster;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.IComputerClusterController;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.IComputerClusterUser;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.IComputerClusterUserContainer;
 import gregapi.data.LH;
 import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase07Paintable;
@@ -31,6 +32,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import net.minecraftforge.common.DimensionManager;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +56,11 @@ public class TestUser extends TileEntityBase07Paintable implements IComputerClus
         super.readFromNBT2(aNBT);
         IComputerClusterUser.readFromNBT(aNBT,this);
 
+    }
+
+    @Override
+    public @Nullable IComputerClusterUserContainer getContainer() {
+        return IComputerClusterUser.super.getContainer();
     }
 
     @Override

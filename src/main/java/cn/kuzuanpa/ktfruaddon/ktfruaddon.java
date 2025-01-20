@@ -25,7 +25,7 @@ import gregapi.api.Abstract_Mod;
 import gregapi.api.Abstract_Proxy;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.ModData;
-import net.minecraft.client.resources.I18n;
+import gregapi.data.LH;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 
@@ -123,7 +123,7 @@ PROXY.postInit(aEvent);
     public void onModServerStarted2(cpw.mods.fml.common.event.FMLServerStartedEvent aEvent) {
         // Insert your ServerStarted Code here and not above
         if(!EnvironmentHelper.TFRUVer.equalsIgnoreCase(EnvironmentHelper.checkedTFRUVer) && MinecraftServer.getServer() != null){
-            MinecraftServer.getServer().addChatMessage(new ChatComponentText(I18n.format("ktfru.msg.outdated")));
+            MinecraftServer.getServer().addChatMessage(new ChatComponentText(LH.get("ktfru.msg.outdated")));
         }
     }
 

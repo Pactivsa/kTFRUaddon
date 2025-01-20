@@ -59,7 +59,7 @@ public class TESRTFCPresser extends TileEntitySpecialRenderer {
         int brightY = bright / 65536;
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, brightX, brightY);
 
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        GL11.glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
         //Rotate and move the model into position
         GL11.glTranslated(x + .5f, y+ .6f, z + .5f);
@@ -78,7 +78,10 @@ public class TESRTFCPresser extends TileEntitySpecialRenderer {
             float factorUp = Math.max(0.0f, Math.min(1.0f, timer* 1.3f - 1.6f)) * .5f;
             GL11.glTranslated(0, timer>1?factorUp-0.5 :factorDown - 0.5, 0);
         }else tile.TESRRasingTimer = tile.raisingTimer;
-        if(tile.raisingTimer == 1)tile.getWorld().spawnParticle("iconcrack_"+ ST.id(OP.ingotDouble.mat(MT.Fe,0))+"_"+ ST.meta(OP.ingotDouble.mat(MT.Fe,0)),tile.xCoord + 0.5f, tile.yCoord - 0.5f, tile.zCoord + 0.5f, tile.rng(10)/50f - 0.1f,0.1f,tile.rng(10)/50f - 0.1f);
+        if(tile.raisingTimer == 1 && !tile.displayedParticles){
+            tile.getWorld().spawnParticle("iconcrack_"+ ST.id(OP.ingotDouble.mat(MT.Fe,0))+"_"+ ST.meta(OP.ingotDouble.mat(MT.Fe,0)),tile.xCoord + 0.5f, tile.yCoord - 0.5f, tile.zCoord + 0.5f, tile.rng(10)/50f - 0.1f,0.1f,tile.rng(10)/50f - 0.1f);
+            tile.displayedParticles = true;
+        }
 
         GL11.glCallList(bodyLists+1);
 

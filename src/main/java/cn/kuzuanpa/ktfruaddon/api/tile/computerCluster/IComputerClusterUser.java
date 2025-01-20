@@ -32,6 +32,7 @@ import gregapi.util.WD;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.DimensionManager;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +43,7 @@ public interface IComputerClusterUser {
     IComputerClusterController getController();
     void setController(IComputerClusterController controller);
     List<IComputerClusterController> getBackupControllers();
+    @Nullable default IComputerClusterUserContainer getContainer() {return null;}
     void setBackupControllers(List<IComputerClusterController> list);
     /**@return state, note state except NORMAL and WARNING will interrupt Compute Power consume.**/
     byte getState();

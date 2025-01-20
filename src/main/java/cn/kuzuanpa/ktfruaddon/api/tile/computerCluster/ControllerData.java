@@ -32,6 +32,7 @@ import cn.kuzuanpa.ktfruaddon.api.code.SingleEntry;
 import codechicken.lib.vec.BlockCoord;
 import net.minecraft.world.World;
 import net.minecraftforge.common.DimensionManager;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.util.ArrayDeque;
@@ -42,7 +43,7 @@ public class ControllerData{
     public World world;
     public BlockCoord pos;
     public byte state;
-    public Map.Entry<ComputePower, Long> power = new SingleEntry<>(ComputePower.Normal, 0L);
+    @NotNull public Map.Entry<ComputePower, Long> power = new SingleEntry<>(ComputePower.Normal, 0L);
     public boolean needToSendToClient = false;
     public Queue<Byte> events = new ArrayDeque<>();
     public ControllerData(World world, BlockCoord pos){this.world=world;this.pos=pos;}

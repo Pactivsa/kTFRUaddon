@@ -45,7 +45,7 @@ import static gregapi.data.CS.*;
 
 public class TFCPresser extends TileEntityBase09FacingSingle implements ITileEntityEnergy{
 
-    public boolean isAnvilLevelEnough = false;
+    public boolean isAnvilLevelEnough = false, displayedParticles = false;
     public long mEnergy = 0;
     public byte raisingTimer = -41;
     public float TESRRasingTimer = -41;
@@ -65,6 +65,7 @@ public class TFCPresser extends TileEntityBase09FacingSingle implements ITileEnt
 
         if(raisingTimer > 0){
             if(mEnergy < mCost)return;
+            displayedParticles = false;
             raisingTimer ++;
             mEnergy -= mCost;
             if(raisingTimer >= 40)raisingTimer = -41;

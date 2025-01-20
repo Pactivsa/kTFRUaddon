@@ -28,11 +28,13 @@
  */
 package cn.kuzuanpa.ktfruaddon.api.tile.computerCluster;
 
+import cn.kuzuanpa.ktfruaddon.api.code.SingleEntry;
 import codechicken.lib.vec.BlockCoord;
 import gregapi.util.WD;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -40,8 +42,9 @@ import java.util.stream.Collectors;
 
 public class ComputerCluster {
     public Map<UUID, ControllerData> controllerList = new HashMap<>();
+    @NotNull public Map<Integer, UUID> controllerStateUpdateCache = new HashMap<>();
     public Map<UUID, UserData> userList = new HashMap<>();
-    public Map<ComputePower, Long> totalComputePower = new HashMap<>();
+    @NotNull public Map<ComputePower, Long> totalComputePower = new HashMap<>();
     public Map<ComputePower, Long> usedComputePower = new HashMap<>();
     public Queue<Byte> events = new ArrayDeque<>();
 
@@ -52,6 +55,11 @@ public class ComputerCluster {
     public ComputerCluster(UUID uuid) {
         if(uuid != null)this.clusterUUID = uuid;
         else this.clusterUUID = UUID.randomUUID();
+        //Avoid NPE
+        totalComputePower.put(ComputePower.Normal, 0L);
+        totalComputePower.put(ComputePower.Biology, 0L);
+        totalComputePower.put(ComputePower.Quantum, 0L);
+        totalComputePower.put(ComputePower.Spacetime, 0L);
     }
     public static ComputerCluster create(World initialControllerWorld, BlockCoord initialControllerPos) {
         ComputerCluster cluster = new ComputerCluster(null);
@@ -62,8 +70,14 @@ public class ComputerCluster {
 
     public void update(){
         if(MinecraftServer.getServer().getTickCounter() <= lastUpdateTime)return;
+        controllerStateUpdateCache.clear();
         lastUpdateTime= MinecraftServer.getServer().getTickCounter();
         Map<ComputePower, Long> totalComputePowerMap = new HashMap<>();
+        //Avoid NPE
+        totalComputePowerMap.put(ComputePower.Normal, 0L);
+        totalComputePowerMap.put(ComputePower.Biology, 0L);
+        totalComputePowerMap.put(ComputePower.Quantum, 0L);
+        totalComputePowerMap.put(ComputePower.Spacetime, 0L);
         controllerList.forEach((uuid,data) -> {
             ControllerData oldData = data.copy();
             updateControllerData(uuid,data,totalComputePowerMap);
@@ -97,6 +111,7 @@ public class ComputerCluster {
             data.power = controller.getComputePower();
             totalComputePowerMap.merge(data.power.getKey(), data.power.getValue(), Long::sum);
         }
+        else data.power = new SingleEntry<>(ComputePower.Normal, 0L);
     }
     public void joinUser(IComputerClusterUser user){
         if(user == null || userList.get(user.getUUID()) != null)return;
@@ -162,7 +177,7 @@ public class ComputerCluster {
     }
 
     public List<ControllerData> getOnlineControllers(){
-        return controllerList.values().stream().filter(data->data.state== Constants.STATE_NORMAL).collect(Collectors.toList());
+        return controllerList.values().stream().filter(data-> data.state == Constants.STATE_NORMAL || data.state == Constants.STATE_WARNING).collect(Collectors.toList());
     }
 
     public static void recoverOrJoin(List<ControllerData> controllerList, UUID clusterUUID){
@@ -241,6 +256,13 @@ public class ComputerCluster {
             if(controller!=null)controller.notifyControllerEvent(event);
         }));
     }
+    public void updateAllControllerState(){
+        if(!controllerStateUpdateCache.isEmpty())return;
+        controllerList.forEach(((uuid, data) ->  {
+            IComputerClusterController controller = getControllerFromData(data);
+            if(controller!=null)controller.refreshState();
+        }));
+    }
     public static IComputerClusterController getControllerFromData(ControllerData data){
         TileEntity te = WD.te(data.world,data.pos.x, data.pos.y, data.pos.z,false);
         if(te instanceof IComputerClusterController)return (IComputerClusterController) te;
@@ -264,7 +286,7 @@ public class ComputerCluster {
 
     public ComputerClusterClientData.ControllerDetail fetchClientDataControllerDetail(UUID controllerID) {
         ControllerData controllerData = controllerList.get(controllerID);
-        if(controllerData == null) return null;
-        return new ComputerClusterClientData.ControllerDetail(controllerData.state,(byte)controllerData.power.getKey().ordinal(),controllerData.power.getValue(),totalComputePower.get(controllerData.power.getKey()),controllerData.events.toArray());
+        if (controllerData == null) return new ComputerClusterClientData.ControllerDetail(Constants.STATE_OFFLINE, (byte) 0, 0, 0, new byte[0]);
+        return new ComputerClusterClientData.ControllerDetail(controllerData.state, (byte) controllerData.power.getKey().ordinal(), controllerData.power.getValue(), totalComputePower.get(controllerData.power.getKey()), controllerData.events.toArray());
     }
 }

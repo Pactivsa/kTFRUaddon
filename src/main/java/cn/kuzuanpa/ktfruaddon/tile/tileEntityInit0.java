@@ -22,12 +22,15 @@ import cn.kuzuanpa.ktfruaddon.api.tile.ICircuitChangeableTileEntity;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import cn.kuzuanpa.ktfruaddon.ktfruaddon;
 import cn.kuzuanpa.ktfruaddon.tile.casing.rustBronzeCasing;
-import cn.kuzuanpa.ktfruaddon.tile.computerCluster.TestController;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.NetworkCable;
 import cn.kuzuanpa.ktfruaddon.tile.computerCluster.TestUser;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.controller.ControllerElectric;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.controller.ControllerWired;
+import cn.kuzuanpa.ktfruaddon.tile.computerCluster.controller.ControllerWireless;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.DebugGenerator;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.FuelBattery;
 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.ManualGenerator;
-                 import cn.kuzuanpa.ktfruaddon.tile.energy.generator.WaterMill;
+import cn.kuzuanpa.ktfruaddon.tile.energy.generator.WaterMill;
 import cn.kuzuanpa.ktfruaddon.tile.energy.storage.FlywheelBox;
 import cn.kuzuanpa.ktfruaddon.tile.energy.storage.FlywheelBoxElec;
 import cn.kuzuanpa.ktfruaddon.tile.machine.*;
@@ -125,15 +128,18 @@ public class tileEntityInit0 {
         MultiTileEntityPipeItem.addItemPipes(26, 25202, 8192, 4, true, false,kRegistry0, aMachine, gregapi.tileentity.connectors.MultiTileEntityPipeItem.class,  MT.PVC);
         //gregapi.tileentity.connectors.MultiTileEntityWireElectric.addElectricWires(50, 0, gregapi.data.CS.VMAX[4], 1, 0, 0, true, false, true, kRegistry0, tWireBlock, gregapi.tileentity.connectors.MultiTileEntityWireElectric.class, tExamplium);
 
+        aMat = MT.StainlessSteel;      kRegistry0.add("Test Electric Controller"                         , "ktfruaddon: Energy",  100, 1304, ControllerElectric.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
+        aMat = MT.StainlessSteel;      kRegistry0.add("Test Wireless Controller"                         , "ktfruaddon: Energy",  101, 1304, ControllerWireless.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
+        aMat = MT.StainlessSteel;      kRegistry0.add("Test Wired Controller"                            , "ktfruaddon: Energy",  102, 1304, ControllerWired.class          , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
+        aMat = MT.StainlessSteel;      kRegistry0.add("Test User"                                        , "ktfruaddon: Energy",  103, 1304, TestUser.class                 , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
+        aMat = MT.StainlessSteel;      kRegistry0.add("Network Wire"                                     , "ktfruaddon: Energy",  104, 1304, NetworkCable.class             , aMat.mToolQuality, 16, tWireBlock , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
+
         //9800-9899, Early TFC Stage Machines
-        aMat = MT.StainlessSteel;      kRegistry0.add("Water Mill"                                       , "ktfruaddon: Energy",  9800, 1304, WaterMill.class       , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  1.5F, NBT_RESISTANCE,  1.5F), "SPS", "PRP", "SPS", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze));
-        aMat = MT.StainlessSteel;      kRegistry0.add("Primitive Presser"                                , "ktfruaddon: Energy",  9801, 1304, TFCPresser.class      , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  4.5F, NBT_RESISTANCE,  4.5F), "SPS", "PPP", "hIw", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze), 'I', OP.ingotDouble.dat(MT.Bronze));
+        aMat = MT.WoodTreated;      kRegistry0.add("Water Mill"                                       , "ktfruaddon: Energy",  9800, 1304, WaterMill.class       , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  1.5F, NBT_RESISTANCE,  1.5F), "SPS", "PRP", "SPS", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze));
+        aMat = MT.WoodTreated;      kRegistry0.add("Primitive Presser"                                , "ktfruaddon: Energy",  9801, 1304, TFCPresser.class      , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  4.5F, NBT_RESISTANCE,  4.5F), "SPS", "PPP", "hIw", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze), 'I', OP.ingotDouble.dat(MT.Bronze));
 
 
         //9900-9999, Reactor Rods
-        aMat = MT.StainlessSteel;      kRegistry0.add("Test Controller"                                  , "ktfruaddon: Energy",  9900, 1304, TestController.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
-        aMat = MT.StainlessSteel;      kRegistry0.add("Test User"                                        , "ktfruaddon: Energy",  9901, 1304, TestUser.class       , aMat.mToolQuality, 16, aMachine   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
-
         aMat = MT.Co;                   kRegistry0.add("Co-60 Breeder Rod"                               , "ktfruaddon: Energy",  9980,  9200, MultiTileEntityReactorRodBreeder.class  , aMat.mToolQuality, 16, aMachine     , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  10.0F, NBT_RESISTANCE,  10.0F, NBT_MAXDURABILITY,   6400000L, NBT_NUCLEAR_LOSS,  1000, NBT_VALUE, 9990));
         //aMat = MT.U_238;                kRegistry0.add("Uranium-238 Breeder Rod"                                 , "ktfruaddon: Energy",  9981,  9200, MultiTileEntityReactorRodBreeder.class  , aMat.mToolQuality, 16, aMachine     , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  10.0F, NBT_RESISTANCE,  10.0F, NBT_MAXDURABILITY,  256000000L, NBT_NUCLEAR_LOSS,  2500, NBT_VALUE, 9991)); RM.Canner.addRecipe2(F, 16, 16, OP.bolt.mat(aMat, 4), IL.Reactor_Rod_Empty.get(1), kRegistry0.getItem());
         //aMat = MT.Li;                   kRegistry0.add("Lithium Breeder Rod"                                     , "ktfruaddon: Energy",  9982,  9200, MultiTileEntityReactorRodBreeder.class  , aMat.mToolQuality, 16, aMachine     , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  10.0F, NBT_RESISTANCE,  10.0F, NBT_MAXDURABILITY,     640000L, NBT_NUCLEAR_LOSS,   250, NBT_VALUE, 9992)); RM.Canner.addRecipe2(F, 16, 16, OP.bolt.mat(aMat, 4), IL.Reactor_Rod_Empty.get(1), kRegistry0.getItem());
