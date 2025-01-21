@@ -42,11 +42,12 @@ import java.util.stream.Collectors;
 
 public class ComputerCluster {
     public Map<UUID, ControllerData> controllerList = new HashMap<>();
-    @NotNull public Map<Integer, UUID> controllerStateUpdateCache = new HashMap<>();
+    @NotNull public Map<UUID, Integer> controllerReachableUpdateCache = new HashMap<>();
     public Map<UUID, UserData> userList = new HashMap<>();
     @NotNull public Map<ComputePower, Long> totalComputePower = new HashMap<>();
     public Map<ComputePower, Long> usedComputePower = new HashMap<>();
     public Queue<Byte> events = new ArrayDeque<>();
+    public byte reachableCheckState = 0;
 
     public long lastUpdateTime = -1;
     public UUID clusterUUID;
@@ -70,7 +71,20 @@ public class ComputerCluster {
 
     public void update(){
         if(MinecraftServer.getServer().getTickCounter() <= lastUpdateTime)return;
-        controllerStateUpdateCache.clear();
+        if(reachableCheckState == 2){
+        }
+        if(reachableCheckState == 1){
+            controllerList.forEach(((uuid, data) ->  {
+                IComputerClusterController controller = getControllerFromData(data);
+                if(controller!=null)controller.updateReachable();
+            }));
+            controllerList.forEach((uuid,data)-> {
+                IComputerClusterController controller = getControllerFromData(data);
+                if(controller!=null)controller.checkUpdatedReachable();
+            });
+            controllerReachableUpdateCache.clear();
+            reachableCheckState = 0;
+        }
         lastUpdateTime= MinecraftServer.getServer().getTickCounter();
         Map<ComputePower, Long> totalComputePowerMap = new HashMap<>();
         //Avoid NPE
@@ -90,11 +104,15 @@ public class ComputerCluster {
         IComputerClusterController controller = getControllerFromData(data);
         if(controller == null){
             data.state = Constants.STATE_OFFLINE;
+            data.power = new SingleEntry<>(ComputePower.Normal, 0L);
             return;
         }
 
         if(controller.getCluster() == null){
-            if(Objects.equals(uuid, controller.getUUID()))controller.setCluster(this);
+            if(Objects.equals(uuid, controller.getUUID())){
+                controller.setCluster(this);
+                controller.updateReachable();
+            }
         }
         else if(controller.getCluster() != this) {
             data.state = Constants.STATE_BELONG_ERR;
@@ -257,11 +275,7 @@ public class ComputerCluster {
         }));
     }
     public void updateAllControllerState(){
-        if(!controllerStateUpdateCache.isEmpty())return;
-        controllerList.forEach(((uuid, data) ->  {
-            IComputerClusterController controller = getControllerFromData(data);
-            if(controller!=null)controller.refreshState();
-        }));
+        reachableCheckState = 1;
     }
     public static IComputerClusterController getControllerFromData(ControllerData data){
         TileEntity te = WD.te(data.world,data.pos.x, data.pos.y, data.pos.z,false);

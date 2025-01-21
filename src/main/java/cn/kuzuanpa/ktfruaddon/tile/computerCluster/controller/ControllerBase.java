@@ -103,7 +103,7 @@ public class ControllerBase extends TileEntityBase07Paintable implements IComput
             ComputerCluster.recoverOrJoin(clusterControllers, clusterUUID);
             if(cluster != null)clusterControllers=null;
         }
-        if(cluster!=null && aTimer%10 == 0)cluster.update();
+        if(cluster!=null && aTimer%40 == 0)cluster.update();
     }
 
     @Override

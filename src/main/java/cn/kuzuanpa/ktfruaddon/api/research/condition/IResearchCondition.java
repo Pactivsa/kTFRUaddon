@@ -12,14 +12,13 @@
  * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
-package cn.kuzuanpa.ktfruaddon.tile.computerCluster;
+package cn.kuzuanpa.ktfruaddon.api.research.condition;
 
-import gregapi.code.TagData;
+import net.minecraft.util.IIcon;
 
-import java.util.UUID;
-
-public interface IWiredNetworkConnectable {
-    public static final TagData WIRE_NETWORK                           = TagData.createTagData("CONNECTORS.WIRE_NETWORK", "Network Wire");
-    void requestReachableCheck();
-    void takeChannel(UUID user);
+public interface IResearchCondition {
+    default boolean isSatisfied() {return getMaxProgress() <= getProgress(); }
+    long getMaxProgress();
+    long getProgress();
+    IIcon getIcon();
 }

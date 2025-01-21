@@ -14,6 +14,10 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.computerCluster;
 
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.IComputerClusterController;
+import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.IComputerClusterUser;
+import codechicken.lib.vec.BlockCoord;
+import gregapi.code.HashSetNoNulls;
 import gregapi.code.TagData;
 import gregapi.data.OP;
 import gregapi.old.Textures;
@@ -26,17 +30,36 @@ import gregapi.util.UT;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
-import java.util.Collection;
+import java.util.*;
 
 import static gregapi.data.CS.*;
 
-public class NetworkCable extends TileEntityBase10ConnectorRendered implements IWiredNetworkConnectable {
+public class NetworkCable extends TileEntityBase10ConnectorRendered implements IWiredNetworkConnectable{
     public byte mRenderType = 0;
+    public boolean checkedThisTick = false;
+    public List<UUID> controllers = new ArrayList<>();
+
+    @Override
+    public void onTick2(long aTimer, boolean aIsServerSide) {
+        super.onTick2(aTimer, aIsServerSide);
+        checkedThisTick = false;
+    }
 
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
         super.readFromNBT2(aNBT);
         if (aNBT.hasKey(NBT_PIPERENDER)) mRenderType = aNBT.getByte(NBT_PIPERENDER);
+    }
+
+    public boolean canReach(BlockCoord target, HashSetNoNulls<TileEntity> aAlreadyPassed) {
+        for (byte tSide : ALL_SIDES) if (connected(tSide)) {
+            TileEntity tDelegator = getTileEntityAtSideAndDistance(tSide, 1);
+            if (aAlreadyPassed.add(tDelegator)) {
+                if (tDelegator instanceof NetworkCable)if (((NetworkCable) tDelegator).canReach(target,aAlreadyPassed))return true;
+                if ((tDelegator instanceof IComputerClusterUser || tDelegator instanceof IComputerClusterController) && target.equals(new BlockCoord(tDelegator.xCoord,tDelegator.yCoord,tDelegator.zCoord))) return true;
+            }
+        }
+        return false;
     }
 
     @Override public float getBlockHardness() {
@@ -69,7 +92,48 @@ public class NetworkCable extends TileEntityBase10ConnectorRendered implements I
     public void onConnectionChange(byte aPreviousConnections) {
         for (byte tSide : ALL_SIDES_VALID) if (connected(tSide) || aPreviousConnections == tSide) {
             TileEntity t = getTileEntityAtSideAndDistance(tSide, 1);
+            if(t instanceof NetworkCable)((NetworkCable) t).requestReachableCheck();
         }
+    }
+
+    public void requestReachableCheck(){
+        if(checkedThisTick)return;
+        checkedThisTick=true;
+        int a= 1;
+        Queue<NetworkCable> tileEntities = new ArrayDeque<>();
+        List<NetworkCable> checkedCable = new ArrayList<>();
+        List<IWiredNetworkConnectable> checkedConnectable = new ArrayList<>();
+        for (byte tSide : ALL_SIDES_VALID) if (connected(tSide)) {
+            TileEntity t = getTileEntityAtSideAndDistance(tSide, 1);
+            if(t instanceof NetworkCable)tileEntities.add((NetworkCable) t);
+            else if(t instanceof IWiredNetworkConnectable)checkedConnectable.add((IWiredNetworkConnectable) t);
+        }
+        while(!tileEntities.isEmpty()){
+            NetworkCable tile = tileEntities.poll();
+            checkedCable.add(tile);
+            for (byte tSide : ALL_SIDES_VALID) if (tile.connected(tSide)) {
+                TileEntity t = tile.getTileEntityAtSideAndDistance(tSide, 1);
+                if(t instanceof NetworkCable) { if (!checkedCable.contains(t)) tileEntities.add((NetworkCable) t);}
+                else if(t instanceof IWiredNetworkConnectable && !checkedConnectable.contains(t))checkedConnectable.add((IWiredNetworkConnectable) t);
+            }
+        }
+        controllers = new ArrayList<>();
+        if(checkedConnectable.isEmpty())return;
+        checkedCable.forEach(c->c.controllers=this.controllers);
+        checkedConnectable.forEach(IWiredNetworkConnectable::requestReachableCheck);
+    }
+
+    @Override
+    public boolean breakBlock() {
+        for (byte tSide : ALL_SIDES_VALID) {
+            TileEntity t = getTileEntityAtSideAndDistance(tSide, 1);
+            if(t instanceof IWiredNetworkConnectable)((IWiredNetworkConnectable) t).requestReachableCheck();
+        }
+        return super.breakBlock();
+    }
+
+    public void takeChannel(UUID user) {
+        if(!controllers.contains(user))controllers.add(user);
 
     }
 

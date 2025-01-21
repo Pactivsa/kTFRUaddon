@@ -58,7 +58,8 @@ public interface IComputerClusterController {
     ComputerCluster getCluster();
     boolean canReachController(IComputerClusterController controller);
     boolean canReachUser(IComputerClusterUser user);
-    default void refreshState() {};
+    default void updateReachable() {};
+    default void checkUpdatedReachable() {};
     World getWorld();
     BlockCoord getPos();
     default boolean allocateUserComputePower(IComputerClusterUser user){
