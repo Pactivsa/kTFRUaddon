@@ -87,5 +87,8 @@ public class I18nHandler {
     public static final String ORE_SCANNER_REQUIRE_PIPES ="ktfru.text.filter.orescanner.require_pipe";
     public static final String FUEL_BATTERY_0 ="ktfru.text.machine.fuelbattery.0";
     public static final String TFC_WATERMILL_0 ="ktfru.text.machine.tfc.watermill.0";
+    public static final String TFC_WATERMILL_1 ="ktfru.text.machine.tfc.watermill.1";
+    public static final String TFC_WATERMILL_2 ="ktfru.text.machine.tfc.watermill.2";
+    public static final String TFC_WATERMILL_3 ="ktfru.text.machine.tfc.watermill.3";
 
 }

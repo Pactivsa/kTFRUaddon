@@ -62,12 +62,11 @@ public class TFCPresser extends TileEntityBase09FacingSingle implements ITileEnt
     public void onTick2(long aTimer, boolean isServerside) {
         //auto output
         if(OP.plate.contains(slot(0)) && WD.te(worldObj,xCoord,yCoord-2,zCoord,false)!=null && ST.move(delegator(SIDE_BOTTOM), new DelegatorTileEntity<>(WD.te(worldObj,xCoord,yCoord-2,zCoord,false),SIDE_TOP)) != 0) slotKill(0);
-
+        mEnergy -= mCost;
         if(raisingTimer > 0){
             if(mEnergy < mCost)return;
             displayedParticles = false;
             raisingTimer ++;
-            mEnergy -= mCost;
             if(raisingTimer >= 40)raisingTimer = -41;
             return;
         }

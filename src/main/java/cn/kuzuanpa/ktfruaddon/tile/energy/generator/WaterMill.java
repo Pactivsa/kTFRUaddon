@@ -17,6 +17,8 @@ package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import gregapi.code.TagData;
 import gregapi.data.LH;
+import gregapi.data.MT;
+import gregapi.data.OP;
 import gregapi.data.TD;
 import gregapi.old.Textures;
 import gregapi.render.BlockTextureDefault;
@@ -25,6 +27,7 @@ import gregapi.render.ITexture;
 import gregapi.tileentity.base.TileEntityBase09FacingSingle;
 import gregapi.tileentity.delegate.DelegatorTileEntity;
 import gregapi.tileentity.energy.ITileEntityEnergy;
+import gregapi.util.ST;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -46,6 +49,8 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
 
     public float rotateTorque = 0;
 
+    public short rottenTimer = 0;
+    public boolean isRotten = false;
     public long transferredAmpere = 0, transferrAmpereMax = 8, transferredAmpereLast = 0;
     @Override
     public void onFacingChange(byte aPreviousFacing) {
@@ -60,6 +65,11 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
 
     @Override
     public void onTick2(long aTimer, boolean isServerside) {
+        if(isServerside && aTimer % 20 == 0) rottenTimer += (short) rng(2);
+        if((isServerside && rottenTimer > 4800)||isRotten) {
+            rotateTorque = 0;
+            return;
+        }
         if(aTimer % 10 == 0) rotateTorque = getRotateTorque();
 
         if ( transferredAmpere > transferrAmpereMax - (Math.abs(rotateTorque) < 0.1f? 0: 1)/*Self 1A*/ )overcharge(8, TD.Energy.RU);
@@ -126,10 +136,35 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
     @Override
     public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if(isServerSide() && aPlayer.getCurrentEquippedItem() == null){
-            aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_0) + (int)(rotateTorque*10)));
+            if(rottenTimer < 4800)aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_0) + (int)(rotateTorque*10)));
+            else aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_1)));
             return true;
+        }else if(isServerSide() && ST.equal(aPlayer.getCurrentEquippedItem(), OP.ring.mat(MT.Bronze,1))){
+            if(rottenTimer < 3000){
+                aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_2)));
+                return true;
+            }
+            aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_3)));
+            rottenTimer = 0;
+            updateClientData();
+            aPlayer.getCurrentEquippedItem().stackSize --;
         }
         return super.onBlockActivated3(aPlayer, aSide, aHitX, aHitY, aHitZ);
+    }
+
+    @Override
+    public boolean onTickCheck(long aTimer) {
+        return rottenTimer >= 4800 && rottenTimer < 4810;
+    }
+
+    @Override
+    public byte getVisualData() {
+        return (byte) (rottenTimer>4800?1:0);
+    }
+
+    @Override
+    public void setVisualData(byte aData) {
+        isRotten = aData==1;
     }
 
     @Override

@@ -44,6 +44,9 @@ public class i18nPostInit {
         LH.add(I18nHandler.ORE_SCANNER_REQUIRE_PIPES,"Require Pipe");
         LH.add(I18nHandler.FUEL_BATTERY_0,"Electrolyte Required: %sL");
         LH.add(I18nHandler.TFC_WATERMILL_0,"You touched it slightly, felt the power of water is: ");
+        LH.add(I18nHandler.TFC_WATERMILL_1,"You touched it slightly but it didn't move. some wood is broken.");
+        LH.add(I18nHandler.TFC_WATERMILL_2,"It seems healthy and don't need more repair.");
+        LH.add(I18nHandler.TFC_WATERMILL_3,"You successfully repaired that.");
 
         LH.add(I18nHandler.HAS_USB_IO_CLICK,"Click with USB stick to write or read Data.");
         LH.add(I18nHandler.REQUIRE_MANA_BURST,"Require Mana Burst To Work!");
