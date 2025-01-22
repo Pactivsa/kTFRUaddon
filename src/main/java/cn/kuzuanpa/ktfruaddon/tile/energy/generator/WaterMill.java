@@ -33,6 +33,7 @@ import net.minecraft.block.BlockLiquid;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.Vec3;
@@ -57,6 +58,24 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
         if(mFacing == SIDE_WEST){ mFacing = SIDE_EAST ;}
         if(mFacing == SIDE_NORTH){ mFacing = SIDE_SOUTH ;}
         if(mFacing == SIDE_DOWN){ mFacing = SIDE_UP ;}
+    }
+
+    @Override
+    public void writeToNBT2(NBTTagCompound aNBT) {
+        super.writeToNBT2(aNBT);
+        aNBT.setShort("rottenTimer",rottenTimer);
+    }
+
+    @Override
+    public void readFromNBT2(NBTTagCompound aNBT) {
+        super.readFromNBT2(aNBT);
+        rottenTimer = aNBT.getShort("rottenTimer");
+    }
+
+    @Override
+    public NBTTagCompound writeItemNBT2(NBTTagCompound aNBT) {
+        aNBT.setShort("rottenTimer",rottenTimer);
+        return super.writeItemNBT2(aNBT);
     }
 
     public boolean[] getValidSides() {
