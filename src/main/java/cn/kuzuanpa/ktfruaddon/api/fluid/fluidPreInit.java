@@ -94,7 +94,7 @@ public class fluidPreInit {
         //冰醋酸
         flList.GlacialAceticAcid.register("glacialaceticacid","GlacialAceticAcid",null, LIQUID);
         //硅橡胶液
-        flList.LiquidSiliconeRubber.register("LiquidSiliconeRubber","LiquidSiliconeRubber",matList.SiliconeRubber.get(), LIQUID);
+        flList.SiliconeRubber.registerMolten("siliconerubber","SiliconeRubber",matList.SiliconeRubber.get(), LIQUID);
         //甲基氯化镁
         flList.MethylmagnesiumChloride.register("MethylmagnesiumChloride","MethylmagnesiumChloride",matList.MethylmagnesiumChloride.get(), LIQUID);
         //一甲三氯硅烷
@@ -114,7 +114,7 @@ public class fluidPreInit {
         //乙烯苯
         flList.Styrene.register("Styrene","Styrene",matList.Styrene.get(), LIQUID);
         //丁苯橡胶液
-        flList.SBR.register("SBR","SBR",matList.SBR.get(), LIQUID);
+        flList.SBR.registerMolten("SBR","SBR",matList.SBR.get(), LIQUID);
         //异戊二烯
         flList.Isoprene.register("Isoprene","Isoprene",matList.Isoprene.get(), LIQUID);
         //氯乙醇
