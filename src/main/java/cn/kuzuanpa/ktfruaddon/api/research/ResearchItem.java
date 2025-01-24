@@ -14,7 +14,7 @@
 
 package cn.kuzuanpa.ktfruaddon.api.research;
 
-import cn.kuzuanpa.ktfruaddon.api.research.condition.IResearchCondition;
+import cn.kuzuanpa.ktfruaddon.api.research.task.IResearchTask;
 import net.minecraft.util.IIcon;
 
 import java.util.ArrayList;
@@ -30,18 +30,19 @@ public class ResearchItem {
     public int layer = 0;
     public final List<ResearchItem> prerequisites = new ArrayList<>();
     public final List<ResearchItem> nextResearch = new ArrayList<>();
-    public final List<IResearchCondition> conditions = new ArrayList<>();
+    public final List<IResearchTask> tasks = new ArrayList<>();
     public boolean isUnlocked = false;
     public boolean isCompleted = false;
     public byte progress = 0;
 
-    public ResearchItem(String name, String desc) {
-        this(name, desc,null);
+    public ResearchItem(ResearchTree tree,String name, String desc) {
+        this(tree, name, desc,null);
     }
-    public ResearchItem(String name, String desc, IIcon icon) {
+    public ResearchItem(ResearchTree tree, String name, String desc, IIcon icon) {
         this.name = name;
         this.desc = desc;
         this.icon = icon;
+        tree.addResearchItem(this);
     }
     public ResearchItem setPos(int x,int y){
         this.posX=x;
@@ -75,28 +76,28 @@ public class ResearchItem {
         return prerequisites;
     }
 
-    public void addCondition(IResearchCondition condition) {
-        conditions.add(condition);
+    public void addCondition(IResearchTask condition) {
+        tasks.add(condition);
     }
 
-    public boolean removeCondition(IResearchCondition condition) {
-        return conditions.remove(condition);
+    public boolean removeCondition(IResearchTask condition) {
+        return tasks.remove(condition);
     }
 
-    public List<IResearchCondition> getConditions() {
-        return conditions;
+    public List<IResearchTask> getTasks() {
+        return tasks;
     }
 
     public boolean areAllConditionsSatisfied() {
-        for (IResearchCondition condition : conditions) {
-            if (!condition.isSatisfied()) {
+        for (IResearchTask task : tasks) {
+            if (!task.isSatisfied()) {
                 return false;
             }
         }
         return true;
     }
-    public static class TestCondition implements IResearchCondition{
-        public TestCondition(IIcon icon){
+    public static class TestTask implements IResearchTask {
+        public TestTask(IIcon icon){
             this.icon=icon;
         }
         IIcon icon;

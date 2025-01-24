@@ -12,11 +12,11 @@
  * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
-package cn.kuzuanpa.ktfruaddon.api.research.condition;
+package cn.kuzuanpa.ktfruaddon.api.research.task;
 
 import net.minecraft.util.IIcon;
 
-public interface IResearchCondition {
+public interface IResearchTask {
     default boolean isSatisfied() {return getMaxProgress() <= getProgress(); }
     long getMaxProgress();
     long getProgress();

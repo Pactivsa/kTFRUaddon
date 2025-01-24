@@ -23,7 +23,7 @@ import cn.kuzuanpa.kGuiLib.client.kGuiScreenContainerLayerBase;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.ButtonList;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.CommonTexturedButton;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.Text;
-import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
+import cn.kuzuanpa.kGuiLib.client.objects.gui.kGuiButtonBase;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.UserData;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
@@ -73,7 +73,7 @@ public class ScreenClientList extends kGuiScreenContainerLayerBase {
         if(i == Keyboard.KEY_ESCAPE)close();
     }
 
-    public class ClientButton extends ThinkerButtonBase {
+    public class ClientButton extends kGuiButtonBase {
         public ClientButton(int id, int xPos, int yPos, int width) {
             super(id, xPos, yPos, width, 16, "");
             setAnimatedInFBO(true);

@@ -59,10 +59,12 @@ public class ResearchTree {
     }
     public void putTestValues(){
 
-        ResearchItem a = new ResearchItem("A", "Descr你好世界你好世界你好世界你好世界你好世界你好世界你好世界你好世界你好世界你好世界你好世界on of A", null).setPos(60,130);
-        ResearchItem b = new ResearchItem("B", "Description of B", null).setPos(60,20);
-        ResearchItem c = new ResearchItem("C", "Description of C", null).setPos(180,10);
-        ResearchItem d = new ResearchItem("D", "Description of D", null).setPos(180,130);
+        ResearchItem a = new ResearchItem(this, "A", "Description of AjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFj", null).setPos(60,130);
+        ResearchItem b = new ResearchItem(this, "B", "Description of B", null).setPos(60,20);
+        ResearchItem c = new ResearchItem(this, "C", "Description of C", null).setPos(180,10);
+        ResearchItem d = new ResearchItem(this, "D", "Description of D", null).setPos(180,130);
+        ResearchItem e = new ResearchItem(this, "E", "Description of E", null).setPos(320,130);
+        ResearchItem f = new ResearchItem(this, "F", "Description of F", null).setPos(340,10);
         a.addPrerequisite(rootItem);
         b.addPrerequisite(rootItem);
 
@@ -71,11 +73,8 @@ public class ResearchTree {
         d.addPrerequisite(a);
         d.addPrerequisite(b);
 
-
-        addResearchItem(a);
-        addResearchItem(b);
-        addResearchItem(c);
-        addResearchItem(d);
+        e.addPrerequisite(d);
+        f.addPrerequisite(e);
 
         a.isUnlocked =true;
         b.isUnlocked =true;
@@ -83,14 +82,14 @@ public class ResearchTree {
         a.isCompleted = true;
         b.progress = 64;
 
-        a.conditions.add(new ResearchItem.TestCondition(Items.clay_ball.getIconFromDamage(0)));
-        a.conditions.add(new ResearchItem.TestCondition(Items.book.getIconFromDamage(0)));
-        a.conditions.add(new ResearchItem.TestCondition(Items.lava_bucket.getIconFromDamage(0)));
-        b.conditions.add(new ResearchItem.TestCondition(Items.lava_bucket.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.clay_ball.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.book.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.lava_bucket.getIconFromDamage(0)));
+        b.tasks.add(new ResearchItem.TestTask(Items.lava_bucket.getIconFromDamage(0)));
 
 
     }
-    public ResearchItem rootItem = new ResearchItem("root","root of everything");
+    public ResearchItem rootItem = new ResearchItem(this,"root","root of everything");
 
 
     public boolean removeChildItem(ResearchItem item) {

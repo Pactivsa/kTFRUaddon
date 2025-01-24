@@ -20,7 +20,7 @@ import cn.kuzuanpa.kGuiLib.client.anime.animeMoveSlowIn;
 import cn.kuzuanpa.kGuiLib.client.anime.shortcut.animeFadeIn;
 import cn.kuzuanpa.kGuiLib.client.kGuiContainerBase;
 import cn.kuzuanpa.kGuiLib.client.objects.IAnimatableButton;
-import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
+import cn.kuzuanpa.kGuiLib.client.objects.gui.kGuiButtonBase;
 import cn.kuzuanpa.ktfruaddon.api.nei.IHiddenNei;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -109,7 +109,7 @@ public class ContainerClientClusterController extends kGuiContainerBase implemen
 		if(childGui instanceof IkGuiContainerLayer) ((IkGuiContainerLayer) childGui).setup(this.width,this.height,ContainerX,ContainerY);
 	}
 
-	public class switchButton extends ThinkerButtonBase {
+	public class switchButton extends kGuiButtonBase {
 
 		public switchButton(int id, int xPos, int yPos, int u, String displayText,ResourceLocation resourceLocation) {
 			super(id, xPos, yPos, 20, 14, displayText);

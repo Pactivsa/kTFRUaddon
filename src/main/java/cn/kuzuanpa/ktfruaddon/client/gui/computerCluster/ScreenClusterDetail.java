@@ -24,7 +24,7 @@ import cn.kuzuanpa.kGuiLib.client.objects.IAnimatableButton;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.ButtonList;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.CommonTexturedButton;
 import cn.kuzuanpa.kGuiLib.client.objects.gui.Text;
-import cn.kuzuanpa.kGuiLib.client.objects.gui.ThinkerButtonBase;
+import cn.kuzuanpa.kGuiLib.client.objects.gui.kGuiButtonBase;
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.kUserInterface;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputerClusterClientData;
 import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
@@ -161,7 +161,7 @@ public class ScreenClusterDetail extends kGuiScreenContainerLayerBase {
         if(i == Keyboard.KEY_E|| i == Keyboard.KEY_ESCAPE) close();
     }
 
-    public class ClusterOverviewChartButton extends ThinkerButtonBase {
+    public class ClusterOverviewChartButton extends kGuiButtonBase {
         public ClusterOverviewChartButton(int id, int xPos, int yPos, int width, int heightPerBar) {
             super(id, xPos, yPos, width, heightPerBar* ComputePower.values().length, "");
             this.heightPerBar = heightPerBar;
