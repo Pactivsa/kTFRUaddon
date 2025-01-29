@@ -50,7 +50,7 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
 
     public float rotateTorque = 0;
 
-    public short rottenTimer = 0;
+    public short rottenTimer = 0, rottenTimeTotal = 9600;
     public boolean isRotten = false;
     public long transferredAmpere = 0, transferrAmpereMax = 8, transferredAmpereLast = 0;
     @Override
@@ -84,8 +84,7 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
 
     @Override
     public void onTick2(long aTimer, boolean isServerside) {
-        if(isServerside && aTimer % 20 == 0) rottenTimer += (short) rng(2);
-        if((isServerside && rottenTimer > 4800)||isRotten) {
+        if((isServerside && rottenTimer > rottenTimeTotal)||isRotten) {
             rotateTorque = 0;
             return;
         }
@@ -96,6 +95,8 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
         transferredAmpere = 0;
 
         if(Math.abs(rotateTorque) < 0.1f || !isServerside)return;
+
+        if(aTimer % 20 == 0) rottenTimer += (short) rng(2);
 
         int emittingAmpere = rotateTorque>2?2:1;
         DelegatorTileEntity<TileEntity> tile = getAdjacentTileEntity(mFacing);
@@ -155,11 +156,11 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
     @Override
     public boolean onBlockActivated3(EntityPlayer aPlayer, byte aSide, float aHitX, float aHitY, float aHitZ) {
         if(isServerSide() && aPlayer.getCurrentEquippedItem() == null){
-            if(rottenTimer < 4800)aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_0) + (int)(rotateTorque*10)));
+            if(rottenTimer < rottenTimeTotal)aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_0) + (int)(rotateTorque*10)));
             else aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_1)));
             return true;
         }else if(isServerSide() && ST.equal(aPlayer.getCurrentEquippedItem(), OP.ring.mat(MT.Bronze,1))){
-            if(rottenTimer < 3000){
+            if(rottenTimer < rottenTimeTotal*0.75){
                 aPlayer.addChatComponentMessage(new ChatComponentText(LH.get(I18nHandler.TFC_WATERMILL_2)));
                 return true;
             }
@@ -173,12 +174,12 @@ public class WaterMill extends TileEntityBase09FacingSingle implements ITileEnti
 
     @Override
     public boolean onTickCheck(long aTimer) {
-        return rottenTimer >= 4800 && rottenTimer < 4810;
+        return rottenTimer >= rottenTimeTotal && rottenTimer < rottenTimeTotal+10;
     }
 
     @Override
     public byte getVisualData() {
-        return (byte) (rottenTimer>4800?1:0);
+        return (byte) (rottenTimer>rottenTimeTotal?1:0);
     }
 
     @Override

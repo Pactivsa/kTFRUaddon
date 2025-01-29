@@ -26,6 +26,7 @@ import gregapi.code.TagData;
 import gregapi.data.LH;
 import gregapi.data.MD;
 import gregapi.data.MT;
+import gregapi.data.TD;
 import gregapi.network.INetworkHandler;
 import gregapi.network.IPacket;
 import gregapi.old.Textures;
@@ -222,8 +223,13 @@ public class CrucibleModel extends TileEntityBase07Paintable implements IHeatAcc
     }
 
     @Override
+    public boolean isEnergyType(TagData aEnergyType, byte aSide, boolean aEmitting) {
+        return aEnergyType.equals(TD.Energy.HU);
+    }
+
+    @Override
     public long doInject(TagData aEnergyType, byte aSide, long aSize, long aAmount, boolean aDoInject) {
-        if(aSide != SIDE_UP)return 0;
+        if(!aEnergyType.equals(TD.Energy.HU) || mTemperature > 4000)return 0;
         mTemperature += (aAmount*aSize)/9;
         return aAmount;
     }

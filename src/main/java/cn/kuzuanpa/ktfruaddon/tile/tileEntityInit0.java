@@ -137,8 +137,8 @@ public class tileEntityInit0 {
         aMat = MT.StainlessSteel;      kRegistry0.add("Research monitor"                                 , "ktfruaddon: Energy",  105, 1304, ResearchTreeMonitor.class      , aMat.mToolQuality, 16, tWireBlock , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  6.5F, NBT_RESISTANCE,  6.5F, NBT_FUELMAP , recipeMaps.FuelBattery, NBT_OUTPUT, 512 ,NBT_ENERGY_EMITTED, TD.Energy.EU));
 
         //9800-9899, Early TFC Stage Machines
-        aMat = MT.WoodTreated;      kRegistry0.add("Water Mill"                                       , "ktfruaddon: Energy",  9800, 1304, WaterMill.class       , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  1.5F, NBT_RESISTANCE,  1.5F), "SPS", "PRP", "SPS", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze));
-        aMat = MT.WoodTreated;      kRegistry0.add("Primitive Presser"                                , "ktfruaddon: Energy",  9801, 1304, TFCPresser.class      , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  4.5F, NBT_RESISTANCE,  4.5F), "SPS", "PPP", "hIw", 'R', OP.stick.dat(MT.WoodTreated), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze), 'I', OP.ingotDouble.dat(MT.Bronze));
+        aMat = MT.WoodTreated;      kRegistry0.add("Water Mill"                                       , "ktfruaddon: Energy",  9800, 1304, WaterMill.class       , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  1.5F, NBT_RESISTANCE,  1.5F), "PPP", "SRS", "PPP", 'R', gRegistry.getItem(24802), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.ring.dat(MT.Bronze));
+        aMat = MT.WoodTreated;      kRegistry0.add("Primitive Presser"                                , "ktfruaddon: Energy",  9801, 1304, TFCPresser.class      , aMat.mToolQuality, 16, tWoodBlock   , UT.NBT.make(NBT_MATERIAL, aMat, NBT_HARDNESS,  4.5F, NBT_RESISTANCE,  4.5F), "SPS", "PPP", "hIw", 'R', gRegistry.getItem(24802), 'P', OP.plate.dat(MT.WoodTreated), 'S', OP.screw.dat(MT.Bronze), 'I', OP.ingotDouble.dat(MT.Bronze));
 
 
         //9900-9999, Reactor Rods
