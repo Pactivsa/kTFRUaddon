@@ -19,7 +19,6 @@ import net.minecraft.util.IIcon;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class ResearchItem {
     public final String name;
@@ -29,11 +28,9 @@ public class ResearchItem {
     public int posY = 0;
     public int layer = 0;
     public final List<ResearchItem> prerequisites = new ArrayList<>();
-    public final List<ResearchItem> nextResearch = new ArrayList<>();
     public final List<IResearchTask> tasks = new ArrayList<>();
     public boolean isUnlocked = false;
     public boolean isCompleted = false;
-    public byte progress = 0;
 
     public ResearchItem(ResearchTree tree,String name, String desc) {
         this(tree, name, desc,null);
@@ -42,7 +39,7 @@ public class ResearchItem {
         this.name = name;
         this.desc = desc;
         this.icon = icon;
-        tree.addResearchItem(this);
+        if(tree != null)tree.addResearchItem(this);
     }
     public ResearchItem setPos(int x,int y){
         this.posX=x;
@@ -54,33 +51,34 @@ public class ResearchItem {
         return name;
     }
 
-    public void addPrerequisite(ResearchItem prerequisite) {
-        if(prerequisite.name.equals("root"))layer=1;
-        else layer = prerequisite.layer+1;
-        prerequisites.add(prerequisite);
+    public ResearchItem addPrerequisite(ResearchItem... prerequisites) {
+        for (ResearchItem prerequisite : prerequisites) {
+            if(prerequisite.name.equals("root"))this.layer=Math.max(1,this.layer);
+            else this.layer = Math.max(this.layer, prerequisite.layer+1);
+            this.prerequisites.add(prerequisite);
+        }
+        return this;
     }
 
     public boolean removePrerequisite(ResearchItem prerequisite) {
         return prerequisites.remove(prerequisite);
     }
-
-    public boolean areDependenciesMet(Map<String, ResearchItem> completedResearch) {
-        for (ResearchItem dependency : prerequisites) {
-            if (!completedResearch.containsKey(dependency.getName())) {
-                return false;
-            }
-        }
-        return true;
+    /**Range: 0~100, note the progress is ceiled**/
+    public byte getProgress(){
+        return (byte)(100 * Math.ceil(tasks.stream().mapToLong(IResearchTask::getProgress).sum()*1.0f/(tasks.stream().mapToLong(IResearchTask::getMaxProgress).sum())));
+    }
+    public float getProgressF(){
+        return (100 * (tasks.stream().mapToLong(IResearchTask::getProgress).sum()*1.0f/(tasks.stream().mapToLong(IResearchTask::getMaxProgress).sum())));
     }
     public List<ResearchItem> getPrerequisites() {
         return prerequisites;
     }
 
-    public void addCondition(IResearchTask condition) {
+    public void addTask(IResearchTask condition) {
         tasks.add(condition);
     }
 
-    public boolean removeCondition(IResearchTask condition) {
+    public boolean removeTask(IResearchTask condition) {
         return tasks.remove(condition);
     }
 
@@ -88,19 +86,24 @@ public class ResearchItem {
         return tasks;
     }
 
-    public boolean areAllConditionsSatisfied() {
+    public boolean areAllTasksCompleted() {
         for (IResearchTask task : tasks) {
-            if (!task.isSatisfied()) {
+            if (!task.isCompleted()) {
                 return false;
             }
         }
         return true;
     }
     public static class TestTask implements IResearchTask {
+
         public TestTask(IIcon icon){
             this.icon=icon;
         }
+
         IIcon icon;
+
+        long progress = 20;
+
         @Override
         public long getMaxProgress() {
             return 120;
@@ -108,7 +111,17 @@ public class ResearchItem {
 
         @Override
         public long getProgress() {
-            return 20;
+            return progress;
+        }
+
+        @Override
+        public void setProgress(long progress) {
+            this.progress=progress;
+        }
+
+        @Override
+        public String getIdentifier() {
+            return icon.getIconName();
         }
 
         @Override

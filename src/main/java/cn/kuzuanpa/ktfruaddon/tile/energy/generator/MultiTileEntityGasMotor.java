@@ -12,15 +12,13 @@
  * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
-package cn.kuzuanpa.ktfruaddon.api.research.task;
+package cn.kuzuanpa.ktfruaddon.tile.energy.generator;
 
-import net.minecraft.util.IIcon;
+import gregtech.tileentity.energy.generators.MultiTileEntityMotorLiquid;
 
-public interface IResearchTask {
-    default boolean isCompleted() {return getMaxProgress() <= getProgress(); }
-    long getMaxProgress();
-    long getProgress();
-    void setProgress(long progress);
-    IIcon getIcon();
-    String getIdentifier();
+/**
+ * only for compatibility, sad
+ */
+public class MultiTileEntityGasMotor extends MultiTileEntityMotorLiquid {
+    @Override public String getTileEntityName() {return "gt.multitileentity.generator.gasmotor";}
 }

@@ -12,15 +12,10 @@
  * AGPLv3 License: https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
-package cn.kuzuanpa.ktfruaddon.api.research.task;
+package cn.kuzuanpa.ktfruaddon.research;
 
-import net.minecraft.util.IIcon;
+import cn.kuzuanpa.ktfruaddon.api.research.ResearchTree;
 
-public interface IResearchTask {
-    default boolean isCompleted() {return getMaxProgress() <= getProgress(); }
-    long getMaxProgress();
-    long getProgress();
-    void setProgress(long progress);
-    IIcon getIcon();
-    String getIdentifier();
+public class ResearchTrees {
+    public static ResearchTree ktfruaddon = new ResearchTree((byte) 0);
 }

@@ -51,7 +51,7 @@ public class OreProcessing {
         RM.Centrifuge.addRecipeX(T, 64, 40,ST.array(OP.dust.mat(matList.BauxiteRedMud.mat,1)),FL.array(ZL_FS),FL.array(ZL_FS),OP.dust.mat(MT.Fe2O3,1),OM.crushedCentrifugedTiny(MT.TiO2,1),OP.dustSmall.mat(MT.SiO2,1));
       //Use Potassium for some recipe
         //Step1
-        RM.Bath.addRecipeX(T, 0, 180, ST.array(OP.dust.mat(MT.OREMATS.Bauxite,1),OP.dust.mat(MT.KOH,2)),FL.array(MT.H2O.liquid(1000 ,T)),FL.array(flList.PotassiumAluminate.make(2000)),OP.dustSmall.mat(MT.SiO2,U4),OM.crushedCentrifugedTiny(MT.OREMATS.Ilmenite,1));
+        RM.Bath.addRecipeX(T, 0, 180, ST.array(OP.dust.mat(MT.OREMATS.Bauxite,1),OP.dust.mat(MT.KOH,2)),FL.array(MT.H2O.liquid(1000 ,T)),FL.array(flList.PotassiumAluminate.make(2000)),OP.dustSmall.mat(MT.SiO2,1),OM.crushedCentrifugedTiny(MT.OREMATS.Ilmenite,1));
         //Step2
         recipeMaps.HeatMixer.addRecipeX(T,120,60,ST.array(OP.dust.mat(MT.KOH,  4)),FL.array(flList.AcidPickledBauxide.make(2000)),FL.array(flList.PotassiumAluminate.make(2000)),OP.dust.mat(MT.K2SO4,4 ),OP.dust.mat(MT.Fe2O3,1));
         RM.Mixer.addRecipeX(T,0, 800,ST.array(ZL_IS),FL.array(flList.PotassiumAluminate.make(1000),FL.Soda.make(1000)),FL.array(flList.PotassiumCarbonate.make(1000),flList.SodiumCarbonate.make(1000)),OP.dust.mat(MT.AlO3H3, 4));

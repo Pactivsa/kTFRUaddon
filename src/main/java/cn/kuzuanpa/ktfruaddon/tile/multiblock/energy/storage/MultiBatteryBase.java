@@ -63,8 +63,8 @@ public abstract class MultiBatteryBase extends TileEntityBase10MultiBlockBase im
         addEnergyToolTips(aList, aStack, aF3_H);
     }
     public void addEnergyToolTips(List<String> aList, ItemStack aStack, boolean aF3_H){
-        aList.add(LH.Chat.GREEN + LH.get(LH.ENERGY_INPUT)  + ": " + LH.Chat.WHITE + mInputMin  + " to " +mInputMax  + mEnergyType.getLocalisedChatNameShort() + LH.Chat.WHITE + "/A * up to " + LH.Chat.CYAN + mMaxAmpere + "A/t");
-        aList.add(LH.Chat.RED   + LH.get(LH.ENERGY_OUTPUT) + ": " + LH.Chat.WHITE + mOutput + mEnergyType.getLocalisedChatNameShort() + LH.Chat.WHITE + "/A * up to " + LH.Chat.CYAN + mMaxAmpere + "A/t");
+        aList.add(LH.Chat.GREEN + LH.get(LH.ENERGY_INPUT)  + ": " + LH.Chat.WHITE + mInputMin  + " - " +mInputMax  + mEnergyType.getLocalisedChatNameShort() + LH.Chat.WHITE + "/A * max " + LH.Chat.CYAN + mMaxAmpere + "A/t");
+        aList.add(LH.Chat.RED   + LH.get(LH.ENERGY_OUTPUT) + ": " + LH.Chat.WHITE + mOutput + mEnergyType.getLocalisedChatNameShort() + LH.Chat.WHITE + "/A * max " + LH.Chat.CYAN + mMaxAmpere + "A/t");
     }
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {

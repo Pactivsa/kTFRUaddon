@@ -45,8 +45,9 @@ public class CompactItem {
 
         RM.Extruder.addRecipe2(false, 32, 10, new ItemStack(Items.clay_ball, 1), IL.Shape_SimpleEx_Ingot.get(0), new ItemStack(Items.brick, 1));
 
-        //GoldBlock TFC->Vanilla
-        RM.Generifier.addRecipe1(false, 0, 1, ST.make(MD.TFC, "MetalBlock", 1, 8), ZL_FS, ZL_FS, OP.block.mat(MT.Au, 1));
+        //Gold TFC->Vanilla
+        RM.generify(ST.make(MD.TFC, "MetalBlock", 1, 8), OP.block.mat(MT.Au, 1));
+        RM.generify(ST.make(MD.TFC, "item.Gold Ingot", 1), OP.ingot.mat(MT.Au, 1));
 
         CR.shaped(ItemList.CrucibleModelInnerLayer.get(1), CR.DEF, " I ", " I ", " f ", 'I', OP.ingot.mat(MT.RedSteel, 1));
 

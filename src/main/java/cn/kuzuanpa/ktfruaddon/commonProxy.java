@@ -15,13 +15,15 @@
 
 package cn.kuzuanpa.ktfruaddon;
 
-import cn.kuzuanpa.ktfruaddon.client.kTFRUAddonARProjectorRegister;
 import cn.kuzuanpa.ktfruaddon.api.fluid.fluidPreInit;
 import cn.kuzuanpa.ktfruaddon.api.i18n.i18nPostInit;
+import cn.kuzuanpa.ktfruaddon.api.material.materialPreInit;
+import cn.kuzuanpa.ktfruaddon.api.network.PacketSyncDataByteArrayLong;
+import cn.kuzuanpa.ktfruaddon.api.network.PacketSyncDataByteArrayLongAndIDs;
+import cn.kuzuanpa.ktfruaddon.client.kTFRUAddonARProjectorRegister;
 import cn.kuzuanpa.ktfruaddon.item.ItemPostInit;
 import cn.kuzuanpa.ktfruaddon.item.itemPreInit;
 import cn.kuzuanpa.ktfruaddon.loot.lootPostInit;
-import cn.kuzuanpa.ktfruaddon.api.material.materialPreInit;
 import cn.kuzuanpa.ktfruaddon.recipe.recipeInit;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityInit0;
 import cn.kuzuanpa.ktfruaddon.tile.tileEntityPreInit;
@@ -30,13 +32,14 @@ import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 import gregapi.api.Abstract_Proxy;
+import gregapi.network.NetworkHandler;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.MinecraftForge;
 
 import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.isAdvancedRocketryTFRU;
 import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.updateTFRUEnvironment;
-import static cn.kuzuanpa.ktfruaddon.ktfruaddon.PROXY;
+import static cn.kuzuanpa.ktfruaddon.ktfruaddon.*;
 
 public class commonProxy extends Abstract_Proxy {
     public commonProxy() {
@@ -47,6 +50,14 @@ public class commonProxy extends Abstract_Proxy {
         MinecraftForge.EVENT_BUS.register(this);
         FMLCommonHandler.instance().bus().register(this);
         updateTFRUEnvironment(aEvent);
+        kNetworkHandler = new NetworkHandler(MOD_ID, "kAdd"
+                , new PacketSyncDataByteArrayLong( 0), new PacketSyncDataByteArrayLong( 1), new PacketSyncDataByteArrayLong( 2), new PacketSyncDataByteArrayLong( 3), new PacketSyncDataByteArrayLong( 4), new PacketSyncDataByteArrayLong( 5), new PacketSyncDataByteArrayLong( 6), new PacketSyncDataByteArrayLong( 7)
+                , new PacketSyncDataByteArrayLongAndIDs( 0), new PacketSyncDataByteArrayLongAndIDs( 1), new PacketSyncDataByteArrayLongAndIDs( 2), new PacketSyncDataByteArrayLongAndIDs( 3), new PacketSyncDataByteArrayLongAndIDs( 4), new PacketSyncDataByteArrayLongAndIDs( 5), new PacketSyncDataByteArrayLongAndIDs( 6), new PacketSyncDataByteArrayLongAndIDs( 7)
+        );
+        kNetworkHandler2 = new NetworkHandler(MOD_ID, "kAd2"
+                , new PacketSyncDataByteArrayLong( 0), new PacketSyncDataByteArrayLong( 1), new PacketSyncDataByteArrayLong( 2), new PacketSyncDataByteArrayLong( 3), new PacketSyncDataByteArrayLong( 4), new PacketSyncDataByteArrayLong( 5), new PacketSyncDataByteArrayLong( 6), new PacketSyncDataByteArrayLong( 7)
+                , new PacketSyncDataByteArrayLongAndIDs( 0), new PacketSyncDataByteArrayLongAndIDs( 1), new PacketSyncDataByteArrayLongAndIDs( 2), new PacketSyncDataByteArrayLongAndIDs( 3), new PacketSyncDataByteArrayLongAndIDs( 4), new PacketSyncDataByteArrayLongAndIDs( 5), new PacketSyncDataByteArrayLongAndIDs( 6), new PacketSyncDataByteArrayLongAndIDs( 7)
+        );
       //  new prefixPreInit(aEvent);
         materialPreInit.init(aEvent);
         tileEntityPreInit.init(aEvent);

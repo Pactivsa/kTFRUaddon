@@ -26,6 +26,7 @@ import gregapi.api.Abstract_Proxy;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.ModData;
 import gregapi.data.LH;
+import gregapi.network.INetworkHandler;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 
@@ -40,6 +41,8 @@ public final class ktfruaddon extends Abstract_Mod {
             serverSide = "cn.kuzuanpa.ktfruaddon.commonProxy")
     public static commonProxy PROXY;
     public static MultiTileEntityRegistry kTileRegistry0 = null;
+    public static INetworkHandler kNetworkHandler;
+    public static INetworkHandler kNetworkHandler2;
     public ktfruaddon() {
     }
     @Mod.EventHandler

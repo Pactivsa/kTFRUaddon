@@ -28,8 +28,15 @@
 
 package cn.kuzuanpa.ktfruaddon.api.research;
 
+import cn.kuzuanpa.ktfruaddon.api.research.task.IResearchTask;
+import cpw.mods.fml.common.FMLLog;
+import gregapi.util.UT;
 import net.minecraft.init.Items;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.IIcon;
+import org.apache.logging.log4j.Level;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,23 +45,14 @@ import java.util.Map;
 public class ResearchTree {
 
     public Map<String, ResearchItem> allResearch = new HashMap<>();
-    public Map<String, ResearchItem> completedResearch = new HashMap<>();
 
+    public byte id;
     public void addResearchItem(ResearchItem item) {
         allResearch.put(item.getName(), item);
     }
 
-    public void completeResearch(String researchName) {
-        ResearchItem item = allResearch.get(researchName);
-        if (item != null && item.areDependenciesMet(completedResearch)) {
-            completedResearch.put(researchName, item);
-            System.out.println("Completed research: " + researchName);
-        } else {
-            System.out.println("Cannot complete research: " + researchName + " due to unsatisfied dependencies.");
-        }
-    }
-
-    public ResearchTree(){
+    public ResearchTree(byte id){
+        this.id = id;
         putTestValues();
     }
     public void putTestValues(){
@@ -79,25 +77,20 @@ public class ResearchTree {
         a.isUnlocked =true;
         b.isUnlocked =true;
         c.isUnlocked =true;
-        a.isCompleted = true;
-        b.progress = 64;
 
         a.tasks.add(new ResearchItem.TestTask(Items.clay_ball.getIconFromDamage(0)));
         a.tasks.add(new ResearchItem.TestTask(Items.book.getIconFromDamage(0)));
         a.tasks.add(new ResearchItem.TestTask(Items.lava_bucket.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.diamond_sword.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.bed.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.record_11.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.hopper_minecart.getIconFromDamage(0)));
+        a.tasks.add(new ResearchItem.TestTask(Items.stone_shovel.getIconFromDamage(0)));
         b.tasks.add(new ResearchItem.TestTask(Items.lava_bucket.getIconFromDamage(0)));
 
 
     }
     public ResearchItem rootItem = new ResearchItem(this,"root","root of everything");
-
-
-    public boolean removeChildItem(ResearchItem item) {
-
-        removeChildRecursively(rootItem, item);
-
-        return !item.getPrerequisites().isEmpty();
-    }
 
     private void removeChildRecursively(ResearchItem current, ResearchItem target) {
         List<ResearchItem> children = current.getPrerequisites();
@@ -106,5 +99,111 @@ public class ResearchTree {
             removeChildRecursively(child, target);
         }
     }
+    public NBTTagCompound save(){
+        NBTTagCompound tag = new NBTTagCompound();
+        allResearch.forEach(((name, item) -> {
+            //ONLY save task progress when research not completed
+            if(item.getProgress() == 0)return;
+            if(item.isCompleted){
+                tag.setBoolean(name+".c", true);
+                return;
+            }
+            NBTTagCompound list = new NBTTagCompound();
+            item.tasks.forEach(task-> UT.NBT.setNumber(list, task.getIdentifier(), task.getProgress()));
+            tag.setTag(name, list);
+        }));
+        return tag;
+    }
+    public void load(NBTTagCompound tag){
+        allResearch.forEach(((name, item) -> {
+            if(tag.hasKey(name+".c"))item.isCompleted = true;
+            else if(tag.hasKey(name)){
+                NBTTagCompound list = tag.getCompoundTag(name);
+                item.tasks.forEach(task-> task.setProgress(list.getLong(task.getIdentifier())));
+            }
+        }));
+    }
+    public byte[] saveToArray() {
+        try {
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            DataOutputStream dos = new DataOutputStream(bos);
+            dos.writeByte(id);
+            for (Map.Entry<String, ResearchItem> entry : allResearch.entrySet()) {
+                String name = entry.getKey();
+                ResearchItem item = entry.getValue();
+                //ONLY save task progress when research not completed
+                if (!item.isUnlocked || item.getProgress() == 0) continue;
+                dos.writeUTF(name);
+                dos.writeShort(item.isCompleted ? -1 : item.tasks.size());
+                if (item.isCompleted) continue;
 
+                for (IResearchTask task : item.tasks) {
+                    dos.writeUTF(task.getIdentifier());
+                    long progress = task.getProgress();
+                    if (progress > Integer.MAX_VALUE || progress < Integer.MIN_VALUE) {
+                        dos.writeByte(3);
+                        dos.writeLong(progress);
+                    } else if (progress > Short.MAX_VALUE || progress < Short.MIN_VALUE) {
+                        dos.writeByte(2);
+                        dos.writeInt((int) progress);
+                    } else {
+                        dos.writeByte(1);
+                        dos.writeShort((short) progress);
+                    }
+                }
+            }
+            dos.flush();
+            return bos.toByteArray();
+        }catch (IOException e){
+            e.printStackTrace();
+            return new byte[0];
+        }
+    }
+    public void loadFromArray(byte[] bytes) {
+        try {
+        ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
+        DataInputStream dis = new DataInputStream(bis);
+        id = dis.readByte();
+        while (dis.available() > 0) {
+            String name = dis.readUTF();
+            ResearchItem item = allResearch.get(name);
+            if(item == null)item = new ResearchItem(null, "","");
+            short taskCount = dis.readShort();
+            if (taskCount == -1) {
+                item.isCompleted = true;
+                continue;
+            }
+            for (int i = 0; i < taskCount; i++) {
+                String taskName = dis.readUTF();
+                IResearchTask task = item.tasks.stream().filter(t -> t.getIdentifier().equals(taskName)).findFirst().orElse(skippedDummyTask);
+                byte progressType = dis.readByte();
+                switch (progressType) {
+                    case 1:
+                        task.setProgress(dis.readShort());
+                        break;
+                    case 2:
+                        task.setProgress(dis.readInt());
+                        break;
+                    case 3:
+                        task.setProgress(dis.readLong());
+                        break;
+                    default:
+                        FMLLog.log(Level.ERROR, "Unknown progress type: " + progressType+", packet may corrupted");
+                        break;
+                }
+            }
+        }
+    }catch (IOException e){
+        e.printStackTrace();
+    }
+    }
+    public static DummyTask skippedDummyTask = new DummyTask();
+    public static class DummyTask implements IResearchTask{
+        public DummyTask(){}
+        @Override public long getMaxProgress() {return 0;}
+        @Override public long getProgress() {return 0;}
+        @Override public void setProgress(long progress) {}
+        @Override public IIcon getIcon() {return null;}
+        @Override public String getIdentifier() {return "";}
+    }
 }

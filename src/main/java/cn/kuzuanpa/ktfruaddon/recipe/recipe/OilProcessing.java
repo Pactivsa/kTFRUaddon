@@ -203,6 +203,8 @@ public class OilProcessing {
         FM.Burn         .addRecipe0(T, - 120,  6, flList.BioFuel2.make(1), FL.Steam.make(260),FL.CarbonDioxide.make(5));
         FM.Engine       .addRecipe0(T, - 120, 10, flList.BioFuel2.make(1), FL.Steam.make(260),FL.CarbonDioxide.make(5));
 
+        RM.generify(flList.WoodTar.make(1),FL.Oil_Creosote.make(1));
+        RM.generify(flList.CoalTar.make(1),FL.Oil_Creosote.make(1));
 
     }
 }

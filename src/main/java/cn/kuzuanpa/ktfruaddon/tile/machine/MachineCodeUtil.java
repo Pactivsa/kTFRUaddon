@@ -24,12 +24,15 @@ import cn.kuzuanpa.ktfruaddon.api.tile.computerCluster.ComputePower;
 import cpw.mods.fml.common.FMLLog;
 import gregapi.old.Textures;
 import gregapi.render.IIconContainer;
+import gregapi.tileentity.base.TileEntityBase01Root;
 import gregapi.tileentity.machines.MultiTileEntityBasicMachine;
+import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import org.apache.logging.log4j.Level;
 import org.jetbrains.annotations.NotNull;
 
@@ -66,6 +69,7 @@ public class MachineCodeUtil extends MultiTileEntityBasicMachine implements ICir
         }catch (Throwable ignored) {}
     }
     if(aPlayer.isSneaking()) oreVeinScanner.clearRendedOres();
+    genMultiTileName();
     return false;
 }
 
@@ -103,6 +107,16 @@ public class MachineCodeUtil extends MultiTileEntityBasicMachine implements ICir
         return 2;
     }
 
+    public void genMultiTileName(){
+        TileEntity.classToNameMap.keySet().stream().forEach(clazz-> {
+            try {
+                Object obj = ((Class<?>)clazz).newInstance();
+                if(!(obj instanceof ITileEntityMultiBlockController))return;
+                TileEntityBase01Root tile = (TileEntityBase01Root)obj ;
+                FMLLog.log(Level.FATAL, "S:"+tile.getTileEntityName()+"=");
+            }catch (Throwable t){}
+        });
+    }
     public static IIconContainer
             sTextureCommon= new Textures.BlockIcons.CustomIcon("machines/cruciblemodel/common"),
             sTextureCommosn= new Textures.BlockIcons.CustomIcon("machines/cruciblemodel/commsson");
