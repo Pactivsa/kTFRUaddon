@@ -170,12 +170,14 @@ public class ContainerClientResearchTreeMonitor extends kGuiContainerBase implem
 			drawBackground(tessellator,colorTimer);
 			drawMainIcon();
 			drawNameDesc();
-			drawProgressBar(tessellator);
-			drawConditionIcon();
 			drawLockedMask(tessellator);
 			if(mouseX>xPosition && mouseY>yPosition && mouseX<xPosition+width && mouseY<yPosition+height){
 				pointingItem=researchItem;
 			}
+			if(!researchItem.isUnlocked)return;
+			drawProgressBar(tessellator);
+			drawConditionIcon();
+
 			GL11.glColor4f(1,1,1,1);
 		}
 
@@ -234,7 +236,7 @@ public class ContainerClientResearchTreeMonitor extends kGuiContainerBase implem
         }
 		public void drawMainIcon(){
 			mc.getTextureManager().bindTexture(mc.getTextureManager().getResourceLocation(Items.book.getSpriteNumber()));
-			if(researchItem.icon != null)drawTexturedModelRectFromIcon(xPosition + 3,yPosition + 3, researchItem.icon, 16,16);
+			if(researchItem.getIcon() != null)drawTexturedModelRectFromIcon(xPosition + 3,yPosition + 3, researchItem.getIcon(), 16,16);
 			else drawTexturedModelRectFromIcon(xPosition + 3,yPosition + 3, Items.book.getIconFromDamage(0), 16,16);
 		}
 		public void drawLockedMask(Tessellator tessellator){
@@ -268,7 +270,7 @@ public class ContainerClientResearchTreeMonitor extends kGuiContainerBase implem
 			if(!visible)getGuiAnimeList().clear();
 		}
 		public void join(int mouseX, int mouseY){
-			if(quitTime+ animeDuration >= getTimer()) getGuiAnimeList().clear();//termites Quit anime when player rapidly switch between items.
+			if(quitTime+ animeDuration >= getTimer()) getGuiAnimeList().clear();//terminates Quit anime when player rapidly switch between items.
 			addAnime(new animeMoveLinear(-1,0,mouseX,mouseY)).addAnime(new animeScaleLinear(-1,0,0.1f,1,1)).addAnime(new animeScaleQuad((int)getTimer(),(int)getTimer()+animeDuration,10f,3,1,1)).addAnime(new animeMoveLinear(-1,0,-mouseX,-mouseY)).addAnime(new animeTransparency((int)getTimer(),(int)getTimer()+animeDuration,0,255));
 		}
 
@@ -357,9 +359,9 @@ public class ContainerClientResearchTreeMonitor extends kGuiContainerBase implem
 			drawBackground(tessellator,colorTimer);
 			drawMainIcon();
 			drawNameDesc();
+			if(!researchItem.isUnlocked)return;
 			drawProgressBar(tessellator);
 			drawConditionIcon();
-			drawLockedMask(tessellator);
 			GL11.glColor4f(1,1,1,1);
 		}
 
@@ -383,32 +385,49 @@ public class ContainerClientResearchTreeMonitor extends kGuiContainerBase implem
 			for (IResearchTask condition : researchItem.tasks) {
 				progress += condition.getProgress()*1f/condition.getMaxProgress();
 			}
-			drawTextureRect(tessellator, xPosition+2, yPosition+height-12, 0, 14, (int) ((width-4) * (progress/researchItem.tasks.size())), 10);
+			drawTextureRect(tessellator, xPosition+2, yPosition+height-10, 0, 14, (int) ((width-4) * (progress/researchItem.tasks.size())), 8);
 		}
 		public void drawConditionIcon(){
 			AtomicInteger i = new AtomicInteger();
-			researchItem.tasks.forEach(condition -> {
-				mc.getTextureManager().bindTexture(mc.getTextureManager().getResourceLocation(Items.saddle.getSpriteNumber()));
-				if(condition.getIcon() != null)drawTexturedModelRectFromIcon(xPosition + 2 + i.getAndIncrement() * 10,yPosition + 30, condition.getIcon(), 8,8);
-				else drawTexturedModelRectFromIcon(xPosition + 2 + i.getAndIncrement() * 10,yPosition + 31, Items.book.getIconFromDamage(0), 8,8);
-			});
+			for (IResearchTask condition : researchItem.tasks) {
+				i.getAndIncrement();
+				float colorTimer = ((float) Math.sin(System.currentTimeMillis()%3141/1000f))/2f+0.5f;
+				Tessellator tessellator = Tessellator.instance;
+
+				GL11.glColor4f(1,1,1,1);
+				mc.getTextureManager().bindTexture(mc.getTextureManager().getResourceLocation(Items.book.getSpriteNumber()));
+				if(condition.getIcon() != null)drawTexturedModelRectFromIcon(xPosition + 2,yPosition + height  - 10 - i.get() * 9, condition.getIcon(), 8,8);
+				else drawTexturedModelRectFromIcon(xPosition + 2 ,yPosition+ height  - 10 - i.get() * 9, Items.book.getIconFromDamage(0), 8,8);
+
+				mc.getTextureManager().bindTexture(main);
+				GL11.glColor4f(1,1,1,1);
+				drawTextureRect(tessellator, xPosition + 12 ,yPosition + height - 9 - i.get() * 9,0, 8,width -14, 6);
+
+				GL11.glColor4f(0.0f,0.8f,0.0f,colorTimer/4+0.75f);
+				float progress = condition.getProgress()*1f/condition.getMaxProgress();
+				drawTextureRect(tessellator, xPosition + 12 ,yPosition + height - 9 - i.get() * 9,60, 8, (int) ((width -14)*progress), 6);
+
+			}
 		}
 		public void drawMainIcon(){
 			mc.getTextureManager().bindTexture(mc.getTextureManager().getResourceLocation(Items.book.getSpriteNumber()));
-			if(researchItem.icon != null)drawTexturedModelRectFromIcon(xPosition + 3,yPosition + 3, researchItem.icon, 16,16);
+			if(researchItem.getIcon() != null)drawTexturedModelRectFromIcon(xPosition + 3,yPosition + 3, researchItem.getIcon(), 16,16);
 			else drawTexturedModelRectFromIcon(xPosition + 3,yPosition + 3, Items.book.getIconFromDamage(0), 16,16);
 		}
-		public void drawLockedMask(Tessellator tessellator){
-			if(researchItem.isUnlocked) return;
-			mc.getTextureManager().bindTexture(background);
-			GL11.glColor4f(1, 1, 1, 0.5f);
-			drawTextureRect(tessellator, xPosition, yPosition, 20, 40, width, height);
-		}
+
 		public void drawNameDesc(){
 			mc.fontRenderer.drawStringWithShadow(researchItem.name, xPosition + 22,yPosition+6,0xffffffff);
-			String desc = mc.fontRenderer.trimStringToWidth(researchItem.desc,width-12);
-			if(!desc.equals(researchItem.desc))desc += "...";
-			mc.fontRenderer.drawStringWithShadow(desc, xPosition + 4,yPosition+20,0xffffffff);
+			String current = "";
+			String last = researchItem.desc;
+			int i =0;
+			while (true){
+				current = mc.fontRenderer.trimStringToWidth(last,width-4);
+				i ++ ;
+				mc.fontRenderer.drawStringWithShadow(current,xPosition+2,yPosition+ 16 + i *10,0xffffffff);
+				GL11.glColor4f(1,1,1,1);
+				if(last.equals(current))break;
+				last = last.replaceFirst(current,"");
+			}
 
 			GL11.glColor4f(1,1,1,1);
 		}

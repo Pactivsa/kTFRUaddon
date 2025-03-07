@@ -30,11 +30,14 @@ package cn.kuzuanpa.ktfruaddon.api.research;
 
 import cn.kuzuanpa.ktfruaddon.api.research.task.IResearchTask;
 import cpw.mods.fml.common.FMLLog;
+import gregapi.data.MT;
+import gregapi.data.OP;
 import gregapi.util.UT;
 import net.minecraft.init.Items;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import org.apache.logging.log4j.Level;
+import zmaster587.advancedRocketry.api.AdvancedRocketryItems;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -57,17 +60,17 @@ public class ResearchTree {
     }
     public void putTestValues(){
 
-        ResearchItem a = new ResearchItem(this, "A", "Description of AjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFjFj", null).setPos(60,130);
-        ResearchItem b = new ResearchItem(this, "B", "Description of B", null).setPos(60,20);
-        ResearchItem c = new ResearchItem(this, "C", "Description of C", null).setPos(180,10);
-        ResearchItem d = new ResearchItem(this, "D", "Description of D", null).setPos(180,130);
-        ResearchItem e = new ResearchItem(this, "E", "Description of E", null).setPos(320,130);
-        ResearchItem f = new ResearchItem(this, "F", "Description of F", null).setPos(340,10);
+        ResearchItem a = new ResearchItem(this, "芯片基础", "在经过了一系列磨难后，你终于在群峦星获得了安身之地。现在，你需要根据你的记忆和想象力，找回地球上最实用的工具：芯片", AdvancedRocketryItems.itemIC, 0).setPos(60,130);
+        ResearchItem b = new ResearchItem(this, "投影", "你需要探索光学成像的原理，设计基础投影设备，来将你对机器的构想投射到世界中", AdvancedRocketryItems.itemSatellitePrimaryFunction, 0).setPos(60,20);
+        ResearchItem c = new ResearchItem(this, "芯片理论", "研究半导体特性，了解其在芯片制造中的关键作用", Items.paper, 0).setPos(180,10);
+        ResearchItem d = new ResearchItem(this, "结晶器", "分析晶体生长过程，思考如何获得整齐排布的分子晶体结构", OP.bouleGt.mat(MT.Si,0).getItem(), MT.Si.mID).setPos(180,130);
+        ResearchItem e = new ResearchItem(this, "半导体电路设计", "是时候设计一个基本的计算器了，它将你从繁重的笔算心算中解放出来", Items.paper, 0).setPos(320,130);
+        ResearchItem f = new ResearchItem(this, "进阶电路设计", "利用计算器进一步改进电路，你认为你离真正的发电机不远了", Items.paper, 0).setPos(340,10);
         a.addPrerequisite(rootItem);
         b.addPrerequisite(rootItem);
 
 
-        c.addPrerequisite(b);
+        c.addPrerequisite(a);
         d.addPrerequisite(a);
         d.addPrerequisite(b);
 
@@ -78,19 +81,14 @@ public class ResearchTree {
         b.isUnlocked =true;
         c.isUnlocked =true;
 
-        a.tasks.add(new ResearchItem.TestTask(Items.clay_ball.getIconFromDamage(0)));
-        a.tasks.add(new ResearchItem.TestTask(Items.book.getIconFromDamage(0)));
-        a.tasks.add(new ResearchItem.TestTask(Items.lava_bucket.getIconFromDamage(0)));
-        a.tasks.add(new ResearchItem.TestTask(Items.diamond_sword.getIconFromDamage(0)));
-        a.tasks.add(new ResearchItem.TestTask(Items.bed.getIconFromDamage(0)));
-        a.tasks.add(new ResearchItem.TestTask(Items.record_11.getIconFromDamage(0)));
-        a.tasks.add(new ResearchItem.TestTask(Items.hopper_minecart.getIconFromDamage(0)));
-        a.tasks.add(new ResearchItem.TestTask(Items.stone_shovel.getIconFromDamage(0)));
-        b.tasks.add(new ResearchItem.TestTask(Items.lava_bucket.getIconFromDamage(0)));
-
-
+        a.tasks.add(new ResearchItem.TestTask(Items.iron_ingot));
+        b.tasks.add(new ResearchItem.TestTask(Items.glowstone_dust));
+        b.tasks.add(new ResearchItem.TestTask(Items.glass_bottle));
+        c.tasks.add(new ResearchItem.TestTask(Items.glass_bottle));
+        d.tasks.add(new ResearchItem.TestTask(Items.water_bucket));
+        e.tasks.add(new ResearchItem.TestTask(Items.paper));
     }
-    public ResearchItem rootItem = new ResearchItem(this,"root","root of everything");
+    public ResearchItem rootItem = new ResearchItem(this,"计算学","算力的提升是万物的基础");
 
     private void removeChildRecursively(ResearchItem current, ResearchItem target) {
         List<ResearchItem> children = current.getPrerequisites();

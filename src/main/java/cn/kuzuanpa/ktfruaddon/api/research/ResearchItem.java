@@ -15,7 +15,10 @@
 package cn.kuzuanpa.ktfruaddon.api.research;
 
 import cn.kuzuanpa.ktfruaddon.api.research.task.IResearchTask;
+import gregapi.util.ST;
+import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +26,8 @@ import java.util.List;
 public class ResearchItem {
     public final String name;
     public final String desc;
-    public final IIcon icon;
+    public final Item iconItem;
+    public final int iconItemMeta;
     public int posX = 0;
     public int posY = 0;
     public int layer = 0;
@@ -33,12 +37,13 @@ public class ResearchItem {
     public boolean isCompleted = false;
 
     public ResearchItem(ResearchTree tree,String name, String desc) {
-        this(tree, name, desc,null);
+        this(tree, name, desc,null,0);
     }
-    public ResearchItem(ResearchTree tree, String name, String desc, IIcon icon) {
+    public ResearchItem(ResearchTree tree, String name, String desc, Item icon, int iconMeta) {
         this.name = name;
         this.desc = desc;
-        this.icon = icon;
+        this.iconItem = icon;
+        this.iconItemMeta = iconMeta;
         if(tree != null)tree.addResearchItem(this);
     }
     public ResearchItem setPos(int x,int y){
@@ -47,6 +52,10 @@ public class ResearchItem {
         return this;
     }
 
+    @Nullable
+    public IIcon getIcon(){
+        return iconItem != null ? iconItem.getIconFromDamage(iconItemMeta) : null;
+    }
     public String getName() {
         return name;
     }
@@ -96,11 +105,11 @@ public class ResearchItem {
     }
     public static class TestTask implements IResearchTask {
 
-        public TestTask(IIcon icon){
-            this.icon=icon;
+        public TestTask(Item item){
+            this.item=item;
         }
 
-        IIcon icon;
+        Item item;
 
         long progress = 20;
 
@@ -121,12 +130,12 @@ public class ResearchItem {
 
         @Override
         public String getIdentifier() {
-            return icon.getIconName();
+            return String.valueOf(ST.id(item));
         }
 
         @Override
         public IIcon getIcon() {
-            return icon;
+            return item.getIconFromDamage(0);
         }
     }
 }
