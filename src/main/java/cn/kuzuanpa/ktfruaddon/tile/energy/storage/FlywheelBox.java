@@ -71,8 +71,9 @@ public class FlywheelBox extends AdaptiveOutputBattery {
             return true;
         }else if (aStack.getItem() instanceof itemFlywheel) for (int i = 0; i < this.invsize(); i++) {
             if (!canInsertItem(i, aStack, SIDE_INSIDE)||slotHas(i)) continue;
-            slot(i, aStack);
-            aPlayer.inventory.setInventorySlotContents(aPlayer.inventory.currentItem, null);
+            ItemStack injected = aStack.splitStack(1);
+            slot(i, injected);
+            if(aStack.stackSize <= 0)aPlayer.inventory.setInventorySlotContents(aPlayer.inventory.currentItem, null);
             return T;
         }
         return F;
