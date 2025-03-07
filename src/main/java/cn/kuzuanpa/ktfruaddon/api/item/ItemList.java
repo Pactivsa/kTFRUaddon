@@ -97,10 +97,15 @@ public enum ItemList implements IItemContainer{
     CircuitPartWaferT3Doped, CircuitPartWaferT4Doped, CircuitPartWaferT5Doped, CircuitPartWaferT6Doped,
     CircuitPartWaferT3Checked, CircuitPartWaferT4Checked, CircuitPartWaferT5Checked, CircuitPartWaferT6Checked,
 
-
+    DiodePhotomask200um, DiodePhotomask28um,
+    DiodeWafer200um, DiodeWafer28um,
+    DiodeWafer200umDeveloped, DiodeWafer28umDeveloped,
+    DiodeWafer200umHardBaked, DiodeWafer28umHardBaked,
+    DiodeWafer200umDoped, DiodeWafer28umDoped,
+    DiodeWafer200umChecked, DiodeWafer28umChecked,
+    
     //Circuits
     //These Tier NOT corresponding the Tier of GT Circuits
-    DiodePartPhotomaskT2,DiodePartPhotomaskT3,
     CircuitBoardEmptyT2,CircuitBoardEmptyT3,
     ResistanceT1, CapacitorT1, CoilT1,DiodeT1, LEDSet,
     ResistanceT2, CapacitorT2, CoilT2,DiodeT2,DiodeT2Part,

@@ -249,6 +249,27 @@ public class itemIT extends MultiItemRandom {
 
         ItemList.InterLayerT1.set(addItem(20560, "InterLayerT1", "Next Step:"+ LH.Chat._CYAN+"Compose"));
         ItemList.InterLayerT2.set(addItem(20561, "InterLayerT2", "Next Step:"+ LH.Chat._CYAN+"Compose"));
+
+
+//Diode Part
+        ItemList.DiodePhotomask200um.set(addItem(20600, "Diode Photo Mask (200um)", "A plate with complex images, used to craft Diodes"));
+        ItemList.DiodePhotomask28um.set(addItem(20601, "Diode Photo Mask (28um)", "A plate with complex images, used to craft Diodes"));
+
+        ItemList.DiodeWafer200um.set(addItem(20610, "Diode Wafer (200um)", "Next Step:"+ LH.Chat._CYAN+"Develop"));
+        ItemList.DiodeWafer28um.set(addItem(20611, "Diode Wafer (28um)", "Next Step:"+ LH.Chat._CYAN+"Develop"));
+
+        ItemList.DiodeWafer200umDeveloped.set(addItem(20620, "Developed Diode Wafer (200um)", "Next Step:"+ LH.Chat._CYAN+"Hard Bake"));
+        ItemList.DiodeWafer28umDeveloped.set(addItem(20621, "Developed Diode Wafer (28um)", "Next Step:"+ LH.Chat._CYAN+"Hard Bake"));
+
+        ItemList.DiodeWafer200umHardBaked.set(addItem(20630, "HardBaked Diode Wafer (200um)", "Next Step:"+ LH.Chat._CYAN+"Dope"));
+        ItemList.DiodeWafer28umHardBaked.set(addItem(20631, "HardBaked Diode Wafer (28um)", "Next Step:"+ LH.Chat._CYAN+"Dope"));
+
+        ItemList.DiodeWafer200umDoped.set(addItem(20640, "Doped Diode Wafer (200um)", "Next Step:"+ LH.Chat._CYAN+"Check"));
+        ItemList.DiodeWafer28umDoped.set(addItem(20641, "Doped Diode Wafer (28um)", "Next Step:"+ LH.Chat._CYAN+"Check"));
+
+        ItemList.DiodeWafer200umChecked.set(addItem(20650, "Checked Diode Wafer (200um)", "Next Step:"+ LH.Chat._CYAN+"Laser Cut"));
+        ItemList.DiodeWafer28umChecked.set(addItem(20651, "Checked Diode Wafer (28um)", "Next Step:"+ LH.Chat._CYAN+"Laser Cut"));
+
 //RAM
         ItemList.RAMPhotomask200um.set(addItem(30000, "RAM Photo Mask (200um)", "A plate with complex images, used to craft RAM"));
         ItemList.RAMPhotomask72um .set(addItem(30001, "RAM Photo Mask (72um)", "A plate with complex images, used to craft RAM"));

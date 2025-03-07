@@ -33,8 +33,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 import gregapi.api.Abstract_Proxy;
 import gregapi.network.NetworkHandler;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraftforge.common.MinecraftForge;
 
 import static cn.kuzuanpa.ktfruaddon.EnvironmentHelper.isAdvancedRocketryTFRU;
@@ -96,7 +95,7 @@ public class commonProxy extends Abstract_Proxy {
     }
     @SubscribeEvent
     public void sendMessage(PlayerEvent.PlayerLoggedInEvent e){
-        if(!EnvironmentHelper.TFRUVer.equalsIgnoreCase(EnvironmentHelper.checkedTFRUVer)) e.player.addChatComponentMessage(new ChatComponentText(I18n.format("ktfru.msg.outdated")));
+        if(!EnvironmentHelper.TFRUVer.equalsIgnoreCase(EnvironmentHelper.checkedTFRUVer)) e.player.addChatComponentMessage(new ChatComponentTranslation("ktfru.msg.outdated"));
     }
 }
 

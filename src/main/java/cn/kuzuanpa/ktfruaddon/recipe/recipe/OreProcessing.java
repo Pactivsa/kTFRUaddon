@@ -60,8 +60,8 @@ public class OreProcessing {
         RM.Autoclave.addRecipe2(T, 0, 400,new long[] {10000},OP.dust.mat(MT.OREMATS.Huebnerite,1),OP.dust.mat(MT.NaOH,4),FL.Steam.make(20000),flList.SodiumHeterotungstate.make(2000),OP.dust.mat(MT.MnO2, 1));
         RM.Autoclave.addRecipe2(T, 0, 400,new long[] {10000},OP.dust.mat(MT.OREMATS.Scheelite,1),OP.dust.mat(MT.Na2CO3,2),FL.Steam.make(20000),flList.SodiumHeterotungstate.make(2000),OP.dust.mat(MT.CaCO3, 1));
         RM.Autoclave.addRecipe2(T, 0, 400,new long[] {10000},OP.dust.mat(MT.OREMATS.Tungstate,1),OP.dust.mat(MT.Na2CO3,2),FL.Steam.make(20000),flList.SodiumHeterotungstate.make(2000),OP.dust.mat(matList.LithiumCarbonate.mat,1));
-        RM.Mixer.addRecipeX(T,64, 100, ST.array(ZL_IS),FL.array(flList.SodiumHeterotungstate.make(4000),MT.HCl.fluid(4000,F)),FL.array(FL.Saltwater.make(8000)),OP.dust.mat(MT.H2WO4,3 ));
-        RM.Mixer.addRecipeX(T,64, 100, ST.array(ZL_IS),FL.array(flList.SodiumHeterotungstate.make(4000),MT.NH3.gas(4000,F)),FL.array(flList.AmmoniumTungstate.make(2000)),OP.dust.mat(MT.NaOH,4 ));
+        RM.Mixer.addRecipeX(T,64, 100, ST.array(ZL_IS),FL.array(flList.SodiumHeterotungstate.make(4000),MT.HCl.fluid(U*4,F)),FL.array(FL.Saltwater.make(8000)),OP.dust.mat(MT.H2WO4,3 ));
+        RM.Mixer.addRecipeX(T,64, 100, ST.array(ZL_IS),FL.array(flList.SodiumHeterotungstate.make(4000),MT.NH3.gas(U*3,F)),FL.array(flList.AmmoniumTungstate.make(2000)),OP.dust.mat(MT.NaOH,4 ));
         RM.Drying.addRecipeX(T,32,40, ST.array(ZL_IS),FL.array(flList.AmmoniumTungstate.make(1000)),FL.array(FL.DistW.make(700)),OP.dust.mat(MT.WO3,1));
         recipeMaps.HeatMixer.addRecipe1(T, 320, 160, OM.dust(MT.WO3, U * 4), MT.H.gas(U * 6, T), MT.H2O.liquid(U * 9, F), OM.dust(MT.W, U));
 

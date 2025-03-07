@@ -29,7 +29,7 @@ import static gregapi.data.OP.*;
 public class OilProcessing {
     public static void init(){
 //Oil
-        recipeMaps.HeatMixer.addRecipeX(false,32,200,ST.array(OP.dust.mat(MT.Cu,0), OP.dustTiny.mat(MT.Zn,0), OP.dustTiny.mat(MT.Cr,0)),FL.array(FL.Hydrogen.make(200),flList.CarbonMonoxide.make(100)),FL.array(flList.Methanol.make(120)));
+        recipeMaps.HeatMixer.addRecipeX(false,32,100,ST.array(OP.dust.mat(MT.Cu,0), OP.dustTiny.mat(MT.Zn,0), OP.dustTiny.mat(MT.Cr,0)),FL.array(FL.Hydrogen.make(200),flList.CarbonMonoxide.make(100)),FL.array(flList.Methanol.make(120)));
         RM.Mixer.addRecipeX(false,64,640, ST.array(OM.dust(MT.NaOH,U)), FL.array(flList.Methanol.make(500), FL.Water.make(1500)),FL.array(flList.OilDesulfurizationer.make(2000)));
         RM.Mixer.addRecipeX(false,64,640, ST.array(OM.dust(MT.KOH,U)), FL.array(flList.Methanol.make(500), FL.Water.make(1500)),FL.array(flList.OilDesulfurizationer.make(2000)));
 
@@ -116,9 +116,9 @@ public class OilProcessing {
 
         RM.Centrifuge.addRecipe0(false,64,100,flList.WoodTar.make(100),FL.array(FL.Methane.make(30),FL.CarbonDioxide.make(50),flList.CarbonMonoxide.make(20),FL.Hydrogen.make(5),FL.Ethylene.make(10),FL.Oil_Olive.make(60)));
 
-        RM.SteamCracking.addRecipe1(F, 16,  64, OP.dust.mat(MT.Kaolinite,0),FL.array(FL.Steam.make(1000), flList.Naphtha.make(100)), FL.array(FL.Hydrogen.make( 10), flList.OilGas.make(22), FL.Petrol.make(47), FL.Lubricant.make(19), FL.Ethylene.make(80),FL.Methane.make(30),FL.Propylene.make(10)), ZL_IS);
+        RM.SteamCracking.addRecipe1(F, 16,  64, OP.dust.mat(MT.Kaolinite,0),FL.array(FL.Steam.make(1000), flList.Naphtha.make(100)), FL.array(FL.Hydrogen.make( 40), flList.OilGas.make(42), FL.Petrol.make(47), FL.Lubricant.make(19), FL.Ethylene.make(204),FL.Methane.make(120),FL.Propylene.make(143)), ZL_IS);
 
-        RM.SteamCracking.addRecipe1(F, 16,  64, OP.dust.mat(MT.Kaolinite,0),FL.array(FL.Steam.make(1000), FL.Diesel.make(100)), FL.array(FL.Hydrogen.make( 2), flList.OilGas.make(18), FL.Petrol.make(65), FL.Lubricant.make(90), FL.Ethylene.make(20),FL.Methane.make(10),FL.Propylene.make(10)), ZL_IS);
+        RM.SteamCracking.addRecipe1(F, 16,  64, OP.dust.mat(MT.Kaolinite,0),FL.array(FL.Steam.make(1000), FL.Diesel.make(100)), FL.array(FL.Hydrogen.make( 30), flList.OilGas.make(38), FL.Petrol.make(65), FL.Lubricant.make(20), FL.Ethylene.make(120),FL.Methane.make(56),FL.Propylene.make(44)), ZL_IS);
 
         RM.Centrifuge.addRecipe0(false,172,200,flList.OilGas.make(100),FL.array(FL.Propane.make(40),FL.Butane.make(40),FL.Nitrogen.make(5),FL.CarbonDioxide.make(5)));
 
@@ -153,7 +153,11 @@ public class OilProcessing {
         FM.Burn         .addRecipe0(T, - 16, 8, flList.WoodTar.make(1)                       , FL.CarbonDioxide.make(1), dustDiv72.mat(MT.DarkAsh,1));
         FM.Burn         .addRecipe0(T, - 16, 8, flList.CoalTar.make(1)                       , FL.CarbonDioxide.make(1), dustDiv72.mat(MT.DarkAsh,1));
 
-        recipeMaps.HeatMixer.addRecipe0(F,280,160,FL.array(FL.Oxygen.make(1000),FL.Propane.make(1000)),FL.array(flList.GlacialAceticAcid.make(500),flList.Acetone.make(500)));
+        recipeMaps.HeatMixer.addRecipe0(F,280,160,FL.array(FL.Oxygen.make(500),FL.Propane.make(1000)),FL.array(flList.Acetone.make(500)));
+        recipeMaps.HeatMixer.addRecipe1(F,80,400,OP.dust.mat(MT.Mn,0), FL.array(FL.Oxygen.make(500),flList.VinylAcetate.make(1000)),FL.array(flList.GlacialAceticAcid.make(1000)));
+
+        recipeMaps.HeatMixer.addRecipe2(F,170, 80,OP.dust.mat(MT.Rh,0), OP.dust.mat(MT.I,0), FL.array(flList.Methanol.make(1000),flList.CarbonMonoxide.make(1000)),FL.array(flList.GlacialAceticAcid.make(1000)));
+        recipeMaps.HeatMixer.addRecipe2(F,170,100,OP.dust.mat(MT.Ir,0), OP.dust.mat(MT.I,0), FL.array(flList.Methanol.make(1000),flList.CarbonMonoxide.make(1000)),FL.array(flList.GlacialAceticAcid.make(1000)));
 
         recipeMaps.HeatMixer.addRecipe2(F, 40,160,ST.tag(0),OP.dust.mat(MT.Pt,0),FL.array(flList.Naphtha.make(1000),FL.Hydrogen.make(800)),FL.array(flList.CrackedNaphthaLow   .make(1000)));
         recipeMaps.HeatMixer.addRecipe2(F,120,150,ST.tag(1),OP.dust.mat(MT.Pt,0),FL.array(flList.Naphtha.make(1000),FL.Hydrogen.make(800)),FL.array(flList.CrackedNaphthaMedium.make(1000)));
