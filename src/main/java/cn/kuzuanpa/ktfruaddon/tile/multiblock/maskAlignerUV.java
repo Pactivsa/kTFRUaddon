@@ -19,6 +19,7 @@ import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseControlledMachine;
 import cn.kuzuanpa.ktfruaddon.api.tile.part.IConditionParts;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.cover.ICover;
@@ -63,10 +64,9 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
 
     //change value there to set usage of every block.
 
-    @Override
     public int getUsage(int mapX, int mapY, int mapZ){
-        int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
-        if (registryID==k) switch (blockID){
+        int blockID = blockIDMap[mapY][mapZ][mapX];
+        switch (blockID){
             case 31110: return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
             case 31120: return MultiTileEntityMultiBlockPart.ONLY_ITEM_FLUID;
         }
@@ -74,16 +74,13 @@ public class maskAlignerUV extends TileEntityBaseControlledMachine implements IM
     }
 
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 0;
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(k, blockIDMap[mapY][mapZ][mapX], MultiTileEntityMultiBlockPart.ONLY_IN, 0)};
     }
 
-    public int getBlockID(int checkX, int checkY, int checkZ){return blockIDMap[checkY][checkZ][checkX];}
     public boolean isIgnored(int checkX, int checkY, int checkZ){
-            return false;
-        }
-
-    public short getRegistryID(int x,int y,int z){return k;}
+        return false;
+    }
 
     ChunkCoordinates lastFailedPos=null;
     @Override

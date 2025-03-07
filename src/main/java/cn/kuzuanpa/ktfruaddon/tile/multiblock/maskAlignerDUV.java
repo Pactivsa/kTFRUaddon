@@ -19,6 +19,7 @@ import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseControlledMachine;
 import cn.kuzuanpa.ktfruaddon.api.tile.part.IConditionParts;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.cover.ICover;
@@ -62,24 +63,13 @@ public class maskAlignerDUV extends TileEntityBaseControlledMachine implements I
     public short g = ST.id(MultiTileEntityRegistry.getRegistry("gt.multitileentity").mBlock);
     public short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
 
-    //change value there to set usage of every block.
-
-    public int getUsage(int mapX, int mapY, int mapZ){
-        return MultiTileEntityMultiBlockPart.ONLY_IN;
-    }
-
-    public int getBlockID(int checkX, int checkY, int checkZ){
-        return blockIDMap[checkY][checkZ][checkX];
-    }
-
     public  boolean isIgnored(int checkX, int checkY, int checkZ){
         return false;
     }
 
-    public short getRegistryID(int x,int y,int z){return k;}
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 1;
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(k, blockIDMap[mapY][mapZ][mapX], MultiTileEntityMultiBlockPart.ONLY_IN, 0)};
     }
     @Override
     public boolean isPartSpecial(TileEntity tile) {
@@ -109,7 +99,7 @@ public class maskAlignerDUV extends TileEntityBaseControlledMachine implements I
             for (cY  = 0; cY < machineY; cY++) {
                 for (cZ = 0; cZ < machineZ; cZ++) {
                     for (cX = 0; cX < machineX; cX++) {
-                        if(!isIgnored(cX,cY,cZ))utils.resetTarget(this, utils.getRealX(mFacing, tX, cX, cZ), tY + cY, utils.getRealZ(mFacing, tZ, cX, cZ), 0, getUsage( cX,cY,cZ));
+                        if(!isIgnored(cX,cY,cZ))utils.resetTarget(this, utils.getRealX(mFacing, tX, cX, cZ), tY + cY, utils.getRealZ(mFacing, tZ, cX, cZ), 0);
                     }
                 }
             }

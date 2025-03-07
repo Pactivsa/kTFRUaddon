@@ -16,7 +16,7 @@
 package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
 import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseRoom;
-import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;
 import gregapi.tileentity.delegate.DelegatorTileEntity;
@@ -91,8 +91,8 @@ public class exampleMachineRoom extends TileEntityBaseRoom {
     }
 
     @Override
-    public utils.GTTileEntity[] getAvailableTiles() {
-        return new utils.GTTileEntity[]{new utils.GTTileEntity(k,30102,0,MultiTileEntityMultiBlockPart.EVERYTHING)};
+    public TileDesc[] getAvailableTiles() {
+        return new TileDesc[]{new TileDesc(k,30102, MultiTileEntityMultiBlockPart.EVERYTHING, 0)};
     }
 
     @Override

@@ -64,7 +64,7 @@ public abstract class MultiBatteryBase extends TileEntityBase10MultiBlockBase im
     }
     public void addEnergyToolTips(List<String> aList, ItemStack aStack, boolean aF3_H){
         aList.add(LH.Chat.GREEN + LH.get(LH.ENERGY_INPUT)  + ": " + LH.Chat.WHITE + mInputMin  + " - " +mInputMax  + mEnergyType.getLocalisedChatNameShort() + LH.Chat.WHITE + "/A * max " + LH.Chat.CYAN + mMaxAmpere + "A/t");
-        aList.add(LH.Chat.RED   + LH.get(LH.ENERGY_OUTPUT) + ": " + LH.Chat.WHITE + mOutput + mEnergyType.getLocalisedChatNameShort() + LH.Chat.WHITE + "/A * max " + LH.Chat.CYAN + mMaxAmpere + "A/t");
+        if(mOutput > 0)aList.add(LH.Chat.RED   + LH.get(LH.ENERGY_OUTPUT) + ": " + LH.Chat.WHITE + mOutput + mEnergyType.getLocalisedChatNameShort() + LH.Chat.WHITE + "/A * max " + LH.Chat.CYAN + mMaxAmpere + "A/t");
     }
     @Override
     public void readFromNBT2(NBTTagCompound aNBT) {
@@ -77,6 +77,9 @@ public abstract class MultiBatteryBase extends TileEntityBase10MultiBlockBase im
 
         if (aNBT.hasKey(NBT_CAPACITY)) mCapacity = aNBT.getLong(NBT_CAPACITY);
         if (aNBT.hasKey(NBT_ENERGY)) mEnergyStored = aNBT.getLong(NBT_ENERGY);
+        if (aNBT.hasKey(NBT_ENERGY_ACCEPTED)) mEnergyType = TagData.createTagData(aNBT.getString(NBT_ENERGY_ACCEPTED));
+        if (aNBT.hasKey(NBT_ENERGY_EMITTED)) mEnergyTypeOut = TagData.createTagData(aNBT.getString(NBT_ENERGY_EMITTED));
+        else mEnergyTypeOut = mEnergyType;
     }
 
     public void writeToNBT2(NBTTagCompound aNBT) {

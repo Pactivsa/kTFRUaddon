@@ -20,8 +20,9 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseLimitedOutputMachine;
 import cn.kuzuanpa.ktfruaddon.api.tile.async.AsyncStructureManager;
-import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.IMappedStructureAsync;
 import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.data.LH;
@@ -40,7 +41,7 @@ import java.util.UUID;
 
 import static gregapi.data.CS.*;
 
-public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMachine implements IAsyncMappedStructure, IAsyncStructure {
+public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMachine implements IMappedStructureAsync, IAsyncStructure {
 
     //决定机器大小
     //this controls the size of machine.
@@ -100,13 +101,12 @@ public class exampleAsyncStructureMachine extends TileEntityBaseLimitedOutputMac
     }};
 
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 0;
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(getRegistryID(mapX, mapY, mapZ), getBlockID(mapX, mapY, mapZ),getUsage(mapX, mapY, mapZ))};
     }
 
-    @Override
     public int getUsage(int mapX, int mapY, int mapZ) {
-int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
+        int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
         if (blockID == 18002&&registryID==k) {
             return  MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
         } else if (blockID == 18002||blockID==18022&&registryID==g) {

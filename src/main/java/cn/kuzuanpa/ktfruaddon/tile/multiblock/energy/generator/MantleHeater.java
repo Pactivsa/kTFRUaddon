@@ -18,6 +18,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.generator;
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -106,8 +107,11 @@ int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY,
         super.writeToNBT2(aNBT);
         aNBT.setShort(NBT_PROGRESS, progress);
     }
-
     @Override
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(getRegistryID(mapX, mapY, mapZ), getBlockID(mapX, mapY, mapZ),getUsage(mapX, mapY, mapZ))};
+    }
+
     public int getBlockID(int mapX, int mapY, int mapZ) {
         return blockIDMap[mapY][mapZ][mapX];
     }
@@ -117,7 +121,6 @@ int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY,
         return getBlockID(mapX,mapY,mapZ)==0;
     }
 
-    @Override
     public short getRegistryID(int mapX, int mapY, int mapZ) {
         return getBlockID(mapX,mapY,mapZ) == 18004 ? g:k;
     }

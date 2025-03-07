@@ -15,6 +15,8 @@
 package cn.kuzuanpa.ktfruaddon.api.tile.async;
 
 import cn.kuzuanpa.ktfruaddon.api.tile.part.IMultiBlockPart;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
 import gregapi.tileentity.multiblocks.MultiTileEntityMultiBlockPart;
 import net.minecraft.tileentity.TileEntity;
@@ -26,24 +28,23 @@ public interface IAsyncStructure {
 
     boolean asyncCheckStructure(AsyncStructureManager.WorldContainer worldContainer);
 
-    static boolean checkAndSetTarget(AsyncStructureManager.WorldContainer worldContainer,ITileEntityMultiBlockController aController, ChunkCoordinates coord, int aRegistryMeta, int aRegistryID, int aDesign, int aMode) {
+    static boolean checkAndSetTarget(AsyncStructureManager.WorldContainer worldContainer, ITileEntityMultiBlockController aController, ChunkCoordinates coord, TileDesc[] availTiles, boolean loadChunk) {
+        if (!worldContainer.isBlockExist(coord.posX,coord.posY,coord.posZ) && !loadChunk) return false;
         TileEntity tTileEntity = worldContainer.getTileEntity(coord.posX,coord.posY,coord.posZ);
         if (tTileEntity == aController) {
             return true;
-        } else if (tTileEntity instanceof MultiTileEntityMultiBlockPart && ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityID() == aRegistryMeta && ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID() == aRegistryID) {
-            ITileEntityMultiBlockController tTarget = ((MultiTileEntityMultiBlockPart) tTileEntity).getTarget(false);
-            if (tTarget != aController && tTarget != null) return false;
-            else {
-                ((MultiTileEntityMultiBlockPart) tTileEntity).setTarget(aController, aDesign, aMode);
-                return true;
+        }
+        if (tTileEntity instanceof MultiTileEntityMultiBlockPart) {
+            for (TileDesc tTile : availTiles) {
+                if (tTile.aRegistryMeta != ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityID() || tTile.aRegistryID != ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID()) continue;
+                return utils.setTarget(aController, tTileEntity, tTile.aDesign, tTile.aUsage);
             }
-        } else if (tTileEntity instanceof IMultiBlockPart && ((IMultiBlockPart) tTileEntity).getMultiTileEntityID() == aRegistryMeta && ((IMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID() == aRegistryID) {
-            ITileEntityMultiBlockController tTarget = ((IMultiBlockPart) tTileEntity).getTarget(false);
-            if (tTarget != aController && tTarget != null) return false;
-            else {
-                ((IMultiBlockPart) tTileEntity).setTarget(aController, aDesign, aMode);
-                return true;
+        } else if (tTileEntity instanceof IMultiBlockPart) {
+            for (TileDesc tTile : availTiles) {
+                if (tTile.aRegistryMeta != ((IMultiBlockPart) tTileEntity).getMultiTileEntityID() || tTile.aRegistryID != ((IMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID()) continue;
+                return utils.setTarget(aController, tTileEntity, tTile.aDesign, tTile.aUsage);
             }
-        } else return false;
+        }
+        return false;
     }
 }

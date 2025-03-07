@@ -19,8 +19,9 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock.energy.storage;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
 import cn.kuzuanpa.ktfruaddon.api.tile.async.AsyncStructureManager;
-import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.async.IMappedStructureAsync;
 import cn.kuzuanpa.ktfruaddon.api.tile.async.IAsyncStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.kTileNBT;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import codechicken.lib.vec.BlockCoord;
@@ -61,7 +62,7 @@ import java.util.stream.Collectors;
 
 import static gregapi.data.CS.*;
 
-public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiBlockFluidHandler, IMultiTileEntity.IMTE_SyncDataByteArray, IAsyncMappedStructure, IAsyncStructure {
+public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiBlockFluidHandler, IMultiTileEntity.IMTE_SyncDataByteArray, IMappedStructureAsync, IAsyncStructure {
     public short maxLayer = 8, maxRange=8, liquidYLevelRender=0, wallID=0, oldYLevel=0;
     public FluidTankGT mTank = new FluidTankGT();
     final short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
@@ -250,7 +251,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
         Queue<BlockCoord> queue = new LinkedList<>();
         queue.add(new BlockCoord(initX, yCoord+layer,initZ));
         checkedAirList.add(new BlockCoord(initX, yCoord+layer,initZ));
-        if (Arrays.stream(getAvailableTiles()).anyMatch(availTile ->IAsyncStructure.checkAndSetTarget(worldContainer,this, new ChunkCoordinates(initX, yCoord+layer, initZ), availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage)))return false; //the start pos is a wall, Why you do that?
+        if (Arrays.stream(getAvailableTiles()).anyMatch(availTile ->IAsyncStructure.checkAndSetTarget(worldContainer,this, new ChunkCoordinates(initX, yCoord+layer, initZ), new TileDesc[]{ new TileDesc(availTile.aRegistryID, availTile.aRegistryMeta, availTile.aUsage, availTile.aDesign)}, false)))return false; //the start pos is a wall, Why you do that?
         //start pos is vaild, begin search.
         layerCapacity++;
         while (!queue.isEmpty()){
@@ -258,12 +259,12 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
             if(!checkRange.isCoordInBox(coord))return false;//Out Bound
 
             //check the block below is in sink || the below block is a valid wall
-            if(!checkedAirList.contains(new BlockCoord(coord.x, yCoord+layer-1, coord.z)) && Arrays.stream(getAvailableTiles()).noneMatch(availTile -> IAsyncStructure.checkAndSetTarget(worldContainer, this, new ChunkCoordinates(coord.x, yCoord+layer-1, coord.z), availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage))) return false;
+            if(!checkedAirList.contains(new BlockCoord(coord.x, yCoord+layer-1, coord.z)) && Arrays.stream(getAvailableTiles()).noneMatch(availTile -> IAsyncStructure.checkAndSetTarget(worldContainer, this, new ChunkCoordinates(coord.x, yCoord+layer-1, coord.z), new TileDesc[]{ new TileDesc(availTile.aRegistryID, availTile.aRegistryMeta, availTile.aUsage, availTile.aDesign)}, false))) return false;
             for (int i = 0; i < 4; i++) {
                 BlockCoord coordNext = new BlockCoord(coord.x + forX[i], yCoord + layer, coord.z + forZ[i]);
                 if(checkedAirList.contains(coordNext))continue;
                 checkedAirList.add(coordNext);
-                if (Arrays.stream(getAvailableTiles()).noneMatch(availTile ->IAsyncStructure.checkAndSetTarget(worldContainer,this, codeUtil.CCCoord2MCCoord(coordNext), availTile.aRegistryMeta, availTile.aRegistryID, availTile.aDesign, availTile.aUsage))){
+                if (Arrays.stream(getAvailableTiles()).noneMatch(availTile ->IAsyncStructure.checkAndSetTarget(worldContainer,this, codeUtil.CCCoord2MCCoord(coordNext), new TileDesc[]{ new TileDesc(availTile.aRegistryID, availTile.aRegistryMeta, availTile.aUsage, availTile.aDesign)}, false))){
                     layerCapacity++;
                     queue.add(coordNext);
                 }
@@ -277,11 +278,11 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
         return "ktfru.multitileentity.multiblock.storage.liquid";
     }
 
-    public utils.GTTileEntity[] getAvailableTiles() {
-        return new utils.GTTileEntity[]{
-                new utils.GTTileEntity(k,31034,0, MultiTileEntityMultiBlockPart.ONLY_FLUID_IN),
-                new utils.GTTileEntity(k,31035,0, MultiTileEntityMultiBlockPart.ONLY_FLUID_IN),
-                new utils.GTTileEntity(k,31036,0, MultiTileEntityMultiBlockPart.ONLY_FLUID_IN)
+    public TileDesc[] getAvailableTiles() {
+        return new TileDesc[]{
+                new TileDesc(k,31034, MultiTileEntityMultiBlockPart.ONLY_FLUID_IN, 0),
+                new TileDesc(k,31035, MultiTileEntityMultiBlockPart.ONLY_FLUID_IN, 0),
+                new TileDesc(k,31036, MultiTileEntityMultiBlockPart.ONLY_FLUID_IN, 0)
         };
     }
 
@@ -289,10 +290,7 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     public boolean isInsideStructure(int aX, int aY, int aZ) {
         return true;
     }
-    @Override
-    public boolean isInput(byte aSide) {
-        return true;
-    }
+    @Override public boolean isInput(byte aSide) {return true;}
     protected IFluidTank getFluidTankFillable2(byte aSide, FluidStack aFluidToFill) {isTankChanged =true; return mTank;}
     protected IFluidTank getFluidTankDrainable2(byte aSide, FluidStack aFluidToDrain) {isTankChanged =true; return mTank;}
     protected IFluidTank[] getFluidTanks2(byte aSide) {isTankChanged =true;return mTank.AS_ARRAY;}
@@ -312,6 +310,11 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
             new Textures.BlockIcons.CustomIcon("machines/energystorages/flywheel_box/colored/axis"),
             new Textures.BlockIcons.CustomIcon("machines/energystorages/flywheel_box/colored/side"),
     };
+
+    @Override
+    public double getMaxRenderDistanceSquared() {
+        return 65536;
+    }
 
     @Override
     public AxisAlignedBB getRenderBoundingBox() {
@@ -371,14 +374,13 @@ public class LiquidBattery extends MultiAdaptiveOutputBattery implements IMultiB
     //change value there to set usage of every block.
 
     @Override
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(getRegistryID(mapX, mapY, mapZ), getBlockID(mapX, mapY, mapZ),getUsage(mapX, mapY, mapZ))};
+    }
+
     public int getUsage(int mapX, int mapY, int mapZ){
         if(mapY==0)return MultiTileEntityMultiBlockPart.ONLY_FLUID;
         return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
-    }
-
-    @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 0;
     }
 
     public int getBlockID(int checkX, int checkY, int checkZ){return wallID;}

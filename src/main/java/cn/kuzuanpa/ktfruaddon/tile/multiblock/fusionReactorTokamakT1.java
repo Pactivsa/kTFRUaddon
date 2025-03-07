@@ -18,6 +18,7 @@ package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientFusionTokamakT1;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonFusionTokamakT1;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
@@ -369,15 +370,12 @@ public class fusionReactorTokamakT1 extends TileEntityBase10MultiBlockBase imple
     short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
     short g = ST.id(MultiTileEntityRegistry.getRegistry("gt.multitileentity").mBlock);
 
-
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 0;
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(getRegistryID(mapX, mapY, mapZ), getBlockID(mapX, mapY, mapZ),getUsage(mapX, mapY, mapZ))};
     }
 
-    @Override
     public int getUsage(int mapX, int mapY, int mapZ) {
-int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
         if (getRegistryID(mapX,mapY,mapZ)==g) {
             return  MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
         } else if (getBlockID(mapX,mapY,mapZ) == 31019) {
@@ -394,7 +392,6 @@ int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY,
         return getBlockID(mapX,mapY,mapZ)==0?T:F;
     }
 
-    @Override
     public short getRegistryID(int mapX, int mapY, int mapZ) {
         return getBlockID(mapX,mapY,mapZ)==18002?g:k;
     }

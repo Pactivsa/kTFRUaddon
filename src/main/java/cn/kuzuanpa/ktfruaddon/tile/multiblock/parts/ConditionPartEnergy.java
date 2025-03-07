@@ -45,7 +45,7 @@ import static gregapi.data.CS.*;
 
 public class ConditionPartEnergy extends TileEntityBase09FacingSingle implements ITileEntityEnergy, IConditionParts, IMultiBlockPart {
     boolean isEnergyEnough;
-    long mInputMin=-1,mInputMax=-1,mEnergy=0;
+    long mInputMin=-1,mInput =-1, mInputMax=-1,mEnergy=0;
     TagData mEnergyTypeAccepted;
     public byte mEnergyInputs = 127;
     public IIconContainer[] mTexturesMaterial = L6_IICONCONTAINER, mTexturesInactive = L6_IICONCONTAINER, mTexturesActive = L6_IICONCONTAINER, mTexturesActiveGlow = L6_IICONCONTAINER;
@@ -89,9 +89,10 @@ public class ConditionPartEnergy extends TileEntityBase09FacingSingle implements
         if (aNBT.hasKey(NBT_TARGET)) mTargetPos = IMultiBlockPart.readTargetPosFromNBT(aNBT);
         if (aNBT.hasKey(NBT_DESIGN)) mDesign = UT.Code.unsignB(aNBT.getByte(NBT_DESIGN));
 
-        if (aNBT.hasKey(NBT_INPUT)) {mInputMin = aNBT.getLong(NBT_INPUT);}
         if (aNBT.hasKey(NBT_INPUT_MIN)) {mInputMin = aNBT.getLong(NBT_INPUT_MIN);}
         if (aNBT.hasKey(NBT_INPUT_MAX)) {mInputMax = aNBT.getLong(NBT_INPUT_MAX);}
+        if (aNBT.hasKey(NBT_INPUT)) {mInput = aNBT.getLong(NBT_INPUT);}
+        else mInput = mInputMax;
         if (aNBT.hasKey(NBT_ENERGY_ACCEPTED)) mEnergyTypeAccepted = TagData.createTagData(aNBT.getString(NBT_ENERGY_ACCEPTED));
         if (aNBT.hasKey(NBT_ENERGY_ACCEPTED_SIDES)) mEnergyInputs = (byte)(aNBT.getByte(NBT_ENERGY_ACCEPTED_SIDES) | SBIT_A);
 
@@ -156,11 +157,11 @@ public class ConditionPartEnergy extends TileEntityBase09FacingSingle implements
 
     @Override
     public void onTick2(long aTimer, boolean aIsServerSide) {
-        if (!aIsServerSide || mEnergy < mInputMin) {
+        if (!aIsServerSide || mEnergy < mInput) {
             isEnergyEnough=false;
             return;
         }
-        mEnergy-=mInputMin;
+        mEnergy-=mInput;
         isEnergyEnough=true;
     }
 
@@ -172,7 +173,7 @@ public class ConditionPartEnergy extends TileEntityBase09FacingSingle implements
     }
     public boolean isEnergyAcceptingFrom(TagData aEnergyType, byte aSide, boolean aTheoretical) {return aEnergyType.equals(mEnergyTypeAccepted);}
     @Override public long getEnergySizeInputMin             (TagData aEnergyType, byte aSide) {return mInputMin;}
-    @Override public long getEnergySizeInputRecommended     (TagData aEnergyType, byte aSide) {return mInputMin;}
+    @Override public long getEnergySizeInputRecommended     (TagData aEnergyType, byte aSide) {return mInput;}
     @Override public long getEnergySizeInputMax             (TagData aEnergyType, byte aSide) {return mInputMax;}
     @Override public Collection<TagData> getEnergyTypes(byte aSide) {return mEnergyTypeAccepted.AS_LIST;}
 

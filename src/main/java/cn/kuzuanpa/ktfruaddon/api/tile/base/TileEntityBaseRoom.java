@@ -16,6 +16,7 @@
 
 package cn.kuzuanpa.ktfruaddon.api.tile.base;
 
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
@@ -48,7 +49,7 @@ public abstract class TileEntityBaseRoom extends TileEntityBase10MultiBlockMachi
      * @param checkRange Max range when checking
      * @param shouldCornerBeSealed Should every corner be filled,or just the blocks next to RoomSpace
      */
-    public static void checkAndGetRoom(utils.GTTileEntity[] availableTiles, ITileEntityMultiBlockController aController, boolean startFromTopOrBack, BoundingBox checkRange, boolean shouldCornerBeSealed){
+    public static void checkAndGetRoom(TileDesc[] availableTiles, ITileEntityMultiBlockController aController, boolean startFromTopOrBack, BoundingBox checkRange, boolean shouldCornerBeSealed){
         checkingBlockCoords  = new ConcurrentHashMap<Integer,BlockCoord>(){};
         roomSpace = new ArrayList<BlockCoord>();
         walls = new ArrayList<BlockCoord>();
@@ -101,7 +102,7 @@ public abstract class TileEntityBaseRoom extends TileEntityBase10MultiBlockMachi
         return true;
     }
 
-    public abstract utils.GTTileEntity[] getAvailableTiles();
+    public abstract TileDesc[] getAvailableTiles();
     public final static boolean startFromTopOrBack=false;
     public final static boolean shouldCornerBeSealed=true;
 

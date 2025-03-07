@@ -19,6 +19,7 @@ import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.code.TagData;
@@ -215,13 +216,11 @@ public class fuelDeburnFactory extends TileEntityBase10MultiBlockMachine impleme
 
     short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
     short g = ST.id(MultiTileEntityRegistry.getRegistry("gt.multitileentity").mBlock);
-
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 0;
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(getRegistryID(mapX, mapY, mapZ), getBlockID(mapX, mapY, mapZ),getUsage(mapX, mapY, mapZ))};
     }
 
-    @Override
     public int getUsage(int mapX, int mapY, int mapZ) {
 int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
         if(mapY == 1 && blockID == 18002)return MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;

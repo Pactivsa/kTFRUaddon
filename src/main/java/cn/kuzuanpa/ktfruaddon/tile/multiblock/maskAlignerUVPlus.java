@@ -15,9 +15,11 @@
 
 package cn.kuzuanpa.ktfruaddon.tile.multiblock;
 
+import cn.kuzuanpa.ktfruaddon.api.i18n.texts.I18nHandler;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.base.TileEntityBaseControlledMachine;
 import cn.kuzuanpa.ktfruaddon.api.tile.part.IConditionParts;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import gregapi.block.multitileentity.MultiTileEntityRegistry;
 import gregapi.cover.ICover;
 import gregapi.data.CS;
@@ -78,7 +80,6 @@ public class maskAlignerUVPlus extends TileEntityBaseControlledMachine implement
             {k, k, k},
             {k, k, k},
     }};
-    @Override
     public int getUsage(int mapX, int mapY, int mapZ){
         int registryID = getRegistryID(mapX,mapY,mapZ), blockID = getBlockID(mapX, mapY, mapZ);
         if (registryID==k) switch (blockID){
@@ -89,6 +90,10 @@ public class maskAlignerUVPlus extends TileEntityBaseControlledMachine implement
     }
 
     @Override
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(getRegistryID(mapX, mapY, mapZ), getBlockID(mapX, mapY, mapZ),getUsage(mapX, mapY, mapZ))};
+    }
+
     public int getBlockID(int checkX, int checkY, int checkZ){
         return blockIDMap[checkY][checkZ][checkX];
     }
@@ -96,15 +101,10 @@ public class maskAlignerUVPlus extends TileEntityBaseControlledMachine implement
     public  boolean isIgnored(int checkX, int checkY, int checkZ){
         return false;
     }
-    @Override
     public short getRegistryID(int x,int y,int z){
         return registryIDMap[y][z][x];
     }
 
-    @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 1;
-    }
     @Override
     public boolean isPartSpecial(TileEntity tile) {
         return tile instanceof IConditionParts;
@@ -136,6 +136,7 @@ public class maskAlignerUVPlus extends TileEntityBaseControlledMachine implement
 
     @Override
     public void addToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
+        aList.add(LH.Chat.CYAN + LH.get(I18nHandler.HAS_PROJECTOR_STRUCTURE));
         aList.add(LH.Chat.CYAN + LH.get(LH.STRUCTURE) + ":");
         aList.add(LH.Chat.WHITE + LH.get("ktfru.tooltip.multiblock.maskaligner.1.0"));
         aList.add(LH.Chat.WHITE + LH.get("ktfru.tooltip.multiblock.maskaligner.1.1"));

@@ -18,6 +18,7 @@ package cn.kuzuanpa.ktfruaddon.api.tile.base;
 
 import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.code.codeUtil;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import codechicken.lib.vec.BlockCoord;
 import cpw.mods.fml.common.FMLLog;
@@ -39,7 +40,7 @@ public interface IRoom extends ITileEntityMultiBlockController{
      * @param checkRange           Max range when checking
      * @param shouldCornerBeSealed Should every corner be filled,or just the blocks next to RoomSpace
      */
-    static List<BlockCoord> checkAndGetRoom(utils.GTTileEntity[] availableTiles, ITileEntityMultiBlockController aController, boolean startFromTopOrBack, BoundingBox checkRange, boolean shouldCornerBeSealed) {
+    static List<BlockCoord> checkAndGetRoom(TileDesc[] availableTiles, ITileEntityMultiBlockController aController, boolean startFromTopOrBack, BoundingBox checkRange, boolean shouldCornerBeSealed) {
         ConcurrentHashMap<Integer, BlockCoord> checkingBlockCoords = new ConcurrentHashMap<Integer, BlockCoord>();
         ArrayList<BlockCoord> roomSpace = new ArrayList<BlockCoord>();
         //Starting from TOP
@@ -81,7 +82,7 @@ public interface IRoom extends ITileEntityMultiBlockController{
         BoundingBox checkRange = new BoundingBox(StartPoi, EndPoi);
         checkAndGetRoom(getAvailableTiles(), this, startFromTopOrBack, checkRange, shouldCornerBeSealed);
     }
-    utils.GTTileEntity[] getAvailableTiles();
+    TileDesc[] getAvailableTiles();
     short getFacing();
     int getX();
     int getY();

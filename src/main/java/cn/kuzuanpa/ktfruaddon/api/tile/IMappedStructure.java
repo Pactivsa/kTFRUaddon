@@ -31,9 +31,9 @@
 package cn.kuzuanpa.ktfruaddon.api.tile;
 
 import cn.kuzuanpa.ktfruaddon.api.client.fx.FxRenderBlockOutline;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import gregapi.tileentity.multiblocks.ITileEntityMultiBlockController;
-import gregapi.util.WD;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
@@ -56,10 +56,19 @@ public interface IMappedStructure extends ITileEntityMultiBlockController {
         for (mapY = 0; mapY < machineY; mapY++) for (mapZ = 0; mapZ < machineZ ; mapZ++) for (mapX = 0; mapX < machineX; mapX++) {
             int realX=utils.getRealX(getFacing(), tX, mapX, mapZ),realY=tY + mapY,realZ=utils.getRealZ(getFacing(), tZ, mapX, mapZ);
             if (isIgnored(mapX,mapY,mapZ)) continue;
-            if (utils.checkAndSetTarget(this, realX, realY, realZ, getBlockID(mapX, mapY, mapZ), getRegistryID(mapX,mapY,mapZ), getDesign(mapX,mapY,mapZ), getUsage(mapX,mapY,mapZ))) {
-                TileEntity tile = WD.te(getWorld(),new ChunkCoordinates(realX,realY,realZ),false);
-                if(isPartSpecial(tile))specialBlockList.add(tile);
-            } else if(!onCheckFailed(mapX,mapY,mapZ))return new ChunkCoordinates(realX,realY,realZ);
+            ChunkCoordinates realPos = new ChunkCoordinates(realX,realY,realZ);
+
+            boolean partValid = false;
+
+            if(this instanceof ICustomPartValidator){
+                if(((ICustomPartValidator) this).isPartValid(realPos, new ChunkCoordinates(mapX,mapY,mapZ))) partValid = true;
+            }
+            else if (utils.checkAndSetTarget(this, realPos, getTileDescs(mapX,mapY,mapZ))) partValid = true;
+
+            if(partValid){
+                TileEntity tile = this.getTileEntity(realPos);
+                if(isPartSpecial(tile)) specialBlockList.add(tile);
+            }else if(!onCheckFailed(mapX,mapY,mapZ))return realPos;
         }
         if(!specialBlockList.isEmpty())receiveSpecialBlockList(specialBlockList);
         return null;
@@ -68,11 +77,9 @@ public interface IMappedStructure extends ITileEntityMultiBlockController {
     /**@return will we ignore this error and continue check**/
     default boolean onCheckFailed(int mapX,int mapY,int mapZ){return false;}
 
-    default int getDesign(int mapX, int mapY, int mapZ) {return 0;}
-    int getUsage(int mapX, int mapY, int mapZ);
-    int getBlockID(int mapX,int mapY,int mapZ);
+    TileDesc[] getTileDescs(int mapX, int mapY, int mapZ);
+
     boolean isIgnored(int mapX,int mapY,int mapZ);
-    short getRegistryID(int mapX,int mapY,int mapZ);
     short getFacing();
     int getX();
     int getY();

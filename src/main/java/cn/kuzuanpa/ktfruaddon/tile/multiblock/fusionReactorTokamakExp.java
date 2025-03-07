@@ -21,6 +21,7 @@ import cn.kuzuanpa.ktfruaddon.api.code.BoundingBox;
 import cn.kuzuanpa.ktfruaddon.api.recipe.recipeMaps;
 import cn.kuzuanpa.ktfruaddon.api.tile.IMappedStructure;
 import cn.kuzuanpa.ktfruaddon.api.tile.part.IComputeNode;
+import cn.kuzuanpa.ktfruaddon.api.tile.util.TileDesc;
 import cn.kuzuanpa.ktfruaddon.api.tile.util.utils;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerClientFusionTokamakExp;
 import cn.kuzuanpa.ktfruaddon.client.gui.ContainerCommonFusionTokamakExp;
@@ -362,13 +363,11 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
 
     short k = ST.id(MultiTileEntityRegistry.getRegistry("ktfru.multitileentity").mBlock);
     short g = ST.id(MultiTileEntityRegistry.getRegistry("gt.multitileentity").mBlock);
-
     @Override
-    public int getDesign(int mapX, int mapY, int mapZ) {
-        return 0;
+    public TileDesc[] getTileDescs(int mapX, int mapY, int mapZ) {
+        return new TileDesc[]{ new TileDesc(getRegistryID(mapX, mapY, mapZ), getBlockID(mapX, mapY, mapZ),getUsage(mapX, mapY, mapZ))};
     }
 
-    @Override
     public int getUsage(int mapX, int mapY, int mapZ) {
         if (getRegistryID(mapX,mapY,mapZ)==g) {
             return  MultiTileEntityMultiBlockPart.ONLY_ENERGY_IN;
@@ -386,7 +385,6 @@ public class fusionReactorTokamakExp extends TileEntityBase10MultiBlockBase impl
         return getBlockID(mapX,mapY,mapZ)==0?T:F;
     }
 
-    @Override
     public short getRegistryID(int mapX, int mapY, int mapZ) {
         return getBlockID(mapX,mapY,mapZ)==18002?g:k;
     }

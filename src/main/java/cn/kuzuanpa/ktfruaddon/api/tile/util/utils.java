@@ -24,46 +24,65 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.Vec3;
 
 public class utils {
-    public utils() {
-    }
     public static boolean checkAndSetTarget(ITileEntityMultiBlockController aController, int aX, int aY, int aZ, int aRegistryMeta, int aRegistryID, int aDesign, int aMode) {
         return checkAndSetTarget(aController,new ChunkCoordinates(aX,aY,aZ),aRegistryMeta,aRegistryID,aDesign,aMode);
     }
-    public static boolean resetTarget(ITileEntityMultiBlockController aController,int aX, int aY, int aZ, int aDesign, int aMode) {
+    public static boolean resetTarget(ITileEntityMultiBlockController aController,int aX, int aY, int aZ, int aDesign) {
         TileEntity tTileEntity = aController.getTileEntity(aX, aY, aZ);
         if(tTileEntity == null) return false;
         else if (tTileEntity == aController) {
             return true;
         }
         try {
-            if(tTileEntity instanceof MultiTileEntityMultiBlockPart&&((MultiTileEntityMultiBlockPart) tTileEntity).getTarget(false).equals(aController))((MultiTileEntityMultiBlockPart) tTileEntity).setTarget(null, aDesign, aMode);
-            if(tTileEntity instanceof IMultiBlockPart&& ((IMultiBlockPart) tTileEntity).getTarget(false).equals(aController))((IMultiBlockPart) tTileEntity).setTarget(null, aDesign, aMode);
+            if(tTileEntity instanceof MultiTileEntityMultiBlockPart&&((MultiTileEntityMultiBlockPart) tTileEntity).getTarget(false).equals(aController))((MultiTileEntityMultiBlockPart) tTileEntity).setTarget(null, aDesign, 0);
+            if(tTileEntity instanceof IMultiBlockPart&& ((IMultiBlockPart) tTileEntity).getTarget(false).equals(aController))((IMultiBlockPart) tTileEntity).setTarget(null, aDesign, 0);
         } catch (Throwable ignored){}
         return true;
     }
-
     public static boolean checkAndSetTarget(ITileEntityMultiBlockController aController, ChunkCoordinates coord, int aRegistryMeta, int aRegistryID, int aDesign, int aMode) {
+        return checkAndSetTarget(aController,coord, new TileDesc[] {new TileDesc(aRegistryMeta, aRegistryID, aMode, aDesign)});
+    }
+    public static boolean checkAndSetTarget(ITileEntityMultiBlockController aController, int aX, int aY, int aZ, TileDesc[] availTiles) {
+        return checkAndSetTarget(aController,new ChunkCoordinates(aX,aY,aZ), availTiles);
+    }
+    public static boolean checkAndSetTarget(ITileEntityMultiBlockController aController, ChunkCoordinates coord, TileDesc[] availTiles) {
         TileEntity tTileEntity = aController.getTileEntity(coord);
-        if (tTileEntity == aController) {
+        if (tTileEntity == aController) return true;
+
+        if (tTileEntity instanceof MultiTileEntityMultiBlockPart) {
+            for (TileDesc tTile : availTiles) {
+                if (tTile.aRegistryMeta != ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityID() || tTile.aRegistryID != ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID()) continue;
+                return setTarget(aController, tTileEntity, tTile.aDesign, tTile.aUsage);
+            }
+        } else if (tTileEntity instanceof IMultiBlockPart) {
+            for (TileDesc tTile : availTiles) {
+                if (tTile.aRegistryMeta != ((IMultiBlockPart) tTileEntity).getMultiTileEntityID() || tTile.aRegistryID != ((IMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID()) continue;
+                return setTarget(aController, tTileEntity, tTile.aDesign, tTile.aUsage);
+            }
+        }
+        return false;
+    }
+
+    public static boolean setTarget(ITileEntityMultiBlockController aController, TileEntity tile, int aDesign, int aMode) {
+        if(tile instanceof MultiTileEntityMultiBlockPart) {
+            MultiTileEntityMultiBlockPart part = (MultiTileEntityMultiBlockPart)tile;
+            ITileEntityMultiBlockController tTarget = part.getTarget(false);
+            if (tTarget != aController && tTarget != null) return false;
+
+            part.setTarget(aController, aDesign, aMode);
             return true;
-        } else if (tTileEntity instanceof MultiTileEntityMultiBlockPart && ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityID() == aRegistryMeta && ((MultiTileEntityMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID() == aRegistryID) {
-            ITileEntityMultiBlockController tTarget = ((MultiTileEntityMultiBlockPart) tTileEntity).getTarget(false);
+        }else if (tile instanceof IMultiBlockPart) {
+            IMultiBlockPart part = (IMultiBlockPart)tile;
+            ITileEntityMultiBlockController tTarget = part.getTarget(false);
             if (tTarget != aController && tTarget != null) return false;
-            else {
-                ((MultiTileEntityMultiBlockPart) tTileEntity).setTarget(aController, aDesign, aMode);
-                return true;
-            }
-        } else if (tTileEntity instanceof IMultiBlockPart && ((IMultiBlockPart) tTileEntity).getMultiTileEntityID() == aRegistryMeta && ((IMultiBlockPart) tTileEntity).getMultiTileEntityRegistryID() == aRegistryID) {
-            ITileEntityMultiBlockController tTarget = ((IMultiBlockPart) tTileEntity).getTarget(false);
-            if (tTarget != aController && tTarget != null) return false;
-            else {
-                ((IMultiBlockPart) tTileEntity).setTarget(aController, aDesign, aMode);
-                return true;
-            }
-        } else return false;
+
+            part.setTarget(aController, aDesign, aMode);
+            return true;
+        }
+        return false;
     }
     public static boolean resetTarget(ITileEntityMultiBlockController aController,ChunkCoordinates coord, int aDesign, int aMode) {
-        return resetTarget(aController,coord.posX,coord.posY, coord.posZ, aDesign, aMode);
+        return resetTarget(aController,coord.posX,coord.posY, coord.posZ, aDesign);
     }
     @Deprecated
     public static boolean checkAndSetTargetEnergyConsumerPermitted(ITileEntityMultiBlockController aController, int aX, int aY, int aZ, int aRegistryMeta, int aRegistryID, int aDesign, int aMode) {
@@ -155,19 +174,6 @@ public class utils {
     public static double getZOffset(byte Facing,double offsetX,double offsetZ){
         double[] resultZ = {0, 0, + offsetZ, - offsetZ, + offsetX, - offsetX, 0, 0};
         return resultZ[Facing];
-    }
-
-    public static class GTTileEntity {
-        public  int aRegistryMeta;
-        public int aRegistryID;
-        public int aDesign;
-        public int aUsage;
-        public GTTileEntity( int aRegistryID,int aRegistryMeta, int aDesign,int aUsage){
-            this.aDesign=aDesign;
-            this.aRegistryID=aRegistryID;
-            this.aRegistryMeta=aRegistryMeta;
-            this.aUsage=aUsage;
-        }
     }
 
 }

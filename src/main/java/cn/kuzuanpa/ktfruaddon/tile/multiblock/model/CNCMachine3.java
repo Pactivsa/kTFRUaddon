@@ -111,7 +111,7 @@ public class CNCMachine3 extends ModelRenderBaseMultiBlockMachine {
             tY+=yMapOffset;
             int cX, cY, cZ;
             for (cY  = 0; cY < machineY; cY++) for (cZ = 0; cZ < machineZ; cZ++) for (cX = 0; cX < machineX; cX++) {
-                if(!isIgnored(cX,cY,cZ))utils.resetTarget(this, utils.getRealX(mFacing, tX, cX, cZ), tY + cY, utils.getRealZ(mFacing, tZ, cX, cZ), 0, getUsage( cX,cY,cZ));
+                if(!isIgnored(cX,cY,cZ))utils.resetTarget(this, utils.getRealX(mFacing, tX, cX, cZ), tY + cY, utils.getRealZ(mFacing, tZ, cX, cZ), 0);
             }
         }
     }
@@ -141,7 +141,10 @@ public class CNCMachine3 extends ModelRenderBaseMultiBlockMachine {
     public AxisAlignedBB getRenderBoundingBox() {
         return AxisAlignedBB.getBoundingBox((double)(this.xCoord - machineX), (double)(this.yCoord - 1), (double)(this.zCoord - machineZ), (double)(this.xCoord + machineX), (double)(this.yCoord + machineY), (double)(this.zCoord + machineZ));
     }
-
+    @Override
+    public double getMaxRenderDistanceSquared() {
+        return 65536;
+    }
     @Override
     public DelegatorTileEntity<IInventory> getItemInputTarget(byte aSide) {
         return new DelegatorTileEntity<>(this,SIDE_UP);
