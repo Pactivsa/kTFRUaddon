@@ -46,11 +46,36 @@ public class kTFRUAddonARProjectorRegister implements IDummyMultiBlockRegisterer
         dummyStructures.add(new DummyTileMultiBlock(cncMachine3(),"ktfru.projector.cncMachine3"));
         dummyStructures.add(new DummyTileMultiBlock(MantleHeater(),"ktfru.projector.MantleHeater"));
         dummyStructures.add(new DummyTileMultiBlock(TokamakTierExp(),"ktfru.projector.fusionReactorTokamakExperiment"));
+        //Because the 'Code Too Long...'
         dummyStructures.add(new DummyTileMultiBlock(new Object[][][]{TokamakTier1Layer13(),TokamakTier1Layer12(),TokamakTier1Layer11(),TokamakTier1Layer10(),TokamakTier1Layer9(),TokamakTier1Layer8(),TokamakTier1Layer7(),TokamakTier1Layer6(),TokamakTier1Layer5(),TokamakTier1Layer4(),TokamakTier1Layer3(),TokamakTier1Layer2(),TokamakTier1Layer1(),TokamakTier1Layer0()},"ktfru.projector.fusionReactorTokamakT1"));
         dummyStructures.add(new DummyTileMultiBlock(oilMiner(),"ktfru.projector.oilMiner"));
         dummyStructures.add(new DummyTileMultiBlock(FuelDeburnFactory(),"ktfru.projector.fuelDeburnFactory"));
+        dummyStructures.add(new DummyTileMultiBlock(MaskAlignerUVPlus(),"ktfru.projector.maskAlignerUVPlus"));
 
         return dummyStructures;
+    }
+    static Object[][][] MaskAlignerUVPlus(){
+        BlockMeta main = tile(k, 30009);
+        BlockMeta ener = tile(k, 31501);
+        BlockMeta IOMg = tile(k, 31021);
+        BlockMeta plat = tile(k, 31006);
+        BlockMeta driv = tile(k, 31005);
+        BlockMeta ligh = tile(k, 31011);
+        BlockMeta wall = tile(g, 18002);
+        return new Object[][][]{{
+            {ligh, ligh, ligh},
+            {ligh, ligh, ligh},
+            {ligh, ligh, ligh},
+        },{
+            {wall, driv, wall},
+            {driv, plat, driv},
+            {wall, driv, wall},
+        },{
+            {wall, main, wall},
+            {wall, IOMg, wall},
+            {wall, ener, wall},
+        }
+        };
     }
     static Object[][][] MantleHeater() {
         BlockMeta main = tile(k, 30028);
