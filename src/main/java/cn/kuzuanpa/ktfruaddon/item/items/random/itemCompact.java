@@ -56,6 +56,7 @@ public class itemCompact extends MultiItemRandom {
 
         ItemList.NaturalCore                         .set(addItem(18, "Natural Core", ""));
         ItemList.FlowerCluster                       .set(addItem(19, "Flower Cluster", ""));
+        ItemList.GTQTIcon                            .set(addItem(20, "GTQT Icon", ""));
 
 
         ItemList.IntelligentCore         .set(addItem(100, "Intelligent Core", ""));

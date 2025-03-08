@@ -113,6 +113,8 @@ public enum ItemList implements IItemContainer{
     ResistanceT4,              CoilT4,
     CircuitBoardBasicUncompleted,CircuitBoardGoodUncompleted1,CircuitBoardGoodUncompleted2,
 //Compact
+    //Useless
+    GTQTIcon,
     //AdvancedRocketry
     ArmorAirSealant,SpaceSuitCloth,
     //AppliedEnergistics2
